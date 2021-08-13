@@ -1,0 +1,37 @@
+---
+permalink: install/concept_high_availability_for_snapcenter_mysql_repository.html 
+sidebar: sidebar 
+keywords: SnapCenter, MySQL high availability 
+summary: MySQL 复制是 MySQL Server 的一项功能，可用于将数据从一个 MySQL 数据库服务器（主）复制到另一个 MySQL 数据库服务器（从）。SnapCenter 仅支持在两个启用了网络负载平衡（启用了 NLB ）的节点上进行 MySQL 复制以实现高可用性。 
+---
+= SnapCenter MySQL 存储库的高可用性
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MySQL 复制是 MySQL Server 的一项功能，可用于将数据从一个 MySQL 数据库服务器（主）复制到另一个 MySQL 数据库服务器（从）。SnapCenter 仅支持在两个启用了网络负载平衡（启用了 NLB ）的节点上进行 MySQL 复制以实现高可用性。
+
+SnapCenter 对主存储库执行读取或写入操作，并在主存储库出现故障时将其连接路由到从存储库。然后，从存储库将成为主存储库。SnapCenter 还支持反向复制，此功能仅在故障转移期间启用。
+
+如果要使用 MySQL 高可用性（ High Availability ， HA ）功能，必须在第一个节点上配置网络负载平衡器（ Network Load Balancer ， NLB ）。在安装过程中， MySQL 存储库安装在此节点上。在第二个节点上安装 SnapCenter 时，您必须加入第一个节点的 F5 并在第二个节点上创建 MySQL 存储库的副本。
+
+SnapCenter 提供了 _Get-SmRepositoryConfig_ 和 _Set-SmRepositoryConfig_ PowerShell cmdlet 来管理 MySQL 复制。
+
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+您必须了解与 MySQL HA 功能相关的限制：
+
+* 两个节点以上不支持 NLB 和 MySQL HA 。
+* 不支持从 SnapCenter 独立安装切换到 NLB 安装，反之亦然，也不支持从 MySQL 独立设置切换到 MySQL HA 。
+* 如果从存储库数据未与主存储库数据同步，则不支持自动故障转移。
++
+您可以使用 _set-SmRepositoryConfig_ cmdlet 启动强制故障转移。
+
+* 启动故障转移后，正在运行的作业可能会失败。
++
+如果由于 MySQL 服务器或 SnapCenter 服务器已关闭而发生故障转移，则正在运行的任何作业可能会失败。故障转移到第二个节点后，所有后续作业均会成功运行。
+
+
+
+有关配置高可用性的信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_NLB_and_ARR_with_SnapCenter["如何使用 SnapCenter 配置 NLB 和 ARR"^]。

@@ -1,0 +1,24 @@
+---
+permalink: install/task_switch_from_nlb_to_f5_for_high_availability.html 
+sidebar: sidebar 
+keywords: F5, NLB, high availability 
+summary: 您可以将 SnapCenter HA 配置从网络负载平衡（ NLB ）更改为使用 F5 负载平衡器。 
+---
+= 从 NLB 切换到 F5 以实现高可用性
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将 SnapCenter HA 配置从网络负载平衡（ NLB ）更改为使用 F5 负载平衡器。
+
+* 步骤 *
+
+. 使用 F5 配置 SnapCenter 服务器以实现高可用性。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["了解更多信息。"^]。
+. 在 SnapCenter 服务器主机上，启动 PowerShell 。
+. 使用 Open-SmConnection cmdlet 启动会话，然后输入凭据。
+. 使用 Update-SmServerCluster cmdlet 更新 SnapCenter 服务器以指向 F5 集群 IP 地址。
++
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+

@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: sc-automation/task_get_started_with_the_rest_api.html 
+keywords:  
+summary: 在实时设置中对更复杂的工作流过程使用 API 之前，访问 API 可以提供一些视角。 
+---
+= 开始使用 REST API
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以快速开始使用 SnapCenter REST API 。在实时设置中对更复杂的工作流过程使用 API 之前，访问 API 可以提供一些视角。
+
+
+
+== 大家好
+
+您可以在系统上运行一个简单的命令，开始使用 SnapCenter REST API 并确认其可用性。
+
+* 您需要的内容 *
+
+* 确保您的系统上提供了 Curl 实用程序。
+* SnapCenter 服务器的 IP 地址或主机名
+* 有权访问 SnapCenter REST API 的帐户的用户名和密码。
+
+
+
+NOTE: 如果您的凭据包含特殊字符，则您需要根据所使用的 shell 以 Curl 可接受的格式设置这些凭据。例如，您可以在每个特殊字符之前插入反斜杠，或者将整个 `username ： password` 字符串用单引号括起来。
+
+* 步骤 *
+
+在命令行界面中，运行以下命令以检索插件信息：
+
+`cURL -X get -u username ： password -k "https://<ip_address>/api/hosts?fields=IncludePluginInfo"`[]
+
+示例
+
+`cURL -X get -u admin ： password -k "'https://10.225.87.97/api/hosts?fields=IncludePluginInfo"`[]

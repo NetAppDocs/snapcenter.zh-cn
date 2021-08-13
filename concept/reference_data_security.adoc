@@ -1,0 +1,38 @@
+---
+permalink: concept/reference_data_security.html 
+sidebar: sidebar 
+keywords: security,authentication, CA certificates 
+summary: SnapCenter 采用严格的安全性和身份验证功能，可确保数据安全。 
+---
+= 安全功能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 采用严格的安全性和身份验证功能，可确保数据安全。
+
+SnapCenter 包括以下安全功能：
+
+* 与 SnapCenter 的所有通信都使用基于 SSL 的 HTTP （ HTTPS ）。
+* SnapCenter 中的所有凭据均使用高级加密标准（ Advanced Encryption Standard ， AES ）加密进行保护。
+* SnapCenter 使用符合联邦信息处理标准（ FIPS ）的安全算法。
+* SnapCenter 支持使用客户提供的授权 CA 证书。
+* SnapCenter 4.1.1 或更高版本支持与 ONTAP 进行传输层安全（ TLS ） 1.2 通信。您还可以在客户端和服务器之间使用 TLS 1.2 通信。
+* SnapCenter 安装在公司的防火墙内，用于访问 SnapCenter 服务器并在 SnapCenter 服务器和插件之间进行通信。
+* SnapCenter API 和操作访问使用使用 AES 加密加密的令牌，这些令牌将在 24 小时后过期。
+* SnapCenter 与 Windows Active Directory 集成，用于控制访问权限的登录和基于角色的访问控制（ Role-Based Access Control ， RBAC ）。
+* SnapCenter PowerShell cmdlet 可保护会话安全。
+* 默认情况下，如果 15 分钟处于非活动状态， SnapCenter 会向您发出警告，指出您将在 5 分钟后注销。处于非活动状态 20 分钟后， SnapCenter 将注销，您必须重新登录。您可以修改注销期限。
+* 登录尝试不正确 5 次或 5 次以上后，将暂时禁用登录。
+
+
+
+
+== CA 证书概述
+
+SnapCenter 服务器安装程序可在安装期间启用集中式 SSL 证书支持。为了增强服务器和插件之间的安全通信， SnapCenter 支持使用客户提供的授权 CA 证书。
+
+您应在安装 SnapCenter 服务器和相应插件后部署 CA 证书。有关详细信息，请参见 link:../install/reference_generate_CA_certificate_CSR_file.html["生成 CA 证书 CSR 文件"^]。
+
+您还可以为适用于 VMware vSphere 的 SnapCenter 插件部署 CA 证书。有关详细信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#create-and-import-certificates["创建和导入证书"^]。

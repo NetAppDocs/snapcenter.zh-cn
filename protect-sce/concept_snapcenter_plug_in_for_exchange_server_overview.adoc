@@ -1,0 +1,17 @@
+---
+permalink: protect-sce/concept_snapcenter_plug_in_for_exchange_server_overview.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Exchange Server 
+summary: 适用于 Microsoft Exchange Server 的 SnapCenter 插件是 NetAppSnapCenter 软件的主机端组件，可用于对 Exchange 数据库进行应用程序感知型数据保护管理。适用于 Exchange 的插件可自动备份和还原 SnapCenter 环境中的 Exchange 数据库。 
+---
+= 适用于 Microsoft Exchange Server 的 SnapCenter 插件概述
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+适用于 Microsoft Exchange Server 的 SnapCenter 插件是 NetApp SnapCenter 软件的主机端组件，可用于对 Exchange 数据库进行应用程序感知型数据保护管理。适用于 Exchange 的插件可自动备份和还原 SnapCenter 环境中的 Exchange 数据库。
+
+安装适用于 Exchange 的插件后，您可以使用采用 NetApp SnapMirror 技术的 SnapCenter 在另一个卷上创建备份集的镜像副本，并使用 NetApp SnapVault 技术执行磁盘到磁盘备份复制，以满足标准合规性或归档要求。
+
+如果要还原和恢复邮件或邮箱，而不是整个 Exchange 数据库，则可以使用 Single Mailbox Recovery （ SMBR ）软件。

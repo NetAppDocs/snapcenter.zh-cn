@@ -1,0 +1,19 @@
+---
+permalink: protect-hana/concept_prepare_to_install_the_snapcenter_plug_in_for_sap_hana_database_on_the_linux_host.html 
+sidebar: sidebar 
+keywords:  
+summary: 要安装适用于 SAP HANA 数据库的 SnapCenter 插件的 Linux 主机必须满足相关的软件，数据库和操作系统要求。 
+---
+= 准备在 Linux 主机上安装适用于 SAP HANA 数据库的 SnapCenter 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要安装适用于 SAP HANA 数据库的 SnapCenter 插件的 Linux 主机必须满足相关的软件，数据库和操作系统要求。
+
+互操作性表工具（ IMT ）包含有关受支持配置的最新信息。
+
+http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"]
+
+适用于 SAP HANA 数据库的 SnapCenter 插件是适用于 Linux 的 SnapCenter 插件包的一部分。在安装适用于 Linux 的 SnapCenter 插件软件包之前，您必须已在 Windows 主机上安装 SnapCenter 。

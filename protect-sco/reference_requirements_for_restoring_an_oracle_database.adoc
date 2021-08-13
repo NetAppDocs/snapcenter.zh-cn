@@ -1,0 +1,33 @@
+---
+permalink: protect-sco/reference_requirements_for_restoring_an_oracle_database.html 
+sidebar: sidebar 
+keywords:  
+summary: 在还原 Oracle 数据库之前，您应确保满足前提条件。 
+---
+= 还原 Oracle 数据库的要求
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在还原 Oracle 数据库之前，您应确保满足前提条件。
+
+* 您应已定义还原和恢复策略。
+* 如果要将 Snapshot 副本复制到镜像或存储， SnapCenter 管理员应已为您分配源卷和目标卷的 Storage Virtual Machine （ SVM ）。
+* 如果在备份过程中对归档日志进行了修剪，则您应已手动挂载所需的归档日志备份。
+* 如果要还原驻留在虚拟机磁盘（ VMDK ）上的 Oracle 数据库，则应确保子计算机具有所需数量的可用插槽来分配克隆的 VMDK 。
+* 如果为数据库启用了二级保护，则应确保属于该数据库的所有数据卷和归档日志卷均受保护。
+* 您应确保 RAC One Node 数据库处于 "nnomount" 状态，以执行控制文件或完整数据库还原。
+* 如果 NFS 环境中有 ASM 数据库实例，则应将 ASM 磁盘路径 /var/opt/snapcenter/scU/cles/*/* 添加到 asm_diskstring 参数中定义的现有路径，以便在恢复操作中成功挂载 ASM 日志备份。
+* 在 asm_diskstring 参数中，如果使用的是 ASMFD ，则应配置 _afd ： * _ ；如果使用的是 ASMLIB ，则应配置 _ORCL ： * _ 。
++
+
+NOTE: 有关如何编辑 asm_diskstring 参数的信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["如何向 asm_diskstring 添加磁盘路径"^]
+
+* 如果您禁用了操作系统身份验证并为 Oracle 数据库启用了 Oracle 数据库身份验证，并且希望还原该数据库的数据文件和控制文件，则应在非 ASM 数据库的 * listener.ora* 文件（网址为： _$ORACLE_HOME/network/admin_ ）和 ASM 数据库的 _$GRID_HOME/network/admin_ 中配置静态侦听器。
+* 如果数据库大小以 TB 为单位，则应运行 set- SmConfigSettings 命令来增加 SCorestoreTimeout 参数的值。
+* 您应确保 vCenter 所需的所有许可证均已安装并保持最新。
++
+如果许可证未安装或未更新，则会显示一条警告消息。如果忽略此警告并继续，则从 RDM 还原将失败。
+
+

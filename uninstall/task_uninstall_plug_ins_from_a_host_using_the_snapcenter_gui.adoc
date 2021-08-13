@@ -1,0 +1,53 @@
+---
+permalink: uninstall/task_uninstall_plug_ins_from_a_host_using_the_snapcenter_gui.html 
+sidebar: sidebar 
+keywords: uninstall, gui 
+summary: 如果您确定不再需要单个插件或插件软件包，则可以使用 SnapCenter 界面将其卸载。 
+---
+= 使用 SnapCenter 图形用户界面卸载插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您确定不再需要单个插件或插件软件包，则可以使用 SnapCenter 界面将其卸载。
+
+* 您需要的内容 *
+
+* 您应已删除要卸载的插件软件包的资源组。
+* 您应已断开与要卸载的插件软件包的资源组关联的策略。
+
+
+* 关于此任务 *
+
+您可以卸载单个插件。例如，您可能需要卸载适用于 Microsoft SQL Server 的 SnapCenter 插件，因为某个主机资源即将用尽，而您希望将该插件移动到功能更强大的主机。您也可以卸载整个插件软件包。例如，您可能需要卸载适用于 Linux 的 SnapCenter 插件软件包，其中包括适用于 Oracle 数据库的 SnapCenter 插件和适用于 UNIX 的 SnapCenter 插件。
+
+* 删除主机包括卸载所有插件。
++
+从 SnapCenter 中删除主机时， SnapCenter 会先卸载主机上的所有插件软件包，然后再删除该主机。
+
+* SnapCenter 图形用户界面一次从一台主机中删除插件。
++
+使用 SnapCenter 图形用户界面时，一次只能在一台主机上卸载插件。但是，可以同时运行多个卸载操作。
+
++
+此外，您还可以使用 _Uninstall-SmHostPackage_ cmdlet 和所需参数从多个主机卸载插件。有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+
+
+
+IMPORTANT: 从安装了 SnapCenter 服务器的主机卸载适用于 Windows 的 SnapCenter 插件软件包将损坏 SnapCenter 服务器安装。请勿卸载适用于 Windows 的 SnapCenter 插件软件包，除非您确定不再需要 SnapCenter 服务器。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 主机 * 。
+. 在主机页面中，单击 * 受管主机 * 。
+. 在受管主机页面中，选择要从中卸载插件或插件软件包的主机。
+. 在要删除的插件旁边，单击 * 删除 * > * 提交 * 。
+
+
+* 完成后 *
+
+您应等待 5 分钟，然后再在该主机上重新安装此插件。此时间段足以使 SnapCenter 图形用户界面刷新受管主机的状态。如果您立即重新安装此插件，安装将失败。
+
+如果要卸载适用于 Linux 的 SnapCenter 插件软件包，则可从以下位置获取卸载特定的日志文件： _/custom_location/snapcenter/log_ 。

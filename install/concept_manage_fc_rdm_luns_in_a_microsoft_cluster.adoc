@@ -1,0 +1,15 @@
+---
+permalink: install/concept_manage_fc_rdm_luns_in_a_microsoft_cluster.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用适用于 Windows 的插件管理使用 FC RDM LUN 的 Microsoft 集群，但必须先在该插件外部创建共享 RDM 仲裁和共享存储，然后将磁盘添加到集群中的虚拟机。 
+---
+= 管理 Microsoft 集群中的 FC RDM LUN
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用适用于 Windows 的插件管理使用 FC RDM LUN 的 Microsoft 集群，但必须先在该插件外部创建共享 RDM 仲裁和共享存储，然后将磁盘添加到集群中的虚拟机。
+
+从 ESXi 5.5 开始，您还可以使用 ESX iSCSI 和 FCoE 硬件来管理 Microsoft 集群。适用于 Windows 的插件为 Microsoft 集群提供了开箱即用支持。

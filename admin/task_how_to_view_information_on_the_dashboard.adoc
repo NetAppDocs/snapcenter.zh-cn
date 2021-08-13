@@ -1,0 +1,22 @@
+---
+permalink: admin/task_how_to_view_information_on_the_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 在 SnapCenter 左侧导航窗格中，您可以查看各种信息板图块或显示内容以及关联的系统详细信息。信息板中可用的显示数量是固定的，无法更改。每个显示内容取决于基于角色的访问控制 \ （ RBAC ）。 
+---
+= 如何查看信息板上的信息
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 SnapCenter 左侧导航窗格中，您可以查看各种信息板图块或显示内容以及关联的系统详细信息。信息板中可用的显示数量是固定的，无法更改。每个显示屏中提供的内容取决于基于角色的访问控制（ Role-Based Access Control ， RBAC ）。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 信息板 * 。
+. 单击每个显示屏上的活动区域以获取追加信息。
++
+例如，单击 * 作业 * 中的圆环图可重定向到 " 监控 " 页面，以了解有关所选内容的详细信息。单击 * 保护摘要 * 中的圆环图可重定向到报告页面，该页面可提供有关所选内容的更多信息。
+
+

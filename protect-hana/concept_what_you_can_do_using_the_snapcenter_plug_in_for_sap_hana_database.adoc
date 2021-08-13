@@ -1,0 +1,22 @@
+---
+permalink: protect-hana/concept_what_you_can_do_using_the_snapcenter_plug_in_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 在环境中安装适用于 SAP HANA 数据库的插件时，您可以使用 SnapCenter 备份，还原和克隆 SAP HANA 数据库及其资源。您还可以执行支持这些操作的任务。 
+---
+= 使用适用于 SAP HANA 数据库的 SnapCenter 插件可以执行的操作
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在环境中安装适用于 SAP HANA 数据库的插件时，您可以使用 SnapCenter 备份，还原和克隆 SAP HANA 数据库及其资源。您还可以执行支持这些操作的任务。
+
+* 添加数据库。
+* 创建备份
+* 从备份还原
+* 克隆备份。
+* 计划备份操作。
+* 监控备份，还原和克隆操作。
+* 查看备份，还原和克隆操作的报告。
+

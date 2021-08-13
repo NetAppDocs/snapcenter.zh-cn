@@ -1,0 +1,44 @@
+---
+permalink: protect-scw/concept_snapcenter_plug_in_for_windows_features.html 
+sidebar: sidebar 
+keywords:  
+summary: 适用于 Windows 的插件可与存储系统上的 NetApp Snapshot 副本技术集成。要使用适用于 Windows 的插件，请使用 SnapCenter 界面。 
+---
+= 适用于 Windows 的 SnapCenter 插件功能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+适用于 Windows 的插件可与存储系统上的 NetApp Snapshot 副本技术集成。要使用适用于 Windows 的插件，请使用 SnapCenter 界面。
+
+适用于 Windows 的插件包括以下主要功能：
+
+* * 由 SnapCenter 提供支持的统一图形用户界面 *
++
+SnapCenter 界面为您提供了跨插件和环境的标准化和一致性。通过 SnapCenter 界面，您可以跨插件完成一致的备份和还原过程，使用集中式报告，使用信息板概览视图，设置基于角色的访问控制（ Role-Based Access Control ， RBAC ）以及监控所有插件中的作业。SnapCenter 还提供集中式计划和策略管理，以支持备份和克隆操作。
+
+* * 自动化中央管理 *
++
+您可以计划例行文件系统备份，配置基于策略的备份保留以及设置还原操作。您还可以通过将 SnapCenter 配置为发送电子邮件警报来主动监控文件系统环境。
+
+* * 无中断 NetApp Snapshot 副本技术 *
++
+适用于 Windows 的插件使用 NetApp Snapshot 副本技术。这样，您就可以在几秒钟内备份文件系统并快速还原它们，而无需使主机脱机。Snapshot 副本占用的存储空间极少。
+
+
+
+除了这些主要功能之外，适用于 Windows 的插件还具有以下优势：
+
+* 备份，还原和克隆工作流支持
+* 支持 RBAC 的安全性和集中式角色委派
+* 使用 NetApp FlexClone 技术为生产文件系统创建节省空间的副本，以供测试或数据提取之用
++
+有关 FlexClone 许可信息，请参见 link:../install/concept_snapcenter_licenses.html["SnapCenter 许可证"^]。
+
+* 能够在多个服务器上同时运行多个备份
+* 用于备份，还原和克隆操作脚本的 PowerShell cmdlet
+* 支持备份文件系统和虚拟机磁盘（ VMDK ）
+* 支持物理和虚拟化基础架构
+* 支持 iSCSI ，光纤通道， FCoE ，原始设备映射（ RDM ），非对称 LUN 映射（ ALM ），基于 NFS 和 VMFS 的 VMDK 以及虚拟 FC
+

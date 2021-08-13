@@ -1,0 +1,82 @@
+---
+permalink: admin/concept_manage_resources_of_untrusted_domains.html 
+sidebar: sidebar 
+keywords:  
+summary: 除了管理 Active Directory \ （ AD\ ）受信任域中的主机之外， SnapCenter 还管理多个 AD 不受信任域中的主机。不可信的 AD 域必须注册到 SnapCenter 服务器。SnapCenter 支持多个不可信 AD 域的用户和组。 
+---
+= 管理不可信域的资源
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+除了管理 Active Directory （ AD ）受信任域中的主机之外， SnapCenter 还管理多个 AD 不受信任域中的主机。不可信的 AD 域必须注册到 SnapCenter 服务器。SnapCenter 支持多个不可信 AD 域的用户和组。
+
+您可以在域或工作组中的计算机上安装 SnapCenter 服务器。要安装 SnapCenter 服务器，如果计算机位于域中，则应指定域凭据；如果计算机位于工作组中，则应指定本地管理员凭据。
+
+不支持属于未向 SnapCenter 服务器注册的域的 Active Directory （ AD ）组。尽管您可以使用这些 AD 组创建 SnapCenter 角色，但登录到 SnapCenter 服务器会失败，并显示以下错误消息： The user you are trying to login does not belong to any roles 。请联系您的管理员。
+
+
+
+== 修改不可信域
+
+如果要更新域控制器 IP 地址或完全限定域名（ FQDN ），则可以修改不受信任的域。
+
+* 关于此任务 *
+
+修改 FQDN 后，关联资产（主机，用户和组）可能无法按预期运行。
+
+要修改不受信任的域，您可以使用 SnapCenter 用户界面或 PowerShell cmdlet 。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 设置 * 。
+. 在设置页面中，单击 * 全局设置 * 。
+. 在全局设置页面中，单击 * 域设置 * 。
+. 单击 image:../media/edit_icon.gif["编辑图标"]，然后提供以下详细信息：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+域 FQDN
+ a| 
+指定 FQDN ，然后单击 * 解析 * 。
+
+
+
+ a| 
+域控制器 IP 地址
+ a| 
+如果无法解析域 FQDN ，请指定一个或多个域控制器 IP 地址。
+
+|===
+. 单击 * 确定 * 。
+
+
+
+
+== 取消注册不可信的 Active Directory 域
+
+如果您不想使用与不可信的 Active Directory 域关联的资产，则可以取消注册该域。
+
+* 您需要的内容 *
+
+您应已删除与不可信域关联的主机，用户，组和凭据。
+
+* 关于此任务 *
+
+* 从 SnapCenter 服务器取消注册此域后，此域的用户将无法访问 SnapCenter 服务器。
+* 如果存在关联资产（主机，用户和组），则在取消注册域后，这些资产将无法运行。
+* 要取消注册不受信任的域，您可以使用 SnapCenter 用户界面或 PowerShell cmdlet 。
+
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 设置 * 。
+. 在设置页面中，单击 * 全局设置 * 。
+. 在全局设置页面中，单击 * 域设置 * 。
+. 从域列表中，选择要取消注册的域。
+. 单击 image:../media/delete_icon.gif[""]，然后单击 * 确定 * 。
+

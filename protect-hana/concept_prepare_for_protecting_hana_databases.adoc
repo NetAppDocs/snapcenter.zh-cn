@@ -1,0 +1,16 @@
+---
+permalink: protect-hana/concept_prepare_for_protecting_hana_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: 在执行备份，克隆或还原操作等任何数据保护操作之前，您必须定义策略并设置环境。您还可以设置 SnapCenter 服务器以使用 SnapMirror 和 SnapVault 技术。 
+---
+= 准备保护 SAP HANA 数据库
+:icons: font
+:imagesdir: ../media/
+
+
+在执行备份，克隆或还原操作等任何数据保护操作之前，您必须定义策略并设置环境。您还可以设置 SnapCenter 服务器以使用 SnapMirror 和 SnapVault 技术。
+
+要利用 SnapVault 和 SnapMirror 技术，您必须在存储设备上的源卷和目标卷之间配置和初始化数据保护关系。您可以使用 NetAppSystem Manager ，也可以使用存储控制台命令行执行这些任务。
+
+* 查找更多信息 *link:https://docs.netapp.com/us-en/ontap-automation/getting_started_with_the_rest_api.html["REST API 入门"]

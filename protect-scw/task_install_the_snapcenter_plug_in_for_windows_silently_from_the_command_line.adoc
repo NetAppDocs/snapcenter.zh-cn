@@ -1,0 +1,108 @@
+---
+permalink: protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果无法从 SnapCenter 图形用户界面远程安装适用于 Microsoft Windows 的 SnapCenter 插件，则可以在 Windows 主机上本地安装此插件。您可以通过 Windows 命令行在无人参与的情况下以静默模式运行适用于 Microsoft Windows 的 SnapCenter 插件安装程序。 
+---
+= 通过命令行无提示安装适用于 Microsoft Windows 的 SnapCenter 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果无法从 SnapCenter 图形用户界面远程安装适用于 Microsoft Windows 的 SnapCenter 插件，则可以在 Windows 主机上本地安装此插件。您可以通过 Windows 命令行在无人参与的情况下以静默模式运行适用于 Microsoft Windows 的 SnapCenter 插件安装程序。
+
+* 您需要的内容 *
+
+* 您必须已安装 Microsoft .Net 4.5.2 或更高版本。
+* 您必须已安装 PowerShell 4.0 或更高版本。
+* 您必须已启用 Windows 消息队列。
+* 您必须是主机上的本地管理员。
+
+
+* 步骤 *
+
+. 从安装位置下载适用于 Microsoft Windows 的 SnapCenter 插件。
++
+例如，默认安装路径为 C ： \ProgramData\NetApp\SnapCenter\Package Repository 。
+
++
+可以从安装了 SnapCenter 服务器的主机访问此路径。
+
+. 将安装文件复制到要安装此插件的主机。
+. 在命令提示符处，导航到下载安装文件的目录。
+. 输入以下命令，将变量替换为您的数据：
++
+` snapcenter_windows_host_plugin.exe "/silent / debuglog"" /log"" BI_SNAPCENTER_port= suite_INSTALLDIR="" BI_SERVERACCOUNT= BI_SERVERICEPWD = ISFeatureInstall=SCW`
+
++
+例如：
+
++
+....
+`"C:\ProgramData\NetApp\SnapCenter\Package Repository \snapcenter_windows_host_plugin.exe"/silent /debuglog"C: \HPPW_SCW_Install.log" /log"C:\" BI_SNAPCENTER_PORT=8145 SUITE_INSTALLDIR="C: \Program Files\NetApp\SnapCenter" BI_SERVICEACCOUNT=domain\administrator BI_SERVICEPWD=password ISFeatureInstall=SCW`
+....
++
+
+NOTE: 在安装适用于 Windows 的插件期间传递的所有参数均区分大小写。
+
++
+输入以下变量的值：
+
++
+|===
+| 变量 | 价值 
+
+
+ a| 
+_/debuglog"<debug_Log_Path>_
+ a| 
+指定套件安装程序日志文件的名称和位置，如以下示例所示： setup.exe /debuglog"C ： \PathToLog\setupexe.log" 。
+
+
+
+ a| 
+BI_SNAPCENTER_PORT
+ a| 
+指定 SnapCenter 与 SMCore 通信所使用的端口。
+
+
+
+ a| 
+suite_INSTALLDIR
+ a| 
+指定主机插件软件包安装目录。
+
+
+
+ a| 
+BI_SERVERICEACCOUNT
+ a| 
+指定适用于 Microsoft Windows 的 SnapCenter 插件 Web 服务帐户。
+
+
+
+ a| 
+BI_SERVERICEPWD
+ a| 
+指定适用于 Microsoft Windows 的 SnapCenter 插件 Web 服务帐户的密码。
+
+
+
+ a| 
+ISFeatureInstall
+ a| 
+指定 SnapCenter 要在远程主机上部署的解决方案。
+
+|===
++
+debuglog_ 参数包括 SnapCenter 日志文件的路径。写入此日志文件是获取故障排除信息的首选方法，因为此文件包含安装对插件前提条件执行的检查的结果。
+
++
+如有必要，您可以在 SnapCenter for Windows 软件包的日志文件中找到其他故障排除信息。软件包的日志文件会列在 _ %Temp%_ 文件夹中（最早的文件先列出），例如 _C ： \temp\ _ 。
+
++
+
+NOTE: 安装适用于 Windows 的插件会在主机上注册此插件，而不是在 SnapCenter 服务器上注册此插件。您可以通过使用 SnapCenter 图形用户界面或 PowerShell cmdlet 添加主机来在 SnapCenter 服务器上注册此插件。添加主机后，系统将自动发现此插件。
+
+

@@ -1,0 +1,40 @@
+---
+permalink: protect-scc/task_monitor_the_status_of_installing_plugin_for_scc.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用作业页面监控 SnapCenter 插件软件包的安装进度。您可能需要检查安装进度以确定安装完成的时间或是否存在问题描述。 
+---
+= 监控安装自定义插件的状态
+:icons: font
+:imagesdir: ../media/
+
+
+您可以使用作业页面监控 SnapCenter 插件软件包的安装进度。您可能需要检查安装进度以确定安装完成的时间或是否存在问题描述。
+
+* 关于此任务 *
+
+以下图标将显示在作业页面上，并指示操作的状态：
+
+* image:../media/progress_icon.gif["正在进行中图标"] 正在进行中
+* image:../media/success_icon.gif["已完成图标"] 已成功完成
+* image:../media/failed_icon.gif["失败图标"] 失败
+* image:../media/warning_icon.gif["已完成，但显示警告图标"] 已完成，但出现警告或由于出现警告而无法启动
+* image:../media/verification_job_in_queue.gif["验证作业已排队"] 已排队
+
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 监控 * 。
+. 在 * 监控 * 页面中，单击 * 作业 * 。
+. 在 * 作业 * 页面上，要筛选列表以便仅列出插件安装操作，请执行以下操作：
++
+.. 单击 * 筛选器 * 。
+.. 可选：指定开始和结束日期。
+.. 从类型下拉菜单中，选择 * 插件安装 * 。
+.. 从状态下拉菜单中，选择安装状态。
+.. 单击 * 应用 * 。
+
+
+. 选择安装作业并单击 * 详细信息 * 以查看作业详细信息。
+. 在 * 作业详细信息 * 页面中，单击 * 查看日志 * 。
+

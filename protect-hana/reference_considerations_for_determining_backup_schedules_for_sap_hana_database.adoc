@@ -1,0 +1,25 @@
+---
+permalink: protect-hana/reference_considerations_for_determining_backup_schedules_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 确定备份计划的最关键因素是资源的更改率。您可以每小时备份一次使用率较高的资源，而每天备份一次很少使用的资源。其他因素包括资源对组织的重要性，您的服务级别协议（ SLA ）和恢复点目标（ RPO\ ）。 
+---
+= 确定 SAP HANA 数据库备份计划的注意事项
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+确定备份计划的最关键因素是资源的更改率。您可以每小时备份一次使用率较高的资源，而每天备份一次很少使用的资源。其他因素包括资源对组织的重要性，服务级别协议（ SLA ）和恢复点目标（ RPO ）。
+
+备份计划分为两部分，如下所示：
+
+* 备份频率（执行备份的频率）
++
+备份频率也称为某些插件的计划类型，属于策略配置的一部分。例如，您可以将备份频率配置为每小时，每天，每周或每月。
+
+* 备份计划（恰好是执行备份的时间）
++
+备份计划是资源或资源组配置的一部分。例如，如果您的资源组配置了每周备份的策略，则可以将该计划配置为每星期四晚上 10 ： 00 进行备份
+
+

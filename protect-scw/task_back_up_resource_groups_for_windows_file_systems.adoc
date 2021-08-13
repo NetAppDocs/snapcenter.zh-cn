@@ -1,0 +1,58 @@
+---
+permalink: protect-scw/task_back_up_resource_groups_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords: backing up 
+summary: '资源组是主机或集群上的一组资源。系统会对资源组中定义的所有资源执行备份操作。您可以从 " 资源 " 页面按需备份资源组。如果资源组附加了策略并配置了计划，则会根据计划自动进行备份。' 
+---
+= 备份 Windows 文件系统的资源组
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+资源组是主机或集群上的一组资源。系统会对资源组中定义的所有资源执行备份操作。您可以从 " 资源 " 页面按需备份资源组。如果资源组附加了策略并配置了计划，则会根据计划自动进行备份。
+
+* 您需要的内容 *
+
+* 您必须已创建附加了策略的资源组。
+* 如果要将具有 SnapMirror 关系的资源备份到二级存储，则分配给存储用户的角色应包括 " `snapmirror all` " 权限。但是，如果您使用的是 "`vsadmin` " 角色，则不需要 " `snapmirror all` " 特权。
+* 如果某个资源组包含来自不同主机的多个数据库，则由于网络问题，某些主机上的备份操作可能会稍后触发。您应使用 Set-SmConfigSettings PowerShell cmdlet 在 web.config 中配置 MaxRetransyForUninitializedHosts 的值
+
+
+
+NOTE: 备份文件系统时， SnapCenter 不会备份挂载在要备份的文件系统的卷挂载点（ VMP ）上的 LUN 。
+
+
+IMPORTANT: 如果您在 Windows 文件系统环境中工作，请勿备份数据库文件。这样做会导致备份不一致，并且在还原时可能会丢失数据。要保护数据库文件，您必须使用适用于数据库的 SnapCenter 插件（例如，适用于 Microsoft SQL Server 的 SnapCenter 插件，适用于 Microsoft Exchange Server 的 SnapCenter 插件或适用于数据库文件的自定义插件）。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面中，从 * 视图 * 列表中选择 * 资源组 * 。
++
+您可以通过在搜索框中输入资源组名称或单击来搜索资源组 image:../media/filter_icon.gif[""] 并选择标记。然后，您可以单击 image:../media/filter_icon.gif[""] 以关闭筛选器窗格。
+
+. 在资源组页面中，选择要备份的资源组，然后单击 * 立即备份 * 。
++
+
+NOTE: 对于适用于 Oracle 数据库的 SnapCenter 插件，如果您的联合资源组包含两个数据库，而其中一个数据库在非 NetApp 存储上具有数据文件，则即使另一个数据库位于 NetApp 存储上，备份操作也会中止。
+
+. 在备份页面中，执行以下步骤：
++
+.. 如果已将多个策略与资源组关联，请从 * 策略 * 下拉列表中选择要用于备份的策略。
++
+如果为按需备份选择的策略与备份计划关联，则按需备份将根据为计划类型指定的保留设置进行保留。
+
+.. 单击 * 备份 * 。
+
+
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
++
+** 在 MetroCluster 配置中， SnapCenter 可能无法在故障转移后检测到保护关系。
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster 故障转移后无法检测 SnapMirror 或 SnapVault 关系"^]
+
+** 如果要备份 VMDK 上的应用程序数据，并且适用于 VMware vSphere 的 SnapCenter 插件的 Java 堆大小不够大，则备份可能会失败。要增加 Java 堆大小，请找到脚本文件 ` /opt/netapp/init_scripts/scvservice` 。在该脚本中， `do_start 方法` 命令将启动 SnapCenter VMware 插件服务。将该命令更新为以下命令： `java -JAR -Xmx8192M -Xms4096M` 。
+
+
+

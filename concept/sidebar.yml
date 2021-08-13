@@ -1,0 +1,22 @@
+---
+section: concept
+title: 概念
+entries:
+- title: SnapCenter 概述
+  url: "/concept/concept_snapcenter_overview.html"
+- title: 安全功能
+  url: "/concept/reference_data_security.html"
+- title: SnapCenter 基于角色的访问控制（ RBAC ）
+  entries:
+  - title: RBAC 的类型
+    url: "/concept/concept_types_of_role_based_access_control_in_snapcenter.html"
+  - title: RBAC 权限和角色
+    url: "/concept/reference_role_based_access_control_permissions_and_roles.html"
+  - title: 预定义的 SnapCenter 角色和权限
+    url: "/concept/reference_pre_defined_snapcenter_roles_and_permissions.html"
+- title: 资源，资源组和策略
+  url: "/concept/concept_resources_resource_groups_and_policies.html"
+- title: 预处理脚本和后处理脚本
+  url: "/concept/concept_prescripts_and_postscripts.html"
+- title: 使用 REST API 实现 SnapCenter 自动化
+  url: "/concept/concept_snapcenter_rest_apis.html"

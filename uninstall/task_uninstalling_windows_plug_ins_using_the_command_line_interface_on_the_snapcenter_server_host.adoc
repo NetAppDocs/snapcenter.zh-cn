@@ -1,0 +1,25 @@
+---
+permalink: uninstall/task_uninstalling_windows_plug_ins_using_the_command_line_interface_on_the_snapcenter_server_host.html 
+sidebar: sidebar 
+keywords: uninstall, windows plug-ins, powershell cmdlet 
+summary: 您可以使用 SnapCenter 服务器主机命令行界面上的 Uninstall-SmHostPackage cmdlet 卸载单个插件或从一个或多个主机卸载插件软件包。 
+---
+= 使用 PowerShell cmdlet 卸载 Windows 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 SnapCenter 服务器主机命令行界面上使用 _Uninstall-SmHostPackage_ cmdlet 卸载单个插件或从一个或多个主机卸载插件软件包。
+
+您应已在要卸载此插件的每个主机上以具有本地管理员权限的域用户身份登录到 SnapCenter 。
+
+* 步骤 *
+
+. 启动 PowerShell 。
+. 在 SnapCenter 服务器主机上，输入： _Open-SMConnection -SMSbaseUrl \https://SNAPCENTER_SERVER_NAME/DOMAIN_NAME_ 命令，然后输入凭据。
+. 使用 _Uninstall-SmHostPackage_ cmdlet 和所需参数卸载 Windows 插件。
++
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+

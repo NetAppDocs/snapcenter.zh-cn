@@ -1,0 +1,110 @@
+---
+permalink: install/concept_snapcenter_licenses.html 
+sidebar: sidebar 
+keywords: licenses, FAS, AFF, SnapMirror, SnapVault, SnapRestore, FlexClone, SMBR, Single Mailbox Recovery 
+summary: SnapCenter 需要多个许可证才能启用数据保护操作。您安装的 SnapCenter 许可证类型取决于您的存储环境和要使用的功能。 
+---
+= SnapCenter 许可证
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 需要多个许可证才能启用数据保护操作。您安装的 SnapCenter 许可证类型取决于您的存储环境和要使用的功能。
+
+|===
+| 许可证 | 必要时 
+
+
+ a| 
+基于 SnapCenter 标准控制器
+ a| 
+对于 FAS 或 AFF 存储控制器为必需项
+
+SnapCenter 标准版许可证是一种基于控制器的许可证，作为高级包的一部分提供。如果您拥有 SnapManager 套件许可证，则还可以获得 SnapCenter 标准许可证授权。如果要在 FAS 或 AFF 存储中试用 SnapCenter ，您可以联系销售代表以获取超值包评估许可证。
+
+
+NOTE: SnapCenter 也作为数据保护包的一部分提供。如果您购买的是 A400 或更高版本，则应购买数据保护包。
+
+
+
+ a| 
+基于 SnapCenter 标准容量
+ a| 
+ONTAP Select 和 Cloud Volumes ONTAP 必需
+
+如果您是 Cloud Volumes ONTAP 或 ONTAP Select 客户，则需要根据 SnapCenter 管理的数据购买基于每 TB 容量的许可证。默认情况下， SnapCenter 会提供一个内置 90 天 100 TB SnapCenter 标准容量试用许可证。有关其他详细信息，请联系销售代表。
+
+
+
+ a| 
+SnapMirror 或 SnapVault
+ a| 
+ONTAP
+
+如果在 SnapCenter 中启用了复制，则需要 SnapMirror 或 SnapVault 许可证。
+
+
+
+ a| 
+SnapRestore
+ a| 
+用于还原和验证备份。
+
+在主存储系统上
+
+* 在 SnapVault 目标系统上执行远程验证和从备份中还原时需要使用。
+* SnapMirror 目标系统上执行远程验证所需的。
+
+
+
+
+ a| 
+FlexClone
+ a| 
+克隆数据库和验证操作所需。
+
+在主存储系统和二级存储系统上。
+
+* 在 SnapVault 目标系统上需要此功能才能从二级存储备份创建克隆。
+* 在 SnapMirror 目标系统上需要使用此功能从二级 SnapMirror 备份创建克隆。
+
+
+
+
+ a| 
+协议
+ a| 
+* LUN 的 iSCSI 或 FC 许可证
+* SMB 共享的 CIFS 许可证
+* NFS 类型 VMDK 的 NFS 许可证
+* VMFS 类型 VMDK 的 iSCSI 或 FC 许可证
+
+
+如果源卷不可用，则 SnapMirror 目标系统需要提供数据。
+
+
+
+ a| 
+SnapCenter 标准许可证（可选）
+ a| 
+二级目标
+
+
+NOTE: 建议（但不要求）将 SnapCenter 标准版许可证添加到二级目标。如果二级目标上未启用 SnapCenter 标准许可证，则在执行故障转移操作后，您将无法使用 SnapCenter 备份二级目标上的资源。但是，要执行克隆和验证操作，二级目标需要 FlexClone 许可证。
+
+|===
+
+NOTE: SnapCenter 高级版和 SnapCenter NAS 文件服务许可证已弃用，不再可用。
+
+有关如何添加许可证的信息，请参见 link:..//install/task_add_snapcenter_licenses.html["添加 SnapCenter 许可证"^]。
+
+
+
+== 单邮箱恢复（ SMBR ）许可证
+
+如果您使用适用于 Exchange 的 SnapCenter 插件管理 Microsoft Exchange Server 数据库和单邮箱恢复（ SMBR ），则需要为 SMBR 提供额外的许可证，此许可证需要根据用户邮箱单独购买。
+
+请联系您的 NetApp 销售代表以购买 SMBR 许可证，此许可证可作为 1000 ， 5000 ， 15000 和 25000 邮箱的捆绑包单元提供。购买 SKU 后，您可以按照中的说明获取许可证 https://library.netapp.com/ecm/ecm_download_file/ECMLP2863893["《 SMBR 发行说明》"^]。
+
+提交许可证密钥请求时， KrollOntrack 将问题描述 50 个邮箱许可证密钥。根据您的授权， KrollOntrack 将在验证后升级邮箱许可证。

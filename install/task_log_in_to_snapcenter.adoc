@@ -1,0 +1,132 @@
+---
+permalink: install/task_log_in_to_snapcenter.html 
+sidebar: sidebar 
+keywords: log in, logging, SnapCenter UI, modify timeout, GUI session timeout, disbale SSL 3.0, SSL 3.0, security 
+summary: SnapCenter 支持基于角色的访问控制（ Role-Based Access Control ， RBAC ）。SnapCenter 管理员通过 SnapCenter RBAC 将角色和资源分配给工作组或 Active Directory 中的用户或 Active Directory 中的组。现在， RBAC 用户可以使用分配的角色登录到 SnapCenter 。 
+---
+= 登录到 SnapCenter
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 支持基于角色的访问控制（ Role-Based Access Control ， RBAC ）。SnapCenter 管理员通过 SnapCenter RBAC 将角色和资源分配给工作组或 Active Directory 中的用户或 Active Directory 中的组。现在， RBAC 用户可以使用分配的角色登录到 SnapCenter 。
+
+* 您需要的内容 *
+
+* 您应在 Windows Server Manager 中启用 Windows 进程激活服务（ Wwas ）。
+* 如果要使用 Internet Explorer 作为浏览器登录到 SnapCenter 服务器，应确保已禁用 Internet Explorer 中的保护模式。
+
+
+* 关于此任务 *
+
+安装期间， SnapCenter 服务器安装向导会创建一个快捷方式，并将其放置在桌面上以及安装 SnapCenter 的主机的 " 开始 " 菜单中。此外，安装向导将在安装结束时根据您在安装期间提供的信息显示 SnapCenter URL ，如果您要从远程系统登录，可以复制这些 URL 。
+
+
+IMPORTANT: 如果您在 Web 浏览器中打开了多个选项卡，则仅关闭 SnapCenter 浏览器选项卡不会将您从 SnapCenter 中注销。要结束与 SnapCenter 的连接，您必须单击 * 注销 * 按钮或关闭整个 Web 浏览器以注销 SnapCenter 。
+
+|===
+
+
+| * 最佳实践： * 出于安全原因，建议不要启用浏览器来保存 SnapCenter 密码。 
+|===
+默认图形用户界面 URL 是与安装 SnapCenter 服务器的服务器上的默认端口 8146 （ _\https://server:8146_ ）的安全连接。如果您在 SnapCenter 安装期间提供了其他服务器端口，则会改用该端口。
+
+对于高可用性（ High Availability ， HA ）部署，您必须使用虚拟集群 IP _\https://Virtual_Cluster_IP_or_FQDN:8146_ 访问 SnapCenter 。如果在 Internet Explorer （ IE ）中导航到 >\https://Virtual_Cluster_IP_or_FQDN:8146_ 时未看到 SnapCenter UI ，则必须在每个插件主机的 IE 中将虚拟集群 IP 地址或 FQDN 添加为受信任站点，或者必须在每个插件主机上禁用 IE 增强安全性。有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["无法从外部网络访问集群 IP 地址"^]。
+
+除了使用 SnapCenter 图形用户界面之外，您还可以使用 PowerShell cmdlet 创建脚本以执行配置，备份和还原操作。某些 cmdlet 可能会随每个 SnapCenter 版本而发生更改。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^] 了解详细信息。
+
+
+NOTE: 如果您是首次登录到 SnapCenter ，则必须使用安装过程中提供的凭据进行登录。
+
+* 步骤 *
+
+. 从本地主机桌面上的快捷方式，安装结束时提供的 URL 或 SnapCenter 管理员提供的 URL 启动 SnapCenter 。
+. 输入用户凭据。
++
+|===
+| 要指定以下内容 ... | 使用以下格式之一 ... 
+
+
+ a| 
+域管理员
+ a| 
+** netbios\ 用户名
+** 用户名@UPN 后缀
++
+例如， \username@netapp.com
+
+** 域 FQDN\username
+
+
+
+
+ a| 
+本地管理员
+ a| 
+Username
+
+|===
+. 如果您分配了多个角色，请从角色框中选择要用于此登录会话的角色。
++
+登录后，您的当前用户和关联角色将显示在 SnapCenter 的右上角。
+
+
+
+* 结果 *
+
+此时将显示 * 信息板 * 页面。
+
+如果日志记录失败并显示错误，指出无法访问站点，则应将 SSL 证书映射到 SnapCenter 。 https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Protection_and_Security%2FSnapCenter%2FSnapCenter_will_not_open_with_error_%2522This_site_can%2527t_be_reached%2522["了解更多信息。"^]
+
+* 完成后 *
+
+首次以 RBAC 用户身份登录到 SnapCenter 服务器后，刷新资源列表。
+
+如果您希望 SnapCenter 支持不可信的 Active Directory 域，则必须先向 SnapCenter 注册这些域，然后再为不可信域上的用户配置角色。 link:../install/task_register_untrusted_active_directory_domains.html["了解更多信息。"^]
+
+
+
+== 修改 SnapCenter 默认 GUI 会话超时
+
+您可以修改 SnapCenter 图形用户界面会话超时期限，使其小于或大于默认超时期限 20 分钟。
+
+作为一项安全功能，默认情况下处于非活动状态 15 分钟后， SnapCenter 会向您发出警告，指出您将在 5 分钟内从图形用户界面会话中注销。默认情况下， SnapCenter 会在不活动 20 分钟后从 GUI 会话中注销，您必须重新登录。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 设置 * > * 全局设置 * 。
+. 在全局设置页面中，单击 * 配置设置 * 。
+. 在会话超时字段中，以分钟为单位输入新会话超时，然后单击 * 保存 * 。
+
+
+
+
+== 通过禁用 SSL 3.0 来保护 SnapCenter Web 服务器的安全
+
+出于安全考虑，如果在 SnapCenter Web 服务器上启用了安全套接字层（ SSL ） 3.0 协议，则应在 Microsoft IIS 中禁用该协议。
+
+SSL 3.0 协议存在一些缺陷，攻击者可以使用这些缺陷来处理发生原因连接故障，或者执行中间人攻击并观察您的网站与其访客之间的加密流量。
+
+* 步骤 *
+
+. 要在 SnapCenter Web 服务器主机上启动注册表编辑器，请单击 * 开始 * > * 运行 * ，然后输入 regedit 。
+. 在注册表编辑器中，导航到 HKEY_LOCAL_MACHINE ， system\CurrentControlSet\Control\SecurityProviders\SChannel\Protocols\SSL 3.0\ 。
++
+** 如果服务器密钥已存在：
++
+... 选择已启用的 DWORD ，然后单击 * 编辑 * > * 修改 * 。
+... 将此值更改为 0 ，然后单击 * 确定 * 。
+
+
+** 如果服务器密钥不存在：
++
+... 单击 * 编辑 * > * 新增 * > * 密钥 * ，然后将密钥服务器命名为。
+... 选择新服务器密钥后，单击 * 编辑 * > * 新建 * > * 双字节 * 。
+... 将新的 DWORD 命名为 Enabled ，然后输入 0 作为值。
+
+
+
+
+. 关闭注册表编辑器。
+

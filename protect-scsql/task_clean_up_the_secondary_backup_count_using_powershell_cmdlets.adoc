@@ -1,0 +1,38 @@
+---
+permalink: protect-scsql/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_sql.html 
+sidebar: sidebar 
+keywords: backups 
+summary: 您可以使用 Remove-SmBackup cmdlet 清理不含 Snapshot 副本的二级备份的备份计数。如果管理副本拓扑中显示的 Snapshot 副本总数与二级存储 Snapshot 副本保留设置不匹配，您可能需要使用此 cmdlet 。 
+---
+= 使用 PowerShell cmdlet 清理二级备份计数
+:icons: font
+:imagesdir: ../media/
+
+
+您可以使用 Remove-SmBackup cmdlet 清理不含 Snapshot 副本的二级备份的备份计数。如果管理副本拓扑中显示的 Snapshot 副本总数与二级存储 Snapshot 副本保留设置不匹配，您可能需要使用此 cmdlet 。
+
+您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。
+
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+* 步骤 *
+
+. 使用 Open-SmConnection cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
++
+[listing]
+----
+Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. 使用 -CleanupSecondaryBackups 参数清理二级备份计数。
++
+此示例将清理不含 Snapshot 副本的二级备份的备份计数：
+
++
+[listing]
+----
+Remove-SmBackup -CleanupSecondaryBackups
+Remove-SmBackup
+Are you sure want to remove the backup(s).
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+----
+

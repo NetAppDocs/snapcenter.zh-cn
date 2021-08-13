@@ -1,0 +1,153 @@
+---
+permalink: protect-sco/task_back_up_oracle_resources.html 
+sidebar: sidebar 
+keywords: backup, Oracle database, policy, schedule, verification, resources 
+summary: '如果某个资源不属于任何资源组，您可以从 "Resources" 页面备份该资源。' 
+---
+= 备份 Oracle 资源
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果某个资源不属于任何资源组，您可以从 "Resources" 页面备份该资源。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面中，从 * 视图 * 列表中选择 * 数据库 * 。
+. 单击 *image:../media/filter_icon.gif[""]* ，然后选择主机名和数据库类型以筛选资源。
++
+然后，您可以单击 *image:../media/filter_icon.gif[""]* 以关闭筛选器窗格。
+
+. 选择要备份的数据库。
++
+此时将显示 " 数据库保护 " 页面。
+
+. 在资源页面上，执行以下操作：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+对 Snapshot 副本使用自定义名称格式
+ a| 
+选中此复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。
+
+例如， customtext_policy_hostname 或 resource_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。
+
+
+
+ a| 
+从备份中排除归档日志目标
+ a| 
+指定不希望备份的归档日志文件的目标。
+
+|===
+. 在策略页面上，执行以下步骤：
++
+.. 从下拉列表中选择一个或多个策略。
++
+
+NOTE: 您也可以单击 * 来创建策略image:../media/add_policy_from_resourcegroup.gif[""]*
+
++
+在为选定策略配置计划部分中，将列出选定策略。
+
+.. 单击 image:../media/add_policy_from_resourcegroup.gif[""] 在要配置计划的策略的 Configure Schedules 列中。
+.. 在添加策略 _policy_name_ 的计划窗口中，配置该计划，然后单击 * 确定 * 。
++
+_policy_name_ 是所选策略的名称。
+
++
+已配置的计划将列在 "applied Schedules" 列中。
+
+
+
+. 在验证页面上，执行以下步骤：
++
+.. 单击 * 加载定位器 * 以加载 SnapMirror 或 SnapVault 卷，以便在二级存储上执行验证。
+.. 单击 image:../media/add_policy_from_resourcegroup.gif[""] 在 Configure Schedules 列中，为策略的所有计划类型配置验证计划。
+.. 在添加验证计划 _policy_name_ 对话框中，执行以下操作：
++
+|===
+| 如果您要 ... | 执行此操作 ... 
+
+
+ a| 
+备份后运行验证
+ a| 
+选择 * 备份后运行验证 * 。
+
+
+
+ a| 
+计划验证
+ a| 
+选择 * 运行计划的验证 * ，然后从下拉列表中选择计划类型。
+
+
+NOTE: 在 FlexASM 设置中，如果基数小于 RAC 集群中的节点数，则无法对叶节点执行验证操作。
+
+|===
+.. 选择 * 在二级位置验证 * 以验证二级存储上的备份。
+.. 单击 * 确定 * 。
++
+已配置的验证计划将列在 "applied Schedules" 列中。
+
+
+
+. 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
++
+您还必须指定发件人和收件人电子邮件地址以及电子邮件主题。如果要附加对资源执行的备份操作的报告，请选择 * 附加作业报告 * 。
+
++
+
+NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 set-SmtpServer 指定 SMTP 服务器详细信息。
+
+. 查看摘要，然后单击 * 完成 * 。
++
+此时将显示数据库拓扑页面。
+
+. 单击 * 立即备份 * 。
+. 在备份页面上，执行以下步骤：
++
+.. 如果已对资源应用多个策略，请从 * 策略 * 下拉列表中选择要用于备份的策略。
++
+如果为按需备份选择的策略与备份计划关联，则按需备份将根据为计划类型指定的保留设置进行保留。
+
+.. 单击 * 备份 * 。
+
+
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
+
+
+* 完成后 *
+
+* 在 AIX 设置中，您可以使用 lkdev 命令锁定，并使用 rendev 命令重命名备份的数据库所在的磁盘。
++
+使用该备份还原时，锁定或重命名设备不会影响还原操作。
+
+* 如果备份操作因数据库查询执行时间超过超时值而失败，则应运行 Set-SmConfigSettings cmdlet 来更改 ORACLE_SQL_query_timeout 和 ORACLE_plugin_SQL_query_timeout 参数的值：
++
+修改参数值后，运行以下命令 ` /opt/netapp/snapcenter/spl/bin/spl restart` 以重新启动 SnapCenter 插件加载程序（ SPL ）服务
+
+* 如果在验证过程中无法访问此文件，并且挂载点不可用，则此操作可能会失败，并显示错误代码 DBV-00100 指定文件。您应修改 sco.properties 中 verification_delay 和 verification_retry_count 参数的值。
++
+修改参数值后，运行以下命令 ` /opt/netapp/snapcenter/spl/bin/spl restart` 以重新启动 SnapCenter 插件加载程序（ SPL ）服务
+
+* 在 MetroCluster 配置中， SnapCenter 可能无法在故障转移后检测到保护关系。
+* 如果要备份 VMDK 上的应用程序数据，并且适用于 VMware vSphere 的 SnapCenter 插件的 Java 堆大小不够大，则备份可能会失败。
++
+要增加 Java 堆大小，请找到脚本文件 _/opt/netapp/init_scripts/scvservice_ 。在该脚本中， `do_start 方法` 命令将启动 SnapCenter VMware 插件服务。将该命令更新为以下命令： `java -JAR -Xmx8192M -Xms4096M` 。
+
+
+
+* 查找更多信息 *
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster 故障转移后无法检测 SnapMirror 或 SnapVault 关系"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["跳过 Oracle RAC 单节点数据库以执行 SnapCenter 操作"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_change_the_state_of_an_Oracle_12c_ASM_database_from_shutdown_to_mount["无法更改 Oracle 12c ASM 数据库的状态"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["可自定义的参数，用于在 AIX 系统上执行备份，还原和克隆操作"^]
+

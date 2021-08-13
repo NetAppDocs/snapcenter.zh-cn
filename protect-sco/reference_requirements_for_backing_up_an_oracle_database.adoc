@@ -1,0 +1,25 @@
+---
+permalink: protect-sco/reference_requirements_for_backing_up_an_oracle_database.html 
+sidebar: sidebar 
+keywords: requirements, prerequisites 
+summary: 在备份 Oracle 数据库之前，您应确保满足前提条件。 
+---
+= 备份 Oracle 数据库的要求
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在备份 Oracle 数据库之前，您应确保满足前提条件。
+
+* 您必须已创建附加了策略的资源组。
+* 如果要备份与二级存储具有 SnapMirror 关系的资源，则分配给存储用户的 ONTAP 角色应包括 " `snapmirror all` " 权限。但是，如果您使用的是 "`vsadmin` " 角色，则不需要 " `snapmirror all` " 特权。
+* 您必须已将备份操作所使用的聚合分配给数据库所使用的 Storage Virtual Machine （ SVM ）。
+* 如果为数据库启用了二级保护，则应已验证属于该数据库的所有数据卷和归档日志卷是否均受保护。
+* 您应已验证在 ASM 磁盘组上包含文件的数据库应处于 `Mount` 或`open` 状态，以便使用 Oracle DBVERIFY 实用程序验证其备份。
+* 您应已验证卷挂载点长度不超过 240 个字符。
+* 如果要备份的数据库很大（以 TB 为单位），则应将 SnapCenter 服务器主机中的 _C ： \Program Files\NetApp \SMCore\SMCoreServiceHost.exe 配置 _ 文件中的 RESTTimeout 值增加到 86400000 秒。
++
+修改这些值时，请确保没有正在运行的作业，并在增加此值后重新启动 SnapCenter SMCore 服务。
+
+

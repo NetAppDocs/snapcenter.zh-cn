@@ -1,0 +1,15 @@
+---
+permalink: protect-sce/concept_install_snapcenter_plug_in_for_microsoft_exchange_server.html 
+sidebar: sidebar 
+keywords: installing 
+summary: 如果要保护 Exchange 数据库，应安装和设置适用于 Microsoft Exchange Server 的 SnapCenter 插件。 
+---
+= 安装适用于 Microsoft Exchange Server 的 SnapCenter 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要保护 Exchange 数据库，应安装和设置适用于 Microsoft Exchange Server 的 SnapCenter 插件。
+
+image::../media/sce_install_configure_workflow.gif[SCE 安装配置工作流]

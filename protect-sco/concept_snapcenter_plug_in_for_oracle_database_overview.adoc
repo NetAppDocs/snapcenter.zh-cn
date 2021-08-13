@@ -1,0 +1,17 @@
+---
+permalink: protect-sco/concept_snapcenter_plug_in_for_oracle_database_overview.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Oracle Databases, overview, Oracle, Oracle database 
+summary: 适用于 Oracle 数据库的 SnapCenter 插件是 NetApp SnapCenter 软件的主机端组件，可用于对 Oracle 数据库进行应用程序感知型数据保护管理。 
+---
+= 适用于 Oracle 数据库的 SnapCenter 插件概述
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+适用于 Oracle 数据库的 SnapCenter 插件是 NetApp SnapCenter 软件的主机端组件，可用于对 Oracle 数据库进行应用程序感知型数据保护管理。
+
+适用于 Oracle 数据库的插件可使用 Oracle RMAN 自动执行备份，目录编制和取消目录编制，验证，挂载，卸载，还原， 在 SnapCenter 环境中恢复和克隆 Oracle 数据库。适用于 Oracle 数据库的插件安装适用于 UNIX 的 SnapCenter 插件以执行所有数据保护操作。
+
+您可以使用适用于 Oracle 数据库的插件管理运行 SAP 应用程序的 Oracle 数据库的备份。但是，不支持 SAP BR* 工具集成。

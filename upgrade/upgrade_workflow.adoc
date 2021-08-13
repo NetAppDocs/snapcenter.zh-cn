@@ -1,0 +1,17 @@
+---
+permalink: upgrade/upgrade_workflow.html 
+sidebar: sidebar 
+keywords: upgrade, snapcenter server, plug-ins, workflow 
+summary: 介绍如何升级 SnapCenter 服务器和插件 
+---
+= 升级工作流
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+每个 SnapCenter 版本都包含一个更新的 SnapCenter 服务器和插件软件包。插件软件包更新随 SnapCenter 安装程序一起分发。您可以将 SnapCenter 配置为检查可用更新。
+
+此工作流显示了升级 SnapCenter 服务器和插件软件包所需的不同任务。
+
+image::../media/upgrade_workflow.png[升级工作流]

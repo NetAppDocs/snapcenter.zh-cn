@@ -1,0 +1,318 @@
+---
+permalink: protect-sco/concept_import_data_from_snapmanager_for_oracle_and_snapmanager_for_sap_to_snapcenter.html 
+sidebar: sidebar 
+keywords: import, SnapManager for Oracle, SnapManager for SAP 
+summary: 通过将数据从 SnapManager for Oracle 和 SnapManager for SAP 导入到 SnapCenter ，您可以继续使用先前版本中的数据。 
+---
+= 将数据从 SnapManager for Oracle 和 SnapManager for SAP 导入到 SnapCenter
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过将数据从 SnapManager for Oracle 和 SnapManager for SAP 导入到 SnapCenter ，您可以继续使用先前版本中的数据。
+
+您可以通过从命令行界面（ Linux 主机命令行界面）运行导入工具，将数据从 SnapManager for Oracle 和 SnapManager for SAP 导入到 SnapCenter 。
+
+导入工具会在 SnapCenter 中创建策略和资源组。在 SnapCenter 中创建的策略和资源组对应于在 SnapManager for Oracle 和 SnapManager for SAP 中使用这些配置文件执行的配置文件和操作。SnapCenter 导入工具可与 SnapManager for Oracle 和 SnapManager for SAP 存储库数据库以及要导入的数据库进行交互。
+
+* 检索使用配置文件执行的所有配置文件，计划和操作。
+* 为每个唯一操作以及附加到配置文件的每个计划创建 SnapCenter 备份策略。
+* 为每个目标数据库创建一个资源组。
+
+
+您可以通过执行位于 /opt/netapp/snapcenter/spl/bin_ 的 sc-migrate 脚本来运行导入工具。在要导入的数据库主机上安装适用于 Linux 的 SnapCenter 插件软件包时， sc-migrate 脚本将复制到 _/opt/netapp/snapcenter/spl/bin_ 。
+
+
+NOTE: 不支持从 SnapCenter 图形用户界面（ GUI ）导入数据。
+
+SnapCenter 不支持在 7- 模式下运行的 Data ONTAP 。您可以使用 7- 模式过渡工具将运行 7- 模式 Data ONTAP 的系统上存储的数据和配置迁移到 ONTAP 系统。
+
+
+
+== 支持导入数据的配置
+
+在将数据从适用于 Oracle 的 SnapManager 3.4.x 和适用于 SAP 的 SnapManager 3.4.x 导入到 SnapCenter 之前，您应了解适用于 Oracle 数据库的 SnapCenter 插件支持的配置。
+
+中列出了适用于 Oracle 数据库的 SnapCenter 插件支持的配置 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+
+
+
+== 导入到 SnapCenter 中的内容
+
+您可以导入使用配置文件执行的配置文件，计划和操作。
+
+|===
+| 来自 SnapManager for Oracle 和 SnapManager for SAP | 到 SnapCenter 
+
+
+ a| 
+配置文件而不执行任何操作和计划
+ a| 
+创建的策略的默认备份类型为联机，备份范围为已满。
+
+
+
+ a| 
+具有一个或多个操作的配置文件
+ a| 
+系统会根据配置文件与使用该配置文件执行的操作的唯一组合创建多个策略。
+
+在 SnapCenter 中创建的策略包含从配置文件检索到的归档日志修剪和保留详细信息以及相应的操作。
+
+
+
+ a| 
+配置了 Oracle Recovery Manager （ RMAN ）的配置文件
+ a| 
+策略是在启用了 * 目录备份且 Oracle Recovery Manager* 选项的情况下创建的。
+
+如果在 SnapManager 中使用了外部 RMAN 目录编制，则必须在 SnapCenter 中配置 RMAN 目录设置。您可以选择现有凭据或创建新凭据。
+
+如果 RMAN 是通过 SnapManager 中的控制文件配置的，则不必在 SnapCenter 中配置 RMAN 。
+
+
+
+ a| 
+附加到配置文件的计划
+ a| 
+仅为计划创建策略。
+
+
+
+ a| 
+数据库
+ a| 
+系统会为导入的每个数据库创建一个资源组。
+
+在 Real Application Clusters （ RAC ）设置中，导入后运行导入工具的节点将成为首选节点，并为此节点创建资源组。
+
+|===
+
+NOTE: 导入配置文件时，系统会创建一个验证策略以及备份策略。
+
+将 SnapManager for Oracle 和 SnapManager for SAP 配置文件，计划以及使用这些配置文件执行的任何操作导入到 SnapCenter 中时，还会导入不同的参数值。
+
+|===
+| SnapManager for Oracle 和 SnapManager for SAP 参数和值 | SnapCenter 参数和值 | 注释： 
+
+
+ a| 
+备份范围
+
+* 已满
+* 数据
+* 日志
+
+ a| 
+备份范围
+
+* 已满
+* 数据
+* 日志
+
+ a| 
+
+
+
+ a| 
+备份模式
+
+* 自动
+* 联机
+* 脱机
+
+ a| 
+备份类型
+
+* 联机
+* 脱机关闭
+
+ a| 
+如果备份模式为自动，则导入工具会在执行操作时检查数据库状态，并将备份类型正确设置为联机或脱机关闭。
+
+
+
+ a| 
+Retention
+
+* 天
+* 计数
+
+ a| 
+Retention
+
+* 天
+* 计数
+
+ a| 
+SnapManager for Oracle 和 SnapManager for SAP 使用天数和计数来设置保留。
+
+在 SnapCenter 中，存在 Days _or_ 计数。因此，在 SnapManager for Oracle 和 SnapManager for SAP 中，保留时间设置为天数，因为天数优先于计数。
+
+
+
+ a| 
+对计划进行修剪
+
+* 全部
+* 系统更改编号（ SCN ）
+* Date
+* 在指定的小时，天，周和月之前创建的日志
+
+ a| 
+对计划进行修剪
+
+* 全部
+* 在指定的小时数和天数之前创建的日志
+
+ a| 
+SnapCenter 不支持根据 SCN ，日期，周和月进行修剪。
+
+
+
+ a| 
+通知
+
+* 仅为成功操作发送电子邮件
+* 仅针对失败的操作发送电子邮件
+* 针对操作成功和失败发送的电子邮件
+
+ a| 
+通知
+
+* 始终
+* 出现故障时
+* 警告
+* error
+
+ a| 
+此时将导入电子邮件通知。
+
+但是，您必须使用 SnapCenter 图形用户界面手动更新 SMTP 服务器。此电子邮件的主题留空供您配置。
+
+|===
+
+
+== 不会导入到 SnapCenter 中的内容
+
+导入工具不会将所有内容导入到 SnapCenter 中。
+
+您不能将以下内容导入到 SnapCenter 中：
+
+* 备份元数据
+* 部分备份
+* 与原始设备映射（ RDM ）和 Virtual Storage Console （ VSC ）相关的备份
+* SnapManager for Oracle 和 SnapManager for SAP 存储库中提供的角色或任何凭据
+* 与验证，还原和克隆操作相关的数据
+* 对操作进行修剪
+* 在 SnapManager for Oracle 和 SnapManager for SAP 配置文件中指定的复制详细信息
++
+导入后，您必须手动编辑在 SnapCenter 中创建的相应策略，以包含复制详细信息。
+
+* 已编目的备份信息
+
+
+
+
+== 准备导入数据
+
+在将数据导入到 SnapCenter 之前，您必须执行某些任务才能成功运行导入操作。
+
+* 步骤 *
+
+. 确定要导入的数据库。
+. 使用 SnapCenter 添加数据库主机并安装适用于 Linux 的 SnapCenter 插件软件包。
+. 使用 SnapCenter 为主机上的数据库使用的 Storage Virtual Machine （ SVM ）设置连接。
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面上，确保已发现并显示要导入的数据库。
++
+如果要运行导入工具，则必须可以访问数据库，否则资源组创建将失败。
+
++
+如果数据库配置了凭据，则必须在 SnapCenter 中创建相应的凭据，将此凭据分配给数据库，然后重新运行数据库发现。如果数据库驻留在自动存储管理（ Automatic Storage Management ， ASM ）上，则必须为 ASM 实例创建凭据，并将此凭据分配给数据库。
+
+. 确保运行导入工具的用户有足够的权限从 SnapManager for Oracle 或 SnapManager for SAP 主机运行 SnapManager for Oracle 或 SnapManager for SAP 命令行界面命令（例如暂停计划的命令）。
+. 在 SnapManager for Oracle 或 SnapManager for SAP 主机上运行以下命令以暂停计划：
++
+.. 如果要暂停 SnapManager for Oracle 主机上的计划，请运行：
++
+*** `smo credential set -repository -dbname repository_database_name -host host_name -port port_number -login -username user_name_for_repository_database`
+*** `smo profile sync -repository -dbname repository_database_name -host host_name -port port_number -login -username host_user_name_for_repository_database`
+*** `smo credential set -profile -name profile_name`
++
+
+NOTE: 您必须对主机上的每个配置文件运行 SMO 凭据集命令。
+
+
+
+.. 如果要暂停 SnapManager for SAP 主机上的计划，请运行：
++
+*** `smsap credential set -repository -dbname repository_database_name -host host_name -port port_number -login -username user_name_for_repository_database`
+*** `smsap profile sync -repository -dbname repository_database_name -host host_name -port port_number -login -username host_user_name_for_repository_database`
+*** `smsap credential set -profile -name profile_name`
+
+
++
+
+NOTE: 您必须对主机上的每个配置文件运行 smsap credential set 命令。
+
+
+
+. 确保在运行 hostname -f 时显示数据库主机的完全限定域名（ FQDN ）
++
+如果未显示 FQDN ，则必须修改 /etc/hosts 以指定主机的 FQDN 。
+
+
+
+
+
+== 导入数据
+
+您可以从数据库主机运行导入工具来导入数据。
+
+* 关于此任务 *
+
+导入后创建的 SnapCenter 备份策略具有不同的命名格式：
+
+* 为配置文件创建的策略不包含任何操作和计划，其格式为 sm_proFILENAME_online_full_default_switchated 。
++
+如果不使用配置文件执行任何操作，则会创建相应的策略，并将默认备份类型设置为联机，备份范围设置为已满。
+
+* 为具有一个或多个操作的配置文件创建的策略采用 sm_PROFILENAME_BACKUPMODE_BACKUPSCOPPE_MODE_MODE_BACKUPSCOPPE_MODE_MODE.
+* 为附加到配置文件的计划创建的策略采用 sm_proFILENAME_SMOSCHEDULENAME_BACKUPMODE_BACKUPSCOPPE_MODE_MODE_BACKUPSCOPPE_MODE_MODE.
+
+
+* 步骤 *
+
+. 登录到要导入的数据库主机。
+. 执行位于 /opt/netapp/snapcenter/spl/bin_ 的 sc-migrate 脚本，以运行导入工具。
+. 输入 SnapCenter 服务器用户名和密码。
++
+验证凭据后，将与 SnapCenter 建立连接。
+
+. 输入 SnapManager for Oracle 或 SnapManager for SAP 存储库数据库详细信息。
++
+存储库数据库列出了主机上可用的数据库。
+
+. 输入目标数据库详细信息。
++
+如果要导入主机上的所有数据库，请输入 all 。
+
+. 如果要为失败的操作生成系统日志或发送 ASUP 消息，则必须通过运行 _Add-SmStorageConnection_ 或 _Set-SmStorageConnection_ 命令来启用它们。
++
+
+NOTE: 如果要在运行导入工具时或导入后取消导入操作，则必须手动删除在导入操作中创建的 SnapCenter 策略，凭据和资源组。
+
+
+
+* 结果 *
+
+SnapCenter 备份策略是为使用配置文件执行的配置文件，计划和操作创建的。还会为每个目标数据库创建资源组。
+
+成功导入数据后，与导入的数据库关联的计划将在 SnapManager for Oracle 和 SnapManager for SAP 中暂停。
+
+
+NOTE: 导入后，必须使用 SnapCenter 管理导入的数据库或文件系统。
+
+每次执行导入工具时的日志都存储在名称为 spl_migration_timestamp.log 的 /var/opt/snapcenter/spl/logs_ 目录中。您可以参考此日志来查看导入错误并对其进行故障排除。

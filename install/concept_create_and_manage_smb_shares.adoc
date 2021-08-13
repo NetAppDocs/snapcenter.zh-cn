@@ -1,0 +1,100 @@
+---
+permalink: install/concept_create_and_manage_smb_shares.html 
+sidebar: sidebar 
+keywords: SMB shares 
+summary: 要在 Storage Virtual Machine （ SVM ）上配置 SMB3 共享，您可以使用 SnapCenter 用户界面或 PowerShell cmdlet 。 
+---
+= 创建和管理 SMB 共享
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要在 Storage Virtual Machine （ SVM ）上配置 SMB3 共享，您可以使用 SnapCenter 用户界面或 PowerShell cmdlet 。
+
+|===
+
+
+| * 最佳实践： * 建议使用 cmdlet ，因为它可以让您利用 SnapCenter 提供的模板自动配置共享。 
+|===
+这些模板包含卷和共享配置的最佳实践。您可以在适用于 Windows 的 SnapCenter 插件软件包安装文件夹中的 "Templates" 文件夹中找到这些模板。
+
+
+TIP: 如果您愿意这样做，可以按照提供的型号创建自己的模板。在创建自定义模板之前，应查看 cmdlet 文档中的参数。
+
+
+
+== 创建 SMB 共享
+
+您可以使用 SnapCenter 共享页面在 Storage Virtual Machine （ SVM ）上创建 SMB3 共享。
+
+您不能使用 SnapCenter 备份 SMB 共享上的数据库。SMB 支持仅限于配置。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 主机 * 。
+. 在主机页面中，单击 * 共享 * 。
+. 从 * Storage Virtual Machine* 下拉列表中选择 SVM 。
+. 单击 * 新建 * 。
++
+此时将打开 " 新建共享 " 对话框。
+
+. 在新建共享对话框中，定义共享：
++
+|===
+| 在此字段中 ... | 执行此操作 ... 
+
+
+ a| 
+Description
+ a| 
+输入共享的描述性文本。
+
+
+
+ a| 
+Share name
+ a| 
+输入共享名称，例如 test_share 。
+
+您为共享输入的名称也将用作卷名称。
+
+共享名称：
+
+** 必须为 UTF-8 字符串。
+** 不得包含以下字符： 0x00 到 0x1F 之间的控制字符（包括两个字符）， 0x22 （双引号）和特殊字符 ` \ / ] ：（竖条） < > + = ；，？`
+
+
+
+
+ a| 
+共享路径
+ a| 
+** 单击字段以输入新的文件系统路径，例如 / 。
+** 双击字段可从现有文件系统路径列表中进行选择。
+
+
+|===
+. 对输入的内容感到满意后，单击 * 确定 * 。
++
+SnapCenter 会在 SVM 上创建 SMB 共享。
+
+
+
+
+
+== 删除 SMB 共享
+
+您可以在不再需要 SMB 共享时将其删除。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 主机 * 。
+. 在主机页面中，单击 * 共享 * 。
+. 在共享页面中，单击 * Storage Virtual Machine* 字段以显示包含可用 Storage Virtual Machine （ SVM ）列表的下拉列表，然后为要删除的共享选择 SVM 。
+. 从 SVM 上的共享列表中，选择要删除的共享，然后单击 * 删除 * 。
+. 在删除共享对话框中，单击 * 确定 * 。
++
+SnapCenter 将从 SVM 中删除 SMB 共享。
+
+

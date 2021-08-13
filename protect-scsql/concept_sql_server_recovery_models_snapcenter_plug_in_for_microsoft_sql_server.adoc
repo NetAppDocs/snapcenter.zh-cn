@@ -1,0 +1,29 @@
+---
+permalink: protect-scsql/concept_sql_server_recovery_models_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: 默认情况下，系统会为每种数据库类型分配特定的恢复模型。SQL Server 数据库管理员可以将每个数据库重新分配给不同的恢复模式。 
+---
+= SnapCenter 支持的 SQL Server 恢复模式
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+默认情况下，系统会为每种数据库类型分配特定的恢复模型。SQL Server 数据库管理员可以将每个数据库重新分配给不同的恢复模式。
+
+SnapCenter 支持三种类型的 SQL Server 恢复模式：
+
+* 恢复模式简单
++
+使用简单恢复模式时，无法备份事务日志。
+
+* 完全恢复模式
++
+使用完全恢复模式时，您可以将数据库从故障点还原到先前的状态。
+
+* 批量记录的恢复模式
++
+使用批量日志记录恢复模式时，必须手动重新执行批量日志记录操作。如果在还原之前未备份包含操作的提交记录的事务日志，则必须执行批量日志操作。如果批量日志记录操作在数据库中插入 1 ， 000 万行，而数据库在备份事务日志之前失败，则还原的数据库将不包含批量日志记录操作插入的行。
+
+

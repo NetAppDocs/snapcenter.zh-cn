@@ -1,0 +1,66 @@
+---
+permalink: install/task_install_the_snapcenter_server_using_the_install_wizard.html 
+sidebar: sidebar 
+keywords: install, snapcenter software, install wizard 
+summary: 您可以运行 SnapCenter 服务器安装程序可执行文件来安装 SnapCenter 服务器。 
+---
+= 安装 SnapCenter 服务器
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以运行 SnapCenter 服务器安装程序可执行文件来安装 SnapCenter 服务器。
+
+您可以选择使用 PowerShell cmdlet 执行多个安装和配置过程。
+
+
+NOTE: 不支持使用命令行静默安装 SnapCenter 服务器。
+
+* 您需要的内容 *
+
+* SnapCenter 服务器主机必须是最新的 Windows 更新，并且不会发生待定系统重新启动。
+* 您应确保计划安装 SnapCenter 服务器的主机上未安装 MySQL 服务器。
+* 您应已启用 Windows 安装程序调试。
++
+有关启用的信息，请参见 Microsoft 网站 https://support.microsoft.com/kb/223300["Windows 安装程序日志记录"^]。
+
++
+
+NOTE: 您不应将 SnapCenter 服务器安装在具有 Microsoft Exchange Server ， Active Directory 或域名服务器的主机上。
+
+
+
+* 步骤 *
+
+. 从下载 SnapCenter 服务器安装包 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp 支持站点"^]。
+. 双击下载的 .exe 文件启动 SnapCenter 服务器安装。
++
+启动安装后，系统将执行所有预检，如果不满足最低要求，则会显示相应的错误或警告消息。
+
++
+您可以忽略警告消息并继续安装；但是，错误应予以修复。
+
+. 查看安装 SnapCenter 服务器所需的预填充值，并根据需要进行修改。
++
+您不必指定 MySQL Server 存储库数据库的密码。在 SnapCenter 服务器安装期间，系统会自动生成密码。
+
++
+
+NOTE: 存储库数据库的自定义路径不支持特殊字符 "` %` " 。如果在路径中包含 "` %` " ，则安装将失败。
+
+. 单击 * 立即安装 * 。
++
+如果指定的值无效，则会显示相应的错误消息。您应重新输入这些值，然后启动安装。
+
++
+
+NOTE: 如果单击 * 取消 * 按钮，则正在执行的步骤将完成，然后启动回滚操作。SnapCenter 服务器将从主机中完全删除。
+
++
+但是，如果在执行 SnapCenter 服务器站点重新启动或等待 SnapCenter 服务器启动操作时单击 * 取消 * ，则安装将继续进行，而不会取消此操作。
+
++
+日志文件始终列在管理员用户的 %temp% 文件夹中（最早的先列出）。如果要重定向日志位置，请从命令提示符处运行以下命令来启动 SnapCenter 服务器安装：``C ： \installer_location\installer_name.exe /log"C" ： \"``
+
+

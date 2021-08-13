@@ -1,0 +1,22 @@
+---
+permalink: sc-automation/overview_rest_apis.html 
+sidebar: sidebar 
+keywords: REST APIs, swagger 
+summary: 介绍如何使用 REST API 执行多个 SnapCenter 管理操作。REST API 通过 Swagger 网页公开。 
+---
+= REST API 概述
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+REST API 可用于执行多个 SnapCenter 管理操作。REST API 通过 Swagger 网页公开。
+
+您可以访问位于 ｛ \https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_ ｝ 的 Swagger 网页，以显示 REST API 文档以及手动对 API 调用执行问题描述操作。
+
+支持 REST API 的插件包括：
+
+* 适用于 Microsoft SQL Server 的插件
+* 适用于 SAP HANA 数据库的插件
+* 自定义插件
+

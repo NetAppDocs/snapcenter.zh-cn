@@ -1,0 +1,109 @@
+---
+permalink: protect-scw/task_back_up_a_single_resource_on_demand_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords: backing up 
+summary: 如果某个资源不在资源组中，您可以从资源页面按需备份该资源。 
+---
+= 按需备份 Windows 文件系统的单个资源
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果某个资源不在资源组中，您可以从资源页面按需备份该资源。
+
+* 关于此任务 *
+
+如果要备份与二级存储具有 SnapMirror 关系的资源，则分配给存储用户的角色应包括 `snapmirror all` 特权。但是，如果您使用的是 "`vsadmin` " 角色，则不需要 " `snapmirror all` " 特权。
+
+
+NOTE: 备份文件系统时， SnapCenter 不会备份挂载在要备份的文件系统的卷挂载点（ VMP ）上的 LUN 。
+
+
+IMPORTANT: 如果您在 Windows 文件系统环境中工作，请勿备份数据库文件。这样做会导致备份不一致，并且在还原时可能会丢失数据。要保护数据库文件，您必须使用适用于数据库的 SnapCenter 插件（例如，适用于 Microsoft SQL Server 的 SnapCenter 插件，适用于 Microsoft Exchange Server 的 SnapCenter 插件或适用于数据库文件的自定义插件）。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面中，选择文件系统资源类型，然后选择要备份的资源。
+. 如果文件系统 - 保护向导未自动启动，请单击 * 保护 * 启动向导。
++
+指定保护设置，如创建资源组任务中所述。
+
+. 可选：在向导的 " 资源 " 页面中，输入 Snapshot 副本的自定义名称格式。
++
+例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。
+
+. 在策略页面中，执行以下任务：
++
+.. 从下拉列表中选择一个或多个策略。
++
+您可以选择任何现有策略，然后单击 * 详细信息 * 以确定是否可以使用该策略。
+
++
+如果现有策略不满足您的要求，您可以复制现有策略并对其进行修改，也可以单击创建新策略 image:../media/add_policy_from_resourcegroup.gif[""] 启动策略向导。
+
++
+选定策略将在为选定策略配置计划部分的策略列中列出。
+
+.. 在为选定策略配置计划部分中，单击 image:../media/add_policy_from_resourcegroup.gif[""] 在要配置计划的策略的 Configure Schedules 列中。
+.. 在添加策略 _policy_name_ 的计划对话框中，指定开始日期，到期日期和频率来配置计划，然后单击 * 完成 * 。
++
+已配置的计划将列在为选定策略配置计划部分的已应用计划列中。
+
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Scheduled_data_protection_operations_fail_if_the_number_of_operations_running_reaches_maximum_limit["计划的操作可能会失败"]
+
+
+
+. 在通知页面中，执行以下任务：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+电子邮件首选项
+ a| 
+在创建备份资源组，附加策略和配置计划之后，选择 * 始终 * ， * 发生故障 * 或 * 发生故障或警告 * 向收件人发送电子邮件。
+
+输入 SMTP 服务器信息，默认电子邮件主题行以及 "`to` " 和 "`from` " 电子邮件地址。
+
+
+
+ a| 
+from
+ a| 
+电子邮件地址
+
+
+
+ a| 
+收件人：
+ a| 
+电子邮件收件人地址
+
+
+
+ a| 
+主题
+ a| 
+默认电子邮件主题行
+
+|===
+. 查看摘要，然后单击 * 完成 * 。
++
+此时将显示数据库拓扑页面。
+
+. 单击 * 立即备份 * 。
+. 在备份页面上，执行以下步骤：
++
+.. 如果已对资源应用多个策略，请从策略下拉列表中选择要用于备份的策略。
++
+如果为按需备份选择的策略与备份计划关联，则按需备份将根据为计划类型指定的保留设置进行保留。
+
+.. 单击 * 备份 * 。
+
+
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
+

@@ -1,0 +1,34 @@
+---
+permalink: protect-scsql/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 在添加主机并安装插件软件包之前，您必须满足所有要求。 
+---
+= 添加主机和安装适用于 Microsoft SQL Server 的 SnapCenter 插件的前提条件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在添加主机并安装插件软件包之前，您必须满足所有要求。
+
+* 如果使用的是 iSCSI ，则 iSCSI 服务必须正在运行。
+* 您必须拥有具有本地管理员权限的用户，并在远程主机上拥有本地登录权限。
+* 如果您在 SnapCenter 中管理集群节点，则必须具有对集群中所有节点具有管理权限的用户。
+* 您必须具有对 SQL Server 具有 sysadmin 权限的用户。
++
+适用于 Microsoft SQL Server 的 SnapCenter 插件使用 Microsoft VDI Framework ，这需要 sysadmin 访问权限。
+
++
+http://support.microsoft.com/kb/2926557/["Microsoft 支持文章 2926557 ： SQL Server VDI 备份和还原操作需要 sysadmin 特权"]
+
+* 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
+* 如果安装了 SnapManager for Microsoft SQL Server ，则必须已停止或禁用此服务和计划。
++
+如果您计划将备份或克隆作业导入到 SnapCenter 中，请勿卸载适用于 Microsoft SQL Server 的 SnapManager 。
+
+* 主机必须可从服务器解析为完全限定域名（ FQDN ）。
++
+如果修改了 hosts 文件以使其可解析，并且在 hosts 文件中同时指定了短名称和 FQDN ，请在 SnapCenter hosts 文件中按以下格式创建一个条目： <IP_address> <host_FQDN> <host_name>
+
+

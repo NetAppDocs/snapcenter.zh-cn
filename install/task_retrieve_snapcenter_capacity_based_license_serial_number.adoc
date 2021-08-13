@@ -1,0 +1,30 @@
+---
+permalink: install/task_retrieve_snapcenter_capacity_based_license_serial_number.html 
+sidebar: sidebar 
+keywords: capacity-based license, serial number 
+summary: 您的订单确认函或文档包中提供了基于 SnapCenter 容量的许可证序列号；但是，如果您没有此序列号，则可以从 NetApp 支持站点检索此序列号。 
+---
+= 检索基于 SnapCenter 容量的许可证序列号
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您的订单确认函或文档包中提供了基于 SnapCenter 容量的许可证序列号；但是，如果您没有此序列号，则可以从 NetApp 支持站点检索此序列号。
+
+您必须具有有效的 NetApp 支持站点登录凭据。如果未输入有效凭据，则不会为搜索返回任何信息。
+
+* 步骤 *
+
+. 登录到 NetApp 支持站点，网址为 http://mysupport.netapp.com/["mysupport.netapp.com"^]。
+. 导航到 * 系统 * > * 软件许可证 * 。
+. 在选择条件区域中，从全部显示：序列号和许可证下拉菜单中选择 * SC_STANDARE* 。
++
+image::../media/nss_license_selection.gif[选择 NSS 许可证]
+
+. 键入您的公司名称，然后单击 * 执行！ * 。
++
+显示格式为 51xxxxxxx 的九位 SnapCenter 许可证序列号。
+
+. 记录 SnapCenter 许可证序列号。
+

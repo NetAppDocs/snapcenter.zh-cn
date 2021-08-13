@@ -1,0 +1,73 @@
+---
+permalink: admin/concept_manage_ems_data_collection.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用 PowerShell cmdlet 计划和管理事件管理系统（ EMS ）数据收集。EMS 数据收集涉及收集有关 SnapCenter 服务器，已安装的 SnapCenter 插件软件包，主机和类似信息的详细信息，然后将其发送到指定的 ONTAP Storage Virtual Machine \ （ SVM\ ）。 
+---
+= 管理 EMS 数据收集
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 PowerShell cmdlet 计划和管理事件管理系统（ EMS ）数据收集。EMS 数据收集涉及收集有关 SnapCenter 服务器，已安装的 SnapCenter 插件软件包，主机和类似信息的详细信息，然后将其发送到指定的 ONTAP Storage Virtual Machine （ SVM ）。
+
+
+NOTE: 正在执行数据收集任务时，系统 CPU 利用率较高。只要操作正在进行，无论数据大小如何， CPU 利用率都将保持较高。
+
+
+
+== 停止 EMS 数据收集
+
+默认情况下， EMS 数据收集处于启用状态，并在安装日期后每七天运行一次。您可以随时使用 PowerShell cmdlet _Disable-SmDataCollectionEMS_ 禁用数据收集。
+
+* 步骤 *
+
+. 在 PowerShell 命令行中，输入 _Open-SmConnection_ 与 SnapCenter 建立会话。
+. 输入 _Disable-SmDataCollectionEms_禁用 EMS 数据收集。
+
+
+
+
+== 启动 EMS 数据收集
+
+EMS 数据收集默认处于启用状态，计划从安装日期起每七天运行一次。如果已禁用 EMS ，则可以使用 _Enable-SmDataCollectionEMS_ cmdlet 重新启动 EMS 数据收集。
+
+已向 Storage Virtual Machine （ SVM ）用户授予 Data ONTAP event generate-autosupport-log 权限。
+
+* 步骤 *
+
+. 在 PowerShell 命令行中，输入 _Open-SmConnection_ 与 SnapCenter 建立会话。
+. 输入 _Enable-SmDataCollectionEMS_ 以启用 EMS 数据收集。
+
+
+
+
+== 更改 EMS 数据收集计划和目标 SVM
+
+您可以使用 PowerShell cmdlet 更改 EMS 数据收集计划或目标 Storage Virtual Machine （ SVM ）。
+
+* 步骤 *
+
+. 在 PowerShell 命令行中，要与 SnapCenter 建立会话，请输入 _Open-SmConnection_ cmdlet 。
+. 要更改 EMS 数据收集目标，请输入 _Set-SmDataCollectionEmsTarget_ cmdlet 。
+. 要更改 EMS 数据收集计划，请输入 _Set-SmDataCollectionEmsSchedule_ cmdlet 。
+
+
+
+
+== 监控 EMS 数据收集状态
+
+您可以使用多个 PowerShell cmdlet 监控 EMS 数据收集的状态。您可以获取有关计划， Storage Virtual Machine （ SVM ）目标和状态的信息。
+
+* 步骤 *
+
+. 在 PowerShell 命令行中，输入 _Open-SmConnection_ 与 SnapCenter 建立会话。
+. 输入 _Get-SmDataCollectionEmsSchedule_ 以检索有关 EMS 数据收集计划的信息。
+. 输入 _Get-SmDataCollectionEmsStatus_ 以检索有关 EMS 数据收集状态的信息。
+. 输入 _Get-SmDataCollectionEmsTarget_ 以检索有关 EMS 数据收集目标的信息。
+
+
+* 查找更多信息 *
+
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。

@@ -1,0 +1,18 @@
+---
+permalink: protect-scsql/concept_limitations_related_to_the_import_feature.html 
+sidebar: sidebar 
+keywords:  
+summary: 了解将归档备份从 SnapManager for Microsoft SQL Server 导入到 SnapCenter 之前的限制将有助于成功完成导入。这些备份必须已使用 SnapVault 技术进行归档。 
+---
+= 与导入功能相关的限制
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解将归档备份从 SnapManager for Microsoft SQL Server 导入到 SnapCenter 之前的限制将有助于成功完成导入。这些备份必须已使用 SnapVault 技术进行归档。
+
+* 您不能在 SnapCenter 中管理使用适用于 Microsoft SQL Server 的 SnapManager 创建的克隆。您必须在适用于 Microsoft SQL Server 的 SnapManager 中管理克隆。
+* 您不能从 SnapCenter 图形用户界面（ GUI ）导入备份。
+* 您不能从具有 VMDK 磁盘的虚拟机导入数据库。
+

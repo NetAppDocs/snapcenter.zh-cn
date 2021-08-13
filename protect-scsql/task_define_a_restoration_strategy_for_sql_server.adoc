@@ -1,0 +1,13 @@
+---
+permalink: protect-scsql/task_define_a_restoration_strategy_for_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: 通过为 SQL Server 定义还原策略，您可以成功还原数据库。 
+---
+= 定义 SQL Server 的还原策略
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过为 SQL Server 定义还原策略，您可以成功还原数据库。

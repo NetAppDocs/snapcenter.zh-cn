@@ -1,0 +1,46 @@
+= 
+
+
+在安装适用于 Windows 的 SnapCenter 插件软件包之前，您应熟悉一些基本的主机系统空间要求和规模估算要求。
+
+|===
+| 项目 | 要求 
+
+
+ a| 
+操作系统
+ a| 
+Microsoft Windows
+
+有关受支持版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+
+
+
+ a| 
+主机上 SnapCenter 插件的最小 RAM
+ a| 
+1 GB
+
+
+
+ a| 
+主机上 SnapCenter 插件的最小安装和日志空间
+ a| 
+5 GB
+
+
+NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消耗。所需的日志空间因要保护的实体数量和数据保护操作的频率而异。如果没有足够的磁盘空间，则不会为最近运行的操作创建日志。
+
+
+
+ a| 
+所需的软件包
+ a| 
+* Microsoft .NET Framework 4.5.2 或更高版本
+* Windows Management Framework （ WMF ） 4.0 或更高版本
+* PowerShell 4.0 或更高版本
+
+
+有关受支持版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+
+|===

@@ -1,0 +1,22 @@
+---
+permalink: protect-sce/reference_exchange_database_and_backup_verification.html 
+sidebar: sidebar 
+keywords:  
+summary: 适用于 Microsoft Exchange Server 的 SnapCenter 插件不提供备份验证；但是，您可以使用 Exchange 随附的 Eseutil 工具来验证 Exchange 数据库和备份。 
+---
+= Exchange 数据库和备份验证
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+适用于 Microsoft Exchange Server 的 SnapCenter 插件不提供备份验证；但是，您可以使用 Exchange 随附的 Eseutil 工具来验证 Exchange 数据库和备份。
+
+Microsoft Exchange Eseutil 工具是 Exchange 服务器随附的命令行实用程序。该实用程序可用于执行一致性检查，以验证 Exchange 数据库和备份的完整性。
+
+|===
+
+
+| * 最佳实践： * 对于数据库可用性组（ Database Availability Group ， DAG ）配置中包含至少包含两个副本的数据库，无需执行一致性检查。 
+|===
+对于追加信息，请参见 https://docs.microsoft.com/en-us/exchange/exchange-server?view=exchserver-2019["Microsoft Exchange Server 文档"^]。

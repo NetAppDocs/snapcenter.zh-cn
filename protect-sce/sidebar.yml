@@ -1,0 +1,107 @@
+---
+section: protect-sce
+title: 保护 Microsoft Exchange Server 数据库
+entries:
+- title: 适用于 Microsoft Exchange Server 的 SnapCenter 插件概述
+  url: "/protect-sce/concept_snapcenter_plug_in_for_exchange_server_overview.html"
+  entries:
+  - title: 适用于 Microsoft Exchange Server 的 SnapCenter 插件的功能
+    url: "/protect-sce/concept_what_you_can_do_with_snapcenter_plug_in_for_microsoft_exchange_server.html"
+  - title: 适用于 Microsoft Windows 和 Microsoft Exchange Server 的 SnapCenter 插件支持的存储类型
+    url: "/protect-sce/reference_storage_types_supported_by_snapcenter_plug_in_for_microsoft_windows_and_for_microsoft_exchange_server.html"
+  - title: 所需的最小 ONTAP 权限
+    url: "/protect-sce/concept_minimum_privileges_required_exchange_plug_in.html"
+  - title: 准备用于 SnapMirror 和 SnapVault 复制的存储系统
+    url: "/protect-sce/reference_prepare_storage_system_for_snapmirror_and_snapvault.html"
+  - title: 为 Exchange Server 资源定义备份策略
+    url: "/protect-sce/task_define_a_backup_strategy_for_exchange_server_resources.html"
+  - title: 定义 Exchange 数据库的还原策略
+    url: "/protect-sce/task_define_a_restore_strategy_for_exchange_databases.html"
+- title: 安装适用于 Microsoft Exchange Server 的 SnapCenter 插件
+  url: "/protect-sce/concept_install_snapcenter_plug_in_for_microsoft_exchange_server.html"
+  entries:
+  - title: 添加主机和安装适用于 Microsoft Exchange Server 的 SnapCenter 插件的前提条件
+    url: "/protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html"
+    entries:
+    - title: 安装适用于 Windows 的 SnapCenter 插件软件包的主机要求
+      url: "/protect-sce/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows.html"
+    - title: 需要 Exchange Server 特权
+      url: "/protect-sce/reference_exchange_server_cluster_node_privileges_required.html"
+    - title: 设置适用于 Windows 的 SnapCenter 插件的凭据
+      url: "/protect-sce/task_set_up_credentials_for_the_snapcenter_plug_in_for_windows_sce.html"
+    - title: 在 Windows Server 2012 或更高版本上配置 GMSA
+      url: "/protect-sce/task_configure_gMSA_on_windows_server_2012_or_later.html"
+  - title: 添加主机并安装适用于 Exchange 的插件
+    url: "/protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html"
+    entries:
+    - title: 使用 PowerShell cmdlet 从 SnapCenter 服务器主机安装适用于 Exchange 的插件
+      url: "/protect-sce/task_install_plug_in_for_exchange_from_the_snapcenter_server_host_using_powershell_cmdlets.html"
+    - title: 通过命令行以静默方式安装适用于 Exchange 的 SnapCenter 插件
+      url: "/protect-sce/task_install_the_snapcenter_plug_in_for_exchange_silently_from_the_command_line.html"
+    - title: 监控 SnapCenter 插件软件包安装状态
+      url: "/protect-sce/task_monitor_snapcenter_plug_in_package_installation_status.html"
+  - title: 生成 CA 证书 CSR 文件
+    url: "/protect-sce/reference_generate_CA_certificate_CSR_file.html"
+    entries:
+    - title: 导入 CA 证书
+      url: "/protect-sce/task_import_CA_certificates.html"
+    - title: 获取 CA 证书指纹
+      url: "/protect-sce/task_get_the_CA_certificate_thumbprint.html"
+    - title: 使用 Windows 主机插件服务配置 CA 证书
+      url: "/protect-sce/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
+    - title: 为插件启用 CA 证书
+      url: "/protect-sce/task_enable_ca_certificates_for_plug-ins.html"
+  - title: 将 SnapManager 7.x 配置为使 Exchange 和 SnapCenter 共存
+    url: "/protect-sce/task_configure_snapmanager_7_x_for_exchange_and_snapcenter_plug_in_for_exchange_to_coexist.html"
+- title: 安装适用于 VMware vSphere 的 SnapCenter 插件
+  url: "/protect-sce/task_install_snapcenter_plug_in_for_vmware_vsphere.html"
+- title: 准备数据保护
+  url: "/protect-sce/concept_prepare_for_data_protection.html"
+- title: 备份 Exchange 资源
+  url: "/protect-sce/concept_back_up_exchange_resources.html"
+  entries:
+  - title: Exchange 数据库和备份验证
+    url: "/protect-sce/reference_exchange_database_and_backup_verification.html"
+  - title: 确定 Exchange 资源是否可用于备份
+    url: "/protect-sce/task_determine_whether_exchange_resources_are_available_for_backup_sce.html"
+  - title: 为 Exchange Server 数据库创建备份策略
+    url: "/protect-sce/task_create_backup_policies_for_exchange_server_databases.html"
+  - title: 为 Exchange Server 创建资源组并附加策略
+    url: "/protect-sce/task_create_resource_groups_and_attach_policies_for_exchange_servers.html"
+  - title: 备份 Exchange 数据库
+    url: "/protect-sce/task_back_up_exchange_databases.html"
+  - title: 备份 Exchange 资源组
+    url: "/protect-sce/task_back_up_exchange_resources_groups.html"
+  - title: 使用适用于 Exchange Server 的 PowerShell cmdlet 创建存储系统连接和凭据
+    url: "/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html"
+  - title: 使用 PowerShell cmdlet 备份 Exchange 资源
+    url: "/protect-sce/task_back_up_exchange_resources_using_powershell_cmdlets.html"
+  - title: 监控备份操作
+    url: "/protect-sce/task_monitor_backup_operations.html"
+  - title: 取消 Exchange 数据库的备份操作
+    url: "/protect-sce/task_cancel_backup_operations_for_exchange_database.html"
+  - title: 使用 PowerShell cmdlet 删除 Exchange 备份
+    url: "/protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html"
+  - title: 在 Topology 页面上查看 Exchange 备份
+    url: "/protect-sce/task_view_exchange_backups_in_the_topology_page.html"
+- title: 还原 Exchange 资源
+  url: "/protect-sce/reference_restore_exchange_resources.html"
+  entries:
+  - title: 还原 Exchange 数据库的要求
+    url: "/protect-sce/concept_requirements_for_restoring_an_exchange_database.html"
+  - title: 还原 Exchange 数据库
+    url: "/protect-sce/task_restore_exchange_databases.html"
+  - title: 邮件和邮箱的粒度恢复
+    url: "/protect-sce/reference_granular_recovery_of_mails_and_mailbox.html"
+  - title: 从二级存储还原 Exchange Server 数据库
+    url: "/protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html"
+  - title: 使用 PowerShell cmdlet 还原 Exchange 资源
+    url: "/protect-sce/task_restore_exchange_resources_using_powershell_cmdlets.html"
+  - title: 重新传输被动 Exchange 节点副本
+    url: "/protect-sce/task_reseed_a_passive_exchange_node_replica.html"
+  - title: 使用适用于 Exchange 数据库的 PowerShell cmdlet 重新获取副本
+    url: "/protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html"
+  - title: 监控还原操作
+    url: "/protect-sce/task_monitor_restore_operations.html"
+  - title: 取消还原操作
+    url: "/protect-sce/task_cancel_restore_operations.html"

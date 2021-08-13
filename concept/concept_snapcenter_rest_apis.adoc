@@ -1,0 +1,32 @@
+---
+permalink: concept/concept_snapcenter_rest_apis.html 
+sidebar: sidebar 
+keywords: REST APIs 
+summary: 您可以使用 REST API 执行多个 SnapCenter 管理操作。REST API 通过 Swagger 网页公开。您可以访问 Swagger 网页以显示 REST API 文档，并手动对 API 调用执行问题描述。您可以使用 REST API 帮助管理 SnapCenter 服务器或 SnapCenter vSphere 主机。 
+---
+= 使用 REST API 实现 SnapCenter 自动化
+
+
+[role="lead"]
+您可以使用 REST API 执行多个 SnapCenter 管理操作。REST API 通过 Swagger 网页公开。您可以访问 Swagger 网页以显示 REST API 文档，并手动对 API 调用执行问题描述。您可以使用 REST API 帮助管理 SnapCenter 服务器或 SnapCenter vSphere 主机。
+
+|===
+| REST API 用于 ... | 位于 ... 
+
+
+ a| 
+SnapCenter 服务器
+ a| 
+https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/
+
+
+
+ a| 
+适用于 VMware vSphere 的 SnapCenter 插件
+ a| 
+https://<OVA_IP_address_or_host_name>:<scv_plugin_port>/api/swagger-ui.html#
+
+|===
+有关 SnapCenter REST API 的信息，请参见 link:../sc-automation/overview_rest_apis.html["REST API 概述"^]
+
+有关适用于 VMware vSphere 的 SnapCenter 插件 REST API 的信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_rest_apis_overview.html["适用于 VMware vSphere 的 SnapCenter 插件 REST API"^]

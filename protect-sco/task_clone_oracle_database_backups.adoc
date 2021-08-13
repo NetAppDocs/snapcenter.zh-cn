@@ -1,0 +1,24 @@
+---
+permalink: protect-sco/task_clone_oracle_database_backups.html 
+sidebar: sidebar 
+keywords: clone operation 
+summary: 克隆工作流包括规划，执行克隆操作以及监控操作。 
+---
+= 克隆 Oracle 数据库
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+克隆工作流包括规划，执行克隆操作以及监控操作。
+
+克隆数据库的原因如下：
+
+* 测试应用程序开发周期中必须使用当前数据库结构和内容实施的功能。
+* 使用数据提取和操作工具填充数据仓库。
+* 恢复错误删除或更改的数据。
+
+
+以下工作流显示了必须执行克隆操作的顺序：
+
+image::../media/sco_scc_wfs_clone_workflow.png[克隆工作流]

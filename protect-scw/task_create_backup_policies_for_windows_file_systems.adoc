@@ -1,0 +1,150 @@
+---
+permalink: protect-scw/task_create_backup_policies_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以在使用 SnapCenter 备份 Windows 文件系统之前为资源创建新的备份策略，也可以在创建资源组或备份资源时创建新的备份策略。 
+---
+= 为 Windows 文件系统创建备份策略
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在使用 SnapCenter 备份 Windows 文件系统之前为资源创建新的备份策略，也可以在创建资源组或备份资源时创建新的备份策略。
+
+* 您需要的内容 *
+
+* 您必须已定义备份策略。 link:task_define_a_backup_strategy_for_windows_file_systems.html["了解更多信息。"^]
+* 您必须已做好数据保护准备。
++
+要准备数据保护，您必须完成安装 SnapCenter ，添加主机，发现资源以及创建 Storage Virtual Machine （ SVM ）连接等任务。
+
+* 如果要将 Snapshot 副本复制到镜像或存储二级存储， SnapCenter 管理员必须已为源卷和目标卷分配 SVM 。
+* 如果要在预处理脚本和后处理脚本中运行 PowerShell 脚本，应在 web.config 文件中将 usePowershellProcessforScripts 参数的值设置为 true 。
++
+默认值为 false 。
+
+
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 设置 * 。
+. 在设置页面中，单击 * 策略 * 。
+. 要确定是否可以使用现有策略，请选择策略名称，然后单击 * 详细信息 * 。
++
+查看现有策略后，您可以执行以下操作之一：
+
++
+** 使用现有策略。
+** 复制现有策略并修改策略配置。
+** 创建新策略。
+
+
+. 要创建新策略，请单击 * 新建 * 。
+. 在名称页面上，输入策略名称和问题描述。
+. 在备份选项页面上，执行以下任务：
++
+.. 选择备份设置。
++
+|===
+| 选项 | Description 
+
+
+ a| 
+文件系统一致的备份
+ a| 
+如果希望 SnapCenter 在备份操作开始之前暂停文件系统所在的磁盘驱动器，然后在备份操作结束后恢复磁盘驱动器，请选择此选项。
+
+
+
+ a| 
+文件系统崩溃状态一致的备份
+ a| 
+如果不希望 SnapCenter 暂停文件系统所在的磁盘驱动器，请选择此选项。
+
+|===
+.. 选择计划频率（也称为策略类型）。
++
+此策略仅指定备份频率。用于备份的特定保护计划在资源组中定义。因此，两个或更多资源组可以共享相同的策略和备份频率，但备份计划不同。
+
++
+
+NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不会触发此计划。
+
+
+
+. 在保留页面上，为按需备份以及选定的每个计划频率指定保留设置。
++
+|===
+| 选项 | Description 
+
+
+ a| 
+要保留的 Snapshot 副本总数
+ a| 
+如果要在自动删除 SnapCenter 存储之前指定 Snapshot 副本的数量，请选择此选项。
+
+
+
+ a| 
+删除早于的 Snapshot 副本
+ a| 
+如果要指定 SnapCenter 在删除备份副本之前保留备份副本的天数，请选择此选项。
+
+|===
++
+
+IMPORTANT: 如果计划启用 SnapVault 复制，则应将保留计数设置为 2 或更高。如果将复制计数设置为 1 ，则保留操作可能会失败。这是因为在将较新的 Snapshot 副本复制到目标之前，第一个 Snapshot 副本是 SnapVault 关系的参考 Snapshot 副本。
+
++
+
+NOTE: 对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，对于 ONTAP 9.3 或更早版本上的资源，最大保留值为 254 。如果将保留设置为高于底层 ONTAP 版本支持的值，则备份将失败。
+
+. 在复制页面上，指定复制到二级存储系统：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+创建本地 Snapshot 副本后更新 SnapMirror
+ a| 
+选择此选项可在另一个卷（ SnapMirror ）上创建备份集的镜像副本。
+
+
+
+ a| 
+创建 Snapshot 副本后更新 SnapVault
+ a| 
+选择此选项可执行磁盘到磁盘备份复制。
+
+
+
+ a| 
+二级策略标签
+ a| 
+选择 Snapshot 标签。
+
+根据您选择的 Snapshot 副本标签， ONTAP 会应用与该标签匹配的二级 Snapshot 副本保留策略。
+
+
+NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
+
+
+
+ a| 
+错误重试次数
+ a| 
+输入在进程暂停之前应进行的复制尝试次数。
+
+|===
++
+
+NOTE: 您应在 ONTAP 中为二级存储配置 SnapMirror 保留策略，以避免达到二级存储上 Snapshot 副本的最大限制。
+
+. 在 " 脚本 " 页面上，分别输入希望 SnapCenter 服务器在备份操作前后运行的预处理或后脚本的路径以及 SnapCenter 在超时前等待脚本执行的时间限制。
++
+例如，您可以运行脚本来更新 SNMP 陷阱，自动执行警报和发送日志。
+
+. 查看摘要，然后单击 * 完成 * 。
+

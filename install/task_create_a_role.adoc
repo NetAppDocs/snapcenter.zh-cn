@@ -1,0 +1,37 @@
+---
+permalink: install/task_create_a_role.html 
+sidebar: sidebar 
+keywords: role, create, permission 
+summary: 除了使用现有 SnapCenter 角色之外，您还可以创建自己的角色并自定义权限。 
+---
+= 创建角色
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+除了使用现有 SnapCenter 角色之外，您还可以创建自己的角色并自定义权限。
+
+您应已以 "SnapCenterAdmin" 角色登录。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 设置 * 。
+. 在设置页面中，单击 * 角色 * 。
+. 单击 image:../media/add_icon_configure_database.gif["配置数据库屏幕中的添加图标"]。
+. 在添加角色页面中，指定新角色的名称和问题描述。
++
+
+NOTE: 从 SnapCenter 4.5 开始，您的角色名称不能包含 /\ （ ] ；）， = ， +* ？ < > 字符。如果要使用在早期版本的 SnapCenter 中创建的角色以及这些特殊字符，可以通过将 "DisableSQLInjectionValidation " 参数的值更改为 true 来禁用角色名称验证。
+
+. 选择 * 此角色的所有成员均可查看其他成员的对象 * ，以使该角色的其他成员能够在刷新资源列表后查看卷和主机等资源。
++
+如果不希望此角色的成员查看分配给其他成员的对象，则应取消选择此选项。
+
++
+
+NOTE: 启用此选项后，如果用户与创建对象或资源的用户具有相同的角色，则不需要为用户分配对对象或资源的访问权限。
+
+. 在权限页面中，选择要分配给角色的权限，或者单击 * 全选 * 授予该角色的所有权限。
+. 单击 * 提交 * 。
+

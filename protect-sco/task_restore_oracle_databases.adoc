@@ -1,0 +1,17 @@
+---
+permalink: protect-sco/task_restore_oracle_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: 还原工作流包括规划，执行还原操作和监控操作。 
+---
+= 还原和恢复 Oracle 数据库
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+还原工作流包括规划，执行还原操作和监控操作。
+
+以下工作流显示了必须执行还原操作的顺序：
+
+image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_restore_Workflow]

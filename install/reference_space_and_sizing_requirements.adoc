@@ -1,0 +1,77 @@
+---
+permalink: install/reference_space_and_sizing_requirements.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 在安装 SnapCenter 服务器之前，您应熟悉空间和规模估算要求。您还应应用可用的系统和安全更新。 
+---
+= 空间和规模估算要求
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安装 SnapCenter 服务器之前，您应熟悉空间和规模估算要求。您还应应用可用的系统和安全更新。
+
+|===
+| 项目 | 要求 
+
+
+ a| 
+操作系统
+ a| 
+Microsoft Windows
+
+操作系统仅支持英语，德语，日语和简体中文版。
+
+有关受支持版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+
+
+
+ a| 
+最小 CPU 计数
+ a| 
+4 个核心
+
+
+
+ a| 
+最小 RAM
+ a| 
+8 GB
+
+
+NOTE: MySQL Server 缓冲区池使用的 RAM 占总 RAM 的 20% 。
+
+
+
+ a| 
+SnapCenter 服务器软件和日志的最小硬盘驱动器空间
+ a| 
+4 GB
+
+
+NOTE: 如果 SnapCenter 存储库位于安装 SnapCenter 服务器的同一驱动器中，则建议使用 10 GB 。
+
+
+
+ a| 
+SnapCenter 存储库的最小硬盘空间
+ a| 
+6 GB
+
+
+NOTE: 注意：如果 SnapCenter 服务器位于安装 SnapCenter 存储库的同一驱动器中，则建议具有 10 GB 。
+
+
+
+ a| 
+所需的软件包
+ a| 
+* Microsoft .NET Framework 4.5.2 或更高版本
+* Windows Management Framework （ WMF ） 4.0 或更高版本
+* PowerShell 4.0 或更高版本
+
+
+有关受支持版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+
+|===

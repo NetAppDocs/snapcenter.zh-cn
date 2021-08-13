@@ -1,0 +1,24 @@
+---
+permalink: install/concept_minimum_vcenter_privileges_required_for_snapcenter_rdm_operations.html 
+sidebar: sidebar 
+keywords: minimum privileges, RDM 
+summary: 要在子操作系统中执行 RDM 操作，您必须具有最低 vCenter 权限。 
+---
+= SnapCenter RDM 操作所需的最小 vCenter 特权
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要在子操作系统中执行 RDM 操作，您必须具有最低 vCenter 权限。
+
+您必须在主机上设置以下最低权限：
+
+* 数据存储库：删除文件
+* Host ：配置 > 存储分区配置
+* Virtual Machine ：配置
+
+
+您必须将这些特权分配给 Virtual Center Server 级别的角色。不能将分配这些特权的角色分配给没有 root 权限的任何用户。
+
+分配这些权限后，您可以在子操作系统上安装适用于 Windows 的插件。

@@ -1,0 +1,13 @@
+---
+permalink: install/concept_provision_storage_in_vmware_environments.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以在 VMware 环境中使用适用于 Microsoft Windows 的 SnapCenter 插件创建和管理 LUN 以及管理 Snapshot 备份副本。 
+---
+= 在 VMware 环境中配置存储
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 VMware 环境中使用适用于 Microsoft Windows 的 SnapCenter 插件创建和管理 LUN 以及管理 Snapshot 备份副本。

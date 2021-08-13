@@ -1,0 +1,42 @@
+---
+permalink: protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用 PowerShell cmdlet 通过使用同一主机上的最新副本或备用主机上的最新副本来还原运行状况不正常的副本。 
+---
+= 使用适用于 Exchange 数据库的 PowerShell cmdlet 重新获取副本
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 PowerShell cmdlet 通过使用同一主机上的最新副本或备用主机上的最新副本来还原运行状况不正常的副本。
+
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+* 步骤 *
+
+. 使用 `Open-SmConnection` cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. 使用 `reseed-SmDagReplicaCopy` cmdlet 重新分配数据库。
++
+此示例将使用主机 mva-rx200.netapp.com" 上的最新备份重新获取名为 execdb 的数据库的失败副本。
+
++
+[listing]
+----
+reseed-SmDagReplicaCopy -ReplicaHost "mva-rx200.netapp.com" -Database execdb
+----
++
+此示例使用备用主机 mva-rx201.netapp.com." 上数据库的最新备份（生产 / 复制）重新获取名为 execdb 的数据库的失败副本
+
++
+[listing]
+----
+reseed-SmDagReplicaCopy -ReplicaHost "mva-rx200.netapp.com" -Database  execdb -BackupHost "mva-rx201.netapp.com"
+----
+

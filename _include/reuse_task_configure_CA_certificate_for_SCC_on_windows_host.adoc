@@ -1,0 +1,122 @@
+= 管理自定义插件密钥库的密码以及正在使用的 CA 签名密钥对的别名
+
+
+您应管理自定义插件密钥库及其证书的密码，配置 CA 证书，为自定义插件信任存储配置根或中间证书，并将 CA 签名密钥对配置为使用 SnapCenter 自定义插件服务的自定义插件信任存储，以激活已安装的数字证书。
+
+自定义插件使用文件 _keystore.jks_ ，该文件位于 _C ： \Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc_ ，同时用作其信任存储和密钥存储。
+
+
+
+== 管理自定义插件密钥库的密码以及正在使用的 CA 签名密钥对的别名
+
+* 步骤 *
+
+. 您可以从自定义插件代理属性文件中检索自定义插件密钥库默认密码。
++
+该值与 key_keystore_pass_ 键对应。
+
+. 更改密钥库密码：
++
+_keytool -storepasswd -keystore keystore.jks_
+
++
+
+NOTE: 如果在 Windows 命令提示符处无法识别 "keytool" 命令，请将 keytool 命令替换为其完整路径。
+
++
+_C ： \Program Files\java\<JDK_version>\bin\keytool.exe " -storepasswd -keystore keystore.jks_
+
+. 将密钥库中私钥条目的所有别名的密码更改为密钥库使用的相同密码：
++
+_keytool -keypasswd -alias "alias_name_in_ct" -keystore keystore.jks_
+
++
+为 _agent.properties_ 文件中的 keystore_pass 密钥更新相同的。
+
+. 更改密码后重新启动服务。
++
+
+NOTE: 自定义插件密钥库的密码和专用密钥的所有关联别名密码应相同。
+
+
+
+
+
+== 将根证书或中间证书配置为自定义插件信任存储
+
+您应将不带私钥的根证书或中间证书配置为自定义插件信任存储。
+
+* 步骤 *
+
+. 导航到包含自定义插件密钥库 _C ： \Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc_ 的文件夹
+. 找到文件 "keystore.jks" 。
+. 列出密钥库中添加的证书：
++
+_keytool -list -v -keystore keystore.jks_
+
+. 添加根证书或中间证书：
++
+_keytool -import -trustcacerks -alias myRootCA -file /root/USERTrustRSA_Root.cer -keystore keystore.jks_
+
+. 将根证书或中间证书配置为自定义插件信任存储后重新启动服务。
+
+
+
+NOTE: 您应先添加根 CA 证书，然后再添加中间 CA 证书。
+
+
+
+== 将 CA 签名密钥对配置为自定义插件信任存储
+
+您应将 CA 签名密钥对配置为自定义插件信任存储。
+
+* 步骤 *
+
+. 导航到包含自定义插件密钥库 _C ： \Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc_ 的文件夹
+. 找到文件 _keystore.jks_ 。
+. 列出密钥库中添加的证书：
++
+_keytool -list -v -keystore keystore.jks_
+
+. 添加同时具有私钥和公有密钥的 CA 证书。
++
+_keytool -importkeystore -srckeystore /root/snapcenter.ssl.test.netapp.com.pfx -srcstoretype PKCS12 -destkeystore keystore.jks -deststoretype JKS_
+
+. 列出密钥库中添加的证书。
++
+_keytool -list -v -keystore keystore.jks_
+
+. 验证密钥库是否包含与已添加到密钥库中的新 CA 证书对应的别名。
+. 将为 CA 证书添加的私钥密码更改为密钥库密码。
++
+默认自定义插件密钥库密码是 agent.properties 文件中密钥 keystore_pass 的值。
+
++
+_keytool -keypasswd -alias "alias_name_in_CA_ct" -keystore keystore.jks_
+
+. 从 _agent.properties_ 文件中的 CA 证书配置别名。
++
+根据密钥 SCC_certificate_alias 更新此值。
+
+. 将 CA 签名密钥对配置为自定义插件信任存储后重新启动服务。
+
+
+
+
+== 为 SnapCenter 自定义插件配置证书撤消列表（ Certificate Revocation List ， CRL ）
+
+* 关于此任务 *
+
+* 要下载相关 CA 证书的最新 CRL 文件，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_update_certificate_revocation_list_file_in_SnapCenter_CA_Certificate["如何更新 SnapCenter CA 证书中的证书撤消列表文件"]。
+* SnapCenter 自定义插件将在预配置的目录中搜索 CRL 文件。
+* SnapCenter 自定义插件的 CRL 文件的默认目录为： _C ： \Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\ etc\CRL'_ 。
+
+
+* 步骤 *
+
+. 您可以使用密钥 CRL_PATH 修改和更新 _agent.properties_ 文件中的默认目录。
+. 您可以在此目录中放置多个 CRL 文件。
++
+系统将根据每个 CRL 验证传入的证书。
+
+

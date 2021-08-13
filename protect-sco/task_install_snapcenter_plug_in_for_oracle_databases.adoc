@@ -1,0 +1,15 @@
+---
+permalink: protect-sco/task_install_snapcenter_plug_in_for_oracle_databases.html 
+sidebar: sidebar 
+keywords: installing 
+summary: 如果要保护 Oracle 数据库，应安装和设置适用于 Oracle 数据库的 SnapCenter 插件。 
+---
+= 安装适用于 Oracle 数据库的 SnapCenter 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要保护 Oracle 数据库，应安装和设置适用于 Oracle 数据库的 SnapCenter 插件。
+
+image::../media/sco_install_configure_workflow.png[SCO 安装配置工作流]

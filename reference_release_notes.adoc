@@ -1,0 +1,15 @@
+---
+permalink: reference_release_notes.html 
+sidebar: sidebar 
+keywords: release notes, snapcenter 
+summary: 提供有关此版本的 SnapCenter 服务器和 SnapCenter 插件软件包的重要信息，包括已修复的问题，已知问题，注意事项和限制。 
+---
+= 发行说明
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+提供有关此版本的 SnapCenter 服务器和 SnapCenter 插件软件包的重要信息，包括已修复的问题，已知问题，注意事项和限制。
+
+有关详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877281["《 SnapCenter 软件 4.5 发行说明》"^]。

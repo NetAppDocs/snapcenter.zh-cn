@@ -1,0 +1,57 @@
+---
+permalink: protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以取消正在运行，已排队或无响应的备份操作。取消备份操作后，如果创建的备份未注册到 SnapCenter 服务器， SnapCenter 服务器将停止该操作并从存储中删除所有 Snapshot 副本。如果备份已注册到 SnapCenter 服务器，则即使在触发取消操作后，它也不会回滚已创建的 Snapshot 副本。 
+---
+= 取消适用于 Microsoft SQL Server 的 SnapCenter 插件备份操作
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以取消正在运行，已排队或无响应的备份操作。取消备份操作后，如果创建的备份未注册到 SnapCenter 服务器， SnapCenter 服务器将停止该操作并从存储中删除所有 Snapshot 副本。如果备份已注册到 SnapCenter 服务器，则即使在触发取消操作后，它也不会回滚已创建的 Snapshot 副本。
+
+* 您需要的内容 *
+
+* 要取消还原操作，您必须以 SnapCenter 管理员或作业所有者的身份登录。
+* 您只能取消已排队或正在运行的日志或完整备份操作。
+* 验证开始后，您无法取消此操作。
++
+如果在验证前取消操作，则操作将被取消，并且不会执行验证操作。
+
+* 您可以从 " 监控 " 页面或 " 活动 " 窗格取消备份操作。
+* 除了使用 SnapCenter 图形用户界面之外，您还可以使用 PowerShell cmdlet 取消操作。
+* 对于无法取消的操作， * 取消作业 * 按钮处于禁用状态。
+* 如果在创建角色时选择了 * 此角色的所有成员均可在用户 \ 组页面中查看和操作其他成员对象 * ，则可以在使用此角色时取消其他成员的排队备份操作。
+
+
+* 步骤 *
+
+执行以下操作之一：
+
+|===
+| 从 ... | Action 
+
+
+ a| 
+监控页面
+ a| 
+. 在左侧导航窗格中，单击 * 监控 * > * 作业 * 。
+. 选择作业并单击 * 取消作业 * 。
+
+
+
+
+ a| 
+活动窗格
+ a| 
+. 启动备份作业后，单击 image:../media/activity_pane_icon.gif[""] 在活动窗格上查看五个最新操作。
+. 选择操作。
+. 在作业详细信息页面中，单击 * 取消作业 * 。
+
+
+|===
+* 结果 *
+
+此操作将被取消，并且资源将还原到先前的状态。如果您取消的操作在 " 正在取消 " 或 " 正在运行 " 状态下无响应，则应运行 `Cancel-SmJob -JobID <int> -Force` cmdlet 强制停止备份操作。

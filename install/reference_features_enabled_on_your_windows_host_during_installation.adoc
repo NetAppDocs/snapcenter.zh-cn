@@ -1,0 +1,130 @@
+---
+permalink: install/reference_features_enabled_on_your_windows_host_during_installation.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter 服务器安装程序可在安装期间在 Windows 主机上启用 Windows 功能和角色。出于故障排除和主机系统维护的目的，这些功能可能会很重要。 
+---
+= 安装期间在 Windows 主机上启用的功能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 服务器安装程序可在安装期间在 Windows 主机上启用 Windows 功能和角色。出于故障排除和主机系统维护的目的，这些功能可能会很重要。
+
+|===
+| 类别 | 功能 
+
+
+ a| 
+Web 服务器
+ a| 
+* Internet 信息服务
+* 全球 Web 服务
+* 常见 HTTP 功能
++
+** 默认文档
+** 目录浏览
+** HTTP 错误
+** HTTP 重定向
+** 静态内容
+** WebDAV 发布
+
+
+* 运行状况和诊断
++
+** 自定义日志记录
+** HTTP 日志记录
+** 日志记录工具
+** 请求监控器
+** 跟踪
+
+
+* 性能功能
++
+** 静态内容压缩
+
+
+* 安全性
++
+** IP 安全性
+** 基本身份验证
+** 集中式 SSL 证书支持
+** 客户端证书映射身份验证
+** IIS 客户端证书映射身份验证
+** IP 和域限制
+** 请求筛选
+** URL 授权
+** Windows 身份验证
+
+
+* 应用程序开发功能
++
+** .NET 可扩展性 4.5
+** 应用程序初始化
+** ASP.NET 4.5
+** 服务器端包括
+** WebSocket 协议
+
+
+* 管理工具
++
+** IIS 管理控制台
+
+
+
+
+
+
+ a| 
+IIS 管理脚本和工具
+ a| 
+* IIS 管理服务
+* Web 管理工具
+
+
+
+
+ a| 
++.NET Framework 4.5.2 功能 +
+ a| 
+* .NET Framework 4.5.2
+* ASP.NET 4.5.2
+* Windows Communication Foundation （ WCF ） HTTP 激活 45
++
+** TCP 激活
+** HTTP 激活
+** 消息队列（ MSMQ ）激活
+
+
+
+
+
+
+ a| 
+消息队列
+ a| 
+* 消息队列服务
++
+
+NOTE: 确保没有其他应用程序使用 SnapCenter 创建和管理的 MSMQ 服务。
+
+* MSMQ 服务器
+
+
+
+
+ a| 
+Windows 进程激活服务
+ a| 
+* 流程模型
+
+
+
+
+ a| 
+配置 API
+ a| 
+全部
+
+|===

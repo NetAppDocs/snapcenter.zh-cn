@@ -1,0 +1,15 @@
+---
+permalink: protect-scsql/concept_number_of_backup_jobs_needed_for_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: 决定所需备份作业数量的因素包括数据库大小，已用卷数，数据库更改率以及您的服务级别协议（ SLA ）。 
+---
+= 数据库所需的备份作业数
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+决定所需备份作业数量的因素包括数据库大小，已用卷数，数据库更改率以及您的服务级别协议（ Service Level Agreement ， SLA ）。
+
+对于数据库备份，您选择的备份作业数量通常取决于放置数据库的卷数量。例如，如果您将一组小型数据库放置在一个卷上，而将一个大型数据库放置在另一个卷上，则可以为小型数据库创建一个备份作业，并为大型数据库创建一个备份作业。

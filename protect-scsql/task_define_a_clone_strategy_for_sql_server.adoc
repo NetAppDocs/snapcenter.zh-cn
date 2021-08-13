@@ -1,0 +1,45 @@
+---
+permalink: protect-scsql/task_define_a_clone_strategy_for_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: 通过定义克隆策略，您可以成功克隆数据库。 
+---
+= 为 SQL Server 定义克隆策略
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过定义克隆策略，您可以成功克隆数据库。
+
+. 查看与克隆操作相关的限制。
+. 确定所需的克隆类型。
+
+
+
+
+== 克隆操作的限制
+
+在克隆数据库之前，您应了解克隆操作的限制。
+
+* 如果您使用的 Oracle 版本从 11.2.0.4 到 12.1.0.1 ，则在运行 _renamedg_ 命令时，克隆操作将处于挂起状态。您可以应用 Oracle 修补程序 19544733 来修复此问题描述。
+* 不支持将数据库从直接连接到主机（例如，在 Windows 主机上使用 Microsoft iSCSI 启动程序）的 LUN 克隆到同一 Windows 主机或另一 Windows 主机上的 VMDK 或 RDM LUN ，反之亦然。
+* 卷挂载点的根目录不能是共享目录。
+* 如果将包含克隆的 LUN 移动到新卷，则无法删除此克隆。
+
+
+
+
+== 克隆操作的类型
+
+您可以使用 SnapCenter 克隆 SQL Server 数据库备份或生产数据库。
+
+* 从数据库备份克隆
++
+克隆的数据库可以作为开发新应用程序的基线，并有助于隔离生产环境中发生的应用程序错误。克隆的数据库也可用于从软数据库错误中恢复。
+
+* 克隆生命周期
++
+您可以使用 SnapCenter 计划在生产数据库不繁忙时重复执行的克隆作业。
+
+

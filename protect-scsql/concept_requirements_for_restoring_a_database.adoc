@@ -1,0 +1,47 @@
+---
+permalink: protect-scsql/concept_requirements_for_restoring_a_database.html 
+sidebar: sidebar 
+keywords:  
+summary: 在从适用于 Microsoft SQL Server 的 SnapCenter 插件备份还原 SQL Server 数据库之前，您必须确保满足多项要求。 
+---
+= 还原数据库的要求
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在从适用于 Microsoft SQL Server 的 SnapCenter 插件备份还原 SQL Server 数据库之前，您必须确保满足多项要求。
+
+* 要还原数据库，目标 SQL Server 实例必须处于联机状态且正在运行。
++
+此适用场景可同时执行用户数据库还原操作和系统数据库还原操作。
+
+* 必须禁用计划对要还原的 SQL Server 数据运行的 SnapCenter 操作，包括计划在远程管理或远程验证服务器上运行的任何作业。
+* 如果系统数据库无法正常运行，则必须先使用 SQL Server 实用程序重建系统数据库。
+* 如果要安装此插件，请确保为其他角色授予还原可用性组（ Availability Group ， AG ）备份的权限。
++
+满足以下条件之一时，还原 AG 失败：
+
++
+** 如果此插件由 RBAC 用户安装，而管理员尝试还原 AG 备份
+** 如果管理员安装了此插件，而 RBAC 用户尝试还原 AG 备份
+
+
+* 如果要将自定义日志目录备份还原到备用主机，则 SnapCenter 服务器和插件主机必须安装相同的 SnapCenter 版本。
+* 您必须已安装 Microsoft 热修补程序 KB2887595 。Microsoft 支持站点包含有关 KB2887595 的详细信息。
++
+https://support.microsoft.com/kb/2887595["Microsoft 支持文章 2887595 ： Windows RT 8.1 ， Windows 8.1 和 Windows Server 2012 R2 更新汇总： 2013 年 11 月"]
+
+* 您必须已备份资源组或数据库。
+* 如果要将 Snapshot 副本复制到镜像或存储， SnapCenter 管理员必须已为您分配源卷和目标卷的 Storage Virtual Machine （ SVM ）。
++
+有关管理员如何为用户分配资源的信息，请参见 SnapCenter 安装信息。
+
+* 在还原数据库之前，必须停止所有备份和克隆作业。
+* 如果数据库大小为 TB ，则还原操作可能会超时。
++
+您必须运行以下命令，将 SnapCenter 服务器的 RESTTimeout 参数值增加到 20000000 毫秒： set-SmConfigSettings -Agent -configSettings @ ｛ "RESTTimeout" = "20000000" ｝ 。根据数据库大小，可以更改超时值，可以设置的最大值为 2147483648 。
+
+
+
+如果要在数据库处于联机状态时进行还原，应在还原页面中启用联机还原选项。

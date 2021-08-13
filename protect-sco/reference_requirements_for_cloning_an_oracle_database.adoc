@@ -1,0 +1,76 @@
+---
+permalink: protect-sco/reference_requirements_for_cloning_an_oracle_database.html 
+sidebar: sidebar 
+keywords:  
+summary: 克隆 Oracle 数据库之前，您应确保满足前提条件。 
+---
+= 克隆 Oracle 数据库的要求
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+克隆 Oracle 数据库之前，您应确保满足前提条件。
+
+* 您应已使用 SnapCenter 创建数据库备份。
++
+要成功执行克隆操作，您应已成功创建联机数据和日志备份或脱机（挂载或关闭）备份。
+
+* 如果要自定义控制文件或重做日志文件路径，则应事先配置所需的文件系统或自动存储管理（ ASM ）磁盘组。
++
+默认情况下，克隆数据库的重做日志和控制文件会在 SnapCenter 为克隆数据库的数据文件配置的 ASM 磁盘组或文件系统上创建。
+
+* 如果您使用基于 NFS 的 ASM ，则应将 _/var/opt/snapcenter/scU/cles/*/* 添加到 asm_diskstring 参数中定义的现有路径中。
+* 在 asm_diskstring 参数中，如果使用的是 ASMFD ，则应配置 _afd ： * _ ；如果使用的是 ASMLIB ，则应配置 _ORCL ： * _ 。
++
+有关如何编辑 asm_diskstring 参数的信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["如何向 asm_diskstring 添加磁盘路径"^]。
+
+* 如果要在备用主机上创建克隆，则备用主机应满足以下要求：
++
+** 适用于 Oracle 数据库的 SnapCenter 插件应安装在备用主机上。
+** 克隆主机应能够从主存储或二级存储中发现 LUN 。
++
+*** 如果要从主存储或二级（存储或镜像）存储克隆到备用主机，请确保在二级存储和备用主机之间建立 iSCSI 会话，或者为 FC 正确分区 iSCSI 会话。
++
+**** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["《 Linux Host Utilities 安装和设置指南》"^]
+**** https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["《 AIX Host Utilities 安装和设置指南》"^]
+
+
+*** 如果要从存储或镜像存储克隆到同一主机，请确保在存储或镜像存储与主机之间建立 iSCSI 会话，或者为 FC 正确分区 iSCSI 会话。
+*** 如果要在虚拟化环境中克隆，请确保在主存储或二级存储与托管备用主机的 ESX 服务器之间建立 iSCSI 会话，或者为 FC 正确分区 iSCSI 会话。
+
+
+** 如果源数据库是 ASM 数据库：
++
+*** ASM 实例应在要执行克隆的主机上启动并运行。
+*** 如果要将克隆数据库的归档日志文件放置在专用 ASM 磁盘组中，应在克隆操作之前配置 ASM 磁盘组。
+*** 可以配置数据磁盘组的名称，但请确保要执行克隆的主机上的任何其他 ASM 磁盘组不使用该名称。
++
+驻留在 ASM 磁盘组上的数据文件会在 SnapCenter 克隆工作流中进行配置。
+
+
+
+
+
+* 数据 LUN 和日志 LUN 的保护类型（例如镜像，存储或镜像存储）应相同，以便在使用日志备份克隆到备用主机期间发现二级定位器。
+* 您应在源数据库参数文件中将 exclude_seed_cdb_view 的值设置为 false ，以检索与种子 PDB 相关的信息，以便克隆 12_c_ 数据库的备份。
++
+种子 PDB 是系统提供的模板， CDB 可以使用该模板创建 PDB 。种子 PDB 名为 PDB $seed 。有关 PDB $seed 的信息，请参见 Oracle 文档 ID 1940806.1 。
+
++
+
+NOTE: 您应在备份 12_c_ 数据库之前设置此值。
+
+* SnapCenter 支持备份由 autofs 子系统管理的文件系统。如果要克隆数据库，请确保数据挂载点不在 autofs 挂载点的根目录下，因为插件主机的 root 用户无权在 autofs 挂载点的根目录下创建目录。
++
+如果控制和重做日志文件位于数据挂载点下，则应修改控制文件路径，然后相应地重做日志文件路径。
+
++
+
+NOTE: 您可以手动将新克隆的挂载点注册到 autofs 子系统。新克隆的挂载点不会自动注册。
+
+* 如果您有一个 TDE （自动登录）并希望在同一主机或备用主机上克隆数据库，则应将 /etc/oracle/Wale/$ORACLE_SID_ 下的 Wallet （密钥文件）从源数据库复制到克隆的数据库。
+* 您应在 /etc/lvm/lvm.conf 中设置 use_lvmetad = 0 的值，并停止 lvm2-lvmetad 服务，以便在 Oracle Linux 7 或更高版本或 Red Hat Enterprise Linux （ RHEL ） 7 或更高版本的存储区域网络（ SAN ）环境中成功执行克隆。
+* 如果您使用的是 Oracle 数据库 11.2.0.3 或更高版本，并且使用 NID 脚本更改了辅助实例的数据库 ID ，则应安装 13366202 Oracle 修补程序。
+* 您应确保托管卷的聚合应位于 Storage Virtual Machine （ SVM ）的已分配聚合列表中。
+

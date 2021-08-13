@@ -1,0 +1,356 @@
+---
+permalink: protect-scc/reference_perl.html 
+sidebar: sidebar 
+keywords:  
+summary: 使用 Perl 开发此插件。 
+---
+= 基于 Perl 的开发
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在使用 Perl 开发插件时，必须遵循某些约定。
+
+* 内容必须可读
+* 必须实施强制操作 setenv ， quiesce 和 unquiesce
+* 必须使用特定语法将结果传递回代理
+* 这些内容应保存为 <plugin_name>.pm 文件
+
+
+可用操作包括
+
+* 设置
+* version
+* 暂停
+* 取消静默
+* clone_pre ， clone_post
+* restore_pree ， restore
+* 清理
+
+
+
+
+== 常规插件处理
+
+
+
+=== 使用 Results 对象
+
+每个自定义插件操作都必须定义结果对象。此对象会将消息，退出代码， stdout 和 stderr 发送回主机代理。
+
+Results 对象：
+
+....
+my $result = {
+....
+....
+      exit_code => 0,
+      stdout => "",
+      stderr => "",
+};
+....
+返回结果对象：
+
+....
+return $result;
+....
+
+
+=== 保持数据一致性
+
+在执行同一工作流期间，可以在操作之间保留数据（清理除外）。这可通过密钥值对来实现。关键值数据对作为结果对象的一部分进行设置，并在同一工作流的后续操作中保留和使用。
+
+以下代码示例将设置要保留的数据：
+
+....
+my $result = {
+  exit_code => 0,
+  stdout => "",
+  stderr => "",
+};
+  $result->{env}->{‘key1’} = ‘value1’;
+  $result->{env}->{‘key2’} = ‘value2’;
+  ….
+  return $result
+....
+上述代码设置了两个键值对，这些键值对可在后续操作中用作输入。可以使用以下代码访问这两个键值对：
+
+....
+sub setENV {
+    my ($self, $config) = @_;
+    my $first_value = $config->{‘key1’};
+    my $second_value = $config->{‘key2’};
+    …
+}
+....
+....
+=== Logging error messages
+....
+每个操作都可以将消息发送回主机代理，主机代理将显示和存储内容。消息包含消息级别，时间戳和消息文本。支持多行消息。
+
+....
+Load the SnapCreator::Event Class:
+my $msgObj = new SnapCreator::Event();
+my @message_a = ();
+....
+使用 msgObj 通过使用收集方法捕获消息。
+
+....
+$msgObj->collect(\@message_a, INFO, "My INFO Message");
+$msgObj->collect(\@message_a, WARN, "My WARN Message");
+$msgObj->collect(\@message_a, ERROR, "My ERROR Message");
+$msgObj->collect(\@message_a, DEBUG, "My DEBUG Message");
+$msgObj->collect(\@message_a, TRACE, "My TRACE Message");
+....
+将消息应用于结果对象：
+
+....
+$result->{message} = \@message_a;
+....
+
+
+=== 使用插件存根
+
+自定义插件必须公开插件存根。这些方法是 SnapCenter 服务器根据工作流调用的。
+
+|===
+| 插件存根 | 可选 / 必需 | 目的 
+
+
+ a| 
+设置
+ a| 
+Required
+ a| 
+此存根用于设置环境和配置对象。
+
+任何环境解析或处理都应在此处完成。每次调用存根时，都会在之前调用 setenv 存根。只有 Perl 模式插件才需要此功能。
+
+
+
+ a| 
+version
+ a| 
+可选
+ a| 
+此存根用于获取应用程序版本。
+
+
+
+ a| 
+发现
+ a| 
+可选
+ a| 
+此存根用于发现代理或主机上托管的实例或数据库等应用程序对象。
+
+在响应过程中，此插件应以特定格式返回发现的应用程序对象。只有在应用程序与适用于 Unix 的 SnapDrive 集成时，才会使用此存根。
+
+
+NOTE: 支持 Linux 文件系统（ Linux Flavors ）。不支持 AIX/Solaris （ Unix 模式）。
+
+
+
+ a| 
+discovery_complete
+ a| 
+可选
+ a| 
+此存根用于发现代理或主机上托管的实例或数据库等应用程序对象。
+
+在响应过程中，此插件应以特定格式返回发现的应用程序对象。只有在应用程序与适用于 Unix 的 SnapDrive 集成时，才会使用此存根。
+
+
+NOTE: 支持 Linux 文件系统（ Linux Flavors ）。不支持 AIX 和 Solaris （ Unix 模式）。
+
+
+
+ a| 
+暂停
+ a| 
+Required
+ a| 
+此存根负责执行暂停，这意味着将应用程序置于可以创建 Snapshot 副本的状态。此操作在执行 Snapshot 副本操作之前调用。要保留的应用程序元数据应设置为响应的一部分，在对相应的存储 Snapshot 副本执行后续克隆或还原操作期间，应以配置参数的形式返回。
+
+
+
+ a| 
+取消静默
+ a| 
+Required
+ a| 
+此存根负责执行静默，这意味着将应用程序置于正常状态。创建 Snapshot 副本后会调用此命令。
+
+
+
+ a| 
+clone_pre
+ a| 
+可选
+ a| 
+此存根负责执行克隆前任务。此操作假定您使用的是内置的 SnapCenter 服务器克隆接口，并在执行克隆操作时触发。
+
+
+
+ a| 
+clone_post
+ a| 
+可选
+ a| 
+此存根负责执行克隆后任务。这假定您使用的是内置的 SnapCenter 服务器克隆接口，并且只有在执行克隆操作时才会触发。
+
+
+
+ a| 
+restore_pre
+ a| 
+可选
+ a| 
+此存根负责执行预存储任务。此操作假定您使用的是内置的 SnapCenter 服务器还原界面，并且是在执行还原操作时触发的。
+
+
+
+ a| 
+还原
+ a| 
+可选
+ a| 
+此存根负责执行应用程序还原任务。这假定您使用的是内置的 SnapCenter 服务器还原界面，并且只有在执行还原操作时才会触发。
+
+
+
+ a| 
+清理
+ a| 
+可选
+ a| 
+此存根负责在执行备份，还原或克隆操作后执行清理。清理可以在正常工作流执行期间进行，也可以在工作流出现故障时进行。您可以通过引用配置参数操作来推断调用清理时使用的工作流名称，该操作可以是 backup ， cloneVolAndLun 或 fileOrVolRestore 。配置参数 error_message 用于指示执行工作流时是否存在任何错误。如果已定义 error_message ，而不是 NULL ，则在执行工作流失败期间会调用清理。
+
+
+
+ a| 
+APP_VERSION
+ a| 
+可选
+ a| 
+SnapCenter 使用此存根来获取此插件管理的应用程序版本详细信息。
+
+|===
+
+
+=== 插件软件包信息
+
+每个插件都必须具有以下信息：
+
+....
+package MOCK;
+our @ISA = qw(SnapCreator::Mod);
+=head1 NAME
+MOCK - class which represents a MOCK module.
+=cut
+=head1 DESCRIPTION
+MOCK implements methods which only log requests.
+=cut
+use strict;
+use warnings;
+use diagnostics;
+use SnapCreator::Util::Generic qw ( trim isEmpty );
+use SnapCreator::Util::OS qw ( isWindows isUnix getUid
+createTmpFile );
+use SnapCreator::Event qw ( INFO ERROR WARN DEBUG COMMENT ASUP
+CMD DUMP );
+my $msgObj = new SnapCreator::Event();
+my %config_h = ();
+....
+
+
+=== 操作
+
+您可以对自定义插件支持的各种操作进行编码，例如 setenv ， Version ， Quiesce 和 Unquiesce 。
+
+
+
+==== setenv 操作
+
+使用 Perl 创建的插件需要执行 setenv 操作。您可以设置 ENV 并轻松访问插件参数。
+
+....
+sub setENV {
+    my ($self, $obj) = @_;
+    %config_h = %{$obj};
+    my $result = {
+      exit_code => 0,
+      stdout => "",
+      stderr => "",
+    };
+    return $result;
+}
+....
+
+
+==== 版本操作
+
+版本操作将返回应用程序版本信息。
+
+....
+sub version {
+  my $version_result = {
+    major => 1,
+    minor => 2,
+    patch => 1,
+    build => 0
+  };
+  my @message_a = ();
+  $msgObj->collect(\@message_a, INFO, "VOLUMES
+$config_h{'VOLUMES'}");
+  $msgObj->collect(\@message_a, INFO,
+"$config_h{'APP_NAME'}::quiesce");
+  $version_result->{message} = \@message_a;
+  return $version_result;
+}
+....
+
+
+==== 暂停操作
+
+暂停操作会对 Resources 参数中列出的资源执行应用程序暂停操作。
+
+....
+sub quiesce {
+  my $result = {
+      exit_code => 0,
+      stdout => "",
+      stderr => "",
+  };
+  my @message_a = ();
+  $msgObj->collect(\@message_a, INFO, "VOLUMES
+$config_h{'VOLUMES'}");
+  $msgObj->collect(\@message_a, INFO,
+"$config_h{'APP_NAME'}::quiesce");
+  $result->{message} = \@message_a;
+  return $result;
+}
+....
+
+
+==== 取消暂停操作
+
+要取消应用程序静默，需要执行 " 取消暂停 " 操作。资源列表位于 Resources 参数中。
+
+....
+sub unquiesce {
+  my $result = {
+      exit_code => 0,
+      stdout => "",
+      stderr => "",
+  };
+  my @message_a = ();
+  $msgObj->collect(\@message_a, INFO, "VOLUMES
+$config_h{'VOLUMES'}");
+  $msgObj->collect(\@message_a, INFO,
+"$config_h{'APP_NAME'}::unquiesce");
+  $result->{message} = \@message_a;
+  return $result;
+}
+....

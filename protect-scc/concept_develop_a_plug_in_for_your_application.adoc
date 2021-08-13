@@ -1,0 +1,196 @@
+---
+permalink: protect-scc/concept_develop_a_plug_in_for_your_application.html 
+sidebar: sidebar 
+keywords:  
+summary: 通过 SnapCenter 服务器，您可以将应用程序作为 SnapCenter 的插件进行部署和管理。 
+---
+= 为您的应用程序开发一个插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过 SnapCenter 服务器，您可以将应用程序作为 SnapCenter 的插件进行部署和管理。您选择的应用程序可以插入到 SnapCenter 服务器中，以实现数据保护和管理功能。
+
+通过 SnapCenter ，您可以使用不同的编程语言开发自定义插件。您可以使用 Perl ， Java ，批处理或其他脚本语言开发自定义插件。
+
+要在 SnapCenter 中使用自定义插件，必须执行以下任务：
+
+* 按照本指南中的说明为您的应用程序创建一个插件
+* 创建问题描述文件
+* 导出自定义插件以将其安装在 SnapCenter 主机上
+* 将此插件 zip 文件上传到 SnapCenter 服务器
+
+
+
+
+== 所有 API 调用中的通用插件处理
+
+[role="lead"]
+对于每个 API 调用，请使用以下信息：
+
+* 插件参数
+* 退出代码
+* 记录错误消息
+* 数据一致性
+
+
+
+
+=== 使用插件参数
+
+在每次进行 API 调用时，都会向插件传递一组参数。下表列出了参数的特定信息。
+
+|===
+| 参数 | 目的 
+
+
+ a| 
+Action
+ a| 
+确定工作流名称。例如， discover ， backup ， fileOrVolRestore 或 cloneVolAndLun
+
+
+
+ a| 
+Resources
+ a| 
+列出要保护的资源。资源由 UID 和类型标识。此列表将按以下格式显示给此插件：
+
+"<UID> ， <type> ； <UID> ， <type>" 。例如， " 实例 1 ，实例；实例 2\\DB1 ，数据库 "
+
+
+
+ a| 
+应用程序名称
+ a| 
+确定正在使用的插件。例如 DB2 ， MySQL 。SnapCenter 服务器内置了对所列应用程序的支持。此参数区分大小写。
+
+
+
+ a| 
+app_ignore_error
+ a| 
+（ Y 或 N ）如果遇到应用程序错误，则会导致 SnapCenter 退出或不退出。如果您要备份多个数据库，而不希望单个故障停止备份操作，则此功能非常有用。
+
+
+
+ a| 
+<resource_name>_app_instance_username
+ a| 
+已为资源设置 SnapCenter 凭据。
+
+
+
+ a| 
+<resource_name>_app_instance_password
+ a| 
+已为资源设置 SnapCenter 凭据。
+
+
+
+ a| 
+<resource_name>_<custom_param>
+ a| 
+每个资源级别自定义密钥值均可供插件使用，并以 "<resource_name>_ " 开头。例如，如果名为 MySQLDB 的资源的自定义密钥为 "master_slave" ，则该密钥将作为 MySQLDB_master_slave 可用
+
+|===
+
+
+=== 使用退出代码
+
+此插件通过退出代码将操作状态返回给主机。每个代码都有一个特定的含义，此插件使用正确的退出代码来指示相同的含义。
+
+下表介绍了错误代码及其含义。
+
+|===
+| 退出代码 | 目的 
+
+
+ a| 
+0
+ a| 
+操作成功。
+
+
+
+ a| 
+99
+ a| 
+不支持或不实施请求的操作。
+
+
+
+ a| 
+100
+ a| 
+操作失败，跳过静默并退出。默认情况下，取消静默状态为。
+
+
+
+ a| 
+101.
+ a| 
+操作失败，请继续执行备份操作。
+
+
+
+ a| 
+其他
+ a| 
+操作失败，运行 unquiesce 并退出。
+
+|===
+
+
+=== 记录错误消息
+
+错误消息将从插件传递到 SnapCenter 服务器。此消息包括消息，日志级别和时间戳。
+
+下表列出了级别及其用途。
+
+|===
+| 参数 | 目的 
+
+
+ a| 
+信息
+ a| 
+信息性消息
+
+
+
+ a| 
+警告
+ a| 
+警告消息
+
+
+
+ a| 
+error
+ a| 
+错误消息
+
+
+
+ a| 
+调试
+ a| 
+调试消息
+
+
+
+ a| 
+跟踪
+ a| 
+跟踪消息
+
+|===
+
+
+=== 保持数据一致性
+
+自定义插件可在执行相同工作流的操作之间保留数据。例如，插件可以在暂停结束时存储数据，可在取消静默操作期间使用。
+
+要保留的数据将通过插件作为结果对象的一部分进行设置。它采用特定格式，并在每种插件开发模式下进行详细介绍。

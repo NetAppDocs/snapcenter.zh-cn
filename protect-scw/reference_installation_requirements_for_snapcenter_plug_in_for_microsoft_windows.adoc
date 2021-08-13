@@ -1,0 +1,24 @@
+---
+permalink: protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html 
+sidebar: sidebar 
+keywords: requirements 
+summary: 在安装适用于 Windows 的插件之前，您应了解某些安装要求。 
+---
+= 适用于 Microsoft Windows 的 SnapCenter 插件的安装要求
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安装适用于 Windows 的插件之前，您应了解某些安装要求。
+
+在开始使用适用于 Windows 的插件之前， SnapCenter 管理员必须安装和配置 SnapCenter 服务器并执行前提条件任务。
+
+* 要安装适用于 Windows 的插件，您必须具有 SnapCenter 管理员权限。
++
+SnapCenter 管理员角色必须具有管理员权限。
+
+* 您必须已安装并配置 SnapCenter 服务器。
+* 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
+* 如果要进行备份复制，必须设置 SnapMirror 和 SnapVault 。
+

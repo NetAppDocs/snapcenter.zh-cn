@@ -1,0 +1,40 @@
+---
+section: admin
+title: 管理 SnapCenter 服务器和插件
+entries:
+- title: 查看信息板
+  entries:
+  - title: 信息板概述
+    url: "/admin/concept_overview_of_dashboard.html"
+  - title: 如何查看信息板上的信息
+    url: "/admin/task_how_to_view_information_on_the_dashboard.html"
+  - title: 从信息板请求作业状态报告
+    url: "/admin/task_request_status_reports_of_the_jobs_from_the_dashboard.html"
+  - title: 从信息板请求保护状态报告
+    url: "/admin/task_request_reports_of_the_protection_status_from_the_dashboard.html"
+- title: 管理 RBAC
+  url: "/admin/task_manage_rbac.html"
+- title: 管理主机
+  url: "/admin/concept_manage_hosts.html"
+- title: 可从 "Resources" 页面执行支持的操作
+  url: "/admin/concept_what_operations_can_be_performed_from_the_resource_page.html"
+- title: 管理策略
+  url: "/admin/concept_manage_policies.html"
+- title: 管理资源组
+  url: "/admin/task_manage_resource_groups.html"
+- title: 管理备份
+  url: "/admin/concept_manage_backups.html"
+- title: 删除克隆。
+  url: "/admin/task_delete_clones.html"
+- title: 监控作业，计划，事件和日志
+  url: "/admin/concept_monitor_jobs_schedules_events_and_logs.html"
+- title: SnapCenter 报告功能概述
+  url: "/admin/concept_overview_of_snapcenter_reports.html"
+- title: 管理 SnapCenter 服务器存储库
+  url: "/admin/concept_manage_the_snapcenter_server_repository.html"
+- title: 管理不可信域的资源
+  url: "/admin/concept_manage_resources_of_untrusted_domains.html"
+- title: 管理存储系统
+  url: "/admin/concept_manage_the_storage_system.html"
+- title: 管理 EMS 数据收集
+  url: "/admin/concept_manage_ems_data_collection.html"

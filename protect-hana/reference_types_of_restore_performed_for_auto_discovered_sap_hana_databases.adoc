@@ -1,0 +1,49 @@
+---
+permalink: protect-hana/reference_types_of_restore_performed_for_auto_discovered_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Databases 
+summary: 对于自动发现的 SAP HANA 数据库， SnapCenter 支持基于卷的 SnapRestore \ （ VBSR\ ），单个文件 SnapRestore 以及连接和复制还原类型。 
+---
+= 自动发现的 SAP HANA 数据库的还原操作类型
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+对于自动发现的 SAP HANA 数据库， SnapCenter 支持基于卷的 SnapRestore （ VBSR ），单文件 SnapRestore 和连接和复制还原类型。
+
+
+
+== 在以下情况下，可在 NFS 环境中执行基于卷的 SnapRestore （ VBSR ）：
+
+* 在 SnapCenter 4.3 之前的版本上选择进行还原的备份时，并且只有在选择了 "Complete Resource" 选项的情况下，才会执行此备份
+* 在 SnapCenter 4.3 中选择进行还原的备份时，以及选择了 * 卷还原 * 选项时
+
+
+
+
+== 在以下情况下，在 NFS 环境中执行单个文件 SnapRestore ：
+
+* 在 SnapCenter 4.3 中选择进行还原的备份时，如果仅选择了 * 完成资源 * 选项，则会显示此选项
+* 对于多租户数据库容器（ MDC ），如果在 SnapCenter 4.3 上选择了要还原的备份，并且选择了 * 租户数据库 * 选项
+* 如果选择的备份来自 SnapMirror 或 SnapVault 二级位置，则会选择 * 完整资源 * 选项
+
+
+
+
+== 在以下情况下，在 SAN 环境中执行单个文件 SnapRestore ：
+
+* 在 SnapCenter 4.3 之前的版本上执行备份时，并且只有在选择了 * 完整资源 * 选项时才会执行备份
+* 在 SnapCenter 4.3 中进行备份时，并且只有在选择了 * 完整资源 * 选项时才会执行备份
+* 从 SnapMirror 或 SnapVault 二级位置选择备份后，将选择 * 完整资源 * 选项
+
+
+
+
+== 在以下情况下，在 SAN 环境中执行基于连接和副本的还原：
+
+* 对于 MDC ，如果在 SnapCenter 4.3 中选择了要还原的备份，并且选择了 * 租户数据库 * 选项
+
+
+
+NOTE: " 还原范围 " 页面上提供了 "* 完成资源 * " ， "* 卷还原 * " 和 "* 租户数据库 * " 选项。

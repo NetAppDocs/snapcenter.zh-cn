@@ -1,0 +1,31 @@
+---
+permalink: protect-hana/task_delete_or_split_sap_hana_database_clones_after_upgrading_snapcenter.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: '升级到 SnapCenter 4.3 后，您将无法再看到克隆。您可以从创建克隆的资源的 " 拓扑 " 页面中删除克隆或拆分克隆。' 
+---
+= 升级 SnapCenter 后删除或拆分 SAP HANA 数据库克隆
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+升级到 SnapCenter 4.3 后，您将无法再看到克隆。您可以从创建克隆的资源的 " 拓扑 " 页面中删除克隆或拆分克隆。
+
+* 关于此任务 *
+
+如果要查找隐藏克隆的存储占用空间，请运行以下命令： `Get-SmClone -ListStorageootprint`
+
+* 步骤 *
+
+. 使用 remove-smbackup cmdlet 删除克隆资源的备份。
+. 使用 remove-smresourcegroup cmdlet 删除克隆资源的资源组。
+. 使用 remove-smprotectresource cmdlet 删除克隆资源的保护。
+. 从 * 资源 * 页面中选择父资源。
++
+此时将显示资源拓扑页面。
+
+. 从 * 管理副本 * 视图中，从主存储系统或二级（镜像或复制的）存储系统中选择克隆。
+. 选择克隆，然后单击 image:../media/delete_icon.gif[""] 要删除克隆，请单击 image:../media/split_cone.gif[""] 拆分克隆。
+. 单击 * 确定 * 。
+

@@ -1,0 +1,21 @@
+---
+permalink: protect-scc/task_restore_custom_plug_in_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 还原和恢复工作流包括规划，执行还原操作和监控操作。 
+---
+= 还原自定义插件资源
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+还原和恢复工作流包括规划，执行还原操作和监控操作。
+
+* 关于此任务 *
+
+以下工作流显示了必须执行还原操作的顺序：
+
+image::../media/restore_workflow.gif[还原工作流]
+
+您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。有关 PowerShell cmdlet 的信息，请使用 SnapCenter cmdlet 帮助或参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"]。

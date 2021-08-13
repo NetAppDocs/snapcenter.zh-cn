@@ -1,0 +1,118 @@
+---
+permalink: protect-sce/task_back_up_exchange_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter plug-in for Exchange Server 
+summary: '如果数据库不属于任何资源组，您可以从 " 资源 " 页面备份数据库或数据库可用性组。' 
+---
+= 备份 Exchange 数据库
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果数据库不属于任何资源组，您可以从 " 资源 " 页面备份数据库或数据库可用性组。
+
+* 您需要的内容 *
+
+* 您必须已创建备份策略。
+* 您必须已将备份操作所使用的聚合分配给数据库所使用的 SVM 。
+* 如果要备份与二级存储具有 SnapMirror 关系的资源，则分配给存储用户的角色应包括 " `snapmirror all` " 权限。但是，如果您使用的是 "`vsadmin` " 角色，则不需要 " `snapmirror all` " 特权。
+* 如果要备份在 NetApp 和非 NetApp 存储上具有主动 / 被动数据库副本的数据库或数据库可用性组， 并且已在策略中选择 * 备份活动副本 * 或 * 备份服务器上要在备份作业创建时间内选择的副本 * 选项，则备份作业将进入警告状态。NetApp 存储上的主动 / 被动数据库副本备份将成功，而非 NetApp 存储上的主动 / 被动数据库副本备份将失败。
++
+|===
+
+
+| * 最佳实践： * 请勿同时运行活动数据库和被动数据库的备份。可能发生争用情况，并且其中一个备份可能失败。 
+|===
+
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择 * Microsoft Exchange Server 插件 * 。
+. 在资源页面上，从 * 查看 * 列表中选择 * 数据库 * 或 * 数据库可用性组 * 。
++
+在资源页面上， image:../media/not_supported_icon.png[""] 图标表示数据库位于非 NetApp 存储上。
+
++
+
+NOTE: 在 DAG 中，如果活动数据库副本位于非 NetApp 存储上，并且至少有一个被动数据库副本驻留在 NetApp 存储上，则可以保护数据库。
+
++
+单击 *image:../media/filter_icon.gif[""]* ，然后选择主机名和数据库类型以筛选资源。然后，您可以单击 *image:../media/filter_icon.gif[""]* 以关闭筛选器窗格。
+
++
+** 如果要备份数据库，请单击数据库名称。
++
+... 如果显示拓扑视图，请单击 * 保护 * 。
+... 如果显示 " 数据库 - 保护资源 " 向导，请继续执行步骤 3 。
+
+
+** 如果要备份数据库可用性组，请单击数据库可用性组名称。
+
+
+. 如果要指定自定义 Snapshot 副本名称，请在资源页面上选中 * 对 Snapshot 副本使用自定义名称格式 * 复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。
++
+例如， _customtext_policy_hostname_ 或 _resource_hostname_ 。默认情况下， Snapshot 副本名称会附加时间戳。
+
+. 在策略页面上，执行以下步骤：
++
+.. 从下拉列表中选择一个或多个策略。
++
+
+NOTE: 您也可以单击 * 来创建策略image:../media/add_policy_from_resourcegroup.gif[""]*
+
++
+
+NOTE: 如果某个策略包含 * 备份作业创建时间要选择的服务器上的副本 * 选项，则会显示一个服务器选择选项以选择一个或多个服务器。服务器选择选项将仅列出选定数据库位于 NetApp 存储上的服务器。
+
+
+
++
+在为选定策略配置计划部分中，将列出选定策略。
+
++
+.. 单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 。
+.. 在添加策略 _policy_name_ 的计划窗口中，配置该计划，然后单击 * 确定 * 。
++
+其中， _policy_name_ 是选定策略的名称。
+
++
+已配置的计划将列在 "applied Schedules" 列中。
+
+
+
+. 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
++
+您还必须指定发件人和收件人电子邮件地址以及电子邮件主题。如果要附加对资源执行的备份操作的报告，请选择 * 附加作业报告 * 。
+
++
+
+NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 set-SmtpServer 指定 SMTP 服务器详细信息。
+
+. 查看摘要，然后单击 * 完成 * 。
++
+此时将显示数据库拓扑页面。
+
+. 单击 * 立即备份 * 。
+. 在备份页面上，执行以下步骤：
++
+.. 如果已对资源应用多个策略，请从 * 策略 * 下拉列表中选择要用于备份的策略。
++
+如果为按需备份选择的策略与备份计划关联，则按需备份将根据为计划类型指定的保留设置进行保留。
+
+.. 单击 * 备份 * 。
+
+
+. 双击页面底部的活动窗格中的作业以显示作业详细信息页面，从而监控备份的进度。
++
+** 在 MetroCluster 配置中， SnapCenter 可能无法在故障转移后检测到保护关系。
++
+有关信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster 故障转移后无法检测 SnapMirror 或 SnapVault 关系"^]
+
+** 如果要备份 VMDK 上的应用程序数据，并且适用于 VMware vSphere 的 SnapCenter 插件的 Java 堆大小不够大，则备份可能会失败。
++
+要增加 Java 堆大小，请找到脚本文件 _/opt/netapp/init_scripts/scvservice_ 。在该脚本中， _do_start method 命令将启动 SnapCenter VMware 插件服务。将该命令更新为以下命令： _java -JAR -Xmx8192M -Xms4096M_
+
+
+
+

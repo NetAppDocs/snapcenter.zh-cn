@@ -1,0 +1,70 @@
+= 
+
+
+您可以使用 SnapCenter 从父资源拆分克隆的资源。拆分的克隆将独立于父资源。
+
+* 关于此任务 *
+
+* 您不能对中间克隆执行克隆拆分操作。
++
+例如，从数据库备份创建 clone1 后，您可以创建 clone1 的备份，然后克隆此备份（ clone2 ）。创建 clone2 后， clone1 是一个中间克隆，无法对 clone1 执行克隆拆分操作。但是，您可以对 clone2 执行克隆拆分操作。
+
++
+拆分 clone2 后，您可以对 clone1 执行克隆拆分操作，因为 clone1 不再是中间克隆。
+
+* 拆分克隆时，克隆的备份副本和克隆作业将被删除。
+* 有关克隆拆分操作限制的信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 ONTAP 9 逻辑存储管理指南》"^]。
+* 确保存储系统上的卷或聚合处于联机状态。
+
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在 * 资源 * 页面上，从视图列表中选择相应的选项：
++
+|===
+| 选项 | Description 
+
+
+ a| 
+用于数据库应用程序
+ a| 
+从视图列表中选择 * 数据库 * 。
+
+
+
+ a| 
+文件系统
+ a| 
+从视图列表中选择 * 路径 * 。
+
+|===
+. 从列表中选择相应的资源。
++
+此时将显示资源拓扑页面。
+
+. 在管理副本视图中，选择克隆的资源（例如数据库或 LUN ），然后单击 *image:../media/split_cone.gif[""]*
+. 查看要拆分的克隆的估计大小以及聚合上所需的可用空间，然后单击 * 开始 * 。
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
++
+如果 SMCore 服务重新启动，克隆拆分操作将停止响应。您应运行 Stop-SmJob cmdlet 停止克隆拆分操作，然后重试克隆拆分操作。
+
++
+如果要使用较长的轮询时间或较短的轮询时间来检查克隆是否已拆分，可以更改 _SMCoreServiceHost.exe 文件中 _CloneSplitStatusCheckPollTime_ 参数的值，以设置 SMCore 轮询克隆拆分操作状态的时间间隔。此值以毫秒为单位，默认值为 5 分钟。
+
++
+例如：
+
++
+[listing]
+----
+<add key="CloneSplitStatusCheckPollTime" value="300000" />
+----
++
+如果正在进行备份，还原或另一个克隆拆分，则克隆拆分启动操作将失败。只有在运行的操作完成后，才应重新启动克隆拆分操作。
+
+
+
+* 查找更多信息 *
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["SnapCenter 克隆或验证失败，并且聚合不存在"]

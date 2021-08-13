@@ -1,0 +1,32 @@
+---
+permalink: protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以从主存储或二级存储克隆文件系统备份。您还可以选择满足要求的目标：原始备份位置，同一主机或不同主机上的其他目标。目标必须与克隆源备份位于同一个卷上。 
+---
+= Windows 文件系统克隆的源和目标
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从主存储或二级存储克隆文件系统备份。您还可以选择满足要求的目标：原始备份位置，同一主机或不同主机上的其他目标。目标必须与克隆源备份位于同一个卷上。
+
+|===
+| 克隆目标 | Description 
+
+
+ a| 
+原始，源，位置
+ a| 
+默认情况下， SnapCenter 会将克隆与要克隆的备份存储在同一位置和同一主机上。
+
+
+
+ a| 
+不同的位置
+ a| 
+您可以将克隆存储在同一主机或不同主机上的其他位置。主机必须已配置与 Storage Virtual Machine （ SVM ）的连接。
+
+|===
+克隆操作完成后，您可以重命名克隆。

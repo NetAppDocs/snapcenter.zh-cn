@@ -1,0 +1,155 @@
+---
+permalink: protect-sco/concept_install_snapcenter_plug_ins_package_for_linux_or_aix_using_command_line_interface.html 
+sidebar: sidebar 
+keywords: install plug-in, cli, silent mode, interactively, console mode, cluster host 
+summary: 您可以分别在本地 Linux 或 AIX 主机上安装适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包。您可以使用命令行界面安装插件软件包。 
+---
+= 使用命令行界面安装适用于 Linux 或 AIX 的插件软件包
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以分别在本地 Linux 或 AIX 主机上安装适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包。您可以使用命令行界面安装插件软件包。
+
+适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包应分别安装在 Oracle 数据库所在的每个 Linux 或 AIX 主机上。
+
+
+
+== 以交互方式安装适用于 Linux 的插件软件包
+
+您可以在 Linux 主机上以交互方式安装适用于 Linux 的 SnapCenter 插件软件包。
+
+* 您需要的内容 *
+
+* 您应查看安装插件软件包的前提条件。
+* 您应设置 display environment 变量，以指定要启动向导的 Linux 主机的 IP 地址和端口号。
+
+
+* 步骤 *
+
+. 从 SnapCenter 服务器安装位置下载适用于 Linux 的 SnapCenter 插件软件包。
++
+默认安装路径为 _C ： \ProgramData\NetApp\SnapCenter\Package Repository 。可以从安装了 SnapCenter 服务器的主机访问此路径。
+
+. 将安装文件复制到要安装此插件的主机。
+. 在命令提示符处，导航到下载安装文件的目录，然后运行： ` ./SnapCenter_linux_host_plugin.bin – i swing`
+. 按照向导中的屏幕提示安装插件软件包。
+. 单击 * 完成 * 完成安装。
+
+
+
+
+== 在集群主机上安装适用于 Linux 或 AIX 的插件软件包
+
+您应在集群主机的两个节点上安装适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包。
+
+集群主机的每个节点都有两个 IP 。其中一个 IP 是相应节点的公有 IP ，另一个 IP 是两个节点之间共享的集群 IP 。
+
+* 步骤 *
+
+. 在集群主机的两个节点上安装适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包。
+. 验证是否在位于 /var/opt/snapcenter/spl/etc/ 的 spl.properties 文件中指定了正确的 SNAPCENTER_SERVER_host ， SPL_port ， SNAPCENTER_SERVER_PORT 和 SPL_END_plugins 参数值。
++
+如果 spl.properties 中未指定 SPL_END_plugins ，则可以添加它并分配值 SCO ， scU 。
+
+. 在 SnapCenter 服务器主机上，使用 _Open-SmConnection_ cmdlet 建立会话，然后输入凭据。
+. 在每个节点中，使用 _set-PreferredHostIPsInStorageExportPolicy_ sccli 命令和所需参数设置节点的首选 IP 。
+. 在 SnapCenter 服务器主机中，在 _C ： \Windows\System32\drivers\etc\hosts_ 中为集群 IP 和相应的 DNS 名称添加一个条目。
+. 使用 _Add-SmHost_ cmdlet 指定主机名的集群 IP ，将节点添加到 SnapCenter 服务器。
+
+
+发现节点 1 上的 Oracle 数据库（假设集群 IP 托管在节点 1 上）并创建数据库备份。如果发生故障转移，您可以使用在节点 1 上创建的备份来还原节点 2 上的数据库。您也可以使用在节点 1 上创建的备份在节点 2 上创建克隆。
+
+
+NOTE: 如果在运行任何其他 SnapCenter 操作时发生故障转移，则会存在陈旧的卷，目录和锁定文件。
+
+
+
+== 在静默模式或控制台模式下安装适用于 Linux 的插件软件包
+
+您可以使用命令行界面（ CLI ）在控制台模式或静默模式下安装适用于 Linux 的 SnapCenter 插件软件包。
+
+* 您需要的内容 *
+
+* 您应查看安装插件软件包的前提条件。
+* 您应确保未设置显示环境变量。
++
+如果设置了 display 环境变量，则应运行 unset display ，然后尝试手动安装此插件。
+
+
+
+* 关于此任务 *
+
+在控制台模式下安装时，您需要提供必要的安装信息，而在静默模式下安装时，则无需提供任何安装信息。
+
+* 步骤 *
+
+. 从 SnapCenter 服务器安装位置下载适用于 Linux 的 SnapCenter 插件软件包。
++
+默认安装路径为 _C ： \ProgramData\NetApp\SnapCenter\PackageRepository 。可以从安装了 SnapCenter 服务器的主机访问此路径。
+
+. 在命令提示符处，导航到下载安装文件的目录。
+. 根据您的首选安装模式，执行以下步骤之一。
++
+|===
+| 安装模式 | 步骤 
+
+
+ a| 
+控制台模式
+ a| 
+.. 运行
++
+` 。 /SnapCenter_linux_host_plugin.bin – i console`
+
+.. 按照屏幕上的提示完成安装。
+
+
+
+
+ a| 
+静默模式
+ a| 
+运行
+
+` ./SnapCenter_Linux_host_plugin.bin-I silent-Dport=8145-dserver_ip=SnapCenter_Server_FQDN-dserver_HTTPS_port=SnapCenter_Server_Port-Duser_install_DIR=/opt/custom_path`
+
+|===
+. 编辑位于 /var/opt/snapcenter/spl/etc/_ 的 spl.properties 文件以添加 SPL_enabled_plugins=SCO ， scu ，然后重新启动 SnapCenter 插件加载程序服务。
+
+
+
+IMPORTANT: 安装插件软件包时，会在主机上注册插件，而不是在 SnapCenter 服务器上注册插件。您应使用 SnapCenter 图形用户界面或 PowerShell cmdlet 添加主机，以便在 SnapCenter 服务器上注册插件。添加主机时，请选择 " 无 " 作为凭据。添加主机后，系统会自动发现已安装的插件。
+
+
+
+== 在静默模式下安装适用于 AIX 的插件软件包
+
+您可以使用命令行界面（ CLI ）在静默模式下安装适用于 AIX 的 SnapCenter 插件软件包。
+
+* 您需要的内容 *
+
+* 您应查看安装插件软件包的前提条件。
+* 您应确保未设置显示环境变量。
++
+如果设置了 display 环境变量，则应运行 unset display ，然后尝试手动安装此插件。
+
+
+
+* 步骤 *
+
+. 从 SnapCenter 服务器安装位置下载适用于 AIX 的 SnapCenter 插件软件包。
++
+默认安装路径为 _C ： \ProgramData\NetApp\SnapCenter\PackageRepository 。可以从安装了 SnapCenter 服务器的主机访问此路径。
+
+. 在命令提示符处，导航到下载安装文件的目录。
+. 运行
++
+` ./snapcenter_aix_host_plugin.bsx-I silent-Dport=8145-dserver_ip=SnapCenter_Server_FQDN-dserver_HTTPS_port=SnapCenter_Server_Port-Duser_install_DIR=/opt/custom_path-DINSTALL_log_name=SnapCenter_AIX_Host_Plug_User_List_User_CN_US_CNES_US_US_USER_DIR=/CTO_USER_USER_CH_USER.CHOCH_USER.CH_USER_USER_DIR=DTO_NAME=DTO_USER.`
+
+. 编辑位于 /var/opt/snapcenter/spl/etc/_ 的 spl.properties 文件以添加 SPL_enabled_plugins=SCO ， scu ，然后重新启动 SnapCenter 插件加载程序服务。
+
+
+
+IMPORTANT: 安装插件软件包时，会在主机上注册插件，而不是在 SnapCenter 服务器上注册插件。您应使用 SnapCenter 图形用户界面或 PowerShell cmdlet 添加主机，以便在 SnapCenter 服务器上注册插件。添加主机时，请选择 " 无 " 作为凭据。添加主机后，系统会自动发现已安装的插件。

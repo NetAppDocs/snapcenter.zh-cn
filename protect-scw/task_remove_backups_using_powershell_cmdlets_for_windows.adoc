@@ -1,0 +1,38 @@
+---
+permalink: protect-scw/task_remove_backups_using_powershell_cmdlets_for_windows.html 
+sidebar: sidebar 
+keywords: backups 
+summary: 如果在其他数据保护操作中不再需要备份，则可以使用 Remove-SmBackup cmdlet 删除这些备份。 
+---
+= 使用 PowerShell cmdlet 删除备份
+:icons: font
+:imagesdir: ../media/
+
+
+如果在其他数据保护操作中不再需要备份，则可以使用 Remove-SmBackup cmdlet 删除这些备份。
+
+您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。
+
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+* 步骤 *
+
+. 使用 Open-SmConnection cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
++
+[listing]
+----
+Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. 使用 Remove-SmBackup cmdlet 删除一个或多个备份。
++
+此示例将使用两个备份 ID 删除两个备份：
+
++
+[listing]
+----
+Remove-SmBackup -BackupIds 3,4
+Remove-SmBackup
+Are you sure want to remove the backup(s).
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+----
+

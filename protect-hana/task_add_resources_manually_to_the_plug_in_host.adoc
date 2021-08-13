@@ -1,0 +1,112 @@
+---
+permalink: protect-hana/task_add_resources_manually_to_the_plug_in_host.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 某些 HANA 实例不支持自动发现。您必须手动添加这些资源。 
+---
+= 手动将资源添加到插件主机
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+某些 HANA 实例不支持自动发现。您必须手动添加这些资源。
+
+* 您需要的内容 *
+
+您必须已完成安装 SnapCenter 服务器，添加主机，设置存储系统连接以及添加 HDB 用户存储密钥等任务。
+
+* 关于此任务 *
+
+以下配置不支持自动发现：
+
+* RDM 和 VMDK 布局
++
+
+NOTE: 如果发现上述资源，这些资源不支持数据保护操作。
+
+* HANA 多主机配置
+* HANA 系统复制
+* 同一主机上的多个实例
+
+
+* 步骤 *
+
+. 在左侧导航窗格中，从下拉列表中选择适用于 SAP HANA 数据库的 SnapCenter 插件，然后单击 * 资源 * 。
+. 在 * 资源 * 页面上，单击 * 添加 SAP HANA 数据库 * 。
+. 在 * 提供资源详细信息 * 页面上，执行以下操作：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+资源类型
+ a| 
+输入资源类型。资源类型包括单个容器，多租户数据库容器（ MDC ）和非数据卷。
+
+
+
+ a| 
+SAP HANA 系统名称
+ a| 
+输入描述性 SAP HANA 系统名称。只有在选择单个容器或 MDC 资源类型时，此选项才可用。
+
+
+
+ a| 
+SID
+ a| 
+输入系统 ID （ SID ）。安装的 SAP HANA 系统通过一个 SID 进行标识。
+
+
+
+ a| 
+HDBSQL 客户端主机
+ a| 
+选择通信主机。
+
+
+
+ a| 
+HDB 安全用户存储密钥
+ a| 
+输入密钥以连接到 SAP HANA 系统。密钥包含用于连接到数据库的登录信息。
+
+
+
+ a| 
+HDBSQL 操作系统用户
+ a| 
+输入为其配置 HDB 安全用户存储密钥的用户名。对于 Windows ， HDBSQL 操作系统用户必须是系统用户。因此，您必须为系统用户配置 HDB 安全用户存储密钥。
+
+
+
+ a| 
+资源名称
+ a| 
+输入资源名称。只有在选择非数据卷作为资源类型时，此选项才可用。
+
+|===
+. 在 * 提供存储占用空间 * 页面上，选择一个存储系统并选择一个或多个卷， LUN 和 qtree ，然后单击 * 保存 * 。
++
+可选：您可以单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 图标，用于从其他存储系统添加更多卷， LUN 和 qtree 。
+
+. 查看摘要，然后单击 * 完成 * 。
++
+此时将显示数据库以及 SID ，通信主机，关联的资源组和策略以及整体状态等信息。
+
+
+
+如果要为用户提供对资源的访问权限，则必须将资源分配给用户。这样，用户就可以执行对分配给他们的资产具有权限的操作。
+
+链接： https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_and_assign_role_and_assets.html[Add 用户或组并分配角色和资产 ]
+
+添加数据库后，您可以修改 SAP HANA 数据库详细信息。
+
+如果 SAP HANA 资源具有关联的备份，则无法修改以下内容：
+
+* 多租户数据库容器（ MDC ）： SID 或 HDBSQL 客户端主机
+* 单个容器： SID 或 HDBSQL 客户端主机
+* 非数据卷：资源名称，关联 SID 或插件主机
+

@@ -1,0 +1,15 @@
+---
+permalink: install/concept_configure_lun_storage.html 
+sidebar: sidebar 
+keywords: LUN storage 
+summary: 您可以使用 SnapCenter 配置 FC 连接或 iSCSI 连接的 LUN 。您还可以使用 SnapCenter 将现有 LUN 连接到 Windows 主机。 
+---
+= 配置 LUN 存储
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SnapCenter 配置 FC 连接或 iSCSI 连接的 LUN 。您还可以使用 SnapCenter 将现有 LUN 连接到 Windows 主机。
+
+LUN 是 SAN 配置中的基本存储单元。Windows 主机将系统上的 LUN 视为虚拟磁盘。有关详细信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanconf/home.html["《 ONTAP 9 SAN 配置指南》"^]。

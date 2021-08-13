@@ -1,0 +1,32 @@
+---
+permalink: protect-sco/concept_what_you_can_do_with_the_snapcenter_plug_in_for_oracle_database.html 
+sidebar: sidebar 
+keywords: backup, restore, clone, oracle database 
+summary: 您可以使用适用于 Oracle 数据库的插件来备份，验证，还原，恢复，挂载， 卸载并克隆 Oracle 数据库及其资源。您还可以使用 Oracle Recovery Manager （ RMAN ）对数据库备份进行编目或取消编目。 
+---
+= 适用于 Oracle 数据库的插件的功能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用适用于 Oracle 数据库的插件来备份，验证，还原，恢复，挂载， 卸载并克隆 Oracle 数据库及其资源。您还可以使用 Oracle Recovery Manager （ RMAN ）对数据库备份进行编目或取消编目。
+
+* 备份数据文件，控制文件和归档日志文件。
++
+只有容器数据库（ CDB ）级别才支持备份。
+
+* 还原和恢复数据库， CDB 和可插拔数据库（ Pluggable Database ， PDB ）。
++
+不支持未完成的 PDB 恢复。
+
+* 创建生产数据库的克隆，直至达到时间点。
++
+仅在 CDB 级别支持克隆。
+
+* 立即验证备份。
+* 挂载和卸载数据和日志备份以执行恢复操作。
+* 计划备份和验证操作。
+* 监控所有操作。
+* 查看备份，还原和克隆操作的报告。
+

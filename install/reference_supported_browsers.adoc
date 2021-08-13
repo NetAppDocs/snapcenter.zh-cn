@@ -1,0 +1,31 @@
+---
+permalink: install/reference_supported_browsers.html 
+sidebar: sidebar 
+keywords: SnapCenter, browsers, chrome, IE, Edge 
+summary: SnapCenter 软件可在多个浏览器上使用。 
+---
+= 支持的浏览器
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 软件可在多个浏览器上使用。
+
+* Chrome
++
+如果您使用的是 v66 ，则可能无法启动 SnapCenter 图形用户界面。
+
+* Internet Explorer
++
+** 仅支持默认级别的安全性。
++
+更改 Internet Explorer 安全设置会导致出现严重的浏览器显示问题。
+
+** 必须禁用 Internet Explorer 兼容性视图。
+
+
+* Microsoft Edge
+
+
+有关受支持版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。

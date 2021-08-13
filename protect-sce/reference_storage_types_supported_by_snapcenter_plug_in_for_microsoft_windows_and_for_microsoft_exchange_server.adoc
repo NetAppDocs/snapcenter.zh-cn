@@ -1,0 +1,91 @@
+---
+permalink: protect-sce/reference_storage_types_supported_by_snapcenter_plug_in_for_microsoft_windows_and_for_microsoft_exchange_server.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter 在物理机和虚拟机上均支持多种存储类型。在为主机安装软件包之前，您必须验证是否支持您的存储类型。 
+---
+= 适用于 Microsoft Windows 和 Microsoft Exchange Server 的 SnapCenter 插件支持的存储类型
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 在物理机和虚拟机上均支持多种存储类型。在为主机安装软件包之前，您必须验证是否支持您的存储类型。
+
+Windows Server 支持 SnapCenter 配置和数据保护。有关受支持版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+
+|===
+| 计算机 | Storage type | 使用配置 | 支持说明 
+
+
+ a| 
+物理服务器
+ a| 
+FC 连接的 LUN
+ a| 
+SnapCenter 图形用户界面（ GUI ）或 PowerShell cmdlet
+ a| 
+
+
+
+ a| 
+物理服务器
+ a| 
+iSCSI 连接的 LUN
+ a| 
+SnapCenter 图形用户界面或 PowerShell cmdlet
+ a| 
+
+
+
+ a| 
+VMware VM
+ a| 
+通过 FC 或 iSCSI HBA 连接的 RDM LUN
+ a| 
+PowerShell cmdlet
+ a| 
+仅限物理兼容性
+
+
+NOTE: 不支持 VMDK 。
+
+
+
+ a| 
+VMware VM
+ a| 
+iSCSI 启动程序直接连接到子系统的 iSCSI LUN
+ a| 
+SnapCenter 图形用户界面或 PowerShell cmdlet
+ a| 
+
+NOTE: 不支持 VMDK 。
+
+
+
+ a| 
+Hyper-V 虚拟机
+ a| 
+通过虚拟光纤通道交换机连接的虚拟 FC （ VFC ） LUN
+ a| 
+SnapCenter 图形用户界面或 PowerShell cmdlet
+ a| 
+您必须使用 Hyper-V Manager 配置通过虚拟光纤通道交换机连接的虚拟 FC （ VFC ） LUN 。
+
+
+NOTE: 不支持 Hyper-V 直通磁盘以及在 NetApp 存储上配置的 VHD （ x ）上备份数据库。
+
+
+
+ a| 
+Hyper-V 虚拟机
+ a| 
+iSCSI 启动程序直接连接到子系统的 iSCSI LUN
+ a| 
+SnapCenter 图形用户界面或 PowerShell cmdlet
+ a| 
+
+NOTE: 不支持 Hyper-V 直通磁盘以及在 NetApp 存储上配置的 VHD （ x ）上备份数据库。
+
+|===

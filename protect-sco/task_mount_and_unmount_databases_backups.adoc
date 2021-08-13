@@ -1,0 +1,99 @@
+---
+permalink: protect-sco/task_mount_and_unmount_databases_backups.html 
+sidebar: sidebar 
+keywords: mount, unmount, backup, ASM, asm_diskstring 
+summary: 如果要访问备份中的文件，您可以挂载一个或多个数据并仅记录备份。您可以将备份挂载到创建备份的同一主机，也可以挂载到具有相同类型的 Oracle 和主机配置的远程主机。如果您已手动挂载备份，则应在完成此操作后手动卸载备份。对于特定数据库，只能在主机上挂载一次数据库备份。执行操作时，只能挂载一个备份。 
+---
+= 挂载和卸载数据库备份
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要访问备份中的文件，您可以挂载一个或多个数据并仅记录备份。您可以将备份挂载到创建备份的同一主机，也可以挂载到具有相同类型的 Oracle 和主机配置的远程主机。如果您已手动挂载备份，则应在完成此操作后手动卸载备份。在任何给定实例中，数据库的备份都可以挂载到任何主机上。执行操作时，只能挂载一个备份。
+
+
+NOTE: 在 FlexASM 设置中，如果基数小于 RAC 集群中的节点数，则无法在叶节点上执行挂载操作。
+
+
+
+== 挂载数据库备份
+
+如果要访问备份中的文件，应手动挂载数据库备份。
+
+* 您需要的内容 *
+
+* 如果您在 NFS 环境中有一个自动存储管理（ Automatic Storage Management ， ASM ）数据库实例，并且希望挂载 ASM 备份，则应已将 ASM 磁盘路径 /var/opt/snapcenter/soc/backup_*/_*_/_*_/_*_/____*___* _ 添加到 asm_diskstring 参数中定义的现有路径中。
+* 如果您在 NFS 环境中有 ASM 数据库实例，并且希望在恢复操作中挂载 ASM 日志备份，则应已将 ASM 磁盘路径 /var/opt/snapcenter/scU/cles/_*//_* 添加到 asm_diskstring 参数中定义的现有路径中。
+* 在 asm_diskstring 参数中，如果使用的是 ASMFD ，则应配置 _afd ： * _ ；如果使用的是 ASMLIB ，则应配置 _ORCL ： * _ 。
+
+
+
+NOTE: 有关如何编辑 asm_diskstring 参数的信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["如何向 asm_diskstring 添加磁盘路径"^]。
+
+* 挂载备份时，如果 ASM 凭据和 ASM 端口与源数据库主机的凭据不同，则应进行配置。
+* 如果要挂载到备用主机，则必须验证备用主机是否满足以下要求：
++
+** 与原始主机的 UID 和 GID 相同
+** 与原始主机的 Oracle 版本相同
+** 与原始主机的操作系统分发版本相同
+
+
+
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面中，从 * 视图 * 列表中选择 * 数据库 * 或 * 资源组 * 。
+. 从数据库详细信息视图或资源组详细信息视图中选择数据库。
++
+此时将显示数据库拓扑页面。
+
+. 从管理副本视图中，从主存储系统或二级（镜像或复制的）存储系统中选择 * 备份 * 。
+. 从表中选择备份，然后单击 image:../media/mount_icon.gif["挂载图标"]。
+. 在挂载备份页面中，从 * 选择要挂载备份的主机 * 下拉列表中选择要挂载备份的主机。
++
+此时将显示挂载路径 _/var/opt/snapcenter/soc/backup_mount/backup_name/database_name_ 。
+
++
+如果要挂载 ASM 数据库的备份，则会显示挂载路径 +diskgroupname_sid_backupid 。
+
+. 单击 * 挂载 * 。
+
+
+* 完成后 *
+
+* 您可以运行以下命令来检索与挂载的备份相关的信息：
++
+` ./sccli Get-SmBackup -BackupName backup_name -ListMountInfo`
+
+* 如果已挂载 ASM 数据库，则可以运行以下命令来检索与挂载的备份相关的信息：
++
+` ./sccli Get-Smbackup -BackupNamediskgroupname_sid_backupid-listmountinfo`
+
+* 要检索备份 ID ，请运行以下命令：
++
+` ./sccli Get-Smbackup-BackupNamebackup_name`
+
++
+有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877144["《 SnapCenter 软件命令参考指南》"^]。
+
+
+
+
+
+== 卸载数据库备份
+
+如果您不想再访问已挂载数据库备份上的文件，可以手动卸载该备份。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面中，从 * 视图 * 列表中选择 * 数据库 * 或 * 资源组 * 。
+. 从数据库详细信息视图或资源组详细信息视图中选择数据库。
++
+此时将显示数据库拓扑页面。
+
+. 选择已挂载的备份，然后单击 image:../media/unmount_icon.gif["卸载图标"]。
+. 单击 * 确定 * 。
+

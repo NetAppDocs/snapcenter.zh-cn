@@ -1,0 +1,48 @@
+---
+permalink: protect-scw/task_configure_CA_certificate_with_Windows_host_plug-in_services.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 使用 Windows 主机插件服务配置 CA 证书 
+---
+= 使用 Windows 主机插件服务配置 CA 证书
+:icons: font
+:imagesdir: ../media/
+
+
+您应使用 Windows 主机插件服务配置 CA 证书，以激活已安装的数字证书。
+
+在 SnapCenter 服务器以及已部署 CA 证书的所有插件主机上执行以下步骤。
+
+* 步骤 *
+
+. 运行以下命令，删除与 SMCore 默认端口 8145 的现有证书绑定：
++
+` > netsh http delete sslcert ipport=0.0.0.0 ： _<SMCore Port>`
+
++
+例如：
+
++
+....
+> netsh http delete sslcert ipport=0.0.0.0:8145
+....
+. 运行以下命令，将新安装的证书与 Windows 主机插件服务绑定：
++
+` >$cert = "_< 证书指纹 >_ "`
+
++
+` >$guid = [guid] ：： NewGuid （） .ToString （ "B" ）`
+
++
+` > netsh http add sslcert ipport=0.0.0.0 ： _<SMCore Port>_ certhash=$cert AppID="$guid"`
+
++
+例如：
+
++
+....
+> $cert = “a909502dd82ae41433e6f83886b00d4277a32a7b”
+> $guid = [guid]::NewGuid().ToString("B")
+> netsh http add sslcert ipport=0.0.0.0:8145 certhash=$cert appid="$guid"
+....
+

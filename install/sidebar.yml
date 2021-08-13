@@ -1,0 +1,146 @@
+---
+section: install
+title: SnapCenter 服务器安装
+entries:
+- title: 安装工作流
+  url: "/install/install_workflow.html"
+- title: 准备安装 SnapCenter 服务器
+  entries:
+  - title: 域和工作组要求
+    url: "/install/reference_domain_and_workgroup_requirements.html"
+  - title: 空间和规模估算要求
+    url: "/install/reference_space_and_sizing_requirements.html"
+  - title: SAN 主机要求
+    url: "/install/reference_san_host_requirements.html"
+  - title: 支持的存储系统和应用程序
+    url: "/install/reference_supported_storage_systems_and_applications.html"
+  - title: 支持的浏览器
+    url: "/install/reference_supported_browsers.html"
+  - title: 连接和端口要求
+    url: "/install/reference_connection_and_port_requirements.html"
+  - title: SnapCenter 许可证
+    url: "/install/concept_snapcenter_licenses.html"
+  - title: 凭据的身份验证方法
+    url: "/install/concept_authentication_methods_for_your_credentials.html"
+  - title: Storage Virtual Machine 连接和凭据
+    url: "/install/concept_svm_connections_and_credentials.html"
+- title: 安装 SnapCenter 服务器
+  url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
+- title: 登录到 SnapCenter
+  url: "/install/task_log_in_to_snapcenter.html"
+- title: 配置 CA 证书
+  entries:
+  - title: 生成 CA 证书 CSR 文件
+    url: "/install/reference_generate_CA_certificate_CSR_file.html"
+  - title: 导入 CA 证书
+    url: "/install/task_import_CA_certificates.html"
+  - title: 获取 CA 证书指纹
+    url: "/install/task_get_the_CA_certificate_thumbprint.html"
+  - title: 使用 Windows 主机插件服务配置 CA 证书
+    url: "/install/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
+  - title: 使用 SnapCenter 站点配置 CA 证书
+    url: "/install/task_configure_CA_certificate_with_snapcenter_site.html"
+  - title: 为 SnapCenter 服务器启用 CA 证书
+    url: "/install/task_enable_ca_certificates_for_snapcenter.html"
+- title: 注册不可信的 Active Directory 域
+  url: "/install/task_register_untrusted_active_directory_domains.html"
+- title: 配置高可用性
+  entries:
+  - title: 使用 F5 配置 SnapCenter 服务器以实现高可用性
+    url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
+  - title: 手动配置 Microsoft 网络负载平衡器
+    url: "/install/concept_network_load_balanacing_and_application_request_routing_requirements.html"
+  - title: 从 NLB 切换到 F5 以实现高可用性
+    url: "/install/task_switch_from_nlb_to_f5_for_high_availability.html"
+  - title: SnapCenter MySQL 存储库的高可用性
+    url: "/install/concept_high_availability_for_snapcenter_mysql_repository.html"
+  - title: 导出 SnapCenter 证书
+    url: "/install/task_export_snapcenter_certificates.html"
+- title: 配置基于角色的访问控制（ RBAC ）
+  entries:
+  - title: 添加用户或组并分配角色和资产
+    url: "/install/task_add_a_user_or_group_and_assign_role_and_assets.html"
+  - title: 创建角色
+    url: "/install/task_create_a_role.html"
+  - title: 使用 security login 命令添加 ONTAP RBAC 角色
+    url: "/install/task_add_an_rbac_role_using_security_login_commands.html"
+  - title: 创建具有最低权限的 ONTAP 集群角色
+    url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
+  - title: 配置 IIS 应用程序池以启用 Active Directory 读取权限
+    url: "/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html"
+- title: 添加存储系统
+  url: "/install/task_add_storage_systems.html"
+- title: 添加 SnapCenter 许可证
+  url: "/install/task_add_snapcenter_licenses.html"
+  entries:
+  - title: 基于 SnapCenter 标准控制器的许可证
+    url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
+    entries:
+    - title: 验证是否已安装 SnapManager 套件存储控制器许可证
+      url: "/install/task_verify_if_the_snapmanager_suite_storage_controller_license_is_installed.html"
+    - title: 查看控制器上安装的许可证
+      url: "/install/task_view_the_licenses_installed_on_the_controller.html"
+    - title: 检索控制器序列号
+      url: "/install/task_retrieve_the_controller_serial_number.html"
+    - title: 检索基于 SnapCenter 控制器的许可证序列号
+      url: "/install/task_retrieve_the_snapcenter_controller_based_license_serial_number.html"
+    - title: 添加基于 SnapCenter 标准控制器的许可证
+      url: "/install/task_add_a_snapcenter_controller_based_license.html"
+    - title: 删除试用许可证
+      url: "/install/task_remove_the_trial_license.html"
+  - title: 基于容量的 SnapCenter 标准版许可证
+    url: "/install/concept_snapcenter_standard_capacity_based_licenses.html"
+    entries:
+    - title: SnapCenter 如何计算容量使用量
+      url: "/install/concept_how_snapcenter_calculates_capacity_usage.html"
+    - title: 计算基于 SnapCenter 容量的许可证的容量要求
+      url: "/install/task_calculate_capacity_requirements_for_a_snapcenter_capacity_based_license.html"
+    - title: 检索基于 SnapCenter 容量的许可证序列号
+      url: "/install/task_retrieve_snapcenter_capacity_based_license_serial_number.html"
+    - title: 生成 NetApp 许可证文件
+      url: "/install/task_generate_a_netapp_license_file.html"
+    - title: 添加基于 SnapCenter 容量的许可证
+      url: "/install/task_add_snapcenter_capacity_based_licenses.html"
+- title: 在 Windows 主机上配置存储
+  url: "/install/concept_provision_storage_on_windows_hosts.html"
+  entries:
+  - title: 配置 LUN 存储
+    url: "/install/concept_configure_lun_storage.html"
+    entries:
+    - title: 建立 iSCSI 会话
+      url: "/install/task_establish_an_iscsi_session.html"
+    - title: 断开 iSCSI 会话的连接
+      url: "/install/task_disconnect_an_iscsi_session.html"
+    - title: 创建和管理 igroup
+      url: "/install/concept_create_and_manage_igroups.html"
+    - title: 创建和管理磁盘
+      url: "/install/task_create_and_manage_disks.html"
+  - title: 创建和管理 SMB 共享
+    url: "/install/concept_create_and_manage_smb_shares.html"
+  - title: 回收存储系统上的空间
+    url: "/install/task_reclaim_space_on_the_storage_system.html"
+  - title: 使用 PowerShell cmdlet 配置存储
+    url: "/install/reference_provision_storage_using_powershell_cmdlets.html"
+- title: 在 VMware 环境中配置存储
+  url: "/install/concept_provision_storage_in_vmware_environments.html"
+  entries:
+  - title: 支持的 VMware 子操作系统平台
+    url: "/install/concept_supported_vmware_guest_os_platforms.html"
+    entries:
+    - title: VMware ESXi 服务器相关限制
+      url: "/install/concept_vmware_esxi_server_related_limitations.html"
+    - title: SnapCenter RDM 操作所需的最小 vCenter 特权
+      url: "/install/concept_minimum_vcenter_privileges_required_for_snapcenter_rdm_operations.html"
+  - title: 管理 Microsoft 集群中的 FC RDM LUN
+    url: "/install/concept_manage_fc_rdm_luns_in_a_microsoft_cluster.html"
+    entries:
+    - title: 在 Microsoft 集群中使用 FC RDM LUN 的要求
+      url: "/install/concept_requirements_for_using_fc_rdm_luns_in_a_microsoft_cluster.html"
+    - title: 使用 FC/iSCSI RDM LUN 时的 Microsoft 集群支持限制
+      url: "/install/concept_microsoft_cluster_support_limitations_using_fc_rdm_luns.html"
+    - title: 创建共享 FC RDM LUN
+      url: "/install/task_create_a_shared_fc_rdm_lun.html"
+- title: 配置与 SnapCenter 服务器的安全 MySQL 连接
+  url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
+- title: 安装期间在 Windows 主机上启用的功能
+  url: "/install/reference_features_enabled_on_your_windows_host_during_installation.html"

@@ -1,0 +1,32 @@
+---
+permalink: install/task_configure_CA_certificate_with_snapcenter_site.html 
+sidebar: sidebar 
+keywords: SnapCenter, configure, CA certificate 
+summary: 您应在 Windows 主机上使用 SnapCenter 站点配置 CA 证书。 
+---
+= 使用 SnapCenter 站点配置 CA 证书
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您应在 Windows 主机上使用 SnapCenter 站点配置 CA 证书。
+
+* 步骤 *
+
+. 在安装了 SnapCenter 的 Windows 服务器上打开 IIS 管理器。
+. 在左侧导航窗格中，单击 * 连接 * 。
+. 展开服务器和 * 站点 * 的名称。
+. 选择要安装 SSL 证书的 SnapCenter 网站。
+. 导航到 * 操作 * > * 编辑站点 * ，单击 * 绑定 * 。
+. 在绑定页面中，选择 * 绑定 https * 。
+. 单击 * 编辑 * 。
+. 从 SSL 证书下拉列表中，选择最近导入的 SSL 证书。
+. 单击 * 确定 * 。
+
+
+
+NOTE: 如果最近部署的 CA 证书未在下拉菜单中列出，请检查此 CA 证书是否与专用密钥关联。
+
+
+IMPORTANT: 确保使用以下路径添加证书： * 控制台根 > 证书–本地计算机 > 可信根证书颁发机构 > 证书 * 。

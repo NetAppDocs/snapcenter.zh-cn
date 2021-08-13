@@ -1,0 +1,38 @@
+---
+permalink: protect-sce/task_install_plug_in_for_exchange_from_the_snapcenter_server_host_using_powershell_cmdlets.html 
+sidebar: sidebar 
+keywords:  
+summary: 您应从 SnapCenter 图形用户界面安装适用于 Exchange 的插件。如果不想使用此 GUI ，可以在 SnapCenter 服务器主机或远程主机上使用 PowerShell cmdlet 。 
+---
+= 使用 PowerShell cmdlet 从 SnapCenter 服务器主机安装适用于 Exchange 的插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您应从 SnapCenter 图形用户界面安装适用于 Exchange 的插件。如果不想使用此 GUI ，可以在 SnapCenter 服务器主机或远程主机上使用 PowerShell cmdlet 。
+
+* 您需要的内容 *
+
+* 必须已安装和配置 SnapCenter 服务器。
+* 您必须是主机上的本地管理员或具有管理权限的用户。
+* 您必须是分配给具有插件，安装和卸载权限的角色的用户，例如 SnapCenter 管理员
+* 在安装适用于 Exchange 的插件之前，您必须已查看安装要求和支持的配置类型。
+* 要安装适用于 Exchange 的插件的主机必须是 Windows 主机。
+
+
+* 步骤 *
+
+. 在 SnapCenter 服务器主机上，使用 _Open-SmConnection_ cmdlet 建立会话，然后输入凭据。
+. 使用带有所需参数的 _Add-SmHost_ cmdlet 添加要安装适用于 Exchange 的插件的主机。
++
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
++
+主机可以是独立主机或 DAG 。如果指定 DAG ，则需要使用 _-isDAG_ 参数。
+
+. 使用 _Install-SmHostPackage_ cmdlet 和所需参数安装适用于 Exchange 的插件。
++
+此命令将在指定主机上安装适用于 Exchange 的插件，然后向 SnapCenter 注册此插件。
+
+

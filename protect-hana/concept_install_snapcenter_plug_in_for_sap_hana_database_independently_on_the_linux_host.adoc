@@ -1,0 +1,15 @@
+---
+permalink: protect-hana/concept_install_snapcenter_plug_in_for_sap_hana_database_independently_on_the_linux_host.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您的环境不允许从 SnapCenter 服务器远程安装适用于 SAP HANA 数据库的 SnapCenter 插件，则可以直接在 Linux 主机上安装此插件。您可以使用交互式向导或命令行界面安装此插件。 
+---
+= 在 Linux 主机上单独安装适用于 SAP HANA 数据库的 SnapCenter 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您的环境不允许从 SnapCenter 服务器远程安装适用于 SAP HANA 数据库的 SnapCenter 插件，则可以直接在 Linux 主机上安装此插件。您可以使用交互式向导或命令行界面安装此插件。
+
+适用于 SAP HANA 数据库的插件必须安装在 HDBSQL 客户端所在的每个 Linux 主机上。

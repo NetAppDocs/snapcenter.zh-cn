@@ -1,0 +1,219 @@
+---
+permalink: protect-sco/task_restore_an_oracle_database.html 
+sidebar: sidebar 
+keywords: restore, recover, Oracle 
+summary: 如果数据丢失，您可以使用 SnapCenter 将数据从一个或多个备份还原到活动文件系统，然后恢复数据库。 
+---
+= 还原 Oracle 数据库
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果数据丢失，您可以使用 SnapCenter 将数据从一个或多个备份还原到活动文件系统，然后恢复数据库。
+
+* 关于此任务 *
+
+可以使用配置的归档日志位置提供的归档日志执行恢复。如果所配置位置没有恢复所需的归档日志，则应挂载包含这些日志的 Snapshot 副本，并将路径指定为外部归档日志。
+
+如果将 ASM 数据库从 ASMLIB 迁移到 ASMFD ，则使用 ASMLIB 创建的备份将无法用于还原数据库。您应在 ASMFD 配置中创建备份，并使用这些备份进行还原。同样，如果 ASM 数据库从 ASMFD 迁移到 ASMLIB ，则应在 ASMLIB 配置中创建备份以进行还原。
+
+还原数据库时，系统会在 Oracle 数据库主机上的 $ORACLE_HOME/DBS 目录中创建一个操作锁定文件（ .sm_lock_dbsid ），以避免对数据库执行多个操作。还原数据库后，操作锁定文件将自动删除。
+
+
+NOTE: 不支持还原 SPFILE 和密码文件。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面中，从 * 视图 * 列表中选择 * 数据库 * 或 * 资源组 * 。
+. 从数据库详细信息视图或资源组详细信息视图中选择数据库。
++
+此时将显示数据库拓扑页面。
+
+. 从管理副本视图中，从主存储系统或二级（镜像或复制的）存储系统中选择 * 备份 * 。
+. 从表中选择备份，然后单击 *image:../media/restore_icon.gif["还原图标"]*
+. 在还原范围页面上，执行以下任务：
++
+.. 如果在 Real Application Clusters （ RAC ）环境中选择了数据库备份，请选择 RAC 节点。
+.. 选择镜像数据或存储数据时：
++
+*** 如果镜像或存储中没有日志备份，则不会选择任何内容，并且定位器为空。
+*** 如果日志备份存在于镜像或存储中，则会选择最新的日志备份并显示相应的定位器。
++
+
+NOTE: 如果选定日志备份同时位于镜像和存储位置，则会显示这两个定位器。
+
+
+
+.. 执行以下操作：
++
+|===
+| 如果要还原 ... | 执行此操作 ... 
+
+
+ a| 
+数据库的所有数据文件
+ a| 
+选择 * 所有数据文件 * 。
+
+仅还原数据库的数据文件。不会还原控制文件，归档日志或重做日志文件。
+
+
+
+ a| 
+表空间
+ a| 
+选择 * 表空间 * 。
+
+您可以指定要还原的表空间。
+
+
+
+ a| 
+控制文件
+ a| 
+选择 * 控制文件 * 。
+
+
+
+ a| 
+重做日志文件
+ a| 
+选择 * 重做日志文件 * 。
+
+此选项仅适用于 Data Guard 备用数据库或 Active Data Guard 备用数据库。
+
+
+NOTE: 不会为非 Data Guard 数据库备份重做日志文件。对于非 Data Guard 数据库，可使用归档日志执行恢复。
+
+
+
+ a| 
+可插拔数据库（ PDB ）
+ a| 
+选择 * 可插拔数据库 * ，然后指定要还原的 PDB 。
+
+
+
+ a| 
+可插拔数据库（ PDB ）表空间
+ a| 
+选择 * 可插拔数据库（ PDB ）表空间 * ，然后指定要还原的 PDB 及其表空间。
+
+只有在选择了要还原的 PDB 时，此选项才可用。
+
+|===
+.. 选择 * 如果需要还原和恢复更改数据库状态 * ，将数据库的状态更改为执行还原和恢复操作所需的状态。
++
+数据库从高到低的各种状态包括打开，挂载，启动和关闭。如果数据库处于较高状态，但要执行还原操作，必须将此状态更改为较低状态，则必须选中此复选框。如果数据库处于较低的状态，但要执行还原操作，必须将其更改为较高的状态，则即使未选中此复选框，数据库状态也会自动更改。
+
++
+如果数据库处于打开状态，并且要还原，数据库需要处于挂载状态，则只有选中此复选框后，数据库状态才会更改。
+
+.. 如果要在备份后添加新数据文件或向 LVM 磁盘组添加，删除或重新创建 LUN 时执行原位还原，请选择 * 强制原位还原 * 。
+
+
+. 在恢复范围页面上，执行以下操作：
++
+|===
+| 如果您 ... | 执行此操作 ... 
+
+
+ a| 
+希望恢复到上一个事务
+ a| 
+选择 * 所有日志 * 。
+
+
+
+ a| 
+希望恢复到特定的系统更改编号（ SCN ）
+ a| 
+选择 * 直到 SCN （系统更改编号） * 。
+
+
+
+ a| 
+希望恢复到特定数据和时间
+ a| 
+选择 * 日期和时间 * 。
+
+必须指定数据库主机时区的日期和时间。
+
+
+
+ a| 
+不希望恢复
+ a| 
+选择 * 无恢复 * 。
+
+
+
+ a| 
+希望指定任何外部归档日志位置
+ a| 
+选择 * 指定外部归档日志位置 * ，然后指定外部归档日志文件的位置。
+
+如果在备份过程中对归档日志进行了修剪，并且您已手动挂载所需的归档日志备份，则必须将挂载的备份路径指定为外部归档日志位置以进行恢复。
+
+** http://www.netapp.com/us/media/tr-4591.pdf["NetApp 技术报告 4591 ：《数据库数据保护备份，恢复，复制和灾难恢复》"^]
+** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["操作失败，并显示 ORA-00308 错误"^]
+
+
+|===
++
+如果归档日志卷不受保护，但数据卷受保护，则无法通过从二级备份恢复来执行还原。只能通过选择 * 无恢复 * 来还原。
+
++
+如果要在选择了 OPEN DATABASE 选项的情况下恢复 RAC 数据库，则只有启动了恢复操作的 RAC 实例才会恢复到 OPEN 状态。
+
++
+
+NOTE: Data Guard 备用数据库和 Active Data Guard 备用数据库不支持恢复。
+
+. 在 PreOps 页面上，输入要在还原操作之前运行的预处理程序的路径和参数。
++
+您必须将此预处理文件存储在 /var/opt/snapcenter/spl/scripts_ 路径或此路径中的任何文件夹中。默认情况下，系统会填充 _/var/opt/snapcenter/spl/scripts_ 路径。如果您在此路径中创建了任何文件夹来存储脚本，则必须在此路径中指定这些文件夹。
+
++
+您还可以指定脚本超时值。默认值为 60 秒。
+
+. 在 PostOps 页面上，执行以下步骤：
++
+.. 输入要在还原操作后运行的后脚本的路径和参数。
++
+您必须将后脚本存储在此路径中的 /var/opt/snapcenter/spl/scripts_ 或任何文件夹中。默认情况下，系统会填充 _/var/opt/snapcenter/spl/scripts_ 路径。如果您在此路径中创建了任何文件夹来存储脚本，则必须在此路径中指定这些文件夹。
+
+.. 如果要在恢复后打开数据库，请选中此复选框。
++
+无论是否使用控制文件还原容器数据库（ CDB ），或者仅还原 CDB 控制文件后，如果您指定在恢复后打开数据库，则只会打开 CDB ，而不会打开该 CDB 中的可插拔数据库（ PDB ）。
+
++
+在 RAC 设置中，恢复后仅打开用于恢复的 RAC 实例。
+
++
+
+NOTE: 还原包含控制文件的用户表空间，包含或不包含控制文件的系统表空间或包含或不包含控制文件的 PDB 后，只有与还原操作相关的 PDB 的状态才会更改为原始状态。未用于还原的其他 PDB 的状态不会更改为原始状态，因为这些 PDB 的状态未保存。您必须手动更改未用于还原的 PDB 的状态。
+
+
+
+. 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件通知的场景。
++
+您还必须指定发件人和收件人电子邮件地址以及电子邮件主题。如果要附加所执行还原操作的报告，必须选择 * 附加作业报告 * 。
+
++
+
+NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 set-SmtpServer 指定 SMTP 服务器详细信息。
+
+. 查看摘要，然后单击 * 完成 * 。
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
+
+
+* 有关详细信息 *
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["跳过 Oracle RAC 单节点数据库以执行 SnapCenter 操作"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_from_a_secondary_SnapMirror_or_SnapVault_location["无法从二级 SnapMirror 或 SnapVault 位置还原"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_when_a_backup_of_an_orphan_incarnation_is_selected["无法从孤立变体的备份还原"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["可自定义的参数，用于在 AIX 系统上执行备份，还原和克隆操作"^]
+

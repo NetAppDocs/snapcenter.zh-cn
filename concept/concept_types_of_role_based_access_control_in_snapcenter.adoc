@@ -1,0 +1,77 @@
+---
+permalink: concept/concept_types_of_role_based_access_control_in_snapcenter.html 
+sidebar: sidebar 
+keywords: RBAC, roles, permissions, application-level RBAC, ONTAP permissions 
+summary: 通过 SnapCenter 基于角色的访问控制（ Role-Based Access Control ， RBAC ）和 ONTAP 权限， SnapCenter 管理员可以创建角色并设置访问权限。通过这种集中管理的访问，应用程序管理员可以在委派的环境中安全地工作。 
+---
+= RBAC 的类型
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过 SnapCenter 基于角色的访问控制（ Role-Based Access Control ， RBAC ）和 ONTAP 权限， SnapCenter 管理员可以将 SnapCenter 资源的控制权委派给不同的用户或用户组。通过这种集中管理的访问，应用程序管理员可以在委派的环境中安全地工作。
+
+您可以随时创建和修改角色，并向用户添加资源访问权限，但在首次设置 SnapCenter 时，您应至少将 Active Directory 用户或组添加到角色中，然后向这些用户或组添加资源访问权限。
+
+
+NOTE: 您不能使用 SnapCenter 创建用户或组帐户。您应在操作系统或数据库的 Active Directory 中创建用户或组帐户。
+
+SnapCenter 使用以下类型的基于角色的访问控制：
+
+* SnapCenter RBAC
+* SnapCenter 插件 RBAC （对于某些插件）
+* 应用程序级 RBAC
+* ONTAP 权限
+
+
+
+
+== SnapCenter RBAC
+
+
+
+=== 角色和权限
+
+SnapCenter 附带的预定义角色已分配权限。您可以将用户或用户组分配给这些角色。您还可以创建新角色并管理权限和用户。
+
+* 为用户或组分配权限 *
+
+您可以为用户或组分配访问主机，存储连接和资源组等 SnapCenter 对象的权限。您不能更改 SnapCenterAdmin 角色的权限。
+
+您可以为同一林中的用户和组以及属于不同林的用户分配 RBAC 权限。您不能为属于林间嵌套组的用户分配 RBAC 权限。
+
+
+NOTE: 如果创建自定义角色，则该角色必须包含 SnapCenter 管理员角色的所有权限。如果您仅复制某些权限，例如 Host add 或 Host remove ，则无法执行这些操作。
+
+
+
+=== 身份验证
+
+用户需要在登录期间通过图形用户界面（ GUI ）或 PowerShell cmdlet 提供身份验证。如果用户是多个角色的成员，则在输入登录凭据后，系统会提示用户指定要使用的角色。用户还需要提供身份验证才能运行 API 。
+
+
+
+== 应用程序级 RBAC
+
+SnapCenter 使用凭据验证授权的 SnapCenter 用户是否也具有应用程序级别的权限。
+
+例如，如果要在 SQL Server 环境中执行 Snapshot 副本和数据保护操作，则必须使用正确的 Windows 或 SQL 凭据设置凭据。SnapCenter 服务器使用任一方法对设置的凭据进行身份验证。如果要在 ONTAP 存储上的 Windows 文件系统环境中执行 Snapshot 副本和数据保护操作，则 SnapCenter 管理员角色必须对 Windows 主机具有管理员权限。
+
+同样，如果要对 Oracle 数据库执行数据保护操作，并且在数据库主机中禁用了操作系统（ OS ）身份验证，则必须使用 Oracle 数据库或 Oracle ASM 凭据设置凭据。SnapCenter 服务器会根据操作使用以下方法之一对凭据集进行身份验证。
+
+
+
+== 适用于 VMware vSphere RBAC 的 SnapCenter 插件
+
+如果您使用 SnapCenter VMware 插件进行 VM 一致的数据保护，则 vCenter Server 可提供额外级别的 RBAC 。SnapCenter VMware 插件既支持 vCenter Server RBAC ，又支持 Data ONTAP RBAC 。
+
+有关信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_role_based_access_control.html["适用于 VMware vSphere RBAC 的 SnapCenter 插件"^]
+
+
+
+== ONTAP 权限
+
+您应创建具有访问存储系统所需权限的 vsadmin 帐户。
+
+有关创建帐户和分配权限的信息，请参见 link:../install/task_create_an_ontap_cluster_role_with_minimum_privileges.html["创建具有最低权限的 ONTAP 集群角色"^]

@@ -1,0 +1,23 @@
+---
+permalink: protect-hana/reference_types_of_recovery_operations_supported_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords:  
+summary: 通过 SnapCenter ，您可以对 SAP HANA 数据库执行不同类型的恢复操作。 
+---
+= SAP HANA 数据库支持的恢复操作类型
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过 SnapCenter ，您可以对 SAP HANA 数据库执行不同类型的恢复操作。
+
+* 将数据库恢复到最新状态
+* 将数据库恢复到特定时间点
++
+您必须指定恢复的日期和时间。
+
+* 将数据库恢复到特定的数据备份
+
+
+SnapCenter 还为 SAP HANA 数据库提供了 " 无恢复 " 选项。

@@ -1,0 +1,40 @@
+---
+permalink: protect-hana/reference_prerequisites_for_using_snapcenter_plug_in_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords: Credentials,SnapCenter Plug-in for SAP HANA Database 
+summary: 在使用适用于 SAP HANA 数据库的 SnapCenter 插件之前， SnapCenter 管理员必须安装和配置 SnapCenter 服务器并执行前提条件任务。 
+---
+= 使用适用于 SAP HANA 数据库的 SnapCenter 插件的前提条件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在使用适用于 SAP HANA 数据库的 SnapCenter 插件之前， SnapCenter 管理员必须安装和配置 SnapCenter 服务器并执行前提条件任务。
+
+* 安装和配置 SnapCenter 服务器。
+* 登录到 SnapCenter 服务器。
+* 如果您使用 SnapCenter 服务器保护驻留在 VMware RDM LUN 或 VMDK 上的 SAP HANA 数据库，则必须部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件。有关详细信息，请参见适用于 VMware vSphere 的 SnapCenter 插件文档。
++
+https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["适用于 VMware vSphere 的 SnapCenter 插件文档"]
+
+* 如果适用，可通过添加存储系统连接和创建凭据来配置 SnapCenter 环境。
+* 添加主机，然后安装并上传插件。
+* 在 Linux 或 Windows 主机上安装 Java 1.7 或 Java 1.8 。
++
+必须在主机的环境路径变量中设置 Java 路径。
+
+* 如果要进行备份复制，请设置 SnapMirror 和 SnapVault 。
+* 在要安装适用于 SAP HANA 数据库的插件的主机上安装 HDBSQL 客户端。
++
+为要通过此主机管理的 SAP HANA 节点配置用户存储密钥。
+
+* 对于 SAP HANA 数据库 2.0SPS05 ，如果您使用的是 SAP HANA 数据库用户帐户，请确保您具有以下权限，可以在 SnapCenter 服务器中执行备份，还原和克隆操作：
++
+** 备份管理员
+** 目录读取
+** 数据库备份管理员
+** 数据库恢复操作员
+
+
+

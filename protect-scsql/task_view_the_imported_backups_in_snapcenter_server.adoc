@@ -1,0 +1,25 @@
+---
+permalink: protect-scsql/task_view_the_imported_backups_in_snapcenter_server.html 
+sidebar: sidebar 
+keywords:  
+summary: '导入适用于 Microsoft SQL Server 的 SnapManager 归档备份后，您可以从 " 拓扑 " 页面在 SnapCenter 中查看这些备份。' 
+---
+= 在 SnapCenter 服务器中查看导入的备份
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+导入 SnapManager for Microsoft SQL Server 归档备份后，您可以从 * 拓扑 * 页面在 SnapCenter 中查看这些备份。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 创建包含所有数据库的资源组。
+. 选择资源组。
+. 保护资源组。
+. 在 * 拓扑 * 页面的 * 管理副本 * 视图中，单击从存储副本备份。
++
+此时将显示备份的详细信息。
+
+

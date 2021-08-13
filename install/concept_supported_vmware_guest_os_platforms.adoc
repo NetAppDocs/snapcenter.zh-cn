@@ -1,0 +1,28 @@
+---
+permalink: install/concept_supported_vmware_guest_os_platforms.html 
+sidebar: sidebar 
+keywords: guest OS, VMware 
+summary: 您可以使用适用于 Windows 的插件在受支持的 VMware ESXi 版本上运行的 x64 子操作系统上配置 LUN 并管理 Snapshot 副本。 
+---
+= 支持的 VMware 子操作系统平台
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用适用于 Windows 的插件在受支持的 VMware ESXi 版本上运行的 x64 子操作系统上配置 LUN 并管理 Snapshot 副本。
+
+适用于 Windows 的插件支持以下 VMware 子操作系统配置：
+
+* 支持的 Windows Server 版本
+* Microsoft 集群配置
++
+使用 Microsoft iSCSI 软件启动程序时，最多支持 VMware 上支持 16 个节点，或者使用 FC 最多支持两个节点
+
+* RDM LUN
++
+对于普通 RDM ，最多支持 56 个 RDM LUN 以及 4 个 LSI Logic SCSI 控制器；对于适用于 Windows 的 VMware VM MSCS 盒对盒插件配置，最多支持 42 个 RDM LUN 以及 3 个 LSI Logic SCSI 控制器
+
+
+
+有关受支持版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。

@@ -1,0 +1,46 @@
+---
+permalink: install/task_verify_if_the_snapmanager_suite_storage_controller_license_is_installed.html 
+sidebar: sidebar 
+keywords: SnapManager Suite license, FAS, AFF 
+summary: 您可以使用 SnapCenter 图形用户界面查看 SnapManager 套件许可证是安装在 FAS 还是 AFF 主存储系统上，并确定哪些存储系统可能需要 SnapManager 套件许可证。SnapManager 套件许可证仅适用于主存储系统上的 FAS 和 AFF SVM 或集群。 
+---
+= 验证是否已安装 SnapManager 套件存储控制器许可证
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SnapCenter 图形用户界面查看 SnapManager 套件许可证是安装在 FAS 还是 AFF 主存储系统上，并确定哪些存储系统可能需要 SnapManager 套件许可证。SnapManager 套件许可证仅适用于主存储系统上的 FAS 和 AFF SVM 或集群。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 存储系统 * 。
+. 在存储系统页面的 * 类型 * 下拉列表中，选择是要查看已添加的所有 SVM 还是集群：
++
+** 要查看已添加的所有 SVM ，请选择 * ONTAP SVM* 。
+** 要查看已添加的所有集群，请选择 * ONTAP Clusters* 。
++
+单击集群名称后，属于集群的所有 SVM 都会显示在 Storage Virtual Machine 部分中。
+
+
+
+. 在 * 存储连接 * 列表中，找到控制器许可证列。
++
+控制器许可证列显示以下状态：
+
++
+** image:../media/controller_licensed_icon.gif[""] 表示 SnapManager 套件许可证安装在 FAS 或 AFF 主存储系统上。
+** image:../media/controller_not_licensed_icon.gif[""] 表示 SnapManager 套件许可证未安装在 FAS 或 AFF 主存储系统上。
+** 不适用 - 表示 SnapManager 套件许可证不适用于此控制器。
++
+对于以下平台，将显示此消息：
+
++
+*** Cloud Volumes ONTAP
+*** ONTAP Select
+*** 二级存储
+
+
+
+
+

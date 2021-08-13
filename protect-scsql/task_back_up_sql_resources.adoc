@@ -1,0 +1,153 @@
+---
+permalink: protect-scsql/task_back_up_sql_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: '如果某个资源尚未加入任何资源组，您可以从 "Resources" 页面备份该资源。' 
+---
+= 备份 SQL 资源
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果某个资源尚未加入任何资源组，您可以从 "Resources" 页面备份该资源。
+
+* 关于此任务 *
+
+* 对于 Windows 凭据身份验证，您必须在安装插件之前设置凭据。
+* 对于 SQL Server 实例身份验证，您必须在安装插件后添加凭据。
+* 对于 GMSA 身份验证，您必须在 * 添加主机 * 或 * 修改主机 * 页面中向 SnapCenter 注册主机时设置 GMSA ，以启用和使用 GMSA 。
+* 如果使用 GMSA 添加主机，并且 GMSA 具有登录和系统管理员权限，则将使用 GMSA 连接到 SQL 实例。
+
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面上，从 * 查看 * 下拉列表中选择 * 数据库 * ， * 实例 * 或 * 可用性组 * 。
++
+.. 选择要备份的数据库，实例或可用性组。
++
+备份某个实例时，有关上次备份状态或该实例的时间戳的信息将不会显示在 "Resources" 页面中。
+
++
+在拓扑视图中，您无法区分备份状态，时间戳或备份是针对实例还是数据库。
+
+
+
+. 在 * 资源 * 页面上，选中 * Snapshot 副本的自定义名称格式 * 复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。
++
+例如， customtext_policy_hostname 或 resource_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。
+
+. 在 * 策略 * 页面上，执行以下任务：
++
+.. 在 * 策略 * 部分中，从下拉列表中选择一个或多个策略。
++
+您可以单击 * 来创建策略image:../media/add_policy_from_resourcegroup.gif[""]* 以启动策略向导。
+
++
+在 * 为选定策略配置计划 * 部分中，将列出选定策略。
+
+.. 单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 。
+.. 在 * 为策略 * 添加计划 `policy_name` 对话框中，配置计划，然后单击 * 确定 * 。
++
+此处 `policy_name` 是所选策略的名称。
+
++
+已配置的计划将列在 * 已应用的计划 * 列中。
+
+.. 选择 * 使用 Microsoft SQL Server 计划程序 * ，然后从与计划策略关联的 * 计划程序实例 * 下拉列表中选择计划程序实例。
+
+
+. 在 * 验证 * 页面上，执行以下步骤：
++
+.. 从 * 验证服务器 * 下拉列表中选择验证服务器。
++
+您可以选择多个验证服务器（本地主机或远程主机）。
+
++
+
+NOTE: 验证服务器版本应等于或高于托管主数据库的 SQL Server 版本。
+
+.. 选择 * 加载二级定位器以验证二级存储系统上的备份 * 以验证二级存储系统上的备份。
+.. 选择要为其配置验证计划的策略，然后单击 *image:../media/add_policy_from_resourcegroup.gif[""]*
+.. 在 * 添加验证计划 * `policy_name` 对话框中，执行以下操作：
++
+|===
+| 如果您要 ... | 执行此操作 ... 
+
+
+ a| 
+备份后运行验证
+ a| 
+选择 * 备份后运行验证 * 。
+
+
+
+ a| 
+计划验证
+ a| 
+选择 * 运行计划的验证 * 。
+
+|===
++
+
+NOTE: 如果验证服务器没有存储连接，则验证操作将失败，并显示错误： Failed to mount disk.
+
+.. 单击 * 确定 * 。
++
+已配置的计划将列在 "applied Schedules" 列中。
+
+
+
+. 在 * 通知 * 页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
++
+您还必须指定发件人和收件人电子邮件地址以及电子邮件主题。如果要附加对资源组执行的操作的报告，请选择 * 附加作业报告 * 。
+
++
+
+NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 set-SmtpServer 指定 SMTP 服务器详细信息。
+
+. 查看摘要，然后单击 * 完成 * 。
++
+此时将显示数据库拓扑页面。
+
+. 单击 * 立即备份 * 。
+. 在 * 备份 * 页面上，执行以下步骤：
++
+.. 如果已对资源应用多个策略，请从 * 策略 * 下拉列表中选择要用于备份的策略。
++
+如果为按需备份选择的策略与备份计划关联，则按需备份将根据为计划类型指定的保留设置进行保留。
+
+.. 选择 * 备份后验证 * 以验证您的备份。
+.. 单击 * 备份 * 。
++
+如果为按需备份选择的策略与备份计划关联，则按需备份将根据为计划类型指定的保留设置进行保留。
+
++
+此时将创建一个隐式资源组。您可以从 * 用户访问 * 页面中选择相应的用户或组来查看此信息。隐式资源组类型为 "`Resource` " 。
+
+
+
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
+
+
+* 完成后 *
+
+* 在 MetroCluster 配置中， SnapCenter 可能无法在故障转移后检测到保护关系。
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster 故障转移后无法检测 SnapMirror 或 SnapVault 关系"]
+
+* 如果要备份 VMDK 上的应用程序数据，并且适用于 VMware vSphere 的 SnapCenter 插件的 Java 堆大小不够大，则备份可能会失败。要增加 Java 堆大小，请找到脚本文件 /opt/netapp/init_scripts/scvservice 。在该脚本中， `do_start 方法` 命令将启动 SnapCenter VMware 插件服务。将该命令更新为以下命令： `java -JAR -Xmx8192M -Xms4096M` 。
+
+
+* 查找更多信息 *
+
+link:task_create_backup_policies_for_sql_server_databases.html["为 SQL Server 数据库创建备份策略"]
+
+link:task_back_up_resources_using_powershell_cmdlets.html["使用 PowerShell cmdlet 备份资源"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["由于 tcp_timeout 存在延迟，备份操作失败并显示 MySQL 连接错误"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["备份失败，并显示 Windows 计划程序错误"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["暂停或分组资源操作失败"]

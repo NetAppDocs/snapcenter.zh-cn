@@ -1,0 +1,21 @@
+---
+permalink: protect-scw/reference_back_up_windows_file_systems.html 
+sidebar: sidebar 
+keywords:  
+summary: 在环境中安装适用于 Microsoft Windows 的 SnapCenter 插件时，您可以使用 SnapCenter 备份 Windows 文件系统。您可以备份单个文件系统或包含多个文件系统的资源组。您可以按需备份，也可以根据定义的保护计划进行备份。 
+---
+= 备份 Windows 文件系统
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在环境中安装适用于 Microsoft Windows 的 SnapCenter 插件时，您可以使用 SnapCenter 备份 Windows 文件系统。您可以备份单个文件系统或包含多个文件系统的资源组。您可以按需备份，也可以根据定义的保护计划进行备份。
+
+您可以计划在服务器之间同时运行多个备份。备份和还原操作不能同时在同一资源上执行。
+
+以下工作流显示了必须执行备份操作的顺序：
+
+image::../media/sce_backup_workflow.gif[SCE 备份工作流]
+
+您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。SnapCenter cmdlet 帮助或 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^] 包含有关 PowerShell cmdlet 的详细信息。

@@ -1,0 +1,52 @@
+---
+permalink: protect-scsql/reference_sources_and_destinations_for_a_restore_operation.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以从主存储或二级存储上的备份副本还原 SQL Server 数据库。除了数据库的原始位置之外，您还可以将数据库还原到其他目标，从而可以选择满足要求的目标。 
+---
+= 还原操作的源和目标
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从主存储或二级存储上的备份副本还原 SQL Server 数据库。除了数据库的原始位置之外，您还可以将数据库还原到其他目标，从而可以选择满足要求的目标。
+
+
+
+== 还原操作的源
+
+您可以从主存储或二级存储还原数据库。
+
+
+
+== 还原操作的目标
+
+您可以将数据库还原到各种目标：
+
+|===
+| 目标 | Description 
+
+
+ a| 
+原始位置
+ a| 
+默认情况下， SnapCenter 会将数据库还原到同一 SQL Server 实例上的同一位置。
+
+
+
+ a| 
+其他位置
+ a| 
+您可以将数据库还原到同一主机中任何 SQL Server 实例上的其他位置。
+
+
+
+ a| 
+使用不同数据库名称的原始位置或其他位置
+ a| 
+您可以将具有不同名称的数据库还原到创建备份的同一主机上的任何 SQL Server 实例。
+
+|===
+
+NOTE: 对于 VMDK （ NFS 和 VMFS 数据存储库）上的 SQL 数据库，不支持跨 ESX 服务器还原到备用主机。

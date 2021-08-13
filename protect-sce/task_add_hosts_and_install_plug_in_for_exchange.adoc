@@ -1,0 +1,157 @@
+---
+permalink: protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用于 Exchange 的插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。 
+---
+= 添加主机并安装适用于 Exchange 的插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用于 Exchange 的插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。
+
+* 您需要的内容 *
+
+* 您必须是分配给具有插件安装和卸载权限的角色的用户，例如 SnapCenter 管理员
+* 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
+* 消息队列服务必须正在运行。
+* 如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。有关信息，请参见link:task_configure_gMSA_on_windows_server_2012_or_later_for_exchange_server.html["在 Windows Server 2012 或更高版本上配置组托管服务帐户"^]。
+
+
+* 关于此任务 *
+
+您不能将 SnapCenter 服务器作为插件主机添加到另一个 SnapCenter 服务器。
+
+您可以为单个主机或集群添加主机并安装插件软件包。如果要在集群（ Exchange DAG ）上安装插件，则这些插件会安装在集群的所有节点上，即使某些节点在 NetApp LUN 上没有数据库也是如此。
+
+适用于 Exchange 的插件取决于适用于 Windows 的 SnapCenter 插件软件包，并且版本必须相同。在安装适用于 Exchange 的插件期间，默认情况下会选择适用于 Windows 的 SnapCenter 插件软件包，该软件包会随 VSS 硬件提供程序一起安装。
+
+如果已安装 SnapManager for Microsoft Exchange Server 和 SnapDrive for Windows ， 如果要在同一 Exchange Server 上安装适用于 Exchange 的插件，则必须取消注册 SnapDrive for Windows 使用的 VSS 硬件提供程序，因为它与随适用于 Exchange 的插件和适用于 Windows 的 SnapCenter 插件软件包一起安装的 VSS 硬件提供程序不兼容。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 主机 * 。
+. 验证顶部是否已选择 * 受管主机 * 。
+. 单击 * 添加 * 。
+. 在 * 主机 * 页面上，执行以下操作：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+主机类型
+ a| 
+选择 * Windows * 作为主机类型。
+
+SnapCenter 服务器会添加主机，然后在主机上安装适用于 Windows 的插件和适用于 Exchange 的插件（如果尚未安装）。
+
+适用于 Windows 的插件和适用于 Exchange 的插件的版本必须相同。如果先前安装了其他版本的适用于 Windows 的插件，则 SnapCenter 会在安装过程中更新此版本。
+
+
+
+ a| 
+主机名
+ a| 
+输入主机的完全限定域名（ FQDN ）或 IP 地址。
+
+SnapCenter 取决于 DNS 的正确配置。因此，最佳做法是输入完全限定域名（ FQDN ）。
+
+只有在将 IP 地址解析为 FQDN 时，不受信任的域主机才支持此 IP 地址。
+
+您可以输入以下项之一的 IP 地址或 FQDN ：
+
+** 独立主机
+** Exchange DAG
+
+
+如果要使用 SnapCenter 添加主机，并且该主机属于子域，则必须提供 FQDN 。
+
+您还可以通过提供一个 DAG 集群节点的 IP 地址或 FQDN 来添加无 IP DAG 集群。
+
+
+
+ a| 
+凭据
+ a| 
+选择您创建的凭据名称，或者创建新凭据。
+
+凭据必须对远程主机具有管理权限。有关详细信息，请参见有关创建凭据的信息。
+
+您可以通过将光标置于指定的凭据名称上方来查看有关凭据的详细信息。
+
+
+NOTE: 凭据身份验证模式由您在添加主机向导中指定的主机类型决定。
+
+|===
+. 在选择要安装的插件部分中，选择要安装的插件。
++
+如果选择适用于 Exchange 的插件，则会自动取消选择适用于 Microsoft SQL Server 的 SnapCenter 插件。Microsoft 建议不要将 SQL Server 和 Exchange Server 安装在同一系统上，因为 Exchange 需要使用大量内存和其他资源。
+
+. （可选）单击 * 更多选项 * 。
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+Port
+ a| 
+保留默认端口号或指定端口号。
+
+默认端口号为 8145 。如果 SnapCenter 服务器安装在自定义端口上，则该端口号将显示为默认端口。
+
+
+NOTE: 如果您手动安装了插件并指定了自定义端口，则必须指定相同的端口。否则，操作将失败。
+
+
+
+ a| 
+安装路径
+ a| 
+默认路径为 `C ： \Program Files\NetApp\SnapCenter` 。
+
+您可以选择自定义路径。
+
+
+
+ a| 
+在 DAG 中添加所有主机
+ a| 
+添加 DAG 时选中此复选框。
+
+
+
+ a| 
+跳过安装前检查
+ a| 
+如果您已手动安装插件，并且不想验证主机是否满足安装插件的要求，请选中此复选框。
+
+
+
+ a| 
+使用组托管服务帐户（ GMSA ）运行插件服务
+ a| 
+如果要使用组托管服务帐户（ GMSA ）运行插件服务，请选中此复选框。
+
+请按以下格式提供 GMSA 名称： _domainname\accountName$_ 。
+
+
+NOTE: GMSA 仅用作适用于 Windows 的 SnapCenter 插件服务的登录服务帐户。
+
+|===
+. 单击 * 提交 * 。
++
+如果未选中跳过预检查复选框，则会对主机进行验证，以确定其是否满足安装插件的要求。如果不满足最低要求，则会显示相应的错误或警告消息。
+
++
+如果此错误与磁盘空间或 RAM 相关，您可以更新位于 `C ： \Program Files\NetApp\SnapCenter` WebApp 的 web.config 文件以修改默认值。如果此错误与其他参数相关，则必须修复问题描述。
+
++
+
+NOTE: 在 HA 设置中，如果要更新 web.config 文件，则必须同时更新两个节点上的文件。
+
+. 监控安装进度。
+

@@ -1,0 +1,159 @@
+---
+permalink: protect-scsql/task_clone_from_a_sql_server_database_backup.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用 SnapCenter 克隆 SQL Server 数据库备份。如果要访问或还原旧版本的数据，可以按需克隆数据库备份。 
+---
+= 从 SQL Server 数据库备份克隆
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SnapCenter 克隆 SQL Server 数据库备份。如果要访问或还原旧版本的数据，可以按需克隆数据库备份。
+
+* 您需要的内容 *
+
+* 您应该已准备好通过完成添加主机，识别资源和创建存储系统连接等任务来保护数据。
+* 您应已备份数据库或资源组。
+* 数据 LUN 和日志 LUN 的镜像，存储或镜像存储等保护类型应相同，以便在使用日志备份克隆到备用主机期间发现二级定位器。
+* 如果在 SnapCenter 克隆操作期间找不到挂载的克隆驱动器，则应将 SnapCenter 服务器的 CloneRetransatout 参数更改为 300 。
+* 您应确保托管卷的聚合应位于 Storage Virtual Machine （ SVM ）的已分配聚合列表中。
+
+
+* 关于此任务 *
+
+* 在克隆到独立数据库实例时，请确保挂载点路径存在且它是专用磁盘。
+* 在克隆到故障转移集群实例（ FCI ）时，请确保挂载点存在，挂载点是共享磁盘，并且路径和 FCI 应属于同一个 SQL 资源组。
+* 确保每个主机仅连接一个 VFC 或 FC 启动程序。这是因为， SnapCenter 仅支持每个主机一个启动程序。
+* 如果源数据库或目标实例位于集群共享卷（ csv ）上，则克隆的数据库将位于 csv 上。
+
+
+
+NOTE: 对于虚拟环境（ VMDB/RDM ），请确保挂载点是专用磁盘。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择 * 适用于 SQL Server* 的 SnapCenter 插件。
+. 在资源页面中，从 * 视图 * 列表中选择 * 数据库 * 或 * 资源组 * 。
++
+
+NOTE: 不支持克隆实例的备份。
+
+
+
+* 步骤 *
+
+. 选择数据库或资源组。
+. 从 * 管理副本 * 视图页面中，从主存储系统或二级（镜像或存储）存储系统中选择备份。
+. 选择备份，然后单击 *image:../media/clone_icon.gif[""]*
+. 在 * 克隆选项 * 页面上，执行以下操作：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+克隆服务器
+ a| 
+选择应在其中创建克隆的主机。
+
+
+
+ a| 
+克隆实例
+ a| 
+选择要将数据库备份克隆到的克隆实例。
+
+此 SQL 实例必须位于指定的克隆服务器中。
+
+
+
+ a| 
+克隆后缀
+ a| 
+输入要附加到克隆文件名的后缀，以确定数据库是克隆。
+
+例如， _db1_clone_.如果要克隆到与原始数据库相同的位置，则必须提供后缀以区分克隆的数据库与原始数据库。否则，操作将失败。
+
+
+
+ a| 
+在路径下自动分配挂载点或自动分配卷挂载点
+ a| 
+选择是自动在路径下分配挂载点还是卷挂载点。
+
+在路径下自动分配卷挂载点：路径下的挂载点可用于提供特定目录。挂载点将在该目录中创建。在选择此选项之前，必须确保目录为空。如果目录中存在数据库，则在执行挂载操作后，该数据库将处于无效状态。
+
+|===
+. 在 * 日志 * 页面上，选择以下选项之一：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+无
+ a| 
+如果您只想克隆完整备份而不需要任何日志，请选择此选项。
+
+
+
+ a| 
+所有日志备份
+ a| 
+选择此选项可克隆完整备份之后的所有可用日志备份。
+
+
+
+ a| 
+通过日志备份，直到
+ a| 
+选择此选项可根据选定日期之前创建的备份日志克隆数据库。
+
+
+
+ a| 
+截止日期
+ a| 
+指定事务日志未应用于克隆数据库的日期和时间。
+
+此时间点克隆将暂停在指定日期和时间之后记录的事务日志条目的克隆。
+
+|===
+. 在 * 脚本 * 页面上，分别输入应在克隆操作之前或之后运行的脚本超时，路径和预处理或后处理的参数。
++
+例如，您可以运行脚本来更新 SNMP 陷阱，自动执行警报，发送日志等操作。
+
++
+默认脚本超时为 60 秒。
+
+. 在 * 通知 * 页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
++
+您还必须指定发件人和收件人电子邮件地址以及电子邮件主题。如果要附加所执行克隆操作的报告，请选择 * 附加作业报告 * 。
+
++
+
+NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 set-SmtpServer 指定 SMTP 服务器详细信息。
+
+
+
+对于 EMS ，您可以参考 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection["管理 EMS 数据收集"]
+
+. 查看摘要，然后单击 * 完成 * 。
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
+
+
+* 完成后 *
+
+创建克隆后，您不应对其进行重命名。
+
+* 查找更多信息 *
+
+link:reference_back_up_sql_server_database_or_instance_or_availability_group.html["备份 SQL Server 数据库，实例或可用性组"]
+
+link:task_clone_backups_using_powershell_cmdlets.html["使用 PowerShell cmdlet 克隆备份"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["使用默认 tcp_timeout 值时，克隆操作可能会失败或需要较长时间才能完成"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/The_failover_cluster_instance_database_clone_fails["故障转移集群实例数据库克隆失败"]

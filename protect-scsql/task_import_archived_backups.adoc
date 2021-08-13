@@ -1,0 +1,50 @@
+---
+permalink: protect-scsql/task_import_archived_backups.html 
+sidebar: sidebar 
+keywords: SnapVault 
+summary: 您只能从命令行界面将使用 SnapVault 技术归档的备份从 SnapManager for Microsoft SQL Server 导入到 SnapCenter 中。 
+---
+= 导入归档备份
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您只能从命令行界面将使用 SnapVault 技术归档的备份从 SnapManager for Microsoft SQL Server 导入到 SnapCenter 中。
+
+* 您需要的内容 *
+
+* 适用于 Microsoft SQL Server 的 SnapCenter 插件和适用于 Microsoft SQL Server 的 SnapManager 7.x 必须安装在同一主机上。
+* 要获得集群支持，必须已在集群中的每个节点上安装插件和 7.x 产品。
+* 您必须已将主机或集群添加到 SnapCenter 并发现主机或集群上可用于备份的资源。
+* 您必须已备份 SnapManager for Microsoft SQL Server SnapInfo 文件夹。
++
+如果导入操作失败，您可以从 SnapInfo 目录检索备份元数据。
+
+
+
+|===
+
+
+ a| 
+* 最佳实践： * 最佳实践是为适用于 Microsoft SQL Server 的 SnapCenter 插件配置日志备份文件夹。
+
+|===
+有关 SnapCenter 安装和配置任务的信息，请参见 SnapCenter 安装信息。有关适用于 Microsoft SQL Server 的 SnapManager 安装和配置任务的信息，请参见 SnapManager 安装信息。
+
+将归档备份从 SnapManager for Microsoft SQL Server 导入到 SnapCenter 后，您可以从 SnapCenter 对这些备份执行还原和克隆操作。同时，您还可以使用适用于 Microsoft SQL Server 的 SnapManager 继续执行备份，还原和克隆操作。
+
+* 步骤 *
+
+. 执行以下步骤，在 SnapCenter 中手动创建类似于 SnapManager for Microsoft SQL Server 计划的计划：
++
+.. 使用 `Get-SmSchedule` cmdlet 从 SnapManager for Microsoft SQL Server 检索计划信息。
+.. 保存计划信息。
++
+您可以在 SnapCenter 中创建策略时使用此计划信息。
+
+.. 使用 `Get-SmSchedule -Hostname <hostname> -PluginCode SMSQL -DisableCurrentGenSchedule` cmdlet 禁用 SnapManager for Microsoft SQL 计划。
+
+
+. 使用 `invoke-SmBackupMigration` cmdlet 导入归档备份。
+

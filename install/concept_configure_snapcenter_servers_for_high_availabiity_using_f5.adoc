@@ -1,0 +1,39 @@
+---
+permalink: install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html 
+sidebar: sidebar 
+keywords: F5,load balancer 
+summary: 要在 SnapCenter 中支持高可用性 \ （ HA\ ），您可以安装 F5 负载平衡器。F5 允许 SnapCenter 服务器在最多两个位于同一位置的主机中支持主动 - 被动配置。要在 SnapCenter 中使用 F5 负载平衡器，您应配置 SnapCenter 服务器并配置 F5 负载平衡器。 
+---
+= 使用 F5 配置 SnapCenter 服务器以实现高可用性
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要在 SnapCenter 中支持高可用性（ HA ），您可以安装 F5 负载平衡器。F5 允许 SnapCenter 服务器在最多两个位于同一位置的主机中支持主动 - 被动配置。要在 SnapCenter 中使用 F5 负载平衡器，您应配置 SnapCenter 服务器并配置 F5 负载平衡器。
+
+
+IMPORTANT: 如果您已从 SnapCenter 4.2.x 升级，并且先前使用的是网络负载平衡（ NLB ），则可以继续使用该配置或切换到 F5 。
+
+此工作流图列出了使用 F5 负载平衡器配置 SnapCenter 服务器以实现高可用性的步骤。有关详细说明，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["如何使用 F5 负载平衡器配置 SnapCenter 服务器以实现高可用性"^]。
+
+image::../media/sc-F5-configure-workflow.png[SC F5 配置工作流]
+
+您必须是 SnapCenter 服务器上本地管理员组的成员（除了分配给 SnapCenterAdmin 角色之外），才能使用以下 cmdlet 添加和删除 F5 集群：
+
+* Add-SmServerCluster
+* Add-SmServer
+* Remove-SmServerCluster
++
+有关详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+
+
+
+
+=== 其他 F5 配置信息
+
+* 安装并配置 SnapCenter 以实现高可用性后，编辑 SnapCenter 桌面快捷方式以指向 F5 集群 IP 。
+* 如果 SnapCenter 服务器之间发生故障转移，并且还存在现有 SnapCenter 会话，则必须关闭浏览器并重新登录到 SnapCenter 。
+* 在负载平衡器设置（ NLB 或 F5 ）中，如果您添加的节点已由 NLB 或 F5 节点部分解决，并且 SnapCenter 节点无法访问此节点，则 SnapCenter 主页会频繁在主机关闭和运行状态之间切换。要解决此问题描述，您应确保两个 SnapCenter 节点都能够解析 NLB 或 F5 节点中的主机。
+

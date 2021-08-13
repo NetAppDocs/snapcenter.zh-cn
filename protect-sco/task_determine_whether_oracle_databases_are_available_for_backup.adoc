@@ -1,0 +1,60 @@
+---
+permalink: protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html 
+sidebar: sidebar 
+keywords: credentials,SnapCenter Plug-in for Oracle Databases 
+summary: 资源是指主机上由 SnapCenter 管理的 Oracle 数据库。发现可用数据库后，您可以将这些数据库添加到资源组以执行数据保护操作。 
+---
+= 确定 Oracle 数据库是否可用于备份
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+资源是指主机上由 SnapCenter 管理的 Oracle 数据库。发现可用数据库后，您可以将这些数据库添加到资源组以执行数据保护操作。
+
+* 您需要的内容 *
+
+* 您必须已完成安装 SnapCenter 服务器，添加主机，创建存储系统连接和添加凭据等任务。
+* 如果数据库驻留在虚拟机磁盘（ VMDK ）或原始设备映射（ RDM ）上，则必须部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件。
++
+有关详细信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["部署适用于 VMware vSphere 的 SnapCenter 插件"^]。
+
+* 如果数据库驻留在 VMDK 文件系统上，则必须已登录到 vCenter 并导航到 * 虚拟机选项 * > * 高级 * > * 编辑配置 * ，以便将虚拟机的 _disk.enableUUUID_ 值设置为 true 。
+* 您必须已查看 SnapCenter 发现不同类型和版本的 Oracle 数据库所遵循的过程。
+
+
+* 关于此任务 *
+
+安装此插件后，系统会自动发现该主机上的所有数据库，并将其显示在 "Resources" 页面中。
+
+要成功发现数据库，数据库应至少处于已挂载状态或更高状态。在 Oracle Real Application Clusters （ RAC ）环境中，要成功发现数据库实例，执行发现的主机中的 RAC 数据库实例应至少处于挂载状态或以上。只能将成功发现的数据库添加到资源组中。
+
+如果已删除主机上的 Oracle 数据库， SnapCenter 服务器将无法识别并列出已删除的数据库。您应手动刷新资源以更新 SnapCenter 资源列表。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面中，从 * 视图 * 列表中选择 * 数据库 * 。
++
+单击 image:../media/filter_icon.gif[""]，然后选择主机名和数据库类型以筛选资源。然后，您可以单击 image:../media/filter_icon.gif[""] 图标以关闭筛选器窗格。
+
+. 单击 * 刷新资源 * 。
++
+在 RAC 单节点方案中，数据库会在当前托管它的节点上作为 RAC 数据库被发现。
+
+
+
+* 结果 *
+
+此时将显示数据库以及数据库类型，主机或集群名称，关联的资源组和策略以及状态等信息。
+
+* 如果数据库位于非 NetApp 存储系统上，则用户界面会在整体状态列中显示不可用于备份消息。
++
+您不能对非 NetApp 存储系统上的数据库执行数据保护操作。
+
+* 如果数据库位于 NetApp 存储系统上且未受保护，则用户界面会在整体状态列中显示未受保护消息。
+* 如果数据库位于 NetApp 存储系统上且受保护，则用户界面会在整体状态列中显示一条可供备份消息。
+
+
+
+NOTE: 如果已启用 Oracle 数据库身份验证，则资源视图中将显示一个红色挂锁图标。您必须配置数据库凭据才能保护数据库，或者将其添加到资源组以执行数据保护操作。

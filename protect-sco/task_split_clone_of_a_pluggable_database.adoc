@@ -1,0 +1,30 @@
+---
+permalink: protect-sco/task_split_clone_of_a_pluggable_database.html 
+sidebar: sidebar 
+keywords: split, PDB, cloned PDB 
+summary: 您可以使用 SnapCenter 拆分克隆的可插拔数据库（ PDB ）。 
+---
+= 可插拔数据库的拆分克隆
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SnapCenter 拆分克隆可插拔数据库（ PDB ）。
+
+* 关于此任务 *
+
+如果您为要克隆 PDB 的目标 CDB 创建备份，则在拆分 PDB 克隆时，克隆的 PDB 也会从包含克隆 PDB 的目标 CDB 的所有备份中删除。
+
+
+NOTE: PDB 克隆不会显示在清单或资源视图中。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 从资源或资源组视图中选择源容器数据库（ CDB ）。
+. 在管理副本视图中，从主存储系统或二级（镜像或复制的）存储系统中选择 * 克隆 * 。
+. 选择 PDB 克隆（ targetCDB ： PDBClone ），然后单击 image:../media/split_cone.gif[""]。
+. 查看要拆分的克隆的估计大小以及聚合上所需的可用空间，然后单击 * 开始 * 。
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
+

@@ -1,0 +1,30 @@
+---
+permalink: install/reference_domain_and_workgroup_requirements.html 
+sidebar: sidebar 
+keywords: active directory domain, workgroups, multi-domain forests, cross-domain, cross-forest domains 
+summary: SnapCenter 服务器可以安装在域或工作组中的系统上。用于安装的用户应在工作组和域的情况下对计算机具有管理员权限。 
+---
+= 域和工作组要求
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 服务器可以安装在域或工作组中的系统上。用于安装的用户应在工作组和域的情况下对计算机具有管理员权限。
+
+要在 Windows 主机上安装 SnapCenter 服务器和 SnapCenter 插件，应使用以下方法之一：
+
+* * Active Directory 域 *
++
+您必须使用具有本地管理员权限的域用户。域用户必须是 Windows 主机上本地管理员组的成员。
+
+* * 工作组 *
++
+您必须使用具有本地管理员权限的本地帐户。
+
+
+
+虽然支持域信任，多域林和跨域信任，但不支持跨林域。有关 Active Directory 域和信任关系的 Microsoft 文档包含详细信息。
+
+
+NOTE: 安装 SnapCenter 服务器后，不应更改 SnapCenter 主机所在的域。如果从安装 SnapCenter 服务器时所在的域中删除 SnapCenter 服务器主机，然后尝试卸载 SnapCenter 服务器，则卸载操作将失败。

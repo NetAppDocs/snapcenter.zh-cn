@@ -1,0 +1,114 @@
+---
+permalink: protect-sce/task_create_resource_groups_and_attach_policies_for_exchange_servers.html 
+sidebar: sidebar 
+keywords: resource group 
+summary: 任何数据保护作业都需要资源组。您还必须将一个或多个策略附加到资源组，以定义要执行的数据保护作业类型和保护计划。 
+---
+= 为 Exchange Server 创建资源组并附加策略
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+任何数据保护作业都需要资源组。您还必须将一个或多个策略附加到资源组，以定义要执行的数据保护作业类型和保护计划。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择 Microsoft Exchange Server 插件。
+. 在资源页面中，从 * 视图 * 列表中选择 * 数据库 * 。
++
+
+NOTE: 如果您最近向 SnapCenter 添加了资源，请单击 * 刷新资源 * 以查看新添加的资源。
+
+. 单击 * 新建资源组 * 。
+. 在名称页面上，执行以下操作：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+Name
+ a| 
+输入资源组名称。
+
+
+NOTE: 资源组名称不应超过 250 个字符。
+
+
+
+ a| 
+Tags
+ a| 
+输入一个或多个标签，以帮助您稍后搜索资源组。
+
+例如，如果您将 HR 作为标记添加到多个资源组，则稍后可以找到与 HR 标记关联的所有资源组。
+
+
+
+ a| 
+对 Snapshot 副本使用自定义名称格式
+ a| 
+可选：输入自定义 Snapshot 副本的名称和格式。
+
+例如， _customtext_resourcegroup_policy_hostname_ 或 _resourcegroup_hostname_ 。默认情况下， Snapshot 副本名称会附加时间戳。
+
+|===
+. 在资源页面上，执行以下步骤：
++
+.. 从下拉列表中选择资源类型和数据库可用性组，以筛选可用资源列表。
++
+
+NOTE: 如果您最近添加了资源，则只有在刷新资源列表后，这些资源才会显示在可用资源列表中。
+
++
+在 "Available Resources" 和 "Selected Resources" 部分中，数据库名称将与主机名一起显示。此主机名仅指示此数据库在该特定主机上处于活动状态，因此可能不会在此主机上创建备份。您应从服务器选择选项中选择一个或多个备份服务器，以便在策略中选择了 * 备份作业创建时间要选择的服务器上的备份副本 * 选项时进行备份。
+
+.. 在搜索文本框中键入资源名称，或者滚动查找资源。
+.. 要将资源从 "Available Resources" 部分移至 "Selected Resources" 部分，请执行以下步骤之一：
++
+*** 选择 * 自动选择同一存储卷上的所有资源 * 可将同一卷上的所有资源移动到 " 选定资源 " 部分。
+*** 从 "Available Resources" 部分中选择资源，然后单击右箭头将其移动到 "Selected Resources" 部分。
++
+SnapCenter for Microsoft Exchange Server 的资源组中的每个 Snapshot 副本不能包含 30 个以上的数据库。如果一个资源组中的数据库超过 30 个，则会为其他数据库创建另一个 Snapshot 副本。因此，在主备份作业下创建了 2 个子作业。对于具有二级复制的备份，在进行 SnapMirror 或 SnapVault 更新期间，可能会出现两个子作业的更新重叠的情况。即使日志指示作业已完成，主备份作业也会始终保持运行状态。
+
+
+
+
+
+. 在策略页面上，执行以下步骤：
++
+.. 从下拉列表中选择一个或多个策略。
++
+
+NOTE: 您也可以单击 * 来创建策略image:../media/add_policy_from_resourcegroup.gif[""]*
+
++
+
+NOTE: 如果某个策略包含 * 备份作业创建时间要选择的服务器上的副本 * 选项，则会显示一个服务器选择选项以选择一个或多个服务器。服务器选择选项将仅列出选定数据库位于 NetApp 存储上的服务器。
+
++
+在为选定策略配置计划部分中，将列出选定策略。
+
+.. 在为选定策略配置计划部分中，单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 。
+.. 在添加策略 _policy_name_ 的计划对话框中，指定开始日期，到期日期和频率来配置计划，然后单击 * 确定 * 。
++
+您必须对策略中列出的每个频率执行此操作。已配置的计划将在为选定策略配置计划部分的 * 已应用计划 * 列中列出。
+
++
+如果第三方备份计划与 SnapCenter 备份计划重叠，则不支持这些计划。
+
+
+
+. 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
++
+您还必须指定发件人和收件人电子邮件地址以及电子邮件主题。如果要附加对资源组执行的操作的报告，请选择 * 附加作业报告 * 。
+
++
+对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 `SET-SmtpServer` 指定 SMTP 服务器详细信息。
+
++
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+. 查看摘要，然后单击 * 完成 * 。
+

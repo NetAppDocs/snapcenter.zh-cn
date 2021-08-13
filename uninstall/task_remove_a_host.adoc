@@ -1,0 +1,41 @@
+---
+permalink: uninstall/task_remove_a_host.html 
+sidebar: sidebar 
+keywords: uninstall, remove, remove host 
+summary: 当 SnapCenter 服务器删除主机时，它会先删除 SnapCenter 资源页面上为该主机列出的备份，克隆，克隆作业，资源组和资源，然后在主机上卸载插件软件包。 
+---
+= 删除主机
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+当 SnapCenter 服务器删除主机时，它会先删除 SnapCenter 资源页面上为该主机列出的备份，克隆，克隆作业，资源组和资源，然后在主机上卸载插件软件包。
+
+* 关于此任务 *
+
+* 如果删除主机，则与该主机关联的备份，克隆和资源组也会被删除。
+* 删除资源组时，所有关联的计划也会被删除。
+* 如果主机中的某个资源组与另一主机共享，而您删除了该主机，则该资源组也会被删除。
+* 您应使用 _Remove-SmHost_ cmdlet 删除已停用或无法访问的插件主机。
++
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]
+
+* 删除主机所需的时间取决于备份数量和保留设置。这是因为 Snapshot 副本会从每个控制器中删除，并且元数据会被清理。
+
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 主机 * 。
+. 在主机页面中，单击 * 受管主机 * 。
+. 选择要删除的主机，然后单击 * 删除 * 。
+. 对于 Oracle RAC 集群，要从集群中的所有主机中删除 SnapCenter 软件，请选择 * 包括集群中的所有主机 * 。
++
+您也可以删除集群中的一个节点，然后通过这种方式逐个删除所有节点。
+
+. 单击 * 确定 * 。
++
+
+NOTE: 在集群上卸载并重新安装主机插件时，不会自动发现集群资源。选择集群主机名，然后单击 * 刷新资源 * 以自动发现集群资源。
+
+

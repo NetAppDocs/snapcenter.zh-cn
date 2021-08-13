@@ -1,0 +1,114 @@
+---
+permalink: upgrade/task_upgrade_your_plug_in_packages.html 
+sidebar: sidebar 
+keywords: upgrade, upgrade plug-in packages 
+summary: 此插件软件包会在 SnapCenter 升级过程中分发。 
+---
+= 升级插件软件包
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此插件软件包会在 SnapCenter 升级过程中分发。
+
+* 您需要的内容 *
+
+* 如果您是能够访问 Linux 计算机的非 root 用户，则在执行升级操作之前，应使用最新的校验和值更新 /etc/sudoers_ 文件。
+* 默认情况下， SnapCenter 会从环境中检测 java_home 。如果要使用固定的 java_home ，并且要升级 Linux 主机上的插件，则应在位于 /var/opt/snapcenter/spl/etc/ 的 _spl.properties_ 文件中手动添加 skip_JAVAHOME_update 参数，并将该值设置为 true 。
++
+当此插件升级或 SnapCenter 插件加载程序（ SPL ）服务重新启动时， java_home 的值将更新。在升级或重新启动 SPL 之前，如果添加 skip_JAVAHOME_UPDATE 参数并将值设置为 true ，则不会更新 java_home 的值。
+
+* 您应已备份在 SnapCenter 服务器主机或插件主机上修改的所有 SnapCenter 配置文件。
++
+SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe ， config 等。
+
+
+
+* 关于此任务 *
+
+* 升级操作步骤会将您的 Windows ， Linux 或 AIX 主机置于 " `m维护` " 模式，从而阻止该主机运行任何计划的作业。
+* 支持的升级路径
++
+|===
+| 如果使用的是 ... | 您可以 
+
+
+ a| 
+4.0.x
+ a| 
+** 直接升级到 4.1.x
+** 首先升级到 4.1.x ，然后升级到 4.2.x ，以升级到 4.2.x
+** 首先升级到 4.1.x ，然后升级到 4.2.x ，最后升级到 4.3.x
+** 首先升级到 4.1.x ，然后升级到 4.2.x ，再升级到 4.3.x ，再升级到 4.3.x ，最后升级到 4.4.x
+** 请先升级到 4.1.x ，然后升级到 4.2.x ，再升级到 4.3.x ，再升级到 4.3.x ，再升级到 4.4.x ，最后升级到 4.5
+
+
+
+
+ a| 
+4.1.x
+ a| 
+** 直接升级到 4.2.x
+** 首先升级到 4.2.x ，然后升级到 4.3.x
+** 首先升级到 4.2.x ，然后升级到 4.3.x ，再升级到 4.3.x ，最后升级到 4.4.x
+** 首先升级到 4.2.x ，然后升级到 4.3.x ，再升级到 4.4.x ，再升级到 4.4.x ，最后升级到 4.5
+
+
+
+
+ a| 
+4.2.x
+ a| 
+** 直接升级到 4.3.x
+** 首先升级到 4.3.x ，然后升级到 4.4.x
+** 首先升级到 4.3.x ，然后升级到 4.4.x ，最后升级到 4.5 ，从而升级到 4.5
+
+
+
+
+ a| 
+4.3.x
+ a| 
+** 直接升级到 4.4.x
+** 首先升级到 4.4.x ，然后升级到 4.5
+
+
+
+
+ a| 
+4.4.x
+ a| 
+直接升级到 4.5
+
+|===
+
+
+
+NOTE: 有关升级适用于 VMware vSphere 的 SnapCenter 插件的信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["升级适用于 VMware vSphere 的 SnapCenter 插件"^]。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 主机 * > * 受管主机 * 。
+. 通过执行以下任务之一升级主机：
++
+** 如果其中一个主机的整体状态列显示 "`Upgrade Available` " ，请单击主机名并执行以下操作：
++
+... 单击 * 更多选项 * 。
+... 如果您不想验证主机是否满足升级插件的要求，请选择 * 跳过预检 * 。
+... 单击 * 升级 * 。
+
+
+** 如果要升级多个主机，请选择所有主机，然后单击 image:../media/more_icon.gif[""]，然后单击 * 升级 * > * 确定 * 。
++
+
+NOTE: 此时将选择软件包中的所有插件，但只会升级随早期版本的 SnapCenter 安装的插件，而不会安装其余插件。您必须使用 * 添加插件 * 选项安装任何新插件。
+
+
+
+
+
+如果未选中 * 跳过预检 * 复选框，则会验证主机是否满足安装插件的要求。如果不满足最低要求，则会显示相应的错误或警告消息。修复问题描述后，单击 * 升级 * 。
+
+
+NOTE: 如果此错误与磁盘空间或 RAM 相关，您可以更新位于 C ： \Program Files\NetApp\SnapCenter WebApp 的 web.config 或位于 C ： \Windows\System32\WindowsPowerShell\v1.0\Modules\SnapCenter\ 的 PowerShell 配置文件以修改默认值。如果此错误与其余参数相关，则必须修复问题描述，然后重新验证这些要求。

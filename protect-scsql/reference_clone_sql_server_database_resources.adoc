@@ -1,0 +1,29 @@
+---
+permalink: protect-scsql/reference_clone_sql_server_database_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 在从备份克隆数据库资源之前，您必须使用 SnapCenter 服务器执行多项任务。数据库克隆是为生产数据库或其备份集创建时间点副本的过程。您可以克隆数据库以测试在应用程序开发周期中必须使用当前数据库结构和内容实施的功能，在填充数据仓库时使用数据提取和操作工具，或者恢复错误删除或更改的数据。 
+---
+= 克隆 SQL Server 数据库资源
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在从备份克隆数据库资源之前，您必须使用 SnapCenter 服务器执行多项任务。数据库克隆是为生产数据库或其备份集创建时间点副本的过程。您可以克隆数据库以测试在应用程序开发周期中必须使用当前数据库结构和内容实施的功能，在填充数据仓库时使用数据提取和操作工具，或者恢复错误删除或更改的数据。
+
+数据库克隆操作会根据作业 ID 生成报告。
+
+以下工作流显示了必须执行克隆操作的顺序：
+
+image::../media/scsql_clone_workflow.png[克隆工作流图]
+
+您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原，恢复，验证和克隆操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"]
+
+* 查找更多信息 *
+
+link:task_clone_from_a_sql_server_database_backup.html["从 SQL Server 数据库备份克隆"]
+
+link:task_perform_clone_lifecycle_management.html["执行克隆生命周期"]
+
+link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["使用默认 tcp_timeout 值时，克隆操作可能会失败或需要较长时间才能完成"]

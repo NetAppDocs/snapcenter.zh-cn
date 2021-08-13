@@ -1,0 +1,168 @@
+---
+permalink: protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html 
+sidebar: sidebar 
+keywords: installing 
+summary: 您可以使用 SnapCenter 添加主机页面添加 Windows 主机。适用于 Microsoft Windows 的 SnapCenter 插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。 
+---
+= 添加主机并安装适用于 Microsoft Windows 的 SnapCenter 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SnapCenter 添加主机页面添加 Windows 主机。适用于 Microsoft Windows 的 SnapCenter 插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。
+
+* 您需要的内容 *
+
+* 您必须是分配给具有插件安装和卸载权限的角色的用户，例如 SnapCenter 管理员角色。
+* 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
+* 应将 SnapCenter 用户添加到 Windows 服务器的 "`以服务身份登录` " 角色中。
+* 您应确保消息队列服务处于运行状态。
+* 如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。
++
+link:task_configure_gMSA_on_windows_server_2012_or_later_for_windows_file_system.html["在 Windows Server 2012 或更高版本上为 Windows 文件系统配置组托管服务帐户"]
+
+
+
+* 关于此任务 *
+
+* 您不能将 SnapCenter 服务器作为插件主机添加到另一个 SnapCenter 服务器。
+* Windows 插件
++
+** Microsoft Windows
+** Microsoft Exchange Server
+** Microsoft SQL Server
+** SAP HANA
+** 自定义插件
+
+
+* 在集群上安装插件
++
+如果在集群（ WSFC ， Oracle RAC 或 Exchange DAG ）上安装插件，则这些插件将安装在集群的所有节点上。
+
+* E-Series 存储
++
+您不能在连接到 E 系列存储的 Windows 主机上安装适用于 Windows 的插件。
+
+
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 主机 * 。
+. 确保在顶部选择了 * 受管主机 * 。
+. 单击 * 添加 * 。
+. 在主机页面上，执行以下操作：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+主机类型
+ a| 
+选择 * Windows * 类型的主机。
+
+SnapCenter 服务器会添加此主机，如果此主机上尚未安装适用于 Windows 的插件，则会安装此插件。
+
+
+
+ a| 
+主机名
+ a| 
+输入主机的完全限定域名（ FQDN ）或 IP 地址。
+
+SnapCenter 取决于 DNS 的正确配置。因此，最佳做法是输入完全限定域名（ FQDN ）。
+
+您可以输入以下项之一的 IP 地址或 FQDN ：
+
+** 独立主机
+** Windows Server 故障转移集群（ WSFC ）
++
+如果要使用 SnapCenter 添加主机，并且该主机属于子域，则必须提供 FQDN 。
+
+
+
+
+
+ a| 
+凭据
+ a| 
+选择您创建的凭据名称或创建新凭据。
+
+凭据必须对远程主机具有管理权限。有关详细信息，请参见有关创建凭据的信息。
+
+通过将光标置于您提供的凭据名称上方，可以显示有关凭据的详细信息，包括用户名，域和主机类型。
+
+
+NOTE: 身份验证模式由您在添加主机向导中指定的主机类型决定。
+
+|===
+. 在选择要安装的插件部分中，选择要安装的插件。
++
+对于新部署，不会列出任何插件软件包。
+
+. （可选）单击 * 更多选项 * 。
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+Port
+ a| 
+保留默认端口号或指定端口号。
+
+默认端口号为 8145 。如果 SnapCenter 服务器安装在自定义端口上，则该端口号将显示为默认端口。
+
+
+NOTE: 如果您手动安装了插件并指定了自定义端口，则必须指定相同的端口。否则，操作将失败。
+
+
+
+ a| 
+安装路径
+ a| 
+默认路径为 C ： \Program Files\NetApp\SnapCenter 。
+
+您可以选择自定义路径。对于适用于 Windows 的 SnapCenter 插件软件包，默认路径为 C ： \Program Files\NetApp\SnapCenter 。但是，如果需要，您可以自定义默认路径。
+
+
+
+ a| 
+添加集群中的所有主机
+ a| 
+选中此复选框可添加 WSFC 中的所有集群节点。
+
+
+
+ a| 
+跳过安装前检查
+ a| 
+如果您已手动安装插件，并且不想验证主机是否满足安装插件的要求，请选中此复选框。
+
+
+
+ a| 
+使用组托管服务帐户（ GMSA ）运行插件服务
+ a| 
+如果要使用组托管服务帐户（ GMSA ）运行插件服务，请选中此复选框。
+
+请按以下格式提供 GMSA 名称： _domainname\accountName$_ 。
+
+
+NOTE: GMSA 仅用作适用于 Windows 的 SnapCenter 插件服务的登录服务帐户。
+
+|===
+. 单击 * 提交 * 。
++
+如果未选中 * 跳过预检查 * 复选框，则会验证主机是否满足安装插件的要求。已根据最低要求验证磁盘空间， RAM ， PowerShell 版本， .NET 版本和位置。如果不满足最低要求，则会显示相应的错误或警告消息。
+
++
+如果此错误与磁盘空间或 RAM 相关，您可以更新位于 `C ： \Program Files\NetApp\SnapCenter` WebApp 的 web.config 文件以修改默认值。如果此错误与其他参数相关，则必须修复问题描述。
+
++
+
+NOTE: 在 HA 设置中，如果要更新 web.config 文件，则必须同时更新两个节点上的文件。
+
+. 监控安装进度。
+

@@ -1,0 +1,27 @@
+---
+permalink: install/concept_snapcenter_standard_capacity_based_licenses.html 
+sidebar: sidebar 
+keywords: capacity-based licenses 
+summary: 您可以使用 SnapCenter 标准容量许可证来保护 ONTAP Select 和 Cloud Volumes ONTAP 平台上的数据。 
+---
+= 基于容量的 SnapCenter 标准版许可证
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SnapCenter 标准容量许可证来保护 ONTAP Select 和 Cloud Volumes ONTAP 平台上的数据。
+
+此许可证具有以下特征：
+
+* 由一个九位数序列号组成，格式为 51xxxxxxx
++
+您可以使用许可证序列号和有效的 NetApp 支持站点登录凭据通过 SnapCenter 图形用户界面启用许可证。
+
+* 作为单独的永久许可证提供，成本基于已用存储容量或要保护的数据大小（以较低者为准），并且数据由 SnapCenter 管理
+* 每 TB 可用
++
+例如，您可以获取 1 TB ， 2 TB ， 4 TB 等基于容量的许可证。
+
+* 提供 90 天试用许可证，可获得 100 TB 容量授权
+

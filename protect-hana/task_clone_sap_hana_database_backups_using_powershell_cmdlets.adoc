@@ -1,0 +1,82 @@
+---
+permalink: protect-hana/task_clone_sap_hana_database_backups_using_powershell_cmdlets.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 克隆工作流包括规划，执行克隆操作以及监控操作。 
+---
+= 使用 PowerShell cmdlet 克隆 SAP HANA 数据库备份
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+克隆工作流包括规划，执行克隆操作以及监控操作。
+
+您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。
+
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+* 步骤 *
+
+. 使用 Open-SmConnection cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
++
+[listing]
+----
+Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. 使用 Get-SmBackup cmdlet 检索备份以执行克隆操作。
++
+此示例显示有两个可用于克隆的备份：
+
++
+[listing]
+----
+ C:\PS> Get-SmBackup
+
+        BackupId                      BackupName                    BackupTime                    BackupType
+        --------                      ----------                    ----------                    ----------
+         1                     Payroll Dataset_vise-f6_08... 8/4/2015 11:02:32 AM          Full Backup
+         2                     Payroll Dataset_vise-f6_08... 8/4/2015 11:23:17 AM
+----
+. 从现有备份启动克隆操作，并指定导出克隆卷所使用的 NFS 导出 IP 地址。
++
+此示例显示要克隆的备份的 NFSExportIP 地址为 10.232.206.169 ：
+
++
+[listing]
+----
+New-SmClone -AppPluginCode hana -BackupName scsccore1_sccore_test_com_hana_H73_scsccore1_06-07-2017_02.54.29.3817 -Resources @{"Host"="scsccore1.sccore.test.com";"Uid"="H73"}  -CloneToInstance shivscc4.sccore.test.com -mountcommand 'mount 10.232.206.169:%hana73data_Clone /hana83data' -preclonecreatecommands '/home/scripts/scpre_clone.sh' -postclonecreatecommands '/home/scripts/scpost_clone.sh'
+----
++
+
+NOTE: 如果未指定 NFSExportIP ，则默认值将导出到克隆目标主机。
+
+. 使用 Get-SmCloneReport cmdlet 查看克隆作业详细信息，验证是否已成功克隆备份。
++
+您可以查看克隆 ID ，开始日期和时间，结束日期和时间等详细信息。
+
++
+[listing]
+----
+PS C:\> Get-SmCloneReport -JobId 186
+
+    SmCloneId           : 1
+    SmJobId             : 186
+    StartDateTime       : 8/3/2015 2:43:02 PM
+    EndDateTime         : 8/3/2015 2:44:08 PM
+    Duration            : 00:01:06.6760000
+    Status              : Completed
+    ProtectionGroupName : Draper
+    SmProtectionGroupId : 4
+    PolicyName          : OnDemand_Clone
+    SmPolicyId          : 4
+    BackupPolicyName    : OnDemand_Full_Log
+    SmBackupPolicyId    : 1
+    CloneHostName       : SCSPR0054212005.mycompany.com
+    CloneHostId         : 4
+    CloneName           : Draper__clone__08-03-2015_14.43.53
+    SourceResources     : {Don, Betty, Bobby, Sally}
+    ClonedResources     : {Don_DRAPER, Betty_DRAPER, Bobby_DRAPER, Sally_DRAPER}
+    SmJobError          :
+----
+

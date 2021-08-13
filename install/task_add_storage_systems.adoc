@@ -1,0 +1,130 @@
+---
+permalink: install/task_add_storage_systems.html 
+sidebar: sidebar 
+keywords: add, storage system, SVM 
+summary: 您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储，以执行数据保护和配置操作。您可以添加一个独立 SVM ，也可以添加一个由多个 SVM 组成的集群。 
+---
+= 添加存储系统
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储，以执行数据保护和配置操作。您可以添加一个独立 SVM ，也可以添加一个由多个 SVM 组成的集群。
+
+* 您需要的内容 *
+
+* 您应具有创建存储连接所需的基础架构管理员角色权限。
+* 您应确保插件安装未在进行中。
++
+添加存储系统连接时，主机插件安装不得正在进行中，因为主机缓存可能不会更新，并且数据库状态可能会在 SnapCenter 图形用户界面中显示为 "`不可用于备份` " 或 "`不在 NetApp 存储` 上 " 。
+
+* 存储系统名称应是唯一的。
++
+SnapCenter 不支持在不同集群上使用相同名称的多个存储系统。SnapCenter 支持的每个存储系统都应具有唯一的名称和唯一的数据 LIF IP 地址。
+
+
+
+* 关于此任务 *
+
+* 配置存储系统时，您还可以启用事件管理系统（ EMS ）和 AutoSupport 功能。AutoSupport 工具可收集有关系统运行状况的数据，并自动将这些数据发送给 NetApp 技术支持，使其能够对系统进行故障排除。
++
+如果启用了这些功能，则在资源受保护，还原或克隆操作成功完成或操作失败时， SnapCenter 会将 AutoSupport 信息发送到存储系统，并将 EMS 消息发送到存储系统系统系统日志。
+
+* 如果您计划将 Snapshot 副本复制到 SnapMirror 目标或 SnapVault 目标，则必须为目标 SVM 或集群以及源 SVM 或集群设置存储系统连接。
+* SnapCenter 4.5 及更高版本支持在 ONTAP 大型 LUN 上使用应用程序数据库，在 ASA 聚合上，此 LUN 的大小最高可达 128 TB 。对于大型 LUN ， SnapCenter 建议仅使用厚配置 LUN 来避免延迟。
+
+
+
+NOTE: 如果更改存储系统密码，计划的作业，按需备份和还原操作可能会失败。更改存储系统密码后，您可以通过单击存储选项卡中的 * 修改 * 来更新密码。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 存储系统 * 。
+. 在存储系统页面中，单击 * 新建 * 。
+. 在添加存储系统页面中，提供以下信息：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+存储系统
+ a| 
+输入存储系统名称或 IP 地址。
+
+
+NOTE: 存储系统名称（不包括域名）必须包含 15 个或更少字符，并且名称必须可解析。要创建名称包含超过 15 个字符的存储系统连接，可以使用 Add-SmStorageConnectionPowerShell cmdlet 。
+
+
+NOTE: 对于采用 MetroCluster 配置（ MCC ）的存储系统，建议同时注册本地集群和对等集群，以实现无中断运行。
+
+SnapCenter 不支持在不同集群上使用相同名称的多个 SVM 。SnapCenter 支持的每个 SVM 都必须具有唯一的名称。
+
+
+NOTE: 将存储连接添加到 SnapCenter 后，不应使用 ONTAP 重命名 SVM 或集群。
+
+
+NOTE: 如果添加的 SVM 使用短名称或 FQDN ，则必须可从 SnapCenter 和插件主机解析此 SVM 。
+
+
+
+ a| 
+用户名 / 密码
+ a| 
+输入具有访问存储系统所需权限的存储用户的凭据。
+
+
+
+ a| 
+事件管理系统（ EMS ）和 AutoSupport 设置
+ a| 
+如果要将 EMS 消息发送到存储系统系统系统日志，或者要将 AutoSupport 消息发送到存储系统以应用保护，完成还原操作或失败操作，请选中相应的复选框。
+
+如果选中 * 向存储系统发送失败操作的 AutoSupport 通知 * 复选框，则还会选中 * 将 SnapCenter 服务器事件记录到系统日志 * 复选框，因为要启用 AutoSupport 通知，需要 EMS 消息传送。
+
+|===
+. 如果要修改分配给平台，协议，端口和超时的默认值，请单击 * 更多选项 * 。
++
+.. 在平台中，从下拉列表中选择一个选项。
++
+如果 SVM 是备份关系中的二级存储系统，请选中 * 二级 * 复选框。如果选择 * 二级 * 选项，则 SnapCenter 不会立即执行许可证检查。
+
+.. 在协议中，选择在 SVM 或集群设置期间配置的协议，通常为 HTTPS 。
+.. 输入存储系统可接受的端口。
++
+默认端口 443 通常有效。
+
+.. 输入暂停通信尝试之前应经过的时间（以秒为单位）。
++
+默认值为 60 秒。
+
+.. 如果 SVM 具有多个管理接口，请选中 * 首选 IP* 复选框，然后输入 SVM 连接的首选 IP 地址。
+.. 单击 * 保存 * 。
+
+
+. 单击 * 提交 * 。
+
+
+* 结果 *
+
+在存储系统页面中，从 * 类型 * 下拉列表中执行以下操作之一：
+
+* 如果要查看已添加的所有 ONTAP SVM* ，请选择 * SVM* 。
+* 如果要查看已添加的所有集群，请选择 * ONTAP Clusters* 。
++
+单击集群名称后，属于集群的所有 SVM 都会显示在 Storage Virtual Machine 部分中。
+
++
+如果使用 ONTAP 图形用户界面将新的 SVM 添加到 ONTAP 集群中，请单击 * 重新发现 * 以查看新添加的 SVM 。
+
+
+
+* 完成后 *
+
+集群管理员必须在每个存储系统节点上启用 AutoSupport ，才能通过在存储系统命令行中运行以下命令从 SnapCenter 有权访问的所有存储系统发送电子邮件通知：
+
+`AutoSupport trigger modify -node nodename -autosupport-message client.app.info enable -noteto enable`
+
+
+NOTE: Storage Virtual Machine （ SVM ）管理员无法访问 AutoSupport 。

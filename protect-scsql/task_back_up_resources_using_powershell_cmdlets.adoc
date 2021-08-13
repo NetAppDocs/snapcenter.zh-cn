@@ -1,0 +1,112 @@
+---
+permalink: protect-scsql/task_back_up_resources_using_powershell_cmdlets_for_sql.html 
+sidebar: sidebar 
+keywords: backup 
+summary: 您可以使用 PowerShell cmdlet 备份 SQL Server 数据库或 Windows 文件系统。其中包括备份 SQL Server 数据库或 Windows 文件系统，包括与 SnapCenter 服务器建立连接，发现 SQL Server 数据库实例或 Windows 文件系统，添加策略，创建备份资源组，备份和验证备份。 
+---
+= 使用 PowerShell cmdlet 备份资源
+:icons: font
+:imagesdir: ../media/
+
+
+您可以使用 PowerShell cmdlet 备份 SQL Server 数据库或 Windows 文件系统。其中包括备份 SQL Server 数据库或 Windows 文件系统，包括与 SnapCenter 服务器建立连接，发现 SQL Server 数据库实例或 Windows 文件系统，添加策略，创建备份资源组，备份和验证备份。
+
+* 您需要的内容 *
+
+* 您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。
+* 您必须已添加存储系统连接并创建凭据。
+* 您必须已添加主机和发现的资源。
+
+
+* 步骤 *
+
+. 使用 Open-SmConnection cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146
+----
++
+此时将显示用户名和密码提示符。
+
+. 使用 Add-SmPolicy cmdlet 创建备份策略。
++
+此示例将创建一个 SQL 备份类型为 FullBackup 的新备份策略：
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName TESTPolicy
+-PluginPolicyType SCSQL -PolicyType Backup
+-SqlBackupType FullBackup -Verbose
+----
++
+此示例将创建一个 Windows 文件系统备份类型为 CrashConistent 的新备份策略：
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName FileSystemBackupPolicy
+-PluginPolicyType SCW -PolicyType Backup
+-ScwBackupType CrashConsistent -Verbose
+----
+. 使用 Get-SmResources cmdlet 发现主机资源。
++
+此示例将在指定主机上发现 Microsoft SQL 插件的资源：
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise-f6.sddev.mycompany.com
+-PluginCode SCSQL
+----
++
+此示例将在指定主机上发现 Windows 文件系统的资源：
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise2-f6.sddev.mycompany.com
+-PluginCode SCW
+----
+. 使用 Add-SmResourceGroup cmdlet 向 SnapCenter 添加新资源组。
++
+此示例将使用指定的策略和资源创建一个新的 SQL 数据库备份资源组：
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName AccountingResource
+-Resources @{"Host"="visef6.org.com";
+"Type"="SQL Database";"Names"="vise-f6\PayrollDatabase"}
+-Policies "BackupPolicy"
+----
++
+此示例将使用指定的策略和资源创建一个新的 Windows 文件系统备份资源组：
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName EngineeringResource
+-PluginCode SCW -Resources @{"Host"="WIN-VOK20IKID5I";
+"Type"="Windows Filesystem";"Names"="E:\"}
+-Policies "EngineeringBackupPolicy"
+----
+. 使用 New-SmBackup cmdlet 启动新的备份作业。
++
+[listing]
+----
+PS C:> New-SmBackup -ResourceGroupName PayrollDataset -Policy FinancePolicy
+----
+. 使用 Get-SmBackupReport cmdlet 查看备份作业的状态。
++
+此示例显示了在指定日期运行的所有作业的作业摘要报告：
+
++
+[listing]
+----
+PS C:\> Get-SmJobSummaryReport -Date '1/27/2016'
+----
+
+
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。

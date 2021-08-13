@@ -1,0 +1,45 @@
+---
+permalink: uninstall/reference_prerequisites_for_removing_a_host.html 
+sidebar: sidebar 
+keywords: uninstall, prereqiuisites 
+summary: 如果不再希望使用 SnapCenter 管理主机的数据保护作业，则可以删除该主机。例如，如果某个主机不再具有需要保护的数据，您可能需要将其删除。从 SnapCenter 服务器中删除主机之前，必须执行前提条件任务。 
+---
+= 删除主机的前提条件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在从 SnapCenter 服务器中删除主机之前，您应先完成前提条件。
+
+* 您应以管理员身份登录。
+* 如果您使用的是 SnapCenter 自定义插件，则应从 SnapCenter 中删除与主机关联的所有克隆。
+* 您应确保发现作业未在主机上运行。
+* 应为您分配一个具有所需权限的角色，以删除与主机关联的所有对象。否则，删除操作将失败。
+* 如果在将主机添加到 SnapCenter 后修改了 SSH 密钥，则应确认指纹。
+* 如果 SnapCenter 主机已升级到更高版本的 SnapCenter ，但插件主机仍在运行早期版本的插件，则应确认指纹。
+
+
+
+
+== 使用基于角色的访问控制删除主机的前提条件
+
+* 您应已使用具有读取，删除主机，安装，卸载插件和删除对象权限的 RBAC 角色登录。
++
+对象可以是克隆，备份，资源组，存储系统等。
+
+* 您应已将 RBAC 用户添加到 RBAC 角色。
+* 您应将 RBAC 用户分配给要删除的主机，插件，凭据，资源组和存储系统（对于克隆）。
+* 您应已以 RBAC 用户身份登录 SnapCenter 。
+
+
+
+
+== 删除具有从克隆生命周期操作创建的克隆的主机的前提条件
+
+* 您应已使用 SQL 数据库的克隆生命周期管理创建克隆作业。
+* 您应已创建具有克隆读取和删除，资源读取和删除，资源组读取和删除，存储读取和删除，配置读取和删除，挂载，卸载，插件安装和卸载，主机读取和删除权限的 RBAC 角色。
+* 您应已将 RBAC 用户分配给 RBAC 角色。
+* 您应已将 RBAC 用户分配给主机，适用于 Microsoft SQL Server 的 SnapCenter 插件，凭据，克隆生命周期资源组和存储系统。
+* 您应已以 RBAC 用户身份登录 SnapCenter 。
+

@@ -1,0 +1,131 @@
+---
+permalink: upgrade/task_upgrade_snapcenter.html 
+sidebar: sidebar 
+keywords: upgrade, upgrade snapcenter server 
+summary: 您可以使用 SnapCenter 服务器安装程序可执行文件升级 SnapCenter 服务器。 
+---
+= 升级 SnapCenter 服务器
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SnapCenter 服务器安装程序可执行文件升级 SnapCenter 服务器。
+
+* 您需要的内容 *
+
+* SnapCenter 服务器主机必须是最新的 Windows 更新，并且不会发生待定系统重新启动。
+* 在启动升级操作之前，应确保没有其他操作正在运行。
+* 在确保未运行任何作业之后，您应备份 SnapCenter 存储库（ MySQL ）数据库。
++
+有关信息，请参见 link:../admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["备份 SnapCenter 存储库"^]。
+
+* 您应备份 SnapCenter 服务器主机或插件主机上已修改的所有 SnapCenter 配置文件。
++
+SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe ， config 等。
+
+
+
+* 关于此任务 *
+
+* 在升级期间，主机将自动置于维护模式，以防止主机运行任何计划的作业。升级后，主机将自动退出维护模式。
+* 在启动升级操作之前，如果已手动将主机置于维护模式，则在升级后，您需要通过单击 * 主机 * > * 激活计划 * 手动将主机置于维护模式。
+* 支持的升级路径
++
+|===
+| 如果您使用的是 ... | 您可以 
+
+
+ a| 
+4.0.x
+ a| 
+** 直接升级到 4.1.x 或 4.2.x
+** 首先升级到 4.1.x 或 4.2.x ，然后升级到 4.3.x ，以升级到 4.3.x
+** 首先升级到 4.2.x ，然后升级到 4.4.x
+** 首先升级到 4.2.x ，然后升级到 4.4.x ，最后升级到 4.5 ，从而升级到 4.5
+
+
+
+
+ a| 
+4.1.x
+ a| 
+** 直接升级到 4.2.x 或 4.3.x
+** 首先升级到 4.2.x 或 4.3.x ，然后升级到 4.4.x ，以升级到 4.4.x
+** 首先升级到 4.3.x ，然后升级到 4.5 ，以升级到 4.5
+
+
+
+
+ a| 
+4.2.x
+ a| 
+** 直接升级到 4.3.x 或 4.4.x
+** 首先升级到 4.3.x 或 4.4.x ，然后升级到 4.5 ，以升级到 4.5
+
+
+
+
+ a| 
+4.3.x
+ a| 
+直接升级到 4.4.x 或 4.5
+
+
+
+ a| 
+4.4.x
+ a| 
+直接升级到 4.5
+
+|===
+
+
+* 步骤 *
+
+. 从 NetApp 支持站点下载 SnapCenter 服务器安装包。
++
+https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab[]
+
+. 创建位于 C ： \Program Files\NetApp\SnapCenter WebApp 的 web.config 副本。
+. 从 Windows 任务计划导出与插件主机相关的 SnapCenter 计划，以便在升级失败时使用该计划还原计划。
++
+`md ： \\scBackup``schtasks /query /xml /tn taskNAME >> "D： \scBackup\TaskName.xml "`
+
+. 如果未配置存储库备份，请创建 SnapCenter MySQL 数据库转储。
++
+`md ： \\scBackup``mysqldump -all-databases -single 事务 -add-drop-database -dele- 触发器 -rouses -u root -p > D ： \scBackup\SCRepoBackup.dmp`
+
++
+出现提示时，输入密码。
+
+. 双击下载的 .exe 文件，启动 SnapCenter 服务器升级。
++
+启动升级后，系统将执行所有预检，如果不满足最低要求，则会显示相应的错误或警告消息。您可以忽略警告消息并继续安装。但是，错误应予以修复。
+
++
+
+NOTE: SnapCenter 将继续使用在安装早期版本的 SnapCenter 服务器期间提供的现有 MySQL 服务器存储库数据库密码。
+
+. 单击 * 升级 * 。
++
+在任何阶段，如果单击 * 取消 * 按钮，升级工作流都将被取消。它不会将 SnapCenter 服务器回滚到先前的状态。
+
++
+|===
+
+
+| * 最佳实践： * 您应先注销然后登录到 SnapCenter ，或者先关闭再打开一个新浏览器以访问 SnapCenter 图形用户界面。 
+|===
+
+
+* 完成后 *
+
+* 如果此插件是使用 sudo 用户安装的，则应复制 _C ： \ProgramData\NetApp\SnapCenter\Package Repository\ORACLE_checksum.txt _ 处提供的 sha224 密钥以更新 _/etc/sudoers_ 文件。
+* 您应重新发现主机上的资源。
++
+如果主机的状态显示为 stopped ，您可以等待一段时间并执行全新发现。您还可以将 * HostRefreshInterval* 参数的值（默认值为 3600 秒）更改为 10 分钟以上的任何值。
+
+* 如果升级失败，您应清理失败的安装，重新安装早期版本的 SnapCenter ，然后将 NSM 数据库还原到其先前状态。
+* 升级 SnapCenter 服务器主机后，您还必须先升级插件，然后再添加任何存储系统。
+

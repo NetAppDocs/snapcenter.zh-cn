@@ -1,0 +1,21 @@
+---
+permalink: protect-sce/concept_what_you_can_do_with_snapcenter_plug_in_for_microsoft_exchange_server.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用适用于 Exchange 的插件备份和还原 Exchange Server 数据库。 
+---
+= 适用于 Microsoft Exchange Server 的 SnapCenter 插件的功能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用适用于 Exchange 的插件备份和还原 Exchange Server 数据库。
+
+* 查看和管理 Exchange 数据库可用性组（ DAG ），数据库和副本集的活动清单
+* 定义为备份自动化提供保护设置的策略
+* 将策略分配给资源组
+* 保护各个 DAG 和数据库
+* 备份主 Exchange 邮箱数据库和二级 Exchange 邮箱数据库
+* 从主备份和二级备份还原数据库
+

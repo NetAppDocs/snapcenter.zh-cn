@@ -1,0 +1,21 @@
+---
+permalink: protect-scsql/concept_requirements_for_backing_up_sql_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 备份 SQL 资源之前，您必须确保满足多项要求。 
+---
+= 备份 SQL 资源的要求
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+备份 SQL 资源之前，您必须确保满足多项要求。
+
+* 您必须已将资源从非 NetApp 存储系统迁移到 NetApp 存储系统。
+* 您必须已创建备份策略。
+* 如果要将具有 SnapMirror 关系的资源备份到二级存储，则分配给存储用户的 ONTAP 角色应包括 " `snapmirror all` " 特权。但是，如果您使用的是 "`vsadmin` " 角色，则不需要 " `snapmirror all` " 特权。
+* 如果未将 SQL 实例凭据分配给 Active Directory （ AD ）用户或组，则由 Active Directory （ AD ）用户启动的备份操作将失败。您必须从 * 设置 * > * 用户访问页面 * 将 SQL 实例凭据分配给 AD 用户或组。
+* 您必须已创建附加了策略的资源组。
+* 如果某个资源组包含来自不同主机的多个数据库，则某些主机上的备份操作可能会因网络问题而延迟触发。您应使用 Set-SmConfigSettings PS cmdlet 在 web.config 中配置 FMaxRetransyForUninitializedHosts 的值。
+

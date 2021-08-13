@@ -1,0 +1,34 @@
+---
+permalink: sc-automation/task_how to_access_rest_apis_using_the_swagger_api_web_page.html 
+sidebar: sidebar 
+keywords: REST API, Swagger 
+summary: REST API 通过 Swagger 网页公开。您可以访问 Swagger 网页以显示 SnapCenter 服务器 REST API 以及手动对 API 调用执行问题描述。您可以使用 REST API 帮助管理 SnapCenter 服务器或执行数据保护操作。 
+---
+= 如何使用 Swagger API 网页访问 REST API
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+REST API 通过 Swagger 网页公开。您可以访问 Swagger 网页以显示 SnapCenter 服务器 REST API 以及手动对 API 调用执行问题描述。您可以使用 REST API 帮助管理 SnapCenter 服务器或执行数据保护操作。
+
+您应该知道要在其中执行 REST API 的 SnapCenter 服务器的管理 IP 地址或域名。
+
+运行 REST API 客户端不需要特殊权限。任何用户都可以访问 Swagger 网页。通过 REST API 访问的对象的相应权限取决于生成令牌以登录到 REST API 的用户。
+
+* 步骤 *
+
+. 在浏览器中，输入用于访问 Swagger 网页的 URL ，格式为： _\https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_ 。
++
+
+NOTE: 确保 REST API URL 不包含以下字符： + ， . ， % 和 & 。
+
+. 在 * Swagger Explore* 字段中，如果未自动显示 Swagger API 文档，请键入： _\https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/Content/swagger/SnapCenter.yaml_
+. 单击 * 浏览 * 。
++
+此时将显示 API 资源类型或类别的列表。
+
+. 单击 API 资源类型可显示该资源类型的 API 。
+
+
+如果在执行 SnapCenter REST API 时遇到意外行为，您可以使用日志文件确定发生原因并解决问题。您可以通过单击 * 监控 * > * 日志 * > * 下载 * 从 SnapCenter 用户界面下载日志文件。

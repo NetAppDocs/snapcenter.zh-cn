@@ -1,0 +1,108 @@
+---
+permalink: protect-scc/task_add_resources_to_snapcenter_custom_plug_ins.html 
+sidebar: sidebar 
+keywords:  
+summary: 您必须添加要备份或克隆的资源。根据您的环境，资源可能是要备份或克隆的数据库实例或集合。 
+---
+= 向 SnapCenter 自定义插件添加资源
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须添加要备份或克隆的资源。根据您的环境，资源可能是要备份或克隆的数据库实例或集合。
+
+* 您需要的内容 *
+
+* 您必须已完成安装 SnapCenter 服务器，添加主机，创建存储系统连接和添加凭据等任务。
+* 您必须已创建自定义插件。
++
+link:concept_develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"]
+
+* 您必须已将插件上传到 SnapCenter 服务器。
+
+
+* 关于此任务 *
+
+您还可以为 MySQL 和 DB2 应用程序添加资源。这些插件可从下载 https://automationstore.netapp.com/home.shtml["NetApp 存储自动化商店"]。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在 * 资源 * 页面中，单击 * 添加资源 * 。
+. 在 * 提供资源详细信息 * 页面中，执行以下操作：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+Name
+ a| 
+输入资源的名称。
+
+
+
+ a| 
+主机名
+ a| 
+选择主机。
+
+
+
+ a| 
+Type
+ a| 
+选择类型。type 是用户根据插件问题描述文件定义的。例如，数据库和实例。
+
+如果选定类型为父类型，请输入父类型的详细信息。例如，如果类型为 " 数据库 " ，而父级为 " 实例 " ，请输入此实例的详细信息。
+
+
+
+ a| 
+凭据名称
+ a| 
+选择 Credential 或创建新凭据。
+
+
+
+ a| 
+挂载路径
+ a| 
+输入挂载资源的挂载路径。这仅适用于 Windows 主机。
+
+|===
+. 在 * 提供存储占用空间 * 页面中，选择一个存储系统并选择一个或多个卷， LUN 和 qtree ，然后单击 * 保存 * 。
++
+可选：单击 image:../media/add_policy_from_resourcegroup.gif[""] 图标，用于从其他存储系统添加更多卷， LUN 和 qtree 。
+
++
+
+NOTE: SnapCenter 自定义插件不支持自动发现物理和虚拟环境中的资源和存储详细信息。您必须在创建资源时提供物理和虚拟环境的存储信息。
+
++
+image::../media/storage_footprint.gif[存储占用空间]
+
+. 在 * 资源设置 * 页面中，为资源提供自定义密钥值对。
++
+如果要传递特定于资源的信息，请使用自定义密钥值对。例如，在使用 MySQL 插件时，您必须将主机指定为 host=hostname ， port =port-no 用于 MySQL ，而主从配置指定为 master_slave = "`Yes` " 或 "`no` " （名称是 master_slave ，值为 "`Yes` " 或 "`no` " ）。
+
++
+
+NOTE: 确保单词 host 和 port 为大写。
+
++
+image::../media/resource_settings.gif[资源设置]
+
+. 查看摘要，然后单击 * 完成 * 。
+
+
+* 结果 *
+
+此时将显示资源以及类型，主机或集群名称，关联的资源组和策略以及整体状态等信息。
+
+* 完成后 *
+
+如果要为其他用户提供对资产的访问权限， SnapCenter 管理员必须为这些用户分配资产。这样，用户就可以执行对分配给他们的资产具有权限的操作。
+
+添加资源后，您可以修改资源详细信息。如果自定义插件资源具有关联的备份，则无法修改以下字段：资源名称，资源类型和主机名。

@@ -1,0 +1,15 @@
+---
+permalink: install/install_workflow.html 
+sidebar: sidebar 
+keywords: install, snapcenter server, license, storage system, RBAC, provision storage, workflow 
+summary: 工作流图显示了安装和配置 SnapCenter 服务器的步骤。 
+---
+= 安装工作流
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此工作流显示了安装和配置 SnapCenter 服务器所需的不同任务。
+
+image::../media/install_snapcenter_server.png[安装 SnapCenter 服务器]

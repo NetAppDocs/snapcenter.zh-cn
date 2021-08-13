@@ -1,0 +1,55 @@
+---
+permalink: protect-sco/task_back_up_oracle_database_resource_groups.html 
+sidebar: sidebar 
+keywords: backup, resource group 
+summary: 资源组是主机或集群上的一组资源。系统会对资源组中定义的所有资源执行备份操作。 
+---
+= 备份 Oracle 数据库资源组
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+资源组是主机或集群上的一组资源。系统会对资源组中定义的所有资源执行备份操作。
+
+您可以从 " 资源 " 页面按需备份资源组。如果资源组附加了策略并配置了计划，则会根据计划自动进行备份。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面中，从 * 视图 * 列表中选择 * 资源组 * 。
++
+您可以通过在搜索框中输入资源组名称或单击 * 来搜索资源组image:../media/filter_icon.gif[""]* ，然后选择标记。然后，您可以单击 *image:../media/filter_icon.gif[""]* 以关闭筛选器窗格。
+
+. 在资源组页面上，选择要备份的资源组，然后单击 * 立即备份 * 。
++
+
+NOTE: 如果您的联合资源组包含两个数据库，而其中一个数据库在非 NetApp 存储上具有数据文件，则即使另一个数据库位于 NetApp 存储上，备份操作也会中止。
+
+. 在备份页面上，执行以下步骤：
++
+.. 如果已将多个策略与资源组关联，请从 * 策略 * 下拉列表中选择要用于备份的策略。
++
+如果为按需备份选择的策略与备份计划关联，则按需备份将根据为计划类型指定的保留设置进行保留。
+
+.. 单击 * 备份 * 。
+
+
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
+
+
+* 完成后 *
+
+* 在 AIX 设置中，您可以使用 lkdev 命令锁定，并使用 rendev 命令重命名备份的数据库所在的磁盘。
++
+使用该备份还原时，锁定或重命名设备不会影响还原操作。
+
+* 如果备份操作因数据库查询执行时间超过超时值而失败，则应运行 Set-SmConfigSettings cmdlet 来更改 ORACLE_SQL_query_timeout 和 ORACLE_plugin_SQL_query_timeout 参数的值：
++
+修改参数值后，运行以下命令 ` /opt/netapp/snapcenter/spl/bin/spl restart` 以重新启动 SnapCenter 插件加载程序（ SPL ）服务
+
+* 如果在验证过程中无法访问此文件，并且挂载点不可用，则此操作可能会失败，并显示错误代码 DBV-00100 指定文件。您应修改 sco.properties 中 verification_delay 和 verification_retry_count 参数的值。
++
+修改参数值后，运行以下命令 ` /opt/netapp/snapcenter/spl/bin/spl restart` 以重新启动 SnapCenter 插件加载程序（ SPL ）服务
+
+

@@ -1,0 +1,17 @@
+---
+permalink: protect-scsql/concept_how_long_to_retain_transaction_log_backups_on_the_source_storage_system.html 
+sidebar: sidebar 
+keywords:  
+summary: 适用于 Microsoft SQL Server 的 SnapCenter 插件需要事务日志备份来执行最新的还原操作，以便将数据库还原到两个完整备份之间的时间。 
+---
+= 在源存储系统上保留事务日志备份的时间
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+适用于 Microsoft SQL Server 的 SnapCenter 插件需要事务日志备份来执行最新的还原操作，以便将数据库还原到两个完整备份之间的时间。
+
+例如，如果适用于 SQL Server 的插件在上午 8 ： 00 进行完整备份而另一个完整备份则在下午 5 ： 00 进行，它可以使用最新的事务日志备份将数据库还原到上午 8 ： 00 之间的任何时间和下午 5 ： 00如果事务日志不可用，则适用于 SQL Server 的插件只能执行时间点还原操作，从而将数据库还原到适用于 SQL Server 的插件完成完整备份时为止。
+
+通常，您只需要一天或两天的最新还原操作。默认情况下， SnapCenter 至少保留两天。

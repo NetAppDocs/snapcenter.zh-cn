@@ -1,0 +1,42 @@
+---
+permalink: protect-sco/task_clone_oracle_database_backups_using_unix_commands.html 
+sidebar: sidebar 
+keywords: clone, CLI, commands 
+summary: 克隆工作流包括规划，执行克隆操作以及监控操作。 
+---
+= 使用 UNIX 命令克隆 Oracle 数据库备份
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+克隆工作流包括规划，执行克隆操作以及监控操作。
+
+* 关于此任务 *
+
+您应执行以下命令来创建 Oracle 数据库克隆规范文件并启动克隆操作。
+
+有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877144["《 SnapCenter 软件命令参考指南》"^]。
+
+* 步骤 *
+
+. 从指定备份创建 Oracle 数据库克隆规范： _New-OracleSmCloneSpecification_
++
+
+NOTE: 如果二级数据保护策略是 unified mirror-vault ，则仅指定 -IncluseSecondaryDetails 。您不必指定 -SecondaryStorageType 。
+
++
+此命令会自动为指定的源数据库及其备份创建 Oracle 数据库克隆规范文件。您还必须提供克隆数据库 SID ，以便创建的规范文件具有要创建的克隆数据库的自动生成值。
+
++
+
+NOTE: 克隆规范文件创建位置为： /var/opt/snapcenter/soc/clone_specs_ 。
+
+. 从克隆资源组或现有备份启动克隆操作： _New-SmClone_
++
+此命令将启动克隆操作。您还必须为克隆操作提供 Oracle 克隆规范文件路径。您还可以指定恢复选项，要执行克隆操作的主机，预处理，后处理脚本以及其他详细信息。
+
++
+默认情况下，克隆数据库的归档日志目标文件会自动填充为 _$ORACLE_HOME/clone_SIDS_ 。
+
+

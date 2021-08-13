@@ -1,0 +1,19 @@
+---
+permalink: protect-sce/concept_back_up_exchange_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 在环境中安装适用于 Microsoft Exchange Server 的 SnapCenter 插件时，您可以使用 SnapCenter 备份 Exchange 资源。 
+---
+= 备份 Exchange 资源
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在环境中安装适用于 Microsoft Exchange Server 的 SnapCenter 插件时，您可以使用 SnapCenter 备份 Exchange 资源。
+
+您可以计划在服务器之间同时运行多个备份。备份和还原操作不能同时在同一资源上执行。不支持在同一卷上创建主动和被动备份副本。
+
+以下工作流显示了必须执行备份操作的顺序：
+
+image:../media/sce_backup_workflow.gif[""]

@@ -1,0 +1,31 @@
+---
+permalink: protect-hana/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_sap_hana.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 您可以使用 Install-SmHostPackage PowerShell cmdlet 在多个主机上同时安装适用于 Linux 或 Windows 的 SnapCenter 插件软件包。 
+---
+= 使用 cmdlet 在多个远程主机上安装适用于 Linux 或 Windows 的 SnapCenter 插件软件包
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Install-SmHostPackage PowerShell cmdlet 在多个主机上同时安装适用于 Linux 或 Windows 的 SnapCenter 插件软件包。
+
+* 您需要的内容 *
+
+您必须已在要安装此插件软件包的每个主机上以具有本地管理员权限的域用户身份登录到 SnapCenter 。
+
+* 步骤 *
+
+. 启动 PowerShell 。
+. 在 SnapCenter 服务器主机上，使用 Open-SmConnection cmdlet 建立会话，然后输入凭据。
+. 使用 Install-SmHostPackage cmdlet 和所需参数在多个主机上安装此插件。
++
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
++
+如果您已手动安装插件，并且不想验证主机是否满足安装插件的要求，则可以使用 -skipprecheck 选项。
+
+. 输入远程安装的凭据。
+

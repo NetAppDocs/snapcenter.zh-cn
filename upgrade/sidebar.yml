@@ -1,0 +1,12 @@
+---
+section: upgrade
+title: 升级 SnapCenter 服务器和插件
+entries:
+- title: 配置 SnapCenter 以检查可用更新
+  url: "/upgrade/task_configure_snapcenter_to_check_for_available_updates.html"
+- title: 升级工作流
+  url: "/upgrade/upgrade_workflow.html"
+- title: 升级 SnapCenter 服务器
+  url: "/upgrade/task_upgrade_snapcenter.html"
+- title: 升级插件软件包
+  url: "/upgrade/task_upgrade_your_plug_in_packages.html"

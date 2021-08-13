@@ -1,0 +1,29 @@
+---
+permalink: protect-scw/task_install_snapcenter_plug_in_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords: install, VMware vSphere 
+summary: 如果数据库存储在虚拟机（ VM ）上，或者您要保护 VM 和数据存储库，则必须部署适用于 VMware vSphere 的 SnapCenter 插件虚拟设备。 
+---
+= 安装适用于 VMware vSphere 的 SnapCenter 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果数据库存储在虚拟机（ VM ）上，或者您要保护 VM 和数据存储库，则必须部署适用于 VMware vSphere 的 SnapCenter 插件虚拟设备。
+
+有关部署的信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["部署概述"^]。
+
+
+
+== 部署 CA 证书
+
+要使用适用于 VMware vSphere 的 SnapCenter 插件配置 CA 证书，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere_(SCV)["创建或导入 SSL 证书"^]。
+
+
+
+== 配置此 CRL 文件
+
+适用于 VMware vSphere 的 SnapCenter 插件会在预先配置的目录中查找此 CRL 文件。适用于 VMware vSphere 的 SnapCenter 插件的 CRL 文件的默认目录为： _/opt/netapp/config/CRL_ 。
+
+您可以在此目录中放置多个 CRL 文件。系统将根据每个 CRL 验证传入的证书。

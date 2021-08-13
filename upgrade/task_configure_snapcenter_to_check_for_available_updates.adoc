@@ -1,0 +1,29 @@
+---
+permalink: upgrade/task_configure_snapcenter_to_check_for_available_updates.html 
+sidebar: sidebar 
+keywords: configure, snapcenter server, updates, software updates 
+summary: SnapCenter 会定期与 NetApp 支持站点进行通信，以通知您有可用的软件更新。您还可以创建计划来指定接收可用更新信息的间隔。 
+---
+= 配置 SnapCenter 以检查可用更新
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 会定期与 NetApp 支持站点进行通信，以通知您有可用的软件更新。您还可以创建计划来指定接收可用更新信息的间隔。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 设置 * 。
+. 在设置页面中，单击 * 软件 * 。
++
+" 可用软件 " 页面将显示可用插件软件包，可用版本及其安装状态。
+
+. 单击 * 检查更新 * 以查看是否有任何较新版本的插件软件包可用。
+. 单击 * 计划更新 * 以创建计划，以指定接收有关可用更新的信息的间隔：
++
+.. 在 * 检查更新 * 中选择间隔。
+.. 选择 SnapCenter 服务器管理 Windows 凭据，然后单击 * 确定 * 。
+
+
+

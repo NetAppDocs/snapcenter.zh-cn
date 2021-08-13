@@ -1,0 +1,29 @@
+---
+permalink: protect-scsql/concept_support_for_asymmetric_lun_mapping_alm_in_windows_clusters.html 
+sidebar: sidebar 
+keywords: ALM 
+summary: 适用于 Microsoft SQL Server 的 SnapCenter 插件支持在 SQL Server 2012 及更高版本中进行发现，支持使用非对称 LUN 映射配置实现高可用性，并支持使用可用性组进行灾难恢复。发现资源时， SnapCenter 会发现 ALM 配置中本地主机和远程主机上的数据库。 
+---
+= 支持 Windows 集群中的非对称 LUN 映射
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+适用于 Microsoft SQL Server 的 SnapCenter 插件支持在 SQL Server 2012 及更高版本中进行发现，支持使用非对称 LUN 映射（ Asymmetric LUN Mapping ， ALM ）配置实现高可用性，并支持使用可用性组进行灾难恢复。发现资源时， SnapCenter 会发现 ALM 配置中本地主机和远程主机上的数据库。
+
+ALM 配置是指一个 Windows 服务器故障转移集群，其中包含主数据中心中的一个或多个节点以及灾难恢复中心中的一个或多个节点。
+
+以下是 ALM 配置的示例：
+
+* 多站点数据中心中的两个故障转移集群实例（ FCI ）
+* 用于灾难恢复的本地高可用性（ HA ）和可用性组（ AG ）的 FCI ，在灾难恢复站点上使用一个独立实例
+
+
+image::../media/asymmetric_lun_mapping_diagram.gif[非对称 LUN 映射图]
+
+主数据中心中的存储在主数据中心中的 FCI 节点之间共享。灾难恢复数据中心中的存储在灾难恢复数据中心中的 FCI 节点之间共享。
+
+主数据中心上的存储对灾难恢复数据中心上的节点不可见，反之亦然。
+
+ALM 架构将 FCI 使用的两个共享存储解决方案与 SQL AG 使用的非共享或专用存储解决方案相结合。AG 解决方案对数据中心间的共享磁盘资源使用相同的驱动器号。这种存储布局称为 ALM ，其中集群磁盘在 WSFC 中的一小部分节点之间共享。

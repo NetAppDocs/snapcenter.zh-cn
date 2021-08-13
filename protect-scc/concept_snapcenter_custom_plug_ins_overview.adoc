@@ -1,0 +1,25 @@
+---
+permalink: protect-scc/concept_snapcenter_custom_plug_ins_overview.html 
+sidebar: sidebar 
+keywords: SnapCenter Custom Plug-ins 
+summary: 您可以为使用的应用程序开发自定义插件，然后使用 SnapCenter 备份，还原或克隆这些应用程序。与其他 SnapCenter 插件一样，您的自定义插件也充当 NetAppSnap Center 软件的主机端组件，从而实现应用程序感知型数据保护和资源管理。 
+---
+= SnapCenter 自定义插件概述
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以为使用的应用程序开发自定义插件，然后使用 SnapCenter 备份，还原或克隆这些应用程序。与其他 SnapCenter 插件一样，您的自定义插件也充当 NetApp SnapCenter 软件的主机端组件，从而实现应用程序感知型数据保护和资源管理。
+
+安装自定义插件后，您可以使用采用 NetApp SnapMirror 技术的 SnapCenter 在另一个卷上创建备份集的镜像副本，并使用 NetApp SnapVault 技术执行磁盘到磁盘备份复制。自定义插件既可以在 Windows 环境中使用，也可以在 Linux 环境中使用。
+
+
+NOTE: SnapCenterCLI 不支持 SnapCenter 自定义插件命令。
+
+NetApp 为 MySQL 和 DB2 自定义插件提供 SnapCenter 软件 2.0 及更高版本，并为 MongoDB 自定义插件提供 3.0 及更高版本。这些插件可从下载 https://automationstore.netapp.com/home.shtml["NetApp 存储自动化商店"^]。
+
+
+NOTE: MySQL ， DB2 和 MongoDB 自定义插件仅可通过 NetApp 社区获得支持。
+
+您可以参考创建自己的自定义插件 link:concept_develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"^]。

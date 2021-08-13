@@ -1,0 +1,26 @@
+---
+permalink: install/task_disconnect_an_iscsi_session.html 
+sidebar: sidebar 
+keywords: iSCSI session 
+summary: 有时，您可能需要将 iSCSI 会话与具有多个会话的目标断开连接。 
+---
+= 断开 iSCSI 会话的连接
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有时，您可能需要将 iSCSI 会话与具有多个会话的目标断开连接。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 主机 * 。
+. 在主机页面中，单击 * iSCSI 会话 * 。
+. 从 * Storage Virtual Machine* 下拉列表中，选择 iSCSI 目标的 Storage Virtual Machine （ SVM ）。
+. 从 * 主机 * 下拉列表中，选择会话的主机。
+. 从 iSCSI 会话列表中，选择要断开连接的会话，然后单击 * 断开会话 * 。
+. 在断开会话对话框中，单击 * 确定 * 。
++
+SnapCenter 会断开 iSCSI 会话的连接。
+
+

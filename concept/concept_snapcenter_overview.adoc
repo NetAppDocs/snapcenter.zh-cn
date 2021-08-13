@@ -1,0 +1,357 @@
+---
+permalink: concept/concept_snapcenter_overview.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter 软件是一个简单，集中化且可扩展的平台，可为混合云中任意位置的 ONTAP 系统上运行的应用程序，数据库，主机文件系统和 VM 提供应用程序一致的数据保护。 
+---
+= SnapCenter 概述
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 软件是一个简单，集中化且可扩展的平台，可为混合云中任意位置的 ONTAP 系统上运行的应用程序，数据库，主机文件系统和 VM 提供应用程序一致的数据保护。
+
+SnapCenter 利用 NetApp Snapshot ， SnapRestore ， FlexClone ， SnapMirror 和 SnapVault 技术提供以下功能：
+
+* 快速，节省空间，应用程序一致且基于磁盘的备份
+* 快速，精细的恢复以及应用程序一致的恢复
+* 快速，节省空间的克隆
+
+
+SnapCenter 既包括 SnapCenter 服务器，也包括单个轻型插件。您可以自动将插件部署到远程应用程序主机，计划备份，验证和克隆操作，并监控所有数据保护操作。
+
+可以通过以下方式部署 SnapCenter ：
+
+* 内部部署以保护以下内容：
++
+** 位于 ONTAP FAS 或 AFF 主系统上并复制到 ONTAP FAS 或 AFF 二级系统的数据
+** ONTAP Select 主系统上的数据
+
+
+* 内部部署在混合云中以保护以下内容：
++
+** 位于 ONTAP FAS 或 AFF 主系统上并复制到 Cloud Volumes ONTAP 或 NetApp 私有存储二级系统的数据
+
+
+* 在公有云中保护以下内容：
++
+** 位于 Cloud Volumes ONTAP （原 ONTAP 云）主系统上的数据
+
+
+
+
+SnapCenter 包括以下主要功能：
+
+* 集中式应用程序一致的数据保护
++
+Microsoft Exchange Server ， Microsoft SQL Server ， Linux 或 AIX 上的 Oracle 数据库， SAP HANA 数据库以及 ONTAP 系统上运行的 Windows 主机文件系统均支持数据保护。
+
++
+通过提供一个用于创建用户定义的 SnapCenter 插件的框架，其他标准或自定义应用程序和数据库也支持数据保护。这样就可以通过同一个单一管理平台为其他应用程序和数据库提供数据保护。通过利用此框架， NetApp 在 NetApp 自动化商店中发布了适用于 IBM DB2 ， MongoDB ， MySQL 等的 SnapCenter 自定义插件。
+
+* 基于策略的备份
++
+基于策略的备份利用 NetApp Snapshot 副本技术创建快速，节省空间，应用程序一致且基于磁盘的备份。或者，您也可以通过更新现有保护关系自动将这些备份保护到二级存储。
+
+* 备份多个资源
++
+您可以使用 SnapCenter 资源组同时备份多个相同类型的资源（应用程序，数据库或主机文件系统）。
+
+* 还原和恢复
++
+SnapCenter 可以快速，精细地恢复备份，并实现应用程序一致且基于时间的恢复。您可以从混合云中的任何目标进行还原。
+
+* 克隆
++
+SnapCenter 可提供快速，节省空间的应用程序一致克隆，从而加快软件开发速度。您可以在混合云中的任何目标上克隆。
+
+* 单一用户管理图形用户界面（ GUI ）
++
+SnapCenter 图形用户界面提供了一个一站式界面，用于管理混合云中任意目标中资源的备份和克隆。
+
+* REST API ， Windows cmdlet ， UNIX 命令
++
+SnapCenter 包含 REST API ，可提供与任何业务流程软件集成的大多数功能，并可使用 Windows PowerShell cmdlet 和命令行界面。
+
+* 集中式数据保护信息板和报告
+* 基于角色的访问控制（ Role-Based Access Control ， RBAC ），确保安全性和委派。
+* 具有高可用性的存储库数据库
++
+SnapCenter 提供了一个具有高可用性的内置存储库数据库，用于存储所有备份元数据。
+
+* 自动推送安装插件
++
+您可以自动将 SnapCenter 插件从 SnapCenter 服务器主机远程推送到应用程序主机。
+
+* 高可用性
++
+SnapCenter 的高可用性使用外部负载平衡器（ F5 ）进行设置。同一数据中心最多支持两个节点。
+
+
+
+
+
+== SnapCenter 架构
+
+SnapCenter 平台基于多层架构，其中包括一个集中式管理服务器（ SnapCenter 服务器）和一个 SnapCenter 插件主机。
+
+SnapCenter 支持多站点数据中心。SnapCenter 服务器和插件主机可以位于不同的地理位置。
+
+image::../media/snapcenter_architecture.gif[SnapCenter 架构]
+
+
+
+== SnapCenter 组件
+
+SnapCenter 由 SnapCenter 服务器和 SnapCenter 插件组成。您应仅安装适用于要保护的数据的插件。
+
+* SnapCenter 服务器
+* 适用于 Windows 的 SnapCenter 插件软件包，其中包括以下插件：
++
+** 适用于 Microsoft SQL Server 的 SnapCenter 插件
+** 适用于 Microsoft Windows 的 SnapCenter 插件
+** 适用于 Microsoft Exchange Server 的 SnapCenter 插件
+** 适用于 SAP HANA 数据库的 SnapCenter 插件
+
+
+* 适用于 Linux 的 SnapCenter 插件软件包，其中包括以下插件：
++
+** 适用于 Oracle 数据库的 SnapCenter 插件
+** 适用于 SAP HANA 数据库的 SnapCenter 插件
+** 适用于 UNIX 的 SnapCenter 插件
++
+
+NOTE: 适用于 UNIX 的 SnapCenter 插件不是独立插件，不能单独安装。在安装适用于 Oracle 数据库的 SnapCenter 插件或适用于 SAP HANA 数据库的 SnapCenter 插件时，系统会自动安装此插件。
+
+
+
+* 适用于 AIX 的 SnapCenter 插件软件包，其中包括以下插件：
++
+** 适用于 Oracle 数据库的 SnapCenter 插件
+** 适用于 UNIX 的 SnapCenter 插件
++
+
+NOTE: 适用于 UNIX 的 SnapCenter 插件不是独立插件，不能单独安装。安装适用于 Oracle 数据库的 SnapCenter 插件时，系统会自动安装此插件。
+
+
+
+* SnapCenter 自定义插件
++
+自定义插件受社区支持，可从下载 https://automationstore.netapp.com/home.shtml["NetApp 存储自动化商店"]。
+
+
+
+适用于 VMware vSphere 的 SnapCenter 插件（以前称为 NetApp 数据代理）是一个独立的虚拟设备，支持在虚拟化数据库和文件系统上执行 SnapCenter 数据保护操作。
+
+
+
+== SnapCenter 服务器
+
+SnapCenter 服务器包括一个 Web 服务器，一个基于 HTML5 的集中式用户界面， PowerShell cmdlet ， REST API 和 SnapCenter 存储库。
+
+SnapCenter 可在一个用户界面中跨多个 SnapCenter 服务器实现高可用性和水平扩展。您可以使用外部负载平衡器（ F5 ）来实现高可用性。对于具有数千台主机的大型环境，添加多个 SnapCenter 服务器有助于平衡负载。
+
+* 如果您使用的是适用于 Windows 的 SnapCenter 插件软件包，则主机代理将在 SnapCenter 服务器和 Windows 插件主机上运行。主机代理会在远程 Windows 主机上本机执行计划，对于 Microsoft SQL Server ，计划会在本地 SQL 实例上执行。
++
+SnapCenter 服务器通过主机代理与 Windows 插件进行通信。
+
+* 如果您使用的是适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包，则计划将作为 Windows 任务计划在 SnapCenter 服务器上执行。
++
+** 对于适用于 Oracle 数据库的 SnapCenter 插件，在 SnapCenter 服务器主机上运行的主机代理会与在 Linux 或 AIX 主机上运行的 SnapCenter 插件加载程序（ SPL ）进行通信，以执行不同的数据保护操作。
+** 对于适用于 SAP HANA 数据库的 SnapCenter 插件和 SnapCenter 自定义插件， SnapCenter 服务器通过在主机上运行的 SCCore 代理与这些插件进行通信。
+
+
+
+
+SnapCenter 服务器和插件使用 HTTPS 与主机代理进行通信。
+
+有关 SnapCenter 操作的信息存储在 SnapCenter 存储库中。
+
+
+
+== SnapCenter 插件
+
+每个 SnapCenter 插件都支持特定环境，数据库和应用程序。
+
+|===
+| 插件名称 | 包含在安装包中 | 需要其他插件 | 安装在主机上 | 支持的平台 
+
+
+ a| 
+适用于 SQL Server 的插件
+ a| 
+适用于 Windows 的插件软件包
+ a| 
+适用于 Windows 的插件
+ a| 
+SQL Server 主机
+ a| 
+Windows
+
+
+
+ a| 
+适用于 Windows 的插件
+ a| 
+适用于 Windows 的插件软件包
+ a| 
+ a| 
+Windows 主机
+ a| 
+Windows
+
+
+
+ a| 
+适用于 Exchange 的插件
+ a| 
+适用于 Windows 的插件软件包
+ a| 
+适用于 Windows 的插件
+ a| 
+Exchange Server 主机
+ a| 
+Windows
+
+
+
+ a| 
+适用于 Oracle 数据库的插件
+ a| 
+适用于 Linux 的插件软件包和适用于 AIX 的插件软件包
+ a| 
+适用于 UNIX 的插件
+ a| 
+Oracle 主机
+ a| 
+Linux 或 AIX
+
+
+
+ a| 
+适用于 SAP HANA 数据库的插件
+ a| 
+适用于 Linux 的插件软件包和适用于 Windows 的插件软件包
+ a| 
+适用于 UNIX 的插件或适用于 Windows 的插件
+ a| 
+HDBSQL 客户端主机
+ a| 
+Linux 或 Windows
+
+
+
+ a| 
+自定义插件
+ a| 
+https://automationstore.netapp.com/home.shtml["NetApp 存储自动化商店"^]
+ a| 
+对于文件系统备份，请使用适用于 Windows 的插件
+ a| 
+自定义应用程序主机
+ a| 
+Linux 或 Windows
+
+|===
+
+NOTE: 适用于 VMware vSphere 的 SnapCenter 插件支持对虚拟机（ VM ），数据存储库和虚拟机磁盘（ VMDK ）执行崩溃状态一致和 VM 一致的备份和还原操作，并支持 SnapCenter 应用程序专用插件，以保护虚拟化数据库和文件系统的应用程序一致的备份和还原操作。
+
+对于 SnapCenter 4.1.1 用户，适用于 VMware vSphere 的 SnapCenter 插件 4.1.1 文档提供了有关保护虚拟化数据库和文件系统的信息。对于 SnapCenter 4.2.x 用户，即 NetApp Data Broker 1.0 和 1.0.1 ，文档提供了有关使用适用于 VMware vSphere 的 SnapCenter 插件保护虚拟化数据库和文件系统的信息，该插件由基于 Linux 的 NetApp 数据代理虚拟设备（开放式虚拟设备格式）提供。对于使用 SnapCenter 4.3 或更高版本的用户， https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["适用于 VMware vSphere 的 SnapCenter 插件文档"^] 提供有关使用适用于 VMware vSphere 的基于 Linux 的 SnapCenter 插件虚拟设备（开放式虚拟设备格式）保护虚拟化数据库和文件系统的信息。
+
+
+
+=== 适用于 Microsoft SQL Server 的 SnapCenter 插件功能
+
+* 自动对 SnapCenter 环境中的 Microsoft SQL Server 数据库执行应用程序感知备份，还原和克隆操作。
+* 在部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件时，支持 VMDK 和原始设备映射（ RDM ） LUN 上的 Microsoft SQL Server 数据库
+* 仅支持配置 SMB 共享。不支持在 SMB 共享上备份 SQL Server 数据库。
+* 支持将备份从适用于 Microsoft SQL Server 的 SnapManager 导入到 SnapCenter 。
+
+
+
+
+=== 适用于 Microsoft Windows 的 SnapCenter 插件功能
+
+* 为 SnapCenter 环境中 Windows 主机上运行的其他插件启用应用程序感知型数据保护
+* 自动对 SnapCenter 环境中的 Microsoft 文件系统执行应用程序感知型备份，还原和克隆操作
+* 支持 Windows 主机的存储配置， Snapshot 副本一致性和空间回收
++
+
+NOTE: 适用于 Windows 的插件在物理和 RDM LUN 上配置 SMB 共享和 Windows 文件系统，但不支持在 SMB 共享上对 Windows 文件系统执行备份操作。
+
+
+
+
+
+=== 适用于 Microsoft Exchange Server 的 SnapCenter 插件功能
+
+* 为 SnapCenter 环境中的 Microsoft Exchange Server 数据库和数据库可用性组（ DAG ）自动执行应用程序感知型备份和还原操作
+* 在部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件时，支持 RDM LUN 上的虚拟化 Exchange Server
+
+
+
+
+=== 适用于 Oracle 数据库的 SnapCenter 插件功能
+
+* 自动执行应用程序感知型备份，还原，恢复，验证，挂载， 在 SnapCenter 环境中卸载和克隆 Oracle 数据库的操作
+* 支持适用于 SAP 的 Oracle 数据库，但不提供 SAP BR* 工具集成
+
+
+
+
+=== 适用于 UNIX 的 SnapCenter 插件功能
+
+* 允许适用于 Oracle 数据库的插件通过处理 Linux 或 AIX 系统上的底层主机存储堆栈在 Oracle 数据库上执行数据保护操作
+* 在运行 ONTAP 的存储系统上支持网络文件系统（ NFS ）和存储区域网络（ SAN ）协议。
+* 对于 Linux 系统，在部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件时，支持 VMDK 和 RDM LUN 上的 Oracle 数据库。
+* 支持 SAN 文件系统和 LVM 布局上的 Mount Guard for AIX 。
+* 仅支持对 SAN 文件系统和 AIX 系统的 LVM 布局进行实时日志记录的增强型日志文件系统（ JFS2 ）。
++
+支持基于 SAN 设备构建的 SAN 原生设备，文件系统和 LVM 布局。
+
+
+
+
+
+=== 适用于 SAP HANA 数据库的 SnapCenter 插件功能
+
+* 自动对 SnapCenter 环境中的 SAP HANA 数据库进行应用程序感知型备份，还原和克隆
+
+
+
+
+=== SnapCenter 自定义插件功能
+
+* 支持自定义插件来管理其他 SnapCenter 插件不支持的应用程序或数据库。自定义插件不会在 SnapCenter 安装过程中提供。
+* 支持在另一个卷上为备份集创建镜像副本，并执行磁盘到磁盘备份复制。
+* 同时支持 Windows 和 Linux 环境。在 Windows 环境中，通过自定义插件的自定义应用程序可以选择使用适用于 Microsoft Windows 的 SnapCenter 插件进行文件系统一致的备份。
+
+
+可以从下载适用于 SnapCenter 软件的 MySQL ， DB2 和 MongoDB 自定义插件示例 https://automationstore.netapp.com/home.shtml["NetApp 存储自动化商店"^]。
+
+
+NOTE: MySQL ， DB2 和 MongoDB 自定义插件仅可通过 NetApp 社区获得支持。
+
+NetApp 支持创建和使用自定义插件的功能；但是， NetApp 不支持您创建的自定义插件。
+
+有关详细信息，请参见 link:../protect-scc/concept_develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"^]
+
+
+
+== SnapCenter 存储库
+
+SnapCenter 存储库有时称为 NSM 数据库，用于存储每个 SnapCenter 操作的信息和元数据。
+
+默认情况下，在安装 SnapCenter 服务器时会安装 MySQL 服务器存储库数据库。如果已安装 MySQL 服务器，而您正在执行 SnapCenter 服务器的全新安装，则应卸载 MySQL 服务器。
+
+SnapCenter 支持使用 MySQL Server 5.7.25 或更高版本作为 SnapCenter 存储库数据库。如果您使用的是早期版本的 MySQL 服务器和早期版本的 SnapCenter ，则在 SnapCenter 升级期间， MySQL 服务器将升级到 5.7.25 或更高版本。
+
+SnapCenter 存储库存储以下信息和元数据：
+
+* 备份，克隆，还原和验证元数据
+* 报告，作业和事件信息
+* 主机和插件信息
+* 角色，用户和权限详细信息
+* 存储系统连接信息
+

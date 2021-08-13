@@ -1,0 +1,314 @@
+---
+permalink: install/concept_configure_secured_mysql_connections_with_snapcenter_server.html 
+sidebar: sidebar 
+keywords: Secure Sockets Layer, secure MYSQL connections, standalone configuration, HA configuration, SSL 
+summary: 如果要在独立配置或网络负载平衡 \ （ NLB ）配置中确保 SnapCenter 服务器与 MySQL 服务器之间的通信安全，可以生成安全套接字层（ SSL ）证书和密钥文件。 
+---
+= 配置与 SnapCenter 服务器的安全 MySQL 连接
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要在独立配置或网络负载平衡（ NLB ）配置中确保 SnapCenter 服务器与 MySQL 服务器之间的通信安全，可以生成安全套接字层（ SSL ）证书和密钥文件。
+
+
+
+== 为独立的 SnapCenter 服务器配置配置安全的 MySQL 连接
+
+如果要保护 SnapCenter 服务器与 MySQL 服务器之间的通信安全，可以生成安全套接字层（ SSL ）证书和密钥文件。您必须在 MySQL 服务器和 SnapCenter 服务器中配置证书和密钥文件。
+
+此时将生成以下证书：
+
+* CA 证书
+* 服务器公有证书和专用密钥文件
+* 客户端公有证书和专用密钥文件
+
+
+* 步骤 *
+
+. 使用 openssl 命令在 Windows 上为 MySQL 服务器和客户端设置 SSL 证书和密钥文件。
++
+有关信息，请参见 https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL 5.7 ：使用 openssl 创建 SSL 证书和密钥"^]
+
++
+
+NOTE: 用于服务器证书，客户端证书和密钥文件的通用名称值必须与用于 CA 证书的通用名称值不同。如果通用名称值相同，则使用 OpenSSL 编译的服务器的证书和密钥文件将失败。
+
++
+|===
+
+
+| * 最佳实践： * 您应使用服务器完全限定域名（ FQDN ）作为服务器证书的公用名。 
+|===
+. 将 SSL 证书和密钥文件复制到 MySQL Data 文件夹。
++
+默认 MySQL Data 文件夹路径为 `C ： \ProgramData\NetApp\SnapCenter\MySQL Data\Data\` 。
+
+. 更新 MySQL 服务器配置文件（ my.ini ）中的 CA 证书，服务器公有证书，客户端公有证书，服务器专用密钥和客户端专用密钥路径。
++
+默认 MySQL 服务器配置文件（ my.ini ）路径为 `C ： \ProgramData\NetApp\SnapCenter\MySQL Data\my.ini` 。
+
++
+
+NOTE: 您必须在 MySQL 服务器配置文件（ my.ini ）的 "mysqld" 部分中指定 CA 证书，服务器公有证书和服务器专用密钥路径。
+
++
+您必须在 MySQL 服务器配置文件（ my.ini ）的 [client] 部分中指定 CA 证书，客户端公有证书和客户端专用密钥路径。
+
++
+以下示例显示了复制到默认文件夹 `C ： /ProgramData/NetApp/SnapCenter/MySQL Data/Data` 中 my.ini 文件的 [mysqld] 部分的证书和密钥文件。
+
++
+[listing]
+----
+ssl-ca="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/ca.pem"
+----
++
+[listing]
+----
+ssl-cert="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/server-cert.pem"
+----
++
+[listing]
+----
+ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/server-key.pem"
+----
++
+以下示例显示了在 my.ini 文件的 [client] 部分中更新的路径。
+
++
+[listing]
+----
+ssl-ca="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/ca.pem"
+----
++
+[listing]
+----
+ssl-cert="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-cert.pem"
+----
++
+[listing]
+----
+ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-key.pem"
+----
+. 停止 Internet 信息服务器（ Internet Information Server ， IIS ）中的 SnapCenter 服务器 Web 应用程序。
+. 重新启动 MySQL 服务。
+. 更新 web.config 文件中 MySQLProtocol 密钥的值。
++
+以下示例显示了在 web.config 文件中更新的 MySQLProtocol 密钥的值。
+
++
+[listing]
+----
+<add key="MySQLProtocol" value="SSL" />
+----
+. 使用 my.ini 文件的 [client] 部分中提供的路径更新 web.config 文件。
++
+以下示例显示了在 my.ini 文件的 [client] 部分中更新的路径。
+
++
+[listing]
+----
+<add key="ssl-client-cert" value="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-cert.pem" />
+----
++
+[listing]
+----
+<add key="ssl-client-key" value="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-key.pem" />
+----
++
+[listing]
+----
+<add key="ssl-ca" value="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/ca.pem" />
+----
+. 在 IIS 中启动 SnapCenter 服务器 Web 应用程序。
+
+
+
+
+== 为 HA 配置配置安全 MySQL 连接
+
+如果要确保 SnapCenter 服务器与 MySQL 服务器之间的通信安全，您可以为高可用性（ HA ）节点生成安全套接字层（ SSL ）证书和密钥文件。您必须在 MySQL 服务器和 HA 节点上配置证书和密钥文件。
+
+此时将生成以下证书：
+
+* CA 证书
++
+在其中一个 HA 节点上生成一个 CA 证书，并将此 CA 证书复制到另一个 HA 节点。
+
+* 两个 HA 节点的服务器公有证书和服务器专用密钥文件
+* 两个 HA 节点的客户端公有证书和客户端专用密钥文件
+
+
+* 步骤 *
+
+. 对于第一个 HA 节点，请使用 openssl 命令在 Windows 上为 MySQL 服务器和客户端设置 SSL 证书和密钥文件。
++
+有关信息，请参见 https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL 5.7 ：使用 openssl 创建 SSL 证书和密钥"^]
+
++
+
+NOTE: 用于服务器证书，客户端证书和密钥文件的通用名称值必须与用于 CA 证书的通用名称值不同。如果通用名称值相同，则使用 OpenSSL 编译的服务器的证书和密钥文件将失败。
+
++
+|===
+
+
+| * 最佳实践： * 您应使用服务器完全限定域名（ FQDN ）作为服务器证书的公用名。 
+|===
+. 将 SSL 证书和密钥文件复制到 MySQL Data 文件夹。
++
+默认 MySQL Data 文件夹路径为 C ： \ProgramData\NetApp\SnapCenter\MySQL Data\Data\ 。
+
+. 更新 MySQL 服务器配置文件（ my.ini ）中的 CA 证书，服务器公有证书，客户端公有证书，服务器专用密钥和客户端专用密钥路径。
++
+默认 MySQL 服务器配置文件（ my.ini ）路径为 C ： \ProgramData\NetApp\SnapCenter\MySQL Data\my.in
+
++
+
+NOTE: 您必须在 MySQL 服务器配置文件（ my.ini ）的 "mysqld" 部分中指定 CA 证书，服务器公有证书和服务器专用密钥路径。
+
++
+您必须在 MySQL 服务器配置文件（ my.ini ）的 [client] 部分中指定 CA 证书，客户端公有证书和客户端专用密钥路径。
+
++
+以下示例显示了复制到默认文件夹 C ： /ProgramData/NetApp/SnapCenter/MySQL Data/Data 中 my.ini 文件的 [mysqld] 部分的证书和密钥文件。
+
++
+[listing]
+----
+ssl-ca="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/ca.pem"
+----
++
+[listing]
+----
+ssl-cert="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/server-cert.pem"
+----
++
+[listing]
+----
+ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/server-key.pem"
+----
++
+以下示例显示了在 my.ini 文件的 [client] 部分中更新的路径。
+
++
+[listing]
+----
+ssl-ca="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/ca.pem"
+----
++
+[listing]
+----
+ssl-cert="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-cert.pem"
+----
++
+[listing]
+----
+ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-key.pem"
+----
+. 对于第二个 HA 节点，复制 CA 证书并生成服务器公有证书，服务器专用密钥文件，客户端公有证书和客户端专用密钥文件。执行以下步骤：
++
+.. 将第一个 HA 节点上生成的 CA 证书复制到第二个 NLB 节点的 MySQL Data 文件夹。
++
+默认 MySQL Data 文件夹路径为 C ： \ProgramData\NetApp\SnapCenter\MySQL Data\Data\ 。
+
++
+
+NOTE: 您不能再次创建 CA 证书。您应仅创建服务器公有证书，客户端公有证书，服务器专用密钥文件和客户端专用密钥文件。
+
+.. 对于第一个 HA 节点，请使用 openssl 命令在 Windows 上为 MySQL 服务器和客户端设置 SSL 证书和密钥文件。
++
+https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL 5.7 ：使用 openssl 创建 SSL 证书和密钥"]
+
++
+
+NOTE: 用于服务器证书，客户端证书和密钥文件的通用名称值必须与用于 CA 证书的通用名称值不同。如果通用名称值相同，则使用 OpenSSL 编译的服务器的证书和密钥文件将失败。
+
++
+建议使用服务器 FQDN 作为服务器证书的公用名。
+
+.. 将 SSL 证书和密钥文件复制到 MySQL Data 文件夹。
+.. 更新 MySQL 服务器配置文件（ my.ini ）中的 CA 证书，服务器公有证书，客户端公有证书，服务器专用密钥和客户端专用密钥路径。
++
+
+NOTE: 您必须在 MySQL 服务器配置文件（ my.ini ）的 "mysqld" 部分中指定 CA 证书，服务器公有证书和服务器专用密钥路径。
+
++
+您必须在 MySQL 服务器配置文件（ my.ini ）的 [client] 部分中指定 CA 证书，客户端公有证书和客户端专用密钥路径。
+
++
+以下示例显示了复制到默认文件夹 C ： /ProgramData/NetApp/SnapCenter/MySQL Data/Data 中 my.ini 文件的 [mysqld] 部分的证书和密钥文件。
+
++
+[listing]
+----
+ssl-ca="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/ca.pem"
+----
++
+[listing]
+----
+ssl-cert="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/server-cert.pem"
+----
++
+[listing]
+----
+ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/server-key.pem"
+----
++
+以下示例显示了在 my.ini 文件的 [client] 部分中更新的路径。
+
++
+[listing]
+----
+ssl-ca="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/ca.pem"
+----
++
+[listing]
+----
+ssl-cert="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/server-cert.pem"
+----
++
+[listing]
+----
+ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/server-key.pem"
+----
+
+
+. 在两个 HA 节点上停止 Internet 信息服务器（ Internet Information Server ， IIS ）中的 SnapCenter 服务器 Web 应用程序。
+. 在两个 HA 节点上重新启动 MySQL 服务。
+. 更新两个 HA 节点的 web.config 文件中 MySQLProtocol 密钥的值。
++
+以下示例显示了在 web.config 文件中更新的 MySQLProtocol 密钥的值。
+
++
+[listing]
+----
+<add key="MySQLProtocol" value="SSL" />
+----
+. 使用您在 my.ini 文件的 [client] 部分中为两个 HA 节点指定的路径更新 web.config 文件。
++
+以下示例显示了在 my.ini 文件的 [client] 部分中更新的路径。
+
++
+[listing]
+----
+<add key="ssl-client-cert" value="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-cert.pem" />
+----
++
+[listing]
+----
+<add key="ssl-client-key" value="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-key.pem" />
+----
++
+[listing]
+----
+<add key="ssl-ca" value="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/ca.pem" />
+----
+. 在两个 HA 节点上的 IIS 中启动 SnapCenter 服务器 Web 应用程序。
+. 在其中一个 HA 节点上使用 Set-SmRepositoryConfig -RebuildSlave -Force PowerShell cmdlet 和 -Force 选项，以便在两个 HA 节点上建立安全的 MySQL 复制。
++
+即使复制状态正常， -Force 选项也允许您重建从属存储库。
+
+

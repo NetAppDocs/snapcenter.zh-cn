@@ -1,0 +1,58 @@
+---
+permalink: protect-scsql/task_install_the_snapcenter_plug_in_for_sql_server_silently.html 
+sidebar: sidebar 
+keywords:  
+summary: 您应从 SnapCenter 用户界面中安装适用于 Microsoft SQL Server 的 SnapCenter 插件。但是，如果由于某种原因而无法运行此插件，则可以通过 Windows 命令行在无人参与的情况下以静默模式运行适用于 SQL Server 的插件安装程序。 
+---
+= 通过命令行以静默方式安装适用于 Microsoft SQL Server 的 SnapCenter 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您应从 SnapCenter 用户界面中安装适用于 Microsoft SQL Server 的 SnapCenter 插件。但是，如果由于某种原因而无法运行此插件，则可以通过 Windows 命令行在无人参与的情况下以静默模式运行适用于 SQL Server 的插件安装程序。
+
+* 您需要的内容 *
+
+* 在安装之前，必须删除适用于 Microsoft SQL Server 的早期版本的 SnapCenter 插件。
++
+有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Install_a_SnapCenter_Plug-In_manually_and_directly_from_thePlug-In_Host["如何手动或直接从插件主机安装 SnapCenter 插件"^]。
+
+
+
+* 步骤 *
+
+. 验证插件主机上是否存在 C ： \temp 文件夹，并且已登录用户是否具有对该文件夹的完全访问权限。
+. 从 C ： \ProgramData\NetApp\SnapCenter\Package Repository 下载适用于 SQL Server 的插件软件。
++
+可以从安装了 SnapCenter 服务器的主机访问此路径。
+
+. 将安装文件复制到要安装此插件的主机。
+. 在本地主机上的 Windows 命令提示符处，导航到保存插件安装文件的目录。
+. 安装适用于 SQL Server 的插件软件：
++
+` snapcenter_windows_host_plugin.exe "/silent /debuglog"debug_Log_Path" /log"Log_Path" BI_SNAPCENTER_port=num suite_INSTALLDIR="Install_Directory_Path" BI_SERVICEACCOUNT=domain\\administrator BI_SERVERDI=ISSCSCW=ISW=ISSCSCSILD ，` SSCSCSID=ENDEN
+
++
+将占位值替换为数据
+
++
+** debug_Log_Path 是套件安装程序日志文件的名称和位置。
+** log_Path 是插件组件（ SCW ， SCSQL 和 SMCore ）安装日志的位置。
+** num 是 SnapCenter 与 SMCore 通信所使用的端口
+** install_Directory_Path 是主机插件软件包安装目录。
+** domain\administrator 是适用于 Microsoft Windows 的 SnapCenter 插件 Web 服务帐户。
+** password 是适用于 Microsoft Windows 的 SnapCenter 插件 Web 服务帐户的密码。+ ` "snapcenter_windows_host_plugin.exe"/silent /debuglog"C ： \HPPW_SCSQL_Install.log" /log"C" ： \" BI_SNAPCENTER_port=8145 suite_INSTALLDIR="C ： \Program Files\NetApp\SnapCenter" BI_SERVERACCEACCOUNSTEACUE=STOREED=STOREISW=ENDEFAYSTEED\NET.NET.NET.ENABI` ： DISCWS=STORESCWS=ENDEFAILIESTREMENTORESCWS
+
+
++
+
+NOTE: 在安装适用于 SQL Server 的插件期间传递的所有参数都区分大小写。
+
+. 监控 Windows 任务计划程序，主安装日志文件 C ： \Installdebug.log 以及 C ： \Temp 中的其他安装文件。
+. 监控 %temp% 目录，以验证 msiexe.exe 安装程序是否正在安装此软件，而不会出现错误。
++
+
+NOTE: 适用于 SQL Server 的插件的安装会在主机上注册该插件，而不是在 SnapCenter 服务器上注册。您可以通过使用 SnapCenter 图形用户界面或 PowerShell cmdlet 添加主机来在 SnapCenter 服务器上注册此插件。添加主机后，系统将自动发现此插件。
+
+

@@ -1,0 +1,21 @@
+---
+permalink: protect-hana/reference_generate_CA_certificate_CSR_file.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 您可以生成证书签名请求（ CSR ）并导入证书。 
+---
+= 生成 CA 证书 CSR 文件
+:icons: font
+:imagesdir: ../media/
+
+
+您可以生成证书签名请求（ CSR ），并导入可使用生成的 CSR 从证书颁发机构（ CA ）获取的证书。此证书将具有一个关联的专用密钥。
+
+CSR 是一个编码文本块，提供给授权证书供应商以采购签名的 CA 证书。
+
+有关生成 CSR 的信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_generate_CA_Certificate_CSR_file["如何生成 CA 证书 CSR 文件"^]。
+
+
+NOTE: 如果您拥有域（ * .domain.company.com ）或系统（ machine1.domain.company.com ）的 CA 证书，则可以跳过生成 CA 证书 CSR 文件。您可以使用 SnapCenter 部署现有 CA 证书。
+
+对于集群配置， CA 证书中应提及集群名称（虚拟集群 FQDN ）以及相应的主机名。在获取证书之前，可以通过填写使用者替代名称（ SAN ）字段来更新此证书。对于通配符证书（ * .domain.company.com ），此证书将隐式包含域的所有主机名。

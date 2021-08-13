@@ -1,0 +1,81 @@
+---
+permalink: install/task_establish_an_iscsi_session.html 
+sidebar: sidebar 
+keywords: iSCSI session 
+summary: 如果您使用 iSCSI 连接到 LUN ，则必须在创建 LUN 之前建立 iSCSI 会话以启用通信。 
+---
+= 建立 iSCSI 会话
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您使用 iSCSI 连接到 LUN ，则必须在创建 LUN 之前建立 iSCSI 会话以启用通信。
+
+* 开始之前 *
+
+* 您必须已将存储系统节点定义为 iSCSI 目标。
+* 您必须已在存储系统上启动 iSCSI 服务。 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["了解更多信息。"^]
+
+
+* 关于此任务 *
+
+您只能在从 IPv6 到 IPv6 或从 IPv4 到 IPv4 的相同 IP 版本之间建立 iSCSI 会话。
+
+您可以使用链路本地 IPv6 地址进行 iSCSI 会话管理，并且只有当主机和目标位于同一子网中时，才能在两者之间进行通信。
+
+如果更改 iSCSI 启动程序的名称，对 iSCSI 目标的访问将受到影响。更改名称后，您可能需要重新配置启动程序访问的目标，以便它们能够识别新名称。更改 iSCSI 启动程序的名称后，必须确保重新启动主机。
+
+如果主机具有多个 iSCSI 接口，则在使用第一个接口上的 IP 地址与 SnapCenter 建立 iSCSI 会话后，您将无法使用其他 IP 地址从另一个接口建立 iSCSI 会话。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 主机 * 。
+. 在主机页面中，单击 * iSCSI 会话 * 。
+. 从 * Storage Virtual Machine* 下拉列表中，选择 iSCSI 目标的 Storage Virtual Machine （ SVM ）。
+. 从 * 主机 * 下拉列表中，选择会话的主机。
+. 单击 * 建立会话 * 。
++
+此时将显示建立会话向导。
+
+. 在建立会话向导中，确定目标：
++
+|===
+| 在此字段中 ... | 输入 ... 
+
+
+ a| 
+目标节点名称
+ a| 
+iSCSI 目标的节点名称
+
+如果存在现有目标节点名称，则此名称将以只读格式显示。
+
+
+
+ a| 
+目标门户地址
+ a| 
+目标网络门户的 IP 地址
+
+
+
+ a| 
+目标门户端口
+ a| 
+目标网络门户的 TCP 端口
+
+
+
+ a| 
+启动程序门户地址
+ a| 
+启动程序网络门户的 IP 地址
+
+|===
+. 对输入内容感到满意后，单击 * 连接 * 。
++
+SnapCenter 将建立 iSCSI 会话。
+
+. 重复此操作步骤，为每个目标建立一个会话。
+

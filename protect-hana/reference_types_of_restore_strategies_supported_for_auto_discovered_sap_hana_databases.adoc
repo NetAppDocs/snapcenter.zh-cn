@@ -1,0 +1,37 @@
+---
+permalink: protect-hana/reference_types_of_restore_strategies_supported_for_auto_discovered_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Databases 
+summary: 您必须先定义策略，然后才能使用 SnapCenter 成功执行还原操作。自动发现的 SAP HANA 数据库有两种还原策略。 
+---
+= 自动发现的 SAP HANA 数据库支持的还原策略类型
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须先定义策略，然后才能使用 SnapCenter 成功执行还原操作。自动发现的 SAP HANA 数据库有两种还原策略。
+
+
+
+== 完成资源还原
+
+* 还原资源的所有卷， qtree 和 LUN
++
+** 要还原整个卷，应选择 * 卷还原 * 选项。
++
+
+NOTE: 如果资源包含卷或 qtree ，则在这些卷或 qtree 上选择要还原的 Snapshot 副本之后创建的 Snapshot 副本将被删除，并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。
+
+
+
+
+
+
+
+== 租户数据库
+
+* 还原租户数据库
+
+
+如果选择了 * 租户数据库 * 选项，则必须使用 SnapCenter 外部的 HANA Studio 或 HANA 恢复脚本执行恢复操作。

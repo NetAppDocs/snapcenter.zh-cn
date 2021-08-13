@@ -1,0 +1,28 @@
+---
+permalink: install/concept_snapcenter_standard_controller_based_licenses.html 
+sidebar: sidebar 
+keywords: controller-based licenses, standard license 
+summary: 如果您使用的是 FAS 或 AFF 存储控制器，则需要基于 SnapCenter 标准控制器的许可证。 
+---
+= 基于 SnapCenter 标准控制器的许可证
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您使用的是 FAS 或 AFF 存储控制器，则需要基于 SnapCenter 标准控制器的许可证。
+
+基于控制器的许可证具有以下特征：
+
+* 购买高级版或闪存捆绑包时附带的 SnapCenter 标准权益（不随基础包一起提供）
+* 存储使用量无限制
+* 可通过使用 ONTAP 系统管理器或存储集群命令行将其直接添加到 FAS 或 AFF 存储控制器来启用
++
+
+NOTE: 对于基于 SnapCenter 控制器的许可证，您不会在 SnapCenter 图形用户界面中输入任何许可证信息。
+
+* 锁定到控制器的序列号
+
+
+
+NOTE: 如果您的控制器上已安装 SnapManagerSuite 许可证，则系统会自动提供基于 SnapCenter 标准控制器的许可证授权。SnapManagerSuite 许可证和基于 SnapCenter 标准控制器的许可证这两个名称可以互换使用，但它们表示的是同一个许可证。

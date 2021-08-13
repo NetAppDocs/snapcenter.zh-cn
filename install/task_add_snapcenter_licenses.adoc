@@ -1,0 +1,15 @@
+---
+permalink: install/task_add_snapcenter_licenses.html 
+sidebar: sidebar 
+keywords: license 
+summary: SnapCenter 标准版许可证可用于保护应用程序，数据库，文件系统和虚拟机。在将存储系统添加到 SnapCenter 之前，您必须安装一个或多个 SnapCenter 许可证。 
+---
+= 添加 SnapCenter 许可证
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 标准版许可证可用于保护应用程序，数据库，文件系统和虚拟机。在将存储系统添加到 SnapCenter 之前，您必须安装一个或多个 SnapCenter 许可证。
+
+有关所需许可证的信息，请参见 link:../install/concept_snapcenter_licenses.html["SnapCenter 许可证"^]。

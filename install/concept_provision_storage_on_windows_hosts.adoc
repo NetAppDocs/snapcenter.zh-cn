@@ -1,0 +1,27 @@
+---
+permalink: install/concept_provision_storage_on_windows_hosts.html 
+sidebar: sidebar 
+keywords: provision storage 
+summary: 您可以使用 SnapCenter 将 NetApp 存储分配给受支持的 Windows Server 主机。使用 SnapCenter 配置 Windows 主机可确保您创建的备份应用程序一致。您必须已安装并配置适用于 Windows 的 SnapCenter 插件软件包。 
+---
+= 在 Windows 主机上配置存储
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SnapCenter 将 NetApp 存储分配给受支持的 Windows Server 主机。使用 SnapCenter 配置 Windows 主机可确保您创建的备份应用程序一致。您必须已安装并配置适用于 Windows 的 SnapCenter 插件软件包。
+
+如果您是从 NetApp SnapManager 产品访问 SnapCenter 的，并且对主机的配置方式感到满意，则可以跳过此配置信息。
+
+在配置存储时，您可以执行以下任务：
+
+* 配置 FC 连接或 iSCSI 连接的 LUN
++
+** 建立 iSCSI 会话以连接到 LUN
+** 创建 igroup 以指定哪些主机可以访问存储系统上的给定 LUN
+** 创建磁盘，调整磁盘大小并连接到磁盘
+
+
+* 在 Storage Virtual Machine （ SVM ）上创建 SMB 共享
+

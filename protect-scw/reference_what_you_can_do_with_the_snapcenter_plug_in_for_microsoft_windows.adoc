@@ -1,0 +1,24 @@
+---
+permalink: protect-scw/reference_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_windows.html 
+sidebar: sidebar 
+keywords:  
+summary: 在您的环境中安装适用于 Windows 的插件后，您可以使用 SnapCenter 备份，还原和克隆 Windows 文件系统。您还可以执行支持这些操作的任务。 
+---
+= 适用于 Microsoft Windows 的 SnapCenter 插件的功能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在您的环境中安装适用于 Windows 的插件后，您可以使用 SnapCenter 备份，还原和克隆 Windows 文件系统。您还可以执行支持这些操作的任务。
+
+* 发现资源
+* 备份 Windows 文件系统
+* 计划备份操作
+* 还原文件系统备份
+* 克隆文件系统备份
+* 监控备份，还原和克隆操作
+
+
+
+NOTE: 适用于 Windows 的插件不支持备份和还原 SMB 共享上的文件系统。

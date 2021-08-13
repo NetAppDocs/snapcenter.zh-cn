@@ -1,0 +1,147 @@
+---
+permalink: protect-scc/reference_native.html 
+sidebar: sidebar 
+keywords:  
+summary: 使用原生模式开发此插件。 
+---
+= 原生模式
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 支持使用非 Perl 编程或脚本语言来创建插件。这称为原生模式编程，可以是脚本或批处理文件。
+
+本机模式插件必须遵循以下特定约定：
+
+此插件必须是可执行的
+
+* 对于 Unix 系统，运行代理的用户必须对此插件具有执行权限
+* 对于 Windows 系统， PowerShell 插件的后缀必须为 .ps1 ，而其他 Windows 脚本的后缀必须为 .cmd 或 .bat ，并且必须可由用户执行
+* 插件必须对命令行参数做出响应，例如 "-quiesce" ， "-unquiesce"
+* 如果未实施某项操作或功能，插件必须返回退出代码 99
+* 插件必须使用特定语法将结果传递回服务器
+
+
+
+
+== 常规插件处理
+
+
+
+=== 记录错误消息
+
+每个操作都可以将消息发送回服务器，服务器将显示和存储内容。消息包含消息级别，时间戳和消息文本。支持多行消息。
+
+格式。
+
+....
+SC_MSG#<level>#<timestamp>#<message>
+SC_MESSAGE#<level>#<timestamp>#<message>
+....
+
+
+=== 使用插件存根
+
+SnapCenter 插件必须实施插件存根。这些方法是 SnapCenter 服务器根据特定工作流调用的。
+
+|===
+| 插件存根 | 可选 / 必需 | 目的 
+
+
+ a| 
+暂停
+ a| 
+Required
+ a| 
+此存根负责执行暂停。它会将应用程序置于一种可以创建 Snapshot 副本的状态。此操作在执行存储 Snapshot 副本操作之前调用。
+
+
+
+ a| 
+取消静默
+ a| 
+Required
+ a| 
+此存根负责执行静默。它会将应用程序置于正常状态。此操作在执行存储 Snapshot 副本操作后调用。
+
+
+
+ a| 
+clone_pre
+ a| 
+可选
+ a| 
+此存根负责执行克隆前任务。此操作假定您使用的是内置的 SnapCenter 克隆接口，并且只有在执行操作 "clone_vol 或 clone_LUN" 时才会触发此接口。
+
+
+
+ a| 
+clone_post
+ a| 
+可选
+ a| 
+此存根负责执行克隆后任务。这假定您使用的是内置的 SnapCenter 克隆接口，并且只有在执行 "clone_vol 或 clone_lun" 操作时才会触发此接口。
+
+
+
+ a| 
+restore_pre
+ a| 
+可选
+ a| 
+此存根负责执行还原前任务。这假定您使用的是内置的 SnapCenter 还原界面，并且仅在执行还原操作时触发。
+
+
+
+ a| 
+还原
+ a| 
+可选
+ a| 
+此存根负责执行所有还原操作。此操作假定您未使用内置还原界面。它会在执行还原操作时触发。
+
+|===
+
+
+=== 示例
+
+
+
+==== Windows PowerShell
+
+检查是否可以在您的系统上执行此脚本。如果无法执行此脚本，请为此脚本设置 Set-ExecutionPolicy bypass ，然后重试此操作。
+
+....
+if ($args.length -ne 1) {
+  write-warning "You must specify a method";
+  break;
+}
+function log ($level, $message) {
+  $d = get-date
+  echo "SC_MSG#$level#$d#$message"
+}
+function quiesce {
+  $app_name = (get-item env:APP_NAME).value
+  log "INFO" "Quiescing application using script $app_name";
+  log "INFO" "Quiescing application finished successfully"
+}
+function unquiesce {
+  $app_name = (get-item env:APP_NAME).value
+  log "INFO" "Unquiescing application using script $app_name";
+  log "INFO" "Unquiescing application finished successfully"
+}
+  switch ($args[0]) {
+    "-quiesce" {
+    quiesce;
+}
+"-unquiesce" {
+    unquiesce;
+}
+default {
+    write-error "Function $args[0] is not implemented";
+    exit 99;
+  }
+}
+exit 0;
+....

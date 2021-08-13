@@ -1,0 +1,30 @@
+---
+permalink: protect-sco/task_restore_and_recover_oracle_databases_using_unix_commands.html 
+sidebar: sidebar 
+keywords: restore, recover, CLI 
+summary: 还原和恢复工作流包括规划，执行还原和恢复操作以及监控操作。 
+---
+= 使用 UNIX 命令还原和恢复 Oracle 数据库
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+还原和恢复工作流包括规划，执行还原和恢复操作以及监控操作。
+
+* 关于此任务 *
+
+您应执行以下命令以与 SnapCenter 服务器建立连接，列出备份并检索其信息以及还原备份。
+
+有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877144["《 SnapCenter 软件命令参考指南》"^]。
+
+* 步骤 *
+
+. 为指定用户 _Open-SmConnection_ 启动与 SnapCenter 服务器的连接会话
+. 检索有关要还原的备份的信息： _get-SmBackup_
+. 检索有关指定备份的详细信息： _Get-SmBackupDetails_
++
+此命令将检索有关具有给定备份 ID 的指定资源的备份的详细信息。这些信息包括数据库名称，版本，主目录，开始和结束 SCN ，表空间，可插拔数据库及其表空间。
+
+. 从备份还原数据： _Restore-SmBackup_
+

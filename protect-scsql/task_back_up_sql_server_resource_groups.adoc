@@ -1,0 +1,49 @@
+---
+permalink: protect-scsql/task_back_up_sql_server_resource_groups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SQL Server 
+summary: '您可以从 " 资源 " 页面按需备份资源组。如果资源组附加了策略并配置了计划，则会根据计划自动进行备份。' 
+---
+= 备份 SQL Server 资源组
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从 " 资源 " 页面按需备份资源组。如果资源组附加了策略并配置了计划，则会根据计划自动进行备份。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面中，从 * 视图 * 列表中选择 * 资源组 * 。
++
+您可以通过在搜索框中输入资源组名称或单击 * 来搜索资源组image:../media/filter_icon.gif[""]* ，然后选择标记。然后，您可以单击 *image:../media/filter_icon.gif[""]* 以关闭筛选器窗格。
+
+. 在 * 资源组 * 页面上，选择要备份的资源组，然后单击 * 立即备份 * 。
+. 在 * 备份 * 页面上，执行以下步骤：
++
+.. 如果已将多个策略与资源组关联，请从 * 策略 * 下拉列表中选择要用于备份的策略。
++
+如果为按需备份选择的策略与备份计划关联，则按需备份将根据为计划类型指定的保留设置进行保留。
+
+.. 备份后，选择 * 验证 * 以验证按需备份。
++
+策略中的 * 验证 * 选项仅适用于已计划的作业。
+
+.. 单击 * 备份 * 。
+
+
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
+
+
+* 查找更多信息 *
+
+link:task_create_backup_policies_for_sql_server_databases.html["为 SQL Server 数据库创建备份策略"]
+
+link:task_create_resource_groups_and_attach_policies_for_sql_server.html["为 SQL Server 创建资源组并附加策略"]
+
+link:task_back_up_resources_using_powershell_cmdlets.html["使用 PowerShell cmdlet 备份资源"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["由于 tcp_timeout 存在延迟，备份操作失败并显示 MySQL 连接错误"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["备份失败，并显示 Windows 计划程序错误"]

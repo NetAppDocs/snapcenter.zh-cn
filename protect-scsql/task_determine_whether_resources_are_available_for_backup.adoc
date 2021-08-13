@@ -1,0 +1,77 @@
+---
+permalink: protect-scsql/task_determine_whether_resources_are_available_for_backup.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 资源是指由您安装的插件维护的数据库，应用程序实例，可用性组和类似组件。您可以将这些资源添加到资源组中，以便执行数据保护作业，但首先必须确定哪些资源可用。确定可用资源还会验证插件安装是否已成功完成。 
+---
+= 确定资源是否可用于备份
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+资源是指由您安装的插件维护的数据库，应用程序实例，可用性组和类似组件。您可以将这些资源添加到资源组中，以便执行数据保护作业，但首先必须确定哪些资源可用。确定可用资源还会验证插件安装是否已成功完成。
+
+* 您需要的内容 *
+
+* 您必须已完成安装 SnapCenter 服务器，添加主机，创建存储系统连接和添加凭据等任务。
+* 要发现 Microsoft SQL 数据库，应满足以下条件之一。
++
+** 用于将插件主机添加到 SnapCenter 服务器的用户应具有 Microsoft SQL Server 上所需的权限（ sysadmin ）。
+** 如果不满足上述条件，则应在 SnapCenter 服务器中配置对 Microsoft SQL Server 具有所需权限（ sysadmin ）的用户。用户应在 Microsoft SQL Server 实例级别进行配置，并且用户可以是 SQL 或 Windows 用户。
+
+
+* 要发现 Windows 集群中的 Microsoft SQL 数据库，必须取消阻止故障转移集群实例（ FCI ） TCP/IP 端口。
+* 如果数据库驻留在 VMware RDM LUN 或 VMDK 上，则必须部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件。
++
+有关详细信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["部署适用于 VMware vSphere 的 SnapCenter 插件"^]
+
+* 如果使用 GMSA 添加主机，并且 GMSA 具有登录和系统管理员权限，则将使用 GMSA 连接到 SQL 实例。
+
+
+* 关于此任务 *
+
+如果在 * 详细信息 * 页面中将 * 整体状态 * 选项设置为不可用于备份，则无法备份数据库。如果满足以下任一条件，则 * 整体状态 * 选项将设置为不可用于备份：
+
+* 数据库不在 NetApp LUN 上。
+* 数据库未处于正常状态。
++
+当数据库处于脱机，还原，恢复待定，可疑等状态时，它们不处于正常状态。
+
+* 数据库权限不足。
++
+例如，如果用户只能查看数据库的访问权限，则无法确定数据库的文件和属性，因此无法备份。
+
+
+
+
+NOTE: 如果您在 SQL Server 标准版上具有可用性组配置，则 SnapCenter 只能备份主数据库。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面的 * 视图 * 下拉列表中选择 * 数据库 * ， * 实例 * 或 * 可用性组 * 。
++
+单击 image:../media/filter_icon.gif[""] 并选择主机名和 SQL Server 实例以筛选资源。然后，您可以单击 image:../media/filter_icon.gif[""] 以关闭筛选器窗格。
+
+. 单击 * 刷新资源 * 。
++
+新添加，重命名或删除的资源将更新到 SnapCenter 服务器清单中。
+
+
+
+此时将显示资源以及资源类型，主机或集群名称，关联的资源组，备份类型，策略和整体状态等信息。
+
+* 如果数据库位于非 NetApp 存储上，则 * 整体状态 * 列中会显示 `不可用于备份` 。
++
+您不能对非 NetApp 存储上的数据库执行数据保护操作。
+
+* 如果数据库位于 NetApp 存储上且未受保护，则` 不受保护 `将显示在 * 整体状态 * 列中。
+* 如果数据库位于 NetApp 存储系统上且受保护，则用户界面会在 * 整体状态 * 列中显示 `Backup not run` 消息。
+* 如果数据库位于 NetApp 存储系统上且受保护，并且触发了数据库备份，则用户界面会在 * 整体状态 * 列中显示 `备份成功` 消息。
+
+
+
+NOTE: 如果在设置凭据时启用了 SQL 身份验证，则发现的实例或数据库将显示一个红色挂锁图标。如果显示挂锁图标，则必须指定实例或数据库凭据，才能成功将实例或数据库添加到资源组。
+
+SnapCenter 管理员将资源分配给 RBAC 用户后， RBAC 用户必须登录并单击 * 刷新资源 * 以查看资源的最新 * 整体状态 * 。
