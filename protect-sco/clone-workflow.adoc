@@ -1,10 +1,10 @@
 ---
-permalink: protect-sco/task_clone_oracle_database_backups.html 
+permalink: protect-sco/clone-workflow.html 
 sidebar: sidebar 
-keywords: clone operation 
+keywords: clone operation, clone, workflow 
 summary: 克隆工作流包括规划，执行克隆操作以及监控操作。 
 ---
-= 克隆 Oracle 数据库
+= 克隆工作流
 :icons: font
 :imagesdir: ../media/
 

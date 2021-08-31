@@ -1,10 +1,10 @@
 ---
-permalink: protect-sco/task_back_up_oracle_databases.html 
+permalink: protect-sco/backup-workflow.html 
 sidebar: sidebar 
-keywords: backup, oracle database 
-summary: 您可以为资源（数据库）或资源组创建备份。备份工作流包括规划，确定要备份的资源，创建备份策略，创建资源组和附加策略，创建备份以及监控操作。 
+keywords: backup, workflow 
+summary: 您可以为资源（数据库）或资源组创建备份。 
 ---
-= 备份 Oracle 数据库
+= 备份工作流
 :icons: font
 :imagesdir: ../media/
 

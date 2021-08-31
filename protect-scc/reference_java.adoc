@@ -188,9 +188,7 @@ clonePost
 .. 输入名称作为 TuttorialPlugin 。
 .. 单击超类浏览按钮并搜索 "* 抽象插件 " 。只应显示一个结果：
 +
-....
-"AbstractPlugin - com.netapp.snapcreator.agent.nextgen.plugin".
-....
+ "AbstractPlugin - com.netapp.snapcreator.agent.nextgen.plugin".
 .. 单击 * 完成 * 。
 .. Java 类：
 +

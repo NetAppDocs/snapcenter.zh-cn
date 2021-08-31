@@ -212,9 +212,7 @@ NOTE: 如果您的数据库在 DAG 配置中的主机上仅具有日志备份，
 *** 默认情况下， SnapCenter 会在 DAG 中的所有其他主机中查找此数据库的最旧完整备份，并删除此主机上在完整备份之前创建的所有日志备份。
 *** 通过在 _C ： \Program Files\NetApp\SnapCenter WebApp\web.config 文件中添加 * MaxLogBackupOnlyCountWithoutFullBackup* 密钥，您可以仅使用日志备份覆盖 DAG 中主机上数据库的上述默认保留行为。
 +
-....
-<add key="MaxLogBackupOnlyCountWithoutFullBackup" value="10">
-....
+ <add key="MaxLogBackupOnlyCountWithoutFullBackup" value="10">
 +
 在此示例中，值 10 表示您在主机上最多保留 10 个日志备份。
 

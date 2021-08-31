@@ -17,14 +17,10 @@
 
 . 更改密钥库密码：
 +
-....
-keytool -storepasswd -keystore keystore.jks
-....
+ keytool -storepasswd -keystore keystore.jks
 . 将密钥库中私钥条目的所有别名的密码更改为密钥库使用的相同密码：
 +
-....
-keytool -keypasswd -alias "alias_name_in_cert" -keystore keystore.jks
-....
+ keytool -keypasswd -alias "alias_name_in_cert" -keystore keystore.jks
 +
 为 _agent.properties_ 文件中的 keystore_pass 密钥更新相同的。
 
@@ -50,9 +46,7 @@ NOTE: 自定义插件密钥库的密码和专用密钥的所有关联别名密�
 
 . 添加根证书或中间证书：
 +
-....
-keytool -import -trustcacerts -alias myRootCA -file /root/USERTrustRSA_Root.cer -keystore keystore.jks
-....
+ keytool -import -trustcacerts -alias myRootCA -file /root/USERTrustRSA_Root.cer -keystore keystore.jks
 . 将根证书或中间证书配置为自定义插件信任存储后重新启动服务。
 
 
@@ -87,14 +81,10 @@ NOTE: 您应先添加根 CA 证书，然后再添加中间 CA 证书。
 默认自定义插件密钥库密码是 agent.properties 文件中密钥 keystore_pass 的值。
 
 +
-....
-keytool -keypasswd -alias "alias_name_in_CA_cert" -keystore keystore.jks
-....
+ keytool -keypasswd -alias "alias_name_in_CA_cert" -keystore keystore.jks
 . 如果 CA 证书中的别名较长，并且包含空格或特殊字符（ "*" ， " ， " ），请将别名更改为简单名称：
 +
-....
-keytool -changealias -alias "long_alias_name" -destalias "simple_alias" -keystore keystore.jks
-....
+ keytool -changealias -alias "long_alias_name" -destalias "simple_alias" -keystore keystore.jks
 . 从 agent.properties 文件中的 CA 证书配置别名。
 +
 根据密钥 SCC_certificate_alias 更新此值。

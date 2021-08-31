@@ -54,6 +54,13 @@ entries:
     entries:
     - title: 使用 cmdlet 在多个远程主机上安装适用于 Linux 或 Windows 的 SnapCenter 插件软件包
       url: "/protect-scc/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_scc.html"
+    - title: 在 Linux 主机上单独安装 SnapCenter 自定义插件
+      url: "/protect-scc/concept_install_snapcenter_custom_plug_ins_independently_on_the_linux_host.html"
+      entries:
+      - title: 在 Linux 主机上单独安装 SnapCenter 自定义插件
+        url: "/protect-scc/concept_prepare_to_install_the_snapcenter_custom_plug_ins_on_the_linux_host.html"
+      - title: 使用命令行界面在 Linux 主机上安装 SnapCenter 自定义插件
+        url: "/protect-scc/task_install_the_snapcenter_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html"
     - title: 监控 SnapCenter 插件软件包安装状态
       url: "/protect-scc/task_monitor_the_status_of_installing_plugin_for_scc.html"
   - title: 生成 CA 证书 CSR 文件
@@ -110,8 +117,6 @@ entries:
     url: "/protect-scc/task_restore_and_recover_resources_using_powershell_cmdlets_scc.html"
   - title: 监控还原操作
     url: "/protect-scc/task_monitor_scc_resources_restore_operations.html"
-  - title: 取消还原操作
-    url: "/protect-scc/task_cancel_scc_resources_restore_operations.html"
 - title: 克隆自定义插件资源备份
   url: "/protect-scc/task_clone_custom_plug_in_resource_backups.html"
   entries:
@@ -121,5 +126,3 @@ entries:
     url: "/protect-scc/task_clone_backups_using_powershell_cmdlets.html"
   - title: 监控 SnapCenter 中的克隆操作
     url: "/protect-scc/task_monitor_scc_resource_clone_operations.html"
-  - title: 取消克隆操作
-    url: "/protect-scc/task_cancel_scc_resource_clone_operations.html"

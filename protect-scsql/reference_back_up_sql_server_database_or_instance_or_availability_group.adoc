@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 在环境中安装适用于 Microsoft SQL Server 的 SnapCenter 插件时，您可以使用 SnapCenter 备份 SQL Server 资源。 
 ---
-= 备份 SQL Server 数据库，实例或可用性组
+= 备份工作流
 :icons: font
 :imagesdir: ../media/
 

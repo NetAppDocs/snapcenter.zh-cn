@@ -1,10 +1,10 @@
 ---
 permalink: install/concept_snapcenter_standard_controller_based_licenses.html 
 sidebar: sidebar 
-keywords: controller-based licenses, standard license 
+keywords: controller-based licenses, standard license, SnapManager Suite license, FAS, AFF, retrieve controller serial number, controller serial number, controller-based license serial number, add controller-based license, remove trial license 
 summary: 如果您使用的是 FAS 或 AFF 存储控制器，则需要基于 SnapCenter 标准控制器的许可证。 
 ---
-= 基于 SnapCenter 标准控制器的许可证
+= 添加基于 SnapCenter 标准控制器的许可证
 :icons: font
 :imagesdir: ../media/
 
@@ -24,5 +24,229 @@ NOTE: 对于基于 SnapCenter 控制器的许可证，您不会在 SnapCenter �
 * 锁定到控制器的序列号
 
 
+有关所需许可证的信息，请参见 link:../install/concept_snapcenter_licenses.html["SnapCenter 许可证"^]。
+
+
+
+== 添加基于控制器的许可证的前提条件
+
+在添加基于控制器的许可证之前，您应验证是否已安装 SnapManager 套件许可证，确定控制器上安装的许可证，检索控制器的序列号以及检索基于控制器的许可证的序列号。
+
+
+
+=== 验证是否已安装 SnapManager 套件许可证
+
+您可以使用 SnapCenter 图形用户界面查看 SnapManager 套件许可证是安装在 FAS 还是 AFF 主存储系统上，并确定哪些存储系统可能需要 SnapManager 套件许可证。SnapManager 套件许可证仅适用于主存储系统上的 FAS 和 AFF SVM 或集群。
+
 
 NOTE: 如果您的控制器上已安装 SnapManagerSuite 许可证，则系统会自动提供基于 SnapCenter 标准控制器的许可证授权。SnapManagerSuite 许可证和基于 SnapCenter 标准控制器的许可证这两个名称可以互换使用，但它们表示的是同一个许可证。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 存储系统 * 。
+. 在存储系统页面的 * 类型 * 下拉列表中，选择是要查看已添加的所有 SVM 还是集群：
++
+** 要查看已添加的所有 SVM ，请选择 * ONTAP SVM* 。
+** 要查看已添加的所有集群，请选择 * ONTAP Clusters* 。
++
+单击集群名称后，属于集群的所有 SVM 都会显示在 Storage Virtual Machine 部分中。
+
+
+
+. 在 * 存储连接 * 列表中，找到控制器许可证列。
++
+控制器许可证列显示以下状态：
+
++
+** image:../media/controller_licensed_icon.gif[""] 表示 SnapManager 套件许可证安装在 FAS 或 AFF 主存储系统上。
+** image:../media/controller_not_licensed_icon.gif[""] 表示 SnapManager 套件许可证未安装在 FAS 或 AFF 主存储系统上。
+** 不适用表示 SnapManager 套件许可证不适用，因为存储控制器位于 Cloud Volumes ONTAP ， ONTAP Select 或二级存储平台上。
+
+
+
+
+
+
+=== 确定控制器上安装的许可证
+
+您可以使用 ONTAP 命令行查看控制器上安装的所有许可证。您应是 FAS 或 AFF 系统上的集群管理员。
+
+
+NOTE: 基于 SnapCenter 标准控制器的许可证在控制器上显示为 SnapManagerSuite 许可证。
+
+* 步骤 *
+
+. 使用 ONTAP 命令行登录到 NetApp 控制器。
+. 输入 license show 命令，然后查看输出以确定是否已安装 SnapManagerSuite 许可证。
++
+[listing]
+----
+cluster1::> license show
+(system license show)
+
+Serial Number: 1-80-0000xx
+Owner: cluster1
+Package           Type     Description              Expiration
+----------------- -------- ---------------------    ---------------
+Base              site     Cluster Base License     -
+
+Serial Number: 1-81-000000000000000000000000xx
+Owner: cluster1-01
+Package           Type     Description              Expiration
+----------------- -------- ---------------------    ---------------
+NFS               license  NFS License              -
+CIFS              license  CIFS License             -
+iSCSI             license  iSCSI License            -
+FCP               license  FCP License              -
+SnapRestore       license  SnapRestore License      -
+SnapMirror        license  SnapMirror License       -
+FlexClone         license  FlexClone License        -
+SnapVault         license  SnapVault License        -
+SnapManagerSuite  license  SnapManagerSuite License -
+----
++
+在此示例中，安装了 SnapManagerSuite 许可证，因此无需执行其他 SnapCenter 许可操作。
+
+
+
+
+
+=== 检索控制器序列号
+
+您需要具有控制器序列号才能检索基于控制器的许可证的序列号。您可以使用 ONTAP 命令行检索控制器序列号。您应是 FAS 或 AFF 系统上的集群管理员。
+
+* 步骤 *
+
+. 使用 ONTAP 命令行登录到控制器。
+. 输入 system show -instance 命令，然后查看输出以查找控制器序列号。
++
+[listing]
+----
+cluster1::> system show -instance
+
+Node: fas8080-41-42-01
+Owner:
+Location: RTP 1.5
+Model: FAS8080
+Serial Number: 123451234511
+Asset Tag: -
+Uptime: 143 days 23:46
+NVRAM System ID: xxxxxxxxx
+System ID: xxxxxxxxxx
+Vendor: NetApp
+Health: true
+Eligibility: true
+Differentiated Services: false
+All-Flash Optimized: false
+
+Node: fas8080-41-42-02
+Owner:
+Location: RTP 1.5
+Model: FAS8080
+Serial Number: 123451234512
+Asset Tag: -
+Uptime: 144 days 00:08
+NVRAM System ID: xxxxxxxxx
+System ID: xxxxxxxxxx
+Vendor: NetApp
+Health: true
+Eligibility: true
+Differentiated Services: false
+All-Flash Optimized: false
+2 entries were displayed.
+----
+. 记录序列号。
+
+
+
+
+=== 检索基于控制器的许可证的序列号
+
+如果您使用的是 FAS 或 AFF 存储，则可以先从 NetApp 支持站点检索基于 SnapCenter 控制器的许可证，然后再使用 ONTAP 命令行进行安装。
+
+* 您需要的内容 *
+
+* 您应具有有效的 NetApp 支持站点登录凭据。
++
+如果未输入有效凭据，则不会为搜索返回任何信息。
+
+* 您应具有控制器序列号。
+
+
+* 步骤 *
+
+. 登录到 NetApp 支持站点，网址为 http://mysupport.netapp.com/["mysupport.netapp.com"^]。
+. 导航到 * 系统 * > * 软件许可证 * 。
+. 在选择条件区域中，确保选择了序列号（位于设备背面），输入控制器序列号，然后单击 * 执行！ * 。
++
+image::../media/nss_controller_license_select.gif[NSS 控制器许可证选择]
+
++
+此时将显示指定控制器的许可证列表。
+
+. 找到并记录 SnapCenter 标准版或 SnapManagerSuite 许可证。
+
+
+
+
+== 添加基于控制器的许可证
+
+如果您使用的是 FAS 或 AFF 系统，并且拥有 SnapCenter 标准版或 SnapManagerSuite 许可证，则可以使用 ONTAP 命令行添加基于 SnapCenter 控制器的许可证。
+
+* 您需要的内容 *
+
+* 您应是 FAS 或 AFF 系统上的集群管理员。
+* 您应具有 SnapCenter 标准版或 SnapManagerSuite 许可证。
+
+
+* 关于此任务 *
+
+如果您要在 FAS 或 AFF 存储中试用 SnapCenter ，则可以获得一个高级捆绑包评估许可证，以便在控制器上安装。
+
+如果要试用 SnapCenter ，应联系销售代表以获取要在控制器上安装的超值包评估许可证。
+
+* 步骤 *
+
+. 使用 ONTAP 命令行登录到 NetApp 集群。
+. 添加 SnapManagerSuite 许可证密钥：
++
+`ssystem license add -license-code license_key`
+
++
+此命令可在管理员权限级别使用。
+
+. 验证是否已安装 SnapManagerSuite 许可证：
++
+`许可证显示`
+
+
+
+
+
+=== 删除试用许可证
+
+如果您使用的是基于控制器的 SnapCenter 标准许可证，并且需要删除基于容量的试用许可证（序列号以 "`50` " 结尾），则应使用 MySQL 命令手动删除此试用许可证。无法使用 SnapCenter 图形用户界面删除试用许可证。
+
+
+NOTE: 只有在使用基于 SnapCenter 标准控制器的许可证时，才需要手动删除试用许可证。如果您购买了基于 SnapCenter 标准容量的许可证并将其添加到 SnapCenter 图形用户界面中，则试用许可证将自动被覆盖。
+
+* 步骤 *
+
+. 在 SnapCenter 服务器上，打开 PowerShell 窗口以重置 MySQL 密码。
++
+.. 运行 Open-SmConnection cmdlet ，为 SnapCenterAdmin 帐户启动与 SnapCenter 服务器的连接会话。
+.. 运行 Set-SmRepositoryPassword 以重置 MySQL 密码。
++
+有关 cmdlet 的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+
+
+. 打开命令提示符并运行 mysql -u root -p 以登录到 MySQL 。
++
+MySQL 将提示您输入密码。输入在重置密码时提供的凭据。
+
+. 从数据库中删除试用许可证：
++
+`使用 NSM ；``D从 NSM_License 中删除，其中 NSM_License_Serial_Number="510000050" ；`
+
+

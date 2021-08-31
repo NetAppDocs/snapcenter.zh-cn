@@ -65,9 +65,9 @@ SnapCenter 图形用户界面或 PowerShell cmdlet
  a| 
 VMware VM
  a| 
-VMFS 或 NFS 数据存储库上的虚拟机文件系统（ Virtual Machine File Systems ， VMFS ）
+虚拟机文件系统（ VMFS ）或 NFS 数据存储库
  a| 
-VMware vSphere 或 VSC 克隆实用程序
+VMware vSphere
  a| 
 
 

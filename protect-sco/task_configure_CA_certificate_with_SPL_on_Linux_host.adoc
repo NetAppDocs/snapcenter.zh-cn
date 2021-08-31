@@ -27,14 +27,10 @@ IMPORTANT: SPL 使用位于‘ /var/opt/snapcenter/spl/etc ' 的文件 keystore.
 
 . 更改密钥库密码：
 +
-....
-keytool -storepasswd -keystore keystore.jks
-....
+ keytool -storepasswd -keystore keystore.jks
 . 将密钥库中私钥条目的所有别名的密码更改为密钥库使用的相同密码：
 +
-....
-keytool -keypasswd -alias "<alias_name>" -keystore keystore.jks
-....
+ keytool -keypasswd -alias "<alias_name>" -keystore keystore.jks
 +
 对 spl.properties 文件中的 SPL_keystore_pass 密钥进行相同的更新。
 
@@ -56,14 +52,10 @@ NOTE: SPL 密钥库的密码和专用密钥的所有关联别名密码应相同�
 . 找到文件 "keystore.jks" 。
 . 列出密钥库中添加的证书：
 +
-....
-keytool -list -v -keystore keystore.jks
-....
+ keytool -list -v -keystore keystore.jks
 . 添加根证书或中间证书：
 +
-....
-keytool -import -trustcacerts -alias <AliasNameForCerticateToBeImported> -file /<CertificatePath> -keystore keystore.jks
-....
+ keytool -import -trustcacerts -alias <AliasNameForCerticateToBeImported> -file /<CertificatePath> -keystore keystore.jks
 . 将根证书或中间证书配置为 SPL 信任存储后重新启动服务。
 
 
@@ -82,33 +74,23 @@ NOTE: 您应先添加根 CA 证书，然后再添加中间 CA 证书。
 . 找到文件 "keystore.jks" 。
 . 列出密钥库中添加的证书：
 +
-....
-keytool -list -v -keystore keystore.jks
-....
+ keytool -list -v -keystore keystore.jks
 . 添加同时具有私钥和公有密钥的 CA 证书。
 +
-....
-keytool -importkeystore -srckeystore <CertificatePathToImport> -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype JKS
-....
+ keytool -importkeystore -srckeystore <CertificatePathToImport> -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype JKS
 . 列出密钥库中添加的证书。
 +
-....
-keytool -list -v -keystore keystore.jks
-....
+ keytool -list -v -keystore keystore.jks
 . 验证密钥库是否包含与已添加到密钥库中的新 CA 证书对应的别名。
 . 将为 CA 证书添加的私钥密码更改为密钥库密码。
 +
 默认 SPL 密钥库密码是 spl.properties 文件中 SPL_keystore_pass 密钥的值。
 
 +
-....
-keytool -keypasswd -alias "<aliasNameOfAddedCertInKeystore>" -keystore keystore.jks
-....
+ keytool -keypasswd -alias "<aliasNameOfAddedCertInKeystore>" -keystore keystore.jks
 . 如果 CA 证书中的别名较长，并且包含空格或特殊字符（ "*" ， " ， " ），请将别名更改为简单名称：
 +
-....
-keytool -changealias -alias "<OrignalAliasName>" -destalias "<NewAliasName>" -keystore keystore.jks
-....
+ keytool -changealias -alias "<OrignalAliasName>" -destalias "<NewAliasName>" -keystore keystore.jks
 . 从 spl.properties 文件中的密钥库配置别名。
 +
 根据密钥 SPL_certificate_alias 更新此值。

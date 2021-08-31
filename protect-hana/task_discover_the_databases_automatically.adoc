@@ -29,8 +29,6 @@ summary: 资源是指 Linux 主机上由 SnapCenter 管理的 SAP HANA 数据库
 
 无法修改或删除自动发现的资源。
 
-有关支持和不支持自动发现的资源的信息，请参见 link:task_discover_the_databases_automatically.html["自动发现 Linux 主机上的资源"]。
-
 * 步骤 *
 
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择适用于 SAP HANA 数据库的插件。

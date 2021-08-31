@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 还原和恢复工作流包括规划，执行还原操作和监控操作。 
 ---
-= 还原 SAP HANA 数据库
+= 还原工作流
 :icons: font
 :imagesdir: ../media/
 

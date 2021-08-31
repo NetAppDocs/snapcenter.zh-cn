@@ -1,5 +1,5 @@
 ---
-permalink: protect-scsql/task_install_snapcenter_plug_in_package_for_windows_on_multiple_remote_hosts_using_cmdlets_scsql.html 
+permalink: protect-scsql/task_install_snapcenter_plug_in_package_for_windows_server_on_multiple_remote_hosts_using_cmdlets_scsql.html 
 sidebar: sidebar 
 keywords: credentials 
 summary: 您可以使用 Install-SmHostPackage PowerShell cmdlet 在多个主机上同时安装适用于 Microsoft SQL Server 的 SnapCenter 插件。 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您可以使用 SnapCenter 通过将一个或多个备份还原到活动文件系统来还原 Exchange 数据库。 
 ---
-= 还原 Exchange 资源
+= 还原工作流
 :icons: font
 :imagesdir: ../media/
 

@@ -48,7 +48,7 @@ NOTE: 如果发现上述资源，这些资源不支持数据保护操作。
 
 
  a| 
-SAP HANA 系统名称
+HANA 系统名称
  a| 
 输入描述性 SAP HANA 系统名称。只有在选择单个容器或 MDC 资源类型时，此选项才可用。
 
@@ -62,9 +62,9 @@ SID
 
 
  a| 
-HDBSQL 客户端主机
+插件主机
  a| 
-选择通信主机。
+选择插件主机。
 
 
 
@@ -80,13 +80,6 @@ HDBSQL 操作系统用户
  a| 
 输入为其配置 HDB 安全用户存储密钥的用户名。对于 Windows ， HDBSQL 操作系统用户必须是系统用户。因此，您必须为系统用户配置 HDB 安全用户存储密钥。
 
-
-
- a| 
-资源名称
- a| 
-输入资源名称。只有在选择非数据卷作为资源类型时，此选项才可用。
-
 |===
 . 在 * 提供存储占用空间 * 页面上，选择一个存储系统并选择一个或多个卷， LUN 和 qtree ，然后单击 * 保存 * 。
 +
@@ -94,19 +87,19 @@ HDBSQL 操作系统用户
 
 . 查看摘要，然后单击 * 完成 * 。
 +
-此时将显示数据库以及 SID ，通信主机，关联的资源组和策略以及整体状态等信息。
+此时将显示数据库以及 SID ，插件主机，关联的资源组和策略以及整体状态等信息
 
 
 
 如果要为用户提供对资源的访问权限，则必须将资源分配给用户。这样，用户就可以执行对分配给他们的资产具有权限的操作。
 
-链接： https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_and_assign_role_and_assets.html[Add 用户或组并分配角色和资产 ]
+link:https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_and_assign_role_and_assets.html["添加用户或组并分配角色和资产"]
 
 添加数据库后，您可以修改 SAP HANA 数据库详细信息。
 
 如果 SAP HANA 资源具有关联的备份，则无法修改以下内容：
 
-* 多租户数据库容器（ MDC ）： SID 或 HDBSQL 客户端主机
-* 单个容器： SID 或 HDBSQL 客户端主机
+* 多租户数据库容器（ MDC ）： SID 或 HDBSQL 客户端（插件）主机
+* 单个容器： SID 或 HDBSQL 客户端（插件）主机
 * 非数据卷：资源名称，关联 SID 或插件主机
 
