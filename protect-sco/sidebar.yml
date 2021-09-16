@@ -15,28 +15,13 @@ entries:
   - title: 适用于 Oracle 的插件所需的最低 ONTAP 特权
     url: "/protect-sco/reference_minimum_ontap_privileges_required_for_oracle_plug_in.html"
 - title: 安装适用于 Oracle 数据库的 SnapCenter 插件
-  url: "/protect-sco/task_install_snapcenter_plug_in_for_oracle_databases.html"
   entries:
+  - title: 安装适用于 Oracle 数据库的插件的工作流
+    url: "/protect-sco/install-snapcenter-plug-in-for-oracle-workflow.html"
   - title: 添加主机和安装适用于 Linux 或 AIX 的插件软件包的前提条件
     url: "/protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html"
-    entries:
-    - title: 安装适用于 Linux 的插件软件包的主机要求
-      url: "/protect-sco/reference_host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux.html"
-    - title: 安装适用于 AIX 的插件软件包的主机要求
-      url: "/protect-sco/reference_host_requirements_for_installing_the_snapcenter_plug_ins_package_for_aix.html"
-    - title: 设置用于安装适用于 Linux 或 AIX 的插件软件包的凭据
-      url: "/protect-sco/task_set_up_credentials_for_installing_the_plug_in_package_for_linux_or_aix.html"
-    - title: 配置 Oracle 数据库的凭据
-      url: "/protect-sco/task_configure_credentials_for_oracle_database.html"
   - title: 添加主机并安装适用于 Linux 或 AIX 的插件软件包
     url: "/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html"
-    entries:
-    - title: 使用 cmdlet 在多个远程主机上安装适用于 Linux 或 AIX 的插件软件包
-      url: "/protect-sco/task_install_snapcenter_plug_ins_package_for_linux_or_aix_on_multiple_remote_hosts_using_cmdlets.html"
-    - title: 使用命令行界面安装适用于 Linux 或 AIX 的插件软件包
-      url: "/protect-sco/concept_install_snapcenter_plug_ins_package_for_linux_or_aix_using_command_line_interface.html"
-    - title: 监控安装适用于 Linux 或 AIX 的插件软件包的状态
-      url: "/protect-sco/task_monitor_the_status_of_installing_plugin_for_Oracle.html"
   - title: 配置 SnapCenter 插件加载程序服务
     url: "/protect-sco/task_configure_snapcenter_plug_in_loader_service.html"
   - title: 在 Linux 主机上使用 SnapCenter 插件加载程序服务配置 CA 证书

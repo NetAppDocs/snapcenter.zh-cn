@@ -1,7 +1,7 @@
 ---
 permalink: uninstall/reference_prerequisites_for_removing_a_host.html 
 sidebar: sidebar 
-keywords: uninstall, prereqiuisites 
+keywords: uninstall, prerequisites, plug-in, plug-in packages 
 summary: 如果不再希望使用 SnapCenter 管理主机的数据保护作业，则可以删除该主机。例如，如果某个主机不再具有需要保护的数据，您可能需要将其删除。从 SnapCenter 服务器中删除主机之前，必须执行前提条件任务。 
 ---
 = 删除主机的前提条件
@@ -10,6 +10,8 @@ summary: 如果不再希望使用 SnapCenter 管理主机的数据保护作业�
 
 
 [role="lead"]
+您可以使用 SnapCenter 图形用户界面删除主机并卸载各个插件或插件软件包。此外，您还可以使用 SnapCenter 服务器主机上的命令行界面（ CLI ）或在任何主机上本地使用 Windows * 卸载程序 * 选项卸载远程主机上的各个插件或插件软件包。
+
 在从 SnapCenter 服务器中删除主机之前，您应先完成前提条件。
 
 * 您应以管理员身份登录。
@@ -43,3 +45,5 @@ summary: 如果不再希望使用 SnapCenter 管理主机的数据保护作业�
 * 您应已将 RBAC 用户分配给主机，适用于 Microsoft SQL Server 的 SnapCenter 插件，凭据，克隆生命周期资源组和存储系统。
 * 您应已以 RBAC 用户身份登录 SnapCenter 。
 
+
+有关卸载适用于 VMware vSphere 的 SnapCenter 插件的信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#remove-snapcenter-plug-in-for-vmware-vsphere["删除适用于 VMware vSphere 的 SnapCenter 插件"^]。

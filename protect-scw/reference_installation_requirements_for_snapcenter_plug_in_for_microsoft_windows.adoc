@@ -22,3 +22,184 @@ SnapCenter 管理员角色必须具有管理员权限。
 * 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
 * 如果要进行备份复制，必须设置 SnapMirror 和 SnapVault 。
 
+
+
+
+== 安装适用于 Windows 的 SnapCenter 插件软件包的主机要求
+
+在安装适用于 Windows 的 SnapCenter 插件软件包之前，您应熟悉一些基本的主机系统空间要求和规模估算要求。
+
+|===
+| 项目 | 要求 
+
+
+ a| 
+操作系统
+ a| 
+Microsoft Windows
+
+有关受支持版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+
+
+
+ a| 
+主机上 SnapCenter 插件的最小 RAM
+ a| 
+1 GB
+
+
+
+ a| 
+主机上 SnapCenter 插件的最小安装和日志空间
+ a| 
+5 GB
+
+
+NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消耗。所需的日志空间因要保护的实体数量和数据保护操作的频率而异。如果没有足够的磁盘空间，则不会为最近运行的操作创建日志。
+
+
+
+ a| 
+所需的软件包
+ a| 
+* Microsoft .NET Framework 4.5.2 或更高版本
+* Windows Management Framework （ WMF ） 4.0 或更高版本
+* PowerShell 4.0 或更高版本
+
+
+有关受支持版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+
+|===
+
+
+== 设置适用于 Windows 的插件的凭据
+
+SnapCenter 使用凭据对 SnapCenter 操作的用户进行身份验证。您应创建用于安装 SnapCenter 插件的凭据，以及用于在 Windows 文件系统上执行数据保护操作的其他凭据。
+
+* 您需要的内容 *
+
+* 在安装插件之前，您必须设置 Windows 凭据。
+* 您必须在远程主机上设置具有管理员权限的凭据，包括管理员权限。
+* 如果您为各个资源组设置了凭据，并且用户没有完全管理员权限，则必须至少为用户分配资源组和备份权限。
+
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 设置 * 。
+. 在设置页面中，单击 * 凭据 * 。
+. 单击 * 新建 * 。
+. 在凭据页面中，执行以下操作：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+凭据名称
+ a| 
+输入凭据的名称。
+
+
+
+ a| 
+用户名 / 密码
+ a| 
+输入用于身份验证的用户名和密码。
+
+** 域管理员或管理员组的任何成员
++
+指定要安装 SnapCenter 插件的系统上的域管理员或管理员组的任何成员。用户名字段的有效格式如下：
+
++
+*** `netbios\username`
+*** `d域名 FQDN\username`
+*** `用户名@UPN`
+
+
+** 本地管理员（仅适用于工作组）
++
+对于属于工作组的系统，请指定要安装 SnapCenter 插件的系统上的内置本地管理员。如果用户帐户具有提升的权限或在主机系统上禁用了用户访问控制功能，则可以指定属于本地管理员组的本地用户帐户。用户名字段的有效格式如下： `username`
+
++
+请勿在密码中使用双引号（ " ）。
+
+
+
+
+
+ a| 
+Password
+ a| 
+输入用于身份验证的密码。
+
+|===
+. 单击 * 确定 * 。
++
+设置凭据后，您可能需要在 * 用户和访问 * 页面上为用户或用户组分配凭据维护。
+
+
+
+
+
+== 在 Windows Server 2012 或更高版本上配置 GMSA
+
+通过 Windows Server 2012 或更高版本，您可以创建组托管服务帐户（ GMSA ），以便从受管域帐户自动管理服务帐户密码。
+
+* 您需要的内容 *
+
+* 您应具有 Windows Server 2012 或更高版本的域控制器。
+* 您应该拥有一个 Windows Server 2012 或更高版本的主机，该主机是域的成员。
+
+
+* 步骤 *
+
+. 创建一个 KDS 根密钥，以便为 GMSA 中的每个对象生成唯一的密码。
+. 对于每个域，从 Windows 域控制器运行以下命令： Add-KDSRootKey -EffectiveImmediately
+. 创建和配置 GMSA ：
++
+.. 创建用户组帐户。
+.. 向组中添加计算机对象。
+.. 使用刚刚创建的用户组创建 GMSA 。
++
+例如：
+
++
+ New-ADServiceAccount -name <ServiceAccountName> -DNSHostName <fqdn> -PrincipalsAllowedToRetrieveManagedPassword <group> -ServicePrincipalNames <SPN1,SPN2,…>
+.. 运行 `Get-ADServiceAccount` 命令验证服务帐户。
+
+
+. 在主机上配置 GMSA ：
++
+.. 在要使用 GMSA 帐户的主机上为 Windows PowerShell 启用 Active Directory 模块。
++
+为此，请从 PowerShell 运行以下命令：
+
++
+[listing]
+----
+PS C:\> Get-WindowsFeature AD-Domain-Services
+
+Display Name                           Name                Install State
+------------                           ----                -------------
+[ ] Active Directory Domain Services   AD-Domain-Services  Available
+
+
+PS C:\> Install-WindowsFeature AD-DOMAIN-SERVICES
+
+Success Restart Needed Exit Code      Feature Result
+------- -------------- ---------      --------------
+True    No             Success        {Active Directory Domain Services, Active ...
+WARNING: Windows automatic updating is not enabled. To ensure that your newly-installed role or feature is
+automatically updated, turn on Windows Update.
+----
+.. 重新启动主机。
+.. 在 PowerShell 命令提示符处运行以下命令，在主机上安装 GMSA ： `Install-AdServiceAccount <GMSA>`
+.. 运行以下命令验证您的 GMSA 帐户： `Test-AdServiceAccount <GMSA>`
+
+
+. 为主机上配置的 GMSA 分配管理权限。
+. 通过在 SnapCenter 服务器中指定已配置的 GMSA 帐户来添加 Windows 主机。
++
+SnapCenter 服务器将在主机上安装选定插件，并且在安装此插件期间，指定的 GMSA 将用作服务登录帐户。
+
+

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 通过 SnapCenter 服务器，您可以将应用程序作为 SnapCenter 的插件进行部署和管理。 
 ---
-= 为您的应用程序开发一个插件
+= 概述
 :icons: font
 :imagesdir: ../media/
 

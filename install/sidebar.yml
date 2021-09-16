@@ -74,28 +74,29 @@ entries:
   url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
 - title: 添加基于 SnapCenter 标准容量的许可证
   url: "/install/concept_snapcenter_standard_capacity_based_licenses.html"
-- title: 在 Windows 主机上配置存储
-  url: "/install/concept_provision_storage_on_windows_hosts.html"
+- title: 配置存储系统
   entries:
-  - title: 配置 LUN 存储
-    url: "/install/concept_configure_lun_storage.html"
+  - title: 在 Windows 主机上配置存储
     entries:
-    - title: 建立 iSCSI 会话
-      url: "/install/task_establish_an_iscsi_session.html"
-    - title: 断开 iSCSI 会话的连接
-      url: "/install/task_disconnect_an_iscsi_session.html"
-    - title: 创建和管理 igroup
-      url: "/install/concept_create_and_manage_igroups.html"
-    - title: 创建和管理磁盘
-      url: "/install/task_create_and_manage_disks.html"
-  - title: 创建和管理 SMB 共享
-    url: "/install/concept_create_and_manage_smb_shares.html"
-  - title: 回收存储系统上的空间
-    url: "/install/task_reclaim_space_on_the_storage_system.html"
-  - title: 使用 PowerShell cmdlet 配置存储
-    url: "/install/reference_provision_storage_using_powershell_cmdlets.html"
-- title: 在 VMware 环境中配置存储
-  url: "/install/concept_provision_storage_in_vmware_environments.html"
+    - title: 配置 LUN 存储
+      url: "/install/concept_configure_lun_storage.html"
+      entries:
+      - title: 建立 iSCSI 会话
+        url: "/install/task_establish_an_iscsi_session.html"
+      - title: 断开 iSCSI 会话的连接
+        url: "/install/task_disconnect_an_iscsi_session.html"
+      - title: 创建和管理 igroup
+        url: "/install/concept_create_and_manage_igroups.html"
+      - title: 创建和管理磁盘
+        url: "/install/task_create_and_manage_disks.html"
+    - title: 创建和管理 SMB 共享
+      url: "/install/concept_create_and_manage_smb_shares.html"
+    - title: 回收存储系统上的空间
+      url: "/install/task_reclaim_space_on_the_storage_system.html"
+    - title: 使用 PowerShell cmdlet 配置存储
+      url: "/install/reference_provision_storage_using_powershell_cmdlets.html"
+  - title: 在 VMware 环境中配置存储
+    url: "/install/concept_provision_storage_in_vmware_environments.html"
 - title: 配置与 SnapCenter 服务器的安全 MySQL 连接
   url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
 - title: 安装期间在 Windows 主机上启用的功能

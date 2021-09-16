@@ -2,9 +2,10 @@
 section: protect-scw
 title: 保护 Windows 文件系统
 entries:
-- title: 适用于 Microsoft Windows 的 SnapCenter 插件概述
-  url: "/protect-scw/concept_snapcenter_plug_in_for_microsoft_windows_overview.html"
+- title: 适用于 Microsoft Windows 的 SnapCenter 插件概念
   entries:
+  - title: 适用于 Microsoft Windows 的 SnapCenter 插件概述
+    url: "/protect-scw/concept_snapcenter_plug_in_for_microsoft_windows_overview.html"
   - title: 适用于 Microsoft Windows 的 SnapCenter 插件的功能
     url: "/protect-scw/reference_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_windows.html"
   - title: 适用于 Windows 的 SnapCenter 插件功能
@@ -22,29 +23,23 @@ entries:
   - title: Windows 文件系统克隆的源和目标
     url: "/protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html"
 - title: 安装适用于 Microsoft Windows 的 SnapCenter 插件
-  url: "/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html"
   entries:
+  - title: 安装工作流
+    url: "/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html"
   - title: 适用于 Microsoft Windows 的 SnapCenter 插件的安装要求
     url: "/protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html"
-    entries:
-    - title: 安装适用于 Windows 的 SnapCenter 插件软件包的主机要求
-      url: "/protect-scw/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows.html"
-    - title: 设置适用于 Windows 的插件的凭据
-      url: "/protect-scw/task_set_up_your_credentials_for_the_plug_in_for_windows.html"
-    - title: 在 Windows Server 2012 或更高版本上配置 GMSA
-      url: "/protect-scw/task_configure_gMSA_on_windows_server_2012_or_later.html"
   - title: 添加主机并安装适用于 Microsoft Windows 的 SnapCenter 插件
     url: "/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html"
+  - title: 使用 PowerShell cmdlet 在多个远程主机上安装适用于 Microsoft Windows 的 SnapCenter 插件
+    url: "/protect-scw/task_install_on_multiple_remote_hosts_using_powershell_cmdlets.html"
+  - title: 通过命令行无提示安装适用于 Microsoft Windows 的 SnapCenter 插件
+    url: "/protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html"
+  - title: 监控 SnapCenter 插件软件包安装状态
+    url: "/protect-scw/task_monitor_snapcenter_plug_in_package_installation_status.html"
+  - title: 配置 CA 证书
     entries:
-    - title: 使用 PowerShell cmdlet 在多个远程主机上安装适用于 Microsoft Windows 的 SnapCenter 插件
-      url: "/protect-scw/task_install_on_multiple_remote_hosts_using_powershell_cmdlets.html"
-    - title: 通过命令行无提示安装适用于 Microsoft Windows 的 SnapCenter 插件
-      url: "/protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html"
-    - title: 监控 SnapCenter 插件软件包安装状态
-      url: "/protect-scw/task_monitor_snapcenter_plug_in_package_installation_status.html"
-  - title: 生成 CA 证书 CSR 文件
-    url: "/protect-scw/reference_generate_CA_certificate_CSR_file.html"
-    entries:
+    - title: 生成 CA 证书 CSR 文件
+      url: "/protect-scw/reference_generate_CA_certificate_CSR_file.html"
     - title: 导入 CA 证书
       url: "/protect-scw/task_import_CA_certificates.html"
     - title: 获取 CA 证书指纹
@@ -56,8 +51,9 @@ entries:
 - title: 安装适用于 VMware vSphere 的 SnapCenter 插件
   url: "/protect-scw/task_install_snapcenter_plug_in_for_vmware_vsphere.html"
 - title: 备份 Windows 文件系统
-  url: "/protect-scw/reference_back_up_windows_file_systems.html"
   entries:
+  - title: 备份工作流
+    url: "/protect-scw/reference_back_up_windows_file_systems.html"
   - title: 确定 Windows 文件系统的资源可用性
     url: "/protect-scw/task_determine_resource_availability_for_windows_file_systems.html"
   - title: 为 Windows 文件系统创建备份策略
@@ -82,18 +78,20 @@ entries:
     url: "/protect-scw/task_remove_backups_using_powershell_cmdlets_for_windows.html"
   - title: 使用 PowerShell cmdlet 清理二级备份计数
     url: "/protect-scw/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_windows.html"
-- title: 还原 Windows 文件系统备份
-  url: "/protect-scw/task_restore_windows_file_system_backups.html"
+- title: 还原 Windows 文件系统
   entries:
+  - title: 还原 Windows 文件系统备份
+    url: "/protect-scw/task_restore_windows_file_system_backups.html"
   - title: 使用 PowerShell cmdlet 还原和恢复资源
     url: "/protect-scw/task_restore_and_recover_resources_using_powershell_cmdlets_for_windows.html"
   - title: 监控还原操作
     url: "/protect-scw/task_monitor_restore_operations.html"
   - title: 取消还原操作
     url: "/protect-scw/task_cancel_restore_operations.html"
-- title: 从 Windows 文件系统备份克隆
-  url: "/protect-scw/task_clone_from_a_windows_file_system_backup.html"
+- title: 克隆 Windows 文件系统
   entries:
+  - title: 从 Windows 文件系统备份克隆
+    url: "/protect-scw/task_clone_from_a_windows_file_system_backup.html"
   - title: 使用 PowerShell cmdlet 克隆备份
     url: "/protect-scw/task_clone_backups_using_powershell_cmdlets_for_windows.html"
   - title: 监控克隆操作

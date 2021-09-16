@@ -1721,13 +1721,11 @@
   <block id="d80214d2bee819ffe96b11b6af4643e9" category="list-text">您应在 /etc/lvm/lvm.conf 中设置 use_lvmetad = 0 的值，并停止 lvm2-lvmetad 服务，以便在 Oracle Linux 7 或更高版本或 Red Hat Enterprise Linux （ RHEL ） 7 或更高版本的存储区域网络（ SAN ）环境中成功执行克隆。</block>
   <block id="30dca629b8dd44dcc3eb42720281eefa" category="list-text">如果您使用的是 Oracle 数据库 11.2.0.3 或更高版本，并且使用 NID 脚本更改了辅助实例的数据库 ID ，则应安装 13366202 Oracle 修补程序。</block>
   <block id="fed30036a3caffc826b4e66f434f67ea" category="summary">在安装适用于 AIX 的 SnapCenter 插件软件包之前，应确保主机满足要求。</block>
-  <block id="37f07406c046a4721856b0fac9f52aa2" category="doc">安装适用于 AIX 的插件软件包的主机要求</block>
   <block id="43574ab73a6cbc674506ff003387dcb1" category="paragraph">操作系统</block>
   <block id="895327977020e495debf0b375c7541d8" category="paragraph">AIX 6.1 或更高版本</block>
   <block id="974c2262615af73433567515efbb80e9" category="paragraph">4 GB</block>
   <block id="2dafadf226896cb3cd576171339c6e92" category="paragraph">Java 1.8.x （ 64 位） IBM Java</block>
   <block id="bac8e3a852c936b4db89afd35d4d962a" category="paragraph">如果已将 Java 升级到最新版本，则必须确保 /var/opt/snapcenter/spl/etc/spl.properties 上的 java_home 选项设置为正确的 Java 版本和路径。</block>
-  <block id="3ac1e679346c49b1b4b63dc199e57d40" category="section-title">为 AIX 插件主机的非 root 用户配置 sudo 权限</block>
   <block id="8550694ccd5a31f4fce5f8d906032e80" category="paragraph">通过 SnapCenter 4.4 及更高版本，非 root 用户可以安装适用于 AIX 的 SnapCenter 插件软件包并启动插件过程。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。</block>
   <block id="6a3ea203b56114b349f3a7f98d6fe556" category="list-text">sudo 1.8.7 或更高版本。</block>
   <block id="15365f4ad2016523469fa400d8c372e8" category="list-text">确保非 root 用户属于 Oracle 安装组。</block>
@@ -2006,7 +2004,6 @@
   <block id="e47bd9c08179d387408047230d9ef7ef" category="paragraph">成功导入数据后，与导入的数据库关联的计划将在 SnapManager for Oracle 和 SnapManager for SAP 中暂停。</block>
   <block id="b5e9f9f4ad917669386f4b1249b9b63c" category="admonition">导入后，必须使用 SnapCenter 管理导入的数据库或文件系统。</block>
   <block id="4b4afc08c1d43ce9e4886a794bc3d7cd" category="paragraph">每次执行导入工具时的日志都存储在名称为 spl_migration_timestamp.log 的 /var/opt/snapcenter/spl/logs_ 目录中。您可以参考此日志来查看导入错误并对其进行故障排除。</block>
-  <block id="7da2a161bc018503df192e06b8c7b47b" category="doc">监控安装适用于 Linux 或 AIX 的插件软件包的状态</block>
   <block id="92be3471faf8c6f450426df8acbe531d" category="summary">如果数据丢失，您可以使用 SnapCenter 将数据从一个或多个备份还原到活动文件系统，然后恢复数据库。</block>
   <block id="3d20155cd1c7d94c87e13305eebbe0a3" category="doc">还原 Oracle 数据库</block>
   <block id="83225f4cc05d7963245700d3ddeca519" category="paragraph">可以使用配置的归档日志位置提供的归档日志执行恢复。如果所配置位置没有恢复所需的归档日志，则应挂载包含这些日志的 Snapshot 副本，并将路径指定为外部归档日志。</block>
@@ -2381,13 +2378,11 @@
   <block id="50e49495aa19588e0ec1182f0508cb49" category="list-text">安装和配置 SnapCenter 服务器。 <block ref="95af5dc153ac834537f7409529a5ee1b" category="inline-link-macro-rx"></block></block>
   <block id="0d02a808dabcaf9d4f55c74b15a2b718" category="list-text">通过添加存储系统连接来配置 SnapCenter 环境。 <block ref="ce779ec745f4c36b70de0ced83599416" category="inline-link-macro-rx"></block></block>
   <block id="8f58dc196f78d39b0f218530d41b7b21" category="admonition">SnapCenter 不支持在不同集群上使用相同名称的多个 SVM 。使用 SVM 注册或集群注册向 SnapCenter 注册的每个 SVM 都必须是唯一的。</block>
-  <block id="b30c362730672d6d523a0e70de7ccdf4" category="list-text">为安装用户创建身份验证模式为 Linux 或 AIX 的凭据。 <block ref="0c6d354297924f2419ac39cc3238c7f6" category="inline-link-macro-rx"></block></block>
   <block id="b62a5484254d87b92d2c43f0a8e4f8ff" category="list-text">添加主机，安装插件以及发现资源。</block>
   <block id="8c024597770d8167f96572deb5ca2951" category="list-text">如果您使用 SnapCenter 服务器保护驻留在 VMware RDM LUN 或 VMDK 上的 Oracle 数据库，则必须部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件。</block>
   <block id="8c47ad717b7a2a0466e1a1afca604685" category="list-text">在 Linux 或 AIX 主机上安装 Java 。</block>
   <block id="ace028fe1c5dc8fb39091440d89fd9fd" category="inline-link-macro">Linux 主机要求</block>
   <block id="428619bcce0590fe3568444dc1124abb" category="inline-link-macro">AIX 主机要求</block>
-  <block id="659f113ad463103f249639d769d7fcf2" category="paragraph">请参见 <block ref="abc7f0b2caf14ef70ebf279606c5e975" category="inline-link-macro-rx"></block> 或 <block ref="878878be118978ada0d40eb77e70f768" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="e3bcbd4b72b9abcfba6dd89fa833c9d7" category="list-text">您应将应用程序防火墙的超时值设置为 3 小时或更长时间。</block>
   <block id="2f66d67da390e5c77db3fc5e681393ab" category="list-text">如果在 NFS 环境中使用 Oracle 数据库，则必须至少为主存储或二级存储配置一个 NFS 数据 LIF ，才能执行挂载，克隆，验证和还原操作。</block>
   <block id="48b0f0fb43e0a3e1a7bac0922b6b61c9" category="list-text">如果您有多个数据路径（ LIF ）或 DNFS 配置，则可以在数据库主机上使用 SnapCenter 命令行界面执行以下操作：</block>
@@ -2462,14 +2457,12 @@
   <block id="a47df408ed43e2408db4d0dcacdc483a" category="paragraph">您可以使用 WaitForCompletion 选项轮询作业。如果指定了此选项，则此命令将继续轮询服务器，直到备份作业完成为止。</block>
   <block id="ecc2d042ed750fbf1eac63637f9b3077" category="list-text">从 SnapCenter 检索日志： _get-SmLogs_</block>
   <block id="09b368e7a40c6562c6eb5235c4eda0ba" category="summary">在安装适用于 Linux 的 SnapCenter 插件软件包之前，应确保主机满足要求。</block>
-  <block id="87fe7dcaf423e60bb397ac6c32fb88f5" category="doc">安装适用于 Linux 的插件软件包的主机要求</block>
   <block id="c73bbd3786350b0a8d3577d82afdf489" category="list-text">Red Hat Enterprise Linux</block>
   <block id="fdcd362ac5f5f9817e70642dd2a48bfd" category="list-text">Oracle Linux</block>
   <block id="c2d742e2aecdede3243c86015a588b10" category="admonition">如果在 Oracle Linux 或 Red Hat Enterprise Linux 6.6 或 7.0 操作系统的 LVM 上使用 Oracle 数据库，则必须安装最新版本的逻辑卷管理器（ LVM ）。</block>
   <block id="a51e41e4cd7b03dd48ce2e65ed3e1736" category="list-text">SUSE Linux Enterprise Server （ SLES ）</block>
   <block id="083ad21990802d20fc5fdefdb7255565" category="paragraph">2 GB</block>
   <block id="3a955e6f54e73fa288537f456087e118" category="paragraph">Java 1.8.x （ 64 位） Oracle Java 和 OpenJDK 版本</block>
-  <block id="5fff0bde0ed421c9283b25295ca29d9e" category="section-title">为 Linux 插件主机的非 root 用户配置 sudo 权限</block>
   <block id="2ea002d427cbfb999f631ee124f6c1e4" category="paragraph">通过 SnapCenter 2.0 及更高版本，非 root 用户可以安装适用于 Linux 的 SnapCenter 插件软件包并启动插件过程。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。</block>
   <block id="bf73671827fef4f1a412173c21cca9e0" category="list-text">/home/_sudo _user_//.SC_NetApp/snapcenter_linux_host_plugin.bin</block>
   <block id="4e665afb5c15dd75650eeba423b153f0" category="list-text">登录到要安装适用于 Linux 的 SnapCenter 插件软件包的 Linux 主机。</block>
@@ -2630,11 +2623,7 @@
   <block id="720f2f026c6bddcf31ae0284bddbdc19" category="list-text">查找 SnapCenter 插件加载程序服务的状态：</block>
   <block id="8b0b2a1839f41290933219798e6b836c" category="list-text">在 SnapCenter 插件加载程序服务中查找所做的更改：</block>
   <block id="1937942be6bc478199bc930af1623991" category="summary">SnapCenter 使用凭据对 SnapCenter 操作的用户进行身份验证。您应创建在 Linux 或 AIX 主机上安装插件软件包的凭据。</block>
-  <block id="54e606664277702040334d6ae19245af" category="doc">设置用于安装适用于 Linux 或 AIX 的插件软件包的凭据</block>
   <block id="93ec70472eb9ceff1f5bd3b65b97df6c" category="paragraph">这些凭据是为 root 用户或具有 sudo 权限的非 root 用户创建的，用于安装和启动插件过程。</block>
-  <block id="ee975ab3509bd657f7931e64b0e63cd6" category="inline-link-macro">为 Linux 主机配置 sudo 权限</block>
-  <block id="9e4adf4cf6c21dcf3474ef83d4aca759" category="inline-link-macro">为 AIX 主机配置 sudo 权限</block>
-  <block id="d52b5f5989889caf1479ead5271c3780" category="paragraph">有关信息，请参见 <block ref="841078cbc308490a647acca3c788bdf9" category="inline-link-macro-rx"></block> 或 <block ref="2d413154e577abfe1f9ca014d649a6a4" category="inline-link-macro-rx"></block>。</block>
   <block id="bb7cb5e0c78f0ae62b8ec079f1b70efc" category="cell">* 最佳实践： * 虽然允许您在部署主机和安装插件后创建凭据，但最佳实践是在添加 SVM 之后，在部署主机和安装插件之前创建凭据。</block>
   <block id="2c15d2ecea29fd187ddafb032b93d4a6" category="list-text">在设置页面中，单击 * 凭据 * 。</block>
   <block id="a789173ed9b6f7eea2bff098b4efbb2b" category="list-text">在 Credential 页面中，输入凭据信息：</block>
@@ -2694,8 +2683,6 @@
   <block id="74be1413d8c1294602864c1d9e25f626" category="paragraph">但是，如果上次备份完成并显示警告，则操作锁定文件可能不会被删除，下次备份操作将进入等待队列。如果未删除 * 。 sm_lock_dbsid* 文件，则此文件最终可能会被取消。在这种情况下，您必须执行以下步骤来手动删除操作锁定文件：</block>
   <block id="aededc4f899d57c4f01639108c3e587e" category="list-text">在命令提示符处，导航到 $ORACLE_HOME/DBS 。</block>
   <block id="3ab07b443e5100312a8428cab6f6a083" category="list-text">删除操作锁定：``rm -rf .sm_lock_dbsid.``</block>
-  <block id="0ede7ab2c0eeb128899692b7ee089390" category="summary">您应使用 Install-SmHostPackage PowerShell cmdlet 在多个主机上安装适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包。</block>
-  <block id="1ef67d1d7485140828bcdd8bcb9c2496" category="doc">使用 cmdlet 在多个远程主机上安装适用于 Linux 或 AIX 的插件软件包</block>
   <block id="8bfbb41a79c1c2438e1a53e2a727fb3c" category="paragraph">您应使用 _Install-SmHostPackage_ PowerShell cmdlet 在多个主机上安装适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包。</block>
   <block id="367659a073d284a1e67b11ac7a540d28" category="paragraph">您应在要安装此插件软件包的每个主机上以具有本地管理员权限的域用户身份登录到 SnapCenter 。</block>
   <block id="6bc166d97ec030b1433b97435bed0c57" category="list-text">在 SnapCenter 服务器主机上，使用 _Open-SmConnection_ cmdlet 建立会话，然后输入凭据。</block>
@@ -2706,9 +2693,6 @@
   <block id="9a74e4c2ef4e109873578f5a78083805" category="paragraph">您可以使用 SnapCenter 拆分克隆可插拔数据库（ PDB ）。</block>
   <block id="0841514f865605a705539d269e140769" category="paragraph">如果您为要克隆 PDB 的目标 CDB 创建备份，则在拆分 PDB 克隆时，克隆的 PDB 也会从包含克隆 PDB 的目标 CDB 的所有备份中删除。</block>
   <block id="fbea596c70f1dfc79ca7ad9bfdcc546a" category="list-text">选择 PDB 克隆（ targetCDB ： PDBClone ），然后单击 <block ref="4e76ccc6d666f337d0615fe61d91903b" category="inline-image-macro-rx" type="image"></block>。</block>
-  <block id="90eaca8e42f9e29ca6e2dbe8ffabdac7" category="summary">您可以分别在本地 Linux 或 AIX 主机上安装适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包。您可以使用命令行界面安装插件软件包。</block>
-  <block id="7225ddf7d6c391ad0fef9b2ab5029cf5" category="doc">使用命令行界面安装适用于 Linux 或 AIX 的插件软件包</block>
-  <block id="0d861bf51229ec93f6a29048f4b518a4" category="paragraph">适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包应分别安装在 Oracle 数据库所在的每个 Linux 或 AIX 主机上。</block>
   <block id="13b1b3e0bc3b04dbb4ed1ac43c4ba18c" category="section-title">以交互方式安装适用于 Linux 的插件软件包</block>
   <block id="fbd0c661f57ca212ba5f99dad7045478" category="paragraph">您可以在 Linux 主机上以交互方式安装适用于 Linux 的 SnapCenter 插件软件包。</block>
   <block id="914a337023fe8ac3119f5b617372d906" category="list-text">您应查看安装插件软件包的前提条件。</block>
@@ -2718,7 +2702,6 @@
   <block id="4f7df418b673d87032b693c0fbf53c3e" category="list-text">在命令提示符处，导航到下载安装文件的目录，然后运行： ` ./SnapCenter_linux_host_plugin.bin – i swing`</block>
   <block id="c471b3f3d411d33374db0167e4c41146" category="list-text">按照向导中的屏幕提示安装插件软件包。</block>
   <block id="e70d42f5d49913544a428c1f2aa023ad" category="list-text">单击 * 完成 * 完成安装。</block>
-  <block id="e0720ceb0251a97f2002ce623bb01273" category="section-title">在集群主机上安装适用于 Linux 或 AIX 的插件软件包</block>
   <block id="681770964a4bfb42839895bbf58e0651" category="paragraph">您应在集群主机的两个节点上安装适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包。</block>
   <block id="330b6b7a2eb8bbba8866063d7412e0ba" category="paragraph">集群主机的每个节点都有两个 IP 。其中一个 IP 是相应节点的公有 IP ，另一个 IP 是两个节点之间共享的集群 IP 。</block>
   <block id="fd4422ac155c282bd5ba8bd8e42ee500" category="list-text">在集群主机的两个节点上安装适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包。</block>
@@ -3259,15 +3242,7 @@
   <block id="c0919ecf5802c65bf773794b7af70540" category="admonition">对于基于 SnapCenter 控制器的许可证，您不会在 SnapCenter 图形用户界面中输入任何许可证信息。</block>
   <block id="17449a90a0d7161db56cba83fa4f2728" category="list-text">锁定到控制器的序列号</block>
   <block id="eb55a5732c8239cbf4f476df49cc20a3" category="paragraph">有关所需许可证的信息，请参见 <block ref="6de8516502145d64739d69762f4898a1" category="inline-link-macro-rx"></block>。</block>
-  <block id="cb71fa17674dc4797c071cbc95e38b23" category="summary">您可以使用 SnapCenter 将 NetApp 存储分配给受支持的 Windows Server 主机。使用 SnapCenter 配置 Windows 主机可确保您创建的备份应用程序一致。您必须已安装并配置适用于 Windows 的 SnapCenter 插件软件包。</block>
   <block id="0daccd45abdac281e7508c5de0fa492c" category="doc">在 Windows 主机上配置存储</block>
-  <block id="f5c60ff969832979e48023e1f139533e" category="paragraph">如果您是从 NetApp SnapManager 产品访问 SnapCenter 的，并且对主机的配置方式感到满意，则可以跳过此配置信息。</block>
-  <block id="d8f6e7545bcfd88c089c4f4e7f1dd581" category="paragraph">在配置存储时，您可以执行以下任务：</block>
-  <block id="e639850448e9f88d00bcf39f11ef248c" category="list-text">配置 FC 连接或 iSCSI 连接的 LUN</block>
-  <block id="5aa219bd36b3aee5d534c285037a1b1c" category="list-text">建立 iSCSI 会话以连接到 LUN</block>
-  <block id="0bb1ca17dcceed1d4fabc183c544ff8f" category="list-text">创建 igroup 以指定哪些主机可以访问存储系统上的给定 LUN</block>
-  <block id="f32fe896744fc700791c1d2f3793f7a5" category="list-text">创建磁盘，调整磁盘大小并连接到磁盘</block>
-  <block id="c6074d3b5ef6196f31a5ab6de252833f" category="list-text">在 Storage Virtual Machine （ SVM ）上创建 SMB 共享</block>
   <block id="062174c6682cfbf4f3b6b5c1d6707824" category="list-text">使用 ONTAP 命令行登录到 NetApp 控制器。</block>
   <block id="9865599458fea2a88fc4f94d29ab5c4e" category="list-text">输入 license show 命令，然后查看输出以确定是否已安装 SnapManagerSuite 许可证。</block>
   <block id="5b12cbd18ef5bbd432e4411b45e422ad" category="paragraph">在此示例中，安装了 SnapManagerSuite 许可证，因此无需执行其他 SnapCenter 许可操作。</block>
@@ -5240,7 +5215,6 @@
   <block id="b387198e1b998aa635e2ad89704fa61e" category="list-text">如果已安装 SnapManager for Microsoft Exchange Server 和 SnapDrive for Windows ，则必须先注销 SnapDrive for Windows 使用的 VSS 硬件提供程序，然后才能在同一 Exchange Server 上安装适用于 Exchange 的插件，以确保使用 SnapCenter 成功保护数据。</block>
   <block id="e14f254ce5508b044595b70ba76e2dd9" category="list-text">如果 SnapManager for Microsoft Exchange Server 和 Plug-in for Exchange 安装在同一台服务器上，则必须暂停或从 Windows 计划程序中删除 SnapManager for Microsoft Exchange Server 创建的所有计划。</block>
   <block id="363807fbbec214888e9bb4ab89312c45" category="list-text">主机必须可从服务器解析为完全限定域名（ FQDN ）。如果修改了 hosts 文件以使其可解析，并且在 hosts 文件中同时指定了短名称和 FQDN ，请在 SnapCenter hosts 文件中以以下格式创建一个条目： _&lt;IP_address&gt; &lt;host_FQDN&gt; &lt;host_name&gt;_ 。</block>
-  <block id="4cd3572fc01f00e2cce098eaddcc1092" category="list-text">确保防火墙中未阻止以下端口，否则添加主机操作将失败。要解决此问题描述，请配置动态端口范围。有关详细信息，请参见<block ref="70d4a5fd2803e35738264291f84fc1aa" category="inline-link-rx"></block>。</block>
   <block id="16b480a328aa6342db0d1f44787d9eaf" category="list-text">对于 Windows 2016 和 Exchange 2016 ，端口范围为 50000 - 51000</block>
   <block id="3d865e6796dba371ef2bbaf9003ed1eb" category="list-text">对于 Windows 2012 R2 和 Exchange 2013 ，端口范围为 6000 - 6500</block>
   <block id="2973bd6a9b781fc2968849d58205311c" category="list-text">对于 Windows 2019 ，端口范围为 49152 - 65536</block>
@@ -6011,7 +5985,6 @@
   <block id="498d6b1da14c25d0b55edacba7034729" category="list-text">在主机系统上，导航到控制面板，然后单击 * 卸载程序 * 。</block>
   <block id="4f2917b274eaeec6e5f341db42a6589a" category="list-text">在程序列表中，选择要卸载的 SnapCenter 插件或插件软件包，然后单击 * 卸载 * 。</block>
   <block id="6fb1d25c0bf4faf8704b0830e098009d" category="paragraph">Windows 将卸载选定软件包中的所有插件。</block>
-  <block id="c80c3794a235a89c6ccd6fa9d315873d" category="summary">您可以使用 SnapCenter 图形用户界面删除主机并卸载各个插件或插件软件包。您也可以使用 SnapCenter 服务器主机上的命令行界面 \ （ cli\ ）或在任何主机上本地使用 Windows 卸载程序选项卸载远程主机上的各个插件或插件软件包。</block>
   <block id="60bea4969590084ae9e74b765b209fad" category="doc">卸载 SnapCenter 插件软件包</block>
   <block id="f3442009cf8c0e228473ba15a66ac563" category="paragraph">您可以使用 SnapCenter 图形用户界面删除主机并卸载各个插件或插件软件包。此外，您还可以使用 SnapCenter 服务器主机上的命令行界面（ CLI ）或在任何主机上本地使用 Windows * 卸载程序 * 选项卸载远程主机上的各个插件或插件软件包。</block>
   <block id="92d37724657724129ae0451584c728aa" category="inline-link">删除适用于 VMware vSphere 的 SnapCenter 插件</block>
@@ -6171,7 +6144,6 @@
   <block id="e8afddd41cf3a716324442f7a4538460" category="list-text">列出可使用 Get-SmBackup 或 Get-SmResourceGroup cmdlet 克隆的备份。</block>
   <block id="b92d70c39b6e5b77f828b04b1f8cf2e7" category="paragraph">此示例显示有关指定资源组的信息：</block>
   <block id="490bfe5ade57157a35bf58b686acb1cf" category="list-text">使用 New-SmClone cmdlet 从克隆资源组或现有备份启动克隆操作。</block>
-  <block id="315a460f7f81dcfd725404e026e0565e" category="doc">准备保护自定义插件资源</block>
   <block id="517a125fd46ee1a60309a280447487c0" category="summary">备份资源包括与 SnapCenter 服务器建立连接，添加资源，添加策略，创建备份资源组和备份。</block>
   <block id="d278818a36e5f43a96b7082ec24a25e0" category="paragraph">此示例添加了以下资源：</block>
   <block id="d51b1b50a87024de88cbdf1b6d828c21" category="paragraph">此示例将创建一个新的备份策略：</block>
@@ -7243,11 +7215,6 @@
   <block id="33a8f9c4fe2c0cd8ae505b8d4831fe28" category="list-text">适用于 SAP HANA 数据库的 SnapCenter 插件是适用于 Linux 的 SnapCenter 插件包的一部分。在安装适用于 Linux 的 SnapCenter 插件软件包之前，您应已在 Windows 主机上安装 SnapCenter 。</block>
   <block id="6ba7cd9b650690bef3ee79ccfd130b0a" category="paragraph"><block ref="6ba7cd9b650690bef3ee79ccfd130b0a" category="inline-link-macro-rx"></block></block>
   <block id="fa5ad2e8d730251bd90eea875f95091c" category="paragraph">如果要管理 MySQL 或 DB2 应用程序，可以使用 NetApp 提供的 MySQL 和 DB2 自定义插件。MySQL 和 DB2 自定义插件可从获取<block ref="480a3096e7d732b8f84f20e353e713fd" category="inline-link-rx"></block></block>
-  <block id="c1771eca1b0509d4428cca5735b54165" category="summary">要安装 SnapCenter 自定义插件的 Linux 主机必须满足相关的软件，数据库和操作系统要求。</block>
-  <block id="c63099b1ea6cc0822c3d3ea8084372c6" category="doc">准备在 Linux 主机上安装 SnapCenter 自定义插件</block>
-  <block id="96617efb98ff2c341a6af4791e056cc2" category="paragraph">SnapCenter 自定义插件是适用于 Linux 的 SnapCenter 插件包的一部分。在安装适用于 Linux 的 SnapCenter 插件软件包之前，您必须已在 Windows 主机上安装 SnapCenter 。</block>
-  <block id="15ebf2f3be5051263a1f17cb1c2a135c" category="summary">如果您的环境不允许从 SnapCenter 服务器远程安装 SnapCenter 自定义插件，则可以直接在 Linux 主机上安装该插件。您可以使用交互式向导或命令行界面安装此插件。</block>
-  <block id="38e65e06e8687378a088624bcffb0435" category="doc">在 Linux 主机上单独安装 SnapCenter 自定义插件</block>
   <block id="0f86a1aee795e1b2600e86eb6b2722ec" category="summary">您应使用 SnapCenter 用户界面（ UI ）安装 SnapCenter 自定义插件。如果您的环境不允许从 SnapCenter UI 远程安装此插件，您可以使用命令行界面 \ （ cli\ ）在控制台模式或静默模式下安装此自定义插件。</block>
   <block id="b5c24629ead5c583e2208216205af10a" category="doc">使用命令行界面在 Linux 主机上安装 SnapCenter 自定义插件</block>
   <block id="0f18e8aaa7478aae88b697e6b89d15f0" category="paragraph">您应使用 SnapCenter 用户界面（ UI ）安装 SnapCenter 自定义插件。如果您的环境不允许从 SnapCenter UI 远程安装此插件，则可以使用命令行界面（ CLI ）在控制台模式或静默模式下安装此自定义插件。</block>
@@ -7271,4 +7238,32 @@
   <block id="d6dd28fb84b3a677cdf709e3bd31e79d" category="sidebar">还原 SAP HANA 数据库</block>
   <block id="409bf5fec45b4fdc568b8daf282ddbde" category="sidebar">适用于 Microsoft Exchange Server 的 SnapCenter 插件概念</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">概述</block>
+  <block id="8be45a76eb810a7022d2e3f4f9917085" category="section-title">Linux 主机要求</block>
+  <block id="b8be58329edfa59d774ce8216f3afcfe" category="section-title">为 Linux 主机的非 root 用户配置 sudo 权限</block>
+  <block id="6347721d31864738b0e7a03f5553e69b" category="section-title">AIX 主机要求</block>
+  <block id="f805f99adc12df0c565005d33166c7bc" category="section-title">为 AIX 主机的非 root 用户配置 sudo 权限</block>
+  <block id="c3c2a62b860915d6d527985a410daabd" category="section-title">设置凭据</block>
+  <block id="11dbb070e552e50e58059b5d673f1d1a" category="paragraph">有关信息，请参见 <block ref="f3719d4df312e2308fdbfca4904a6c51" category="inline-xref-macro-rx"></block> 或 <block ref="0cff305d940e3d5ee78f36245aa0f592" category="inline-xref-macro-rx"></block></block>
+  <block id="829ab3d9655362e52e689933510a1e37" category="doc">安装适用于 Oracle 数据库的插件的工作流</block>
+  <block id="a0add3d71703f4be5dded397d57c6c2e" category="doc">使用 GUI 添加主机并安装适用于 Linux 或 AIX 的插件软件包</block>
+  <block id="2105795cf0eeea463be3933a65ba4c8d" category="section-title">使用 cmdlet 在多个远程主机上安装</block>
+  <block id="cd698498994ae4622e09dca783097461" category="section-title">在集群主机上安装</block>
+  <block id="f19bda06b34cef66f42b2a2700dbd329" category="section-title">监控安装状态</block>
+  <block id="c6055785b167d1305aed46955c971ab0" category="list-text">为安装用户创建身份验证模式为 Linux 或 AIX 的凭据。 <block ref="ea30e46e8a254ae027cbb29705df6d6a" category="inline-link-macro-rx"></block></block>
+  <block id="96a691c75f4e8548b130dd4af0ea4e53" category="paragraph">请参见 <block ref="323b90807a9546f6e557752e6cfa6177" category="inline-link-macro-rx"></block> 或 <block ref="e2c91a506ccd79e4b35095669002c16d" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="49178d8917274413da493299118d6557" category="list-text">确保防火墙中未阻止以下端口，否则添加主机操作将失败。要解析此问题描述，必须配置动态端口范围。有关详细信息，请参见<block ref="70d4a5fd2803e35738264291f84fc1aa" category="inline-link-rx"></block>。</block>
+  <block id="fe76fc133ce5d0e6aa2e73fa56ca464c" category="paragraph">要确定端口范围，请执行以下命令：</block>
+  <block id="70766abc1e0d9fa835c550fd65fe8108" category="list-text">netsh int ipv4 show dynamicport tcp</block>
+  <block id="a93524c7ce74bfb10fdd0fcbd38fb81a" category="list-text">netsh int ipv4 show dynamicport udp</block>
+  <block id="2c96e470eb2241a7251fea5747194f79" category="list-text">netsh int ipv6 show dynamicport tcp</block>
+  <block id="60164a3b49ae9e6d0a2f8ca1ca1b0ac3" category="list-text">netsh int ipv6 show dynamicport udp</block>
+  <block id="5d4caff07857398d579cdda92ce3f34f" category="sidebar">配置存储系统</block>
+  <block id="bb02d89ec46fa9ff65099dc0fc0d1737" category="sidebar">适用于 Microsoft Windows 的 SnapCenter 插件概念</block>
+  <block id="268dbeaafbfc6c1c4598d5990f02d4ee" category="sidebar">配置 CA 证书</block>
+  <block id="87ab0eaad6e67624f5afc8ca70f468a6" category="sidebar">还原 Windows 文件系统</block>
+  <block id="52d2606cbe14d34b900ce50e86a67b13" category="sidebar">克隆 Windows 文件系统</block>
+  <block id="3d8a9e359cdf4b956d6850836e03a25e" category="sidebar">自定义插件的备份策略</block>
+  <block id="08759ac851b4d644eddfd819f2b366e9" category="sidebar">准备安装 SnapCenter 自定义插件</block>
+  <block id="16a0da04ed4ea27dbbb965b612c6b369" category="sidebar">SnapCenter 自定义插件的安装工作流</block>
+  <block id="834849dd07442651b1ce8092c92186f0" category="sidebar">安装 SnapCenter 自定义插件</block>
 </blocks>

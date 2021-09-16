@@ -1,7 +1,7 @@
 ---
 permalink: protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html 
 sidebar: sidebar 
-keywords: prerequisites, iSCSI, Oracle path 
+keywords: prerequisites, iSCSI, Oracle path, host requirement for Linux, sudo privileges, non-root user, host requirements for AIX, credentials, authenticate, domain administrator, local administrator, workgroup, sudo, root user 
 summary: 在添加主机并安装插件软件包之前，您必须满足所有要求。 
 ---
 = 添加主机和安装适用于 Linux 或 AIX 的插件软件包的前提条件
@@ -37,4 +37,398 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 NOTE: 您也可以使用适用于 Oracle 数据库的插件来管理适用于 SAP 的 Oracle 数据库。但是，不支持 SAP BR* 工具集成。
 
 * 如果您使用的是 Oracle 数据库 11.2.0.3 或更高版本，则必须安装 13366202 Oracle 修补程序。
+
+
+
+
+== Linux 主机要求
+
+在安装适用于 Linux 的 SnapCenter 插件软件包之前，应确保主机满足要求。
+
+|===
+| 项目 | 要求 
+
+
+ a| 
+操作系统
+ a| 
+* Red Hat Enterprise Linux
+* Oracle Linux
++
+
+NOTE: 如果在 Oracle Linux 或 Red Hat Enterprise Linux 6.6 或 7.0 操作系统的 LVM 上使用 Oracle 数据库，则必须安装最新版本的逻辑卷管理器（ LVM ）。
+
+* SUSE Linux Enterprise Server （ SLES ）
+
+
+
+
+ a| 
+主机上 SnapCenter 插件的最小 RAM
+ a| 
+1 GB
+
+
+
+ a| 
+主机上 SnapCenter 插件的最小安装和日志空间
+ a| 
+2 GB
+
+
+NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消耗。所需的日志空间因要保护的实体数量和数据保护操作的频率而异。如果没有足够的磁盘空间，则不会为最近运行的操作创建日志。
+
+
+
+ a| 
+所需的软件包
+ a| 
+Java 1.8.x （ 64 位） Oracle Java 和 OpenJDK 版本
+
+如果已将 Java 升级到最新版本，则必须确保 /var/opt/snapcenter/spl/etc/spl.properties 上的 java_home 选项设置为正确的 Java 版本和路径。
+
+|===
+有关受支持版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+
+
+
+=== 为 Linux 主机的非 root 用户配置 sudo 权限
+
+通过 SnapCenter 2.0 及更高版本，非 root 用户可以安装适用于 Linux 的 SnapCenter 插件软件包并启动插件过程。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。
+
+* 您需要的内容 *
+
+* sudo 1.8.7 或更高版本。
+* 确保非 root 用户属于 Oracle 安装组。
+* 编辑 /etc/ssh/sshd_config_ 文件以配置消息身份验证代码算法： macs HMAC-SHA2-256 和 MAC HMAC-SHA2-512 。
++
+更新配置文件后重新启动 sshd 服务。
+
++
+示例
+
++
+[listing]
+----
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+#Legacy changes
+#KexAlgorithms diffie-hellman-group1-sha1
+#Ciphers aes128-cbc
+#The default requires explicit activation of protocol
+Protocol 2
+HostKey/etc/ssh/ssh_host_rsa_key
+MACs hmac-sha2-256
+----
+
+
+* 关于此任务 *
+
+您应为非 root 用户配置 sudo 权限，以提供对以下路径的访问：
+
+* /home/_sudo _user_//.SC_NetApp/snapcenter_linux_host_plugin.bin
+* /custom_location/netapp/snapcenter/spl/installation/plugins/uninstall
+* /custom_location/netapp/snapcenter/spl/bin/spl
+
+
+* 步骤 *
+
+. 登录到要安装适用于 Linux 的 SnapCenter 插件软件包的 Linux 主机。
+. 使用 visudo Linux 实用程序将以下行添加到 /etc/sudoers 文件中。
++
+[listing, subs="+quotes"]
+----
+Cmnd_Alias SCCMD = sha224:checksum_value== /home/_SUDO_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin,
+/opt/NetApp/snapcenter/spl/installation/plugins/uninstall,
+/opt/NetApp/snapcenter/spl/bin/spl
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_SUDO_USER_/.sc_netapp/Linux_Prechecks.sh
+_SUDO_USER_ ALL=(ALL) NOPASSWD:SETENV: SCCMD, PRECHECKCMD
+Defaults: _SUDO_USER_ env_keep=JAVA_HOME
+Defaults: _SUDO_USER_ !visiblepw
+Defaults: _SUDO_USER_ !requiretty
+----
++
+_sudo _user_ 是您创建的非 root 用户的名称。
+
++
+您可以从 * ORACLE_checksum.txt * 文件中获取校验和值，该文件位于 _C ： \ProgramData\NetApp\SnapCenter\Package Repository_ 。
+
++
+如果指定了自定义位置，则此位置将为 _custom_path\NetApp\SnapCenter\Package Repository_ 。
+
++
+
+IMPORTANT: 此示例只能用作创建自己数据的参考。
+
+
+
+|===
+
+
+| * 最佳实践： * 出于安全原因，您应在完成每次安装或升级后删除 sudo 条目。 
+|===
+
+
+== AIX 主机要求
+
+在安装适用于 AIX 的 SnapCenter 插件软件包之前，应确保主机满足要求。
+
+|===
+| 项目 | 要求 
+
+
+ a| 
+操作系统
+ a| 
+AIX 6.1 或更高版本
+
+
+
+ a| 
+主机上 SnapCenter 插件的最小 RAM
+ a| 
+4 GB
+
+
+
+ a| 
+主机上 SnapCenter 插件的最小安装和日志空间
+ a| 
+1 GB
+
+
+NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消耗。所需的日志空间因要保护的实体数量和数据保护操作的频率而异。如果没有足够的磁盘空间，则不会为最近运行的操作创建日志。
+
+
+
+ a| 
+所需的软件包
+ a| 
+Java 1.8.x （ 64 位） IBM Java
+
+如果已将 Java 升级到最新版本，则必须确保 /var/opt/snapcenter/spl/etc/spl.properties 上的 java_home 选项设置为正确的 Java 版本和路径。
+
+|===
+有关受支持版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+
+
+
+=== 为 AIX 主机的非 root 用户配置 sudo 权限
+
+通过 SnapCenter 4.4 及更高版本，非 root 用户可以安装适用于 AIX 的 SnapCenter 插件软件包并启动插件过程。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。
+
+* 您需要的内容 *
+
+* sudo 1.8.7 或更高版本。
+* 确保非 root 用户属于 Oracle 安装组。
+* 编辑 /etc/ssh/sshd_config_ 文件以配置消息身份验证代码算法： macs HMAC-SHA2-256 和 MAC HMAC-SHA2-512 。
++
+更新配置文件后重新启动 sshd 服务。
+
++
+示例
+
++
+[listing]
+----
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+#Legacy changes
+#KexAlgorithms diffie-hellman-group1-sha1
+#Ciphers aes128-cbc
+#The default requires explicit activation of protocol
+Protocol 2
+HostKey/etc/ssh/ssh_host_rsa_key
+MACs hmac-sha2-256
+----
+
+
+* 关于此任务 *
+
+您应为非 root 用户配置 sudo 权限，以提供对以下路径的访问：
+
+* /home/_aix_user_//.SC_NetApp/snapcenter_aix_host_plugin.bsx
+* /custom_location/netapp/snapcenter/spl/installation/plugins/uninstall
+* /custom_location/netapp/snapcenter/spl/bin/spl
+
+
+* 步骤 *
+
+. 登录到要安装适用于 AIX 的 SnapCenter 插件软件包的 AIX 主机。
+. 使用 visudo Linux 实用程序将以下行添加到 /etc/sudoers 文件中。
++
+[listing, subs="+quotes"]
+----
+Cmnd_Alias SCCMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/snapcenter_aix_host_plugin.bsx,
+/opt/NetApp/snapcenter/spl/installation/plugins/uninstall,
+/opt/NetApp/snapcenter/spl/bin/spl
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/AIX_Prechecks.sh
+_AIX_USER_ ALL=(ALL) NOPASSWD:SETENV: SCCMD, PRECHECKCMD
+Defaults: _AIX_USER_ !visiblepw
+Defaults: _AIX_USER_ !requiretty
+----
++
+_aix_user_是 您创建的非 root 用户的名称。
+
++
+您可以从 * ORACLE_checksum.txt * 文件中获取校验和值，该文件位于 _C ： \ProgramData\NetApp\SnapCenter\Package Repository_ 。
+
++
+如果指定了自定义位置，则此位置将为 _custom_path\NetApp\SnapCenter\Package Repository_ 。
+
++
+
+IMPORTANT: 此示例只能用作创建自己数据的参考。
+
+
+
+|===
+
+
+| * 最佳实践： * 出于安全原因，您应在完成每次安装或升级后删除 sudo 条目。 
+|===
+
+
+== 设置凭据
+
+SnapCenter 使用凭据对 SnapCenter 操作的用户进行身份验证。您应创建在 Linux 或 AIX 主机上安装插件软件包的凭据。
+
+* 关于此任务 *
+
+这些凭据是为 root 用户或具有 sudo 权限的非 root 用户创建的，用于安装和启动插件过程。
+
+有关信息，请参见 <<Configure sudo privileges for non-root users for Linux host>> 或 <<Configure sudo privileges for non-root users for AIX host>>
+
+|===
+
+
+| * 最佳实践： * 虽然允许您在部署主机和安装插件后创建凭据，但最佳实践是在添加 SVM 之后，在部署主机和安装插件之前创建凭据。 
+|===
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 设置 * 。
+. 在设置页面中，单击 * 凭据 * 。
+. 单击 * 新建 * 。
+. 在 Credential 页面中，输入凭据信息：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+凭据名称
+ a| 
+输入凭据的名称。
+
+
+
+ a| 
+用户名 / 密码
+ a| 
+输入要用于身份验证的用户名和密码。
+
+** 域管理员
++
+在要安装 SnapCenter 插件的系统上指定域管理员。用户名字段的有效格式为：
+
++
+*** _netbios\username_
+*** 域 FQDN\username_
+
+
+** 本地管理员（仅适用于工作组）
++
+对于属于工作组的系统，请指定要安装 SnapCenter 插件的系统上的内置本地管理员。如果用户帐户具有提升的权限或在主机系统上禁用了用户访问控制功能，则可以指定属于本地管理员组的本地用户帐户。用户名字段的有效格式为： _username_
+
+
+
+
+
+ a| 
+身份验证模式
+ a| 
+选择要使用的身份验证模式。
+
+根据插件主机的操作系统，选择 Linux 或 AIX 。
+
+
+
+ a| 
+使用 sudo 权限
+ a| 
+如果要为非 root 用户创建凭据，请选中 * 使用 sudo 权限 * 复选框。
+
+|===
+. 单击 * 确定 * 。
+
+
+完成凭据设置后，您可能需要在 * 用户和访问 * 页面上为用户或用户组分配凭据维护。
+
+
+
+== 配置 Oracle 数据库的凭据
+
+您必须配置用于对 Oracle 数据库执行数据保护操作的凭据。
+
+* 关于此任务 *
+
+您应查看 Oracle 数据库支持的不同身份验证方法。有关信息，请参见link:../install/concept_authentication_methods_for_your_credentials.html["凭据的身份验证方法"^]。
+
+如果您为各个资源组设置了凭据，并且用户名不具有完全管理员权限，则用户名必须至少具有资源组和备份权限。
+
+如果已启用 Oracle 数据库身份验证，则 "Resources" 视图中将显示一个红色挂锁图标。您必须配置数据库凭据才能保护数据库，或者将其添加到资源组以执行数据保护操作。
+
+
+NOTE: 如果在创建凭据时指定的详细信息不正确，则会显示一条错误消息。您必须单击 * 取消 * ，然后重试。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面中，从 * 视图 * 列表中选择 * 数据库 * 。
+. 单击 image:../media/filter_icon.gif[""]，然后选择主机名和数据库类型以筛选资源。
++
+然后，您可以单击 image:../media/filter_icon.gif[""] 以关闭筛选器窗格。
+
+. 选择数据库，然后单击 * 数据库设置 * > * 配置数据库 * 。
+. 在配置数据库设置部分的 * 使用现有凭据 * 下拉列表中，选择在 Oracle 数据库上执行数据保护作业时应使用的凭据。
++
+
+NOTE: Oracle 用户应具有 sysdba 权限。
+
++
+您也可以通过单击来创建凭据 image:../media/add_icon_configure_database.gif["配置数据库屏幕中的添加图标"]。
+
+. 在配置 ASM 设置部分的 * 使用现有凭据 * 下拉列表中，选择在 ASM 实例上执行数据保护作业时应使用的凭据。
++
+
+NOTE: ASM 用户应具有 sysasm 权限。
+
++
+您也可以通过单击来创建凭据 image:../media/add_icon_configure_database.gif["配置数据库屏幕中的添加图标"]。
+
+. 在配置 RMAN 目录设置部分的 * 使用现有凭据 * 下拉列表中，选择在 Oracle Recovery Manager （ RMAN ）目录数据库上执行数据保护作业时应使用的凭据。
++
+您也可以通过单击来创建凭据 image:../media/add_icon_configure_database.gif["配置数据库屏幕中的添加图标"]。
+
++
+在 * TNSName* 字段中，输入 SnapCenter 服务器与数据库通信所使用的透明网络数据包（ Network Substrate ， TNS ）文件名。
+
+. 在 * 首选 RAC 节点 * 字段中，指定备份首选的实际应用程序集群（ RAC ）节点。
++
+首选节点可能是存在 RAC 数据库实例的一个或所有集群节点。备份操作仅会按首选顺序在这些首选节点上触发。
+
++
+在 RAC One Node 中，首选节点中仅列出一个节点，而此首选节点是当前托管数据库的节点。
+
++
+在对 RAC 单节点数据库进行故障转移或重新定位后，在 SnapCenter "RAC Resources" 页面中刷新资源将从先前托管数据库的 * 首选 RAC 节点 * 列表中删除主机。数据库重新定位的 RAC 节点将列在 * RAC 节点 * 中，需要手动配置为首选 RAC 节点。
+
++
+有关详细信息，请参见 link:../protect-sco/task_define_a_backup_strategy_for_oracle_databases.html#preferred-nodes-in-rac-setup["RAC 设置中的首选节点"^]。
+
+. 单击 * 确定 * 。
 

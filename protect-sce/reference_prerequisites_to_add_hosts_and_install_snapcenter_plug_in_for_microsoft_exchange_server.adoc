@@ -21,7 +21,7 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 * 如果已安装 SnapManager for Microsoft Exchange Server 和 SnapDrive for Windows ，则必须先注销 SnapDrive for Windows 使用的 VSS 硬件提供程序，然后才能在同一 Exchange Server 上安装适用于 Exchange 的插件，以确保使用 SnapCenter 成功保护数据。
 * 如果 SnapManager for Microsoft Exchange Server 和 Plug-in for Exchange 安装在同一台服务器上，则必须暂停或从 Windows 计划程序中删除 SnapManager for Microsoft Exchange Server 创建的所有计划。
 * 主机必须可从服务器解析为完全限定域名（ FQDN ）。如果修改了 hosts 文件以使其可解析，并且在 hosts 文件中同时指定了短名称和 FQDN ，请在 SnapCenter hosts 文件中以以下格式创建一个条目： _<IP_address> <host_FQDN> <host_name>_ 。
-* 确保防火墙中未阻止以下端口，否则添加主机操作将失败。要解决此问题描述，请配置动态端口范围。有关详细信息，请参见 https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Microsoft 文档"^]。
+* 确保防火墙中未阻止以下端口，否则添加主机操作将失败。要解析此问题描述，必须配置动态端口范围。有关详细信息，请参见 https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Microsoft 文档"^]。
 +
 ** 对于 Windows 2016 和 Exchange 2016 ，端口范围为 50000 - 51000
 ** 对于 Windows 2012 R2 和 Exchange 2013 ，端口范围为 6000 - 6500
@@ -30,6 +30,17 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 
 
 
+[NOTE]
+====
+要确定端口范围，请执行以下命令：
+
+* netsh int ipv4 show dynamicport tcp
+* netsh int ipv4 show dynamicport udp
+* netsh int ipv6 show dynamicport tcp
+* netsh int ipv6 show dynamicport udp
+
+
+====
 
 
 == 安装适用于 Windows 的 SnapCenter 插件软件包的主机要求

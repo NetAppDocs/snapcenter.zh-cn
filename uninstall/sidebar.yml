@@ -3,7 +3,6 @@ section: uninstall
 title: 卸载 SnapCenter 服务器和插件
 entries:
 - title: 卸载 SnapCenter 插件软件包
-  url: "/uninstall/concept_uninstall_snapcenter_plug_ins_and_plug_in_packages.html"
   entries:
   - title: 删除主机的前提条件
     url: "/uninstall/reference_prerequisites_for_removing_a_host.html"
