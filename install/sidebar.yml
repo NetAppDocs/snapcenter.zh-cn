@@ -64,6 +64,8 @@ entries:
     url: "/install/task_create_a_role.html"
   - title: 使用 security login 命令添加 ONTAP RBAC 角色
     url: "/install/task_add_an_rbac_role_using_security_login_commands.html"
+  - title: 创建具有最低权限的 SVM 角色
+    url: "/install/create-svm-roles-minimum-privileges.html"
   - title: 创建具有最低权限的 ONTAP 集群角色
     url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
   - title: 配置 IIS 应用程序池以启用 Active Directory 读取权限

@@ -10,7 +10,9 @@ summary: 您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储，�
 
 
 [role="lead"]
-您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储，以执行数据保护和配置操作。您可以添加一个独立 SVM ，也可以添加一个由多个 SVM 组成的集群。
+您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储或适用于 NetApp ONTAP 的 Amazon FSX ，以执行数据保护和配置操作。
+
+您可以添加一个独立 SVM ，也可以添加一个由多个 SVM 组成的集群。如果您使用的是适用于 NetApp ONTAP 的 Amazon FSX ，则可以在 SnapCenter 4.5 P1 中使用 fsxadmin 帐户添加由多个 SVM 组成的 FSX 管理 LIF ，也可以在 SnapCenter 中添加 FSX SVM 。
 
 * 您需要的内容 *
 
@@ -32,7 +34,6 @@ SnapCenter 不支持在不同集群上使用相同名称的多个存储系统。
 如果启用了这些功能，则在资源受保护，还原或克隆操作成功完成或操作失败时， SnapCenter 会将 AutoSupport 信息发送到存储系统，并将 EMS 消息发送到存储系统系统系统日志。
 
 * 如果您计划将 Snapshot 副本复制到 SnapMirror 目标或 SnapVault 目标，则必须为目标 SVM 或集群以及源 SVM 或集群设置存储系统连接。
-* SnapCenter 4.5 及更高版本支持在 ONTAP 大型 LUN 上使用应用程序数据库，在 ASA 聚合上，此 LUN 的大小最高可达 128 TB 。对于大型 LUN ， SnapCenter 建议仅使用厚配置 LUN 来避免延迟。
 
 
 
@@ -111,7 +112,13 @@ NOTE: 如果添加的 SVM 使用短名称或 FQDN ，则必须可从 SnapCenter 
 在存储系统页面中，从 * 类型 * 下拉列表中执行以下操作之一：
 
 * 如果要查看已添加的所有 ONTAP SVM* ，请选择 * SVM* 。
++
+如果已添加 FSX SVM ，此处将列出 FSX SVM 。
+
 * 如果要查看已添加的所有集群，请选择 * ONTAP Clusters* 。
++
+如果您已使用 fsxadmin 添加 FSX 集群，此处将列出 FSX 集群。
+
 +
 单击集群名称后，属于集群的所有 SVM 都会显示在 Storage Virtual Machine 部分中。
 

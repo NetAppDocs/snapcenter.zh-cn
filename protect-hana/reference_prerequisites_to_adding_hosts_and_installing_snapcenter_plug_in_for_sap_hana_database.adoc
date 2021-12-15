@@ -30,13 +30,10 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
 * 您必须已在 Windows 主机上安装 Java 1.8 64 位。
 +
-互操作性表工具（ IMT ）包含有关要求的最新信息。
-
-+
 http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
 
 +
-http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"]
+。 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["互操作性表工具"] 包含有关要求的最新信息。
 
 
 
@@ -47,13 +44,10 @@ http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"]
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
 * 您必须已在 Linux 主机上安装 Java 1.8 64 位。
 +
-互操作性表工具（ IMT ）包含有关要求的最新信息。
-
-+
 http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
 
 +
-http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"]
+。 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["互操作性表工具"] 包含有关要求的最新信息。
 
 * 对于在 Linux 主机上运行的 SAP HANA 数据库，在安装适用于 SAP HANA 数据库的插件时，系统会自动安装适用于 UNIX 的 SnapCenter 插件。
 

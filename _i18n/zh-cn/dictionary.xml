@@ -67,7 +67,6 @@
   <block id="aab338915e32b60e92c8de3a23aa5c5d" category="paragraph">操作系统</block>
   <block id="bb79f96acbff544ded541446c9c7c894" category="paragraph">Microsoft Windows</block>
   <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp 互操作性表工具</block>
-  <block id="264b50a0f975dfeaf3e648ba9a40b2ed" category="paragraph">有关受支持版本的最新信息，请参见<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>。</block>
   <block id="97d747ad5d4878c60364b9ba961fd5a4" category="paragraph">主机上 SnapCenter 插件的最小 RAM</block>
   <block id="0d642755e7f12f7563e3db33bd0c39cb" category="paragraph">1 GB</block>
   <block id="94ca5bd1fc6971f402b85442105f093f" category="paragraph">主机上 SnapCenter 插件的最小安装和日志空间</block>
@@ -180,8 +179,6 @@
   <block id="afac60f293b05dc186f67c671aabe6bc" category="paragraph">选择 * 显示每个对象报告的所有错误消息（ all_ERRORMSGS ） * 以显示每个对象报告的所有错误。</block>
   <block id="62acb38bef8d64c5f91175e7ae80611b" category="paragraph">不要检查非集群索引（ NOINDEX ）</block>
   <block id="7872e7b32ee763197ad7b5b084205b8c" category="paragraph">如果不想检查非集群索引，请选择 * 不检查非集群索引（ NOINDEX ） * 。SQL Server 数据库使用 Microsoft SQL Server 数据库一致性检查程序（ DBCC ）来检查数据库中对象的逻辑和物理完整性。</block>
-  <block id="90b0c0b2319c30979a22d4851cc38490" category="paragraph">限制检查并获取查找结果，而不是使用内部数据库 Snapshot 副本（ TABLOCK ）</block>
-  <block id="181277c8095d0b12679b8ba39e339423" category="paragraph">选择 * 限制检查并获取查找，而不是使用内部数据库 Snapshot 副本（ TABLOCK ） * 来限制检查并获取锁定，而不是使用内部数据库 Snapshot 副本。</block>
   <block id="d2f34567100e19ae71be551d2bab96bf" category="list-text">在 * 日志备份 * 部分中，选择 * 完成时验证日志备份 * 以在完成后验证日志备份。</block>
   <block id="a7abc11ba08de5d8165c85606e400ec8" category="list-text">在 * 验证脚本设置 * 部分中，分别输入在验证操作之前或之后应运行的预处理或后处理脚本的路径和参数。</block>
   <block id="fed1c121dc4f5a5484e5623e297385fb" category="list-text">查看摘要，然后单击 * 完成 * 。</block>
@@ -449,7 +446,6 @@
   <block id="714c955a93d0173dfa1f64ba57283a64" category="admonition">验证服务器版本应等于或高于托管主数据库的 SQL Server 版本。</block>
   <block id="165a706b2aac1c99b9bead7d6d155859" category="list-text">选择 * 加载二级定位器以验证二级存储系统上的备份 * 以验证二级存储系统上的备份。</block>
   <block id="a69de308424c0233fb5435c6ed27ec7d" category="list-text">选择要为其配置验证计划的策略，然后单击 *<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>*</block>
-  <block id="c23d1904661e64e07243711f061aa70d" category="list-text">在 * 添加验证计划 * `policy_name` 对话框中，执行以下操作：</block>
   <block id="5ddfe5d3f436393022d0a111c1f2b429" category="paragraph">备份后运行验证</block>
   <block id="770dea1a7ffca4cdfedbdad1adb3687d" category="paragraph">选择 * 备份后运行验证 * 。</block>
   <block id="6da3a2d5b37f6128e6fcbc17b5e45ac3" category="paragraph">计划验证</block>
@@ -635,7 +631,6 @@
   <block id="fd64ae65e36415bcb508e23c2f81edee" category="paragraph">此时将显示备份的详细信息。</block>
   <block id="a418089089559a000c49aa3b9a686667" category="summary">SnapCenter 在物理机和虚拟机上均支持多种存储类型。在为主机安装软件包之前，您必须验证是否支持您的存储类型。</block>
   <block id="dae1725dc2e5765223411b1d431ef15d" category="doc">适用于 Microsoft Windows 和 Microsoft SQL Server 的 SnapCenter 插件支持的存储类型</block>
-  <block id="f18c71406bdb3e27ae28a0570acfb57b" category="paragraph">Windows Server 支持 SnapCenter 配置和数据保护。有关受支持版本的最新信息，请参见<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>。</block>
   <block id="47c954121886a5e5aaca7eece461b56f" category="cell">计算机</block>
   <block id="f0cb6783b152b19ceab16227ca3976a2" category="cell">Storage type</block>
   <block id="2bfe08a4f62392e52d13ca1c380c81d4" category="cell">使用配置</block>
@@ -1032,7 +1027,6 @@
   <block id="c77d16e2631c1e539982c0bc793f22b0" category="paragraph">此列表包含在 SnapCenter 中添加的所有 SQL Server 。您可以选择多个验证服务器（本地主机或远程主机）。</block>
   <block id="35a91e9ad1ffed78f81a00fbc833fa69" category="admonition">验证服务器版本应与托管主数据库的 SQL Server 的版本相匹配。</block>
   <block id="34098500b6237d2918a60eeb7bc52132" category="list-text">单击 * 加载定位器 * 以加载 SnapMirror 和 SnapVault 卷，以便在二级存储上执行验证。</block>
-  <block id="462ec78afe1c834797787c53a7eb07d8" category="list-text">在添加验证计划 policy_name 对话框中，执行以下操作：</block>
   <block id="5fc49d26bbb3bab9fc2e2c6fc0490216" category="paragraph">选择 * 备份后运行验证 * 。</block>
   <block id="b39614f1e3ff23cc5b5cd5fd6bf27259" category="inline-image-macro">用于编辑已配置计划的图标</block>
   <block id="5f11c7889df3330ff1f653f5e5702931" category="inline-image-macro">删除图标</block>
@@ -1125,11 +1119,9 @@
   <block id="7dbd4083dc9a93160940c1e53d03999f" category="admonition">建议（但不要求）将 SnapCenter 标准版许可证添加到二级目标。如果二级目标上未启用 SnapCenter 标准许可证，则在执行故障转移操作后，您将无法使用 SnapCenter 备份二级目标上的资源。但是，要执行克隆和验证操作，二级目标需要 FlexClone 许可证。</block>
   <block id="89a71adc7ceff2f08a2162d1abfd9de6" category="paragraph">* 其他要求 *</block>
   <block id="918d32b75f0ab883abba3a8dc0c3ae8d" category="inline-link">互操作性表工具</block>
-  <block id="1b5939a958029d9af1feaf20b0b87dab" category="paragraph">有关 ONTAP 和应用程序插件的最低要求，请参见<block ref="8202e2d9ff186d084c29140284f981f1" category="inline-link-rx"></block></block>
   <block id="8124579383e90243e4b06323d2b37f8d" category="cell">主机</block>
   <block id="a55b17d8324fe50e023be8010d4b5474" category="cell">最低要求</block>
   <block id="a0315547f70da02dc3ae867b333d7a34" category="paragraph">操作系统（ 64 位）</block>
-  <block id="c30835f2a8a6fdaae956ec3646e908d4" category="paragraph">请参见<block ref="8202e2d9ff186d084c29140284f981f1" category="inline-link-rx"></block></block>
   <block id="2b55387dd066c5bac646ac61543d152d" category="paragraph">CPU</block>
   <block id="0e6a971ec5306b612f39cb5f57db7161" category="list-text">服务器主机： 4 个核心</block>
   <block id="30a4532a5bee2de6dedd7d0dd519c56c" category="list-text">插件主机： 1 个核心</block>
@@ -1891,7 +1883,6 @@
   <block id="28ada90c589b6b80a72ff33d9870e73f" category="admonition">不支持从 SnapCenter 图形用户界面（ GUI ）导入数据。</block>
   <block id="91048ee9b28431a0b8417fc6aca22a53" category="section-title">支持导入数据的配置</block>
   <block id="b136948fc75470b29a82776a9d289413" category="paragraph">在将数据从适用于 Oracle 的 SnapManager 3.4.x 和适用于 SAP 的 SnapManager 3.4.x 导入到 SnapCenter 之前，您应了解适用于 Oracle 数据库的 SnapCenter 插件支持的配置。</block>
-  <block id="8090d2dc097ae73b699cc20525f91e9e" category="paragraph">中列出了适用于 Oracle 数据库的 SnapCenter 插件支持的配置<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>。</block>
   <block id="c11806b444e73d136144652a83923eba" category="section-title">导入到 SnapCenter 中的内容</block>
   <block id="d80d91babef4edbe3aa5ac78f57b8cbc" category="paragraph">您可以导入使用配置文件执行的配置文件，计划和操作。</block>
   <block id="e3fde9f3aff3294492c93c044790a79f" category="cell">来自 SnapManager for Oracle 和 SnapManager for SAP</block>
@@ -2231,7 +2222,6 @@
   <block id="750b10574c7c5ac05afa7817be89a63e" category="list-text">Oracle ASM 筛选器驱动程序（ ASMFD ）</block>
   <block id="da02aa1448f6bd34e97b4d20a7b5bdcf" category="admonition">不支持 PDB 迁移和 PDB 克隆操作。</block>
   <block id="0483f292b9712b967df26187e876eb45" category="list-text">Oracle Flex ASM</block>
-  <block id="c918cbe5c790e683fb3a523dc9a82600" category="paragraph">有关支持的 Oracle 版本的最新信息，请参见<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>。</block>
   <block id="2e00e783f5f2412a8f09c782c23524f4" category="section-title">Oracle 数据库支持的备份类型</block>
   <block id="63a9fc894d971ef7a1fef2e8bafbd8d4" category="paragraph">备份类型指定要创建的备份类型。SnapCenter 支持 Oracle 数据库的联机和脱机备份类型。</block>
   <block id="cd9177f3a112508cd1d4ef7ec5499433" category="section-title">联机备份</block>
@@ -2398,7 +2388,6 @@
   <block id="ba09c94fed381b580a726fc94531b160" category="list-text">如果 Oracle 数据库位于 Oracle Linux 或 RHEL 操作系统中的 LVM 上，请安装最新版本的逻辑卷管理（ LVM ）。</block>
   <block id="8770246977269a639c8c2818412dc3ac" category="list-text">如果您使用的是适用于 Oracle 的 SnapManager ，并且希望迁移到适用于 Oracle 数据库的 SnapCenter 插件，则可以使用 sccli 命令 sc-migrate 将配置文件迁移到 SnapCenter 的策略和资源组。</block>
   <block id="4c893189fecc8b6e5c41ae931ffd7f89" category="list-text">如果要进行备份复制，请在 ONTAP 上配置 SnapMirror 和 SnapVault</block>
-  <block id="419877ea43e5d2306a2d543c27f2f0ef" category="list-text"><block ref="419877ea43e5d2306a2d543c27f2f0ef" category="inline-link-rx"></block></block>
   <block id="50295902d444d01e41805e9bc1b0598e" category="list-text"><block ref="50295902d444d01e41805e9bc1b0598e" category="inline-link-rx"></block></block>
   <block id="a909d5db254f7262bb93275a07812330" category="inline-link">在 RHEL 7 及更高版本的非多路径环境中，数据保护操作失败</block>
   <block id="637e979b90ef1f6ab2dd922a7436fbec" category="list-text"><block ref="637e979b90ef1f6ab2dd922a7436fbec" category="inline-link-rx"></block></block>
@@ -2831,7 +2820,6 @@
   <block id="820975a681d6bd98ccc34b3e0595d110" category="paragraph">使用 Microsoft iSCSI 软件启动程序时，最多支持 VMware 上支持 16 个节点，或者使用 FC 最多支持两个节点</block>
   <block id="f1a7b77dc434e17fd514506c2a6cd80c" category="list-text">RDM LUN</block>
   <block id="daa9730f0908f333879829d0ff58fd7a" category="paragraph">对于普通 RDM ，最多支持 56 个 RDM LUN 以及 4 个 LSI Logic SCSI 控制器；对于适用于 Windows 的 VMware VM MSCS 盒对盒插件配置，最多支持 42 个 RDM LUN 以及 3 个 LSI Logic SCSI 控制器</block>
-  <block id="5b9868b5ee12077d5c933341f663f4ab" category="paragraph">有关受支持版本的最新信息，请参见<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>。</block>
   <block id="554b18f954019b477e2e91a5765d0334" category="summary">除了使用现有 SnapCenter 角色之外，您还可以创建自己的角色并自定义权限。</block>
   <block id="57cf47fd5cdb4fa24f625917dbf7b4cb" category="doc">创建角色</block>
   <block id="736f3871653c42d5fc23c7b63472291d" category="paragraph">您应已以 "SnapCenterAdmin" 角色登录。</block>
@@ -2995,106 +2983,6 @@
   <block id="50dd0a56e2faa99d354fb627dcb6e89a" category="list-text">解除用户锁定。</block>
   <block id="e36c8512e3778b0a83d27f616b9ba1ff" category="paragraph">`ssecurity login unlock -user &lt;user_name\&gt; -vserver &lt;cluster_name\&gt;`</block>
   <block id="81fb23c0c8e735fb97f9f661b58902b8" category="section-title">用于创建角色和分配权限的 ONTAP 命令行界面命令</block>
-  <block id="bd2a3614bc4d41081c720a9fdf9ef8f7" category="paragraph">您应运行多个 ONTAP 命令行界面命令来创建角色并分配权限。</block>
-  <block id="74f3b19ba9c351092444a4e2af884b53" category="list-text">`ssecurity login role create -role role_name -cmddirname "cluster identity modify" -vserver svm_name 或 Cluster_name 或 cluster_name -access all`</block>
-  <block id="f00bd7ed18d9c5986f8e5ce1c07e6a43" category="list-text">`ssecurity login role create -role role_name -cmddirname "cluster identity show" -vserver svm_name 或 Cluster_name -access all`</block>
-  <block id="a7d6709069978ea36eb435ae4dfc7612" category="list-text">`ssecurity login role create -role role_name -cmddirname "cluster modify" -vserver SVM_name 或 Cluster_name -access all`</block>
-  <block id="1966dd12e6a5b0d5512e766ce74fb761" category="list-text">`ssecurity login role create -role role_name -cmddirname "cluster peer show" -vserver svm_name 或 Cluster_name -access all`</block>
-  <block id="68bc90df50d61809462b54dd711cbf17" category="list-text">`ssecurity login role create -role role_name -cmddirname "cluster show" -vserver SVM_name 或 Cluster_name -access all`</block>
-  <block id="d7bad26b30ec7aa08af2c7cd050f6fab" category="list-text">`ssecurity login role create -role role_name -cmddirname "event generate-autosupport-log" -vserver SVM_name 或 Cluster_name -access all`</block>
-  <block id="ba3301272f4ffb4565254865af6febb8" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "job history show" -access all`</block>
-  <block id="c2dde51f1e503294e4ff05e8b3df77ba" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "job stop" -access all`</block>
-  <block id="db057c526db9d4d87ca4144bdf29de0a" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "LUN" -access all`</block>
-  <block id="59e2a28205bb797f60aa683176dafdad" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun create" -access all`</block>
-  <block id="eeff5b86c1aabc870fa237fd08d76ab1" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun delete" -access all`</block>
-  <block id="9ea6c0e4ea5c0e03432ebab66c79754c" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun igroup add" -access all`</block>
-  <block id="6b032d632640d92fa66667c032acd96a" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun igroup create" -access all`</block>
-  <block id="8ad8db40f7f8eb889bcfdba0e44812a5" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun igroup delete" -access all`</block>
-  <block id="28b0343629c6ca691556167d91eea212" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun igroup modify" -access all`</block>
-  <block id="483cbe4960f184d0bbf9547c11d3e46c" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun igroup rename" -access all`</block>
-  <block id="53db71781de2969645e4e7a27a778012" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun igroup show" -access all`</block>
-  <block id="367ec01e2bb891850afc97f5e44106bc" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun mapping add-reporting-nodes" -access all`</block>
-  <block id="2fb32824d55aaf728b047f48352e2343" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun mapping create" -access all`</block>
-  <block id="77e212b94d84703b13eaee167fa8c5e0" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun mapping delete" -access all`</block>
-  <block id="8183a22f44b37c67c6c1eb678ac818a2" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun mapping remove-reporting-nodes" -access all`</block>
-  <block id="c27306e8d652ef380e8a4fd6b6b3047f" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun mapping show" -access all`</block>
-  <block id="de468806cc6096c9201ec3da38aee586" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun modify" -access all`</block>
-  <block id="052b437c30de253f1135217bbdc8549f" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun move-in-volume" -access all`</block>
-  <block id="f19662157ee70509d79b07b1c43a4eec" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun offline" -access all`</block>
-  <block id="0d5a6c9f6ea7f59ee3216cbbe718dc92" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun online" -access all`</block>
-  <block id="51b674ea3221909122eb860a062d0997" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun persistent-reservation clear" -access all`</block>
-  <block id="3ccf980f8be0bca1d2f71b0e743a672d" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun resize" -access all`</block>
-  <block id="40e98f652181f2847bd44cddd33e0062" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun serial " -access all`</block>
-  <block id="16c818fcdeddb989c570371c5350cd5e" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "lun show" -access all`</block>
-  <block id="64cc27baa88836c83613bc5306824b21" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "network interface create" -access readonly`</block>
-  <block id="629369cf2f67d082699d4f036800643f" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "network interface delete" -access readonly`</block>
-  <block id="0b64238a4d4320b082abe88598fca756" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "network interface modify" -access readonly`</block>
-  <block id="6e98de181b66b3f9b61d888005021b92" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "network interface show" -access readonly`</block>
-  <block id="6eeba8c67c97ff0b5bd0eaba7e7427cb" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "security login" -access readonly`</block>
-  <block id="76e09e443441572c656a7e9cac05a5a2" category="list-text">`ssecurity login role create -role role_name -cmddirname "snapmirror create" -vserver SVM_name 或 Cluster_name -access all`</block>
-  <block id="5f2d42c1ebfef86b7c051857e8477ae4" category="list-text">`ssecurity login role create -role role_name -cmddirname "snapmirror list-destinations" -vserver svm_name 或 Cluster_name -access all`</block>
-  <block id="08c19983c3fbf4c7ebf05b7c5489c676" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "snapmirror policy add-rule" -access all`</block>
-  <block id="c85b7396dfc1d2366ad4764e6bdc3d1b" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "snapmirror policy create" -access all`</block>
-  <block id="56a9e572875c13d4187e7f69ac48f294" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "snapmirror policy delete" -access all`</block>
-  <block id="762b1fabd18355d78fe5d8d33e48746b" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "snapmirror policy modify" -access all`</block>
-  <block id="95b923460995311a815735be01a5df41" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "snapmirror policy modify-rule" -access all`</block>
-  <block id="d5f9eeb48d5488591b85eb025b75e90d" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "snapmirror policy remove-rule" -access all`</block>
-  <block id="52eabe08b9ece65f62d48b3a55a5b2a2" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "snapmirror policy show" -access all`</block>
-  <block id="a124a07bed7ad0d2597b1dcd1c0f81fa" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "snapmirror restore" -access all`</block>
-  <block id="3d745a8cbe283ecc388f07ec61270daa" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "snapmirror show" -access all`</block>
-  <block id="84b6fe668e96106685842efcb014c6f4" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "snapmirror show-history" -access all`</block>
-  <block id="78e8a5898362214ad94d764ac5ed2e56" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "snapmirror update" -access all`</block>
-  <block id="601b5bc813d6d16d2967697926d21469" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "snapmirror update-ls-set" -access all`</block>
-  <block id="fea7da1c91ddd372544ac0be3a4d4e80" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "version" -access all`</block>
-  <block id="5e4287ac2440cd293fb330253ddd460b" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume clone create" -access all`</block>
-  <block id="3be97ed9d929b68b527a35a4c7194e75" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume clone show" -access all`</block>
-  <block id="23ac697780b177f35e933674f3f40bf9" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume clone split start" -access all`</block>
-  <block id="0d7fb189638f248383c7785cd9c324c4" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume clone split stop" -access all`</block>
-  <block id="0188ef3402a8e6c744ebbb3c9323db1e" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume clone split status" -access all`</block>
-  <block id="e29107bc9819b050646222ab1e60c0d6" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume create" -access all`</block>
-  <block id="8e99e9712877d48cd92b537bdc5d0b3e" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume destroy" -access all`</block>
-  <block id="f3741531666e72885b09210612e2271d" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume file clone create" -access all`</block>
-  <block id="64a6a36df2206b3f3f9ff0f72696ccc3" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume file show-disk-usage" -access all`</block>
-  <block id="2e2f8335c8f28d54d6aaaaa2cdf6b5e2" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume modify" -access all`</block>
-  <block id="de8dec0c6dc63eb3f741fe7af7ec3886" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume offline" -access all`</block>
-  <block id="e49cab20b1a8c3f5672b723d1547b933" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume online" -access all`</block>
-  <block id="911975554f8c962f616adbf3387e39f0" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume qtree create" -access all`</block>
-  <block id="f924fdd08ddba090694fee52a977918f" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume qtree delete" -access all`</block>
-  <block id="9107b678a4f83f1e0ab96bee26d1b195" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume qtree modify" -access all`</block>
-  <block id="7ecc8bf8132f465b8a6f3da594fc26db" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume qtree show" -access all`</block>
-  <block id="48e95ff337f6a2bb4e7883b50d1d3575" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume restrict" -access all`</block>
-  <block id="2ae549f29e42005c469c51ad5632e6c4" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume show" -access all`</block>
-  <block id="32e977385793b6b14e8dd356a17bb232" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume snapshot create" -access all`</block>
-  <block id="547ceb8a19c64179dccd1482c883220b" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume snapshot delete" -access all`</block>
-  <block id="129fb40b23846d1901ada05028590084" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume snapshot modify" -access all`</block>
-  <block id="5418670a47b390a94ee6eb7cb2bfc1f5" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume snapshot promote " -access all`</block>
-  <block id="5c5886ce74020cacffa29e8c877a9dcd" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume snapshot rename" -access all`</block>
-  <block id="630ea525603533d67966eff178934e8b" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume snapshot restore" -access all`</block>
-  <block id="a465239d3fcdcd095161fc47a01b365d" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume snapshot restore-file" -access all`</block>
-  <block id="50280f649a46a745be11521468e01a19" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume snapshot show" -access all`</block>
-  <block id="d641b0360ed4d087a0c826e7c25c35bd" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "volume unmount " -access all`</block>
-  <block id="4f3cd2a90bfbbdb2be83e61aa0c3ad36" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver" -access all`</block>
-  <block id="4e49c5ad47b5998dfd02b7a28ac19a69" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "Vserver cifs create" -access all`</block>
-  <block id="39bea7893a702559be548f4963a4e555" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver cifs delete" -access all`</block>
-  <block id="75bffcebc6d50bb264fd73977bf3d55d" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver cifs share modify" -access all`</block>
-  <block id="479e8f996f2286de22bc4d0541ab7e31" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "Vserver cifs share create" -access all`</block>
-  <block id="f1d3d4a0f4808a6b6b3cd08f5bf1a7f1" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver cifs share delete" -access all`</block>
-  <block id="02efed3a1aad7b8466e51f3fb93b2ae8" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver cifs share show" -access all`</block>
-  <block id="07deed8ae05aa38e02ea7cf6d1f1223d" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver cifs show" -access all`</block>
-  <block id="22e01b867f45091803ec6c640cc7d394" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver create" -access all`</block>
-  <block id="9d7125e7b71105c501bb51ec65c59d2c" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver export-policy create" -access all`</block>
-  <block id="bb5cfdda0d34411ca517cbde4c6bd8cb" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver export-policy delete" -access all`</block>
-  <block id="c4f56eaa7f3b76abc7b34f32777c940b" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver export-policy rule create" -access all`</block>
-  <block id="91ef550ac8b695e98c9f563cf2f6ce0d" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver export-policy rule delete" -access all`</block>
-  <block id="ea90fe66b3bccbeba167955bc873bb71" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver export-policy rule modify" -access all`</block>
-  <block id="903101e64347ea401471decb0bce1ff8" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver export-policy rule show" -access all`</block>
-  <block id="a980088d001a13fdd22f3f097a682303" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver export-policy show" -access all`</block>
-  <block id="5f1c7ca1ff814a35159403d49457708d" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver iscsi connection show" -access all`</block>
-  <block id="e56dc9e1abba5cf9ebaf56fe68a3e452" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver" -access readonly`</block>
-  <block id="2432e0559115429e9cf69bf3a4b8d687" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver modify" -access readonly`</block>
-  <block id="321a6e0b31277b1e79ae2d53f51a9a5f" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver show" -access readonly`</block>
-  <block id="4f6f220874c8f13557f2d2f4621258a7" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "vserver export-policy" -access all`</block>
-  <block id="a7adf0c6a40a1c8ebe9cc197ff3a1381" category="list-text">`ssecurity login role create -vserver svm_name or Cluster_name -role role_name -cmddirname "Vserver iscsi" -access all`</block>
   <block id="866c5fb3e37cc4dc71c69fec8582a96d" category="summary">Windows 主机将存储系统上的 LUN 视为虚拟磁盘。您可以使用 SnapCenter 创建和配置 FC 连接或 iSCSI 连接的 LUN 。</block>
   <block id="1b7557792c66607ae44880c91345062e" category="doc">创建和管理磁盘</block>
   <block id="002a0034a22b875f64790639c12dc553" category="admonition">SnapCenter 不支持重命名磁盘。如果重命名由 SnapCenter 管理的磁盘， SnapCenter 操作将失败。</block>
@@ -3317,12 +3205,10 @@
   <block id="11ed0a0d13245c242749913d8aee1584" category="paragraph">`使用 NSM ；``D从 NSM_License 中删除，其中 NSM_License_Serial_Number="510000050" ；`</block>
   <block id="e4dbf1e5d099c4253a603227e4b3bc08" category="summary">您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储，以执行数据保护和配置操作。您可以添加一个独立 SVM ，也可以添加一个由多个 SVM 组成的集群。</block>
   <block id="787d250b4622b9b1f34f52b01f5768aa" category="doc">添加存储系统</block>
-  <block id="bb6515f023bab02fba33c79988c80c1c" category="paragraph">您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储，以执行数据保护和配置操作。您可以添加一个独立 SVM ，也可以添加一个由多个 SVM 组成的集群。</block>
   <block id="70991649072f70fdb060c64c2144c8c8" category="paragraph">SnapCenter 不支持在不同集群上使用相同名称的多个存储系统。SnapCenter 支持的每个存储系统都应具有唯一的名称和唯一的数据 LIF IP 地址。</block>
   <block id="d8c79769d1510f53b50beb7c46e3e14f" category="list-text">配置存储系统时，您还可以启用事件管理系统（ EMS ）和 AutoSupport 功能。AutoSupport 工具可收集有关系统运行状况的数据，并自动将这些数据发送给 NetApp 技术支持，使其能够对系统进行故障排除。</block>
   <block id="8066687b2002e6c5af9c9a8c64166d49" category="paragraph">如果启用了这些功能，则在资源受保护，还原或克隆操作成功完成或操作失败时， SnapCenter 会将 AutoSupport 信息发送到存储系统，并将 EMS 消息发送到存储系统系统系统日志。</block>
   <block id="90e51e88af6422ac879c0c7acebf28ca" category="list-text">如果您计划将 Snapshot 副本复制到 SnapMirror 目标或 SnapVault 目标，则必须为目标 SVM 或集群以及源 SVM 或集群设置存储系统连接。</block>
-  <block id="5cecacd0046bcdea358b6cf08ae78310" category="list-text">SnapCenter 4.5 及更高版本支持在 ONTAP 大型 LUN 上使用应用程序数据库，在 ASA 聚合上，此 LUN 的大小最高可达 128 TB 。对于大型 LUN ， SnapCenter 建议仅使用厚配置 LUN 来避免延迟。</block>
   <block id="af0393ab7c1c21394683b80f2704864d" category="admonition">如果更改存储系统密码，计划的作业，按需备份和还原操作可能会失败。更改存储系统密码后，您可以通过单击存储选项卡中的 * 修改 * 来更新密码。</block>
   <block id="d907195077a50076f92791c10bb76a87" category="list-text">在存储系统页面中，单击 * 新建 * 。</block>
   <block id="7e3e16c1661e45c7df525db25b2af547" category="list-text">在添加存储系统页面中，提供以下信息：</block>
@@ -3609,7 +3495,6 @@
   <block id="ed3518bf4a914f119b6bdecebdd5768f" category="paragraph">您应了解支持的存储系统，应用程序和数据库。</block>
   <block id="c8f093093364799903de04dd2e4130fd" category="list-text">SnapCenter 支持 ONTAP 8.3.0 及更高版本来保护数据。</block>
   <block id="cf12f1baaed2b3c195374322d8d857bc" category="list-text">SnapCenter 支持保护不同的应用程序和数据库。</block>
-  <block id="e7479e5e57745f65727551483f060a94" category="paragraph">有关支持的应用程序和数据库的详细信息，请参见<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>。</block>
   <block id="4c7a5eef4043ff1b8837e34761c5a044" category="summary">您应向 SnapCenter 服务器注册 Active Directory ，以管理多个不可信 Active Directory 域中的主机，用户和组。</block>
   <block id="378f0ed69bcfd27611f3fb3d8d53ebde" category="doc">注册不可信的 Active Directory 域</block>
   <block id="f33e6bee45fbbfa3b85931361c63b13e" category="list-text">应可从 SnapCenter 服务器访问完全限定域名（ FQDN ）。</block>
@@ -4461,7 +4346,6 @@
   <block id="278698b1ed9c8da1a5834234f787974a" category="paragraph">特定于安装的日志文件位于 /custom_location/snapcenter/logs 。</block>
   <block id="9638dcdc640dbf6662834e293cbc12b3" category="summary">要安装适用于 SAP HANA 数据库的 SnapCenter 插件的 Linux 主机必须满足相关的软件，数据库和操作系统要求。</block>
   <block id="9e8c841a17bd4c0ec7d85ab94b954bca" category="paragraph">互操作性表工具（ IMT ）包含有关受支持配置的最新信息。</block>
-  <block id="d38df2295bfe768071dcfe28649a9438" category="paragraph"><block ref="d38df2295bfe768071dcfe28649a9438" category="inline-link-rx"></block></block>
   <block id="e53ba889508b719f73b0223755d7a145" category="summary">您可以使用 SnapCenter 克隆备份。您可以从主备份或二级备份克隆。</block>
   <block id="cc9ec1117ac60bf06e35d58497993679" category="doc">克隆 SAP HANA 数据库备份</block>
   <block id="ff9ea1d5d9e34a2e53ae21ce93b5318b" category="list-text">您应已备份资源或资源组。</block>
@@ -4620,9 +4504,7 @@
   <block id="407b04b96597bfd636217f14c76066d2" category="list-text">设置 HDBSQL 客户端的路径。</block>
   <block id="47d403518b5a7a92c3f199666b9bade9" category="summary">在安装适用于 Linux 的 SnapCenter 插件软件包之前，您应熟悉一些基本的主机系统空间和规模估算要求。</block>
   <block id="ac33edef4526164e3c7c9a4df9986310" category="doc">安装适用于 Linux 的 SnapCenter 插件软件包的主机要求</block>
-  <block id="6b1bc00b11a4fd100a577bb7767ec4d9" category="paragraph">有关受支持版本的最新信息，请参见<block ref="c061f1a820e4b2619638734a53cd68bf" category="inline-link-rx"></block>。</block>
   <block id="1ec72ff98c807b748e55dd0ff1dbf757" category="admonition">您应分配足够的磁盘空间并通过 logs 文件夹监控存储消耗。所需的日志空间因要保护的实体数量和数据保护操作的频率而异。如果没有足够的磁盘空间，则不会为最近运行的操作创建日志。</block>
-  <block id="f16754a0ee7b9726e25b423ea15a0ec5" category="paragraph">有关受支持版本的最新信息，请参见<block ref="c061f1a820e4b2619638734a53cd68bf" category="inline-link-rx"></block>。。</block>
   <block id="3ae095e6e07d17e8918b6a67b8c784c9" category="summary">在创建备份作业之前定义备份策略有助于您获得成功还原或克隆资源所需的备份。您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO\ ）在很大程度上决定了您的备份策略。</block>
   <block id="e905ed4042dd0ec46ff540a7c45c6f31" category="doc">为 SAP HANA 数据库定义备份策略</block>
   <block id="dae0c1941584d66ccde8deef4940141d" category="paragraph">在创建备份作业之前定义备份策略有助于您获得成功还原或克隆资源所需的备份。您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO ）在很大程度上决定了您的备份策略。</block>
@@ -4673,7 +4555,6 @@
   <block id="361ef555cc4b1de8cd252d68a14901af" category="list-text">您必须具有具有本地管理员权限的域用户，并在远程主机上具有本地登录权限。</block>
   <block id="19651d78354411794cd21f4636d9840b" category="list-text">在 Windows 主机上安装适用于 SAP HANA 数据库的插件时，适用于 Microsoft Windows 的 SnapCenter 插件会自动安装。</block>
   <block id="bcb0136ee3c09e3ce7ec64c7148608dd" category="list-text">您必须已在 Windows 主机上安装 Java 1.8 64 位。</block>
-  <block id="455c4cccc6e93cd44f6da472ea4b4644" category="paragraph">互操作性表工具（ IMT ）包含有关要求的最新信息。</block>
   <block id="9226092112d9484949841b47e3b0500e" category="paragraph"><block ref="9226092112d9484949841b47e3b0500e" category="inline-link-rx"></block></block>
   <block id="b838812df6d8e06f0e9a3796d4a00149" category="list-text">您必须已在 Linux 主机上安装 Java 1.8 64 位。</block>
   <block id="f551df54591f7eef7409f694b7b0cc08" category="list-text">对于在 Linux 主机上运行的 SAP HANA 数据库，在安装适用于 SAP HANA 数据库的插件时，系统会自动安装适用于 UNIX 的 SnapCenter 插件。</block>
@@ -6257,7 +6138,6 @@
   <block id="e734e6e2e702d38ebab6ed3c050a5e72" category="doc">克隆自定义插件资源备份</block>
   <block id="a0eb96c1037b9c3af4529b269d3b3516" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="aabd79bbab071761889403beced1e0e9" category="inline-link-rx"></block>。</block>
   <block id="e1c05a94a3712659051eb07eafa04bd4" category="paragraph">Java 1.8 （ 64 位） Oracle Java 或 OpenJDK 版本</block>
-  <block id="55aeb811019968d3392cc387d99864aa" category="paragraph">有关受支持版本的最新信息，请参见<block ref="c061f1a820e4b2619638734a53cd68bf" category="inline-link-rx"></block></block>
   <block id="edc25de414c7fe73d241458dab7bca2b" category="summary">如果单个自定义插件资源不属于任何资源组，您可以从 " 资源 " 页面备份该资源。您可以按需备份资源，或者，如果资源已附加策略并配置了计划，则会根据计划自动进行备份。</block>
   <block id="8ffa4ba0dd2df5995fd397c72a149679" category="doc">备份各个自定义插件资源</block>
   <block id="ff48fff5b9628fa0fba10705ef9f5e19" category="list-text">在 * 资源 * 页面中，根据资源类型从 * 视图 * 下拉列表中筛选资源。</block>
@@ -7266,4 +7146,222 @@
   <block id="08759ac851b4d644eddfd819f2b366e9" category="sidebar">准备安装 SnapCenter 自定义插件</block>
   <block id="16a0da04ed4ea27dbbb965b612c6b369" category="sidebar">SnapCenter 自定义插件的安装工作流</block>
   <block id="834849dd07442651b1ce8092c92186f0" category="sidebar">安装 SnapCenter 自定义插件</block>
+  <block id="f65f3e3be818e9835c8edb554d894c5b" category="paragraph">有关受支持版本的最新信息，请参见<block ref="929c20ad32b736c5348d65c31e756cb4" category="inline-link-rx"></block>。</block>
+  <block id="f1c737192a177e293b485053b8acc0b6" category="paragraph"><block ref="35d67ca5fb8eee1c87b329d07f732dac" category="inline-link-rx"></block></block>
+  <block id="41c30ac1e9aa232930e7f9b6b0ce8106" category="paragraph">有关受支持版本的最新信息，请参见<block ref="d452377272bd1fa2c1fe23511e2af897" category="inline-link-rx"></block></block>
+  <block id="785cc627c8f85c5259515d6de81c908d" category="paragraph">Windows Server 支持 SnapCenter 配置和数据保护。有关受支持版本的最新信息，请参见<block ref="929c20ad32b736c5348d65c31e756cb4" category="inline-link-rx"></block>。</block>
+  <block id="3e320ac7627c625a9d388ed6223ee9cd" category="list-text">SnapCenter 支持 SnapCenter 软件 4.5 P1 修补版本中适用于 NetApp ONTAP 的 Amazon FSx 。</block>
+  <block id="45f17314977d7d13b625668a331e0de9" category="paragraph">如果您使用的是适用于 NetApp ONTAP 的 Amazon FSx ，请确保 SnapCenter 服务器主机插件升级到 4.5 P1 修补版本以执行数据保护操作。</block>
+  <block id="cc788b7e72b2a734dd0985bd1e0e9fe3" category="inline-link">Amazon FSX for NetApp ONTAP 文档</block>
+  <block id="6ae4072dd3f83211384c8e5499a7935c" category="paragraph">有关适用于 NetApp ONTAP 的 Amazon FSX 的信息，请参见<block ref="6acd76e3ffef3be13d939109e0593e26" category="inline-link-rx"></block>。</block>
+  <block id="770293317b6abf940c328f3b52d4ea4f" category="paragraph">有关支持的应用程序和数据库的详细信息，请参见<block ref="929c20ad32b736c5348d65c31e756cb4" category="inline-link-rx"></block>。</block>
+  <block id="fe18ba96a84933f468432bb88ec36838" category="paragraph">有关受支持版本的最新信息，请参见<block ref="929c20ad32b736c5348d65c31e756cb4" category="inline-link-rx"></block>。</block>
+  <block id="b822295e51d5429c426ab9c2787523da" category="summary">如果您在 ONTAP 中将 SVM 配置为与 SanpCenter 结合使用，而不想使用 vsadmin 角色，则应创建 SVM 角色。</block>
+  <block id="56e14ee5960cfe37cfc3964b6597babb" category="doc">创建具有最低权限的 SVM 角色</block>
+  <block id="5394acdbb7aa09ee20a7bb0640ea03bf" category="paragraph">在 ONTAP 中为新 SVM 用户创建角色时，必须运行多个 ONTAP 命令行界面命令。如果您在 ONTAP 中将 SVM 配置为与 SnapCenter 结合使用，而您不想使用 vsadmin 角色，则需要此角色。</block>
+  <block id="607d52fb81ce0d68187ad68e278b2038" category="paragraph">`ssecurity login role create – vserver &lt;svm_name\&gt;- role &lt;svm_role_Name\&gt; -cmddirname &lt;permission\&gt;`</block>
+  <block id="e14e1b926c9b2eaf942d0bc044d407f4" category="paragraph">`ssecurity login create -user &lt;user_name\&gt; -vserver &lt;svm_name\&gt; -application ontapi -authmethod password -role &lt;svm_role_Name\&gt;`</block>
+  <block id="87438cb05e7f3a99d7cb0f708d03820f" category="paragraph">`ssecurity login unlock -user &lt;user_name\&gt; -vserver &lt;svm_name\&gt;`</block>
+  <block id="5828bd4572658b3ec60c10c123756d37" category="section-title">用于创建 SVM 角色和分配权限的 ONTAP 命令行界面命令</block>
+  <block id="926b7acb0dd0dddac1e9ab03e87150b7" category="paragraph">您应运行多个 ONTAP 命令行界面命令来创建 SVM 角色并分配权限。</block>
+  <block id="3fd8ba893562f342d865571b0059781e" category="list-text">"security login role create -role SVM_SVM_role_name -cmddirname "snapmirror list-destinations" -vserver SVM_name -access all"</block>
+  <block id="038be67ee8a52d8b3eab699d5f7c43d3" category="list-text">"security login role create -role SVM_SVM_role_name -cmddirname "event generate-autosupport-log" -vserver SVM_name -access all"</block>
+  <block id="16b2bf2485b29324d1d9c52df65291c4" category="list-text">"security login role create -vserver svm_name -role svm_svm_role_name -cmddirname "job history show" -access all"</block>
+  <block id="a0df08dd4d49098e386a72bc7f795b26" category="list-text">"security login role create -vserver SVM_name -role SVM_SVM_role_name -cmddirname "job stop" -access all"</block>
+  <block id="8205a16103582031e200a6f0062cb43d" category="list-text">"security login role create -vserver SVM_name -role SVM_SVM_SVM_Role_Name -cmddirname "LUN" -access all"</block>
+  <block id="77d14dd229f22e75b140b12306c243d3" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun create" -access all`</block>
+  <block id="e1591576a5800f25342f1c086407ae01" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun delete" -access all`</block>
+  <block id="fb12f3dd2e8853d45d6a0ea4b329075d" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun igroup add" -access all`</block>
+  <block id="e53caa86cc62fc0262780e6a3a91891f" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun igroup create" -access all`</block>
+  <block id="c722177ec75912e93d2f92a373f8cbee" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun igroup delete" -access all`</block>
+  <block id="d86a9f51c3fc7522bd8adde0ec1c5197" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun igroup rename" -access all`</block>
+  <block id="9b164f1f7736600715be680a2838a2a8" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun igroup show" -access all`</block>
+  <block id="72d871fffa8a9997809196f91f71162a" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun mapping add-reporting-nodes" -access all`</block>
+  <block id="daf7b5d2005961b7fd1da6d40f58ecb5" category="list-text">"security login role create -vserver SVM_name -role SVM_SVM_role_name -cmddirname "lun mapping create" -access all"</block>
+  <block id="55ee80641b5e4a7129b766c5f1947cb9" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun mapping delete" -access all`</block>
+  <block id="0452c90c862e8bea83d415d798fe7a17" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun mapping remove-reporting-nodes" -access all`</block>
+  <block id="e236a547a0832ed88896e7bd4979e95d" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun mapping show" -access all`</block>
+  <block id="edcd0c1d3a6c50e57c4c4ce6b575a1b2" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun modify" -access all`</block>
+  <block id="ab817b58789bc8d8a949e564646b573e" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun move-in-volume" -access all`</block>
+  <block id="d0624a76d29ac8c4c004528a4f1adb07" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun offline" -access all`</block>
+  <block id="580f5a9628d3dadc6f33a9cc329e7c30" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun online" -access all`</block>
+  <block id="cc726ab19c5f6ebad14747bfb9ca2b1d" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun resize" -access all`</block>
+  <block id="a358cbd4a618edf90cae23f19bebb285" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun serial " -access all`</block>
+  <block id="ffd0adba3d8a766871862b8166efb08a" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun show" -access all`</block>
+  <block id="0f0a2ef01be3fa45bc7144749af7247b" category="list-text">`ssecurity login role create -vserver SVM_name -role SVM_SVM_role_name -cmddirname "network interface" -access readonly"</block>
+  <block id="c7a78c9e0680e33782bcb69c308c2726" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror policy add-rule" -access all`</block>
+  <block id="581ff44a24f5961a469602e478f31324" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror policy modify-rule" -access all`</block>
+  <block id="6252c3ab8ec38aa610d862bd24476214" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror policy remove-rule" -access all`</block>
+  <block id="aa8a48dbc61b0a5d577ab8dedad6021c" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror policy show" -access all`</block>
+  <block id="a9b4caf91cde1275944a164442502065" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror restore" -access all`</block>
+  <block id="af00217dfbaf0ac00b8acacea1925b32" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror show" -access all`</block>
+  <block id="88c3c4a361a77d5fcb60740ebbbf5cb6" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror update" -access all`</block>
+  <block id="19953e83739ad51ca7dac1f823c087f6" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror update-ls-set" -access all`</block>
+  <block id="fbbad2769d29974d8fcb049adbc53deb" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "version" -access all`</block>
+  <block id="17dcc82039b4a77cd7c23ba801207bd1" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume clone create" -access all`</block>
+  <block id="837d2dba4c195ceca824ce45a0acfe07" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume clone show" -access all`</block>
+  <block id="2080dab3c671ab071b904311683d6cb4" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume clone split start" -access all`</block>
+  <block id="e9648215a3769feee22a41bf65b91ee7" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume clone split stop" -access all`</block>
+  <block id="04d7eef0434438f6c00a815fd04572ab" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume create" -access all`</block>
+  <block id="e963f7a86dc582d8d9d5943cef628524" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume destroy" -access all`</block>
+  <block id="bcb36311cdabf5e104c29a2455a2b2fb" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume file clone create" -access all`</block>
+  <block id="3e7ef57b8ab69baf16a18ea93b3676d5" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume file show-disk-usage" -access all`</block>
+  <block id="2fb39c82698a785daa43f03a404c2de4" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume modify" -access all`</block>
+  <block id="cb5100c9a1972089037a2b839829a571" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume offline" -access all`</block>
+  <block id="9ae5a705149eb6309787392299485b28" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume online" -access all`</block>
+  <block id="7046b9b0ca926400aabde41868be9e91" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume qtree create" -access all`</block>
+  <block id="8514d8de13a32128695aa1c7aaefd6c4" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume qtree delete" -access all`</block>
+  <block id="d1cb0d4730d56bd837f23d77effbf4ea" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume qtree modify" -access all`</block>
+  <block id="fca38464c2fe372be5ed94f32c3df28e" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume qtree show" -access all`</block>
+  <block id="ee086838f193bf88a02c37c67208165a" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume restrict" -access all`</block>
+  <block id="4ba9f91cc6a8d2e5264c01d345c95146" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume show" -access all`</block>
+  <block id="d0357222ef21ed740c39a504d7e72eee" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume snapshot create" -access all`</block>
+  <block id="b85c77d1aef3e63c9fa15283feccd652" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume snapshot delete" -access all`</block>
+  <block id="a4bedde203588ee63f49aff6e5e585f0" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume snapshot modify" -access all`</block>
+  <block id="0c75d81528f220c17258d11ae716c094" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume snapshot rename" -access all`</block>
+  <block id="bfd0636af10180d6df3fc34f36931fbc" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume snapshot restore" -access all`</block>
+  <block id="17cba5e46a625f105f6d847a1307be4e" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume snapshot restore-file" -access all`</block>
+  <block id="4cd7158fe45c638e224f969fcec016d5" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume snapshot show" -access all`</block>
+  <block id="e51eb8aad82ff131453a8fa1b1165400" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume unmount " -access all`</block>
+  <block id="4a669edbfaf6ae7eedbb967c276d36ad" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver cifs share create" -access all`</block>
+  <block id="47b7078633ea8280dad3f20d7a492e9a" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver cifs share delete" -access all`</block>
+  <block id="158c9a291de59c8bfc45a17a6f097560" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver cifs share show" -access all`</block>
+  <block id="139070ad937f056a58254f79edf225a9" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver cifs show" -access all`</block>
+  <block id="b3180e322deb797aeb7ca696e1bf4114" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy create" -access all`</block>
+  <block id="c2c2354ac74c20c7387d70aa883c0529" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy delete" -access all`</block>
+  <block id="3cdfaff1528e474040e3b89b41b06add" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy rule create" -access all`</block>
+  <block id="b05817f4014440d7bfff2409db27e664" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy rule show" -access all`</block>
+  <block id="ed851dfd4557d096974fc08b45d7fe9a" category="list-text">`ssecurity login role create -vserver SVM_name -role SVM_role_name -cmddirname "vserver export-policy show" -access all` * ' 安全登录角色 create -vserver SVM_name -role SVM_SVM_role_name -cmddirname "vserver iscsi connection show" -access all"</block>
+  <block id="f8ab61d03ef9c157f83d8967c5325f72" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver" -access readonly`</block>
+  <block id="32b2dd2ad5bcd04617f8049be39f3a4e" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy" -access all`</block>
+  <block id="070716b587ce6b006f4906a8222fc505" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver iscsi" -access all`</block>
+  <block id="9c4ec47b74ac2ceb05d2eec75e743a66" category="list-text">"security login role create -vserver svm_name -role svm_svm_role_name -cmddirname "volume clone split status" -access all"</block>
+  <block id="8aff8257a02ab428a1f9e5ee25f8d7d7" category="section-title">查看集群模式磁盘</block>
+  <block id="aa9d9dce3778c7f67373fe9167a9b6b6" category="paragraph">您可以查看使用 SnapCenter 管理的集群上的集群磁盘。只有在从主机下拉列表中选择集群时，才会显示集群磁盘。</block>
+  <block id="84534e956a948c4ab03e578557b1f0b1" category="list-text">从 * 主机 * 下拉列表中选择集群。</block>
+  <block id="3375e2b7dd26ec739f41b8bcc986e140" category="summary">您应创建一个具有最低权限的 ONTAP 集群角色，以便不必使用 ONTAP 管理员角色在 SnapCenter 中执行操作。</block>
+  <block id="822239f41b07c86cff067dac38fab7f4" category="doc">创建具有最低权限的 ONTAP 集群角色</block>
+  <block id="d96a08e21a2a6f654ce7bfb34d9c3bf4" category="section-title">用于创建集群角色和分配权限的 ONTAP 命令行界面命令</block>
+  <block id="166504d6fb19fa3fcbbf622275eef589" category="paragraph">您应运行多个 ONTAP 命令行界面命令来创建集群角色和分配权限。</block>
+  <block id="41d7ade3381c454a1329620f9f658b8b" category="list-text">`ssecurity login role create -role role_name -cmddirname "cluster identity modify" -vserver Cluster_name 或 cluster_name -access all`</block>
+  <block id="6fb89d73c4a5ac47fffbb74dfa2e83f1" category="list-text">`ssecurity login role create -role role_name -cmddirname "cluster identity show" -vserver Cluster_name -access all`</block>
+  <block id="065992cd0013f37f03b4e13303b9ba92" category="list-text">`ssecurity login role create -role role_name -cmddirname "cluster modify" -vserver Cluster_name -access all`</block>
+  <block id="6cf57dddc7246be83fead826cd2d488b" category="list-text">`ssecurity login role create -role role_name -cmddirname "cluster peer show" -vserver Cluster_name -access all`</block>
+  <block id="09835700a8ab8639649722dc18579f0c" category="list-text">`ssecurity login role create -role role_name -cmddirname "cluster show" -vserver Cluster_name -access all`</block>
+  <block id="9d566854ec7ef14de553dc0b2222fae0" category="list-text">`ssecurity login role create -role role_name -cmddirname "event generate-autosupport-log" -vserver Cluster_name -access all`</block>
+  <block id="cd2a321672946fd6e39976559e1e72a9" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "job history show" -access all`</block>
+  <block id="bb513c5a705eb742be0e75eb7c864f5b" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "job stop" -access all`</block>
+  <block id="6435842f20dddcddfd00a9e7ec2f3111" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "LUN" -access all`</block>
+  <block id="3c9458c1094a42df94f932d5e25512d1" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun create" -access all`</block>
+  <block id="8200118795b8d66f1f807eec71028cb4" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun delete" -access all`</block>
+  <block id="42ce9cd18976f6863ec783251f2d8521" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun igroup add" -access all`</block>
+  <block id="f140ea9c1f309982226639467233b9c0" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun igroup create" -access all`</block>
+  <block id="4b7454eac1957610e053adc631da384d" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun igroup delete" -access all`</block>
+  <block id="6e80afbe9243a229326544a6df0c8dce" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun igroup modify" -access all`</block>
+  <block id="1f70e4acb59ba954f59173d3bef7133b" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun igroup rename" -access all`</block>
+  <block id="4df94b70c4d7aef0ecd152f81ca9a540" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun igroup show" -access all`</block>
+  <block id="e0b9daf69f5446b1bb3ebb53253427b3" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun mapping add-reporting-nodes" -access all`</block>
+  <block id="1e4485deae6a6fe2d519a4fbe53c48ac" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun mapping create" -access all`</block>
+  <block id="44d778fa0d6d34a95d063030ccae1afb" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun mapping delete" -access all`</block>
+  <block id="11bc2ead1a61545816e624344f23f139" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun mapping remove-reporting-nodes" -access all`</block>
+  <block id="55041f58aa0c95da91a67c2c2b8828a3" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun mapping show" -access all`</block>
+  <block id="b976ebba1da3c0ddbe10f1eb83150d94" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun modify" -access all`</block>
+  <block id="fbb5b9fce29fac9599ff22c8ad1618bd" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun move-in-volume" -access all`</block>
+  <block id="dda93f2e0ae7e37e9a96826890d44ce0" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun offline" -access all`</block>
+  <block id="cc9810663f08defa2fc3fb4db0b81b5b" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun online" -access all`</block>
+  <block id="04d4686bd9595dcf8e7dbcb486a35ec2" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun persistent-reservation clear" -access all`</block>
+  <block id="0e1c73715519d97ce6887df359f9b078" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun resize" -access all`</block>
+  <block id="bda55a4db3da7ceecc0da18674adcb61" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "LUN serial " -access all`</block>
+  <block id="4fa9cd5875ab3ba77be7acffa681c32e" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun show" -access all`</block>
+  <block id="8600122b6dc46489d22a82a44798648c" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "network interface create" -access readonly`</block>
+  <block id="765a8e041e5317b44f9611533b80e9f5" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "network interface delete" -access readonly`</block>
+  <block id="c1da9af46934efe191b635569c8a647d" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "network interface modify" -access readonly`</block>
+  <block id="9a51991e1f433b4cc9830e2c68aaf8b2" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "network interface show" -access readonly`</block>
+  <block id="7f8e9cf7769696e6f10a6ce7e8cdd581" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "security login" -access readonly`</block>
+  <block id="2ac25784ce91a23d15f2c0dd086e195b" category="list-text">`ssecurity login role create -role role_name -cmddirname "snapmirror create" -vserver Cluster_name -access all`</block>
+  <block id="c83fbd1412fe34809d8ea25a89cfdc00" category="list-text">`ssecurity login role create -role role_name -cmddirname "snapmirror list-destinations" -vserver Cluster_name -access all`</block>
+  <block id="141edf7eae1b698eb667cdadbc54120d" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "snapmirror policy add-rule" -access all`</block>
+  <block id="2b0f27523f648e21356ed5347cc543e1" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "snapmirror policy create" -access all`</block>
+  <block id="f8e0b6d327989ea6c240e28d2e57664c" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "snapmirror policy delete" -access all`</block>
+  <block id="11e637966fe648c56962f5ca2a03873d" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "snapmirror policy modify" -access all`</block>
+  <block id="eb365078d1f7f32487c00233a9d8ae06" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "snapmirror policy modify-rule" -access all`</block>
+  <block id="b255ccd61bcc850770cb349084ceb4d5" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "snapmirror policy remove-rule" -access all`</block>
+  <block id="fa3aa40455dea8ed8cfe131dd485280a" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "snapmirror policy show" -access all`</block>
+  <block id="6e48ea27976d6131772400c341a9deb6" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "snapmirror restore" -access all`</block>
+  <block id="457c22757ec75c7e19faf55dddfb85f0" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "snapmirror show" -access all`</block>
+  <block id="f6a0b425dd1a436357db0db7df5a9986" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "snapmirror show-history" -access all`</block>
+  <block id="76c317432817bd95b625fd259088c202" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "snapmirror update" -access all`</block>
+  <block id="b5381819130c65198a003be9b2e91318" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "snapmirror update-ls-set" -access all`</block>
+  <block id="7d1cc5c179bdb35a18f65b23ed628ab3" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "system license add" -access all`</block>
+  <block id="8125d610c88faa37aadfe1ed2f3ad56a" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "system license clean-up" -access all`</block>
+  <block id="6f2b6612ab7bf1fcb9b74ca870f8c6f8" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "system license delete" -access all`</block>
+  <block id="7fe31fc1cbc99839e1b3fa44bec88b27" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "system license show" -access all`</block>
+  <block id="1b16b25a24aa4b14b9ec16904b762004" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "system license status show" -access all`</block>
+  <block id="01d5fb22cc1b4d098b8fd01cf24ce309" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "system node modify" -access all`</block>
+  <block id="f27ebd256ee27078062cfb222948679b" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "system node show" -access all`</block>
+  <block id="1e6eabcba8d45fc013eb34cb8ca09177" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "system status show" -access all`</block>
+  <block id="1707991108a48830f373249b8ca8f2f3" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "version" -access all`</block>
+  <block id="42c85301ed42fd405276f656f13da6f9" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume clone create" -access all`</block>
+  <block id="f4366a8c8fe655583176fe88836d8741" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume clone show" -access all`</block>
+  <block id="47916ecea131de052569cceebeb87b1e" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume clone split start" -access all`</block>
+  <block id="f9b6c9608976bafc56db4cd921ae3260" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume clone split stop" -access all`</block>
+  <block id="dfed61eb5e95a8e322a3080839b7663a" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume create" -access all`</block>
+  <block id="1a4cd26b7cdf375544e5a3f915526eaa" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume destroy" -access all`</block>
+  <block id="a4cd6fd05f369229f5ff3517716e11c0" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume file clone create" -access all`</block>
+  <block id="7baaee5b29e9f98e2de503b20ad69821" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume file show-disk-usage" -access all`</block>
+  <block id="ab3ef7be09ebb30a12041ede069dcc02" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume modify" -access all`</block>
+  <block id="17cc98d3d84572f338beca75b0c6887a" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume offline" -access all`</block>
+  <block id="3bbadaaac59ac2a2fb0f95b8b73fdf8c" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume online" -access all`</block>
+  <block id="a680d86da52d7bbb45604e60c4afd634" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume qtree create" -access all`</block>
+  <block id="de6eaafb05dbbde5f12fb2a21e99a326" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume qtree delete" -access all`</block>
+  <block id="8445317c33072728f166c18ff2f84baf" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume qtree modify" -access all`</block>
+  <block id="df14d96c6a7bd7f0f6631751931d5746" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume qtree show" -access all`</block>
+  <block id="7ac86c11eccb6340aa050a3e555d8db0" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume restrict" -access all`</block>
+  <block id="9df5f588230d161b52b8c20cd47eea83" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume show" -access all`</block>
+  <block id="cd508097ec400feea377c6655cc4819e" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume snapshot create" -access all`</block>
+  <block id="36e91b7d4fcc65841760ef016f9c8ffb" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume snapshot delete" -access all`</block>
+  <block id="5315c14c33a0386fce80f563f10d78e0" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume snapshot modify" -access all`</block>
+  <block id="03aeefb809109e8ecd3a38cfd5b46a0a" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume snapshot promote " -access all`</block>
+  <block id="e9a713b199ef8540aa6a81c5d786afa8" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume snapshot rename" -access all`</block>
+  <block id="d5c0067182f0fbf9742d150f66c08285" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume snapshot restore" -access all`</block>
+  <block id="71d4fa6008943dc1e940b561a28ec5d0" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume snapshot restore-file" -access all`</block>
+  <block id="712257cb8c43c470d5578f86d7ded391" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume snapshot show" -access all`</block>
+  <block id="afd3eed3edbaad972ba62d67f18f3ac7" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume unmount " -access all`</block>
+  <block id="3f5bfa3b7ef349005342ec7aadf47404" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "Vserver" -access all`</block>
+  <block id="06cb86f468fd9d1c1a1a18c2c732fd3d" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "Vserver cifs create" -access all`</block>
+  <block id="248f790c6cb7bb67421f8d0a60a20271" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "Vserver cifs delete" -access all`</block>
+  <block id="71fc96d862f587d46eb1fecd916c69e3" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "Vserver cifs modify" -access all`</block>
+  <block id="89d5eb414e4f702cab9e4463bf265917" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "Vserver cifs share modify" -access all`</block>
+  <block id="451120e092f0bbdab236ac5ccdd3bcd9" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "Vserver cifs share create" -access all`</block>
+  <block id="308d9fe0fc4c4aec91c1b8e3abd331d7" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "Vserver cifs share delete" -access all`</block>
+  <block id="09bede4a4490d781c84587833cad2661" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "Vserver cifs share show" -access all`</block>
+  <block id="4acc0874e4ada0508e93e166ea464e7e" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "Vserver cifs show" -access all`</block>
+  <block id="5c26d9a447e90a1129959ac809047173" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "vserver create" -access all`</block>
+  <block id="d5448cebecb0bff66f17ac1f3ae84d4a" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "vserver export-policy create" -access all`</block>
+  <block id="1b614a5b1de43cb19d5f24d9189833ab" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "vserver export-policy delete" -access all`</block>
+  <block id="49a893e4b823e7a150c88820d384be71" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "vserver export-policy rule create" -access all`</block>
+  <block id="43a2f919116eb07e7a18dd66c41ceef1" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "vserver export-policy rule delete" -access all`</block>
+  <block id="9e29d26a51271782767627a4909c1f4d" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "vserver export-policy rule modify" -access all`</block>
+  <block id="67fed3defef9db7a9446080c3349284b" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "vserver export-policy rule show" -access all`</block>
+  <block id="a229876514e113542518cd6020f30e68" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "vserver export-policy show" -access all`</block>
+  <block id="6b556c778a011334a41ad4c746997184" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "vserver iscsi connection show" -access all`</block>
+  <block id="59897f08e771d646ccdbe064b379e1f3" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "vserver modify" -access all`</block>
+  <block id="a4ed44c4f710ccc95d64b935f9ea9d03" category="list-text">`ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "vserver show" -access all`</block>
+  <block id="032615c5bcc68f759618748b90e724e4" category="paragraph">您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储或适用于 NetApp ONTAP 的 Amazon FSX ，以执行数据保护和配置操作。</block>
+  <block id="077adf941b6f42926593e8ffdeb998bc" category="paragraph">您可以添加一个独立 SVM ，也可以添加一个由多个 SVM 组成的集群。如果您使用的是适用于 NetApp ONTAP 的 Amazon FSX ，则可以在 SnapCenter 4.5 P1 中使用 fsxadmin 帐户添加由多个 SVM 组成的 FSX 管理 LIF ，也可以在 SnapCenter 中添加 FSX SVM 。</block>
+  <block id="74ae0888147d892b12bb807a0b81b3af" category="paragraph">如果已添加 FSX SVM ，此处将列出 FSX SVM 。</block>
+  <block id="6f9f8c6ff90de911912e63ac72e07121" category="paragraph">如果您已使用 fsxadmin 添加 FSX 集群，此处将列出 FSX 集群。</block>
+  <block id="74e84f9442fdb7717385ee092400869a" category="paragraph">如果您使用的是 IE 10 或更早版本，则无法正确加载 SnapCenter UI 。您应升级到 IE 11 。</block>
+  <block id="0fdef8ecc33033bd2416bb77fbe197ca" category="paragraph">有关受支持版本的最新信息，请参见<block ref="d452377272bd1fa2c1fe23511e2af897" category="inline-link-rx"></block>。</block>
+  <block id="a8ad5b50c16f63c3b827493e08f9005e" category="paragraph">有关受支持版本的最新信息，请参见<block ref="d452377272bd1fa2c1fe23511e2af897" category="inline-link-rx"></block>。。</block>
+  <block id="ba239d3d0591ceb6004d736c087f5101" category="paragraph">。<block ref="809efd359aada3bab1427bd054c95ead" category="inline-link-rx"></block> 包含有关要求的最新信息。</block>
+  <block id="3b9b501ce9ff4819d459190476007edc" category="paragraph">例如， customtext_policy_hostname 或 resource_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。</block>
+  <block id="88d8212b57ef4a806bbe46dc391aebdf" category="paragraph">限制检查并获取锁定，而不是使用内部数据库 Snapshot 副本（ TABLOCK ）</block>
+  <block id="bed7a5b2a53899a17a7ddb2e244ad497" category="paragraph">选择 * 限制检查并获取锁定，而不是使用内部数据库 Snapshot 副本（ TABLOCK ） * 来限制检查并获取锁定，而不是使用内部数据库 Snapshot 副本。</block>
+  <block id="256c5d04c9cf631cb051364b250a65db" category="paragraph">有关 ONTAP 和应用程序插件的最低要求，请参见<block ref="4df7f43eee7332634b184fc0bf6af5a5" category="inline-link-rx"></block></block>
+  <block id="9486c31166cc0784ddae85134aa115cf" category="paragraph">请参见<block ref="4df7f43eee7332634b184fc0bf6af5a5" category="inline-link-rx"></block></block>
+  <block id="170f8235332a3dc7aef513f9e7f38495" category="list-text"><block ref="c14397e351cc69582a4d957b8ce42013" category="inline-link-rx"></block></block>
+  <block id="736b6babd1e0dcc9352ee5be0cba8093" category="paragraph">有关支持的 Oracle 版本的最新信息，请参见<block ref="929c20ad32b736c5348d65c31e756cb4" category="inline-link-rx"></block>。</block>
+  <block id="4fce23fd62d0444906188b4379914b4a" category="paragraph">中列出了适用于 Oracle 数据库的 SnapCenter 插件支持的配置<block ref="929c20ad32b736c5348d65c31e756cb4" category="inline-link-rx"></block>。</block>
+  <block id="cddfaa01c32e2362546c78364751248b" category="admonition">适用于 UNIX 的 SnapCenter 插件是适用于 AIX 的 SnapCenter 插件软件包的一部分，不支持并发卷组。</block>
 </blocks>

@@ -106,7 +106,7 @@ NOTE: 验证服务器版本应与托管主数据库的 SQL Server 的版本相�
 
 .. 单击 * 加载定位器 * 以加载 SnapMirror 和 SnapVault 卷，以便在二级存储上执行验证。
 .. 选择要为其配置验证计划的策略，然后单击 *image:../media/add_policy_from_resourcegroup.gif[""]*
-.. 在添加验证计划 policy_name 对话框中，执行以下操作：
+.. 在添加验证计划 _policy_name_ 对话框中，执行以下操作：
 +
 |===
 | 如果您要 ... | 执行此操作 ... 

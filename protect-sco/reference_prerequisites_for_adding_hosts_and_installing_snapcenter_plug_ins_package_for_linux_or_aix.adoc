@@ -88,7 +88,7 @@ Java 1.8.x （ 64 位） Oracle Java 和 OpenJDK 版本
 如果已将 Java 升级到最新版本，则必须确保 /var/opt/snapcenter/spl/etc/spl.properties 上的 java_home 选项设置为正确的 Java 版本和路径。
 
 |===
-有关受支持版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+有关受支持版本的最新信息，请参见 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 
@@ -175,6 +175,9 @@ IMPORTANT: 此示例只能用作创建自己数据的参考。
 
 在安装适用于 AIX 的 SnapCenter 插件软件包之前，应确保主机满足要求。
 
+
+NOTE: 适用于 UNIX 的 SnapCenter 插件是适用于 AIX 的 SnapCenter 插件软件包的一部分，不支持并发卷组。
+
 |===
 | 项目 | 要求 
 
@@ -211,7 +214,7 @@ Java 1.8.x （ 64 位） IBM Java
 如果已将 Java 升级到最新版本，则必须确保 /var/opt/snapcenter/spl/etc/spl.properties 上的 java_home 选项设置为正确的 Java 版本和路径。
 
 |===
-有关受支持版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+有关受支持版本的最新信息，请参见 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 

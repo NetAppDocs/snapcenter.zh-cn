@@ -27,7 +27,7 @@ summary: 您可以在 VMware 环境中使用适用于 Microsoft Windows 的 Snap
 
 
 
-有关受支持版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+有关受支持版本的最新信息，请参见 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 

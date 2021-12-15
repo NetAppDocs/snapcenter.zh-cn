@@ -54,7 +54,7 @@ NOTE: 不支持 PDB 迁移和 PDB 克隆操作。
 
 
 
-有关支持的 Oracle 版本的最新信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+有关支持的 Oracle 版本的最新信息，请参见 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 
