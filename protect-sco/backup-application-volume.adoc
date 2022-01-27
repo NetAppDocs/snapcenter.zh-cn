@@ -1,0 +1,95 @@
+---
+permalink: protect-sco/backup-application-volume.html 
+sidebar: sidebar 
+keywords: application volume, back up 
+summary: '如果应用程序卷不属于任何资源组，您可以从 " 资源 " 页面备份该应用程序卷。' 
+---
+= 备份应用程序卷
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果应用程序卷不属于任何资源组，您可以从 " 资源 " 页面备份应用程序卷。
+
+* 关于此任务 *
+
+默认情况下，系统会创建一致性组（ CG ）备份。如果要创建基于卷的备份，应在 _web.config 文件中将 * 启用 OracleNdvVolumeBasedBackup* 的值设置为 true 。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择 Oracle 数据库插件。
+. 在资源页面中，从 * 视图 * 列表中选择 * 应用程序卷 * 。
+. 单击 *image:../media/filter_icon.gif[""]* ，然后选择主机名和数据库类型以筛选资源。
++
+然后，您可以单击 *image:../media/filter_icon.gif[""]* 以关闭筛选器窗格。
+
+. 选择要备份的应用程序卷。
++
+此时将显示 Application volume-protect 页面。
+
+. 在资源页面上，执行以下操作：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+对 Snapshot 副本使用自定义名称格式
+ a| 
+选中此复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。
+
+例如， customtext_policy_hostname 或 resource_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。
+
+
+
+ a| 
+从备份中排除归档日志目标
+ a| 
+指定不希望备份的归档日志文件的目标。
+
+|===
+. 在策略页面上，执行以下步骤：
++
+.. 从下拉列表中选择一个或多个策略。
++
+
+NOTE: 您也可以单击 * 来创建策略image:../media/add_policy_from_resourcegroup.gif[""]*
+
+
+
++
+在为选定策略配置计划部分中，将列出选定策略。
+
++
+.. 单击 image:../media/add_policy_from_resourcegroup.gif[""] 在要配置计划的策略的 Configure Schedules 列中。
+.. 在添加策略 _policy_name_ 的计划窗口中，配置该计划，然后单击 * 确定 * 。
++
+_policy_name_ 是所选策略的名称。
+
++
+已配置的计划将列在 "applied Schedules" 列中。
+
+
+
+. 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
++
+您还必须指定发件人和收件人电子邮件地址以及电子邮件主题。如果要附加对资源执行的备份操作的报告，请选择 * 附加作业报告 * 。
+
++
+
+NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 set-SmtpServer 指定 SMTP 服务器详细信息。
+
+. 查看摘要，然后单击 * 完成 * 。
++
+此时将显示应用程序卷拓扑页面。
+
+. 单击 * 立即备份 * 。
+. 在备份页面上，执行以下步骤：
++
+.. 如果已对资源应用多个策略，请从 * 策略 * 下拉列表中选择要用于备份的策略。
+.. 单击 * 备份 * 。
+
+
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
+

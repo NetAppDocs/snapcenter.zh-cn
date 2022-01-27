@@ -22,4 +22,8 @@ summary: '导入适用于 Microsoft SQL Server 的 SnapManager 归档备份后�
 +
 此时将显示备份的详细信息。
 
++
+
+NOTE: 迁移已归档的 Snapshot 副本并在二级保留期间从存储中清理这些副本后，必须手动清理在 SnapManager 中创建的相应主 Snapshot 副本。
+
 

@@ -1,0 +1,99 @@
+---
+permalink: protect-sco/predefined-environment-variables-prescript-postscript-clone.html 
+sidebar: sidebar 
+keywords: environment variable, predefined, prescript, postscript, clone 
+summary: SnapCenter 允许您在克隆数据库时执行预处理和后处理脚本时使用预定义的环境变量。 
+---
+= 克隆特定的预处理程序和后处理程序的预定义环境变量
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 允许您在克隆数据库时执行预处理和后处理脚本时使用预定义的环境变量。
+
+* 克隆数据库时支持的预定义环境变量 *
+
+* * sc_original_sid* 指定源数据库的 SID 。
++
+将为应用程序卷填充此参数。
+
++
+示例： NFS32
+
+* * sc_original_host* 指定源主机的名称。
++
+将为应用程序卷填充此参数。
+
++
+示例： asmrac1.gdl.englab.netapp.com
+
+* *SC_ORACLE_HOME* 指定目标数据库的 Oracle 主目录的路径。
++
+示例： /ora01/app/oracle/product/181.0/db_1
+
+* *SC_backup_name*" 指定备份的名称。
++
+将为应用程序卷填充此参数。
+
++
+示例
+
++
+** 如果数据库未在 ARCHIVELOG 模式下运行： DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267 0_LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267
+** 如果数据库在 ARCHIVELOG 模式下运行： DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267 0_log ： rg2_scspr2417819002_07-20-2021_12.16.48.9267_1 ， rg2_scspr2417819002_07-21-2021_12.16.12.48.9267_1 ， rg2_scspr2417819002_12.67_48.22-16.22
+
+
+* *SC_AV_NAME* 指定应用程序卷的名称。
++
+示例： AV1|AV2
+
+* * sc_original_os_user* 指定源数据库的操作系统所有者。
++
+示例： Oracle
+
+* * sc_original_os_Group* 指定源数据库的操作系统组。
++
+示例： oinstall
+
+* "*SC_TARGET_SID*" 指定克隆数据库的 SID 。
++
+对于 PDB 克隆工作流，不会预定义此参数的值。
+
++
+将为应用程序卷填充此参数。
+
++
+示例： clonedb
+
+* * sc_target_host* 指定要克隆数据库的主机的名称。
++
+将为应用程序卷填充此参数。
+
++
+示例： asmrac1.gdl.englab.netapp.com
+
+* *SC_TARGET_OS_USER* 指定克隆数据库的操作系统所有者。
++
+对于 PDB 克隆工作流，不会预定义此参数的值。
+
++
+示例： Oracle
+
+* *SC_TARGET_OS_Group* 指定克隆数据库的操作系统组。
++
+对于 PDB 克隆工作流，不会预定义此参数的值。
+
++
+示例： oinstall
+
+* *SC_TARGET_DB_PORTE* 指定克隆数据库的数据库端口。
++
+对于 PDB 克隆工作流，不会预定义此参数的值。
+
++
+示例： 1521.13
+
+
+
+有关分隔符的信息，请参见 link:../protect-sco/predefined-environment-variables-prescript-postscript-backup.html#supported-delimiters["支持的分隔符"^]。

@@ -19,4 +19,5 @@ REST API 可用于执行多个 SnapCenter 管理操作。REST API 通过 Swagger
 * 适用于 Microsoft SQL Server 的插件
 * 适用于 SAP HANA 数据库的插件
 * 自定义插件
+* 适用于 Oracle 数据库的插件
 

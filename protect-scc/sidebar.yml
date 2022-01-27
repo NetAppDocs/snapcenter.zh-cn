@@ -24,8 +24,8 @@ entries:
       url: "/protect-scc/reference_backup_schedules_of_custom_plug_in_resources.html"
     - title: 所需备份作业的数量
       url: "/protect-scc/concept_number_of_backup_jobs_needed.html"
-  - title: 手动添加的 SAP HANA 资源支持的还原策略类型
-    url: "/protect-scc/reference_types_of_restore_strategies_supported_for_manually_added_sap_hana_resources.html"
+  - title: 手动添加的自定义插件资源支持的还原策略类型
+    url: "/protect-scc/reference_types_of_restore_strategies_supported_for_manually_added_custom_plugin_resources.html"
 - title: 为您的应用程序开发一个插件
   entries:
   - title: 概述

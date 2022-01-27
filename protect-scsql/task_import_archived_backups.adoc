@@ -47,4 +47,10 @@ summary: 您只能从命令行界面将使用 SnapVault 技术归档的备份从
 
 
 . 使用 `invoke-SmBackupMigration` cmdlet 导入归档备份。
++
+例如，要迁移独立的 SQL 主机： `invoke-SmBackupMigration -Hostname <hostname>`` `` -PluginCode SMSQL`
+
++
+例如，要迁移集群主机： `invoke-SmBackupMigration -Hostname <clustername> ` -PluginCode SMSQL`
+
 

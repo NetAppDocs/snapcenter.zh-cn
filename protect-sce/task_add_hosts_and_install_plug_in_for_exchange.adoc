@@ -10,7 +10,7 @@ summary: 您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用
 
 
 [role="lead"]
-您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用于 Exchange 的插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。
+您可以使用 SnapCenter 添加主机页面添加 Windows 主机。适用于 Exchange 的插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。
 
 * 您需要的内容 *
 
@@ -26,9 +26,29 @@ summary: 您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用
 
 您可以为单个主机或集群添加主机并安装插件软件包。如果要在集群（ Exchange DAG ）上安装插件，则这些插件会安装在集群的所有节点上，即使某些节点在 NetApp LUN 上没有数据库也是如此。
 
+从 SnapCenter 4.6 开始， SCE 支持多租户，您可以使用以下方法添加主机：
+
+|===
+| 添加主机操作 | 4.5 及更早版本 | 4.6 及更高版本 
+
+
+| 在跨域或不同域中添加无 IP DAG | 不支持 | supported 
+
+
+| 添加多个具有唯一名称的 IP DAG ，驻留在同一个或跨域中 | supported | supported 
+
+
+| 添加多个在跨域中具有相同主机名和 / 或数据库名称的 IP 或无 IP DAG | 不支持 | supported 
+
+
+| 添加多个名称相同且跨域的无 IP/IP DAG | 不支持 | supported 
+
+
+| 添加多个名称相同且跨域的独立主机 | 不支持 | supported 
+|===
 适用于 Exchange 的插件取决于适用于 Windows 的 SnapCenter 插件软件包，并且版本必须相同。在安装适用于 Exchange 的插件期间，默认情况下会选择适用于 Windows 的 SnapCenter 插件软件包，该软件包会随 VSS 硬件提供程序一起安装。
 
-如果已安装 SnapManager for Microsoft Exchange Server 和 SnapDrive for Windows ， 如果要在同一 Exchange Server 上安装适用于 Exchange 的插件，则必须取消注册 SnapDrive for Windows 使用的 VSS 硬件提供程序，因为它与随适用于 Exchange 的插件和适用于 Windows 的 SnapCenter 插件软件包一起安装的 VSS 硬件提供程序不兼容。
+如果已安装 SnapManager for Microsoft Exchange Server 和 SnapDrive for Windows ， 如果要在同一 Exchange Server 上安装适用于 Exchange 的插件，则必须取消注册 SnapDrive for Windows 使用的 VSS 硬件提供程序，因为它与随适用于 Exchange 的插件和适用于 Windows 的 SnapCenter 插件软件包一起安装的 VSS 硬件提供程序不兼容。有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_manually_register_the_Data_ONTAP_VSS_Hardware_Provider["如何手动注册 Data ONTAP VSS 硬件提供程序"]。
 
 * 步骤 *
 
@@ -61,15 +81,25 @@ SnapCenter 取决于 DNS 的正确配置。因此，最佳做法是输入完全�
 
 只有在将 IP 地址解析为 FQDN 时，不受信任的域主机才支持此 IP 地址。
 
+如果要使用 SnapCenter 添加主机，并且该主机属于子域，则必须提供 FQDN 。
+
 您可以输入以下项之一的 IP 地址或 FQDN ：
 
 ** 独立主机
 ** Exchange DAG
++
+对于 Exchange DAG ，您可以：
+
++
+*** 通过提供 DAG 名称， DAG IP 地址，节点名称或节点 IP 地址来添加 DAG 。
+*** 通过提供一个 DAG 集群节点的 IP 地址或 FQDN 来添加无 IP DAG 集群。
+*** 添加驻留在同一域或不同域中的无 IP DAG 。您还可以添加多个名称相同但域不同的无 IP DAG 。
 
 
-如果要使用 SnapCenter 添加主机，并且该主机属于子域，则必须提供 FQDN 。
 
-您还可以通过提供一个 DAG 集群节点的 IP 地址或 FQDN 来添加无 IP DAG 集群。
+
+
+NOTE: 对于独立主机或 Exchange DAG （跨域或相同域），建议提供主机或 DAG 的 FQDN 或 IP 地址。
 
 
 

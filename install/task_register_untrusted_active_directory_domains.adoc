@@ -14,17 +14,34 @@ summary: 您应向 SnapCenter 服务器注册 Active Directory ，以管理多�
 
 * 您需要的内容 *
 
-* 应可从 SnapCenter 服务器访问完全限定域名（ FQDN ）。
-* 如果 FQDN 无法解析，则应可从 SnapCenter 服务器解析提供的域控制器 IP 地址。
+* LDAP 和 LDAPS 协议 *
+
+* 您可以使用 LDAP 或 LDAPS 协议注册不可信的 Active Directory 域。
 * 您应已在插件主机和 SnapCenter 服务器之间启用双向通信。
 * 应在 SnapCenter 服务器和插件主机之间设置 DNS 解析，反之亦然。
 
 
+* LDAP 协议 *
+
+* 完全限定域名（ FQDN ）应可从 SnapCenter 服务器解析。
++
+您可以将不可信域注册到 FQDN 中。如果无法从 SnapCenter 服务器解析 FQDN ，您可以向域控制器 IP 地址注册，此地址应可从 SnapCenter 服务器解析。
+
+
+
+* LDAPS 协议 *
+
+* LDAPS 需要 CA 证书才能在活动目录通信期间提供端到端加密。
++
+link:task_configure_CA_client_certificate_for_LDAPS.html["为 LDAPS 配置 CA 客户端证书"]
+
+* 域控制器主机名（ DCHostName ）应可从 SnapCenter 服务器访问。
+
+
 * 关于此任务 *
 
-您可以将不可信域注册到 FQDN 中。如果无法从 SnapCenter 服务器解析 FQDN ，则可以向 IP 地址注册。
+* 您可以使用 SnapCenter 用户界面， PowerShell cmdlet 或 REST API 注册不可信域。
 
-您可以使用 SnapCenter 用户界面或 PowerShell cmdlet 注册不可信域。
 
 * 步骤 *
 
@@ -32,7 +49,9 @@ summary: 您应向 SnapCenter 服务器注册 Active Directory ，以管理多�
 . 在设置页面中，单击 * 全局设置 * 。
 . 在全局设置页面中，单击 * 域设置 * 。
 . 单击 image:../media/add_policy_from_resourcegroup.gif[""] 注册新域。
-. 在注册新域页面中，指定注册不可信域所需的信息：
+. 在注册新域页面中，选择 * LDAP * 或 * LDAPS* 。
++
+.. 如果选择 * LDAP * ，请指定为 LDAP 注册不可信域所需的信息：
 +
 |===
 | 对于此字段 ... | 执行此操作 ... 
@@ -60,5 +79,40 @@ summary: 您应向 SnapCenter 服务器注册 Active Directory ，以管理多�
 有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_does_not_allow_to_add_Domain_Controller_IP_for_untrusted_domain_from_GUI["从图形用户界面中为不可信域添加域控制器 IP"^]。
 
 |===
+.. 如果选择 * LDAP* ，请指定为 LDAPS 注册不可信域所需的信息：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+域名
+ a| 
+指定域的 NetBIOS 名称。
+
+
+
+ a| 
+域 FQDN
+ a| 
+指定 FQDN 。
+
+
+
+ a| 
+域控制器名称
+ a| 
+指定一个或多个域控制器名称，然后单击 * 解析 * 。
+
+
+
+ a| 
+域控制器 IP 地址
+ a| 
+如果域控制器名称无法从 SnapCenter 服务器解析，则应更正 DNS 解析。
+
+|===
+
+
 . 单击 * 确定 * 。
 

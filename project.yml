@@ -1,18 +1,19 @@
 ---
 settings:
-  name: SnapCenter Software
+  name: SnapCenter Software 4.6
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
-    harmony_enabled: true
+    harmony_enabled: false
     langs: zh-cn,us-en,ja-jp
+  langs: zh-cn,us-en,ja-jp
 sidebar:
   entries:
-  - title: SnapCenter 软件文档
+  - title: SnapCenter 软件 4.6 文档
     url: "/index.html"
   - title: 发行说明
-    url: "/reference_release_notes.html"
+    url: "/release-notes.html"
   - section: concept
   - section: install
   - section: protect-scsql
@@ -26,13 +27,13 @@ sidebar:
   - section: uninstall
   - section: sc-automation
   - title: 法律声明
-    url: "/reference_legal_notices.html"
+    url: "/legal-notices.html"
 homepage:
   tiles:
   - title: 入门
     links:
     - title: 发行说明
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2877281
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2880779
     - title: 了解 SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: 有关保护 SQL Server 数据库的快速参考
@@ -49,6 +50,8 @@ homepage:
       url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
     - title: 使用 F5 配置高可用性
       url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
+    - title: SnapCenter 服务器的灾难恢复
+      url: "/sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html"
   - title: 保护 Microsoft SQL Server 数据库
     links:
     - title: 安装适用于 Microsoft SQL Server 数据库的 SnapCenter 插件
@@ -57,6 +60,8 @@ homepage:
       url: "/protect-scsql/task_create_backup_policies_for_sql_server_databases.html"
     - title: 备份 SQL Server 数据库
       url: "/protect-scsql/task_back_up_sql_resources.html"
+    - title: 适用于 SQL Server 的 SnapCenter 插件的灾难恢复
+      url: "/protect-scsql/task_disaster_recovery_scsql.html"
   - title: 保护 SAP HANA 数据库
     links:
     - title: 安装适用于 SAP HANA 数据库的 SnapCenter 插件
@@ -88,10 +93,10 @@ homepage:
   - title: 更多资源
     links:
     - title: "《 cmdlet 参考指南》"
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726
     - title: 命令参考指南
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2877144
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2880725
     - title: 早期版本的 SnapCenter 文档
-      url: https://docs.netapp.com/ocsc-44/topic/com.netapp.ndc.ocsc-vers/GUID-C35C3D6E-1833-4F73-AE09-38137FC69F8C.html
+      url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: NetApp 知识库— SnapCenter
       url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter

@@ -1,0 +1,103 @@
+---
+permalink: sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter 灾难恢复功能使用 REST API 备份 SnapCenter 服务器。 
+---
+= 支持 REST API 用于 SnapCenter 服务器的灾难恢复
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 灾难恢复（ DR ）功能使用 REST API 备份 SnapCenter 服务器。使用 REST API ，您可以在 REST API Swagger 页面上执行以下操作。有关访问 Swagger 页面的信息，请参见 link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["如何使用 Swagger API 网页访问 REST API"]。
+
+* 您需要的内容 *
+
+* 您应以 SnapCenter 管理员用户身份登录。
+* SnapCenter 服务器应已启动且正在运行，以运行灾难恢复还原 API 。
+
+
+* 关于此任务 *
+
+SnapCenter 服务器灾难恢复支持所有插件。
+
+[cols="10,40,50,10"]
+|===
+| 步骤 | Description | REST API | HTTP 方法 
+
+
+ a| 
+1.
+ a| 
+提取现有 SnapCenter 服务器灾难恢复备份
+
+
+NOTE: 您必须提供备份名称以及必须存储灾难恢复备份的目标路径。
+ a| 
+` /4.5/disasterrecovery/server/backup ？ TargetPath= ｛ path ｝`
+ a| 
+获取
+
+
+
+ a| 
+2.
+ a| 
+创建新的服务器灾难恢复备份。从指定的服务器灾难恢复备份还原 SnapCenter 服务器。
+ a| 
+` /4.5/disasterrecovery/server/backup`
+ a| 
+发布
+
+
+
+ a| 
+3.
+ a| 
+从指定的服务器灾难恢复备份还原 SnapCenter 服务器。
+
+* 前提条件 *
+
+* 备用服务器主机名应与主服务器相同，但 IP 地址可以不同。
+* 服务器版本应与主服务器相同。
+* 主机名应与主服务器相同。
+* 确保使用以下命令将灾难恢复备份文件复制到新的 SnapCenter 服务器：
++
+`xcopy <Ssource_Path>\< 目标服务器 IP >\< 文件夹路径 >/O /X /E /H /K ｛ ex ： xcopy C ： \DRBackup \\10.225.81.114\c$\DRBackup /O /X /E /H /K ｝`
+
+
+
+如果此插件无法解析服务器主机名，请登录到每个插件主机并以以下格式为新 IP 添加 etc/host 条目： ` <New IP> SC_SERVER_Name`
+
+例如， 10.225.81.35 SCServer1
+
+服务器 etc/host 条目将不会还原。您可以从灾难恢复备份文件夹手动还原它。
+ a| 
+` /4.5/disasterrecovery/server/restore`
+ a| 
+发布
+
+
+
+ a| 
+4.
+ a| 
+根据备份名称删除服务器灾难恢复备份。
+ a| 
+`` /4.5/disasterrecovery/server/backup``
+ a| 
+删除
+
+
+
+ a| 
+5.
+ a| 
+启用或禁用存储灾难恢复
+ a| 
+` /4.5/disasterrecovery/storage`
+ a| 
+发布
+
+|===

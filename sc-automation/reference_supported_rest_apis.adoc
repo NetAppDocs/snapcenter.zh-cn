@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: REST API categories 
 summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 SnapCenter API 文档页面上所示。 
 ---
-= 支持的 REST API
+= 其他插件支持 REST API
 :icons: font
 :imagesdir: ../media/
 

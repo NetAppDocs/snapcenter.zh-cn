@@ -92,6 +92,14 @@ entries:
       url: "/protect-scsql/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
     - title: 为插件启用 CA 证书
       url: "/protect-scsql/task_enable_ca_certificates_for_plug-ins.html"
+  - title: 配置灾难恢复
+    entries:
+    - title: 适用于 SQL Server 的 SnapCenter 插件的灾难恢复
+      url: "/protect-scsql/task_disaster_recovery_scsql.html"
+    - title: 适用于 SQL Server 的 SnapCenter 插件的存储灾难恢复
+      url: "/protect-scsql/task_storage_disaster_recovery_for_scsql.html"
+    - title: 从适用于 SQL Server 的 SnapCenter 插件二级存储故障恢复到主存储
+      url: "/protect-scsql/task_failback_from_scsql_secondary_storage_to_primary_storage.html"
   - title: 将归档备份从 SnapManager for Microsoft SQL Server 导入到 SnapCenter
     entries:
     - title: 导入归档备份概述

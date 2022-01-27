@@ -1,0 +1,41 @@
+---
+permalink: protect-scsql/task_failback_from_scsql_secondary_storage_to_primary_storage.html 
+sidebar: sidebar 
+keywords:  
+summary: 在适用于 SQL Server 的 SnapCenter 插件主存储恢复联机后，您应故障恢复到主存储。 
+---
+= 从适用于 SQL Server 的 SnapCenter 插件二级存储故障恢复到主存储
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在适用于 SQL Server 的 SnapCenter 插件主存储恢复联机后，您应故障恢复到主存储。
+
+* 您需要的内容 *
+
+* 从 * 受管主机 * 页面将适用于 SQL Server 的 SnapCenter 插件置于 * 维护 * 模式。
+* 断开二级存储与主机的连接，并与主存储进行连接。
+* 要故障恢复到主存储，请通过执行反向重新同步操作，确保关系方向与故障转移前的关系方向保持一致。
++
+要在执行反向重新同步操作后保留主存储和二级存储的角色，请再次执行反向重新同步操作。
+
++
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/ontap-sm-classic/online-help-96-97/task_reverse_resynchronizing_snapmirror_relationships.html["反向重新同步镜像关系"]
+
+* 重新启动 MSSQL 服务器服务。
+* 确保 SQL 资源重新联机。
+
+
+* 步骤 *
+
+. 在 * 设置 * 页面中，导航到 * 设置 * > * 全局设置 * > * 灾难恢复 * 。
+. 取消选择 * 启用灾难恢复 * 。
+. 单击 * 应用 * 。
+. 单击 * 监控 * > * 作业 * 以验证是否已启用灾难恢复作业。
+
+
+* 完成后 *
+
+* 您可以使用 UI 或以下 cmdlet 删除在故障转移期间创建的适用于 SQL Server 的 SnapCenter 插件备份： `Remove-SmDRFailoverBackups`
+

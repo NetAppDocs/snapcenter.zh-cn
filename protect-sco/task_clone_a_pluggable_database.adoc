@@ -90,6 +90,9 @@ Oracle 主目录，用户名和组详细信息会自动从源数据库中填充�
 +
 您应将此预处理文件存储在此 /var/opt/snapcenter/spl/scripts 或此路径中的任何文件夹中。默认情况下，系统会填充 /var/opt/snapcenter/spl/scripts 路径。如果您已将脚本放置在此路径中的任何文件夹中，则需要提供直到放置此脚本的文件夹的完整路径。
 
++
+使用 SnapCenter ，您可以在执行预处理和后处理脚本时使用预定义的环境变量。 link:../protect-sco/predefined-environment-variables-prescript-postscript-clone.html["了解更多信息。"^]
+
 .. 在辅助 CDB 克隆数据库参数设置部分中，修改用于初始化数据库的预填充数据库参数值。
 
 
@@ -173,6 +176,9 @@ SnapCenter 会将数据库恢复到指定的系统更改编号（ SCN ）。
 您应将此后处理脚本存储在此路径中的 /var/opt/snapcenter/spl/scripts_ 或任何文件夹中。
 
 默认情况下，系统会填充 _/var/opt/snapcenter/spl/scripts_ 路径。如果您已将脚本放置在此路径中的任何文件夹中，则需要提供直到放置此脚本的文件夹的完整路径。
+
+
+NOTE: 如果克隆操作失败，则不会执行后处理脚本，并且会直接触发清理活动。
 
 |===
 . 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。

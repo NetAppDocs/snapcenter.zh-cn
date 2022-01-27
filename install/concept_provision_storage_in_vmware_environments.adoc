@@ -25,9 +25,12 @@ summary: 您可以在 VMware 环境中使用适用于 Microsoft Windows 的 Snap
 +
 对于普通 RDM ，最多支持 56 个 RDM LUN 以及 4 个 LSI Logic SCSI 控制器；对于适用于 Windows 的 VMware VM MSCS 盒对盒插件配置，最多支持 42 个 RDM LUN 以及 3 个 LSI Logic SCSI 控制器
 
++
+支持 VMware 半虚拟 SCSI 控制器。RDM 磁盘可支持 256 个磁盘。
 
 
-有关受支持版本的最新信息，请参见 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+
+有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 

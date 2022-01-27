@@ -14,7 +14,11 @@ summary: 某些 HANA 实例不支持自动发现。您必须手动添加这些�
 
 * 您需要的内容 *
 
-您必须已完成安装 SnapCenter 服务器，添加主机，设置存储系统连接以及添加 HDB 用户存储密钥等任务。
+* 您必须已完成安装 SnapCenter 服务器，添加主机，设置存储系统连接以及添加 HDB 用户存储密钥等任务。
+* 对于 SAP HANA 系统复制，建议将该 HANA 系统的所有资源添加到一个资源组中并进行资源组备份。这样可以确保在接管 - 故障恢复模式下进行无缝备份。
+
+
+link:protect-hana/task_create_resource_groups_and_attach_policies.html["创建资源组并附加策略"]。
 
 * 关于此任务 *
 
@@ -26,8 +30,9 @@ summary: 某些 HANA 实例不支持自动发现。您必须手动添加这些�
 NOTE: 如果发现上述资源，这些资源不支持数据保护操作。
 
 * HANA 多主机配置
-* HANA 系统复制
 * 同一主机上的多个实例
+* 多层横向扩展 HANA 系统复制
+* 系统复制模式下的级联复制环境
 
 
 * 步骤 *
@@ -71,7 +76,11 @@ SID
  a| 
 HDB 安全用户存储密钥
  a| 
-输入密钥以连接到 SAP HANA 系统。密钥包含用于连接到数据库的登录信息。
+输入密钥以连接到 SAP HANA 系统。
+
+密钥包含用于连接到数据库的登录信息。
+
+对于 SAP HANA 系统复制，不会验证二级用户密钥。这将在接管期间使用。
 
 
 
@@ -97,7 +106,7 @@ link:https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_a
 
 添加数据库后，您可以修改 SAP HANA 数据库详细信息。
 
-如果 SAP HANA 资源具有关联的备份，则无法修改以下内容：
+如果存在与 SAP HANA 资源关联的备份，则无法修改以下内容：
 
 * 多租户数据库容器（ MDC ）： SID 或 HDBSQL 客户端（插件）主机
 * 单个容器： SID 或 HDBSQL 客户端（插件）主机

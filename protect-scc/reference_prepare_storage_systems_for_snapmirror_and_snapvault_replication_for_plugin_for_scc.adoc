@@ -20,3 +20,6 @@ NOTE: 如果您是从 NetApp SnapManager 产品访问 SnapCenter 的，并且对
 NOTE: SnapCenter 不支持 SnapMirror 和 SnapVault 卷之间的级联关系（ * 主卷 * > * 镜像 * > * 存储 * ）。仅使用扇出关系（ * 主 * > * 镜像 * ， * 主 * > * 存储 * ）。
 
 SnapCenter 支持管理版本灵活的 SnapMirror 关系。有关版本灵活的 SnapMirror 关系以及如何设置这些关系的详细信息，请参见 http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.ic-base%2Fresources%2Fhome.html["ONTAP 文档"^]。
+
+
+NOTE: SnapCenter 不支持 * 同步镜像 * 复制。

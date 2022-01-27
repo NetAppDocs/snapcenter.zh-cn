@@ -23,7 +23,7 @@ Microsoft Windows
 
 操作系统仅支持英语，德语，日语和简体中文版。
 
-有关受支持版本的最新信息，请参见 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 
@@ -72,6 +72,6 @@ NOTE: 注意：如果 SnapCenter 服务器位于安装 SnapCenter 存储库的�
 * PowerShell 4.0 或更高版本
 
 
-有关受支持版本的最新信息，请参见 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 |===

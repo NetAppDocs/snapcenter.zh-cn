@@ -77,7 +77,7 @@ NOTE: 建议（但不要求）将 SnapCenter 标准版许可证添加到二级�
 |===
 * 其他要求 *
 
-有关 ONTAP 和应用程序插件的最低要求，请参见 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["互操作性表工具"^]
+有关 ONTAP 和应用程序插件的最低要求，请参见 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["互操作性表工具"^]
 
 |===
 | 主机 | 最低要求 
@@ -86,7 +86,7 @@ NOTE: 建议（但不要求）将 SnapCenter 标准版许可证添加到二级�
  a| 
 操作系统（ 64 位）
  a| 
-请参见 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["互操作性表工具"^]
+请参见 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["互操作性表工具"^]
 
 
 

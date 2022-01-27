@@ -1,0 +1,43 @@
+---
+permalink: protect-sco/backup-application-volume-resource-group.html 
+sidebar: sidebar 
+keywords: application volume, resource group, back up, database 
+summary: 您可以备份仅包含应用程序卷的资源组，也可以同时包含应用程序卷和数据库。 
+---
+= 备份应用程序卷资源组
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以备份仅包含应用程序卷的资源组，也可以同时包含应用程序卷和数据库。系统会对资源组中定义的所有资源执行备份操作。
+
+如果资源组包含多个应用程序卷，则所有应用程序卷都应具有 SnapMirror 或 SnapVault 复制策略。
+
+* 关于此任务 *
+
+默认情况下，系统会创建一致性组（ CG ）备份。如果要创建基于卷的备份，应在 _web.config 文件中将 * 启用 OracleNdvVolumeBasedBackup* 的值设置为 true 。
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择 Oracle 数据库插件。
+. 在资源页面中，从 * 视图 * 列表中选择 * 资源组 * 。
++
+您可以通过在搜索框中输入资源组名称或单击 * 来搜索资源组image:../media/filter_icon.gif[""]* ，然后选择标记。然后，您可以单击 *image:../media/filter_icon.gif[""]* 以关闭筛选器窗格。
+
+. 在资源组页面上，选择要备份的资源组，然后单击 * 立即备份 * 。
+. 在备份页面上，执行以下步骤：
++
+.. 如果已将多个策略与资源组关联，请从 * 策略 * 下拉列表中选择要用于备份的策略。
++
+如果为按需备份选择的策略与备份计划关联，则按需备份将根据为计划类型指定的保留设置进行保留。
+
+.. 单击 * 备份 * 。
+
+
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
++
+
+NOTE: 验证操作仅对数据库执行，而不对应用程序卷执行。
+
+

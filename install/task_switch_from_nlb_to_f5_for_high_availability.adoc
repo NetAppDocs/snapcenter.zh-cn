@@ -19,6 +19,6 @@ summary: 您可以将 SnapCenter HA 配置从网络负载平衡（ NLB ）更改
 . 使用 Open-SmConnection cmdlet 启动会话，然后输入凭据。
 . 使用 Update-SmServerCluster cmdlet 更新 SnapCenter 服务器以指向 F5 集群 IP 地址。
 +
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 

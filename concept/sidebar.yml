@@ -14,6 +14,8 @@ entries:
     url: "/concept/reference_role_based_access_control_permissions_and_roles.html"
   - title: 预定义的 SnapCenter 角色和权限
     url: "/concept/reference_pre_defined_snapcenter_roles_and_permissions.html"
+- title: 灾难恢复
+  url: "/protect-concept/concept_disaster_recovery.html"
 - title: 资源，资源组和策略
   url: "/concept/concept_resources_resource_groups_and_policies.html"
 - title: 预处理脚本和后处理脚本

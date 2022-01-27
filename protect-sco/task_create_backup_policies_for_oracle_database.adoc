@@ -191,6 +191,9 @@ NOTE: 您应在 ONTAP 中为二级存储配置 SnapMirror 保留策略，以避�
 +
 您还可以指定脚本超时值。默认值为 60 秒。
 
++
+使用 SnapCenter ，您可以在执行预处理和后处理脚本时使用预定义的环境变量。 link:../protect-sco/predefined-environment-variables-prescript-postscript-backup.html["了解更多信息。"^]
+
 . 在验证页面中，执行以下步骤：
 +
 .. 选择要执行验证操作的备份计划。

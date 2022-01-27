@@ -1,7 +1,7 @@
 ---
 permalink: install/task_create_and_manage_disks.html 
 sidebar: sidebar 
-keywords: disks 
+keywords: disks, create, manage, clustered disks, view 
 summary: Windows 主机将存储系统上的 LUN 视为虚拟磁盘。您可以使用 SnapCenter 创建和配置 FC 连接或 iSCSI 连接的 LUN 。 
 ---
 = 创建和管理磁盘
@@ -11,6 +11,11 @@ summary: Windows 主机将存储系统上的 LUN 视为虚拟磁盘。您可以�
 
 [role="lead"]
 Windows 主机将存储系统上的 LUN 视为虚拟磁盘。您可以使用 SnapCenter 创建和配置 FC 连接或 iSCSI 连接的 LUN 。
+
+* SnapCenter 仅支持基本磁盘。不支持动态磁盘。
+* 对于 GPT ，仅允许一个数据分区，对于 MBR ，允许一个主分区具有一个使用 NTFS 或 CSVFS 格式化的卷且具有一个挂载路径。
+* 支持的分区模式： GPT ， MBR ；在 VMware UEFI VM 中，仅支持 iSCSI 磁盘
+
 
 
 NOTE: SnapCenter 不支持重命名磁盘。如果重命名由 SnapCenter 管理的磁盘， SnapCenter 操作将失败。
@@ -52,6 +57,8 @@ NOTE: SnapCenter 不支持重命名磁盘。如果重命名由 SnapCenter 管理
 == 创建 FC 连接或 iSCSI 连接的 LUN 或磁盘
 
 Windows 主机将存储系统上的 LUN 视为虚拟磁盘。您可以使用 SnapCenter 创建和配置 FC 连接或 iSCSI 连接的 LUN 。
+
+如果要在 SnapCenter 之外创建和格式化磁盘，则仅支持 NTFS 和 CSVFS 文件系统。
 
 * 您需要的内容 *
 

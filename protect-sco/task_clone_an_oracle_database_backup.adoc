@@ -21,7 +21,7 @@ NOTE: 如果您尝试将 Linux 主机上创建的备份克隆到 AIX 主机，�
 
 从 Oracle RAC 数据库备份克隆时， SnapCenter 会创建一个独立数据库。SnapCenter 支持从数据防护备用数据库和活动数据防护备用数据库的备份创建克隆。
 
-克隆期间， SnapCenter 会挂载日志备份以执行恢复操作。恢复后，日志备份将被卸载。所有此类克隆都挂载在 _/var/opt/snapcenter/scU/cips/_ 下。如果您使用基于 NFS 的 ASM ，则应将 _/var/opt/snapcenter/scU/cles/*/* 添加到 asm_diskstring 参数中定义的现有路径中。
+克隆期间， SnapCenter 会根据 SCN 或 dat 以及恢复操作的时间挂载最佳数量的日志备份。恢复后，日志备份将被卸载。所有此类克隆都挂载在 _/var/opt/snapcenter/scU/cips/_ 下。如果您使用基于 NFS 的 ASM ，则应将 _/var/opt/snapcenter/scU/cles/*/* 添加到 asm_diskstring 参数中定义的现有路径中。
 
 在 SAN 环境中克隆 ASM 数据库的备份时，克隆的主机设备的 udev 规则会在 _/etc/udev/rules.d/999-scu-netapp.rules_ 上创建。删除克隆后，与克隆的主机设备关联的这些 udev 规则将被删除。
 
@@ -190,6 +190,9 @@ Oracle 主目录，用户名和组详细信息会自动从源数据库中填充�
 +
 您必须将此预处理存储在此路径中的 _/var/opt/snapcenter/spl/scripts_ 或任何文件夹中。默认情况下，系统会填充 _/var/opt/snapcenter/spl/scripts_ 路径。如果您已将脚本放置在此路径中的任何文件夹中，则需要提供直到放置此脚本的文件夹的完整路径。
 
++
+使用 SnapCenter ，您可以在执行预处理和后处理脚本时使用预定义的环境变量。 link:../protect-sco/predefined-environment-variables-prescript-postscript-clone.html["了解更多信息。"^]
+
 .. 在 Database parameter settings 部分中，修改用于初始化数据库的预先填充的数据库参数值。
 +
 您可以单击 * 来添加其他参数image:../media/add_policy_from_resourcegroup.gif[""]*
@@ -259,7 +262,12 @@ SnapCenter 会将数据库恢复到指定的系统更改编号（ SCN ）。
  a| 
 指定外部归档日志位置
  a| 
-指定外部归档日志位置。
+如果数据库在 ARCHIVELOG 模式下运行，则 SnapCenter 会根据指定的 SCN 或选定的日期和时间确定并挂载最佳日志备份数。
+
+您还可以指定外部归档日志位置。
+
+
+NOTE: 如果您选择取消之前， SnapCenter 不会自动识别和挂载日志备份。
 
 
 
@@ -296,6 +304,9 @@ SnapCenter 会将数据库恢复到指定的系统更改编号（ SCN ）。
 您应将此后处理脚本存储在此路径中的 /var/opt/snapcenter/spl/scripts_ 或任何文件夹中。默认情况下，系统会填充 _/var/opt/snapcenter/spl/scripts_ 路径。
 
 如果您已将脚本放置在此路径中的任何文件夹中，则需要提供直到放置此脚本的文件夹的完整路径。
+
+
+NOTE: 如果克隆操作失败，则不会执行后处理脚本，并且会直接触发清理活动。
 
 |===
 . 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。

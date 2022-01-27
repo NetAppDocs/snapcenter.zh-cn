@@ -119,6 +119,9 @@ NOTE: 如果您手动安装了插件并指定了自定义端口，则必须指�
 +
 压缩文件夹包含自定义插件代码和描述符 .xml 文件。
 
++
+对于存储插件，导航到 _C ： \ProgramData\NetApp\SnapCenter\Package Repository _ ，然后选择 `Storage.zip` folder 。
+
 ... 单击 * 上传 * 。
 +
 上传软件包之前，会验证压缩后的自定义插件文件夹中的描述符 .xml 文件。

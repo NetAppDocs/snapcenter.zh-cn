@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: reference_legal_notices.html 
+permalink: legal-notices.html 
 keywords: copyrights, notice, trademarks, patents, privacy, open source 
 summary: 法律声明提供对版权声明、商标、专利等的访问。 
 ---
@@ -56,4 +56,4 @@ https://www.netapp.com/company/legal/machine-translation/["https://www.netapp.co
 
 提供有关本产品中使用的第三方版权和许可证的信息。您的产品不一定使用下面所述的所有软件组件。
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2877145["SnapCenter 4.5 注意事项"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2880727["SnapCenter 4.6 注意事项"^]

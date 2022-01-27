@@ -103,7 +103,7 @@ NOTE: 您也可以单击来创建策略 image:../media/add_policy_from_resourceg
 +
 .. 单击 * 加载定位器 * 以加载 SnapMirror 或 SnapVault 卷，以便在二级存储上执行验证。
 .. 单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 在 Configure Schedules 列中，为策略的所有计划类型配置验证计划。
-.. 在添加验证计划 _policy_name_ 对话框中，执行以下操作：
+.. 在添加验证计划 policy_name 对话框中，执行以下操作：
 +
 |===
 | 如果您要 ... | 执行此操作 ... 

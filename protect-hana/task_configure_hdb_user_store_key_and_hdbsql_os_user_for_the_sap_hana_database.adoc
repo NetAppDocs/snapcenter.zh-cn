@@ -28,7 +28,7 @@ summary: 您必须配置 HDB 用户存储密钥和 HDBSQL 操作系统用户，�
 然后，您可以单击 image:../media/filter_icon.gif[""] 以关闭筛选器窗格。
 
 . 选择数据库，然后单击 * 配置数据库 * 。
-. 在 Configure database settings 部分中，输入 HDB Secure User Store Key 。
+. 在 * 配置数据库设置 * 部分中，输入 HDB 安全用户存储密钥。
 +
 
 NOTE: 此时将显示插件主机名，并自动将 HDB SQL OS 用户填充到 <sid>adm 。
@@ -36,4 +36,4 @@ NOTE: 此时将显示插件主机名，并自动将 HDB SQL OS 用户填充到 <
 . 单击 * 确定 * 。
 
 
-您可以从 " 拓扑 " 页面修改数据库配置。
+您可以从 * 拓扑 * 页面修改数据库配置。

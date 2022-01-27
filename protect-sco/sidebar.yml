@@ -22,6 +22,8 @@ entries:
     url: "/protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html"
   - title: 添加主机并安装适用于 Linux 或 AIX 的插件软件包
     url: "/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html"
+  - title: 安装适用于 Linux 或 AIX 的插件软件包的其他方法
+    url: "/protect-sco/alternate-ways-install-plug-in-linux-aix.html"
   - title: 配置 SnapCenter 插件加载程序服务
     url: "/protect-sco/task_configure_snapcenter_plug_in_loader_service.html"
   - title: 在 Linux 主机上使用 SnapCenter 插件加载程序服务配置 CA 证书
@@ -40,6 +42,8 @@ entries:
     url: "/protect-sco/backup-workflow.html"
   - title: 为 Oracle 数据库定义备份策略
     url: "/protect-sco/task_define_a_backup_strategy_for_oracle_databases.html"
+  - title: 用于备份特定的预处理和后处理的预定义环境变量
+    url: "/protect-sco/predefined-environment-variables-prescript-postscript-backup.html"
   - title: 确定 Oracle 数据库是否可用于备份
     url: "/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html"
   - title: 为 Oracle 数据库创建备份策略
@@ -68,9 +72,11 @@ entries:
     url: "/protect-sco/restore-workflow.html"
   - title: 为 Oracle 数据库定义还原和恢复策略
     url: "/protect-sco/task_define_a_restore_and_recovery_strategy_for_oracle_databases.html"
+  - title: 用于还原特定的预处理和后处理的预定义环境变量
+    url: "/protect-sco/predefined-environment-variables-prescript-postscript-restore.html"
   - title: 还原 Oracle 数据库的要求
     url: "/protect-sco/reference_requirements_for_restoring_an_oracle_database.html"
-  - title: 还原 Oracle 数据库
+  - title: 还原和恢复 Oracle 数据库
     url: "/protect-sco/task_restore_an_oracle_database.html"
   - title: 使用时间点恢复还原和恢复表空间
     url: "/protect-sco/task_restore_and_recovere_tablespaces_using_point_in_time_recovery.html"
@@ -88,6 +94,8 @@ entries:
     url: "/protect-sco/clone-workflow.html"
   - title: 为 Oracle 数据库定义克隆策略
     url: "/protect-sco/task_define_a_clone_strategy_for_oracle_databases.html"
+  - title: 克隆特定的预处理程序和后处理程序的预定义环境变量
+    url: "/protect-sco/predefined-environment-variables-prescript-postscript-clone.html"
   - title: 克隆 Oracle 数据库的要求
     url: "/protect-sco/reference_requirements_for_cloning_an_oracle_database.html"
   - title: 克隆 Oracle 数据库
@@ -106,3 +114,15 @@ entries:
     url: "/protect-sco/task_refresh_a_clone.html"
   - title: 删除可插拔数据库的克隆
     url: "/protect-sco/task_delete_clone_of_a_pluggable_database.html"
+- title: 管理应用程序卷
+  entries:
+  - title: 添加应用程序卷
+    url: "/protect-sco/add-application-volume.html"
+  - title: 备份应用程序卷
+    entries:
+    - title: 备份应用程序卷
+      url: "/protect-sco/backup-application-volume.html"
+    - title: 备份应用程序卷资源组
+      url: "/protect-sco/backup-application-volume-resource-group.html"
+  - title: 克隆应用程序卷备份
+    url: "/protect-sco/clone-application-volume.html"

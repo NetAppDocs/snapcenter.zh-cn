@@ -49,7 +49,7 @@ link:concept_develop_a_plug_in_for_your_application.html["为您的应用程序�
 http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
 
 +
-https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"]
 
 * 您必须为非 root 用户配置 sudo 权限，才能提供对多个路径的访问权限。使用 visudo Linux 实用程序将以下行添加到 /etc/sudoers 文件中。例如：
 +

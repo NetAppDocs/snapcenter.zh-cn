@@ -36,8 +36,6 @@ summary: '资源是指 Linux 主机上由 SnapCenter 管理的 SAP HANA 数据�
 
 
 
-《 SAP HANA 数据库数据保护指南》提供了有关如何在 SnapCenter 插件主机上使用新 MDC 资源执行数据保护操作的详细信息
-
 以下配置不支持自动发现：
 
 * RDM 和 VMDK 布局
@@ -46,6 +44,7 @@ summary: '资源是指 Linux 主机上由 SnapCenter 管理的 SAP HANA 数据�
 NOTE: 如果发现上述资源，这些资源不支持数据保护操作。
 
 * HANA 多主机配置
-* HANA 系统复制
 * 同一主机上的多个实例
+* 多层横向扩展 HANA 系统复制
+* 系统复制模式下的级联复制环境
 

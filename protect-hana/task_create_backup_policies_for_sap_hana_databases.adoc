@@ -25,6 +25,22 @@ summary: 在使用 SnapCenter 备份 SAP HANA 数据库资源之前，您必须�
 
 
 
+* 关于此任务 *
+
+* SAP HANA 系统复制
++
+** 您可以保护主 SAP HANA 系统，并且可以执行所有数据保护操作。
+** 您可以保护二级 SAP HANA 系统，但无法创建备份。
++
+故障转移后，可以在二级 SAP HANA 系统成为主 SAP HANA 系统时执行所有数据保护操作。
+
++
+您不能为 SAP HANA 数据卷创建备份，但 SnapCenter 会继续保护非数据卷（ NDV ）。
+
+
+
+
+
 * 步骤 *
 
 . 在左侧导航窗格中，单击 * 设置 * 。
@@ -88,6 +104,12 @@ NOTE: 对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，
 
 
 IMPORTANT: 对于基于 Snapshot 副本的备份，如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留数量设置为 1 ，则保留操作可能会失败，因为第一个 Snapshot 副本是 SnapVault 关系的参考 Snapshot 副本，直到将较新的 Snapshot 副本复制到目标。
+
+
+NOTE: 对于 SAP HANA 系统复制，建议将 SAP HANA 系统的所有资源添加到一个资源组中。这样可以确保保留正确数量的备份。
+
+
+NOTE: 对于 SAP HANA 系统复制，创建的 Snapshot 副本总数将等于为资源组设置的保留空间。删除最旧的 Snapshot 副本取决于最旧的 Snapshot 副本所在的节点。例如，对于使用 SAP HANA System Replication primary 和 SAP HANA System Replication secondary 的资源组，保留设置为 7 。一次最多可以创建 7 个 Snapshot 副本，包括 SAP HANA System Replication 主副本和 SAP HANA System Replication 二级副本。
 
 
 

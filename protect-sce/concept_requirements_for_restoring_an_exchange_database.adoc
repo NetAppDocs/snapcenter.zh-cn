@@ -12,6 +12,9 @@ summary: 在从适用于 Microsoft Exchange Server 的 SnapCenter 插件备份�
 [role="lead"]
 在从适用于 Microsoft Exchange Server 的 SnapCenter 插件备份还原 Exchange Server 数据库之前，您必须确保满足多项要求。
 
+
+NOTE: 要完全使用还原功能，您必须将 SnapCenter 服务器和适用于 Exchange 的 SnapCenter 插件数据库升级到 4.6 。
+
 * 要还原数据库， Exchange Server 必须处于联机状态且正在运行。
 * 数据库必须位于 Exchange Server 上。
 +

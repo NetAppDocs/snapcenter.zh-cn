@@ -33,7 +33,7 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
 
 +
-。 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["互操作性表工具"] 包含有关要求的最新信息。
+https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"]
 
 
 
@@ -47,7 +47,7 @@ http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 
 http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
 
 +
-。 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["互操作性表工具"] 包含有关要求的最新信息。
+https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"]
 
 * 对于在 Linux 主机上运行的 SAP HANA 数据库，在安装适用于 SAP HANA 数据库的插件时，系统会自动安装适用于 UNIX 的 SnapCenter 插件。
 

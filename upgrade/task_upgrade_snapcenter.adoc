@@ -16,7 +16,7 @@ summary: 您可以使用 SnapCenter 服务器安装程序可执行文件升级 S
 
 * SnapCenter 服务器主机必须是最新的 Windows 更新，并且不会发生待定系统重新启动。
 * 在启动升级操作之前，应确保没有其他操作正在运行。
-* 在确保未运行任何作业之后，您应备份 SnapCenter 存储库（ MySQL ）数据库。
+* 在确保未运行任何作业之后，您应备份 SnapCenter 存储库（ MySQL ）数据库。建议在升级 SnapCenter 服务器和 Exchange 插件之前执行此操作。
 +
 有关信息，请参见 link:../admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["备份 SnapCenter 存储库"^]。
 
@@ -29,6 +29,7 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
 * 关于此任务 *
 
 * 在升级期间，主机将自动置于维护模式，以防止主机运行任何计划的作业。升级后，主机将自动退出维护模式。
+* 升级期间，系统会执行 SQL 脚本以更新 NSM 数据库中的 Exchange 数据，从而将 DAG 和主机短名称转换为 FQDN 。只有在将 SnapCenter 服务器与 Exchange 插件结合使用时，此选项才适用。
 * 在启动升级操作之前，如果已手动将主机置于维护模式，则在升级后，您需要通过单击 * 主机 * > * 激活计划 * 手动将主机置于维护模式。
 * 支持的升级路径
 +
@@ -43,6 +44,7 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
 ** 首先升级到 4.1.x 或 4.2.x ，然后升级到 4.3.x ，以升级到 4.3.x
 ** 首先升级到 4.2.x ，然后升级到 4.4.x
 ** 首先升级到 4.2.x ，然后升级到 4.4.x ，最后升级到 4.5 ，从而升级到 4.5
+** 首先升级到 4.2.x ，然后升级到 4.4.x ，最后升级到 4.6 ，从而升级到 4.6
 
 
 
@@ -53,6 +55,7 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
 ** 直接升级到 4.2.x 或 4.3.x
 ** 首先升级到 4.2.x 或 4.3.x ，然后升级到 4.4.x ，以升级到 4.4.x
 ** 首先升级到 4.3.x ，然后升级到 4.5 ，以升级到 4.5
+** 首先升级到 4.3.x ，然后升级到 4.5.x ，再升级到 4.6 ，从而升级到 4.6
 
 
 
@@ -62,6 +65,7 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
  a| 
 ** 直接升级到 4.3.x 或 4.4.x
 ** 首先升级到 4.3.x 或 4.4.x ，然后升级到 4.5 ，以升级到 4.5
+** 首先升级到 4.4.x ，然后升级到 4.6 ，以升级到 4.6
 
 
 
@@ -69,14 +73,23 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
  a| 
 4.3.x
  a| 
-直接升级到 4.4.x 或 4.5
+** 直接升级到 4.4.x 或 4.5
+** 首先升级到 4.5.x ，然后升级到 4.6 ，以升级到 4.6
+
 
 
 
  a| 
 4.4.x
  a| 
-直接升级到 4.5
+直接升级到 4.5 或 4.6
+
+
+
+ a| 
+4.5.x
+ a| 
+直接升级到 4.6
 
 |===
 

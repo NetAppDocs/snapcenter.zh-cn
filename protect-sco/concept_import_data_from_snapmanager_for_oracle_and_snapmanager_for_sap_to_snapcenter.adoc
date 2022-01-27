@@ -34,7 +34,7 @@ SnapCenter 不支持在 7- 模式下运行的 Data ONTAP 。您可以使用 7- �
 
 在将数据从适用于 Oracle 的 SnapManager 3.4.x 和适用于 SAP 的 SnapManager 3.4.x 导入到 SnapCenter 之前，您应了解适用于 Oracle 数据库的 SnapCenter 插件支持的配置。
 
-中列出了适用于 Oracle 数据库的 SnapCenter 插件支持的配置 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+中列出了适用于 Oracle 数据库的 SnapCenter 插件支持的配置 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 
