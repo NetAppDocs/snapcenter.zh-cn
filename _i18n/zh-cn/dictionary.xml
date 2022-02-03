@@ -6336,7 +6336,6 @@
   <block id="49bc745c5af6e687a7001eeef19edb34" category="list-text">可以使用外部命令创建 Snapshot 副本。</block>
   <block id="ee81cae3ec3e0c9309ae63b9a03ca91a" category="list-text">能够在 Windows 环境中创建文件系统一致的 Snapshot 副本。</block>
   <block id="aa5531c2ecb8be9440f8c1f83b8e7d4f" category="summary">资源组是指必须向其添加要备份和保护的资源的容器。</block>
-  <block id="6f88dff1085d4ded317ae16892a20132" category="doc">创建资源组并附加策略</block>
   <block id="da28968551b2d11e1b248026ca5ff54e" category="list-text">在 * 资源 * 页面上，单击新建资源组。</block>
   <block id="a80db864d152c8b32afdc8aba08be8a4" category="paragraph">例如， _customtext_resource group_policy_hostname 或 resource group_hostname_ 。默认情况下， Snapshot 副本名称会附加时间戳。</block>
   <block id="1a010cd336c8c6c55566893caa1604cb" category="list-text">可选：在 * 资源 * 页面上，从 * 主机 * 下拉列表中选择主机名，从 * 资源类型 * 下拉列表中选择资源类型。</block>
@@ -7786,4 +7785,5 @@
   <block id="01c23a6022de21870627c656bac73ece" category="sidebar">使用 REST API 实现自动化</block>
   <block id="d08bb023e713ac5ff94f7b3a84332b71" category="sidebar">其他插件支持的 REST API 工作流</block>
   <block id="60fb82bb98786b71893de4332fbed808" category="sidebar">Oracle 数据库支持的 REST API</block>
+  <block id="bbbbcb8f41827abddd8ec6151fdf9e99" category="sidebar">SnapCenter 软件</block>
 </blocks>

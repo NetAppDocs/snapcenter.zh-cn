@@ -6,7 +6,15 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: false
-  langs: zh-cn,us-en,ja-jp,ko-kr
+    langs: zh-cn,us-en,ja-jp
+  versions:
+  - name: SnapCenter 软件
+    url: "/snapcenter"
+    version-number: '4.6'
+  - name: SnapCenter 软件
+    url: "/snapcenter-45"
+    version-number: '4.5'
+  langs: zh-cn,us-en,ja-jp
 sidebar:
   entries:
   - title: SnapCenter 软件 4.6 文档
