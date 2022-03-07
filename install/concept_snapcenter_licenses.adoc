@@ -19,7 +19,7 @@ SnapCenter 需要多个许可证才能对应用程序，数据库，文件系统
  a| 
 基于 SnapCenter 标准控制器
  a| 
-对于 FAS 或 AFF 存储控制器为必需项
+FAS ， AFF 和 Amazon FSX 需要此功能
 
 SnapCenter 标准版许可证是一种基于控制器的许可证，作为高级包的一部分提供。如果您拥有 SnapManager 套件许可证，则还可以获得 SnapCenter 标准许可证授权。如果要在 FAS 或 AFF 存储中试用 SnapCenter ，您可以联系销售代表以获取超值包评估许可证。
 

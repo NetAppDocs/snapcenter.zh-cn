@@ -101,3 +101,4 @@ NOTE: 您必须提供备份名称以及必须存储灾难恢复备份的目标�
 发布
 
 |===
+有关详细信息，请参见 https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["灾难恢复 API"^] 视频。

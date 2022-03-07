@@ -7786,4 +7786,7 @@
   <block id="d08bb023e713ac5ff94f7b3a84332b71" category="sidebar">其他插件支持的 REST API 工作流</block>
   <block id="60fb82bb98786b71893de4332fbed808" category="sidebar">Oracle 数据库支持的 REST API</block>
   <block id="bbbbcb8f41827abddd8ec6151fdf9e99" category="sidebar">SnapCenter 软件</block>
+  <block id="27e7993c4841ae5fd670cdd945ccb96d" category="inline-link">灾难恢复 API</block>
+  <block id="90840bc3d6109c892e0f709274fdc6b6" category="paragraph">有关详细信息，请参见<block ref="af818973dd6acaf1e28a3bd4ca9bd4a5" category="inline-link-rx"></block> 视频。</block>
+  <block id="699f1c0496b9360a6686498114b0be37" category="paragraph">FAS ， AFF 和 Amazon FSX 需要此功能</block>
 </blocks>
