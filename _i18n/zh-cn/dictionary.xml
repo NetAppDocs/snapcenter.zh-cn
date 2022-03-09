@@ -4331,7 +4331,6 @@
   <block id="cca6a85f5065269f712b6122c56bcc23" category="paragraph">输入 LUN 导出到的主机的 iSCSI 启动程序名称。只有在选择 LUN 资源类型时，此选项才可用。</block>
   <block id="888a77f5ac0748b6c8001822417df8b6" category="paragraph">协议</block>
   <block id="19ca9a39b837f0de2cd60194c3115a82" category="paragraph">输入 LUN 协议。只有在选择 LUN 资源类型时，此选项才可用。</block>
-  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
   <block id="4e783e8dfeae9de37071ca1aacd853de" category="paragraph">如果所选资源为 LUN ，并且您要从二级备份克隆，则会列出目标卷。一个源可以包含多个目标卷。</block>
   <block id="d21ab82b42875e082ef4574c36d6c5e4" category="admonition">在克隆之前，您必须确保 iSCSI 启动程序或 FCP 存在，并且已配置并登录到备用主机。</block>
   <block id="2516fb414e835dfca0b69565d324572e" category="list-text">在 * 脚本 * 页面上，执行以下步骤：</block>
@@ -7037,7 +7036,6 @@
   <block id="4cbefe74fbcdea5cde822de543a2b616" category="sidebar">SQL Server 资源的备份策略</block>
   <block id="c839588253fb91ab7c3ffd7dbc89ef20" category="sidebar">SQL Server 的还原策略</block>
   <block id="25bf2c62056fbb603e50ca9faa296f05" category="sidebar">准备安装适用于 Microsoft SQL Server 的 SnapCenter 插件</block>
-  <block id="3e3c892945f01849a83a9ba45b50046a" category="sidebar">添加主机和安装适用于 Microsoft SQL Server 的 SnapCenter 插件的前提条件</block>
   <block id="6119871227cfd0ac53fa00369e5ea153" category="sidebar">在 SnapCenter Jobs 页面中监控备份操作</block>
   <block id="e62a99d48b4d9b1ce6eb1be8cdf44cca" category="sidebar">适用于 SAP HANA 数据库的 SnapCenter 插件</block>
   <block id="883135fe64e6d1e34b5f9e436f840927" category="sidebar">SAP HANA 数据库的备份策略</block>
@@ -7789,4 +7787,5 @@
   <block id="27e7993c4841ae5fd670cdd945ccb96d" category="inline-link">灾难恢复 API</block>
   <block id="90840bc3d6109c892e0f709274fdc6b6" category="paragraph">有关详细信息，请参见<block ref="af818973dd6acaf1e28a3bd4ca9bd4a5" category="inline-link-rx"></block> 视频。</block>
   <block id="699f1c0496b9360a6686498114b0be37" category="paragraph">FAS ， AFF 和 Amazon FSX 需要此功能</block>
+  <block id="c6a05503c268c70227420c852ced4926" category="admonition">SnapCenter 不支持 /etc/fstab 文件中的 UUID 映射。</block>
 </blocks>

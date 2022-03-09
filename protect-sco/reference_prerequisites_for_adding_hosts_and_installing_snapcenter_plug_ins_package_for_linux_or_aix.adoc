@@ -40,6 +40,9 @@ NOTE: 您也可以使用适用于 Oracle 数据库的插件来管理适用于 SA
 
 
 
+NOTE: SnapCenter 不支持 /etc/fstab 文件中的 UUID 映射。
+
+
 
 == Linux 主机要求
 
