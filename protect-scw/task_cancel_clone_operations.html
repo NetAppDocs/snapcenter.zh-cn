@@ -50,10 +50,10 @@
   
   <link rel="stylesheet" href="/zh-cn/snapcenter/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/zh-cn/snapcenter/css/tabbed-blocks.css" type="text/css">
-  <link rel="stylesheet" href='/zh-cn/snapcenter/css/product-family.css' type="text/css">
   <link rel='stylesheet' href='/zh-cn/snapcenter/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <!-- Used to import Promise for IE. Required for SearchKit -->
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/snapcenter/js/na-search.js'></script><script src='/zh-cn/snapcenter/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/snapcenter/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/snapcenter/css/prism-netapp.css' type='text/css'>
 
@@ -131,7 +131,6 @@
   }
   </script>
   <script src='/zh-cn/snapcenter/js/version-dropdown.js'></script>
-  <script src='/zh-cn/snapcenter/js/product-family.js'></script>
   <script src='/zh-cn/snapcenter/js/FileSaver.min.js'></script>
   <script src='/zh-cn/snapcenter/js/jszip-utils.min.js'></script>
   <script src='/zh-cn/snapcenter/js/jszip.min.js'></script>
@@ -144,6 +143,43 @@
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"><div id="version-dropdown-ie-i18n">
+  <div id="version-dropdown-ie-i18n-menu">
+    <span class="ie-i18n-lang"><span class="version-title">SnapCenter 软件 </span><span class="version">4.6</span></span>
+    <span class="version-dropdown-caret"></span>
+  </div>
+  <div id="version-dropdown-n-property-navigation-bar__menu--language-selector" class="n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+    <div class="n-language-selector-menu">
+      <ul class="n-menu__list">
+        <li class="n-menu__list-column">
+          <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1"><a href="https://docs.netapp.com/zh-cn/snapcenter/protect-scw/task_cancel_clone_operations.html" class="n-menu__header-text" target="_self">
+                <span translate="no" class="notranslate"><span>SnapCenter 软件</span><span class="version"> 4.6</span></span>
+              </a></li><li class="n-menu__list-item n-menu__list-item--level-1"><a href="https://docs.netapp.com/zh-cn/snapcenter-45/protect-scw/task_cancel_clone_operations.html" class="n-menu__header-text" target="_self">
+                <span translate="no" class="notranslate"><span>SnapCenter 软件</span><span class="version"> 4.5</span></span>
+              </a></li></ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/snapcenter/issues/new?body=Page%3A%20[取消克隆操作](https://docs.netapp.com/zh-cn/snapcenter/protect-scw/task_cancel_clone_operations.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/snapcenter/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/snapcenter/blob/main/protect-scw/task_cancel_clone_operations.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/snapcenter/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/snapcenter/images/article-sm.svg" class="github-icon" />提供者指南</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -3301,7 +3337,7 @@
         <div class="na-navbar-padding"> 准备安装适用于 SAP HANA 数据库的 SnapCenter 插件</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/protect-hana/task_install_snapcenter_plug_in_for_sap_hana_database.html">
-        安装适用于 SAP HANA 数据库的 SnapCenter 插件的工作流
+        适用于 SAP HANA 数据库的 SnapCenter 插件的安装工作流
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/protect-hana/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_sap_hana_database.html">
         添加主机和安装适用于 SAP HANA 数据库的 SnapCenter 插件的前提条件
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_hana.html">
@@ -3438,7 +3474,7 @@
         <div class="na-navbar-padding"> 安装适用于 Oracle 数据库的 SnapCenter 插件</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/protect-sco/install-snapcenter-plug-in-for-oracle-workflow.html">
-        安装适用于 Oracle 数据库的插件的工作流
+        适用于 Oracle 数据库的 SnapCenter 插件的安装工作流
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html">
         添加主机和安装适用于 Linux 或 AIX 的插件软件包的前提条件
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html">
@@ -3580,7 +3616,7 @@
         <div class="na-navbar-padding"> 安装适用于 Microsoft Windows 的 SnapCenter 插件</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html">
-        安装工作流
+        适用于 Microsoft Windows 的 SnapCenter 插件的安装工作流
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html">
         适用于 Microsoft Windows 的 SnapCenter 插件的安装要求
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html">
@@ -3683,7 +3719,7 @@
         <div class="na-navbar-padding"> 安装适用于 Microsoft Exchange Server 的 SnapCenter 插件</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/protect-sce/concept_install_snapcenter_plug_in_for_microsoft_exchange_server.html">
-        安装工作流
+        适用于 Microsoft Exchange Server 的 SnapCenter 插件的安装工作流
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html">
         添加主机和安装适用于 Microsoft Exchange Server 的 SnapCenter 插件的前提条件
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/protect-sce/task_set_up_credentials_for_the_snapcenter_plug_in_for_windows_sce.html">
@@ -3743,7 +3779,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html">
         使用 PowerShell cmdlet 删除 Exchange 备份
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/protect-sce/task_view_exchange_backups_in_the_topology_page.html">
-        在 Topology 页面上查看 Exchange 备份
+        在 Topology 页面中查看 Exchange 备份
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 还原 Exchange 资源</div>
       </a>
@@ -4029,19 +4065,16 @@
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
         <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">主页</a>
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">文档</a>
-        </li>
+        
+
         
 
         <li class="n-breadcrumb__list-item">
           <a href="/zh-cn/snapcenter/">SnapCenter&nbsp;Software&nbsp;4.6</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          取消克隆操作
-        </li>
+
       </ul>
     </div>
     <div style="clear: both"></div><!-- Main needs to have height -->
@@ -4070,7 +4103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-09 09:41:11 +0000">03/09/2022</time>
+    <time datetime="2022-03-14 20:24:31 +0000">03/14/2022</time>
     
   
 
@@ -4088,7 +4121,6 @@
 
 </p>
 
-
 <div class="paragraph">
 <p>您可以取消已排队的克隆操作。</p>
 </div>
@@ -4101,7 +4133,7 @@
 <p>关于此任务 *</p>
 </li>
 <li>
-<p>您可以从 " 监控 " 页面或 " 活动 " 窗格取消排队的克隆操作。</p>
+<p>您可以从 * 监控 * 页面或 * 活动 * 窗格取消排队的克隆操作。</p>
 </li>
 <li>
 <p>您不能取消正在运行的克隆操作。</p>
@@ -4172,43 +4204,6 @@
     <!-- Page Container -->
   </div>
 
-  
-  <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"><div id="version-dropdown-ie-i18n">
-  <div id="version-dropdown-ie-i18n-menu">
-    <span class="ie-i18n-lang"><span class="version-title">SnapCenter 软件 </span><span class="version">4.6</span></span>
-    <span class="version-dropdown-caret"></span>
-  </div>
-  <div id="version-dropdown-n-property-navigation-bar__menu--language-selector" class="n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-    <div class="n-language-selector-menu">
-      <ul class="n-menu__list">
-        <li class="n-menu__list-column">
-          <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1"><a href="https://docs.netapp.com/zh-cn/snapcenter/protect-scw/task_cancel_clone_operations.html" class="n-menu__header-text" target="_blank">
-                <span translate="no" class="notranslate"><span>SnapCenter 软件</span><span class="version"> 4.6</span></span>
-              </a></li><li class="n-menu__list-item n-menu__list-item--level-1"><a href="https://docs.netapp.com/zh-cn/snapcenter-45/protect-scw/task_cancel_clone_operations.html" class="n-menu__header-text" target="_blank">
-                <span translate="no" class="notranslate"><span>SnapCenter 软件</span><span class="version"> 4.5</span></span>
-              </a></li></ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/snapcenter/issues/new?body=Page%3A%20[取消克隆操作](https://docs.netapp.com/zh-cn/snapcenter/protect-scw/task_cancel_clone_operations.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/snapcenter/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/snapcenter/blob/main/protect-scw/task_cancel_clone_operations.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/snapcenter/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/snapcenter/images/article-sm.svg" class="github-icon" />提供者指南</a>
-    </div>
-    <div class="page-nav-container">
-      <nav class="page-nav-fixed">
-        <div class="page-nav-title">在此页面上</div>
-        <div class="page-nav-links">
-          <ul class="page-nav-inner" id="page-menu"></ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  
   <div style="clear: both"></div><!-- Main needs to have height --></div>
 
         </main>
