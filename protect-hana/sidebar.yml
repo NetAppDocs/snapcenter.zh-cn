@@ -48,7 +48,7 @@ entries:
       url: "/protect-hana/reference_types_of_recovery_operations_supported_for_sap_hana_database.html"
 - title: 准备安装适用于 SAP HANA 数据库的 SnapCenter 插件
   entries:
-  - title: 安装适用于 SAP HANA 数据库的 SnapCenter 插件的工作流
+  - title: 适用于 SAP HANA 数据库的 SnapCenter 插件的安装工作流
     url: "/protect-hana/task_install_snapcenter_plug_in_for_sap_hana_database.html"
   - title: 添加主机和安装适用于 SAP HANA 数据库的 SnapCenter 插件的前提条件
     url: "/protect-hana/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_sap_hana_database.html"

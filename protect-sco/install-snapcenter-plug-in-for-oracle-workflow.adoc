@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installing 
 summary: 如果要保护 Oracle 数据库，应安装和设置适用于 Oracle 数据库的 SnapCenter 插件。 
 ---
-= 安装适用于 Oracle 数据库的插件的工作流
+= 适用于 Oracle 数据库的 SnapCenter 插件的安装工作流
 :icons: font
 :imagesdir: ../media/
 

@@ -20,7 +20,7 @@ entries:
     url: "/protect-sce/task_define_a_restore_strategy_for_exchange_databases.html"
 - title: 安装适用于 Microsoft Exchange Server 的 SnapCenter 插件
   entries:
-  - title: 安装工作流
+  - title: 适用于 Microsoft Exchange Server 的 SnapCenter 插件的安装工作流
     url: "/protect-sce/concept_install_snapcenter_plug_in_for_microsoft_exchange_server.html"
   - title: 添加主机和安装适用于 Microsoft Exchange Server 的 SnapCenter 插件的前提条件
     url: "/protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html"
@@ -78,7 +78,7 @@ entries:
     url: "/protect-sce/task_cancel_backup_operations_for_exchange_database.html"
   - title: 使用 PowerShell cmdlet 删除 Exchange 备份
     url: "/protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html"
-  - title: 在 Topology 页面上查看 Exchange 备份
+  - title: 在 Topology 页面中查看 Exchange 备份
     url: "/protect-sce/task_view_exchange_backups_in_the_topology_page.html"
 - title: 还原 Exchange 资源
   entries:

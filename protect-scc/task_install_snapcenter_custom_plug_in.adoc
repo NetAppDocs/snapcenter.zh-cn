@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installing 
 summary: 如果要保护自定义插件资源，应安装和设置 SnapCenter 自定义插件。 
 ---
-= 安装 SnapCenter 自定义插件
+= SnapCenter 自定义插件的安装工作流
 :icons: font
 :imagesdir: ../media/
 

@@ -33,7 +33,7 @@ NOTE: 不支持还原 SPFILE 和密码文件。
 
 . 从管理副本视图中，从主存储系统或二级（镜像或复制的）存储系统中选择 * 备份 * 。
 . 从表中选择备份，然后单击 *image:../media/restore_icon.gif["还原图标"]*
-. 在还原范围页面上，执行以下任务：
+. 在还原范围页面中，执行以下任务：
 +
 .. 如果在 Real Application Clusters （ RAC ）环境中选择了数据库备份，请选择 RAC 节点。
 .. 选择镜像数据或存储数据时：
@@ -114,7 +114,7 @@ NOTE: 不会为非 Data Guard 数据库备份重做日志文件。对于非 Data
 .. 如果要在备份后添加新数据文件或向 LVM 磁盘组添加，删除或重新创建 LUN 时执行原位还原，请选择 * 强制原位还原 * 。
 
 
-. 在恢复范围页面上，执行以下操作：
+. 在恢复范围页面中，执行以下操作：
 +
 |===
 | 如果您 ... | 执行此操作 ... 
@@ -174,7 +174,7 @@ NOTE: 不会为非 Data Guard 数据库备份重做日志文件。对于非 Data
 
 NOTE: Data Guard 备用数据库和 Active Data Guard 备用数据库不支持恢复。
 
-. 在 PreOps 页面上，输入要在还原操作之前运行的预处理程序的路径和参数。
+. 在 PreOps 页面中，输入要在还原操作之前运行的预处理程序的路径和参数。
 +
 您必须将此预处理文件存储在 /var/opt/snapcenter/spl/scripts_ 路径或此路径中的任何文件夹中。默认情况下，系统会填充 _/var/opt/snapcenter/spl/scripts_ 路径。如果您在此路径中创建了任何文件夹来存储脚本，则必须在此路径中指定这些文件夹。
 
@@ -184,7 +184,7 @@ NOTE: Data Guard 备用数据库和 Active Data Guard 备用数据库不支持�
 +
 使用 SnapCenter ，您可以在执行预处理和后处理脚本时使用预定义的环境变量。 link:../protect-sco/predefined-environment-variables-prescript-postscript-restore.html["了解更多信息。"^]
 
-. 在 PostOps 页面上，执行以下步骤：
+. 在 PostOps 页面中，执行以下步骤：
 +
 .. 输入要在还原操作后运行的后脚本的路径和参数。
 +

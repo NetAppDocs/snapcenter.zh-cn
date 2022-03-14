@@ -19,7 +19,7 @@ NOTE: SnapCenterCLI 不支持 SnapCenter 自定义插件命令。
 
 NetApp 提供了存储插件，可使用 SnapCenter 中内置的自定义插件框架对 ONTAP 存储上的数据卷执行数据保护操作。
 
-您可以从 * 添加主机 * 页面安装自定义插件和存储插件。
+您可以从添加主机页面安装自定义插件和存储插件。
 
 link:task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html["添加主机并在远程主机上安装插件软件包。"^]
 

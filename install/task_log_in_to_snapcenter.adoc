@@ -75,7 +75,7 @@ Username
 
 * 结果 *
 
-此时将显示 * 信息板 * 页面。
+此时将显示信息板页面。
 
 如果日志记录失败并显示错误，指出无法访问站点，则应将 SSL 证书映射到 SnapCenter 。 https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Protection_and_Security%2FSnapCenter%2FSnapCenter_will_not_open_with_error_%2522This_site_can%2527t_be_reached%2522["了解更多信息。"^]
 

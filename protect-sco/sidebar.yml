@@ -16,7 +16,7 @@ entries:
     url: "/protect-sco/reference_minimum_ontap_privileges_required_for_oracle_plug_in.html"
 - title: 安装适用于 Oracle 数据库的 SnapCenter 插件
   entries:
-  - title: 安装适用于 Oracle 数据库的插件的工作流
+  - title: 适用于 Oracle 数据库的 SnapCenter 插件的安装工作流
     url: "/protect-sco/install-snapcenter-plug-in-for-oracle-workflow.html"
   - title: 添加主机和安装适用于 Linux 或 AIX 的插件软件包的前提条件
     url: "/protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html"

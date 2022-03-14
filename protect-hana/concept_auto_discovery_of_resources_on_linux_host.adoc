@@ -2,7 +2,7 @@
 permalink: protect-hana/concept_auto_discovery_of_resources_on_linux_host.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: '资源是指 Linux 主机上由 SnapCenter 管理的 SAP HANA 数据库和非数据卷。安装适用于 SAP HANA 数据库的 SnapCenter 插件后，系统会自动发现该 Linux 主机上的 SAP HANA 数据库，并将其显示在 "Resources" 页面上。' 
+summary: '资源是指 Linux 主机上由 SnapCenter 管理的 SAP HANA 数据库和非数据卷。安装适用于 SAP HANA 数据库的 SnapCenter 插件后，系统会自动发现该 Linux 主机上的 SAP HANA 数据库，并将其显示在 "Resources" 页面中。' 
 ---
 = 自动发现 Linux 主机上的资源
 :icons: font
@@ -10,7 +10,7 @@ summary: '资源是指 Linux 主机上由 SnapCenter 管理的 SAP HANA 数据�
 
 
 [role="lead"]
-资源是指 Linux 主机上由 SnapCenter 管理的 SAP HANA 数据库和非数据卷。安装适用于 SAP HANA 数据库的 SnapCenter 插件后，系统会自动发现该 Linux 主机上的 SAP HANA 数据库，并将其显示在 "Resources" 页面上。
+资源是指 Linux 主机上由 SnapCenter 管理的 SAP HANA 数据库和非数据卷。安装适用于 SAP HANA 数据库的 SnapCenter 插件后，系统会自动发现该 Linux 主机上的 SAP HANA 数据库，并将其显示在 "Resources" 页面中。
 
 以下 SAP HANA 资源支持自动发现：
 

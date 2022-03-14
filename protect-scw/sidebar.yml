@@ -24,7 +24,7 @@ entries:
     url: "/protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html"
 - title: 安装适用于 Microsoft Windows 的 SnapCenter 插件
   entries:
-  - title: 安装工作流
+  - title: 适用于 Microsoft Windows 的 SnapCenter 插件的安装工作流
     url: "/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html"
   - title: 适用于 Microsoft Windows 的 SnapCenter 插件的安装要求
     url: "/protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html"
