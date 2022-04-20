@@ -5,6 +5,7 @@ keywords:
 summary: 使用原生模式开发此插件。 
 ---
 = 原生模式
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

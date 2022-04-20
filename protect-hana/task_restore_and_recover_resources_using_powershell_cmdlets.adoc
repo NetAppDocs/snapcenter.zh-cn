@@ -5,6 +5,7 @@ keywords:
 summary: 还原资源备份包括启动与 SnapCenter 服务器的连接会话，列出备份和检索备份信息以及还原备份。 
 ---
 = 使用 PowerShell cmdlet 还原资源
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

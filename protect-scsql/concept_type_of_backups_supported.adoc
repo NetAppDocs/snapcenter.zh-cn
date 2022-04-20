@@ -5,6 +5,7 @@ keywords:
 summary: 使用 SnapCenter 备份 SQL Server 系统和用户数据库需要选择资源类型，例如数据库， SQL Server 实例和可用性组 \ （ ag\ ）。Snapshot 副本技术用于为资源所在的卷创建联机只读副本。 
 ---
 = 支持的备份类型
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用 SnapCenter 灾难恢复功能在发生资源损坏或服务器崩溃等灾难时恢复 SnapCenter 服务器。 
 ---
 = 灾难恢复
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -12,11 +13,13 @@ summary: 您可以使用 SnapCenter 灾难恢复功能在发生资源损坏或�
 [role="lead"]
 您可以使用 SnapCenter 灾难恢复功能在发生资源损坏或服务器崩溃等灾难时恢复 SnapCenter 服务器。您可以恢复 SnapCenter 存储库，服务器计划和服务器配置组件。
 
+您还可以恢复适用于 SQL Server 的 SnapCenter 插件和适用于 SQL Server 的 SnapCenter 插件存储。
+
 以下是灾难恢复（ DR ）的类型：
 
 * * SnapCenter 服务器灾难恢复 *
 +
-无论插件是否由 SnapCenter 服务器管理， SnapCenter 服务器数据都将进行备份和恢复。
+无论 SnapCenter 服务器是否添加了任何插件或管理了任何插件，都将备份和恢复 SnapCenter 服务器数据。
 
 +
 SnapCenter 灾难恢复功能使用 REST API 备份 SnapCenter 服务器。
@@ -24,7 +27,7 @@ SnapCenter 灾难恢复功能使用 REST API 备份 SnapCenter 服务器。
 +
 link:../sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["用于 SnapCenter 服务器灾难恢复的 REST API 工作流"]
 
-* * SQL Server DR*
+* * SnapCenter 插件和存储灾难恢复 *
 +
 只有适用于 SQL Server 的 SnapCenter 插件才支持 DR 。当适用于 SQL Server 的 SnapCenter 插件关闭时，切换到另一个 SQL 主机，并通过执行几个步骤来恢复数据。
 

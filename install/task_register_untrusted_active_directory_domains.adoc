@@ -5,6 +5,7 @@ keywords:
 summary: 您应向 SnapCenter 服务器注册 Active Directory ，以管理多个不可信 Active Directory 域中的主机，用户和组。 
 ---
 = 注册不可信的 Active Directory 域
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

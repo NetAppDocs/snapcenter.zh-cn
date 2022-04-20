@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: 您可以生成证书签名请求（ CSR ）并导入证书。 
 ---
 = 生成 CA 证书 CSR 文件
+:allow-uri-read: 
 
 
 您可以生成证书签名请求（ CSR ），并导入可使用生成的 CSR 从证书颁发机构（ CA ）获取的证书。此证书将具有一个关联的专用密钥。

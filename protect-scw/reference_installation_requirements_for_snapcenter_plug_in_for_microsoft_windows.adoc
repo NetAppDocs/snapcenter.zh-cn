@@ -5,6 +5,7 @@ keywords: requirements
 summary: 在安装适用于 Windows 的插件之前，您应了解某些安装要求。 
 ---
 = 适用于 Microsoft Windows 的 SnapCenter 插件的安装要求
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

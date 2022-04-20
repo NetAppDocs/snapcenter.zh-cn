@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: 在 Windows 主机上为 SnapCenter 自定义插件服务配置 CA 证书 
 ---
 = 在 Windows 主机上为 SnapCenter SAP HANA 插件服务配置 CA 证书
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

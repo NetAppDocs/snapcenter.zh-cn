@@ -5,6 +5,7 @@ keywords: uninstall, gui
 summary: 如果您确定不再需要单个插件或插件软件包，则可以使用 SnapCenter 界面将其卸载。 
 ---
 = 使用 SnapCenter 图形用户界面卸载插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

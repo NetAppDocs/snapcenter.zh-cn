@@ -5,6 +5,7 @@ keywords:
 summary: 您可以对资源组执行各种操作。 
 ---
 = 管理资源组
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

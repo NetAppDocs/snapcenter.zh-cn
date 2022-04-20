@@ -5,6 +5,7 @@ keywords: uninstall plug-ins, linux, aix, command-line interface, cli
 summary: 您可以使用命令行界面卸载适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包。 
 ---
 = 使用命令行界面卸载适用于 Linux 或 AIX 的插件软件包
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

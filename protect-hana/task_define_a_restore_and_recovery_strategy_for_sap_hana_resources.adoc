@@ -5,6 +5,7 @@ keywords:
 summary: 您必须在还原和恢复数据库之前定义策略，以便成功执行还原和恢复操作。 
 ---
 = 为 SAP HANA 资源定义还原和恢复策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

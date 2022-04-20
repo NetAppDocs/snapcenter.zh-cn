@@ -5,6 +5,7 @@ keywords:
 summary: 您可以取消正在运行，已排队或无响应的备份操作。 
 ---
 = 取消 Oracle 数据库的备份操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 您必须添加要备份或克隆的资源。根据您的环境，资源可能是要备份或克隆的数据库实例或集合。 
 ---
 = 向 SnapCenter 自定义插件添加资源
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

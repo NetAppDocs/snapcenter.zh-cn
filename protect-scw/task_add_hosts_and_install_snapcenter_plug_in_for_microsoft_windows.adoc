@@ -5,6 +5,7 @@ keywords: installing
 summary: 您可以使用 SnapCenter 添加主机页面添加 Windows 主机。适用于 Microsoft Windows 的 SnapCenter 插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。 
 ---
 = 添加主机并安装适用于 Microsoft Windows 的 SnapCenter 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

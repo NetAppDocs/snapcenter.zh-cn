@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用作业页面监控 SnapCenter 插件软件包的安装进度。您可能需要检查安装进度以确定安装完成的时间或是否存在问题描述。 
 ---
 = 监控适用于 SQL Server 的插件的安装状态
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

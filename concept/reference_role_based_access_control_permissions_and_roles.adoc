@@ -5,6 +5,7 @@ keywords: RBAC, roles, permissions
 summary: 通过 SnapCenter 基于角色的访问控制（ Role-Based Access Control ， RBAC ），您可以创建角色并为这些角色添加权限，然后将用户或用户组分配给这些角色。这样， SnapCenter 管理员就可以创建一个集中管理的环境，而应用程序管理员则可以管理数据保护作业。SnapCenter 附带了一些预定义的角色和权限。 
 ---
 = RBAC 权限和角色
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

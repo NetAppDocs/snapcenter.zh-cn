@@ -5,6 +5,7 @@ keywords: SMBR, Single Mailbox recovery, Exchange database
 summary: 通过单邮箱恢复（ SMBR ）软件，您可以还原和恢复邮件或邮箱，而不是整个 Exchange 数据库。 
 ---
 = 邮件和邮箱的粒度恢复
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

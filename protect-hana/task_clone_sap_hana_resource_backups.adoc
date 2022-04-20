@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: 克隆工作流包括执行克隆操作和监控操作。 
 ---
 = 克隆工作流
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

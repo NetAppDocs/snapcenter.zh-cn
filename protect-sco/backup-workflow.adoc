@@ -5,6 +5,7 @@ keywords: backup, workflow
 summary: 您可以为资源（数据库）或资源组创建备份。 
 ---
 = 备份工作流
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

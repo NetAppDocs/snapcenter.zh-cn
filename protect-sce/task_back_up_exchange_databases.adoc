@@ -5,6 +5,7 @@ keywords: SnapCenter plug-in for Exchange Server
 summary: '如果数据库不属于任何资源组，您可以从 " 资源 " 页面备份数据库或数据库可用性组。' 
 ---
 = 备份 Exchange 数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

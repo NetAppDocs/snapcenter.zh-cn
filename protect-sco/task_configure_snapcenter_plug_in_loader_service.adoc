@@ -5,6 +5,7 @@ keywords: SPL, plug-in loader service
 summary: SnapCenter 插件加载程序服务会加载适用于 Linux 或 AIX 的插件软件包，以便与 SnapCenter 服务器进行交互。在安装适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包时，会安装 SnapCenter 插件加载程序服务。 
 ---
 = 配置 SnapCenter 插件加载程序服务
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 备份工作流包括规划，确定要备份的资源，管理备份策略，创建资源组和附加策略，创建备份以及监控操作。 
 ---
 = 备份自定义插件资源
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

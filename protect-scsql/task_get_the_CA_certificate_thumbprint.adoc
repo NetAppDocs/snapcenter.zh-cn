@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: 获取 CA 证书指纹。 
 ---
 = 获取 CA 证书指纹
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

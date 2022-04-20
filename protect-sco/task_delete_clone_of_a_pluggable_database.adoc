@@ -5,6 +5,7 @@ keywords: delete, PDB, clone PDB
 summary: 如果不再需要，可以删除可插拔数据库 \ （ PDB ）的克隆。 
 ---
 = 删除可插拔数据库的克隆
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

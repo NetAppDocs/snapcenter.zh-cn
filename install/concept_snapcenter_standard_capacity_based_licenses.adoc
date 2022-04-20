@@ -5,6 +5,7 @@ keywords: capacity-based licenses, add, capacity requirements, serial number of 
 summary: 您可以使用 SnapCenter 标准容量许可证来保护 ONTAP Select 和 Cloud Volumes ONTAP 平台上的数据。 
 ---
 = 添加基于 SnapCenter 标准容量的许可证
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

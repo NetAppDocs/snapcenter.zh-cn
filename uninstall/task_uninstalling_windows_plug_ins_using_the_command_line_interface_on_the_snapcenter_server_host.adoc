@@ -5,6 +5,7 @@ keywords: uninstall, windows plug-ins, powershell cmdlet
 summary: 您可以使用 SnapCenter 服务器主机命令行界面上的 Uninstall-SmHostPackage cmdlet 卸载单个插件或从一个或多个主机卸载插件软件包。 
 ---
 = 使用 PowerShell cmdlet 卸载 Windows 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

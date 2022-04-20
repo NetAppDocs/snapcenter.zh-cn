@@ -5,6 +5,7 @@ keywords: SnapCenter, browsers, chrome, IE, Edge
 summary: SnapCenter 软件可在多个浏览器上使用。 
 ---
 = 支持的浏览器
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

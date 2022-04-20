@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for Exchange Server
 summary: 您可以使用 SnapCenterJobs 页面监控不同备份操作的进度。您可能需要检查进度以确定完成时间或是否存在问题描述。 
 ---
 = 监控备份操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

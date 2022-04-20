@@ -5,6 +5,7 @@ keywords:
 summary: 您可以从资源页面发现资源并执行数据保护操作。您可以执行的操作因用于管理资源的插件而异。 
 ---
 = 可从 "Resources" 页面执行支持的操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

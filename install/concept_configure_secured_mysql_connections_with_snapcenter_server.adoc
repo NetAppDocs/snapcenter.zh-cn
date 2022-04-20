@@ -5,6 +5,7 @@ keywords: Secure Sockets Layer, secure MYSQL connections, standalone configurati
 summary: 如果要在独立配置或网络负载平衡 \ （ NLB ）配置中确保 SnapCenter 服务器与 MySQL 服务器之间的通信安全，可以生成安全套接字层（ SSL ）证书和密钥文件。 
 ---
 = 配置与 SnapCenter 服务器的安全 MySQL 连接
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

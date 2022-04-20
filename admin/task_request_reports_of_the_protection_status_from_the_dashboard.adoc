@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用信息板为特定插件管理的资源请求保护详细信息。 
 ---
 = 从信息板请求保护状态报告
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

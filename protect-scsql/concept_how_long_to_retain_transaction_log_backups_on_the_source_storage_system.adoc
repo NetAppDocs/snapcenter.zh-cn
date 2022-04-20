@@ -5,6 +5,7 @@ keywords:
 summary: 适用于 Microsoft SQL Server 的 SnapCenter 插件需要事务日志备份来执行最新的还原操作，以便将数据库还原到两个完整备份之间的时间。 
 ---
 = 在源存储系统上保留事务日志备份的时间
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: SnapCenter Server
 summary: '" 活动 " 窗格显示最近执行的五个操作。此外，活动窗格还会显示操作的启动时间以及操作的状态。' 
 ---
 = 在活动窗格中监控 SQL 资源上的数据保护操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

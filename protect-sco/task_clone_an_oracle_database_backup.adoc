@@ -5,6 +5,7 @@ keywords: Credentials, alternate host, clone, FRA, OMF
 summary: 您可以使用 SnapCenter 通过数据库备份克隆 Oracle 数据库。 
 ---
 = 克隆 Oracle 数据库备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

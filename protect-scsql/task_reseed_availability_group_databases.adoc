@@ -5,6 +5,7 @@ keywords:
 summary: 使用 reseeded 可以还原可用性组（ AG\ ）数据库。如果二级数据库与 AG 中的主数据库不同步，您可以重新传输二级数据库。 
 ---
 = 转义可用性组数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

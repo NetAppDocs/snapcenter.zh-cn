@@ -5,6 +5,7 @@ keywords: RBAC, add user, add group, assign role, assign assets
 summary: 要为 SnapCenter 用户配置基于角色的访问控制，您可以添加用户或组并分配角色。此角色决定了 SnapCenter 用户可以访问的选项。 
 ---
 = 添加用户或组并分配角色和资产
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 适用于 Microsoft Exchange Server 的 SnapCenter 插件不提供备份验证；但是，您可以使用 Exchange 随附的 Eseutil 工具来验证 Exchange 数据库和备份。 
 ---
 = Exchange 数据库和备份验证
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

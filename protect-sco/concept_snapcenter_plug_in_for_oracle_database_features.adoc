@@ -5,6 +5,7 @@ keywords: plug-in for Oracle features
 summary: 适用于 Oracle 数据库的插件可与 Linux 或 AIX 主机上的 Oracle 数据库以及存储系统上的 NetApp 技术集成。 
 ---
 = 适用于 Oracle 数据库的插件的功能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

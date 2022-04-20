@@ -5,6 +5,7 @@ keywords: upgrade, snapcenter server, plug-ins, workflow
 summary: 介绍如何升级 SnapCenter 服务器和插件 
 ---
 = 升级工作流
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

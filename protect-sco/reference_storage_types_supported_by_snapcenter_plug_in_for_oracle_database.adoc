@@ -5,6 +5,7 @@ keywords: storage types, iSCSI, NFS, RDM, VMDK, NFS, LVM, ASM, SAN filesystem
 summary: SnapCenter 在物理机和虚拟机上均支持多种存储类型。在安装适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包之前，必须验证对存储类型的支持。 
 ---
 = 适用于 Oracle 数据库的插件支持的存储类型
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

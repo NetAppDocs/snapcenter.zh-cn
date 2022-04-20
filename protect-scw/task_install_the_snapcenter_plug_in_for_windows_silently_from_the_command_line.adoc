@@ -5,6 +5,7 @@ keywords:
 summary: 如果无法从 SnapCenter 图形用户界面远程安装适用于 Microsoft Windows 的 SnapCenter 插件，则可以在 Windows 主机上本地安装此插件。您可以通过 Windows 命令行在无人参与的情况下以静默模式运行适用于 Microsoft Windows 的 SnapCenter 插件安装程序。 
 ---
 = 通过命令行无提示安装适用于 Microsoft Windows 的 SnapCenter 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

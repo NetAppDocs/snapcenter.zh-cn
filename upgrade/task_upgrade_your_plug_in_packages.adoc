@@ -5,6 +5,7 @@ keywords: upgrade, upgrade plug-in packages
 summary: 此插件软件包会在 SnapCenter 升级过程中分发。 
 ---
 = 升级插件软件包
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

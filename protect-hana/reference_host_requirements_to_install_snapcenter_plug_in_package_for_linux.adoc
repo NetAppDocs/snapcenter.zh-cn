@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: 在安装适用于 Linux 的 SnapCenter 插件软件包之前，您应熟悉一些基本的主机系统空间和规模估算要求。 
 ---
 = 安装适用于 Linux 的 SnapCenter 插件软件包的主机要求
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

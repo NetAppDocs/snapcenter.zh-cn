@@ -5,6 +5,7 @@ keywords: REST APIs, oracle database
 summary: 介绍 Oracle 数据库支持的 REST API 工作流 
 ---
 = Oracle 数据库支持的 REST API
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 在环境中安装适用于 Microsoft Windows 的 SnapCenter 插件时，您可以使用 SnapCenter 备份 Windows 文件系统。您可以备份单个文件系统或包含多个文件系统的资源组。您可以按需备份，也可以根据定义的保护计划进行备份。 
 ---
 = 备份 Windows 文件系统
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

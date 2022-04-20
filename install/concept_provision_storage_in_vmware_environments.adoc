@@ -5,6 +5,7 @@ keywords: guest OS, VMware ESXi server, limitations, RDM, Microsoft cluster
 summary: 您可以在 VMware 环境中使用适用于 Microsoft Windows 的 SnapCenter 插件创建和管理 LUN 以及管理 Snapshot 备份副本。 
 ---
 = 在 VMware 环境中配置存储
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

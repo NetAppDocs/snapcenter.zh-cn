@@ -5,6 +5,7 @@ keywords: prescript, postscript, script path, script timeout, script types suppo
 summary: 您可以在数据保护操作中使用自定义预处理和后处理脚本。这些脚本可以在数据保护作业之前或之后启用自动化。例如，您可以包含一个脚本，用于自动通知您数据保护作业失败或出现警告。在设置预处理脚本和后处理脚本之前，您应了解创建这些脚本的一些要求。 
 ---
 = 预处理脚本和后处理脚本
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

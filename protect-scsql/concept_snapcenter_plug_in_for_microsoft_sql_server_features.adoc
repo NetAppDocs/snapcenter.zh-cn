@@ -5,6 +5,7 @@ keywords:
 summary: 适用于 SQL Server 的插件可与 Windows 主机上的 Microsoft SQL Server 以及存储系统上的 NetApp Snapshot 副本技术集成。要使用适用于 SQL Server 的插件，请使用 SnapCenter 界面。 
 ---
 = 适用于 Microsoft SQL Server 的 SnapCenter 插件功能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

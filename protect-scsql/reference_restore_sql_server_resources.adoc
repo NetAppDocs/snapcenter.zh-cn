@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用 SnapCenter 将数据从一个或多个备份还原到活动文件系统，然后恢复数据库，从而还原 SQL Server 数据库。您还可以还原可用性组中的数据库，然后将还原的数据库添加到可用性组中。在还原 SQL Server 数据库之前，您必须执行多项准备任务。 
 ---
 = 还原工作流
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

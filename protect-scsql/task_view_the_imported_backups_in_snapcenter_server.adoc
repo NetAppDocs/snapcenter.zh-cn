@@ -5,6 +5,7 @@ keywords:
 summary: '导入适用于 Microsoft SQL Server 的 SnapManager 归档备份后，您可以从 " 拓扑 " 页面在 SnapCenter 中查看这些备份。' 
 ---
 = 在 SnapCenter 服务器中查看导入的备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

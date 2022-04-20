@@ -5,6 +5,7 @@ keywords: Credentials
 summary: 在使用 SnapCenter 自定义插件之前， SnapCenter 管理员必须安装和配置 SnapCenter 服务器并执行前提条件任务。 
 ---
 = 使用 SnapCenter 自定义插件的前提条件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

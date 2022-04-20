@@ -5,6 +5,7 @@ keywords: security,authentication, CA certificates
 summary: SnapCenter 采用严格的安全性和身份验证功能，可确保数据安全。 
 ---
 = 安全功能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

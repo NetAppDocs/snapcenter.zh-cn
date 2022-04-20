@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Databases
 summary: 您必须先定义策略，然后才能使用 SnapCenter 成功执行还原操作。自动发现的 SAP HANA 数据库有两种还原策略。 
 ---
 = 自动发现的 SAP HANA 数据库支持的还原策略类型
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

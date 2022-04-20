@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter 服务器可以通过精心设计的存储布局备份数据库，以满足恢复目标。在定义存储布局时，应考虑几个因素，包括数据库大小，数据库更改率以及执行备份的频率。 
 ---
 = 适用于 Microsoft SQL Server 的 SnapCenter 插件的存储布局建议
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

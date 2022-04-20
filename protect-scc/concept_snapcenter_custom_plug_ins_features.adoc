@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter 可与插件应用程序以及存储系统上的 NetApp 技术集成。要使用自定义插件，请使用 SnapCenter 图形用户界面。 
 ---
 = SnapCenter 自定义插件功能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

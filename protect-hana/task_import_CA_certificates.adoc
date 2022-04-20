@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: 导入 SnapCenter 服务器和 Windows 主机插件的 CA 证书 
 ---
 = 导入 CA 证书
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

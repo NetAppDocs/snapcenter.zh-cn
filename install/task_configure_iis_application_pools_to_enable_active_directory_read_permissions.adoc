@@ -5,6 +5,7 @@ keywords: IIS application pool, active directory, enable
 summary: 如果需要为 SnapCenter 启用 Active Directory 读取权限，您可以在 Windows 服务器上配置 Internet 信息服务 \ （ IIS\ ）以创建自定义应用程序池帐户。 
 ---
 = 配置 IIS 应用程序池以启用 Active Directory 读取权限
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

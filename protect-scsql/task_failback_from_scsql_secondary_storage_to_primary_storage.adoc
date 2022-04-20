@@ -5,6 +5,7 @@ keywords:
 summary: 在适用于 SQL Server 的 SnapCenter 插件主存储恢复联机后，您应故障恢复到主存储。 
 ---
 = 从适用于 SQL Server 的 SnapCenter 插件二级存储故障恢复到主存储
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

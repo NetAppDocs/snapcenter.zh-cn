@@ -5,6 +5,7 @@ keywords: backup
 summary: 您可以使用 PowerShell cmdlet 备份 SQL Server 数据库或 Windows 文件系统。其中包括备份 SQL Server 数据库或 Windows 文件系统，包括与 SnapCenter 服务器建立连接，发现 SQL Server 数据库实例或 Windows 文件系统，添加策略，创建备份资源组，备份和验证备份。 
 ---
 = 使用 PowerShell cmdlet 备份资源
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

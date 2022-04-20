@@ -5,6 +5,7 @@ keywords: install, VMware vSphere
 summary: 如果数据库存储在虚拟机（ VM ）上，或者您要保护 VM 和数据存储库，则必须部署适用于 VMware vSphere 的 SnapCenter 插件虚拟设备。 
 ---
 = 安装适用于 VMware vSphere 的 SnapCenter 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

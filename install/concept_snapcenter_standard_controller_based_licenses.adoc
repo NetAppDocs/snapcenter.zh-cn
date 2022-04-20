@@ -5,6 +5,7 @@ keywords: controller-based licenses, standard license, SnapManager Suite license
 summary: 如果您使用的是 FAS 或 AFF 存储控制器，则需要基于 SnapCenter 标准控制器的许可证。 
 ---
 = 添加基于 SnapCenter 标准控制器的许可证
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

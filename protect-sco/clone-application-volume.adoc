@@ -5,6 +5,7 @@ keywords: application volume, clone, split a clone
 summary: 您可以使用 SnapCenter 克隆应用程序卷备份，拆分克隆并删除克隆。 
 ---
 = 克隆应用程序卷备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

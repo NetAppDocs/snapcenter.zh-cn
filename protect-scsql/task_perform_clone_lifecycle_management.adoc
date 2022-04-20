@@ -5,6 +5,7 @@ keywords:
 summary: 使用 SnapCenter ，您可以从资源组或数据库创建克隆。您可以执行按需克隆，也可以计划资源组或数据库的重复克隆操作。如果定期克隆备份，则可以使用克隆开发应用程序，填充数据或恢复数据。 
 ---
 = 执行克隆生命周期
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

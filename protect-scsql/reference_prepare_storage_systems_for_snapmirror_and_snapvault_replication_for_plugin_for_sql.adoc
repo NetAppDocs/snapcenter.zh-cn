@@ -5,6 +5,7 @@ keywords: snapmirror, snapvault, storage system, replication
 summary: 您可以将 SnapCenter 插件与 ONTAP SnapMirror 和 SnapVault 技术结合使用 
 ---
 = 为适用于 SQL Server 的插件的 SnapMirror 和 SnapVault 复制准备存储系统
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

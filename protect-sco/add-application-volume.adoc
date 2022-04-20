@@ -5,6 +5,7 @@ keywords: application volume, overview, add, modify, delete
 summary: 您应手动添加应用程序卷。 
 ---
 = 添加应用程序卷
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

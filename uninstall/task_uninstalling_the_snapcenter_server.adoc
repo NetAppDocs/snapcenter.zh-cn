@@ -5,6 +5,7 @@ keywords: uninstall, snapcenter server
 summary: 如果您不再希望使用 SnapCenter 服务器管理数据保护作业，则可以使用 SnapCenter 服务器主机上的程序和功能控制面板卸载 SnapCenter 服务器。卸载 SnapCenter 服务器将删除其所有组件。 
 ---
 = 卸载 SnapCenter 服务器
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: 在使用 SnapCenter 备份 SAP HANA 数据库资源之前，您必须为要备份的资源或资源组创建备份策略。备份策略是一组规则，用于控制如何管理，计划和保留备份。 
 ---
 = 为 SAP HANA 数据库创建备份策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

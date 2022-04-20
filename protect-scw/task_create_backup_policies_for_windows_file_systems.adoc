@@ -5,6 +5,7 @@ keywords:
 summary: 您可以在使用 SnapCenter 备份 Windows 文件系统之前为资源创建新的备份策略，也可以在创建资源组或备份资源时创建新的备份策略。 
 ---
 = 为 Windows 文件系统创建备份策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: environment variable, predefined, prescript, postscript, restore
 summary: 通过 SnapCenter ，您可以在还原数据库时执行预处理和后处理脚本时使用预定义的环境变量。 
 ---
 = 用于还原特定的预处理和后处理的预定义环境变量
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

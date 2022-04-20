@@ -5,6 +5,7 @@ keywords:
 summary: 在您的环境中安装适用于 Windows 的插件后，您可以使用 SnapCenter 备份，还原和克隆 Windows 文件系统。您还可以执行支持这些操作的任务。 
 ---
 = 适用于 Microsoft Windows 的 SnapCenter 插件的功能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

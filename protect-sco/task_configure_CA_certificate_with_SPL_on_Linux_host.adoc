@@ -5,6 +5,7 @@ keywords: SnapCenter, SPL, Plug-in loader service, CA certificate, certificate
 summary: 在 Linux 主机上使用 SnapCenter 插件加载程序服务配置 CA 证书 
 ---
 = 在 Linux 主机上使用 SnapCenter 插件加载程序（ SPL ）服务配置 CA 证书
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

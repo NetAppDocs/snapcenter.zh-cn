@@ -5,6 +5,7 @@ keywords:
 summary: 通过为 SQL Server 定义还原策略，您可以成功还原数据库。 
 ---
 = 定义 SQL Server 的还原策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

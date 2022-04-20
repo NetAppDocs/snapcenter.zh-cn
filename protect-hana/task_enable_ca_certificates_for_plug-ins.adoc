@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: 您应在 SnapCenter 服务器和相应插件主机中配置 CA 证书并部署 CA 证书。 
 ---
 = 为插件启用 CA 证书
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

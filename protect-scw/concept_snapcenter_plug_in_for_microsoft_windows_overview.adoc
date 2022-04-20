@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for Microsoft Windows
 summary: 适用于 Microsoft Windows 的 SnapCenter 插件是 NetApp SnapCenter 软件的主机端组件，可用于对 Microsoft 文件系统资源进行应用程序感知型数据保护管理。此外，它还可以为 Windows 文件系统提供存储配置， Snapshot 副本一致性和空间回收功能。适用于 Windows 的插件可在 SnapCenter 环境中自动执行文件系统备份，还原和克隆操作。 
 ---
 = 适用于 Microsoft Windows 的 SnapCenter 插件概述
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

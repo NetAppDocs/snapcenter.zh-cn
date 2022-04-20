@@ -5,6 +5,7 @@ keywords: SnapCenter Custom Plug-ins
 summary: 您可以为使用的应用程序开发自定义插件，然后使用 SnapCenter 备份，还原或克隆这些应用程序。与其他 SnapCenter 插件一样，您的自定义插件也充当 NetAppSnap Center 软件的主机端组件，从而实现应用程序感知型数据保护和资源管理。 
 ---
 = SnapCenter 自定义插件概述
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

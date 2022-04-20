@@ -5,6 +5,7 @@ keywords: credential
 summary: 在开始使用适用于 SQL Server 的插件之前， SnapCenter 管理员必须安装和配置 SnapCenter 服务器并执行前提条件任务。 
 ---
 = 使用适用于 Microsoft SQL Server 的 SnapCenter 插件的前提条件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

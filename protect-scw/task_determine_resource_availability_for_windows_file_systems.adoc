@@ -5,6 +5,7 @@ keywords: availability
 summary: 资源是指文件系统中由已安装的插件维护的 LUN 和类似组件。您可以将这些资源添加到资源组中，以便可以对多个资源执行数据保护作业，但首先必须确定哪些资源可用。发现可用资源还会验证插件安装是否已成功完成。 
 ---
 = 确定 Windows 文件系统的资源可用性
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

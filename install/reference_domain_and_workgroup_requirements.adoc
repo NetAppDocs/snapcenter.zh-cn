@@ -5,6 +5,7 @@ keywords: active directory domain, workgroups, multi-domain forests, cross-domai
 summary: SnapCenter 服务器可以安装在域或工作组中的系统上。用于安装的用户应在工作组和域的情况下对计算机具有管理员权限。 
 ---
 = 域和工作组要求
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

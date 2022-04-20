@@ -5,6 +5,7 @@ keywords: backup policies, policies
 summary: 在使用 SnapCenter 备份 Oracle 数据库资源之前，您必须为要备份的资源或资源组创建备份策略。备份策略是一组规则，用于控制如何管理，计划和保留备份。您还可以指定复制，脚本和备份类型设置。如果要在其他资源或资源组上重复使用策略，则创建策略可节省时间。 
 ---
 = 为 Oracle 数据库创建备份策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

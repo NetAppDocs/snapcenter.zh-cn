@@ -5,6 +5,7 @@ keywords: installing
 summary: 如果要保护非数据库文件的 Windows 文件，则必须安装和设置适用于 Microsoft Windows 的 SnapCenter 插件。 
 ---
 = 适用于 Microsoft Windows 的 SnapCenter 插件的安装工作流
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

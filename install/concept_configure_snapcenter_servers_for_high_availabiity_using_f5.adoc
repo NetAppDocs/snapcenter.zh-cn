@@ -5,6 +5,7 @@ keywords: F5,load balancer
 summary: 要在 SnapCenter 中支持高可用性 \ （ HA\ ），您可以安装 F5 负载平衡器。F5 允许 SnapCenter 服务器在最多两个位于同一位置的主机中支持主动 - 被动配置。要在 SnapCenter 中使用 F5 负载平衡器，您应配置 SnapCenter 服务器并配置 F5 负载平衡器。 
 ---
 = 使用 F5 配置 SnapCenter 服务器以实现高可用性
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

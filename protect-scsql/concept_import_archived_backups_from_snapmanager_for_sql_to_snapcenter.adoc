@@ -5,6 +5,7 @@ keywords:
 summary: 通过将数据从 SnapManager for Microsoft SQL Server 导入到 SnapCenter ，您可以继续使用先前版本中的数据。您只能将使用 SnapVault 技术归档的备份从 SnapManager for Microsoft SQL Server 导入到 SnapCenter 。 
 ---
 = 导入归档备份概述
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

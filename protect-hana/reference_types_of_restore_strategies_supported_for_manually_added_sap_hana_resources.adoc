@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: 您必须先定义策略，然后才能使用 SnapCenter 成功执行还原操作。手动添加的 SAP HANA 资源有两种还原策略。您无法恢复手动添加的 SAP HANA 资源。 
 ---
 = 手动添加的 SAP HANA 资源支持的还原策略类型
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

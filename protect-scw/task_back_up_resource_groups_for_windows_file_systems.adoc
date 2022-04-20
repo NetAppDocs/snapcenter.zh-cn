@@ -5,6 +5,7 @@ keywords: backing up
 summary: '资源组是主机或集群上的一组资源。系统会对资源组中定义的所有资源执行备份操作。您可以从 " 资源 " 页面按需备份资源组。如果资源组附加了策略并配置了计划，则会根据计划自动进行备份。' 
 ---
 = 备份 Windows 文件系统的资源组
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

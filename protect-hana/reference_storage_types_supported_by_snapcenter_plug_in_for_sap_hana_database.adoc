@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter 在物理机和虚拟机 \ （ VM\ ）上支持多种存储类型。在安装适用于 SAP HANA 数据库的 SnapCenter 插件之前，您必须验证是否支持您的存储类型。 
 ---
 = 适用于 SAP HANA 数据库的 SnapCenter 插件支持的存储类型
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

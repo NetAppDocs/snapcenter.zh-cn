@@ -5,6 +5,7 @@ keywords: CA client certificate, LDAPS
 summary: 如果为 SnapCenter Active Directory LDAPS 配置了 CA 证书，则应在 服务器上为 LDAPS 配置 CA 客户端证书。 
 ---
 = 为 LDAPS 配置 CA 客户端证书
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

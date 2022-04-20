@@ -5,6 +5,7 @@ keywords:
 summary: 当适用于 SQL Server 的 SnapCenter 插件关闭时，您可以通过执行几个手动步骤来恢复。 
 ---
 = 适用于 SQL Server 的 SnapCenter 插件的灾难恢复
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

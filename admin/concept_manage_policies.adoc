@@ -5,6 +5,7 @@ keywords:
 summary: 您可以将策略与资源或资源组分离，修改，删除，查看和复制。 
 ---
 = 管理策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

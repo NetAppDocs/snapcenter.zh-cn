@@ -5,6 +5,7 @@ keywords: ONTAP cluster role, privileges
 summary: 您应创建一个具有最低权限的 ONTAP 集群角色，以便不必使用 ONTAP 管理员角色在 SnapCenter 中执行操作。 
 ---
 = 创建具有最低权限的 ONTAP 集群角色
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

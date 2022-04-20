@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用于 Exchange 的插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。 
 ---
 = 添加主机并安装适用于 Exchange 的插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -22,9 +23,11 @@ summary: 您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用
 
 * 关于此任务 *
 
-您不能将 SnapCenter 服务器作为插件主机添加到另一个 SnapCenter 服务器。
+* 您不能将 SnapCenter 服务器作为插件主机添加到另一个 SnapCenter 服务器。
+* 您可以为单个主机或集群添加主机并安装插件软件包。
+* 如果某个 Exchange 节点属于 DAG ，则不能仅向 SnapCenter 服务器添加一个节点。
+* 如果要在集群（ Exchange DAG ）上安装插件，则这些插件会安装在集群的所有节点上，即使某些节点在 NetApp LUN 上没有数据库也是如此。
 
-您可以为单个主机或集群添加主机并安装插件软件包。如果要在集群（ Exchange DAG ）上安装插件，则这些插件会安装在集群的所有节点上，即使某些节点在 NetApp LUN 上没有数据库也是如此。
 
 从 SnapCenter 4.6 开始， SCE 支持多租户，您可以使用以下方法添加主机：
 

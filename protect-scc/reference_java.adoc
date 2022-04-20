@@ -5,6 +5,7 @@ keywords:
 summary: 使用 Java 模式开发此插件。 
 ---
 = Java 模式
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

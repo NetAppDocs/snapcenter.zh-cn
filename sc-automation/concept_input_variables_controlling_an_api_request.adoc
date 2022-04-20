@@ -5,6 +5,7 @@ keywords: http methods, request headers, request body, filtering objects, size, 
 summary: 您可以通过 HTTP 请求中设置的参数和变量来控制 API 调用的处理方式。 
 ---
 = 控制 API 请求的输入变量
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

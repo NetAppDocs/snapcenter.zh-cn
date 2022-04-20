@@ -5,6 +5,7 @@ keywords:
 summary: 您可以添加主机并安装 SnapCenter 插件软件包，添加验证服务器，删除主机，迁移备份作业以及更新主机以升级插件软件包或添加新插件软件包。根据您正在使用的插件，您还可以配置磁盘，管理 SMB 共享，管理启动程序组（ igroup\ ），管理 iSCSI 会话以及迁移数据。 
 ---
 = 管理主机
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

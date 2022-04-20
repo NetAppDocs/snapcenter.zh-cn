@@ -5,6 +5,7 @@ keywords: licenses, FAS, AFF, SnapMirror, SnapVault, SnapRestore, FlexClone, SMB
 summary: SnapCenter 需要多个许可证才能启用数据保护操作。您安装的 SnapCenter 许可证类型取决于您的存储环境和要使用的功能。 
 ---
 = SnapCenter 许可证
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -97,7 +98,7 @@ NOTE: 建议（但不要求）将 SnapCenter 标准版许可证添加到二级�
 
 NOTE: SnapCenter 高级版和 SnapCenter NAS 文件服务许可证已弃用，不再可用。
 
-您应安装一个或多个 SnapCenter 许可证。有关如何添加许可证的信息，请参见 link:..//install/concept_snapcenter_standard_controller_based_licenses.html["添加基于 SnapCenter 标准控制器的许可证"] 或 。
+您应安装一个或多个 SnapCenter 许可证。有关如何添加许可证的信息，请参见 link:..//install/concept_snapcenter_standard_controller_based_licenses.html["添加基于 SnapCenter 标准控制器的许可证"] 或 link:..//install/concept_snapcenter_standard_capacity_based_licenses.html["添加基于 SnapCenter 标准容量的许可证"^]。
 
 
 

@@ -5,6 +5,7 @@ keywords: SnapCenter, enable CA, certificate
 summary: 您应配置 CA 证书并为 SnapCenter 服务器启用 CA 证书验证。 
 ---
 = 为 SnapCenter 启用 CA 证书
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

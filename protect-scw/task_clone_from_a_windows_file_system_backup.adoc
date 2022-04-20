@@ -5,6 +5,7 @@ keywords: clone
 summary: 您可以使用 SnapCenter 克隆 Windows 文件系统备份。如果您需要错误删除或更改的单个文件的副本，则可以克隆备份并访问克隆中的该文件。 
 ---
 = 从 Windows 文件系统备份克隆
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

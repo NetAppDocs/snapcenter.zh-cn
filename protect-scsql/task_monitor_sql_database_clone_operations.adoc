@@ -5,6 +5,7 @@ keywords: clone
 summary: 您可以使用作业页面监控 SnapCenter 克隆操作的进度。您可能需要检查操作的进度，以确定操作何时完成或是否存在问题描述。 
 ---
 = 监控 SQL 数据库克隆操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

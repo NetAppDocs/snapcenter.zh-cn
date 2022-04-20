@@ -5,6 +5,7 @@ keywords: resource group
 summary: 任何数据保护作业都需要资源组。您还必须将一个或多个策略附加到资源组，以定义要执行的数据保护作业类型和保护计划。 
 ---
 = 为 Exchange Server 创建资源组并附加策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

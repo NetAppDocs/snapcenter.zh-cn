@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: '如果某个资源尚未加入任何资源组，您可以从 "Resources" 页面备份该资源。' 
 ---
 = 备份 SAP HANA 数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -8,6 +8,7 @@ summary: SnapCenter 软件是一个简单，集中化且可扩展的平台，可
 ---
 = SnapCenter 软件文档
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

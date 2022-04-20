@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用 SnapCenter 还原备份的 Exchange 数据库。 
 ---
 = 还原 Exchange 数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

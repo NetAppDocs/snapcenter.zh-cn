@@ -5,6 +5,7 @@ keywords:
 summary: 您可以重命名和删除备份。您也可以同时删除多个备份。 
 ---
 = 管理备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

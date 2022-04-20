@@ -5,6 +5,7 @@ keywords:
 summary: 决定所需备份作业数量的因素包括数据库大小，已用卷数，数据库更改率以及您的服务级别协议（ SLA ）。 
 ---
 = 数据库所需的备份作业数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 在使用适用于 Microsoft Windows 的 SnapCenter 插件配置 NetApp 存储系统后，您可以使用 SnapCenter 图形用户界面（图形用户界面）或 PowerShell cmdlet 将资源迁移到 NetApp 存储系统，或者从一个 NetApp LUN 迁移到另一个 NetApp LUN 。 
 ---
 = 将资源迁移到 NetApp 存储系统
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

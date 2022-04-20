@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for Oracle Databases
 summary: 在准备备份或克隆资源时，您可能会发现以图形方式显示主存储和二级存储上的所有备份和克隆非常有用。 
 ---
 = 在 Topology 页面中查看 Oracle 数据库备份和克隆
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -65,4 +66,4 @@ NOTE: 您不能重命名或删除二级存储上的备份。
 
 有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。
 
-或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880725["《 SnapCenter 软件命令参考指南》"^] 或。
+或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880725["《 SnapCenter 软件命令参考指南》"^] 或 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《 SnapCenter 软件 cmdlet 参考指南》"^]。

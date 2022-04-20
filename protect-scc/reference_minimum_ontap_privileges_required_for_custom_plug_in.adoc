@@ -5,6 +5,7 @@ keywords:
 summary: 所需的最小 ONTAP 权限因用于数据保护的 SnapCenter 插件而异。 
 ---
 = 自定义插件所需的最小 ONTAP 权限
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -13,7 +14,7 @@ summary: 所需的最小 ONTAP 权限因用于数据保护的 SnapCenter 插件�
 所需的最小 ONTAP 权限因用于数据保护的 SnapCenter 插件而异。
 
 |===
-| all-access 命令： ONTAP 8.2_x_ 及更高版本所需的最低权限 
+| all-access 命令： ONTAP 8.3.0 及更高版本所需的最低权限 
 
 
  a| 
@@ -188,7 +189,7 @@ vserver show
 
 |===
 |===
-| 只读命令： ONTAP 8.2_x_ 及更高版本所需的最低权限 
+| 只读命令： ONTAP 8.3.0 及更高版本所需的最低权限 
 
 
  a| 

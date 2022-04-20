@@ -5,6 +5,7 @@ keywords: restore, recover, CLI
 summary: 还原和恢复工作流包括规划，执行还原和恢复操作以及监控操作。 
 ---
 = 使用 UNIX 命令还原和恢复 Oracle 数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

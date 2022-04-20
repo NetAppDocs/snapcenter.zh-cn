@@ -5,6 +5,7 @@ keywords: backup, resource group
 summary: 资源组是主机或集群上的一组资源。系统会对资源组中定义的所有资源执行备份操作。 
 ---
 = 备份 Oracle 数据库资源组
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

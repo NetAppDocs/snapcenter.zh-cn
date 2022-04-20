@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用默认 Snapshot 副本命名约定，也可以使用自定义命名约定。默认备份命名约定会为 Snapshot 副本名称添加一个时间戳，以帮助您确定副本的创建时间。 
 ---
 = 适用于 SQL Server 的插件的备份命名约定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

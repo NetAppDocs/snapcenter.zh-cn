@@ -5,6 +5,7 @@ keywords: REST API, Swagger
 summary: REST API 通过 Swagger 网页公开。您可以访问 Swagger 网页以显示 SnapCenter 服务器 REST API 以及手动对 API 调用执行问题描述。您可以使用 REST API 帮助管理 SnapCenter 服务器或执行数据保护操作。 
 ---
 = 如何使用 Swagger API 网页访问 REST API
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

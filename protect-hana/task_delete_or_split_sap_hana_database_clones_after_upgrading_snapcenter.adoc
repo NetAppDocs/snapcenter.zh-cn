@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: '升级到 SnapCenter 4.3 后，您将无法再看到克隆。您可以从创建克隆的资源的 " 拓扑 " 页面中删除克隆或拆分克隆。' 
 ---
 = 升级 SnapCenter 后删除或拆分 SAP HANA 数据库克隆
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

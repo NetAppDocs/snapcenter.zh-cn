@@ -5,6 +5,7 @@ keywords:
 summary: '您可以从 " 监控 " 页面监控作业进度，获取有关已计划作业的信息以及查看事件和日志。' 
 ---
 = 监控作业，计划，事件和日志
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

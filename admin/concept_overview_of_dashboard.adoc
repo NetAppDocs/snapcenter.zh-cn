@@ -5,6 +5,7 @@ keywords:
 summary: 从 SnapCenter 左侧导航窗格中，您可以通过信息板首次查看系统运行状况，包括近期作业活动，警报，保护摘要，存储效率和使用情况， SnapCenter 作业的状态（备份，克隆，还原），独立和 Windows 集群主机的配置状态， 由 SnapCenter 管理的 Storage Virtual Machine （ SVM\ ）的数量以及许可证容量。 
 ---
 = 信息板概述
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

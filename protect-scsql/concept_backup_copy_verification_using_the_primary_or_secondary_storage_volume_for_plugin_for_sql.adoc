@@ -5,6 +5,7 @@ keywords:
 summary: 您可以验证主存储卷或 SnapMirror 或 SnapVault 二级存储卷上的备份副本。使用二级存储卷进行验证可减少主存储卷上的负载。 
 ---
 = 使用适用于 SQL Server 的插件的主存储卷或二级存储卷进行备份副本验证
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

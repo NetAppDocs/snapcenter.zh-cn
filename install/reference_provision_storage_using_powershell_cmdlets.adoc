@@ -5,6 +5,7 @@ keywords:
 summary: 如果您不想使用 SnapCenter 图形用户界面执行主机配置和空间回收作业，则可以使用适用于 Microsoft Windows 的 SnapCenter 插件提供的 PowerShell cmdlet 。您可以直接使用 cmdlet 或将其添加到脚本中。 
 ---
 = 使用 PowerShell cmdlet 配置存储
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

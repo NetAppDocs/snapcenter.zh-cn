@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: 您可以使用 SnapCenter 从一个或多个备份还原和恢复数据。 
 ---
 = 还原和恢复自动发现的数据库备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

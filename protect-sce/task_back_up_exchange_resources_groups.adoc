@@ -5,6 +5,7 @@ keywords: SnapCenter plug-in for Exchange Server
 summary: 资源组是主机或 Exchange DAG 上的一组资源，该资源组可以包括整个 DAG 或单个数据库。您可以从资源页面备份资源组。 
 ---
 = 备份 Exchange 资源组
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

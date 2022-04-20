@@ -5,6 +5,7 @@ keywords:
 summary: 您应从 SnapCenter 用户界面中安装适用于 Exchange 的插件。但是，如果由于某种原因而无法运行此插件，则可以通过 Windows 命令行在无人参与的情况下以静默模式运行适用于 Exchange 的插件安装程序。 
 ---
 = 通过命令行以静默方式安装适用于 Exchange 的 SnapCenter 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

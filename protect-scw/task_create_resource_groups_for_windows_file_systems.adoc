@@ -5,6 +5,7 @@ keywords: resource groups
 summary: 资源组是指可以向其中添加要保护的多个文件系统的容器。您还必须将一个或多个策略附加到资源组，以定义要执行的数据保护作业类型，然后指定备份计划。 
 ---
 = 为 Windows 文件系统创建资源组
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

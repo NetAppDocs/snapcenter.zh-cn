@@ -5,6 +5,7 @@ keywords:
 summary: 您可以从信息板页面请求有关备份，还原和克隆作业的报告。如果要确定 SnapCenter 环境中成功或失败的作业总数，此选项非常有用。 
 ---
 = 从信息板请求作业状态报告
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

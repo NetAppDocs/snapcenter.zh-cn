@@ -5,6 +5,7 @@ keywords: environment variable, predefined, prescript, postscript, clone
 summary: SnapCenter 允许您在克隆数据库时执行预处理和后处理脚本时使用预定义的环境变量。 
 ---
 = 克隆特定的预处理程序和后处理程序的预定义环境变量
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 您可以在使用 SnapCenter 备份 Microsoft Exchange Server 资源之前为 Exchange 资源或资源组创建备份策略，也可以在创建资源组或备份单个资源时创建备份策略。 
 ---
 = 为 Exchange Server 数据库创建备份策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

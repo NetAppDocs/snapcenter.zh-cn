@@ -5,6 +5,7 @@ keywords: ONTAP privileges
 summary: 所需的最小 ONTAP 权限因用于数据保护的 SnapCenter 插件而异。 
 ---
 = 适用于 Oracle 的插件所需的最低 ONTAP 特权
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -13,7 +14,7 @@ summary: 所需的最小 ONTAP 权限因用于数据保护的 SnapCenter 插件�
 所需的最小 ONTAP 权限因用于数据保护的 SnapCenter 插件而异。
 
 |===
-| all-access 命令： ONTAP 8.2_x_ 及更高版本所需的最低权限 
+| all-access 命令： ONTAP 8.3.0 及更高版本所需的最低权限 
 
 
  a| 

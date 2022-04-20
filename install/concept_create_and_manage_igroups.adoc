@@ -5,6 +5,7 @@ keywords: igroup
 summary: 您可以创建启动程序组（ igroup ）来指定哪些主机可以访问存储系统上的给定 LUN 。您可以使用 SnapCenter 在 Windows 主机上创建，重命名，修改或删除 igroup 。 
 ---
 = 创建和管理 igroup
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

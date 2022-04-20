@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: '资源是指 Linux 主机上由 SnapCenter 管理的 SAP HANA 数据库和非数据卷。安装适用于 SAP HANA 数据库的 SnapCenter 插件后，系统会自动发现该 Linux 主机上的 SAP HANA 数据库，并将其显示在 "Resources" 页面中。' 
 ---
 = 自动发现 Linux 主机上的资源
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

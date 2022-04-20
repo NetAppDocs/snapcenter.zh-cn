@@ -5,6 +5,7 @@ keywords:
 summary: 使用 Perl 开发此插件。 
 ---
 = 基于 Perl 的开发
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

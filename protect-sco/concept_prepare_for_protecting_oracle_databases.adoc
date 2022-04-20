@@ -5,6 +5,7 @@ keywords: oracle, preparation for protection, prerequisites
 summary: 在执行备份，克隆或还原操作等任何数据保护操作之前，您必须定义策略并设置环境。您还可以设置 SnapCenter 服务器以使用 SnapMirror 和 SnapVault 技术。 
 ---
 = 准备保护 Oracle 数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -27,7 +28,7 @@ NOTE: SnapCenter 不支持在不同集群上使用相同名称的多个 SVM 。�
 * 如果您使用 SnapCenter 服务器保护驻留在 VMware RDM LUN 或 VMDK 上的 Oracle 数据库，则必须部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件。
 * 在 Linux 或 AIX 主机上安装 Java 。
 +
-请参见 link:../protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html#linux-host-requirements["Linux 主机要求"^] 或  有关详细信息 ...
+请参见 link:../protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html#linux-host-requirements["Linux 主机要求"^] 或 link:../protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html#aix-host-requirements["AIX 主机要求"^] 有关详细信息 ...
 
 * 您应将应用程序防火墙的超时值设置为 3 小时或更长时间。
 * 如果在 NFS 环境中使用 Oracle 数据库，则必须至少为主存储或二级存储配置一个 NFS 数据 LIF ，才能执行挂载，克隆，验证和还原操作。

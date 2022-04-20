@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用 PowerShell cmdlet 计划和管理事件管理系统（ EMS ）数据收集。EMS 数据收集涉及收集有关 SnapCenter 服务器，已安装的 SnapCenter 插件软件包，主机和类似信息的详细信息，然后将其发送到指定的 ONTAP Storage Virtual Machine \ （ SVM\ ）。 
 ---
 = 管理 EMS 数据收集
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

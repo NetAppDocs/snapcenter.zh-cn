@@ -5,6 +5,7 @@ keywords: restore
 summary: 您可以使用作业页面监控不同 SnapCenter 还原操作的进度。您可能需要检查操作的进度，以确定操作何时完成或是否存在问题描述。 
 ---
 = 监控 SAP HANA 数据库还原操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

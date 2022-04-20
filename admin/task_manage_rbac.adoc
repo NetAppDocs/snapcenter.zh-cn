@@ -5,6 +5,7 @@ keywords: modify RBAC, role, users, groups
 summary: 使用 SnapCenter 可以修改角色，用户和组。 
 ---
 = 管理 RBAC
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

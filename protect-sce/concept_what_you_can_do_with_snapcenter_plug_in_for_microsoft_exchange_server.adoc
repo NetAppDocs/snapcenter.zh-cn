@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用适用于 Exchange 的插件备份和还原 Exchange Server 数据库。 
 ---
 = 适用于 Microsoft Exchange Server 的 SnapCenter 插件的功能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

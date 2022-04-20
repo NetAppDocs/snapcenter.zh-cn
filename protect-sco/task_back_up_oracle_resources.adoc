@@ -5,6 +5,7 @@ keywords: backup, Oracle database, policy, schedule, verification, resources
 summary: '如果某个资源不属于任何资源组，您可以从 "Resources" 页面备份该资源。' 
 ---
 = 备份 Oracle 资源
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

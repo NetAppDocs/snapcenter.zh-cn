@@ -5,6 +5,7 @@ keywords: run as
 summary: 资源组是指必须向其添加要备份和保护的资源的容器。通过资源组，您可以同时备份与给定应用程序关联的所有数据。 
 ---
 = 为 Oracle 数据库创建资源组和附加策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

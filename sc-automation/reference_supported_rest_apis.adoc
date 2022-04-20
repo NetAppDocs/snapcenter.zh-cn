@@ -5,6 +5,7 @@ keywords: REST API categories
 summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 SnapCenter API 文档页面上所示。 
 ---
 = 其他插件支持 REST API
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 在使用 SnapCenter 备份自定义插件特定资源之前，您必须为要备份的资源或资源组创建备份策略。 
 ---
 = 为自定义插件资源创建策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: uninstall, remove, remove host
 summary: 当 SnapCenter 服务器删除主机时，它会先删除 SnapCenter 资源页面上为该主机列出的备份，克隆，克隆作业，资源组和资源，然后在主机上卸载插件软件包。 
 ---
 = 删除主机
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 在准备备份资源时，查看主存储和二级存储上所有备份的图形表示可能会很有帮助。 
 ---
 = 在 Topology 页面中查看 Exchange 备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

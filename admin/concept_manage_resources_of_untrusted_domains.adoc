@@ -5,6 +5,7 @@ keywords:
 summary: 除了管理 Active Directory \ （ AD\ ）受信任域中的主机之外， SnapCenter 还管理多个 AD 不受信任域中的主机。不可信的 AD 域必须注册到 SnapCenter 服务器。SnapCenter 支持多个不可信 AD 域的用户和组。 
 ---
 = 管理不可信域的资源
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

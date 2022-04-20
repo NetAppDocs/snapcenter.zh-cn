@@ -5,6 +5,7 @@ keywords: RBAC roles, add, ONTAP RBAC role
 summary: 如果存储系统运行的是集群模式 ONTAP ，则可以使用 security login 命令添加 ONTAP RBAC 角色。 
 ---
 = 使用 security login 命令添加 ONTAP RBAC 角色
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

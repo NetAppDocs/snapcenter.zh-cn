@@ -5,6 +5,7 @@ keywords: RBAC, role, permission, pre-defined role
 summary: SnapCenter 附带预定义角色，每个角色都已启用一组权限。在设置和管理基于角色的访问控制（ RBAC ）时，您可以使用这些预定义角色，也可以创建新角色。 
 ---
 = 预定义的 SnapCenter 角色和权限
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

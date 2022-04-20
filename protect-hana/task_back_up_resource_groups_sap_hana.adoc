@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: 资源组是主机上的一组资源。系统会对资源组中定义的所有资源执行备份操作。 
 ---
 = 备份资源组
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

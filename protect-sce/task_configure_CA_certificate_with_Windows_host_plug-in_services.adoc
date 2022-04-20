@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: 使用 Windows 主机插件服务配置 CA 证书 
 ---
 = 使用 Windows 主机插件服务配置 CA 证书
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

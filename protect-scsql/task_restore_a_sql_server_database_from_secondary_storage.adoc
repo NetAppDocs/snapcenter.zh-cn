@@ -5,6 +5,7 @@ keywords:
 summary: 您可以从二级存储系统上的物理 LUN （ RDM ， iSCSI 或 FCP\ ）还原备份的 SQL Server 数据库。还原功能是一个多阶段过程，可将所有数据和日志页面从位于二级存储系统上的指定 SQL Server 备份复制到指定数据库。 
 ---
 = 从二级存储还原 SQL Server 数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

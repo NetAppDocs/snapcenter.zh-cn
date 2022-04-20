@@ -5,6 +5,7 @@ keywords:
 summary: 还原和恢复工作流包括规划，执行还原操作和监控操作。 
 ---
 = 还原自定义插件资源
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

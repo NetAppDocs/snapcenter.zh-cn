@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: 在创建备份作业之前定义备份策略有助于您获得成功还原或克隆资源所需的备份。您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO\ ）在很大程度上决定了您的备份策略。 
 ---
 = 为 SAP HANA 数据库定义备份策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

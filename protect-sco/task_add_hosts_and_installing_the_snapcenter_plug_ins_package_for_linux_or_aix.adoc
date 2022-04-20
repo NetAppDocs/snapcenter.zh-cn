@@ -5,6 +5,7 @@ keywords: credentials, install plug-in, Linux, AIX, GUI, add host, monitor
 summary: 您可以使用 SnapCenter 添加主机页面添加主机，然后安装适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包。这些插件会自动安装在远程主机上。 
 ---
 = 使用 GUI 添加主机并安装适用于 Linux 或 AIX 的插件软件包
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

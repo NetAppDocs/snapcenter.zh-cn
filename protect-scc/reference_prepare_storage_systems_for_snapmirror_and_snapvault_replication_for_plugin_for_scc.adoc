@@ -5,6 +5,7 @@ keywords: snapmirror, snapvault, storage system, replication
 summary: 您可以将 SnapCenter 插件与 ONTAP SnapMirror 和 SnapVault 技术结合使用 
 ---
 = 准备用于 SnapMirror 的存储系统，以及用于自定义插件的 SnapVault 复制
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

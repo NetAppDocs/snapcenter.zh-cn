@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter 灾难恢复功能使用 REST API 备份 SnapCenter 服务器。 
 ---
 = 支持 REST API 用于 SnapCenter 服务器的灾难恢复
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter 在物理机和虚拟机上均支持多种存储类型。在为主机安装软件包之前，您必须验证是否支持您的存储类型。 
 ---
 = 适用于 Microsoft Windows 和 Microsoft SQL Server 的 SnapCenter 插件支持的存储类型
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 您必须配置 HDB 用户存储密钥和 HDBSQL 操作系统用户，才能在 SAP HANA 数据库上执行数据保护操作。 
 ---
 = 为 SAP HANA 数据库配置 HDB 用户存储密钥和 HDBSQL 操作系统用户
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

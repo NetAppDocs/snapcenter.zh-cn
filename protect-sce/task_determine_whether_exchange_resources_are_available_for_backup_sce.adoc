@@ -5,6 +5,7 @@ keywords: credentials
 summary: 资源是指由您安装的插件维护的数据库和 Exchange 数据库可用性组。您可以将这些资源添加到资源组中，以便执行数据保护作业，但首先必须确定哪些资源可用。确定可用资源还会验证插件安装是否已成功完成。 
 ---
 = 确定 Exchange 资源是否可用于备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: uninstall, prerequisites, plug-in, plug-in packages
 summary: 如果不再希望使用 SnapCenter 管理主机的数据保护作业，则可以删除该主机。例如，如果某个主机不再具有需要保护的数据，您可能需要将其删除。从 SnapCenter 服务器中删除主机之前，必须执行前提条件任务。 
 ---
 = 删除主机的前提条件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

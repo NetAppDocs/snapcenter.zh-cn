@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for Exchange Server
 summary: 适用于 Microsoft Exchange Server 的 SnapCenter 插件是 NetAppSnapCenter 软件的主机端组件，可用于对 Exchange 数据库进行应用程序感知型数据保护管理。适用于 Exchange 的插件可自动备份和还原 SnapCenter 环境中的 Exchange 数据库。 
 ---
 = 适用于 Microsoft Exchange Server 的 SnapCenter 插件概述
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

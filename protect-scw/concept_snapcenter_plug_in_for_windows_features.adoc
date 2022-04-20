@@ -5,6 +5,7 @@ keywords:
 summary: 适用于 Windows 的插件可与存储系统上的 NetApp Snapshot 副本技术集成。要使用适用于 Windows 的插件，请使用 SnapCenter 界面。 
 ---
 = 适用于 Windows 的 SnapCenter 插件功能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SQL Server
 summary: 您可以使用 SnapCenter 对 SQL Server 资源执行不同类型的还原操作。 
 ---
 = 还原操作的类型
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

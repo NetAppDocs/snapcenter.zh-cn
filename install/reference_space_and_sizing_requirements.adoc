@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: 在安装 SnapCenter 服务器之前，您应熟悉空间和规模估算要求。您还应应用可用的系统和安全更新。 
 ---
 = 空间和规模估算要求
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

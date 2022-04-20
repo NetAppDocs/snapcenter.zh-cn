@@ -5,6 +5,7 @@ keywords: restore
 summary: 您可以使用 SnapCenter 还原文件系统备份。文件系统还原是一个多阶段过程，可将所有数据从指定备份复制到文件系统的原始位置。 
 ---
 = 还原 Windows 文件系统备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

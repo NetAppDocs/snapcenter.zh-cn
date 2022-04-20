@@ -5,6 +5,7 @@ keywords:
 summary: 添加存储系统后，您可以修改存储系统配置和连接，或者删除存储系统。 
 ---
 = 管理存储系统
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

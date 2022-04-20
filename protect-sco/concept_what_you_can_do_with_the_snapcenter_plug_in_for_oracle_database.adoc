@@ -5,6 +5,7 @@ keywords: backup, restore, clone, oracle database
 summary: 您可以使用适用于 Oracle 数据库的插件来备份，验证，还原，恢复，挂载， 卸载并克隆 Oracle 数据库及其资源。您还可以使用 Oracle Recovery Manager （ RMAN ）对数据库备份进行编目或取消编目。 
 ---
 = 您可以使用适用于 Oracle 数据库的插件执行什么操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

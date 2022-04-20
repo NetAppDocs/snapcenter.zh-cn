@@ -5,6 +5,7 @@ keywords: SnapCenter, MySQL high availability
 summary: MySQL 复制是 MySQL Server 的一项功能，可用于将数据从一个 MySQL 数据库服务器（主）复制到另一个 MySQL 数据库服务器（从）。SnapCenter 仅支持在两个启用了网络负载平衡（启用了 NLB ）的节点上进行 MySQL 复制以实现高可用性。 
 ---
 = SnapCenter MySQL 存储库的高可用性
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

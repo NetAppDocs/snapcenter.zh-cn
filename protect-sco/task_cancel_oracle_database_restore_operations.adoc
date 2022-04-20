@@ -5,6 +5,7 @@ keywords: cancel, restore
 summary: 您可以取消已排队的还原作业。 
 ---
 = 取消 Oracle 数据库还原操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

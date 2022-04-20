@@ -5,6 +5,7 @@ keywords: SnapCenter, configure, CA certificate
 summary: 您应在 Windows 主机上使用 SnapCenter 站点配置 CA 证书。 
 ---
 = 使用 SnapCenter 站点配置 CA 证书
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

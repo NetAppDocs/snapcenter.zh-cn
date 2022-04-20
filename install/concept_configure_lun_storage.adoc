@@ -5,6 +5,7 @@ keywords: LUN storage, iSCSI,
 summary: 您可以使用 SnapCenter 配置 FC 连接或 iSCSI 连接的 LUN 。您还可以使用 SnapCenter 将现有 LUN 连接到 Windows 主机。 
 ---
 = 配置 LUN 存储
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

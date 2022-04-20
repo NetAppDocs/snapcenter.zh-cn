@@ -5,6 +5,7 @@ keywords:
 summary: 了解将归档备份从 SnapManager for Microsoft SQL Server 导入到 SnapCenter 之前的限制将有助于成功完成导入。这些备份必须已使用 SnapVault 技术进行归档。 
 ---
 = 与导入功能相关的限制
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

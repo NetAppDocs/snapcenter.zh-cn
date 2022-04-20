@@ -5,6 +5,7 @@ keywords: host utilities, Microsoft DSM, Windows MPIO
 summary: 如果 SnapCenter 主机属于 FC/iSCSI 环境，则可能需要在系统上安装其他软件才能访问 ONTAP 存储。 
 ---
 = SAN 主机要求
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

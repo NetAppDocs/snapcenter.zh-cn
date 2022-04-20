@@ -5,6 +5,7 @@ keywords: restore, recover, Oracle
 summary: 如果数据丢失，您可以使用 SnapCenter 将数据从一个或多个备份还原到活动文件系统，然后恢复数据库。 
 ---
 = 还原和恢复 Oracle 数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 默认情况下，系统会为每种数据库类型分配特定的恢复模型。SQL Server 数据库管理员可以将每个数据库重新分配给不同的恢复模式。 
 ---
 = SnapCenter 支持的 SQL Server 恢复模式
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

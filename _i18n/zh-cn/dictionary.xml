@@ -260,7 +260,6 @@
   <block id="2df5362c7aa8c12a0dd2f1b211cdf61d" category="paragraph"><block ref="2df5362c7aa8c12a0dd2f1b211cdf61d" category="inline-link-rx"></block></block>
   <block id="04a9cf8066f01cc2ca9e6a6e6b25a340" category="summary">所需的最小 ONTAP 权限因用于数据保护的 SnapCenter 插件而异。</block>
   <block id="e120fc76fd23e12235b495bc6454901a" category="doc">SQL 插件所需的最小 ONTAP 权限</block>
-  <block id="7a411b0cfbb1617c0f5ce030e3ede650" category="cell">all-access 命令： ONTAP 8.2_x_ 及更高版本所需的最低权限</block>
   <block id="f29e68a537349e874e09abd00f21d020" category="paragraph">event generate-autosupport-log</block>
   <block id="e3890e588ffa00d05486b60aaec37e39" category="paragraph">作业历史记录显示</block>
   <block id="5b4f487acd2a1e48d6c43939945c2783" category="paragraph">作业停止</block>
@@ -335,7 +334,6 @@
   <block id="1da914296fd8fb1dd3452debe48ee483" category="paragraph">SVM iSCSI</block>
   <block id="5a533c7bcb2424b4226650432977866b" category="paragraph">vserver iscsi connection show</block>
   <block id="448da724515e17f1a0d8b304eb2f526c" category="paragraph">vserver show</block>
-  <block id="2cf90fefb7b745bf948963db2d5e45a9" category="cell">只读命令： ONTAP 8.2_x_ 及更高版本所需的最低权限</block>
   <block id="168d50085a3c4e712aaa28cf90e2f228" category="paragraph">网络接口</block>
   <block id="16fdd92def5a71313d6535c74ef67b81" category="paragraph">network interface show</block>
   <block id="5999e4ab912c7c1d8aa6fd2225491ef2" category="paragraph">vserver</block>
@@ -1637,7 +1635,6 @@
   <block id="2dafadf226896cb3cd576171339c6e92" category="paragraph">Java 1.8.x （ 64 位） IBM Java</block>
   <block id="bac8e3a852c936b4db89afd35d4d962a" category="paragraph">如果已将 Java 升级到最新版本，则必须确保 /var/opt/snapcenter/spl/etc/spl.properties 上的 java_home 选项设置为正确的 Java 版本和路径。</block>
   <block id="8550694ccd5a31f4fce5f8d906032e80" category="paragraph">通过 SnapCenter 4.4 及更高版本，非 root 用户可以安装适用于 AIX 的 SnapCenter 插件软件包并启动插件过程。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。</block>
-  <block id="6a3ea203b56114b349f3a7f98d6fe556" category="list-text">sudo 1.8.7 或更高版本。</block>
   <block id="15365f4ad2016523469fa400d8c372e8" category="list-text">确保非 root 用户属于 Oracle 安装组。</block>
   <block id="9fc7e0af2d8808b59624854d31dab1bb" category="list-text">编辑 /etc/ssh/sshd_config_ 文件以配置消息身份验证代码算法： macs HMAC-SHA2-256 和 MAC HMAC-SHA2-512 。</block>
   <block id="a522c9aaeab8d877d6b5ee133ac06025" category="paragraph">更新配置文件后重新启动 sshd 服务。</block>
@@ -2441,7 +2438,6 @@
   <block id="01e68d5655a01e54fb5027616f590fd2" category="list-text">脱机挂载备份</block>
   <block id="2e4bdeccde8318fa75a497d93f6e9c2b" category="list-text">脱机关闭备份</block>
   <block id="81e63b5a91ea892b6224da11b246a5cf" category="list-text">备份 Data Guard 备用数据库和 Active Data Guard 备用数据库</block>
-  <block id="43825f0055e62a6331e60802dcd94c00" category="admonition">如果多路径配置文件中的 user_friendly_names 选项设置为 yes ，并且使用 udev 规则文件为 Oracle ASM 磁盘定义了别名或符号链接，则不支持 Oracle ASM 配置。</block>
   <block id="0d296b92c09b34ffa602cfd268c9bde2" category="admonition">不支持克隆归档日志备份。</block>
   <block id="069e204626201110538d5c5c80f7886a" category="section-title">Oracle 数据库支持的克隆类型</block>
   <block id="9af986db528c988b61119454f9ef1f9e" category="paragraph">在 Oracle 数据库环境中， SnapCenter 支持克隆数据库备份。您可以从主存储系统和二级存储系统克隆备份。</block>
@@ -4528,7 +4524,6 @@
   <block id="f43b8555947d4751531f2048f4ceb68f" category="list-text">消息队列服务必须正在运行。</block>
   <block id="5da8a38d0d164ee119a4369bd402f7e7" category="inline-link-macro">在 Windows Server 2012 或更高版本上配置组托管服务帐户</block>
   <block id="c3d3d7d361f2929e16e2c819af868aee" category="list-text">如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。有关信息，请参见<block ref="de44f57898ffbf94587de066666e509e" category="inline-link-macro-rx"></block>。</block>
-  <block id="fdb65cf918a8b520afc6b815f2425d07" category="paragraph">您可以为单个主机或集群添加主机并安装插件软件包。如果要在集群（ Exchange DAG ）上安装插件，则这些插件会安装在集群的所有节点上，即使某些节点在 NetApp LUN 上没有数据库也是如此。</block>
   <block id="c20a8a11a419d74017da773b8a54f9ff" category="paragraph">适用于 Exchange 的插件取决于适用于 Windows 的 SnapCenter 插件软件包，并且版本必须相同。在安装适用于 Exchange 的插件期间，默认情况下会选择适用于 Windows 的 SnapCenter 插件软件包，该软件包会随 VSS 硬件提供程序一起安装。</block>
   <block id="262d319024a0918be769dfc76e9786c3" category="list-text">验证顶部是否已选择 * 受管主机 * 。</block>
   <block id="a2019a474e94462a57623d70d38bc98e" category="paragraph">选择 * Windows * 作为主机类型。</block>
@@ -7543,10 +7538,8 @@
   <block id="948b4d6914f4248c5e96a053c1d7ae63" category="paragraph">您可以使用 SnapCenter 灾难恢复功能在发生资源损坏或服务器崩溃等灾难时恢复 SnapCenter 服务器。您可以恢复 SnapCenter 存储库，服务器计划和服务器配置组件。</block>
   <block id="7b7cd2b9067ed1c82323fb382c11f370" category="paragraph">以下是灾难恢复（ DR ）的类型：</block>
   <block id="1636245b9e25bb600e733929465df761" category="list-text">* SnapCenter 服务器灾难恢复 *</block>
-  <block id="f26c16c1937780fa95f00744522a7981" category="paragraph">无论插件是否由 SnapCenter 服务器管理， SnapCenter 服务器数据都将进行备份和恢复。</block>
   <block id="eb3b9ec963eb618621a779602a309514" category="inline-link-macro">用于 SnapCenter 服务器灾难恢复的 REST API 工作流</block>
   <block id="e667e897b20b02966f899ad38ce1ba39" category="paragraph"><block ref="e667e897b20b02966f899ad38ce1ba39" category="inline-link-macro-rx"></block></block>
-  <block id="4c927ea1ab3c5cf125d6da515fcf2e34" category="list-text">* SQL Server DR*</block>
   <block id="0554390053842752b7d1d3059c743b32" category="paragraph">只有适用于 SQL Server 的 SnapCenter 插件才支持 DR 。当适用于 SQL Server 的 SnapCenter 插件关闭时，切换到另一个 SQL 主机，并通过执行几个步骤来恢复数据。</block>
   <block id="47046db67c1574cb29142c431fb68f1f" category="paragraph"><block ref="47046db67c1574cb29142c431fb68f1f" category="inline-link-macro-rx"></block></block>
   <block id="196a4a3e452864b82a133adc0c1c5228" category="paragraph">SnapCenter 使用 ONTAP SnapMirror 技术复制数据。它可用于将数据复制到二级站点以进行灾难恢复并保持同步。可以通过中断 SnapMirror 中的复制关系来启动故障转移。在故障恢复期间，可以反转同步，并将灾难恢复站点中的数据复制回主位置。</block>
@@ -7732,4 +7725,17 @@
   <block id="15e336a500bbc8b78c88e27a721b8803" category="doc">适用于 Microsoft Windows 的 SnapCenter 插件的安装工作流</block>
   <block id="44f89507afec59f4cedb4b405c468c9c" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block></block>
   <block id="4c1df4d227c6def4b8391fc8b18a81bf" category="paragraph">此外，您还可以使用 _Uninstall-SmHostPackage_ cmdlet 和所需参数从多个主机卸载插件。有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
+  <block id="45cfde3246d77aae99351b410b97c7c0" category="doc">SAP HANA 插件所需的最低 ONTAP 特权</block>
+  <block id="f787fb91924061fe015dd390115ff7b0" category="cell">all-access 命令： ONTAP 8.3.0 及更高版本所需的最低权限</block>
+  <block id="3c7a1d3e0ce94aeb0c7ab231e365f15e" category="cell">只读命令： ONTAP 8.3.0 及更高版本所需的最低权限</block>
+  <block id="8bd83f1f314ef9e02c70e66cc9fb845c" category="paragraph">要修改端口详细信息，请参见<block ref="50723147440c13da7c31ceaceb52ba16" category="inline-link-rx"></block> 修改插件主机^ 。</block>
+  <block id="5e312685e47c74b5ee2a4102a18ee03f" category="doc">Exchange 插件所需的最低 ONTAP 权限</block>
+  <block id="f2e203e95de8a92902a61dcabea6f456" category="list-text">您可以为单个主机或集群添加主机并安装插件软件包。</block>
+  <block id="adc8d83761c6331a65ee343d3de2a603" category="list-text">如果某个 Exchange 节点属于 DAG ，则不能仅向 SnapCenter 服务器添加一个节点。</block>
+  <block id="5b75eba7d9db0318ac1f23b295c25952" category="list-text">如果要在集群（ Exchange DAG ）上安装插件，则这些插件会安装在集群的所有节点上，即使某些节点在 NetApp LUN 上没有数据库也是如此。</block>
+  <block id="685c106cf385da9da7d774e7b6cddea8" category="paragraph">您还可以恢复适用于 SQL Server 的 SnapCenter 插件和适用于 SQL Server 的 SnapCenter 插件存储。</block>
+  <block id="8fa1aa495cfe5fdc95202bda34adafcd" category="paragraph">无论 SnapCenter 服务器是否添加了任何插件或管理了任何插件，都将备份和恢复 SnapCenter 服务器数据。</block>
+  <block id="30c24db21140190d4033af17ccd83090" category="list-text">* SnapCenter 插件和存储灾难恢复 *</block>
+  <block id="67c5ed4921b287cb12a0c466f01e9689" category="admonition">如果多路径配置文件中的 user_friendly_names 选项设置为 yes ，则不支持 SAN 配置。</block>
+  <block id="f91d0c3af79b649ecca3ab95634c22c6" category="list-text">sudo 版本介于 1.8.7 和 1.8.19P2 之间。</block>
 </blocks>

@@ -5,6 +5,7 @@ keywords: storage system, ONTAP version
 summary: 您应了解支持的存储系统，应用程序和数据库。 
 ---
 = 支持的存储系统和应用程序
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: credentials,SnapCenter Plug-in for Oracle Databases
 summary: 资源是指主机上由 SnapCenter 管理的 Oracle 数据库。发现可用数据库后，您可以将这些数据库添加到资源组以执行数据保护操作。 
 ---
 = 确定 Oracle 数据库是否可用于备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

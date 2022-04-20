@@ -5,6 +5,7 @@ keywords: backing up
 summary: 如果某个资源不在资源组中，您可以从资源页面按需备份该资源。 
 ---
 = 按需备份 Windows 文件系统的单个资源
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

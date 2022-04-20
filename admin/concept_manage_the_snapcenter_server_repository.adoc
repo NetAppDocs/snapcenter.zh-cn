@@ -5,6 +5,7 @@ keywords:
 summary: 与从 SnapCenter 执行的各种操作相关的信息存储在 SnapCenter 服务器数据库存储库中。您必须为存储库创建备份，以防止 SnapCenter 服务器数据丢失。 
 ---
 = 管理 SnapCenter 服务器存储库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

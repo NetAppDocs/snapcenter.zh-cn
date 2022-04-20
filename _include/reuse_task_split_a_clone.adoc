@@ -1,4 +1,5 @@
 = 
+:allow-uri-read: 
 
 
 您可以使用 SnapCenter 从父资源拆分克隆的资源。拆分的克隆将独立于父资源。

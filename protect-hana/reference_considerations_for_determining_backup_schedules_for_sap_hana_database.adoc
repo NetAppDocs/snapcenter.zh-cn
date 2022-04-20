@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: 确定备份计划的最关键因素是资源的更改率。您可以每小时备份一次使用率较高的资源，而每天备份一次很少使用的资源。其他因素包括资源对组织的重要性，您的服务级别协议（ SLA ）和恢复点目标（ RPO\ ）。 
 ---
 = 确定 SAP HANA 数据库备份计划的注意事项
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 您应从 SnapCenter 图形用户界面安装适用于 Exchange 的插件。如果不想使用此 GUI ，可以在 SnapCenter 服务器主机或远程主机上使用 PowerShell cmdlet 。 
 ---
 = 使用 PowerShell cmdlet 从 SnapCenter 服务器主机安装适用于 Exchange 的插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

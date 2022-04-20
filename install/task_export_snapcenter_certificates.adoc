@@ -5,6 +5,7 @@ keywords: exporting certificates
 summary: 导出 SnapCenter 证书。 
 ---
 = 导出 SnapCenter 证书
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

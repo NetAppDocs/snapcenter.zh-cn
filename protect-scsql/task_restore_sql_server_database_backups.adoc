@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用 SnapCenter 还原备份的 SQL Server 数据库。数据库还原是一个多阶段过程，可将所有数据和日志页面从指定的 SQL Server 备份复制到指定的数据库。 
 ---
 = 还原 SQL Server 数据库备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

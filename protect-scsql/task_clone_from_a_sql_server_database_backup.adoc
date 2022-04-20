@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用 SnapCenter 克隆 SQL Server 数据库备份。如果要访问或还原旧版本的数据，可以按需克隆数据库备份。 
 ---
 = 从 SQL Server 数据库备份克隆
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

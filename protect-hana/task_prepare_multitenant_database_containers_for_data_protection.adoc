@@ -5,6 +5,7 @@ keywords: multitenant database containers
 summary: '对于直接在 SnapCenter 中注册的 SAP HANA 主机，安装或升级适用于 SAP HANA 数据库的 SnapCenter 插件将触发主机上资源的自动发现。安装或升级此插件后，对于插件主机上的每个多租户数据库容器 \ （ MDC\ ）资源，系统将自动发现另一个采用不同 GUID 格式的 MDC 资源并在 SnapCenter 中注册。新资源将处于 " 已锁定 " 状态。' 
 ---
 = 准备多租户数据库容器以进行数据保护
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter 提供了多种报告选项，可用于监控和管理系统运行状况以及操作成功情况。 
 ---
 = SnapCenter 报告功能概述
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: refresh clone, clone
 summary: '您可以运行 "Refresh-SmClone" 命令刷新克隆。此命令将创建数据库的备份，删除现有克隆并创建同名克隆。' 
 ---
 = 刷新克隆
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

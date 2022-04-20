@@ -5,6 +5,7 @@ keywords:
 summary: 在使用 SnapCenter 之前，了解与要执行的备份，克隆和还原操作相关的基本概念非常有用。您可以与不同操作的资源，资源组和策略进行交互。 
 ---
 = 如何使用资源，资源组和策略保护 SAP HANA 数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: add, storage system, SVM
 summary: 您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储，以执行数据保护和配置操作。您可以添加一个独立 SVM ，也可以添加一个由多个 SVM 组成的集群。 
 ---
 = 添加存储系统
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

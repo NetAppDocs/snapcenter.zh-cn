@@ -5,6 +5,7 @@ keywords: clone, pluggable database, PDB
 summary: 您可以将可插拔数据库 \ （ PDB ）克隆到同一主机或备用主机上的其他或相同目标 CDB 。您还可以将克隆的 PDB 恢复到所需的 SCN 或日期和时间。 
 ---
 = 克隆可插拔数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

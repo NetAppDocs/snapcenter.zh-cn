@@ -5,6 +5,7 @@ keywords: credentials
 summary: 在添加主机并安装插件软件包之前，您必须满足所有要求。自定义插件既可以在 Windows 环境中使用，也可以在 Linux 环境中使用。 
 ---
 = 添加主机和安装 SnapCenter 自定义插件的前提条件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

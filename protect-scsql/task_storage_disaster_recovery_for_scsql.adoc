@@ -5,6 +5,7 @@ keywords:
 summary: 您可以通过在全局设置页面中启用存储的 DR 模式来恢复适用于 SQL Server 的 SnapCenter 插件存储。 
 ---
 = 适用于 SQL Server 的 SnapCenter 插件的存储灾难恢复（ DR ）
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

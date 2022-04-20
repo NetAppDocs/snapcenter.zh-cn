@@ -5,6 +5,7 @@ keywords: role, create, permission
 summary: 除了使用现有 SnapCenter 角色之外，您还可以创建自己的角色并自定义权限。 
 ---
 = 创建角色
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 您可以取消已排队的备份操作。 
 ---
 = 取消自定义插件的备份操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

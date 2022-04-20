@@ -5,6 +5,7 @@ keywords: credentials
 summary: 提供有关安装 SnapCenter 服务器和适用于 Microsoft SQL Server 的 SnapCenter 插件的说明。 
 ---
 = 快速开始安装适用于 SQL Server 的 SnapCenter 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

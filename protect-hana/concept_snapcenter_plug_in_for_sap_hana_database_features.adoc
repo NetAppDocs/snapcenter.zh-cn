@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: SnapCenter 可与插件应用程序以及存储系统上的 NetApp 技术集成。要使用适用于 SAP HANA 数据库的插件，请使用 SnapCenter 图形用户界面。 
 ---
 = 适用于 SAP HANA 数据库的 SnapCenter 插件功能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 您可以从主存储或二级存储上的备份副本还原 SQL Server 数据库。除了数据库的原始位置之外，您还可以将数据库还原到其他目标，从而可以选择满足要求的目标。 
 ---
 = 还原操作的源和目标
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

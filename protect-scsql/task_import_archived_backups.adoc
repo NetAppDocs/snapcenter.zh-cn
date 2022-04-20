@@ -5,6 +5,7 @@ keywords: SnapVault
 summary: 您只能从命令行界面将使用 SnapVault 技术归档的备份从 SnapManager for Microsoft SQL Server 导入到 SnapCenter 中。 
 ---
 = 导入归档备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

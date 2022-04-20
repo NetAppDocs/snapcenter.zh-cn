@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用 SnapCenter 自定义插件执行数据保护操作。 
 ---
 = 您可以使用 SnapCenter 自定义插件和存储插件执行什么操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

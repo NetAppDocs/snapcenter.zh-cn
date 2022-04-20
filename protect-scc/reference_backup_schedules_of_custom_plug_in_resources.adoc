@@ -5,6 +5,7 @@ keywords:
 summary: 确定备份计划的最关键因素是资源的更改率。备份资源的频率越高， SnapCenter 用于还原的归档日志就越少，从而可以加快还原操作的速度。 
 ---
 = 自定义插件资源的备份计划
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

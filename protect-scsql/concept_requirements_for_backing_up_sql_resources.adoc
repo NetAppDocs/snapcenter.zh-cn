@@ -5,6 +5,7 @@ keywords:
 summary: 备份 SQL 资源之前，您必须确保满足多项要求。 
 ---
 = 备份 SQL 资源的要求
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

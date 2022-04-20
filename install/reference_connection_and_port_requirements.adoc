@@ -5,6 +5,7 @@ keywords: ports, port requirements
 summary: 在安装 SnapCenter 服务器和应用程序或数据库插件之前，应确保满足连接和端口要求。 
 ---
 = 连接和端口要求
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -145,3 +146,4 @@ SAL （存储抽象层）使用此端口在运行 SnapCenter 服务器的主机�
 必须在域控制器上打开 Microsoft 所需的端口，以便 SnapCenter 服务器，插件主机或其他 Windows 客户端能够对用户进行身份验证。
 
 |===
+要修改端口详细信息，请参见 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html#modify-plug-in-hosts[] 修改插件主机^ 。

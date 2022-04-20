@@ -5,6 +5,7 @@ keywords: credentials
 summary: 资源是指 Linux 主机上由 SnapCenter 管理的 SAP HANA 数据库和非数据卷。在发现可用的 SAP HANA 数据库后，您可以将这些资源添加到资源组以执行数据保护操作。 
 ---
 = 自动发现数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

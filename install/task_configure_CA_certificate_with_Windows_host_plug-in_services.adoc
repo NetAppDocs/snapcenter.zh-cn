@@ -5,6 +5,7 @@ keywords: SnapCenter, ca certificate, activate, digital certificate
 summary: 您应使用 Windows 主机插件服务配置 CA 证书，以激活已安装的数字证书。 
 ---
 = 使用 Windows 主机插件服务配置 CA 证书
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -1,4 +1,5 @@
 = 
+:allow-uri-read: 
 
 
 如果在其他数据保护操作中不再需要备份，则可以使用 Remove-SmBackup cmdlet 删除这些备份。

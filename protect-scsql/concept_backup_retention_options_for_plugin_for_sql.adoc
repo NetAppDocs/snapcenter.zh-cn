@@ -5,6 +5,7 @@ keywords:
 summary: 您可以选择保留备份副本的天数，也可以指定要保留的备份副本数， ONTAP 最多可保留 255 个副本。例如，您的组织可能要求您保留 10 天的备份副本或 130 个备份副本。 
 ---
 = 适用于 SQL Server 的插件的备份保留选项
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

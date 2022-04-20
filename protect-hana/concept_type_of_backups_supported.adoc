@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: 备份类型指定要创建的备份类型。SnapCenter 支持 SAP HANA 数据库的基于文件的备份和基于 Snapshot 副本的备份类型。 
 ---
 = 支持的备份类型
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

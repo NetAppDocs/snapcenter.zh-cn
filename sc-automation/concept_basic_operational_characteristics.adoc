@@ -5,6 +5,7 @@ keywords: request and response, object identifiers, synchronous, asynchronous
 summary: 虽然 REST 建立了一组通用的技术和最佳实践，但每个 API 的详细信息可能因设计选择而异。 
 ---
 = 基本操作特征
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

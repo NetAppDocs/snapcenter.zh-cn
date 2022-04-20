@@ -5,6 +5,7 @@ keywords: environment variable, predefined, prescript, postscript, backup, polic
 summary: 通过 SnapCenter ，您可以在创建备份策略时执行预处理和后处理脚本时使用预定义的环境变量。 
 ---
 = 用于备份特定的预处理和后处理的预定义环境变量
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: credentials
 summary: 您可以使用 Install-SmHostPackage PowerShell cmdlet 在多个主机上同时安装适用于 Microsoft SQL Server 的 SnapCenter 插件。 
 ---
 = 使用 cmdlet 在多个远程主机上安装适用于 Microsoft SQL Server 的 SnapCenter 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

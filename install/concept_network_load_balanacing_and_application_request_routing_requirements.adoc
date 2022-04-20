@@ -5,6 +5,7 @@ keywords: NLB, configure
 summary: 您可以配置 Microsoft 网络负载平衡（ NLB ）以设置 SnapCenter 高可用性。 
 ---
 = 手动配置 Microsoft 网络负载平衡器
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

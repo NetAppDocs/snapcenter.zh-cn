@@ -5,6 +5,7 @@ keywords: install, snapcenter software, install wizard
 summary: 您可以运行 SnapCenter 服务器安装程序可执行文件来安装 SnapCenter 服务器。 
 ---
 = 安装 SnapCenter 服务器
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

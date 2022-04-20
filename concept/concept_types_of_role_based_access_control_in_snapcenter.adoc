@@ -5,6 +5,7 @@ keywords: RBAC, roles, permissions, application-level RBAC, ONTAP permissions
 summary: 通过 SnapCenter 基于角色的访问控制（ Role-Based Access Control ， RBAC ）和 ONTAP 权限， SnapCenter 管理员可以创建角色并设置访问权限。通过这种集中管理的访问，应用程序管理员可以在委派的环境中安全地工作。 
 ---
 = RBAC 的类型
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

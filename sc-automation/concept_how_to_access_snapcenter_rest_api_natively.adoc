@@ -5,6 +5,7 @@ keywords: REST APIs, swagger
 summary: 本机访问 REST API 。REST API 通过 Swagger 网页公开。 
 ---
 = 如何以本机方式访问 SnapCenter REST API
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

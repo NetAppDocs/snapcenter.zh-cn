@@ -5,6 +5,7 @@ keywords: configure, snapcenter server, updates, software updates
 summary: SnapCenter 会定期与 NetApp 支持站点进行通信，以通知您有可用的软件更新。您还可以创建计划来指定接收可用更新信息的间隔。 
 ---
 = 配置 SnapCenter 以检查可用更新
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

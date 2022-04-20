@@ -5,6 +5,7 @@ keywords: installing
 summary: 如果要保护 SQL Server 数据库，应安装和设置适用于 Microsoft SQL Server 的 SnapCenter 插件。 
 ---
 = 适用于 Microsoft SQL Server 的 SnapCenter 插件的安装工作流
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

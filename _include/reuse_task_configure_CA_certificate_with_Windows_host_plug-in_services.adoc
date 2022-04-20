@@ -1,4 +1,5 @@
 = 
+:allow-uri-read: 
 
 
 您应使用 Windows 主机插件服务配置 CA 证书，以激活已安装的数字证书。

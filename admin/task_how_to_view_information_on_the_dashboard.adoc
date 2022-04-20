@@ -5,6 +5,7 @@ keywords:
 summary: 在 SnapCenter 左侧导航窗格中，您可以查看各种信息板图块或显示内容以及关联的系统详细信息。信息板中可用的显示数量是固定的，无法更改。每个显示内容取决于基于角色的访问控制 \ （ RBAC ）。 
 ---
 = 如何查看信息板上的信息
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

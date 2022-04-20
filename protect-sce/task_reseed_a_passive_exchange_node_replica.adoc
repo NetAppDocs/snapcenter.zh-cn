@@ -5,6 +5,7 @@ keywords:
 summary: 如果您需要重新生成副本副本，例如，当副本损坏时，可以使用 SnapCenter 中的重新生成功能重新生成到最新备份。 
 ---
 = 重新传输被动 Exchange 节点副本
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

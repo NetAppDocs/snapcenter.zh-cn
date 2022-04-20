@@ -5,6 +5,7 @@ keywords: PDB, pluggable database, restore, CDB, PITR, point-in-time recovery, R
 summary: 您可以还原和恢复已损坏或丢弃的可插拔数据库（ PDB ），而不会影响容器数据库（ CDB\ ）中的其他 PDB 。SnapCenter 使用 RMAN 对 PDB 执行时间点恢复 \ （ PITR\ ）。 
 ---
 = 使用时间点恢复还原和恢复可插拔数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

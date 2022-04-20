@@ -5,6 +5,7 @@ keywords: log in, logging, SnapCenter UI, modify timeout, GUI session timeout, d
 summary: SnapCenter 支持基于角色的访问控制（ Role-Based Access Control ， RBAC ）。SnapCenter 管理员通过 SnapCenter RBAC 将角色和资源分配给工作组或 Active Directory 中的用户或 Active Directory 中的组。现在， RBAC 用户可以使用分配的角色登录到 SnapCenter 。 
 ---
 = 登录到 SnapCenter
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: mount, unmount, backup, ASM, asm_diskstring
 summary: 如果要访问备份中的文件，您可以挂载一个或多个数据并仅记录备份。您可以将备份挂载到创建备份的同一主机，也可以挂载到具有相同类型的 Oracle 和主机配置的远程主机。如果您已手动挂载备份，则应在完成此操作后手动卸载备份。对于特定数据库，只能在主机上挂载一次数据库备份。执行操作时，只能挂载一个备份。 
 ---
 = 挂载和卸载数据库备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

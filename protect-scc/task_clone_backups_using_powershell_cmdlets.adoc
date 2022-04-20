@@ -5,6 +5,7 @@ keywords:
 summary: 克隆工作流包括规划，执行克隆操作以及监控操作。 
 ---
 = 使用 PowerShell cmdlet 克隆备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

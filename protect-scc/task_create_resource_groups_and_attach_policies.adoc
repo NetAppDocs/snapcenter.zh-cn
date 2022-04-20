@@ -5,6 +5,7 @@ keywords:
 summary: 资源组是指必须向其添加要备份和保护的资源的容器。 
 ---
 = 创建资源组并附加策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

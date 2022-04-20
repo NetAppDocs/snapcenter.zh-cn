@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter 服务器安装程序可在安装期间在 Windows 主机上启用 Windows 功能和角色。出于故障排除和主机系统维护的目的，这些功能可能会很重要。 
 ---
 = 安装期间在 Windows 主机上启用的功能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

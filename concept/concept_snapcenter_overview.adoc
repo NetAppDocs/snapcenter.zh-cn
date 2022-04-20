@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter 软件是一个简单，集中化且可扩展的平台，可为混合云中任意位置的 ONTAP 系统上运行的应用程序，数据库，主机文件系统和 VM 提供应用程序一致的数据保护。 
 ---
 = SnapCenter 概述
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

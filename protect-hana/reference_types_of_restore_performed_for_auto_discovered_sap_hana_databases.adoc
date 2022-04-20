@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Databases
 summary: 对于自动发现的 SAP HANA 数据库， SnapCenter 支持基于卷的 SnapRestore \ （ VBSR\ ），单个文件 SnapRestore 以及连接和复制还原类型。 
 ---
 = 自动发现的 SAP HANA 数据库的还原操作类型
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

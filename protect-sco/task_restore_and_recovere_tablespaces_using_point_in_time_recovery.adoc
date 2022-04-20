@@ -5,6 +5,7 @@ keywords: restore, PITR, point-in-time recovery, RMAN, tablespaces
 summary: 您可以还原已损坏或丢弃的部分表空间，而不会影响数据库中的其他表空间。SnapCenter 使用 RMAN 对表空间执行时间点恢复 \ （ PITR\ ）。 
 ---
 = 使用时间点恢复还原和恢复表空间
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

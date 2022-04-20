@@ -5,6 +5,7 @@ keywords: SnapCenter, import, import ca certificate, mmc, microsoft management c
 summary: 您必须使用 Microsoft 管理控制台（ MMC ）将 CA 证书导入到 SnapCenter 服务器和 Windows 主机插件中。 
 ---
 = 导入 CA 证书
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: SnapCenter, certificate thumbprint
 summary: 证书指纹是用于标识证书的十六进制字符串。指纹是使用指纹算法根据证书内容计算得出的。 
 ---
 = 获取 CA 证书指纹
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

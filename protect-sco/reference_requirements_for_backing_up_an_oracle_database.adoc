@@ -5,6 +5,7 @@ keywords: requirements, prerequisites
 summary: 在备份 Oracle 数据库之前，您应确保满足前提条件。 
 ---
 = 备份 Oracle 数据库的要求
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

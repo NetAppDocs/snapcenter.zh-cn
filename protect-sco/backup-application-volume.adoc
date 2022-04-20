@@ -5,6 +5,7 @@ keywords: application volume, back up
 summary: '如果应用程序卷不属于任何资源组，您可以从 " 资源 " 页面备份该应用程序卷。' 
 ---
 = 备份应用程序卷
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: SnapCenter, enable ca certificate, ca certificate
 summary: 您应配置 CA 证书并在 Oracle 插件主机中部署 CA 证书。 
 ---
 = 为插件启用 CA 证书
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

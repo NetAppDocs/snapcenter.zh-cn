@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用 SnapCenter 还原资源。还原操作的功能取决于您使用的插件。 
 ---
 = 还原资源备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

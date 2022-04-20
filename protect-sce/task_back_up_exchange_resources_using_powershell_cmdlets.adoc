@@ -5,6 +5,7 @@ keywords: backup
 summary: 备份 Exchange Server 数据库包括与 SnapCenter 服务器建立连接，发现 Exchange Server 数据库，添加策略，创建备份资源组，备份和查看备份状态。 
 ---
 = 使用 PowerShell cmdlet 备份 Exchange 资源
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

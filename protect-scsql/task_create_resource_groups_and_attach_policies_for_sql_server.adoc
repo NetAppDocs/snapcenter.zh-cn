@@ -5,6 +5,7 @@ keywords: run as
 summary: 资源组是指添加要同时备份和保护的资源的容器。通过资源组，您可以同时备份与给定应用程序关联的所有数据。任何数据保护作业都需要资源组。您还必须将一个或多个策略附加到资源组，才能定义要执行的数据保护作业类型。 
 ---
 = 为 SQL Server 创建资源组并附加策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

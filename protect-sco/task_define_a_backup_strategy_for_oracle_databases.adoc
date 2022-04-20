@@ -5,6 +5,7 @@ keywords: backup type, preferred nodes, catalog backups, schedules, backup name 
 summary: 在创建备份作业之前定义备份策略可确保您拥有成功还原或克隆数据库所需的备份。您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO ）在很大程度上决定了您的备份策略。 
 ---
 = 为 Oracle 数据库定义备份策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

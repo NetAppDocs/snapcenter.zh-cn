@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: 您可以使用此插件为资源组创建一致性组 Snapshot 副本。一致性组是一个容器，可以容纳多个卷，以便将其作为一个实体进行管理。一致性组是指多个卷的同时 Snapshot 副本，可为一组卷提供一致的副本。 
 ---
 = 适用于 SAP HANA 数据库的 SnapCenter 插件如何使用一致性组 Snapshot 副本
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

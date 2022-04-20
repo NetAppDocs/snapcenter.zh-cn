@@ -5,6 +5,7 @@ keywords: F5, NLB, high availability
 summary: 您可以将 SnapCenter HA 配置从网络负载平衡（ NLB ）更改为使用 F5 负载平衡器。 
 ---
 = 从 NLB 切换到 F5 以实现高可用性
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

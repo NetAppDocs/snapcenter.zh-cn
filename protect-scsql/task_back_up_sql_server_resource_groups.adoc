@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SQL Server
 summary: '您可以从 " 资源 " 页面按需备份资源组。如果资源组附加了策略并配置了计划，则会根据计划自动进行备份。' 
 ---
 = 备份 SQL Server 资源组
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: '如果某个资源尚未加入任何资源组，您可以从 "Resources" 页面备份该资源。' 
 ---
 = 备份 SQL 资源
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 您应使用 SnapCenter 用户界面（ UI ）安装适用于 SAP HANA 数据库的 SnapCenter 插件。如果您的环境不允许从 SnapCenter UI 远程安装此插件，则可以使用命令行界面 \ （ cli\ ）在控制台模式或静默模式下安装适用于 SAP HANA 数据库的插件。 
 ---
 = 使用命令行界面在 Linux 主机上安装适用于 SAP HANA 数据库的 SnapCenter 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

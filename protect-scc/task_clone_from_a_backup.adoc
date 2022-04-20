@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用 SnapCenter 克隆备份。您可以从主备份或二级备份克隆。克隆操作的功能取决于您使用的插件。 
 ---
 = 从备份克隆
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

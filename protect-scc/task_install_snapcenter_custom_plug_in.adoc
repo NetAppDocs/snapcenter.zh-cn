@@ -5,6 +5,7 @@ keywords: installing
 summary: 如果要保护自定义插件资源，应安装和设置 SnapCenter 自定义插件。 
 ---
 = SnapCenter 自定义插件的安装工作流
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

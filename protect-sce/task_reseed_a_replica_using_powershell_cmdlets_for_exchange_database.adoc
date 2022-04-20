@@ -5,6 +5,7 @@ keywords:
 summary: 您可以使用 PowerShell cmdlet 通过使用同一主机上的最新副本或备用主机上的最新副本来还原运行状况不正常的副本。 
 ---
 = 使用适用于 Exchange 数据库的 PowerShell cmdlet 重新获取副本
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

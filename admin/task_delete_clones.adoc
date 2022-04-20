@@ -5,6 +5,7 @@ keywords:
 summary: 如果您发现克隆不再需要，可以将其删除。 
 ---
 = 删除克隆。
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
