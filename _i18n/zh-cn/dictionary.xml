@@ -440,7 +440,6 @@
   <block id="f6e291f8da5e2bfb20622fac181e8aca" category="list-text">如果要备份 VMDK 上的应用程序数据，并且适用于 VMware vSphere 的 SnapCenter 插件的 Java 堆大小不够大，则备份可能会失败。要增加 Java 堆大小，请找到脚本文件 /opt/netapp/init_scripts/scvservice 。在该脚本中， `do_start 方法` 命令将启动 SnapCenter VMware 插件服务。将该命令更新为以下命令： `java -JAR -Xmx8192M -Xms4096M` 。</block>
   <block id="50e1edb21a598f492619b01f99e77a4f" category="paragraph"><block ref="50e1edb21a598f492619b01f99e77a4f" category="inline-link-macro-rx"></block></block>
   <block id="d2a5f76428abadccd7b24ea08a0eee1e" category="inline-link-macro">使用 PowerShell cmdlet 备份资源</block>
-  <block id="6b82c658b31dd0db1cb85c0f9d0dd56c" category="paragraph"><block ref="6b82c658b31dd0db1cb85c0f9d0dd56c" category="inline-link-macro-rx"></block></block>
   <block id="db9c751c1327ee48b470f3140421daf6" category="inline-link">由于 tcp_timeout 存在延迟，备份操作失败并显示 MySQL 连接错误</block>
   <block id="0cd607c6c3ab41f1a5532b188171495c" category="paragraph"><block ref="0cd607c6c3ab41f1a5532b188171495c" category="inline-link-rx"></block></block>
   <block id="c473dc65af16d92c688e88cffad5b825" category="inline-link">备份失败，并显示 Windows 计划程序错误</block>
@@ -2560,7 +2559,6 @@
   <block id="cb21f64b7aa1d58307ba1cfcc254fb77" category="paragraph">您可以为资源（数据库）或资源组创建备份。备份工作流包括规划，确定要备份的资源，创建备份策略，创建资源组和附加策略，创建备份以及监控操作。</block>
   <block id="b9721a35a6c374ded595576ccbd2f789" category="paragraph">以下工作流显示了必须执行备份操作的顺序：</block>
   <block id="fb21695f6b72866357b3e3381a3dd8d4" category="image-alt">Oracle 的备份工作流</block>
-  <block id="79f1d28a9c264ee5568738c6d26d2b27" category="paragraph">为 Oracle 数据库创建备份时，会在 Oracle 数据库主机上的 _$ORACLE_HOME/DBS_ 目录中创建一个操作锁定文件（ .sm_lock_dbsid ），以避免对数据库执行多个操作。备份数据库后，操作锁定文件将自动删除。</block>
   <block id="74be1413d8c1294602864c1d9e25f626" category="paragraph">但是，如果上次备份完成并显示警告，则操作锁定文件可能不会被删除，下次备份操作将进入等待队列。如果未删除 * 。 sm_lock_dbsid* 文件，则此文件最终可能会被取消。在这种情况下，您必须执行以下步骤来手动删除操作锁定文件：</block>
   <block id="aededc4f899d57c4f01639108c3e587e" category="list-text">在命令提示符处，导航到 $ORACLE_HOME/DBS 。</block>
   <block id="3ab07b443e5100312a8428cab6f6a083" category="list-text">删除操作锁定：``rm -rf .sm_lock_dbsid.``</block>
@@ -7738,4 +7736,6 @@
   <block id="30c24db21140190d4033af17ccd83090" category="list-text">* SnapCenter 插件和存储灾难恢复 *</block>
   <block id="67c5ed4921b287cb12a0c466f01e9689" category="admonition">如果多路径配置文件中的 user_friendly_names 选项设置为 yes ，则不支持 SAN 配置。</block>
   <block id="f91d0c3af79b649ecca3ab95634c22c6" category="list-text">sudo 版本介于 1.8.7 和 1.8.19P2 之间。</block>
+  <block id="51fb25555c87830dd2151ad5f3b7a845" category="paragraph"><block ref="51fb25555c87830dd2151ad5f3b7a845" category="inline-link-macro-rx"></block></block>
+  <block id="10e4911e9effb28d4e43d47f67fac6db" category="paragraph">为 Oracle 数据库创建备份时，会在 Oracle 数据库主机上的 _$ORACLE_HOME/DBS_ 目录中创建一个操作锁定文件（ _.sm_lock_dbsid_ ），以避免对数据库执行多个操作。备份数据库后，操作锁定文件将自动删除。</block>
 </blocks>

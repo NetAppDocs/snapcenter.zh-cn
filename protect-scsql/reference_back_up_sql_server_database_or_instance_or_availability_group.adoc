@@ -45,6 +45,6 @@ NOTE: 您可以为备份策略中的每个 Snapshot 副本配置最大数据库�
 
 * 查找更多信息 *
 
-link:task_back_up_resources_using_powershell_cmdlets.html["使用 PowerShell cmdlet 备份资源"]
+link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["使用 PowerShell cmdlet 备份资源"]
 
 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["暂停或分组资源操作失败"]
