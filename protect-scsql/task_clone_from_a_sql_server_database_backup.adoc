@@ -153,7 +153,7 @@ NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 se
 
 link:reference_back_up_sql_server_database_or_instance_or_availability_group.html["备份 SQL Server 数据库，实例或可用性组"]
 
-link:task_clone_backups_using_powershell_cmdlets.html["使用 PowerShell cmdlet 克隆备份"]
+link:task_clone_backups_using_powershell_cmdlets_for_sql.html["使用 PowerShell cmdlet 克隆备份"]
 
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["使用默认 tcp_timeout 值时，克隆操作可能会失败或需要较长时间才能完成"]
 

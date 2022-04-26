@@ -18,7 +18,7 @@ summary: 您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用
 * 您必须是分配给具有插件安装和卸载权限的角色的用户，例如 SnapCenter 管理员
 * 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
 * 消息队列服务必须正在运行。
-* 如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。有关信息，请参见link:task_configure_gMSA_on_windows_server_2012_or_later_for_exchange_server.html["在 Windows Server 2012 或更高版本上配置组托管服务帐户"^]。
+* 如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。有关信息，请参见link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Server 2012 或更高版本上为 Microsoft Exchange Server 配置组托管服务帐户"^]。
 
 
 * 关于此任务 *

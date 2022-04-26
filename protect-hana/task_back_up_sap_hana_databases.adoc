@@ -20,10 +20,10 @@ summary: '如果某个资源尚未加入任何资源组，您可以从 "Resource
 * 对于基于 Snapshot 副本的备份操作，请确保所有租户数据库均有效且处于活动状态。
 * 要创建 SAP HANA 系统复制备份，建议将 SAP HANA 系统的所有资源添加到一个资源组中。这样可以确保在接管 - 故障恢复模式下进行无缝备份。
 +
-link:protect-hana/task_create_resource_groups_and_attach_policies.html["创建资源组并附加策略"]。
+link:task_create_resource_groups_and_attach_policies.html["创建资源组并附加策略"]。
 
 +
-link:protect-hana/task_back_up_resource_groups_sap_hana.html["备份资源组"]
+link:task_back_up_resource_groups_sap_hana.html["备份资源组"]
 
 * 如果要在一个或多个租户数据库关闭时创建基于文件的备份，请使用 `SET-SmConfigSettings` cmdlet 在 HANA 属性文件中将 allow_file_based _backup_IFINACTIVE_tenants_present 参数设置为 * 是 * 。
 +

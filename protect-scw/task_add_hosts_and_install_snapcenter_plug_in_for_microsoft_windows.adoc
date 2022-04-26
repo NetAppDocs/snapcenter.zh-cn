@@ -21,7 +21,7 @@ summary: 您可以使用 SnapCenter 添加主机页面添加 Windows 主机。�
 * 您应确保消息队列服务处于运行状态。
 * 如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。
 +
-link:task_configure_gMSA_on_windows_server_2012_or_later_for_windows_file_system.html["在 Windows Server 2012 或更高版本上为 Windows 文件系统配置组托管服务帐户"]
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Server 2012 或更高版本上为 Windows 文件系统配置组托管服务帐户"]
 
 
 

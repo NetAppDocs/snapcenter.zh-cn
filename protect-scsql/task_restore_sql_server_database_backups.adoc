@@ -172,6 +172,6 @@ NOTE: 可用性组数据库不支持自定义日志目录。
 
 * 查找更多信息 *
 
-link:task_restore_and_recover_resources_using_powershell_cmdlets.html["使用 PowerShell cmdlet 还原和恢复资源"]
+link:task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html["使用 PowerShell cmdlet 还原和恢复资源"]
 
 link:task_restore_a_sql_server_database_from_secondary_storage.html["从二级存储还原 SQL Server 数据库"]

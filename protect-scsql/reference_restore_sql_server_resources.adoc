@@ -23,6 +23,6 @@ image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_restore_Workflow]
 
 link:task_restore_a_sql_server_database_from_secondary_storage.html["从二级存储还原 SQL Server 数据库"]
 
-link:task_restore_and_recover_resources_using_powershell_cmdlets.html["使用 PowerShell cmdlet 还原和恢复资源"]
+link:task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html["使用 PowerShell cmdlet 还原和恢复资源"]
 
 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Restore_operation_might_fail_on_Windows_2008_R2["在 Windows 2008 R2 上执行还原操作可能失败"]

@@ -19,7 +19,7 @@ summary: 您必须使用 SnapCenterAdd Host 页面添加主机，然后安装插
 * 您应确保消息队列服务正在运行。
 * 如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。
 +
-link:task_configure_gMSA_on_windows_server_2012_or_later_for_custom_applications.html["在 Windows Server 2012 或更高版本上为自定义应用程序配置组托管服务帐户"]
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Server 2012 或更高版本上为自定义应用程序配置组托管服务帐户"]
 
 
 

@@ -1,0 +1,72 @@
+---
+permalink: protect-sce/task_configure_gMSA_on_windows_server_2012_or_later.html 
+sidebar: sidebar 
+keywords:  
+summary: 通过 Windows Server 2012 或更高版本，您可以创建组托管服务帐户（ GMSA\ ），以便从受管域帐户自动管理服务帐户密码。 
+---
+= 在 Windows Server 2012 或更高版本上配置 GMSA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+通过 Windows Server 2012 或更高版本，您可以创建组托管服务帐户（ GMSA ），以便从受管域帐户自动管理服务帐户密码。
+
+* 您需要的内容 *
+
+* 您应具有 Windows Server 2012 或更高版本的域控制器。
+* 您应该拥有一个 Windows Server 2012 或更高版本的主机，该主机是域的成员。
+
+
+* 步骤 *
+
+. 创建一个 KDS 根密钥，以便为 GMSA 中的每个对象生成唯一的密码。
+. 对于每个域，从 Windows 域控制器运行以下命令： Add-KDSRootKey -EffectiveImmediately
+. 创建和配置 GMSA ：
++
+.. 创建用户组帐户。
+.. 向组中添加计算机对象。
+.. 使用刚刚创建的用户组创建 GMSA 。
++
+例如：
+
++
+ New-ADServiceAccount -name <ServiceAccountName> -DNSHostName <fqdn> -PrincipalsAllowedToRetrieveManagedPassword <group> -ServicePrincipalNames <SPN1,SPN2,…>
+.. 运行 `Get-ADServiceAccount` 命令验证服务帐户。
+
+
+. 在主机上配置 GMSA ：
++
+.. 在要使用 GMSA 帐户的主机上为 Windows PowerShell 启用 Active Directory 模块。
++
+为此，请从 PowerShell 运行以下命令：
+
++
+[listing]
+----
+PS C:\> Get-WindowsFeature AD-Domain-Services
+
+Display Name                           Name                Install State
+------------                           ----                -------------
+[ ] Active Directory Domain Services   AD-Domain-Services  Available
+
+
+PS C:\> Install-WindowsFeature AD-DOMAIN-SERVICES
+
+Success Restart Needed Exit Code      Feature Result
+------- -------------- ---------      --------------
+True    No             Success        {Active Directory Domain Services, Active ...
+WARNING: Windows automatic updating is not enabled. To ensure that your newly-installed role or feature is
+automatically updated, turn on Windows Update.
+----
+.. 重新启动主机。
+.. 在 PowerShell 命令提示符处运行以下命令，在主机上安装 GMSA ： `Install-AdServiceAccount <GMSA>`
+.. 运行以下命令验证您的 GMSA 帐户： `Test-AdServiceAccount <GMSA>`
+
+
+. 为主机上配置的 GMSA 分配管理权限。
+. 通过在 SnapCenter 服务器中指定已配置的 GMSA 帐户来添加 Windows 主机。
++
+SnapCenter 服务器将在主机上安装选定插件，并且在安装此插件期间，指定的 GMSA 将用作服务登录帐户。
+
+

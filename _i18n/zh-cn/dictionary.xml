@@ -253,7 +253,6 @@
   <block id="8a2bd81e968aaadb6ec10a1b58f541cc" category="inline-link-macro">备份 SQL Server 数据库，实例或可用性组</block>
   <block id="38c78702a48e457f5ef291281168432e" category="paragraph"><block ref="38c78702a48e457f5ef291281168432e" category="inline-link-macro-rx"></block></block>
   <block id="8c922e6a0134954b667b072d00b58ce3" category="inline-link-macro">使用 PowerShell cmdlet 克隆备份</block>
-  <block id="77a401672d28681f3a520de107c9ed51" category="paragraph"><block ref="77a401672d28681f3a520de107c9ed51" category="inline-link-macro-rx"></block></block>
   <block id="68f8e37f5b3d7c3c6c34a481b33a736f" category="inline-link">使用默认 tcp_timeout 值时，克隆操作可能会失败或需要较长时间才能完成</block>
   <block id="f7e7f0dd9d36aec3d609775de2dbbd0b" category="paragraph"><block ref="f7e7f0dd9d36aec3d609775de2dbbd0b" category="inline-link-rx"></block></block>
   <block id="1e9ab426973a56020f8d1db85cb07f06" category="inline-link">故障转移集群实例数据库克隆失败</block>
@@ -561,7 +560,6 @@
   <block id="4a45b99dc57bfa145ace46e1fd9baa9d" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原，恢复，验证和克隆操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="22d4c47c8368759c58ff9ac05ffd0e13" category="inline-link-rx"></block></block>
   <block id="69bb12bd720ba41593c0fadfa768b82e" category="paragraph"><block ref="69bb12bd720ba41593c0fadfa768b82e" category="inline-link-macro-rx"></block></block>
   <block id="6924edabeae66398839af50da876447a" category="inline-link-macro">使用 PowerShell cmdlet 还原和恢复资源</block>
-  <block id="455f3e406c536ec723cdf3bf3192c0e5" category="paragraph"><block ref="455f3e406c536ec723cdf3bf3192c0e5" category="inline-link-macro-rx"></block></block>
   <block id="f8acea491fd41bf474c92c44e455142e" category="inline-link-macro">在 Windows 2008 R2 上执行还原操作可能失败</block>
   <block id="cf33f62e19ff3bb795452fe592555ee3" category="paragraph"><block ref="cf33f62e19ff3bb795452fe592555ee3" category="inline-link-macro-rx"></block></block>
   <block id="1f8ca173b65dfa4ec89689efd778bdb1" category="summary">使用 Windows 主机插件服务配置 CA 证书</block>
@@ -750,7 +748,6 @@
   <block id="b5eb0b5304f9fc2eda1c4758804a309a" category="list-text">您应确保消息队列服务处于运行状态。</block>
   <block id="495a029c5d7c250f801f4d0c65513c50" category="list-text">如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。</block>
   <block id="005e0b40f0357593974211c0506e1021" category="inline-link-macro">在 Windows Server 2012 或更高版本上为 SQL 配置组托管服务帐户</block>
-  <block id="cbb9319067916a535f7b003c1a70b83f" category="paragraph"><block ref="cbb9319067916a535f7b003c1a70b83f" category="inline-link-macro-rx"></block></block>
   <block id="302ca62990c674aa6f608e6444c00482" category="paragraph">您不能将 SnapCenter 服务器作为插件主机添加到另一个 SnapCenter 服务器。</block>
   <block id="e0a6a8624a69b68bc0839f233664cd97" category="paragraph">您可以为单个主机或集群添加主机并安装插件软件包。如果要在集群或 Windows Server 故障转移集群（ WSFC ）上安装插件，则这些插件将安装在集群的所有节点上。</block>
   <block id="51929aa5ac08be2aca8dda46b9a095b1" category="inline-link-macro">管理主机</block>
@@ -4520,8 +4517,6 @@
   <block id="43e4843cc378c4665771060dbab161eb" category="doc">添加主机并安装适用于 Exchange 的插件</block>
   <block id="45e52ea61331adeddb8fcba96510d245" category="list-text">您必须是分配给具有插件安装和卸载权限的角色的用户，例如 SnapCenter 管理员</block>
   <block id="f43b8555947d4751531f2048f4ceb68f" category="list-text">消息队列服务必须正在运行。</block>
-  <block id="5da8a38d0d164ee119a4369bd402f7e7" category="inline-link-macro">在 Windows Server 2012 或更高版本上配置组托管服务帐户</block>
-  <block id="c3d3d7d361f2929e16e2c819af868aee" category="list-text">如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。有关信息，请参见<block ref="de44f57898ffbf94587de066666e509e" category="inline-link-macro-rx"></block>。</block>
   <block id="c20a8a11a419d74017da773b8a54f9ff" category="paragraph">适用于 Exchange 的插件取决于适用于 Windows 的 SnapCenter 插件软件包，并且版本必须相同。在安装适用于 Exchange 的插件期间，默认情况下会选择适用于 Windows 的 SnapCenter 插件软件包，该软件包会随 VSS 硬件提供程序一起安装。</block>
   <block id="262d319024a0918be769dfc76e9786c3" category="list-text">验证顶部是否已选择 * 受管主机 * 。</block>
   <block id="a2019a474e94462a57623d70d38bc98e" category="paragraph">选择 * Windows * 作为主机类型。</block>
@@ -5119,7 +5114,6 @@
   <block id="6999d09aed9c7b160e001c5345554e29" category="doc">添加主机并安装适用于 Microsoft Windows 的 SnapCenter 插件</block>
   <block id="7cfe72b14626cbdfa82c7d1d900586aa" category="list-text">应将 SnapCenter 用户添加到 Windows 服务器的 "`以服务身份登录` " 角色中。</block>
   <block id="634521473d8c5fdebcafa0c217efa6b5" category="inline-link-macro">在 Windows Server 2012 或更高版本上为 Windows 文件系统配置组托管服务帐户</block>
-  <block id="8d338c95545ac01f94f754b10be02dec" category="paragraph"><block ref="8d338c95545ac01f94f754b10be02dec" category="inline-link-macro-rx"></block></block>
   <block id="cce76c1c114e69fd9b5ed7b130742034" category="list-text">Windows 插件</block>
   <block id="a561a8020c6cf9c0bfcf2c0057ac1550" category="list-text">Microsoft Exchange Server</block>
   <block id="78898e52fcbdc5337204a384f2456d4f" category="list-text">Microsoft SQL Server</block>
@@ -5808,7 +5802,6 @@
   <block id="b55afd5b52f01e281bc890c6adab0b29" category="paragraph">您选择的备份作业数量通常取决于您放置资源的卷数量。例如，如果您将一组小型资源放在一个卷上，而将一个大型资源放在另一个卷上，则可以为小型资源创建一个备份作业，并为大型资源创建一个备份作业。</block>
   <block id="b880dba5b80385d6a4d3f5ff54d8ef78" category="summary">您必须使用 SnapCenterAdd Host 页面添加主机，然后安装插件软件包。这些插件会自动安装在远程主机上。您可以为单个主机或集群添加主机并安装插件软件包。</block>
   <block id="d1556c9da336be030540adcf58889977" category="inline-link-macro">在 Windows Server 2012 或更高版本上为自定义应用程序配置组托管服务帐户</block>
-  <block id="7760830a49bc2ffc8c6db5a38cec828f" category="paragraph"><block ref="7760830a49bc2ffc8c6db5a38cec828f" category="inline-link-macro-rx"></block></block>
   <block id="bceac0a8fa4156f8efbbf85fb76e4953" category="paragraph">如果在集群（ WSFC ）上安装插件，则这些插件将安装在集群的所有节点上。</block>
   <block id="56a139bed9c50b0c2ef905b84f371cf2" category="paragraph">选择主机类型：</block>
   <block id="14aee625cd152256e849c1aa7031d871" category="admonition">自定义插件可在 Windows 和 Linux 环境中使用。</block>
@@ -7195,14 +7188,12 @@
   <block id="56dd6d218b0a2db6d61393ca74894094" category="paragraph">有关受支持版本的最新信息，请参见<block ref="1b419d76cc3163a36d36ff494ed65b44" category="inline-link-rx"></block>。</block>
   <block id="2cda512470ebd52d3c5ba685f87bb1fb" category="paragraph">要创建 SAP HANA 系统复制备份，建议将 SAP HANA 系统的所有资源添加到一个资源组中。这样可以确保在接管 - 故障恢复模式下进行无缝备份。</block>
   <block id="9cd58488a30b1e2a8252c0303b4a18d2" category="list-text">对于 SAP HANA 系统复制，建议将该 HANA 系统的所有资源添加到一个资源组中并进行资源组备份。这样可以确保在接管 - 故障恢复模式下进行无缝备份。</block>
-  <block id="c539927559212f942e79e0c2201b67a7" category="paragraph"><block ref="6b4a21b0947273e0629d5408bc6d8cf2" category="inline-link-macro-rx"></block>。</block>
   <block id="a81b91d7d1d982d9748f7c921ddef6f5" category="paragraph">输入密钥以连接到 SAP HANA 系统。</block>
   <block id="416846cc2d6684fcda5ed01768c14980" category="paragraph">密钥包含用于连接到数据库的登录信息。</block>
   <block id="99e729822359383d3878548f668ad032" category="paragraph">对于 SAP HANA 系统复制，不会验证二级用户密钥。这将在接管期间使用。</block>
   <block id="88b9a84562729de4f24eef1b144f1867" category="paragraph">此时将显示数据库以及 SID ，插件主机，关联的资源组和策略以及整体状态等信息</block>
   <block id="abe175cac2897f907056ac4845d0fecd" category="paragraph">如果存在与 SAP HANA 资源关联的备份，则无法修改以下内容：</block>
   <block id="5e12dbd5bf3c6917f4290e5b5a559e1d" category="list-text">要使 SAP HANA 系统复制同时发现主系统和二级系统上的资源，建议使用 root 或 sudo 用户同时添加主系统和二级系统。</block>
-  <block id="1f2a97d23c720f6f85620fac8ce92aaf" category="paragraph"><block ref="1f2a97d23c720f6f85620fac8ce92aaf" category="inline-link-macro-rx"></block></block>
   <block id="961e6abd0c7a72786d3641390a4dea5f" category="list-text">如果要在一个或多个租户数据库关闭时创建基于文件的备份，请使用 `SET-SmConfigSettings` cmdlet 在 HANA 属性文件中将 allow_file_based _backup_IFINACTIVE_tenants_present 参数设置为 * 是 * 。</block>
   <block id="942d4608d2f485c3d83b2faf1e7746fc" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考<block ref="30086a18cf21b3d909c213d70f40a693" category="inline-link-rx"></block></block>
   <block id="ba26ffcdcd99a1aea9b86f7be319ba8b" category="admonition">在执行还原操作后检索存储库备份时，不会列出用于执行存储库还原操作的备份。</block>
@@ -7738,4 +7729,13 @@
   <block id="f91d0c3af79b649ecca3ab95634c22c6" category="list-text">sudo 版本介于 1.8.7 和 1.8.19P2 之间。</block>
   <block id="51fb25555c87830dd2151ad5f3b7a845" category="paragraph"><block ref="51fb25555c87830dd2151ad5f3b7a845" category="inline-link-macro-rx"></block></block>
   <block id="10e4911e9effb28d4e43d47f67fac6db" category="paragraph">为 Oracle 数据库创建备份时，会在 Oracle 数据库主机上的 _$ORACLE_HOME/DBS_ 目录中创建一个操作锁定文件（ _.sm_lock_dbsid_ ），以避免对数据库执行多个操作。备份数据库后，操作锁定文件将自动删除。</block>
+  <block id="378c4677444d1c0a4a5f7af5b98179fa" category="paragraph"><block ref="18c30fe5285c9c31acdd1bd6d51af1bd" category="inline-link-macro-rx"></block>。</block>
+  <block id="ae75553103cbeaaaa3b0e4002805ae6f" category="paragraph"><block ref="ae75553103cbeaaaa3b0e4002805ae6f" category="inline-link-macro-rx"></block></block>
+  <block id="6ce007c78eb3953e5a2c4d5ee67f6f7e" category="inline-link-macro">在 Windows Server 2012 或更高版本上为 Microsoft Exchange Server 配置组托管服务帐户</block>
+  <block id="2c6de9d78cadc71ce1a601b2497fe7b5" category="list-text">如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。有关信息，请参见<block ref="9362052d26222b41e4897c5b63b8ae64" category="inline-link-macro-rx"></block>。</block>
+  <block id="d2f75a69047fa1d93423f0ebca0e578e" category="paragraph"><block ref="d2f75a69047fa1d93423f0ebca0e578e" category="inline-link-macro-rx"></block></block>
+  <block id="b7ee450a891722e2248bf6edbef84f21" category="paragraph"><block ref="b7ee450a891722e2248bf6edbef84f21" category="inline-link-macro-rx"></block></block>
+  <block id="f9db2c2c51ac713541e90ff79219156d" category="paragraph"><block ref="f9db2c2c51ac713541e90ff79219156d" category="inline-link-macro-rx"></block></block>
+  <block id="7a679a1d48731136f64e6e6d38429002" category="paragraph"><block ref="7a679a1d48731136f64e6e6d38429002" category="inline-link-macro-rx"></block></block>
+  <block id="8eea6d6db8756ac6f485ef882956153e" category="paragraph"><block ref="8eea6d6db8756ac6f485ef882956153e" category="inline-link-macro-rx"></block></block>
 </blocks>
