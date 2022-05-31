@@ -4371,7 +4371,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-20 03:25:54 +0000">04/20/2022</time>
+    <time datetime="2022-05-31 19:38:07 +0000">05/31/2022</time>
     
   
 
@@ -4439,19 +4439,19 @@
 <div class="ulist">
 <ul>
 <li>
-<p>"security login role create -role SVM_SVM_role_name -cmddirname "snapmirror list-destinations" -vserver SVM_name -access all"</p>
+<p><code>ssecurity login role create -role SVM_role_name -cmddirname "snapmirror list-destinations"-vserver SVM_name -access all</code></p>
 </li>
 <li>
-<p>"security login role create -role SVM_SVM_role_name -cmddirname "event generate-autosupport-log" -vserver SVM_name -access all"</p>
+<p><code>ssecurity login role create -role SVM_role_name -cmddirname "event generate-autosupport-log"-vserver SVM_name -access all</code></p>
 </li>
 <li>
-<p>"security login role create -vserver svm_name -role svm_svm_role_name -cmddirname "job history show" -access all"</p>
+<p><code>ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "job history show"-access all</code></p>
 </li>
 <li>
-<p>"security login role create -vserver SVM_name -role SVM_SVM_role_name -cmddirname "job stop" -access all"</p>
+<p><code>ssecurity login role create -vserver SVM_name -role SVM_role_name -cmddirname "job stop"-access all</code></p>
 </li>
 <li>
-<p>"security login role create -vserver SVM_name -role SVM_SVM_SVM_Role_Name -cmddirname "LUN" -access all"</p>
+<p><code>ssecurity login role create -vserver SVM_name -role SVM_role_name -cmddirname "LUN"-access all</code></p>
 </li>
 <li>
 <p><code>ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun create" -access all</code></p>
@@ -4478,7 +4478,7 @@
 <p><code>ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun mapping add-reporting-nodes" -access all</code></p>
 </li>
 <li>
-<p>"security login role create -vserver SVM_name -role SVM_SVM_role_name -cmddirname "lun mapping create" -access all"</p>
+<p><code>ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun mapping create"-access all</code></p>
 </li>
 <li>
 <p><code>ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun mapping delete" -access all</code></p>
@@ -4511,7 +4511,7 @@
 <p><code>ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun show" -access all</code></p>
 </li>
 <li>
-<p>`ssecurity login role create -vserver SVM_name -role SVM_SVM_role_name -cmddirname "network interface" -access readonly"</p>
+<p><code>ssecurity login role create -vserver SVM_name -role SVM_role_name -cmddirname "network interface"-access readonly</code></p>
 </li>
 <li>
 <p><code>ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror policy add-rule" -access all</code></p>
@@ -4640,7 +4640,10 @@
 <p><code>ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy rule show" -access all</code></p>
 </li>
 <li>
-<p><code>ssecurity login role create -vserver SVM_name -role SVM_role_name -cmddirname "vserver export-policy show" -access all</code> * ' 安全登录角色 create -vserver SVM_name -role SVM_SVM_role_name -cmddirname "vserver iscsi connection show" -access all"</p>
+<p><code>ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy show"-access all</code></p>
+</li>
+<li>
+<p><code>ssecurity login role create -vserver SVM_name -role SVM_role_name -cmddirname "vserver iscsi connection show"-access all</code></p>
 </li>
 <li>
 <p><code>ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver" -access readonly</code></p>
@@ -4652,7 +4655,7 @@
 <p><code>ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver iscsi" -access all</code></p>
 </li>
 <li>
-<p>"security login role create -vserver svm_name -role svm_svm_role_name -cmddirname "volume clone split status" -access all"</p>
+<p><code>ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume clone split status"-access all</code></p>
 </li>
 </ul>
 </div>
