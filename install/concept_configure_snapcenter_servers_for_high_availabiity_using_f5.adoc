@@ -32,7 +32,7 @@ image::../media/sc-F5-configure-workflow.png[SC F5 配置工作流]
 
 
 
-=== 其他 F5 配置信息
+== 其他 F5 配置信息
 
 * 安装并配置 SnapCenter 以实现高可用性后，编辑 SnapCenter 桌面快捷方式以指向 F5 集群 IP 。
 * 如果 SnapCenter 服务器之间发生故障转移，并且还存在现有 SnapCenter 会话，则必须关闭浏览器并重新登录到 SnapCenter 。

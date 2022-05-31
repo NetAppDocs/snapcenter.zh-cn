@@ -39,11 +39,11 @@ NOTE: 您应对每个权限重复此命令。
 
 您应运行多个 ONTAP 命令行界面命令来创建 SVM 角色并分配权限。
 
-* "security login role create -role SVM_SVM_role_name -cmddirname "snapmirror list-destinations" -vserver SVM_name -access all"
-* "security login role create -role SVM_SVM_role_name -cmddirname "event generate-autosupport-log" -vserver SVM_name -access all"
-* "security login role create -vserver svm_name -role svm_svm_role_name -cmddirname "job history show" -access all"
-* "security login role create -vserver SVM_name -role SVM_SVM_role_name -cmddirname "job stop" -access all"
-* "security login role create -vserver SVM_name -role SVM_SVM_SVM_Role_Name -cmddirname "LUN" -access all"
+* `ssecurity login role create -role SVM_role_name -cmddirname "snapmirror list-destinations"-vserver SVM_name -access all`
+* `ssecurity login role create -role SVM_role_name -cmddirname "event generate-autosupport-log"-vserver SVM_name -access all`
+* `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "job history show"-access all`
+* `ssecurity login role create -vserver SVM_name -role SVM_role_name -cmddirname "job stop"-access all`
+* `ssecurity login role create -vserver SVM_name -role SVM_role_name -cmddirname "LUN"-access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun create" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun delete" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun igroup add" -access all`
@@ -52,7 +52,7 @@ NOTE: 您应对每个权限重复此命令。
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun igroup rename" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun igroup show" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun mapping add-reporting-nodes" -access all`
-* "security login role create -vserver SVM_name -role SVM_SVM_role_name -cmddirname "lun mapping create" -access all"
+* `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun mapping create"-access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun mapping delete" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun mapping remove-reporting-nodes" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun mapping show" -access all`
@@ -63,7 +63,7 @@ NOTE: 您应对每个权限重复此命令。
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun resize" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun serial " -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "lun show" -access all`
-* `ssecurity login role create -vserver SVM_name -role SVM_SVM_role_name -cmddirname "network interface" -access readonly"
+* `ssecurity login role create -vserver SVM_name -role SVM_role_name -cmddirname "network interface"-access readonly`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror policy add-rule" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror policy modify-rule" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror policy remove-rule" -access all`
@@ -106,9 +106,10 @@ NOTE: 您应对每个权限重复此命令。
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy delete" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy rule create" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy rule show" -access all`
-* `ssecurity login role create -vserver SVM_name -role SVM_role_name -cmddirname "vserver export-policy show" -access all` * ' 安全登录角色 create -vserver SVM_name -role SVM_SVM_role_name -cmddirname "vserver iscsi connection show" -access all"
+* `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy show"-access all`
+* `ssecurity login role create -vserver SVM_name -role SVM_role_name -cmddirname "vserver iscsi connection show"-access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver" -access readonly`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver iscsi" -access all`
-* "security login role create -vserver svm_name -role svm_svm_role_name -cmddirname "volume clone split status" -access all"
+* `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume clone split status"-access all`
 

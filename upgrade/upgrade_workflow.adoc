@@ -16,3 +16,53 @@ summary: 介绍如何升级 SnapCenter 服务器和插件
 此工作流显示了升级 SnapCenter 服务器和插件软件包所需的不同任务。
 
 image::../media/upgrade_workflow.png[升级工作流]
+
+
+
+== 支持的升级路径
+
+|===
+| 如果您使用的是SnapCenter 服务器版本... | 您可以直接将SnapCenter 服务器升级到... | 支持的插件版本 
+
+
+.2+| 4.3.x | 4.4.x  a| 
+* 4.3.x
+* 4.4.x
+
+
+
+
+| 4.5.x  a| 
+* 4.5.x
+
+
+
+
+.2+| 4.4.x | 4.5.x  a| 
+* 4.4.x
+* 4.5.x
+
+
+
+
+| 4.6.x  a| 
+* 4.6.x
+
+
+
+
+ a| 
+4.5.x
+ a| 
+4.6.x
+ a| 
+* 4.5.x
+* 4.6.x
+
+
+|===
+
+IMPORTANT: 例如、如果您使用的是SnapCenter 4.3.x版、并希望升级到4.6.x、则应先升级到4.5.x、然后再滚动升级到4.6.x
+
+
+NOTE: 有关升级适用于 VMware vSphere 的 SnapCenter 插件的信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["升级适用于 VMware vSphere 的 SnapCenter 插件"^]。
