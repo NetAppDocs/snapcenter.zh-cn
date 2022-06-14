@@ -106,7 +106,7 @@ SNAPCENTER_SERVER_PORT
 
 
  a| 
-SPL_LOG_MAX_count
+logs_MAX_count
  a| 
 显示保留在 _/custom_location/snapcenter/spl/logs_ 文件夹中的 SnapCenter 插件加载程序日志文件的数量。
 
@@ -123,6 +123,31 @@ java_home
 显示用于启动 SPL 服务的 JAVA_HOME 的绝对目录路径。
 
 此路径是在安装期间以及启动 SPL 过程中确定的。
+
+
+
+ a| 
+log_MAX_size
+ a| 
+显示作业日志文件的最大大小。
+
+达到最大大小后、将压缩日志文件、并将日志写入到该作业的新文件中。
+
+
+
+ a| 
+Retain logs_for_last_days
+ a| 
+显示日志保留到的天数。
+
+
+
+ a| 
+enable_certificate_validation
+ a| 
+为主机启用CA证书验证时显示true。
+
+您可以通过编辑*。spl.properties*文件或使用SnapCenter 图形用户界面或cmdlet来启用或禁用此参数。
 
 |===
 如果未将其中任何参数分配给默认值，或者您要分配或更改此值，则可以修改 spl.properties 文件。您还可以验证 spl.properties 文件并编辑该文件，以解决与分配给参数的值相关的任何问题。修改 spl.properties 文件后，应重新启动 SnapCenter 插件加载程序服务。

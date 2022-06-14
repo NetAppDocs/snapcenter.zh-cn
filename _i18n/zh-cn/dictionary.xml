@@ -2486,7 +2486,6 @@
   <block id="0ab847ca1ec1d021003071c720300912" category="paragraph">显示密钥库文件的绝对路径。</block>
   <block id="732ad24112805352918b98d2d2fe992b" category="paragraph">SNAPCENTER_SERVER_PORT</block>
   <block id="7aeb909709612da033f3993a0e728a27" category="paragraph">显示运行 SnapCenter 服务器的端口号。</block>
-  <block id="862cd99023ad6510575f8ce1923ec11e" category="paragraph">SPL_LOG_MAX_count</block>
   <block id="311a6927001a0f29e0c3f5a5c31d4242" category="paragraph">显示保留在 _/custom_location/snapcenter/spl/logs_ 文件夹中的 SnapCenter 插件加载程序日志文件的数量。</block>
   <block id="543a5f51e636298cf3ed33a0e1d218db" category="paragraph">默认值设置为 5000 。如果此计数大于指定值，则会保留最后修改的 5000 个文件。从启动 SnapCenter 插件加载程序服务开始，每 24 小时自动检查一次文件数量。</block>
   <block id="763a333a6966604fcf8fe0eee9f23c9f" category="admonition">如果手动删除 spl.properties 文件，则要保留的文件数将设置为 9999 。</block>
@@ -7712,4 +7711,14 @@
   <block id="d80b7e944064bf3bd382ae2be696ab9e" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy show"-access all`</block>
   <block id="1c1ebdb4d2cea4a9f1b480ef6387ebbd" category="list-text">`ssecurity login role create -vserver SVM_name -role SVM_role_name -cmddirname "vserver iscsi connection show"-access all`</block>
   <block id="2bad882b7fb5945b0373cf8c526cb4ac" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume clone split status"-access all`</block>
+  <block id="af9210ab244187eb84af56c8e51b082c" category="paragraph">您可以在VMware环境中使用适用于Microsoft Windows的SnapCenter 插件来创建和管理LUN以及管理Snapshot副本。</block>
+  <block id="c9956993c3473df3ea1961fead514074" category="paragraph">logs_MAX_count</block>
+  <block id="9b24859b2a7f9c7d8afb9ec3b025e927" category="paragraph">log_MAX_size</block>
+  <block id="92cb537bc0c912cec1e9669f256ebc89" category="paragraph">显示作业日志文件的最大大小。</block>
+  <block id="7618cb309cdd6214baddcc65ec4c89f4" category="paragraph">达到最大大小后、将压缩日志文件、并将日志写入到该作业的新文件中。</block>
+  <block id="e9345db0fc7d18cab70b42d9af5c38a2" category="paragraph">Retain logs_for_last_days</block>
+  <block id="7c8e4d34b8c6cc18e06524f05da1a10d" category="paragraph">显示日志保留到的天数。</block>
+  <block id="664943be24af2306e90a21dd26536e1c" category="paragraph">enable_certificate_validation</block>
+  <block id="22d8a94cf37cc6d66c941a43b9d79fa8" category="paragraph">为主机启用CA证书验证时显示true。</block>
+  <block id="ebda26e1e82bba1d66e8fbdf1eec4b08" category="paragraph">您可以通过编辑*。spl.properties*文件或使用SnapCenter 图形用户界面或cmdlet来启用或禁用此参数。</block>
 </blocks>
