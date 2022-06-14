@@ -301,35 +301,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">简体中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">简体中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/snapcenter/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-cn/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -3205,7 +3197,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/index.html">
         SnapCenter 软件 4.6 文档
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/snapcenter/release-notes.html">
@@ -4371,7 +4363,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-20 03:25:54 +0000">04/20/2022</time>
+    <time datetime="2022-06-14 08:20:21 +0000">06/14/2022</time>
     
   
 
@@ -4520,7 +4512,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SPL_LOG_MAX_count</p>
+<p>logs_MAX_count</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>显示保留在 <em>/custom_location/snapcenter/spl/logs</em> 文件夹中的 SnapCenter 插件加载程序日志文件的数量。</p>
@@ -4550,6 +4542,36 @@
 </div>
 <div class="paragraph">
 <p>此路径是在安装期间以及启动 SPL 过程中确定的。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>log_MAX_size</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>显示作业日志文件的最大大小。</p>
+</div>
+<div class="paragraph">
+<p>达到最大大小后、将压缩日志文件、并将日志写入到该作业的新文件中。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Retain logs_for_last_days</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>显示日志保留到的天数。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>enable_certificate_validation</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>为主机启用CA证书验证时显示true。</p>
+</div>
+<div class="paragraph">
+<p>您可以通过编辑*。spl.properties*文件或使用SnapCenter 图形用户界面或cmdlet来启用或禁用此参数。</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -4767,4 +4789,5 @@
     </script>
     <script src='/zh-cn/snapcenter/js/www-ntap.js'></script>
     <script src='/zh-cn/snapcenter/js/tabbed-blocks.js'></script>
+    <script src='/zh-cn/snapcenter/js/sidebar.js'></script>
   </body></html>
