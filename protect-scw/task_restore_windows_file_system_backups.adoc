@@ -25,6 +25,20 @@ summary: 您可以使用 SnapCenter 还原文件系统备份。文件系统还�
 * SnapCenter 可以还原 Windows 集群中的文件系统，而无需使集群组脱机。
 
 
+* 关于此任务 *
+
+* 脚本路径使用位于插件主机SMCoreServiceHost.exe配置文件中的预定义WindowsScriptsDirectory密钥进行定义。
++
+如果需要、您可以更改此路径并重新启动SMcore服务。建议您使用默认安全路径。
+
++
+可以通过API：API /4.7/configsettings从Swagger显示密钥值
+
++
+您可以使用GET API显示密钥的值。不支持设置API。
+
+
+
 * 步骤 *
 
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
@@ -35,6 +49,10 @@ summary: 您可以使用 SnapCenter 还原文件系统备份。文件系统还�
 . 您可以输入希望 SnapCenter 在还原操作前后运行的预处理或后处理的路径和参数。
 +
 例如，您可以运行脚本来更新 SNMP 陷阱，自动执行警报，发送日志等操作。
+
++
+
+NOTE: 预处理脚本或后处理脚本路径不应包含驱动器或共享。路径应与scripts_path相关。
 
 . 在通知页面中，选择以下选项之一：
 +

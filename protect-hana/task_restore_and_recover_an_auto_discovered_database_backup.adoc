@@ -17,6 +17,17 @@ summary: 您可以使用 SnapCenter 从一个或多个备份还原和恢复数�
 
 * 您必须已备份资源或资源组。
 * 您必须已取消要还原的资源或资源组当前正在进行的任何备份操作。
+* 对于还原前、还原后、挂载和卸载命令、您应通过以下路径检查这些命令是否位于插件主机上的命令列表中：
++
+对于Windows：_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands_list.txt
+
++
+对于Linux：/var/opt/snapcenter/scC/allowed_commands_list.txt
+
++
+
+NOTE: 如果命令列表中不存在这些命令、则操作将失败。
+
 
 
 * 关于此任务 *

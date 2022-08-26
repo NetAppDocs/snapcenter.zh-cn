@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: log in, logging, SnapCenter UI, modify timeout, GUI session timeout, disbale SSL 3.0, SSL 3.0, security 
 summary: SnapCenter 支持基于角色的访问控制（ Role-Based Access Control ， RBAC ）。SnapCenter 管理员通过 SnapCenter RBAC 将角色和资源分配给工作组或 Active Directory 中的用户或 Active Directory 中的组。现在， RBAC 用户可以使用分配的角色登录到 SnapCenter 。 
 ---
-= 登录到 SnapCenter
+= 使用RBAC授权登录到SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,7 +35,7 @@ IMPORTANT: 如果您在 Web 浏览器中打开了多个选项卡，则仅关闭 
 
 对于高可用性（ High Availability ， HA ）部署，您必须使用虚拟集群 IP _\https://Virtual_Cluster_IP_or_FQDN:8146_ 访问 SnapCenter 。如果在 Internet Explorer （ IE ）中导航到 >\https://Virtual_Cluster_IP_or_FQDN:8146_ 时未看到 SnapCenter UI ，则必须在每个插件主机的 IE 中将虚拟集群 IP 地址或 FQDN 添加为受信任站点，或者必须在每个插件主机上禁用 IE 增强安全性。有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["无法从外部网络访问集群 IP 地址"^]。
 
-除了使用 SnapCenter 图形用户界面之外，您还可以使用 PowerShell cmdlet 创建脚本以执行配置，备份和还原操作。某些 cmdlet 可能会随每个 SnapCenter 版本而发生更改。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《 SnapCenter 软件 cmdlet 参考指南》"^] 了解详细信息。
+除了使用 SnapCenter 图形用户界面之外，您还可以使用 PowerShell cmdlet 创建脚本以执行配置，备份和还原操作。某些 cmdlet 可能会随每个 SnapCenter 版本而发生更改。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《 SnapCenter 软件 cmdlet 参考指南》"^] 了解详细信息。
 
 
 NOTE: 如果您是首次登录到 SnapCenter ，则必须使用安装过程中提供的凭据进行登录。
@@ -85,6 +85,44 @@ Username
 首次以 RBAC 用户身份登录到 SnapCenter 服务器后，刷新资源列表。
 
 如果您希望 SnapCenter 支持不可信的 Active Directory 域，则必须先向 SnapCenter 注册这些域，然后再为不可信域上的用户配置角色。 link:../install/task_register_untrusted_active_directory_domains.html["了解更多信息。"^]
+
+
+
+== 使用多因素身份验证(Multi-Factor Authentication、MFA)登录到SnapCenter
+
+SnapCenter 服务器支持将MFA用于域帐户、此帐户属于活动目录。
+
+* 您需要的内容 *
+
+* 您应已启用MFA。
++
+有关如何启用MFA的信息、请参见 link:../install/enable_multifactor_authentication.html["启用多因素身份验证"]
+
+
+
+* 关于此任务 *
+
+* 仅支持FQDN
+* 工作组和跨域用户无法使用MFA登录
+
+
+* 步骤 *
+
+. 从本地主机桌面上的快捷方式，安装结束时提供的 URL 或 SnapCenter 管理员提供的 URL 启动 SnapCenter 。
+. 在AD FS登录页面中、输入用户名和密码。
++
+如果AD FS页面上显示用户名或密码无效错误消息、则应检查以下内容：
+
++
+** 用户名或密码是否有效
++
+此用户帐户应位于Active Directory (AD)中
+
+** 是否超过在AD中设置的允许的最大尝试次数
+** AD和AD FS是否已启动且正在运行
+
+
+
 
 
 

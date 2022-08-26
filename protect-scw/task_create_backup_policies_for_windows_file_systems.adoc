@@ -27,6 +27,20 @@ summary: 您可以在使用 SnapCenter 备份 Windows 文件系统之前为资�
 
 
 
+* 关于此任务 *
+
+* 脚本路径使用位于插件主机SMCoreServiceHost.exe配置文件中的预定义WindowsScriptsDirectory密钥进行定义。
++
+如果需要、您可以更改此路径并重新启动SMcore服务。建议您使用默认安全路径。
+
++
+可以通过API：API /4.7/configsettings从Swagger显示密钥值
+
++
+您可以使用GET API显示密钥的值。不支持设置API。
+
+
+
 * 步骤 *
 
 . 在左侧导航窗格中，单击 * 设置 * 。
@@ -146,6 +160,10 @@ NOTE: 您应在 ONTAP 中为二级存储配置 SnapMirror 保留策略，以避�
 . 在脚本页面中，输入您希望 SnapCenter 服务器在备份操作前后运行的预处理或后脚本的路径，以及 SnapCenter 在超时前等待脚本执行的时间限制。
 +
 例如，您可以运行脚本来更新 SNMP 陷阱，自动执行警报和发送日志。
+
++
+
+NOTE: 预处理脚本或后处理脚本路径不应包含驱动器或共享。路径应与scripts_path相关。
 
 . 查看摘要，然后单击 * 完成 * 。
 

@@ -24,6 +24,8 @@ entries:
     url: "/install/concept_authentication_methods_for_your_credentials.html"
   - title: Storage Virtual Machine 连接和凭据
     url: "/install/concept_svm_connections_and_credentials.html"
+  - title: 启用多因素身份验证(MFA)
+    url: "/install/enable_multifactor_authentication.html"
 - title: 安装 SnapCenter 服务器
   url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
 - title: 登录到 SnapCenter

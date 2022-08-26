@@ -238,7 +238,7 @@ NOTE: 只有在使用基于 SnapCenter 标准控制器的许可证时，才需�
 .. 运行 Open-SmConnection cmdlet ，为 SnapCenterAdmin 帐户启动与 SnapCenter 服务器的连接会话。
 .. 运行 Set-SmRepositoryPassword 以重置 MySQL 密码。
 +
-有关 cmdlet 的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关 cmdlet 的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 
 

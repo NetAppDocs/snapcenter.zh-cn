@@ -160,6 +160,9 @@ NOTE: 不会为非 Data Guard 数据库备份重做日志文件。对于非 Data
 
 如果在备份过程中对归档日志进行了修剪，并且您已手动挂载所需的归档日志备份，则必须将挂载的备份路径指定为外部归档日志位置以进行恢复。
 
+
+NOTE: 您应先验证挂载路径的路径和内容、然后再将其列为外部日志位置。
+
 ** http://www.netapp.com/us/media/tr-4591.pdf["NetApp 技术报告 4591 ：《数据库数据保护备份，恢复，复制和灾难恢复》"^]
 ** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["操作失败，并显示 ORA-00308 错误"^]
 

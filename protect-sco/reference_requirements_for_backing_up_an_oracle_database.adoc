@@ -19,7 +19,7 @@ summary: 在备份 Oracle 数据库之前，您应确保满足前提条件。
 * 如果为数据库启用了二级保护，则应已验证属于该数据库的所有数据卷和归档日志卷是否均受保护。
 * 您应已验证在 ASM 磁盘组上包含文件的数据库应处于 `Mount` 或`open` 状态，以便使用 Oracle DBVERIFY 实用程序验证其备份。
 * 您应已验证卷挂载点长度不超过 240 个字符。
-* 如果要备份的数据库很大（以 TB 为单位），则应将 SnapCenter 服务器主机中的 _C ： \Program Files\NetApp \SMCore\SMCoreServiceHost.exe 配置 _ 文件中的 RESTTimeout 值增加到 86400000 秒。
+* 如果要备份的数据库很大(以TB为单位)、则应将SnapCenter 服务器主机中的_C：\Program Files\NetApp \SMCore\SMCoreServiceHost.exe配置_文件中的RESTTimeout值增加到86400000毫秒。
 +
 修改这些值时，请确保没有正在运行的作业，并在增加此值后重新启动 SnapCenter SMCore 服务。
 

@@ -126,7 +126,7 @@ RAM
  a| 
 SnapCenter 服务器主机和插件主机上需要：
 
-* Microsoft .NET Framework 4.5.2 或更高版本
+* Microsoft .NET Framework 4.7.2或更高版本
 * Windows Management Framework （ WMF ） 4.0 或更高版本
 * PowerShell 4.0 或更高版本
 

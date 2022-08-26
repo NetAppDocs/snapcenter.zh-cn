@@ -28,6 +28,16 @@ summary: 您可以使用 SnapCenter 克隆 SQL Server 数据库备份。如果�
 * 在克隆到故障转移集群实例（ FCI ）时，请确保挂载点存在，挂载点是共享磁盘，并且路径和 FCI 应属于同一个 SQL 资源组。
 * 确保每个主机仅连接一个 VFC 或 FC 启动程序。这是因为， SnapCenter 仅支持每个主机一个启动程序。
 * 如果源数据库或目标实例位于集群共享卷（ csv ）上，则克隆的数据库将位于 csv 上。
+* 脚本路径使用位于插件主机SMCoreServiceHost.exe配置文件中的预定义WindowsScriptsDirectory密钥进行定义。
++
+如果需要、您可以更改此路径并重新启动SMcore服务。建议您使用默认安全路径。
+
++
+可以通过API：API /4.7/configsettings从Swagger显示密钥值
+
++
+您可以使用GET API显示密钥的值。不支持设置API。
+
 
 
 
@@ -127,6 +137,10 @@ NOTE: 不支持克隆实例的备份。
 例如，您可以运行脚本来更新 SNMP 陷阱，自动执行警报，发送日志等操作。
 
 +
+
+NOTE: 预处理脚本或后处理脚本路径不应包含驱动器或共享。路径应与scripts_path相关。
+
++
 默认脚本超时为 60 秒。
 
 . 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
@@ -137,8 +151,7 @@ NOTE: 不支持克隆实例的备份。
 
 NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 set-SmtpServer 指定 SMTP 服务器详细信息。
 
-
-
++
 对于 EMS ，请参见 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["管理 EMS 数据收集"]
 
 . 查看摘要，然后单击 * 完成 * 。

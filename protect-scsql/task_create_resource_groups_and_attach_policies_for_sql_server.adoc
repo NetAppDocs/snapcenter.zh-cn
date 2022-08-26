@@ -93,7 +93,7 @@ NOTE: 您也可以单击 * 来创建策略image:../media/add_policy_from_resourc
 
 
 +
-如果第三方备份计划与 SnapCenter 备份计划重叠，则不支持这些计划。您不应从 Windows 任务计划程序和 SQL Server 代理修改计划。
+如果第三方备份计划与 SnapCenter 备份计划重叠，则不支持这些计划。您不应修改计划并重命名在Windows计划程序或SQL Server代理中创建的备份作业。
 
 . 在验证页面中，执行以下步骤：
 +

@@ -34,7 +34,7 @@ SnapCenter 服务器灾难恢复支持所有插件。
 提取现有 SnapCenter 服务器灾难恢复备份
 
 
-NOTE: 您必须提供备份名称以及必须存储灾难恢复备份的目标路径。
+NOTE: 您应提供存储灾难恢复备份的目标路径。
  a| 
 ` /4.5/disasterrecovery/server/backup ？ TargetPath= ｛ path ｝`
  a| 
@@ -45,7 +45,7 @@ NOTE: 您必须提供备份名称以及必须存储灾难恢复备份的目标�
  a| 
 2.
  a| 
-创建新的服务器灾难恢复备份。从指定的服务器灾难恢复备份还原 SnapCenter 服务器。
+创建新的服务器灾难恢复备份。
  a| 
 ` /4.5/disasterrecovery/server/backup`
  a| 
@@ -62,7 +62,6 @@ NOTE: 您必须提供备份名称以及必须存储灾难恢复备份的目标�
 
 * 备用服务器主机名应与主服务器相同，但 IP 地址可以不同。
 * 服务器版本应与主服务器相同。
-* 主机名应与主服务器相同。
 * 确保使用以下命令将灾难恢复备份文件复制到新的 SnapCenter 服务器：
 +
 `xcopy <Ssource_Path>\< 目标服务器 IP >\< 文件夹路径 >/O /X /E /H /K ｛ ex ： xcopy C ： \DRBackup \\10.225.81.114\c$\DRBackup /O /X /E /H /K ｝`
@@ -73,7 +72,7 @@ NOTE: 您必须提供备份名称以及必须存储灾难恢复备份的目标�
 
 例如， 10.225.81.35 SCServer1
 
-服务器 etc/host 条目将不会还原。您可以从灾难恢复备份文件夹手动还原它。
+服务器etc/host文件将不会还原。您可以从灾难恢复备份文件夹手动还原它。
  a| 
 ` /4.5/disasterrecovery/server/restore`
  a| 

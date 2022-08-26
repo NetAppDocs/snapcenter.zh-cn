@@ -70,6 +70,7 @@ NOTE: 您应对每个权限重复此命令。
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror policy show" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror restore" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror show" -access all`
+* `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror show-history"-access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror update" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror update-ls-set" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "version" -access all`

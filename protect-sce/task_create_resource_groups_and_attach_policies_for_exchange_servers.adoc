@@ -13,6 +13,20 @@ summary: 任何数据保护作业都需要资源组。您还必须将一个或�
 [role="lead"]
 任何数据保护作业都需要资源组。您还必须将一个或多个策略附加到资源组，以定义要执行的数据保护作业类型和保护计划。
 
+* 关于此任务 *
+
+* 脚本路径使用位于插件主机SMCoreServiceHost.exe配置文件中的预定义WindowsScriptsDirectory密钥进行定义。
++
+如果需要、您可以更改此路径并重新启动SMcore服务。建议您使用默认安全路径。
+
++
+可以通过API：API /4.7/configsettings从Swagger显示密钥值
+
++
+您可以使用GET API显示密钥的值。不支持设置API。
+
+
+
 * 步骤 *
 
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择 Microsoft Exchange Server 插件。
@@ -112,7 +126,7 @@ NOTE: 如果某个策略包含 * 备份作业创建时间要选择的服务器�
 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 `SET-SmtpServer` 指定 SMTP 服务器详细信息。
 
 +
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 . 查看摘要，然后单击 * 完成 * 。
 

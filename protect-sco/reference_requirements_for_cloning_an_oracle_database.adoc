@@ -51,6 +51,7 @@ summary: 克隆 Oracle 数据库之前，您应确保满足前提条件。
 
 
 
+** 对于NVMe、应安装NVMe util
 
 
 * 数据 LUN 和日志 LUN 的保护类型（例如镜像，存储或镜像存储）应相同，以便在使用日志备份克隆到备用主机期间发现二级定位器。
@@ -74,4 +75,20 @@ NOTE: 您可以手动将新克隆的挂载点注册到 autofs 子系统。新克
 * 您应在 /etc/lvm/lvm.conf 中设置 use_lvmetad = 0 的值，并停止 lvm2-lvmetad 服务，以便在 Oracle Linux 7 或更高版本或 Red Hat Enterprise Linux （ RHEL ） 7 或更高版本的存储区域网络（ SAN ）环境中成功执行克隆。
 * 如果您使用的是 Oracle 数据库 11.2.0.3 或更高版本，并且使用 NID 脚本更改了辅助实例的数据库 ID ，则应安装 13366202 Oracle 修补程序。
 * 您应确保托管卷的聚合应位于 Storage Virtual Machine （ SVM ）的已分配聚合列表中。
+* 对于NVMe、如果必须从连接中排除任何目标端口、则应在/var/opt/snapcenter/SCU/etc/nv.conf文件中添加目标节点名称和端口名称。
++
+如果此文件不存在、则应按以下示例所示创建此文件：
+
++
+_blacklist｛_
+
++
+....
+# You can add comments by using the ‘#’ at the beginning of the line
+nn-0x<target_node_name_1>:pn-0x<target_port_name_1>
+nn-0x<target_node_name_2>:pn-0x<target_port_name_2>
+....
++
+_｝_
+
 

@@ -1,7 +1,7 @@
 ---
 permalink: protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html 
 sidebar: sidebar 
-keywords: credentials,SnapCenter Plug-in for Oracle Databases 
+keywords: credentials,SnapCenter Plug-in for Oracle Databases, non-database entries, oratab 
 summary: 资源是指主机上由 SnapCenter 管理的 Oracle 数据库。发现可用数据库后，您可以将这些数据库添加到资源组以执行数据保护操作。 
 ---
 = 确定 Oracle 数据库是否可用于备份
@@ -62,3 +62,45 @@ IMPORTANT: 如果在 SnapCenter 外部重命名了数据库，则必须刷新资
 
 
 NOTE: 如果已启用 Oracle 数据库身份验证，则资源视图中将显示一个红色挂锁图标。您必须配置数据库凭据才能保护数据库，或者将其添加到资源组以执行数据保护操作。
+
+
+
+== 如何防止SnapCenter 发现非数据库条目
+
+您可以阻止SnapCenter 发现在oratab文件中添加的非数据库条目。
+
+* 步骤 *
+
+. 安装适用于Oracle的插件后、root用户应在目录/var/opt/snapcenter/SCC/etc/_下创建* sc_oratab.config*文件。
++
+向Oracle二进制文件所有者和组授予写入权限、以便将来可以保留该文件。
+
+. 数据库管理员应在* sc_oratab.config*文件中添加非数据库条目。
++
+建议保持为/etc/oratab_文件中的非数据库条目定义的格式不变、否则用户只需添加非数据库实体字符串即可。
+
++
+
+NOTE: 字符串区分大小写。开头带有#的任何文本均视为注释。注释可以附加在非数据库名称之后。
+
++
+....
+For example:
+--------------------------------------------
+# Sample entries
+# Each line can have only one non-database name
+# These are non-database name
+oratar  # Added by the admin group -1
+#Added by the script team
+NEWSPT
+DBAGNT:/ora01/app/oracle/product/agent:N
+-----------------------------------------------
+....
+. 发现资源。
++
+在* sc_oratab.config*中添加的非数据库条目不会列在"Resources"页面中。
+
+
+
+
+IMPORTANT: 在升级SnapCenter 插件之前、始终建议对SC_oratab.config文件进行备份。

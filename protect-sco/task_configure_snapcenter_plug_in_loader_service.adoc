@@ -147,7 +147,7 @@ enable_certificate_validation
  a| 
 为主机启用CA证书验证时显示true。
 
-您可以通过编辑*。spl.properties*文件或使用SnapCenter 图形用户界面或cmdlet来启用或禁用此参数。
+您可以通过编辑spl.properties或使用SnapCenter 图形用户界面或cmdlet来启用或禁用此参数。
 
 |===
 如果未将其中任何参数分配给默认值，或者您要分配或更改此值，则可以修改 spl.properties 文件。您还可以验证 spl.properties 文件并编辑该文件，以解决与分配给参数的值相关的任何问题。修改 spl.properties 文件后，应重新启动 SnapCenter 插件加载程序服务。

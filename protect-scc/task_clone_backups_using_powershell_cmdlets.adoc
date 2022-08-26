@@ -17,7 +17,7 @@ summary: 克隆工作流包括规划，执行克隆操作以及监控操作。
 
 您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。
 
-有关 PowerShell cmdlet 的信息，请使用 SnapCenter cmdlet 帮助或参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关 PowerShell cmdlet 的信息，请使用 SnapCenter cmdlet 帮助或参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 * 步骤 *
 

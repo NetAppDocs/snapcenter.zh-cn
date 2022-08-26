@@ -1,0 +1,179 @@
+---
+permalink: install/enable_multifactor_authentication.html 
+sidebar: sidebar 
+keywords: mfa, authentication, multifactor authentication 
+summary: SnapCenter 采用严格的安全性和身份验证功能，可确保数据安全。 
+---
+= 启用多因素身份验证(MFA)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要启用MFA功能、您应在Active Directory联合身份验证服务(AD FS)服务器和SnapCenter 服务器中执行一些步骤。
+
+* 您需要的内容 *
+
+* Windows Active Directory联合身份验证服务(AD FS)应在相应的域中启动并运行。
+* 您应拥有任何AD FS支持的多因素身份验证服务、例如Azure MFA、Cisco双核等。
+* 无论时区如何、SnapCenter 和AD FS服务器的时间戳都应相同。
+* 获取并配置SnapCenter 服务器的授权CA证书。
++
+CA证书为必填项、原因如下：
+
++
+** 确保ADFS-F5通信不会中断、因为自签名证书在节点级别是唯一的。
+** 确保在独立或高可用性配置中升级、修复或灾难恢复(DR)期间、不会重新创建自签名证书、从而避免MFA重新配置。
+** 确保IP-FQDN解决。
++
+有关CA证书的信息、请参见 link:../install/reference_generate_CA_certificate_CSR_file.html["生成 CA 证书 CSR 文件"^]。
+
+
+
+
+
+* 关于此任务 *
+
+* 如果在同一AD FS中配置了其他应用程序、则SnapCenter 支持基于SSO的登录。在某些AD FS配置中、出于安全原因、SnapCenter 可能需要用户身份验证、具体取决于AD FS会话持久性。
+* 有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 get-help command_name 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+
+* 步骤 *
+
+. 连接到Active Directory联合身份验证服务(AD FS)主机。
+. 从下载AD FS联合元数据文件 "https://<host[] FQDN>/FederationMetadata、2007年06月/FedationMetadata。xml"
+. 将下载的文件复制到SnapCenter 服务器以启用MFA功能。
+. 通过PowerShell以SnapCenter 管理员用户身份登录到SnapCenter 服务器。
+. 使用PowerShell会话、使用_New-SmMultifactorAuthenticationMetadata -path_ cmdlet生成SnapCenter MFA元数据文件。
++
+path参数用于指定在SnapCenter 服务器主机中保存MFA元数据文件的路径。
+
+. 将生成的文件复制到AD FS主机、以将SnapCenter 配置为客户端实体。
+. 使用_set-SmMultiFactorAuthentication -Enable -Path_ cmdlet为SnapCenter 服务器启用MFA。
++
+path参数指定在步骤3中复制到SnapCenter 服务器的AD FS MFA元数据xml文件的位置。
+
+. (可选)使用_Get-SmMultiFactorAuthentication_cmdlet检查MFA配置状态和设置。
+. 转至Microsoft管理控制台(MMC)并执行以下步骤：
++
+.. 单击*文件*>*添加/删除Snapin *。
+.. 在添加或删除管理单元窗口中，选择 * 证书 * ，然后单击 * 添加 * 。
+.. 在证书管理单元窗口中，选择 * 计算机帐户 * 选项，然后单击 * 完成 * 。
+.. 单击*控制台根*>*证书–本地计算机*>*个人*>*证书*。
+.. 右键单击绑定到SnapCenter 的CA证书、然后选择*所有任务*>*管理专用密钥*。
+.. 在权限向导上、执行以下步骤：
++
+... 单击 * 添加 * 。
+... 单击*位置*并选择相关主机(层次结构顶部)
+... 单击*位置*弹出窗口中的*确定*。
+... 在对象名称字段中、输入‘IIS_IUSRS '并单击*检查名称*、然后单击*确定*。
++
+如果检查成功、请单击*确定*。
+
+
+
+
+
+. 在AD FS主机中、打开AD FS管理向导并执行以下步骤：
++
+.. 右键单击*依赖方信任*>*添加依赖方信任*>*启动*。
+.. 选择第二个选项并浏览SnapCenter MFA元数据文件、然后单击*下一步*。
+.. 指定显示名称并单击*下一步*。
+.. 根据需要选择并访问控制策略、然后单击*下一步*。
+.. 将下一个选项卡中的设置设置设置为默认值。
+.. 单击 * 完成 * 。
++
+现在、SnapCenter 已被视为具有所提供显示名称的依赖方。
+
+
+
+. 选择名称并执行以下步骤：
++
+.. 单击*编辑款项申请发放策略*。
+.. 单击*添加规则*、然后单击*下一步*。
+.. 指定声明规则的名称
+.. 选择* Active Directory*作为属性存储。
+.. 选择*用户主体名称*属性、并选择传出声明类型*名称ID *。
+.. 单击 * 完成 * 。
+
+
+. 在ADFS服务器上运行以下PowerShell命令。
++
+_set-adfsRelyingPartyTrust -targetName‘<显示依赖方名称>'-SigningCertificateRevocationCheck NONE _
+
++
+_Set-AdfsRelyingPartyTrust -targetName‘<显示依赖方的名称>'-EncryptionCertificateRevocationCheck NONE _
+
+. 执行以下步骤以确认元数据已成功导入。
++
+.. 右键单击依赖方信任并选择*属性*。
+.. 确保已填充"端点"、"标识符"和"签名"字段。
+
+
+
+
+也可以使用REST API启用SnapCenter MFA功能。
+
+* 完成后 *
+
+在SnapCenter 中启用、更新或禁用MFA设置后、请关闭所有浏览器选项卡并重新打开浏览器以重新登录。此操作将清除现有或活动的会话Cookie。
+
+有关故障排除信息、请参见 link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_login_in_multiple_tabs_shows_MFA_error%3A_The_SAML_message_response_(1)_doesn%E2%80%99t_match_the_expected_response_(2)["在多个选项卡中登录SnapCenter 会显示MFA错误"]
+
+
+
+== 更新AD FS MFA元数据
+
+只要对AD FS服务器进行了任何修改、例如升级、CA证书续订、灾难恢复等、您就应在SnapCenter 中更新AD FS MFA元数据。
+
+* 步骤 *
+
+. 从下载AD FS联合元数据文件 "https://<host[] FQDN>/FederationMetadata、2007年06月/FedationMetadata。xml"
+. 将下载的文件复制到SnapCenter 服务器以更新MFA配置。
+. 运行以下cmdlet以更新SnapCenter 中的AD FS元数据：
++
+_Set-SmMultiFactorAuthentication -Path < ADFS MFA元数据xml文件的位置>_
+
+
+
+* 完成后 *
+
+在SnapCenter 中启用、更新或禁用MFA设置后、请关闭所有浏览器选项卡并重新打开浏览器以重新登录。此操作将清除现有或活动的会话Cookie。
+
+
+
+== 更新SnapCenter MFA元数据
+
+只要在ADFS服务器中进行任何修改、例如修复、CA证书续订、DR等、您就应更新AD FS中的SnapCenter MFA元数据。
+
+* 步骤 *
+
+. 在AD FS主机中、打开AD FS管理向导并执行以下步骤：
++
+.. 单击*依赖方信任*。
+.. 右键单击为SnapCenter 创建的依赖方信任、然后单击*删除*。
++
+此时将显示依赖方信任的用户定义名称。
+
+.. 启用多因素身份验证(MFA)。
++
+请参见 link:../install/enable_multifactor_authentication.html["启用多因素身份验证"]
+
+
+
+
+
+* 完成后 *
+
+在SnapCenter 中启用、更新或禁用MFA设置后、请关闭所有浏览器选项卡并重新打开浏览器以重新登录。此操作将清除现有或活动的会话Cookie。
+
+
+
+== 禁用多因素身份验证(MFA)
+
+使用_set-SmMultiFactorAuthentication -Disable_ cmdlet禁用MFA并清理启用MFA时创建的配置文件。
+
+* 完成后 *
+
+在SnapCenter 中启用、更新或禁用MFA设置后、请关闭所有浏览器选项卡并重新打开浏览器以重新登录。此操作将清除现有或活动的会话Cookie。

@@ -19,9 +19,21 @@ summary: 您可以使用 SnapCenter 克隆备份。您可以从主备份或二�
 * 您应确保托管卷的聚合应位于 Storage Virtual Machine （ SVM ）的已分配聚合列表中。
 * 您不能克隆基于文件的备份。
 * 目标克隆服务器应具有在目标克隆 SID 字段中提供的相同 SAP HANA 实例 SID 。
+* 对于克隆前或克隆后命令、您应通过以下路径检查这些命令是否位于插件主机上的命令列表中：
++
+对于Windows：_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands_list.txt
+
++
+对于Linux：/var/opt/snapcenter/scC/allowed_commands_list.txt
 
 
-* 关于此任务 * 有关克隆拆分操作限制的信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 ONTAP 9 逻辑存储管理指南》"^]。
+
+
+NOTE: 如果命令列表中不存在这些命令、则操作将失败。
+
+* 关于此任务 *
+
+有关克隆拆分操作限制的信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 ONTAP 9 逻辑存储管理指南》"^]。
 
 * 步骤 *
 
@@ -106,7 +118,7 @@ Linux 计算机上卷或 qtree 的 mount 命令：
 NFS 示例：
 
 +
- mount VSERVER_DATA_IP:%{VOLUME_NAME_Clone} /mnt
+ mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
 
 
 . 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。

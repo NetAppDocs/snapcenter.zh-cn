@@ -16,10 +16,8 @@ entries:
   url: "/sc-automation/concept_interpreting_an_api_response.html"
 - title: 支持的 REST API
   entries:
-  - title: 其他插件支持的 REST API 工作流
+  - title: SnapCenter 服务器和插件支持的REST API
     url: "/sc-automation/reference_supported_rest_apis.html"
-  - title: Oracle 数据库支持的 REST API
-    url: "/sc-automation/refrence_rest_apis_supported_for_oracle_database.html"
   - title: 支持 REST API 用于 SnapCenter 服务器的灾难恢复
     url: "/sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html"
 - title: 如何使用 Swagger API 网页访问 REST API

@@ -137,6 +137,9 @@ MACs hmac-sha2-256
 * /custom_location/netapp/snapcenter/spl/bin/spl
 
 
+
+NOTE: 如果您要管理RAC设置、则非root用户应为Oracle用户、不能仅为任何非root操作系统用户。
+
 * 步骤 *
 
 . 登录到要安装适用于 Linux 的 SnapCenter 插件软件包的 Linux 主机。
@@ -262,6 +265,9 @@ MACs hmac-sha2-256
 * /custom_location/netapp/snapcenter/spl/installation/plugins/uninstall
 * /custom_location/netapp/snapcenter/spl/bin/spl
 
+
+
+NOTE: 如果您要管理RAC设置、则非root用户应为Oracle用户、不能仅为任何非root操作系统用户。
 
 * 步骤 *
 

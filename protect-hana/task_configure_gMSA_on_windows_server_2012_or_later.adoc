@@ -24,7 +24,9 @@ summary: 通过 Windows Server 2012 或更高版本，您可以创建组托管�
 . 对于每个域，从 Windows 域控制器运行以下命令： Add-KDSRootKey -EffectiveImmediately
 . 创建和配置 GMSA ：
 +
-.. 创建用户组帐户。
+.. 按以下格式创建用户组帐户：
++
+ domainName\accountName$
 .. 向组中添加计算机对象。
 .. 使用刚刚创建的用户组创建 GMSA 。
 +

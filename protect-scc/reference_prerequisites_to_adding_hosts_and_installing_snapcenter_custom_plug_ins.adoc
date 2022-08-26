@@ -27,7 +27,45 @@ link:concept_develop_a_plug_in_for_your_application.html["为您的应用程序�
 
 == 常规
 
-如果使用的是 iSCSI ，则 iSCSI 服务必须正在运行。
+如果使用的是iSCSI、则iSCSI服务应正在运行。
+
+
+
+== SHA512哈希
+
+* 对于NetApp提供的自定义插件、您应确保已将自定义插件文件的SHA512哈希添加到_custom_plugin_checksum_list_文件中。
++
+** 对于Linux主机、SHA512哈希位于：_/var/opt/snapcenter/SCC/custom_plugin_checksum_list.txt
+** 对于Windows主机、SHA512哈希位于_C：\Program Files\NetApp\SnapCenter Plug-in Creator\etc\custom_plugin_checksum_list.txt
++
+对于自定义安装路径、SHA512哈希位于_<custom path>\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\custom_plugin_checksum_list.txt
+
+
+
++
+custom_plugin_checksum_list是SnapCenter 在主机上安装的自定义插件的一部分。
+
+* 对于为应用程序创建的自定义插件、您应已执行以下步骤：
++
+.. 已生成插件zip文件的SHA512哈希。
++
+您可以使用等联机工具 https://emn178.github.io/online-tools/sha512_file_hash.html["SHA512哈希"^]。
+
+.. 已将生成的SHA512哈希添加到custom_plugin_checksum_list文件中的新行。
++
+注释以#符号开头、用于标识哈希所属的插件。
+
++
+以下是校验和文件中SHA512哈希条目的示例：
+
++
+....
+#ORASCPM
+03721f567a1e4a1cb5569066b9a58af619ee12b1f8713108f81b696cfbdb81c25232fa63d6e6777a2b2a1ec068bb0a93a59a8ade71587182f8bccbe81f7e0ba6
+....
+
+
+
 
 
 

@@ -41,7 +41,7 @@ https://support.microsoft.com/kb/2887595["Microsoft 支持文章 2887595 ： Win
 * 在还原数据库之前，必须停止所有备份和克隆作业。
 * 如果数据库大小为 TB ，则还原操作可能会超时。
 +
-您必须运行以下命令，将 SnapCenter 服务器的 RESTTimeout 参数值增加到 20000000 毫秒： set-SmConfigSettings -Agent -configSettings @ ｛ "RESTTimeout" = "20000000" ｝ 。根据数据库大小，可以更改超时值，可以设置的最大值为 2147483648 。
+您必须运行以下命令，将 SnapCenter 服务器的 RESTTimeout 参数值增加到 20000000 毫秒： set-SmConfigSettings -Agent -configSettings @ ｛ "RESTTimeout" = "20000000" ｝ 。根据数据库大小、可以更改超时值、并且可以设置的最大值为86400000毫秒。
 
 
 

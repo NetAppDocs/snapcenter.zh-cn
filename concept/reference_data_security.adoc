@@ -20,6 +20,10 @@ SnapCenter 包括以下安全功能：
 * SnapCenter 使用符合联邦信息处理标准（ FIPS ）的安全算法。
 * SnapCenter 支持使用客户提供的授权 CA 证书。
 * SnapCenter 4.1.1 或更高版本支持与 ONTAP 进行传输层安全（ TLS ） 1.2 通信。您还可以在客户端和服务器之间使用 TLS 1.2 通信。
+* SnapCenter 支持一组特定的SSL密码集套件、可在网络通信中提供安全性。
++
+有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_the_supported_SSL_Cipher_Suite["如何配置受支持的SSL Cipher Suite"]。
+
 * SnapCenter 安装在公司的防火墙内，用于访问 SnapCenter 服务器并在 SnapCenter 服务器和插件之间进行通信。
 * SnapCenter API 和操作访问使用使用 AES 加密加密的令牌，这些令牌将在 24 小时后过期。
 * SnapCenter 与 Windows Active Directory 集成，用于控制访问权限的登录和基于角色的访问控制（ Role-Based Access Control ， RBAC ）。
@@ -34,6 +38,16 @@ SnapCenter 包括以下安全功能：
 
 SnapCenter 服务器安装程序可在安装期间启用集中式 SSL 证书支持。为了增强服务器和插件之间的安全通信， SnapCenter 支持使用客户提供的授权 CA 证书。
 
-您应在安装 SnapCenter 服务器和相应插件后部署 CA 证书。有关详细信息，请参见 link:../install/reference_generate_CA_certificate_CSR_file.html["生成 CA 证书 CSR 文件"^]。
+您应在安装 SnapCenter 服务器和相应插件后部署 CA 证书。有关详细信息，请参见 link:../install/reference_generate_CA_certificate_CSR_file.html["生成 CA 证书 CSR 文件"]。
 
 您还可以为适用于 VMware vSphere 的 SnapCenter 插件部署 CA 证书。有关详细信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#create-and-import-certificates["创建和导入证书"^]。
+
+
+
+== 多因素身份验证（ MFA ）
+
+MFA通过安全断言标记语言(SAML)使用第三方身份提供程序(IdP)来管理用户会话。此功能可选择使用TOTP、生物识别、推送通知等多种因素以及现有用户名和密码、从而增强身份验证的安全性。此外、它还支持客户使用自己的用户身份提供程序在其产品组合中获得统一的用户登录(SSO)。
+
+MFA仅适用于SnapCenter 服务器UI登录。登录通过IdP Active Directory联合身份验证服务(AD FS)进行身份验证。您可以在AD FS上配置各种身份验证因素。SnapCenter 是服务提供商、您应将SnapCenter 配置为AD FS中的依赖方。要在SnapCenter 中启用MFA、您需要AD FS元数据。
+
+有关启用MFA的信息、请参见 link:../install/enable_multifactor_authentication.html["启用多因素身份验证"]。

@@ -36,6 +36,16 @@ summary: 您可以使用 SnapCenter 还原备份的 Exchange 数据库。
 如果磁盘包含用于复制的 Exchange 文件，则适用于 Exchange 的插件不会对磁盘执行完全还原。如果完全还原可能会影响 Exchange 功能，则适用于 Exchange 的插件将执行单个文件还原操作。
 
 * 适用于 Exchange 的插件无法还原 BitLocker 加密驱动器。
+* 脚本路径使用位于插件主机SMCoreServiceHost.exe配置文件中的预定义WindowsScriptsDirectory密钥进行定义。
++
+如果需要、您可以更改此路径并重新启动SMcore服务。建议您使用默认安全路径。
+
++
+可以通过API：API /4.7/configsettings从Swagger显示密钥值
+
++
+您可以使用GET API显示密钥的值。不支持设置API。
+
 
 
 * 步骤 *
@@ -104,6 +114,10 @@ NOTE: 下拉列表中显示的日志数量基于 UTM 。例如，如果完整备
 
 +
 您可以运行脚本来更新 SNMP 陷阱，自动执行警报，发送日志等操作。
+
++
+
+NOTE: 预处理脚本或后处理脚本路径不应包含驱动器或共享。路径应与scripts_path相关。
 
 . 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
 +

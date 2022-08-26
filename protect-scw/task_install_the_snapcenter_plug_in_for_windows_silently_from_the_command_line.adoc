@@ -15,7 +15,7 @@ summary: 如果无法从 SnapCenter 图形用户界面远程安装适用于 Micr
 
 * 您需要的内容 *
 
-* 您必须已安装 Microsoft .Net 4.5.2 或更高版本。
+* 您必须已安装Microsoft .Net 4.7.2或更高版本。
 * 您必须已安装 PowerShell 4.0 或更高版本。
 * 您必须已启用 Windows 消息队列。
 * 您必须是主机上的本地管理员。

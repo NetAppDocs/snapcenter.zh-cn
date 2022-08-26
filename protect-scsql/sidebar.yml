@@ -100,16 +100,6 @@ entries:
       url: "/protect-scsql/task_storage_disaster_recovery_for_scsql.html"
     - title: 从适用于 SQL Server 的 SnapCenter 插件二级存储故障恢复到主存储
       url: "/protect-scsql/task_failback_from_scsql_secondary_storage_to_primary_storage.html"
-  - title: 将归档备份从 SnapManager for Microsoft SQL Server 导入到 SnapCenter
-    entries:
-    - title: 导入归档备份概述
-      url: "/protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html"
-    - title: 与导入功能相关的限制
-      url: "/protect-scsql/concept_limitations_related_to_the_import_feature.html"
-    - title: 导入归档备份
-      url: "/protect-scsql/task_import_archived_backups.html"
-    - title: 在 SnapCenter 服务器中查看导入的备份
-      url: "/protect-scsql/task_view_the_imported_backups_in_snapcenter_server.html"
 - title: 安装适用于 VMware vSphere 的 SnapCenter 插件
   url: "/protect-scsql/task_install_snapcenter_plug_in_for_vmware_vsphere.html"
 - title: 准备数据保护

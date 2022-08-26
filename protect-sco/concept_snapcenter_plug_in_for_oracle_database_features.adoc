@@ -36,6 +36,7 @@ SnapCenter 将 NetApp Snapshot 副本技术与适用于 Oracle 数据库的插�
 +
 您还可以设置凭据，以便授权的 SnapCenter 用户具有应用程序级别的权限。
 
+* 支持使用归档日志管理(ALM)执行还原和克隆操作
 * 使用 NetApp FlexClone 技术为生产数据库创建节省空间的时间点副本，以供测试或数据提取
 +
 要创建克隆的存储系统需要 FlexClone 许可证。
@@ -53,8 +54,25 @@ SnapCenter 将 NetApp Snapshot 副本技术与适用于 Oracle 数据库的插�
 默认情况下， SLM 功能会定期发现没有优化路径的 LUN 并对其进行修复。您可以通过修改位于 /var/opt/snapcenter/scU/etc 的 scu.properties 文件中的参数来配置 SLM
 
 +
-** 可以通过将 enable_lunpath_monitoring 的值设置为 false 来禁用此功能。
-** 您可以通过为 lunpath_monitoring_interval 分配值（以小时为单位）来指定自动修复 LUN 路径的频率。有关 SLM 的信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["《 ONTAP 9 SAN 管理指南》"^]。
+** 您可以通过将enable_lunpath_monitoring参数的值设置为false来禁用此功能。
+** 您可以通过为lunpath_monitoring_interval参数分配值(以小时为单位)来指定自动修复LUN路径的频率。有关 SLM 的信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["《 ONTAP 9 SAN 管理指南》"^]。
+
+
+* 在Linux上支持非易失性内存快速(NVMe)
++
+** 应在主机上安装NVMe util。
++
+您必须安装NVMe util才能克隆或挂载到备用主机。
+
+** 备份、还原、克隆、挂载、卸载、 NVMe硬件支持目录、取消目录和验证操作、但VMDK和RDM等虚拟化环境除外。
++
+不带分区或具有单个分区的设备支持上述操作。
 
 
 
+
+
+
+NOTE: 您可以通过在内核中设置原生 多路径选项来为NVMe设备配置多路径解决方案。不支持设备映射程序(Device Mapper、DM)多路径。
+
++有关受支持版本的最新信息、请参见 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
