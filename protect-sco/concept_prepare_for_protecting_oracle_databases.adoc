@@ -54,7 +54,7 @@ NOTE: SnapCenter 不支持在不同集群上使用相同名称的多个 SVM 。�
 
 * 查找更多信息 *
 
-* https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["互操作性表工具"^]
+* https://imt.netapp.com/matrix/imt.jsp?components=105283;&solution=1259&isHWU&src=IMT["互操作性表工具"^]
 * https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["适用于 VMware vSphere 的 SnapCenter 插件文档"^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Data_protection_operation_fails_in_a_non-multipath_environment_in_RHEL_7_and_later["在 RHEL 7 及更高版本的非多路径环境中，数据保护操作失败"^]
 

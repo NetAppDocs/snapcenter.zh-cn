@@ -92,7 +92,7 @@ Java 1.8.x （ 64 位） Oracle Java 和 OpenJDK 版本
 如果已将 Java 升级到最新版本，则必须确保 /var/opt/snapcenter/spl/etc/spl.properties 上的 java_home 选项设置为正确的 Java 版本和路径。
 
 |===
-有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=105283;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 
@@ -221,7 +221,7 @@ Java 1.8.x （ 64 位） IBM Java
 如果已将 Java 升级到最新版本，则必须确保 /var/opt/snapcenter/spl/etc/spl.properties 上的 java_home 选项设置为正确的 Java 版本和路径。
 
 |===
-有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=105283;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 
@@ -314,7 +314,7 @@ SnapCenter 使用凭据对 SnapCenter 操作的用户进行身份验证。您应
 
 这些凭据是为 root 用户或具有 sudo 权限的非 root 用户创建的，用于安装和启动插件过程。
 
-有关信息，请参见 <<Configure sudo privileges for non-root users for Linux host>> 或 <<Configure sudo privileges for non-root users for AIX host>>
+有关信息，请参见  sudo privileges for non-root users for Linux host 或  sudo privileges for non-root users for AIX host
 
 |===
 

@@ -22,7 +22,7 @@ summary: 您可以使用 SnapCenter 灾难恢复功能在发生资源损坏或�
 无论 SnapCenter 服务器是否添加了任何插件或管理了任何插件，都将备份和恢复 SnapCenter 服务器数据。
 
 +
-二级SnapCenter 服务器应与主SnapCenter 服务器安装在同一位置和同一端口上。
+二级SnapCenter 服务器应安装在与主SnapCenter 服务器相同的安装目录和端口上。
 
 +
 对于多因素身份验证(MFA)、在对SnapCenter 服务器执行灾难恢复还原时、请关闭所有浏览器选项卡并重新打开浏览器以重新登录。这将清除现有或活动的会话Cookie、并确保更新正确的配置数据。

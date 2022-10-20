@@ -24,7 +24,7 @@ Microsoft Windows
 
 操作系统仅支持英语，德语，日语和简体中文版。
 
-有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=105046;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 
@@ -75,6 +75,6 @@ NOTE: 注意：如果 SnapCenter 服务器位于安装 SnapCenter 存储库的�
 
 有关.NET故障排除信息、请参见、 link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["对于没有Internet连接的原有系统、SnapCenter 升级或安装失败。"]
 
-有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=105046;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 |===

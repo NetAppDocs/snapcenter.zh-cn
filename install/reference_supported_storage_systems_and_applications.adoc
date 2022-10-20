@@ -23,6 +23,6 @@ summary: 您应了解支持的存储系统，应用程序和数据库。
 
 * SnapCenter 支持保护不同的应用程序和数据库。
 +
-有关支持的应用程序和数据库的详细信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+有关支持的应用程序和数据库的详细信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=105046;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
