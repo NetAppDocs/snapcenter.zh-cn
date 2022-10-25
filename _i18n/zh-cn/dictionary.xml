@@ -2996,7 +2996,6 @@
   <block id="4f5e4136027ec0a3e4043eb5412b3ba4" category="paragraph">此端口用于在 SnapCenter 服务器与安装 SnapCenter 插件的主机之间进行通信。</block>
   <block id="91ca015b30de2a05aff2f16ec93231dd" category="paragraph">MySQL 端口</block>
   <block id="efe50212c612e0d762535b54fd67befd" category="paragraph">此端口用于在 SnapCenter 和 MySQL 存储库数据库之间进行通信。</block>
-  <block id="2fd902191e98265318221699b71a7bbc" category="paragraph">您可以创建从 SnapCenter 服务器到 MySQL 服务器的安全连接。 <block ref="98294cf010405bdb856636ffa91b07b6" category="inline-link-macro-rx"></block></block>
   <block id="bc40ff6b34d5fee4e2df3ad7383271dc" category="paragraph">有关支持的动态端口范围的信息，请参见<block ref="89dbd1724554234088076a511a419e1e" category="inline-link-rx"></block></block>
   <block id="32196bca89704936d522cb1276210a4d" category="paragraph">这些端口用于在 SnapCenter 服务器与要安装此插件的主机之间进行通信。要将插件软件包二进制文件推送到 Windows 插件主机，这些端口只能在插件主机上打开，并且可以在安装后关闭。</block>
   <block id="31287d49a8a96de2e8d195c76a865396" category="paragraph">Linux 或 AIX 插件主机</block>
@@ -3014,7 +3013,6 @@
   <block id="640e1e1057328dc7a71ff3efe908fb8c" category="paragraph">SnapCenter 服务器与自定义插件之间的通信通过端口 8145 进行路由。</block>
   <block id="0e2baf6e148be111338e84354edd4364" category="paragraph">443 （ HTTPS ），双向 80 （ HTTP ），双向</block>
   <block id="a26bff28c23606c7396b4619af8af1bd" category="paragraph">SAL （存储抽象层）使用此端口在运行 SnapCenter 服务器的主机与 SVM 之间进行通信。SnapCenter for Windows 插件主机上的 SAL 当前也使用此端口在 SnapCenter 插件主机与 SVM 之间进行通信。</block>
-  <block id="657328b06bb4725d5cf327593551d8d6" category="paragraph">适用于 SAP HANA 数据库端口的 SnapCenter 插件</block>
   <block id="a703a5f03b1b230925e5a7bef766ea84" category="paragraph">3 个 instance_number13 或 3 个 instance_number15 ， HTTP 或 HTTPS ，双向且可自定义</block>
   <block id="5afe34fece774db451a111901841c2f9" category="paragraph">对于多租户数据库容器（ MDC ）单租户，端口号以 13 结尾；对于非 MDC ，端口号以 15 结尾。</block>
   <block id="f79f66ef0d80eeeac5a8a3b2f86e2d84" category="paragraph">例如， 32013 是实例 20 的端口号， 31015 是实例 10 的端口号。</block>
@@ -3761,7 +3759,6 @@
   <block id="f131ab7559cf49d32373fdff9b7cbaaa" category="admonition">适用于 UNIX 的 SnapCenter 插件不是独立插件，不能单独安装。安装适用于 Oracle 数据库的 SnapCenter 插件时，系统会自动安装此插件。</block>
   <block id="ad41f7a9e85843a998743e132424a395" category="list-text">SnapCenter 自定义插件</block>
   <block id="b6ddf325474f53377de3e17f65c983f3" category="inline-link">NetApp 存储自动化商店</block>
-  <block id="4d85577b7a29bc5d237d7c7beb5ebc7c" category="paragraph">自定义插件受社区支持，可从下载<block ref="14adb94a4faec9ea0e0992d90e98b640" category="inline-link-rx"></block>。</block>
   <block id="4bfa416280fc4f5037348c904859e18f" category="paragraph">适用于 VMware vSphere 的 SnapCenter 插件（以前称为 NetApp 数据代理）是一个独立的虚拟设备，支持在虚拟化数据库和文件系统上执行 SnapCenter 数据保护操作。</block>
   <block id="2aa0571a478e7d0fecaba7f94c88bf25" category="section-title">SnapCenter 服务器</block>
   <block id="e4b70dc0a2377b7bbef832a55b2d603c" category="paragraph">SnapCenter 服务器包括一个 Web 服务器，一个基于 HTML5 的集中式用户界面， PowerShell cmdlet ， REST API 和 SnapCenter 存储库。</block>
@@ -3836,7 +3833,6 @@
   <block id="dbe26f725743679de01e440c2e7697ad" category="admonition">MySQL ， DB2 和 MongoDB 自定义插件仅可通过 NetApp 社区获得支持。</block>
   <block id="a84dab656bf020b14be7a5c3596b4288" category="paragraph">NetApp 支持创建和使用自定义插件的功能；但是， NetApp 不支持您创建的自定义插件。</block>
   <block id="07af457ed5409f58b0d5ca2b41b5ec39" category="inline-link-macro">为您的应用程序开发一个插件</block>
-  <block id="e0348137514c6fa588f7dc1c018f38d7" category="paragraph">有关详细信息，请参见 <block ref="42bf949f5c33c0da2d19dcdbdfcd8185" category="inline-link-macro-rx"></block></block>
   <block id="3012455ba6e0ba02dfa333bdecc83c57" category="section-title">SnapCenter 存储库</block>
   <block id="cc1d85843af98a2ce08e58f1408e6364" category="paragraph">SnapCenter 存储库有时称为 NSM 数据库，用于存储每个 SnapCenter 操作的信息和元数据。</block>
   <block id="b795272c033653aa88e12f8f4fd442ca" category="paragraph">默认情况下，在安装 SnapCenter 服务器时会安装 MySQL 服务器存储库数据库。如果已安装 MySQL 服务器，而您正在执行 SnapCenter 服务器的全新安装，则应卸载 MySQL 服务器。</block>
@@ -6681,7 +6677,6 @@
   <block id="f01f22cfc141e64ad20b64a9b3f2ac85" category="paragraph">如果您使用的是基于控制器的 SnapCenter 标准许可证，并且需要删除基于容量的试用许可证（序列号以 "`50` " 结尾），则应使用 MySQL 命令手动删除此试用许可证。无法使用 SnapCenter 图形用户界面删除试用许可证。</block>
   <block id="ca92f38ec64bb5da713b4badc8620434" category="paragraph">要在子操作系统中执行 RDM 操作，您应在主机上具有以下 vCenter 权限：</block>
   <block id="03d6fc6f0007d8c1e15a56f0a4522686" category="paragraph">SnapCenter 需要多个许可证才能对应用程序，数据库，文件系统和虚拟机进行数据保护。您安装的 SnapCenter 许可证类型取决于您的存储环境和要使用的功能。</block>
-  <block id="d0487d3c65933c7dda38325ae975026b" category="paragraph">您应安装一个或多个 SnapCenter 许可证。有关如何添加许可证的信息，请参见 <block ref="0ca3149bbd09cc6482f3e5921aad891d" category="inline-link-macro-rx"></block> 或 <block ref="daae28e1483ad0a51ebe8ba1b52cdeb5" category="inline-link-macro-rx"></block>。</block>
   <block id="b3b5361b491a028013fc3043e9bbf7a7" category="doc">如何使用资源，资源组和策略保护 SAP HANA 数据库</block>
   <block id="6bbc1cc2d778155e34c6c797ed0dee3f" category="list-text">资源通常是指您使用 SnapCenter 备份或克隆的 SAP HANA 数据库。</block>
   <block id="0d9c8d9fe540eebdc0f8c24187ca777d" category="list-text">SnapCenter 资源组是主机上的一组资源。</block>
@@ -7488,7 +7483,6 @@
   <block id="45cfde3246d77aae99351b410b97c7c0" category="doc">SAP HANA 插件所需的最低 ONTAP 特权</block>
   <block id="f787fb91924061fe015dd390115ff7b0" category="cell">all-access 命令： ONTAP 8.3.0 及更高版本所需的最低权限</block>
   <block id="3c7a1d3e0ce94aeb0c7ab231e365f15e" category="cell">只读命令： ONTAP 8.3.0 及更高版本所需的最低权限</block>
-  <block id="8bd83f1f314ef9e02c70e66cc9fb845c" category="paragraph">要修改端口详细信息，请参见<block ref="50723147440c13da7c31ceaceb52ba16" category="inline-link-rx"></block> 修改插件主机^ 。</block>
   <block id="5e312685e47c74b5ee2a4102a18ee03f" category="doc">Exchange 插件所需的最低 ONTAP 权限</block>
   <block id="f2e203e95de8a92902a61dcabea6f456" category="list-text">您可以为单个主机或集群添加主机并安装插件软件包。</block>
   <block id="adc8d83761c6331a65ee343d3de2a603" category="list-text">如果某个 Exchange 节点属于 DAG ，则不能仅向 SnapCenter 服务器添加一个节点。</block>
@@ -7919,4 +7913,14 @@
   <block id="097869dcfdfea94a43eab778d57a4e83" category="paragraph">有关受支持版本的最新信息，请参见<block ref="102c8b4f5323d57ed48904a1ba94c2de" category="inline-link-rx"></block>。</block>
   <block id="bf14f1703af6af8b51300dc61dc1594c" category="paragraph">有关受支持版本的最新信息，请参见<block ref="4d75397e7ff03528228bfd2c042ee164" category="inline-link-rx"></block>。</block>
   <block id="02f8c9fac34de290666ccfe51e19b761" category="paragraph"><block ref="c86a29400a88b8541473f7e26922bd2f" category="inline-link-rx"></block></block>
+  <block id="b6b7e7973fe70256b1b775baf8ac7261" category="paragraph">您应安装一个或多个 SnapCenter 许可证。有关如何添加许可证的信息，请参见 <block ref="978050eb868e07441781781da059ebc5" category="inline-link-macro-rx"></block> 或 <block ref="47cf8583fc17afccfc8268b2830ab680" category="inline-link-macro-rx"></block>。</block>
+  <block id="13aef2b62d8736d22562e85c99ca60eb" category="paragraph">您可以创建从 SnapCenter 服务器到 MySQL 服务器的安全连接。 <block ref="cd7568118ad87382648cb2133a315ffd" category="inline-link-macro-rx"></block></block>
+  <block id="6529e3cc72b3980f54f2d2ad982c79c2" category="paragraph">适用于SAP HANA数据库的SnapCenter 插件vCode拼写检查程序</block>
+  <block id="0cfe29479bcdd52d04233cb07867b8dc" category="paragraph">要修改端口详细信息，请参见 <block ref="e76f469a4971f2c04dd83de4f8464750" category="inline-link-macro-rx"></block>。</block>
+  <block id="66ee30700091538587a27acf4ecad692" category="inline-link">REST API概述</block>
+  <block id="9a9a51f1993f5461829d8466a8fb013e" category="paragraph">有关REST API的详细信息、请参见<block ref="ea5c19f623f4ce0e4a3a37a512890f94" category="inline-link-rx"></block>。</block>
+  <block id="ac82cdc7de65b45fb896f54ac6f878a6" category="paragraph">有关Windows cmdlet的详细信息、请参见<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="9381fc6f6aaa8ab22b178a15c78fbc00" category="paragraph">有关UNIX命令的详细信息、请参见<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
+  <block id="c41cef29e8776e4670cacce5775ec017" category="paragraph">自定义插件受社区支持，可从下载<block ref="554f546cf121f440c6cfd97d643765df" category="inline-link-rx"></block>。</block>
+  <block id="0403e11795fb79ba2a2b089e5837948f" category="paragraph">有关详细信息，请参见 <block ref="5d3441c720944f2bfbf67dc2b7c68bf1" category="inline-link-macro-rx"></block></block>
 </blocks>

@@ -61,7 +61,7 @@ MySQL 端口
 
 此端口用于在 SnapCenter 和 MySQL 存储库数据库之间进行通信。
 
-您可以创建从 SnapCenter 服务器到 MySQL 服务器的安全连接。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["了解更多信息。"^]
+您可以创建从 SnapCenter 服务器到 MySQL 服务器的安全连接。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["了解更多信息。"]
 
 
 
@@ -128,7 +128,7 @@ SAL （存储抽象层）使用此端口在运行 SnapCenter 服务器的主机�
 
 
  a| 
-适用于 SAP HANA 数据库端口的 SnapCenter 插件
+适用于SAP HANA数据库的SnapCenter 插件vCode拼写检查程序
  a| 
 3 个 instance_number13 或 3 个 instance_number15 ， HTTP 或 HTTPS ，双向且可自定义
 
@@ -146,4 +146,4 @@ SAL （存储抽象层）使用此端口在运行 SnapCenter 服务器的主机�
 必须在域控制器上打开 Microsoft 所需的端口，以便 SnapCenter 服务器，插件主机或其他 Windows 客户端能够对用户进行身份验证。
 
 |===
-要修改端口详细信息，请参见 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html#modify-plug-in-hosts[] 修改插件主机^ 。
+要修改端口详细信息，请参见 link:../admin/concept_manage_hosts.html#modify-plug-in-hosts["修改插件主机"]。

@@ -51,6 +51,9 @@ Microsoft Exchange Server ， Microsoft SQL Server ， Linux 或 AIX 上的 Orac
 +
 通过提供一个用于创建用户定义的 SnapCenter 插件的框架，其他标准或自定义应用程序和数据库也支持数据保护。这样就可以通过同一个单一管理平台为其他应用程序和数据库提供数据保护。通过利用此框架， NetApp 在 NetApp 自动化商店中发布了适用于 IBM DB2 ， MongoDB ， MySQL 等的 SnapCenter 自定义插件。
 
++
+https://automationstore.netapp.com/home.shtml["NetApp 存储自动化商店"^]
+
 * 基于策略的备份
 +
 基于策略的备份利用 NetApp Snapshot 副本技术创建快速，节省空间，应用程序一致且基于磁盘的备份。或者，您也可以通过更新现有保护关系自动将这些备份保护到二级存储。
@@ -74,6 +77,15 @@ SnapCenter 图形用户界面提供了一个一站式界面，用于管理混合
 * REST API ， Windows cmdlet ， UNIX 命令
 +
 SnapCenter 包含 REST API ，可提供与任何业务流程软件集成的大多数功能，并可使用 Windows PowerShell cmdlet 和命令行界面。
+
++
+有关REST API的详细信息、请参见 https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["REST API概述"]。
+
++
+有关Windows cmdlet的详细信息、请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
++
+有关UNIX命令的详细信息、请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["《 SnapCenter 软件命令参考指南》"^]。
 
 * 集中式数据保护信息板和报告
 * 基于角色的访问控制（ Role-Based Access Control ， RBAC ），确保安全性和委派。
@@ -143,7 +155,7 @@ NOTE: 适用于 UNIX 的 SnapCenter 插件不是独立插件，不能单独安�
 
 * SnapCenter 自定义插件
 +
-自定义插件受社区支持，可从下载 https://automationstore.netapp.com/home.shtml["NetApp 存储自动化商店"]。
+自定义插件受社区支持，可从下载 https://automationstore.netapp.com/home.shtml["NetApp 存储自动化商店"^]。
 
 
 
@@ -340,7 +352,7 @@ NOTE: MySQL ， DB2 和 MongoDB 自定义插件仅可通过 NetApp 社区获得�
 
 NetApp 支持创建和使用自定义插件的功能；但是， NetApp 不支持您创建的自定义插件。
 
-有关详细信息，请参见 link:../protect-scc/concept_develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"^]
+有关详细信息，请参见 link:../protect-scc/concept_develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"]
 
 
 
