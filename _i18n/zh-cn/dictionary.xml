@@ -1583,9 +1583,7 @@
   <block id="b7a9dc8480c6c9ddaf18628dd79ad61c" category="list-text">可以配置数据磁盘组的名称，但请确保要执行克隆的主机上的任何其他 ASM 磁盘组不使用该名称。</block>
   <block id="c014ba7a65ae579a2708beb53f5cb976" category="paragraph">驻留在 ASM 磁盘组上的数据文件会在 SnapCenter 克隆工作流中进行配置。</block>
   <block id="24aa4d1e777d4325bd7a1077e581f96f" category="list-text">数据 LUN 和日志 LUN 的保护类型（例如镜像，存储或镜像存储）应相同，以便在使用日志备份克隆到备用主机期间发现二级定位器。</block>
-  <block id="d75efecf969e318e8631aa633aad8a12" category="list-text">您应在源数据库参数文件中将 exclude_seed_cdb_view 的值设置为 false ，以检索与种子 PDB 相关的信息，以便克隆 12_c_ 数据库的备份。</block>
   <block id="b110267fdfa8216b83e8bc846b22d07d" category="paragraph">种子 PDB 是系统提供的模板， CDB 可以使用该模板创建 PDB 。种子 PDB 名为 PDB $seed 。有关 PDB $seed 的信息，请参见 Oracle 文档 ID 1940806.1 。</block>
-  <block id="62b66450faeba3ebd26d4c69a00d90b2" category="admonition">您应在备份 12_c_ 数据库之前设置此值。</block>
   <block id="940b5af8a20e62b932b6d5f2cb0da283" category="list-text">SnapCenter 支持备份由 autofs 子系统管理的文件系统。如果要克隆数据库，请确保数据挂载点不在 autofs 挂载点的根目录下，因为插件主机的 root 用户无权在 autofs 挂载点的根目录下创建目录。</block>
   <block id="baa3ce4e65add470c5afafe3bbd7cb96" category="paragraph">如果控制和重做日志文件位于数据挂载点下，则应修改控制文件路径，然后相应地重做日志文件路径。</block>
   <block id="e49a081ca61f3da79922a289670f328d" category="admonition">您可以手动将新克隆的挂载点注册到 autofs 子系统。新克隆的挂载点不会自动注册。</block>
@@ -3186,7 +3184,6 @@
   <block id="5f1f3816baaf1ae27261430125d83764" category="admonition">如果稍后升级 SnapCenter 或 ONTAP ，则应重新运行适用于 Data ONTAP 的 RBAC 用户创建程序工具以更新先前创建的用户角色。为早期版本的 SnapCenter 或 ONTAP 创建的用户角色无法在升级后的版本中正常工作。重新运行此工具时，它会自动处理升级。您无需重新创建角色。</block>
   <block id="9dc5053bca32e6394932747f3adab2c4" category="inline-link">《 ONTAP 9 管理员身份验证和 RBAC 高级指南》</block>
   <block id="cf450319b4b50a20dcf243d6273acbf4" category="paragraph">有关设置 ONTAP RBAC 角色的详细信息，请参见<block ref="4054a3747c1ed1604c443c75434e693a" category="inline-link-rx"></block>。</block>
-  <block id="2e8490dc7bdf2a0cd98dea04491763dc" category="admonition">为了确保一致性， SnapCenter 文档将角色称为使用特权。OnCommand System Manager 图形用户界面使用术语 "`attribute` " 代替 "`privilege 。` 设置 ONTAP RBAC 角色时，这两个术语的含义相同。</block>
   <block id="eaa07c06fe679751494bfd4b2951b580" category="list-text">在存储系统上，输入以下命令以创建新角色：</block>
   <block id="2c7e6d2877f857f126c24c7742e84098" category="paragraph">`ssecurity login role create &lt;role_name\&gt; -cmddirname "command" -access all – vserver &lt;svm_name\&gt;`</block>
   <block id="af7e38d09fe8c21a2365c6a2c6e9bafe" category="list-text">svm_name 是 SVM 的名称。如果将此字段留空，则默认为集群管理员。</block>
@@ -5184,7 +5181,6 @@
   <block id="d1359b74848d2219dab91038da7ebea8" category="list-text">克隆文件系统备份</block>
   <block id="95916fa1aeaccaca841a441bf77df5cf" category="list-text">监控备份，还原和克隆操作</block>
   <block id="9ca511d334b6134d9bc41cb47f1de155" category="admonition">适用于 Windows 的插件不支持备份和还原 SMB 共享上的文件系统。</block>
-  <block id="a303765ccf8e62e799f0ecddd5246086" category="summary">在创建备份之前定义备份策略可为您提供成功还原或克隆文件系统所需的备份。您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO ）在很大程度上决定了您的备份策略。</block>
   <block id="256a24bb2bbfd11bdbce6eda99d9c9f4" category="doc">为 Windows 文件系统定义备份策略</block>
   <block id="f39d4c826787f2bc363e01f37833b893" category="paragraph">在创建备份之前定义备份策略可为您提供成功还原或克隆文件系统所需的备份。您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO ）在很大程度上决定了您的备份策略。</block>
   <block id="49a469761aa5e6bfe27af78b7c460d38" category="section-title">Windows 文件系统的备份计划</block>
@@ -7609,8 +7605,6 @@
   <block id="f5834ae40c2c791cfe589857bdad345c" category="paragraph">您可以通过编辑spl.properties或使用SnapCenter 图形用户界面或cmdlet来启用或禁用此参数。</block>
   <block id="7de59fae501cc41425b292c47c8d9c12" category="list-text">对于NVMe、如果必须从连接中排除任何目标端口、则应在/var/opt/snapcenter/SCU/etc/nv.conf文件中添加目标节点名称和端口名称。</block>
   <block id="71ce3de936c35ae0967019943cb6334a" category="paragraph">如果此文件不存在、则应按以下示例所示创建此文件：</block>
-  <block id="280f5c08d4f27f31b36e59d180eaeae6" category="paragraph">_blacklist｛_</block>
-  <block id="8c6edcef1c9a50bf9ecd0f192cee6137" category="paragraph">_｝_</block>
   <block id="bf51eb5d79e16ead1ceda527dda582b6" category="doc">SnapCenter 服务器和插件支持的REST API</block>
   <block id="9ee6893a33efb203b34a11b10f9d01eb" category="paragraph">您可以使用此API登录到SnapCenter 服务器。此 API 将返回一个用户授权令牌，用于对后续请求进行身份验证。</block>
   <block id="f274ae38a991dabe63ac23d64b046496" category="paragraph">您可以使用API执行不同的操作。</block>
@@ -7923,4 +7917,7 @@
   <block id="9381fc6f6aaa8ab22b178a15c78fbc00" category="paragraph">有关UNIX命令的详细信息、请参见<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
   <block id="c41cef29e8776e4670cacce5775ec017" category="paragraph">自定义插件受社区支持，可从下载<block ref="554f546cf121f440c6cfd97d643765df" category="inline-link-rx"></block>。</block>
   <block id="0403e11795fb79ba2a2b089e5837948f" category="paragraph">有关详细信息，请参见 <block ref="5d3441c720944f2bfbf67dc2b7c68bf1" category="inline-link-macro-rx"></block></block>
+  <block id="74fec6bb431ffa93b327d4933607ec3f" category="admonition">为了确保一致性， SnapCenter 文档将角色称为使用特权。OnCommand 系统管理器图形用户界面使用术语_attribute_、而不是_privilege。设置ONTAP RBAC角色时、这两个术语的含义相同。</block>
+  <block id="654c0ff0573689496c47502d09cfe7a8" category="list-text">您应在源数据库参数文件中将exclude_seed_cdb_view的值设置为false、以检索与种子PDB相关的信息、以便克隆12_c_数据库的备份。</block>
+  <block id="dfb3e8f24407538f95c7f42d27411d1b" category="admonition">您应在备份12_c_数据库之前设置此值。</block>
 </blocks>

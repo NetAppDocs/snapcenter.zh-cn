@@ -55,13 +55,13 @@ summary: 克隆 Oracle 数据库之前，您应确保满足前提条件。
 
 
 * 数据 LUN 和日志 LUN 的保护类型（例如镜像，存储或镜像存储）应相同，以便在使用日志备份克隆到备用主机期间发现二级定位器。
-* 您应在源数据库参数文件中将 exclude_seed_cdb_view 的值设置为 false ，以检索与种子 PDB 相关的信息，以便克隆 12_c_ 数据库的备份。
+* 您应在源数据库参数文件中将exclude_seed_cdb_view的值设置为false、以检索与种子PDB相关的信息、以便克隆12_c_数据库的备份。
 +
 种子 PDB 是系统提供的模板， CDB 可以使用该模板创建 PDB 。种子 PDB 名为 PDB $seed 。有关 PDB $seed 的信息，请参见 Oracle 文档 ID 1940806.1 。
 
 +
 
-NOTE: 您应在备份 12_c_ 数据库之前设置此值。
+NOTE: 您应在备份12_c_数据库之前设置此值。
 
 * SnapCenter 支持备份由 autofs 子系统管理的文件系统。如果要克隆数据库，请确保数据挂载点不在 autofs 挂载点的根目录下，因为插件主机的 root 用户无权在 autofs 挂载点的根目录下创建目录。
 +
@@ -80,15 +80,10 @@ NOTE: 您可以手动将新克隆的挂载点注册到 autofs 子系统。新克
 如果此文件不存在、则应按以下示例所示创建此文件：
 
 +
-_blacklist｛_
-
-+
 ....
-# You can add comments by using the ‘#’ at the beginning of the line
+blacklist {
 nn-0x<target_node_name_1>:pn-0x<target_port_name_1>
 nn-0x<target_node_name_2>:pn-0x<target_port_name_2>
+}
 ....
-+
-_｝_
-
 

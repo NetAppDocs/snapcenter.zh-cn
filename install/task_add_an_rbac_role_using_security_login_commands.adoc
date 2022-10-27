@@ -48,7 +48,7 @@ NOTE: 如果稍后升级 SnapCenter 或 ONTAP ，则应重新运行适用于 Dat
 有关设置 ONTAP RBAC 角色的详细信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-adm-auth-rbac/home.html["《 ONTAP 9 管理员身份验证和 RBAC 高级指南》"^]。
 
 
-NOTE: 为了确保一致性， SnapCenter 文档将角色称为使用特权。OnCommand System Manager 图形用户界面使用术语 "`attribute` " 代替 "`privilege 。` 设置 ONTAP RBAC 角色时，这两个术语的含义相同。
+NOTE: 为了确保一致性， SnapCenter 文档将角色称为使用特权。OnCommand 系统管理器图形用户界面使用术语_attribute_、而不是_privilege。设置ONTAP RBAC角色时、这两个术语的含义相同。
 
 * 步骤 *
 
