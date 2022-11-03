@@ -113,4 +113,5 @@ NOTE: 您应对每个权限重复此命令。
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver iscsi" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume clone split status"-access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname “volume managed-feature” -access all`
 
