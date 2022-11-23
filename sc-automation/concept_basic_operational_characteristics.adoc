@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: sc-automation/concept_basic_operational_characterstics.html 
+permalink: sc-automation/concept_basic_operational_characteristics.html 
 keywords: request and response, object identifiers, synchronous, asynchronous 
 summary: 虽然 REST 建立了一组通用的技术和最佳实践，但每个 API 的详细信息可能因设计选择而异。 
 ---

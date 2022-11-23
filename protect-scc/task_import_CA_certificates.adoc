@@ -54,7 +54,7 @@ summary: 导入 SnapCenter 服务器和 Windows 主机插件的 CA 证书
 |===
 +
 
-NOTE: 导入证书应与私钥捆绑在一起（支持的格式为： * 。 pfx ， * p12 ， * 。 p7b ）。
+NOTE: 导入证书应与私钥捆绑在一起(支持的格式为：*。pfx、*。p12和*。p7b)。
 
 . 对 "Personal" 文件夹重复步骤 5 。
 

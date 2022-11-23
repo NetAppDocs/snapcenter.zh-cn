@@ -184,9 +184,6 @@ vserver iscsi connection show
 
 vserver show
 
-|===
-|===
-| 只读命令： ONTAP 8.3.0 及更高版本所需的最低权限 
 
 
  a| 
@@ -195,5 +192,7 @@ vserver show
 network interface show
 
 vserver
+
+MetroCluster 显示
 
 |===

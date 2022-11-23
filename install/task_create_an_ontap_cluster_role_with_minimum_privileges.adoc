@@ -39,12 +39,13 @@ NOTE: 您应对每个权限重复此命令。
 
 您应运行多个 ONTAP 命令行界面命令来创建集群角色和分配权限。
 
-* `ssecurity login role create -role role_name -cmddirname "cluster identity modify" -vserver Cluster_name 或 cluster_name -access all`
-* `ssecurity login role create -role role_name -cmddirname "cluster identity show" -vserver Cluster_name -access all`
-* `ssecurity login role create -role role_name -cmddirname "cluster modify" -vserver Cluster_name -access all`
-* `ssecurity login role create -role role_name -cmddirname "cluster peer show" -vserver Cluster_name -access all`
-* `ssecurity login role create -role role_name -cmddirname "cluster show" -vserver Cluster_name -access all`
-* `ssecurity login role create -role role_name -cmddirname "event generate-autosupport-log" -vserver Cluster_name -access all`
+* `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "metrocluster show" -access readonly`
+* `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "cluster identity modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster identity show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster peer show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "event generate-autosupport-log" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "job history show" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "job stop" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "LUN" -access all`
