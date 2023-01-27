@@ -76,6 +76,8 @@ entries:
     url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
   - title: 配置 IIS 应用程序池以启用 Active Directory 读取权限
     url: "/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html"
+- title: 配置审核日志设置
+  url: "/install/task_configure_audit_log_settings.html"
 - title: 添加存储系统
   url: "/install/task_add_storage_systems.html"
 - title: 添加基于 SnapCenter 标准控制器的许可证

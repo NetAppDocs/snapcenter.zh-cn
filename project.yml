@@ -1,6 +1,6 @@
 ---
 settings:
-  name: SnapCenter Software 4.7
+  name: SnapCenter Software 4.8
   internal:
     pdf_enabled: true
   prod:
@@ -9,6 +9,9 @@ settings:
   versions:
   - name: SnapCenter 软件
     url: "/snapcenter"
+    version-number: '4.8'
+  - name: SnapCenter 软件
+    url: "/snapcenter-4.7"
     version-number: '4.7'
   - name: SnapCenter 软件
     url: "/snapcenter-46"
@@ -19,7 +22,7 @@ settings:
   langs: zh-cn,us-en,ja-jp,zh-tw,ko-kr,fr-fr,de-de
 sidebar:
   entries:
-  - title: SnapCenter 软件4.7文档
+  - title: SnapCenter 软件4.8文档
     url: "/index.html"
   - title: 发行说明
     url: "/release-notes.html"
@@ -42,7 +45,7 @@ homepage:
   - title: 入门
     links:
     - title: 发行说明
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883299
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885481
     - title: 了解 SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: 有关保护 SQL Server 数据库的快速参考
@@ -102,9 +105,9 @@ homepage:
   - title: 更多资源
     links:
     - title: "《 cmdlet 参考指南》"
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482
     - title: 命令参考指南
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486
     - title: 早期版本的 SnapCenter 文档
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: NetApp 知识库— SnapCenter

@@ -1,7 +1,7 @@
 ---
 permalink: protect-sco/add-application-volume.html 
 sidebar: sidebar 
-keywords: application volume, overview, add, modify, delete 
+keywords: application volume, overview, add, modify, delete, Oracle database 
 summary: 您应手动添加应用程序卷。 
 ---
 = 添加应用程序卷

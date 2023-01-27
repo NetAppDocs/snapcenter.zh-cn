@@ -23,7 +23,7 @@ NOTE: SnapCenter 不支持在不同集群上使用相同名称的多个 SVM 。S
 * 添加主机，安装插件，发现（刷新）资源以及配置插件。
 * 运行 invoke-SmConfigureResources ，将现有 Microsoft SQL Server 数据库从本地磁盘移动到 NetApp LUN ，反之亦然。
 +
-有关运行 cmdlet 的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《 SnapCenter 软件 cmdlet 参考指南》"]
+有关运行 cmdlet 的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"]
 
 * 如果您使用 SnapCenter 服务器保护驻留在 VMware RDM LUN 或 VMDK 上的 SQL 数据库，则必须部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件。有关详细信息，请参见适用于 VMware vSphere 的 SnapCenter 插件文档。
 +

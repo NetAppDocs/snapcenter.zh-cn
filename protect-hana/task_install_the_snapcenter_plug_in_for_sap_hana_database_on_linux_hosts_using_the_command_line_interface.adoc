@@ -50,6 +50,6 @@ https://imt.netapp.com/matrix/imt.jsp?components=105284;&solution=1259&isHWU&src
 . 编辑 /< 安装目录 >/NetApp/snapcenter/SCC/etc/SC_SMS_Services.properties 文件，然后添加 plugins_enabled = HANA ： 3.0 参数。
 . 使用 Add-Smhost cmdlet 和所需参数将主机添加到 SnapCenter 服务器。
 +
-有关可与命令结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与命令结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 

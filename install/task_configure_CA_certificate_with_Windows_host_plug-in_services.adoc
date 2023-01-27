@@ -28,14 +28,11 @@ summary: 您应使用 Windows 主机插件服务配置 CA 证书，以激活已�
  > netsh http delete sslcert ipport=0.0.0.0:8145
 . 运行以下命令，将新安装的证书与 Windows 主机插件服务绑定：
 +
-` >$cert = "_< 证书指纹 >_ "`
-
-+
-` >$guid = [guid] ：： NewGuid （） .ToString （ "B" ）`
-
-+
-` > netsh http add sslcert ipport=0.0.0.0 ： _<SMCore Port>_ certhash=$cert AppID="$guid"`
-
+....
+> $cert = “_<certificate thumbprint>_”
+> $guid = [guid]::NewGuid().ToString("B")
+> netsh http add sslcert ipport=0.0.0.0: _<SMCore Port>_ certhash=$cert appid="$guid"
+....
 +
 例如：
 
@@ -43,6 +40,6 @@ summary: 您应使用 Windows 主机插件服务配置 CA 证书，以激活已�
 ....
 > $cert = “a909502dd82ae41433e6f83886b00d4277a32a7b”
 > $guid = [guid]::NewGuid().ToString("B")
-> netsh http add sslcert ipport=0.0.0.0:8145 certhash=$cert appid="$guid"
+> netsh http add sslcert ipport=0.0.0.0: _<SMCore Port>_ certhash=$cert appid="$guid"
 ....
 

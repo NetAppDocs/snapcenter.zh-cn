@@ -26,7 +26,7 @@ image::../media/sc-F5-configure-workflow.png[SC F5 配置工作流]
 * Add-SmServer
 * Remove-SmServerCluster
 +
-有关详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 
 
@@ -38,4 +38,5 @@ image::../media/sc-F5-configure-workflow.png[SC F5 配置工作流]
 * 如果 SnapCenter 服务器之间发生故障转移，并且还存在现有 SnapCenter 会话，则必须关闭浏览器并重新登录到 SnapCenter 。
 * 在负载平衡器设置（ NLB 或 F5 ）中，如果您添加的节点已由 NLB 或 F5 节点部分解决，并且 SnapCenter 节点无法访问此节点，则 SnapCenter 主页会频繁在主机关闭和运行状态之间切换。要解决此问题描述，您应确保两个 SnapCenter 节点都能够解析 NLB 或 F5 节点中的主机。
 * 应在所有节点上执行用于MFA设置的SnapCenter 命令。应使用F5集群详细信息在Active Directory联合身份验证服务(AD FS)服务器中完成依赖方配置。启用MFA后、将阻止节点级别的SnapCenter UI访问。
+* 在故障转移期间、审核日志设置不会反映在第二个节点上。因此、当F5被动节点变为活动状态时、您应在该节点上手动重复审核日志设置。
 

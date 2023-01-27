@@ -568,9 +568,6 @@
   <block id="3109a55b6060cd504e355fdd531a0e16" category="paragraph">` &gt; netsh http delete sslcert ipport=0.0.0.0 ： _&lt;SMCore Port&gt;`</block>
   <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">例如：</block>
   <block id="cfeefc3191032a82f3264d4300d89c85" category="list-text">运行以下命令，将新安装的证书与 Windows 主机插件服务绑定：</block>
-  <block id="99c470daf80afb33d111c92f14095194" category="paragraph">` &gt;$cert = "_&lt; 证书指纹 &gt;_ "`</block>
-  <block id="20fb30dfe9f1ec90bb124da18ae04452" category="paragraph">` &gt;$guid = [guid] ：： NewGuid （） .ToString （ "B" ）`</block>
-  <block id="318849febfe915a444ce0f492dcc3995" category="paragraph">` &gt; netsh http add sslcert ipport=0.0.0.0 ： _&lt;SMCore Port&gt;_ certhash=$cert AppID="$guid"`</block>
   <block id="b97931d91e5908b44999bbc951cbee1f" category="summary">您可以从主存储或二级存储上的备份副本还原 SQL Server 数据库。除了数据库的原始位置之外，您还可以将数据库还原到其他目标，从而可以选择满足要求的目标。</block>
   <block id="f773433327b73966f565bf778dba8fce" category="doc">还原操作的源和目标</block>
   <block id="9f848691835222d0cd69e4d0dc96d02a" category="section-title">还原操作的源</block>
@@ -1593,10 +1590,7 @@
   <block id="43574ab73a6cbc674506ff003387dcb1" category="paragraph">操作系统</block>
   <block id="895327977020e495debf0b375c7541d8" category="paragraph">AIX 6.1 或更高版本</block>
   <block id="974c2262615af73433567515efbb80e9" category="paragraph">4 GB</block>
-  <block id="2dafadf226896cb3cd576171339c6e92" category="paragraph">Java 1.8.x （ 64 位） IBM Java</block>
   <block id="bac8e3a852c936b4db89afd35d4d962a" category="paragraph">如果已将 Java 升级到最新版本，则必须确保 /var/opt/snapcenter/spl/etc/spl.properties 上的 java_home 选项设置为正确的 Java 版本和路径。</block>
-  <block id="8550694ccd5a31f4fce5f8d906032e80" category="paragraph">通过 SnapCenter 4.4 及更高版本，非 root 用户可以安装适用于 AIX 的 SnapCenter 插件软件包并启动插件过程。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。</block>
-  <block id="15365f4ad2016523469fa400d8c372e8" category="list-text">确保非 root 用户属于 Oracle 安装组。</block>
   <block id="9fc7e0af2d8808b59624854d31dab1bb" category="list-text">编辑 /etc/ssh/sshd_config_ 文件以配置消息身份验证代码算法： macs HMAC-SHA2-256 和 MAC HMAC-SHA2-512 。</block>
   <block id="a522c9aaeab8d877d6b5ee133ac06025" category="paragraph">更新配置文件后重新启动 sshd 服务。</block>
   <block id="81eeab9506186e2dca8faefa78d54067" category="paragraph">示例</block>
@@ -1607,17 +1601,13 @@
   <block id="c9d390513716fa3f8a5e273f77a61c88" category="list-text">登录到要安装适用于 AIX 的 SnapCenter 插件软件包的 AIX 主机。</block>
   <block id="45eaa72ccd2ef9b50e78fc8cce523fc1" category="list-text">使用 visudo Linux 实用程序将以下行添加到 /etc/sudoers 文件中。</block>
   <block id="48e70d153806720eebac4a7aec8e0f2c" category="paragraph">_aix_user_是 您创建的非 root 用户的名称。</block>
-  <block id="165213b1e3edf24771bca90f4733f8db" category="paragraph">您可以从 * ORACLE_checksum.txt * 文件中获取校验和值，该文件位于 _C ： \ProgramData\NetApp\SnapCenter\Package Repository_ 。</block>
   <block id="0b0fd18186bda52c22aadf2139f743c5" category="paragraph">如果指定了自定义位置，则此位置将为 _custom_path\NetApp\SnapCenter\Package Repository_ 。</block>
   <block id="74781435cbc6fb9ba200eaf23bcdeaf1" category="admonition">此示例只能用作创建自己数据的参考。</block>
-  <block id="a2b1203f9f334871a5873cd98bbf1fb3" category="cell">* 最佳实践： * 出于安全原因，您应在完成每次安装或升级后删除 sudo 条目。</block>
   <block id="826556e756cdab94a0e1867b949a6a62" category="doc">添加主机和安装适用于 Linux 或 AIX 的插件软件包的前提条件</block>
   <block id="92f854eabda8c2aa761e01fba1c6ffd4" category="list-text">您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。</block>
-  <block id="3b859f32496d3f2bcdf0f4018df92a19" category="paragraph">适用于 Oracle 数据库的 SnapCenter 插件可以由非 root 用户安装。但是，您应该为非 root 用户配置 sudo 权限，以便安装和启动插件过程。安装此插件后，这些进程将以有效 root 用户身份运行。</block>
   <block id="b2e43cf8357eaf43ddb786837e13f48b" category="list-text">如果要在 AIX 主机上安装适用于 AIX 的 SnapCenter 插件软件包，则应已手动解析目录级符号链接。</block>
   <block id="7ea03b56d913b0b846ddb14167eed21a" category="paragraph">适用于 AIX 的 SnapCenter 插件软件包会自动解析文件级符号链接，而不是目录级符号链接以获取 java_home 绝对路径。</block>
   <block id="b5920495a710a16336b4343815e09685" category="list-text">为安装用户创建身份验证模式为 Linux 或 AIX 的凭据。</block>
-  <block id="374d8bb4c8991242f4d1db3a5f9de15b" category="list-text">您必须已在 Linux 或 AIX 主机上安装 64 位 Java 1.8.x 。</block>
   <block id="697264ee44b8135822004ecfca316383" category="paragraph">有关下载 Java 的信息，请参见：</block>
   <block id="6919c26b69875a76335f5a1dd643e508" category="inline-link">适用于所有操作系统的 Java 下载</block>
   <block id="b39cb17b9cdc66c349706beec444daeb" category="list-text"><block ref="b39cb17b9cdc66c349706beec444daeb" category="inline-link-rx"></block></block>
@@ -1872,7 +1862,6 @@
   <block id="4b4afc08c1d43ce9e4886a794bc3d7cd" category="paragraph">每次执行导入工具时的日志都存储在名称为 spl_migration_timestamp.log 的 /var/opt/snapcenter/spl/logs_ 目录中。您可以参考此日志来查看导入错误并对其进行故障排除。</block>
   <block id="92be3471faf8c6f450426df8acbe531d" category="summary">如果数据丢失，您可以使用 SnapCenter 将数据从一个或多个备份还原到活动文件系统，然后恢复数据库。</block>
   <block id="fbb97552b0524a5656aa7f96bad51e9d" category="paragraph">如果将 ASM 数据库从 ASMLIB 迁移到 ASMFD ，则使用 ASMLIB 创建的备份将无法用于还原数据库。您应在 ASMFD 配置中创建备份，并使用这些备份进行还原。同样，如果 ASM 数据库从 ASMFD 迁移到 ASMLIB ，则应在 ASMLIB 配置中创建备份以进行还原。</block>
-  <block id="1acd8224c87a1b1dc19ffd6fa16675a0" category="paragraph">还原数据库时，系统会在 Oracle 数据库主机上的 $ORACLE_HOME/DBS 目录中创建一个操作锁定文件（ .sm_lock_dbsid ），以避免对数据库执行多个操作。还原数据库后，操作锁定文件将自动删除。</block>
   <block id="0555155513875ba53e743b223483c213" category="admonition">不支持还原 SPFILE 和密码文件。</block>
   <block id="e760b586cefa27f7097ba67da884d07c" category="list-text">从数据库详细信息视图或资源组详细信息视图中选择数据库。</block>
   <block id="8c8b459174fcbb06d857b29487307398" category="list-text">从管理副本视图中，从主存储系统或二级（镜像或复制的）存储系统中选择 * 备份 * 。</block>
@@ -2308,10 +2297,7 @@
   <block id="a51e41e4cd7b03dd48ce2e65ed3e1736" category="list-text">SUSE Linux Enterprise Server （ SLES ）</block>
   <block id="083ad21990802d20fc5fdefdb7255565" category="paragraph">2 GB</block>
   <block id="3a955e6f54e73fa288537f456087e118" category="paragraph">Java 1.8.x （ 64 位） Oracle Java 和 OpenJDK 版本</block>
-  <block id="2ea002d427cbfb999f631ee124f6c1e4" category="paragraph">通过 SnapCenter 2.0 及更高版本，非 root 用户可以安装适用于 Linux 的 SnapCenter 插件软件包并启动插件过程。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。</block>
-  <block id="bf73671827fef4f1a412173c21cca9e0" category="list-text">/home/_sudo _user_//.SC_NetApp/snapcenter_linux_host_plugin.bin</block>
   <block id="4e665afb5c15dd75650eeba423b153f0" category="list-text">登录到要安装适用于 Linux 的 SnapCenter 插件软件包的 Linux 主机。</block>
-  <block id="35371c45053db2ea279f99081926a9d2" category="paragraph">_sudo _user_ 是您创建的非 root 用户的名称。</block>
   <block id="6b33644191204350f20a3a84f6152f47" category="summary">资源组是指必须向其添加要备份和保护的资源的容器。通过资源组，您可以同时备份与给定应用程序关联的所有数据。</block>
   <block id="a79101df6f2655709b2aa6b2ec32c488" category="doc">为 Oracle 数据库创建资源组和附加策略</block>
   <block id="e525da83465049bad6a7bf2676a73ce2" category="paragraph">您应确保在 ASM 磁盘组上包含文件的数据库应处于 "mount" 或 "open" 状态，以便使用 Oracle DBVERIFY 实用程序验证其备份。</block>
@@ -2518,7 +2504,6 @@
   <block id="b9721a35a6c374ded595576ccbd2f789" category="paragraph">以下工作流显示了必须执行备份操作的顺序：</block>
   <block id="fb21695f6b72866357b3e3381a3dd8d4" category="image-alt">Oracle 的备份工作流</block>
   <block id="74be1413d8c1294602864c1d9e25f626" category="paragraph">但是，如果上次备份完成并显示警告，则操作锁定文件可能不会被删除，下次备份操作将进入等待队列。如果未删除 * 。 sm_lock_dbsid* 文件，则此文件最终可能会被取消。在这种情况下，您必须执行以下步骤来手动删除操作锁定文件：</block>
-  <block id="aededc4f899d57c4f01639108c3e587e" category="list-text">在命令提示符处，导航到 $ORACLE_HOME/DBS 。</block>
   <block id="3ab07b443e5100312a8428cab6f6a083" category="list-text">删除操作锁定：``rm -rf .sm_lock_dbsid.``</block>
   <block id="8bfbb41a79c1c2438e1a53e2a727fb3c" category="paragraph">您应使用 _Install-SmHostPackage_ PowerShell cmdlet 在多个主机上安装适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包。</block>
   <block id="367659a073d284a1e67b11ac7a540d28" category="paragraph">您应在要安装此插件软件包的每个主机上以具有本地管理员权限的域用户身份登录到 SnapCenter 。</block>
@@ -2542,21 +2527,11 @@
   <block id="e78669315fa3cb3d6f0c002f2d950706" category="list-text">使用 _Add-SmHost_ cmdlet 指定主机名的集群 IP ，将节点添加到 SnapCenter 服务器。</block>
   <block id="681589da8e5ea7856b147b13f1dfc3a0" category="paragraph">发现节点 1 上的 Oracle 数据库（假设集群 IP 托管在节点 1 上）并创建数据库备份。如果发生故障转移，您可以使用在节点 1 上创建的备份来还原节点 2 上的数据库。您也可以使用在节点 1 上创建的备份在节点 2 上创建克隆。</block>
   <block id="195d8db26fde9acff2adb626b1025899" category="admonition">如果在运行任何其他 SnapCenter 操作时发生故障转移，则会存在陈旧的卷，目录和锁定文件。</block>
-  <block id="0952803227edd46a47ef4b484702384a" category="section-title">在静默模式或控制台模式下安装适用于 Linux 的插件软件包</block>
-  <block id="1b1ea6702103eaa6c019551c58eadf2f" category="paragraph">您可以使用命令行界面（ CLI ）在控制台模式或静默模式下安装适用于 Linux 的 SnapCenter 插件软件包。</block>
   <block id="38a6403c6b95c3993934085e06e83949" category="list-text">您应确保未设置显示环境变量。</block>
   <block id="7237746e5dd0e0279963b5c8e63878de" category="paragraph">如果设置了 display 环境变量，则应运行 unset display ，然后尝试手动安装此插件。</block>
   <block id="1f688ee8053bf9a570799e82e532c981" category="paragraph">在控制台模式下安装时，您需要提供必要的安装信息，而在静默模式下安装时，则无需提供任何安装信息。</block>
   <block id="9bd1bc5d05404746d14d6abd8dbeff62" category="paragraph">默认安装路径为 _C ： \ProgramData\NetApp\SnapCenter\PackageRepository 。可以从安装了 SnapCenter 服务器的主机访问此路径。</block>
   <block id="5c1710bcbaa54d3596474a1772fb16f8" category="list-text">在命令提示符处，导航到下载安装文件的目录。</block>
-  <block id="7f84f1f7bcbe72e3d29ae36712ba177a" category="list-text">根据您的首选安装模式，执行以下步骤之一。</block>
-  <block id="9938beade9d664b2ff37722b333ad588" category="cell">安装模式</block>
-  <block id="f3a29486bed19a90f2da6d007818b427" category="cell">步骤</block>
-  <block id="4da77e3f9dd240f6e8f0f0d9158931c6" category="paragraph">控制台模式</block>
-  <block id="82602ac8fbb0d9bd1ad61b19c8acd7a8" category="list-text">运行</block>
-  <block id="8e687db5cc8ca6a905dcffdf7a3f48b2" category="paragraph">` 。 /SnapCenter_linux_host_plugin.bin – i console`</block>
-  <block id="6a2864f971041eec7dde349f5cb3ac19" category="list-text">按照屏幕上的提示完成安装。</block>
-  <block id="83abfa620bfb1e15b56d0797f356014b" category="paragraph">静默模式</block>
   <block id="9d8cac6a5cfb7edebc1dcf401bcd0d5d" category="paragraph">` ./SnapCenter_Linux_host_plugin.bin-I silent-Dport=8145-dserver_ip=SnapCenter_Server_FQDN-dserver_HTTPS_port=SnapCenter_Server_Port-Duser_install_DIR=/opt/custom_path`</block>
   <block id="50eb312d1da1f4e80fa5b62205e7e3be" category="list-text">编辑位于 /var/opt/snapcenter/spl/etc/_ 的 spl.properties 文件以添加 SPL_enabled_plugins=SCO ， scu ，然后重新启动 SnapCenter 插件加载程序服务。</block>
   <block id="647dea8558dda6998a36aeb80b501e6f" category="admonition">安装插件软件包时，会在主机上注册插件，而不是在 SnapCenter 服务器上注册插件。您应使用 SnapCenter 图形用户界面或 PowerShell cmdlet 添加主机，以便在 SnapCenter 服务器上注册插件。添加主机时，请选择 " 无 " 作为凭据。添加主机后，系统会自动发现已安装的插件。</block>
@@ -3710,7 +3685,6 @@
   <block id="3b5d218d734c41cfe8d9efd5e6fc8373" category="list-text">位于 ONTAP FAS 或 AFF 主系统上并复制到 ONTAP FAS 或 AFF 二级系统的数据</block>
   <block id="7deab53ede49d0d1a58c65f2e25ff259" category="list-text">ONTAP Select 主系统上的数据</block>
   <block id="bc549d53e5e7a7aeb8a41511751a99f2" category="list-text">内部部署在混合云中以保护以下内容：</block>
-  <block id="0dca0a7e993ee78e7df3e6d98ad0e813" category="list-text">位于 ONTAP FAS 或 AFF 主系统上并复制到 Cloud Volumes ONTAP 或 NetApp 私有存储二级系统的数据</block>
   <block id="ca5570a253e3c0a27562c65c06bb6125" category="list-text">在公有云中保护以下内容：</block>
   <block id="b340c2b4a7a978a510c8ebb351622143" category="list-text">位于 Cloud Volumes ONTAP （原 ONTAP 云）主系统上的数据</block>
   <block id="1b195709096f08d5640d18382cb88214" category="paragraph">SnapCenter 包括以下主要功能：</block>
@@ -5110,7 +5084,6 @@
   <block id="92cc2a9a2d5824e9c2b490a8fb082801" category="paragraph">如果要在自动删除 SnapCenter 存储之前指定 Snapshot 副本的数量，请选择此选项。</block>
   <block id="0a3cfeac0775871baedb24392bc4423c" category="paragraph">删除早于的 Snapshot 副本</block>
   <block id="9fbc3fb0ee9d4d329dbc0f3053b7b871" category="paragraph">如果要指定 SnapCenter 在删除备份副本之前保留备份副本的天数，请选择此选项。</block>
-  <block id="e19ad44a5949f6c604b843ea60587e80" category="admonition">如果计划启用 SnapVault 复制，则应将保留计数设置为 2 或更高。如果将复制计数设置为 1 ，则保留操作可能会失败。这是因为在将较新的 Snapshot 副本复制到目标之前，第一个 Snapshot 副本是 SnapVault 关系的参考 Snapshot 副本。</block>
   <block id="6c713d56e86f927e1bd66c7de2ed52c1" category="summary">如果要一次在多个主机上安装适用于 Microsoft Windows 的 SnapCenter 插件，可以使用 Install-SmHostPackage PowerShell cmdlet 来执行此操作。</block>
   <block id="5e384e3303c9f77f2d01c5c5ef33a4d5" category="doc">使用 PowerShell cmdlet 在多个远程主机上安装适用于 Microsoft Windows 的 SnapCenter 插件</block>
   <block id="0d9483465e761bb4492b6191a84c809a" category="paragraph">如果要一次在多个主机上安装适用于 Microsoft Windows 的 SnapCenter 插件，可以使用 `Install-SmHostPackage` PowerShell cmdlet 来执行此操作。</block>
@@ -5574,13 +5547,8 @@
   <block id="e26fb7c625f4366f8f4f984c45ecd6fc" category="list-text">您必须已创建自定义插件。有关详细信息，请参见开发人员信息。</block>
   <block id="0f06c6acfdc3dffd800e63c8779e7702" category="paragraph"><block ref="0f06c6acfdc3dffd800e63c8779e7702" category="inline-link-macro-rx"></block></block>
   <block id="68fb2fed97574d4bec00513cc08371c2" category="list-text">如果要管理 MySQL 或 DB2 应用程序，必须已下载 NetApp 提供的 MySQL 和 DB2 自定义插件。</block>
-  <block id="f89305d1d014c12309b5d1517ccb86c1" category="list-text">您必须已在 Linux 或 Windows 主机上安装 64 位 Java 1.8 。</block>
   <block id="f6435544e19487a5d349a72241d6531d" category="list-text">自定义插件必须在执行添加主机操作的客户端主机上可用。</block>
   <block id="0db377921f4ce762c62526131097968f" category="section-title">常规</block>
-  <block id="77e7447575a3762683d98ed271c3c484" category="list-text">您必须已在 Linux 主机上安装 Java 1.8 64 位。</block>
-  <block id="a4e3a610e00b4c12463fae493d4a60a0" category="paragraph">如果您对 SnapCenter 服务器主机使用 Windows 2019 或 Windows 2016 ，则必须安装 Java 1.8 ， 64 位。互操作性表工具（ IMT ）包含有关要求的最新信息。</block>
-  <block id="37a4cc09c312ec6afaacfc25056bc091" category="list-text">您必须为非 root 用户配置 sudo 权限，才能提供对多个路径的访问权限。使用 visudo Linux 实用程序将以下行添加到 /etc/sudoers 文件中。例如：</block>
-  <block id="68c649f38a72af40607349aa57e26c9f" category="paragraph">non_root_user 是您创建的非 root 用户的名称。</block>
   <block id="8c1af9a95c5ff9086ee5697a78397ae5" category="summary">通过 SnapCenter 服务器，您可以将应用程序作为 SnapCenter 的插件进行部署和管理。</block>
   <block id="72631a8144cabf57a431e307c720be4b" category="paragraph">通过 SnapCenter 服务器，您可以将应用程序作为 SnapCenter 的插件进行部署和管理。您选择的应用程序可以插入到 SnapCenter 服务器中，以实现数据保护和管理功能。</block>
   <block id="3e4caa3106c658c78cb8f07a8040c65b" category="paragraph">通过 SnapCenter ，您可以使用不同的编程语言开发自定义插件。您可以使用 Perl ， Java ，批处理或其他脚本语言开发自定义插件。</block>
@@ -7465,9 +7433,7 @@
   <block id="8fa1aa495cfe5fdc95202bda34adafcd" category="paragraph">无论 SnapCenter 服务器是否添加了任何插件或管理了任何插件，都将备份和恢复 SnapCenter 服务器数据。</block>
   <block id="30c24db21140190d4033af17ccd83090" category="list-text">* SnapCenter 插件和存储灾难恢复 *</block>
   <block id="67c5ed4921b287cb12a0c466f01e9689" category="admonition">如果多路径配置文件中的 user_friendly_names 选项设置为 yes ，则不支持 SAN 配置。</block>
-  <block id="f91d0c3af79b649ecca3ab95634c22c6" category="list-text">sudo 版本介于 1.8.7 和 1.8.19P2 之间。</block>
   <block id="51fb25555c87830dd2151ad5f3b7a845" category="paragraph"><block ref="51fb25555c87830dd2151ad5f3b7a845" category="inline-link-macro-rx"></block></block>
-  <block id="10e4911e9effb28d4e43d47f67fac6db" category="paragraph">为 Oracle 数据库创建备份时，会在 Oracle 数据库主机上的 _$ORACLE_HOME/DBS_ 目录中创建一个操作锁定文件（ _.sm_lock_dbsid_ ），以避免对数据库执行多个操作。备份数据库后，操作锁定文件将自动删除。</block>
   <block id="378c4677444d1c0a4a5f7af5b98179fa" category="paragraph"><block ref="18c30fe5285c9c31acdd1bd6d51af1bd" category="inline-link-macro-rx"></block>。</block>
   <block id="ae75553103cbeaaaa3b0e4002805ae6f" category="paragraph"><block ref="ae75553103cbeaaaa3b0e4002805ae6f" category="inline-link-macro-rx"></block></block>
   <block id="6ce007c78eb3953e5a2c4d5ee67f6f7e" category="inline-link-macro">在 Windows Server 2012 或更高版本上为 Microsoft Exchange Server 配置组托管服务帐户</block>
@@ -7485,10 +7451,6 @@
   <block id="6b98b59317c1c01b7bc7ca4cd17411bb" category="paragraph">在非虚拟化存储系统和虚拟化存储系统上，作为 SnapCenter 操作一部分运行的所有预处理和后处理脚本都会在插件主机上执行。</block>
   <block id="c157096c2e47e568177494234a87f0e1" category="list-text">UNIX脚本应位于插件主机上。</block>
   <block id="fef867655f1f81bcdd0d00a9356cb04e" category="admonition">脚本路径会在执行时进行验证。</block>
-  <block id="ef663b0b3b7a27afee6c150520bfb95a" category="paragraph">仅适用于Windows、您可以指定多个脚本。您应在每个脚本路径后按* Enter *、以便在单独的行中列出每个脚本。不允许使用分号（；）。您可以指定多个预处理和多个后处理脚本。一个脚本可以同时编码为预处理脚本和后处理脚本，并可调用其他脚本。</block>
-  <block id="f857e3b29391e444ec1b7f560c89a1ee" category="admonition">对于UNIX、不能指定多个脚本。</block>
-  <block id="90de0033880b7e0780a5ee32f1b401ff" category="paragraph">对于Windows、超时设置为15分钟、无法修改。</block>
-  <block id="a9a44363ed14921d094b6371dd75c7f1" category="paragraph">对于UNIX、默认情况下超时设置为60秒。您可以修改超时值。</block>
   <block id="7d901a35f38f46ac340bf0fcef37cb9d" category="paragraph">Windows预处理和后处理脚本输出文件的默认目录为Windows\System32。</block>
   <block id="7a21760d7cbd0896708b77121ef519dc" category="paragraph">UNIX预处理和后处理脚本没有默认位置。您可以将输出文件重定向到任何首选位置。</block>
   <block id="eccc8325175b53fdef9a1846222d4161" category="section-title">支持的升级路径</block>
@@ -7538,8 +7500,6 @@
   <block id="487a34d280250073f86b353bd430b05b" category="paragraph">如果需要、您可以更改此路径并重新启动SMcore服务。建议您使用默认安全路径。</block>
   <block id="cb0f6b6fa4cffa93ac67dd15850cae3d" category="paragraph">可以通过API：API /4.7/configsettings从Swagger显示密钥值</block>
   <block id="cf2ded6f4d7ccf880ce7a042e4726b3e" category="paragraph">您可以使用GET API显示密钥的值。不支持设置API。</block>
-  <block id="801129a6382d5583ff918700b1c08bcc" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
-  <block id="990d8375f83595a5ed234c9b7d01d800" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。SnapCenter cmdlet 帮助或<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block> 包含有关 PowerShell cmdlet 的详细信息。</block>
   <block id="3bcbed691a828d3bec798c7f504ae72f" category="paragraph">SnapCenter 会在完成Snapshot副本操作后对SnapMirror和SnapVault 执行更新。SnapMirror和SnapVault 更新是在SnapCenter 作业中执行的；请勿创建单独的ONTAP 计划。</block>
   <block id="d332f88a3886e736c322b3643225a6cd" category="admonition">SnapCenter 不支持 SnapMirror 和 SnapVault 卷之间的级联关系（ * 主卷 * &gt; * 镜像 * &gt; * 存储 * ）。您应使用扇出关系。</block>
   <block id="08e9631e1208ded677a67844beb7e0f6" category="list-text">您必须已安装Microsoft .Net 4.7.2或更高版本。</block>
@@ -7547,8 +7507,6 @@
   <block id="a97c26d42ce7ddd336973734ea88cb27" category="inline-link-macro">对于没有Internet连接的原有系统、SnapCenter 升级或安装失败。</block>
   <block id="81c513c33c426053d0ffea586847b7ae" category="paragraph">有关.NET故障排除信息、请参见、 <block ref="dded983644794c871dd2db9dcf66e032" category="inline-link-macro-rx"></block></block>
   <block id="76532e7091335c4eb76878af878c5b79" category="paragraph">请勿在密码中使用双引号(")或反勾号(`)。不应使用小于(&lt;)和感叹号(！) 密码中的符号。例如、小于&lt;！10、小于10&lt;！、回退键`12。</block>
-  <block id="ced7a5b3383b556d1b18d34c718324e0" category="inline-link">《SnapCenter 软件4.7发行说明》</block>
-  <block id="999d9efd57a168cef0440d07870393a9" category="paragraph">有关详细信息，请参见<block ref="237f55bc8fab90384c3ca78c8a284ce0" category="inline-link-rx"></block>。</block>
   <block id="07a2a06d39605aa9ff4e7d9c550b1f32" category="admonition">您应先验证挂载路径的路径和内容、然后再将其列为外部日志位置。</block>
   <block id="75274e3b5c9387e61941a9dbd37f3bda" category="list-text">支持使用归档日志管理(ALM)执行还原和克隆操作</block>
   <block id="5bc73a697938fe752e1c9b686f4c9bca" category="list-text">您可以通过将enable_lunpath_monitoring参数的值设置为false来禁用此功能。</block>
@@ -7559,7 +7517,6 @@
   <block id="f82f8d5187ab10ecec9a6d1d0fe7041f" category="list-text">备份、还原、克隆、挂载、卸载、 NVMe硬件支持目录、取消目录和验证操作、但VMDK和RDM等虚拟化环境除外。</block>
   <block id="77e1aff98fab667da904795d94a0856d" category="paragraph">不带分区或具有单个分区的设备支持上述操作。</block>
   <block id="3bf355c6205f457fe62af33466b47331" category="admonition">您可以通过在内核中设置原生 多路径选项来为NVMe设备配置多路径解决方案。不支持设备映射程序(Device Mapper、DM)多路径。</block>
-  <block id="313e53f94847871555c0dacdb19532a4" category="paragraph">+有关受支持版本的最新信息、请参见<block ref="89a335e37ffcb5152f6dbe1ca3dcb8c4" category="inline-link-rx"></block>。</block>
   <block id="0ac22ed74dd628cec8a2c5e2f64bf612" category="list-text">如果要备份的数据库很大(以TB为单位)、则应将SnapCenter 服务器主机中的_C：\Program Files\NetApp \SMCore\SMCoreServiceHost.exe配置_文件中的RESTTimeout值增加到86400000毫秒。</block>
   <block id="12030a592b1dcd9007e06eda350e5904" category="list-text">如果要恢复到特定日期和时间，请选择 * 日期和时间 * 并指定日期和时间以及辅助目标。</block>
   <block id="740364074f07d3ca5c0b017db01d8838" category="paragraph">SnapCenter 可根据指定的SCN或选定的日期和时间确定并挂载并编目执行PITR所需的最佳数据和日志备份数。</block>
@@ -7574,12 +7531,6 @@
   <block id="220e4e8875d5bfeb100296afce222233" category="paragraph">在* sc_oratab.config*中添加的非数据库条目不会列在"Resources"页面中。</block>
   <block id="7029c5bea579ddb5d0fdbec271a7133d" category="admonition">在升级SnapCenter 插件之前、始终建议对SC_oratab.config文件进行备份。</block>
   <block id="1dd4fbdaa30b28c2614e7e12c52dc73c" category="list-text">对于NVMe、应安装NVMe util</block>
-  <block id="cfbef5b174453552f2d4d170dce0dd4a" category="paragraph">有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
-  <block id="72b052d6a4c562079ee16c3d0499607b" category="paragraph">有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
-  <block id="c2dc8716150e6132feb70c1e92a1d958" category="paragraph">有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help command_name 来获取。或者，您也可以参考<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
-  <block id="88774565f8cf3008ad5989ee93e3c95a" category="admonition">如果您要管理RAC设置、则非root用户应为Oracle用户、不能仅为任何非root操作系统用户。</block>
-  <block id="d28c7ce894468cfd819345b4bf0b5f06" category="paragraph">或者，您也可以参考<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block> 或<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
-  <block id="f7912f8718a1ef8c305b03f04aa3ed87" category="paragraph">有关 UNIX 命令的详细信息，请参见<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
   <block id="f5834ae40c2c791cfe589857bdad345c" category="paragraph">您可以通过编辑spl.properties或使用SnapCenter 图形用户界面或cmdlet来启用或禁用此参数。</block>
   <block id="7de59fae501cc41425b292c47c8d9c12" category="list-text">对于NVMe、如果必须从连接中排除任何目标端口、则应在/var/opt/snapcenter/SCU/etc/nv.conf文件中添加目标节点名称和端口名称。</block>
   <block id="71ce3de936c35ae0967019943cb6334a" category="paragraph">如果此文件不存在、则应按以下示例所示创建此文件：</block>
@@ -7732,11 +7683,6 @@
   <block id="c3117c33abd012814d4b2d7b924c1f8d" category="admonition">您应提供存储灾难恢复备份的目标路径。</block>
   <block id="2012ae142f225323da2a6e6b42372bd8" category="paragraph">创建新的服务器灾难恢复备份。</block>
   <block id="6d4bea151109003c5e0920bae84073a0" category="paragraph">服务器etc/host文件将不会还原。您可以从灾难恢复备份文件夹手动还原它。</block>
-  <block id="7a8511ac66e8ad507e84e1b59fb8c137" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block></block>
-  <block id="911e666bb69c0269db366306dcba920d" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
-  <block id="355ab8d4b3c8bcfd96ba2c083cf60281" category="paragraph">此外，您还可以使用 _Uninstall-SmHostPackage_ cmdlet 和所需参数从多个主机卸载插件。有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
-  <block id="08d73a168fe24a5b54b3d9999dc177a0" category="paragraph">有关 cmdlet 的信息，请参见<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
-  <block id="e42dff8645643bcf58420492d58f8cda" category="paragraph">有关详细信息，请参见<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
   <block id="5cfcff9080dfd6a0b46f31dd889d7691" category="list-text">应在所有节点上执行用于MFA设置的SnapCenter 命令。应使用F5集群详细信息在Active Directory联合身份验证服务(AD FS)服务器中完成依赖方配置。启用MFA后、将阻止节点级别的SnapCenter UI访问。</block>
   <block id="88b8c728864c341ef14637e289839640" category="list-text">ASP.NET 4.7.2</block>
   <block id="8098ea3ff2e42300d1835034eb9f2ad7" category="paragraph">+.NET Framework 4.7.2功能+</block>
@@ -7813,7 +7759,6 @@
   <block id="3ed7d0eb5098b6db6af6c5b3eb2ce30f" category="paragraph">使用_set-SmMultiFactorAuthentication -Disable_ cmdlet禁用MFA并清理启用MFA时创建的配置文件。</block>
   <block id="fe46b74f13369d6c44d60eb009d09999" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "snapmirror show-history"-access all`</block>
   <block id="3ff2f50a0428ccd330fd2b2e2baa3b97" category="doc">使用RBAC授权登录到SnapCenter</block>
-  <block id="fa5e0ef5462c888da7fe991f9bcf5da9" category="paragraph">除了使用 SnapCenter 图形用户界面之外，您还可以使用 PowerShell cmdlet 创建脚本以执行配置，备份和还原操作。某些 cmdlet 可能会随每个 SnapCenter 版本而发生更改。。<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block> 了解详细信息。</block>
   <block id="8674ed970a497f68c8817c2f50e67e43" category="section-title">使用多因素身份验证(Multi-Factor Authentication、MFA)登录到SnapCenter</block>
   <block id="87f394d82c9a69653bdcd732b405a220" category="paragraph">SnapCenter 服务器支持将MFA用于域帐户、此帐户属于活动目录。</block>
   <block id="4ec1436ddb22128657c95d226f087159" category="list-text">您应已启用MFA。</block>
@@ -7826,22 +7771,12 @@
   <block id="df83de2f1142c69999c260b19f81239e" category="paragraph">此用户帐户应位于Active Directory (AD)中</block>
   <block id="f7d89272be4f4a54f90ac672c9001efc" category="list-text">是否超过在AD中设置的允许的最大尝试次数</block>
   <block id="00bb96dadf000907b7f5bff0ae2a1a57" category="list-text">AD和AD FS是否已启动且正在运行</block>
-  <block id="b72b363fb9a595ad28aabe930bb28366" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
-  <block id="c70464b7e0f2ad9d136a0cce124b524e" category="inline-link">SnapCenter 4.7注意事项</block>
-  <block id="4be462fcf740489c25950b8da5069ee8" category="paragraph"><block ref="4be462fcf740489c25950b8da5069ee8" category="inline-link-rx"></block></block>
   <block id="773a4c1c97f6070d698ee85302dc51cf" category="list-text">对于还原前、还原后、挂载和卸载命令、您应通过以下路径检查这些命令是否位于插件主机上的命令列表中：</block>
   <block id="19650f12fd9f269a497d4edc60754137" category="paragraph">对于Windows：_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands_list.txt</block>
   <block id="e7b4efc5dd5b16a36c26e91652b78194" category="paragraph">对于Linux：/var/opt/snapcenter/scC/allowed_commands_list.txt</block>
   <block id="2dd7c4421097b3d796ff9bf355ebaa6e" category="admonition">如果命令列表中不存在这些命令、则操作将失败。</block>
   <block id="e61e5d73b3b042b28dcdf96a5c438a4e" category="list-text">对于克隆前或克隆后命令、您应通过以下路径检查这些命令是否位于插件主机上的命令列表中：</block>
-  <block id="4a80bf6e28aaba8782d26fd8348ce6e1" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考<block ref="9af97e8a01b20be8df7443d0a4ef81ca" category="inline-link-rx"></block></block>
   <block id="d5d9a4c4e51c27e556fb89bfdd11f0b0" category="list-text">对于用于暂停、Snapshot副本和取消静默操作的预后和后命令、您应通过以下路径检查这些命令是否位于插件主机上的命令列表中：</block>
-  <block id="9ac9a1a16b9b854c3b9c883b63a5f7a8" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。SnapCenter cmdlet 帮助和 cmdlet 参考信息包含有关 PowerShell cmdlet 的详细信息。<block ref="5e7d1ae427cf89aac03ab8d36d50c405" category="inline-link-rx"></block>。</block>
-  <block id="83a6f3b236b04c53983a7b4c375e880b" category="paragraph">有关可与命令结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
-  <block id="f1a3e7d70788bebca070b29762dc37eb" category="paragraph"><block ref="5e7d1ae427cf89aac03ab8d36d50c405" category="inline-link-rx"></block>。</block>
-  <block id="a4db0151065a2ee1abfaef83c4ceb68c" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="9af97e8a01b20be8df7443d0a4ef81ca" category="inline-link-rx"></block></block>
-  <block id="f3f2079e0fc30d00110219dabf6ef6ce" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
-  <block id="44cd542095ed7517091dbb356fe6673c" category="paragraph">有关 PowerShell cmdlet 的信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
   <block id="3c8f1b708d97734299340f633acf1b28" category="paragraph">如果使用的是iSCSI、则iSCSI服务应正在运行。</block>
   <block id="9415aa73bf3f3a2a034e0e07c5d506cf" category="section-title">SHA512哈希</block>
   <block id="aeff1fc8cacc5ff5c9b086664b2f5560" category="list-text">对于NetApp提供的自定义插件、您应确保已将自定义插件文件的SHA512哈希添加到_custom_plugin_checksum_list_文件中。</block>
@@ -7855,21 +7790,13 @@
   <block id="94e0e32bde2e2ee99521f81221ceee7a" category="list-text">已将生成的SHA512哈希添加到custom_plugin_checksum_list文件中的新行。</block>
   <block id="17bc29e04b5123febcd35bdbc90142b4" category="paragraph">注释以#符号开头、用于标识哈希所属的插件。</block>
   <block id="7867996900fccc9a8502aad8682cccfe" category="paragraph">以下是校验和文件中SHA512哈希条目的示例：</block>
-  <block id="3c346bb5f93f34966ee965302e263b4b" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。有关 PowerShell cmdlet 的信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="9af97e8a01b20be8df7443d0a4ef81ca" category="inline-link-rx"></block>。</block>
-  <block id="d08251d66235a8f6a65aacb7fbdc43ec" category="list-text">如果 SVM 中有多个数据路径（ LIF ），则 SnapCenter 会选择适当的数据路径（ LIF ）来挂载 NFS 克隆卷。但是，如果要指定特定数据路径（ LIF ），则必须运行 Set-SvmPreferredDataPath CLI 。有关可与命令结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
   <block id="49e317595cf8eea53ae1d965b4173dbc" category="list-text">您应该是分配给具有插件安装和卸载权限的角色的用户、例如SnapCenter 管理员角色。</block>
-  <block id="fba8e16f3f22c15c55085aa461b4a879" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，请参见<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
-  <block id="71f18f8813db5be2902a244346744c57" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份和还原操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
   <block id="fb6661786b7d5b1cfb5df7ffe94a3009" category="paragraph">如果第三方备份计划与 SnapCenter 备份计划重叠，则不支持这些计划。您不应修改计划并重命名在Windows计划程序或SQL Server代理中创建的备份作业。</block>
   <block id="5891deda92209d1d45144775b7d5c20d" category="admonition">您不应重命名在Windows计划程序或SQL Server代理中创建的备份作业。</block>
-  <block id="6cd1a141ceeb4cee6a85c4a31c4aeb35" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原，恢复，验证和克隆操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="9af97e8a01b20be8df7443d0a4ef81ca" category="inline-link-rx"></block></block>
-  <block id="e98179401fffdbe49af0925735c4e9d0" category="paragraph">有关详细信息，请参见<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
   <block id="b4681b9eaef5652378ef9426e99a8f63" category="paragraph">您必须运行以下命令，将 SnapCenter 服务器的 RESTTimeout 参数值增加到 20000000 毫秒： set-SmConfigSettings -Agent -configSettings @ ｛ "RESTTimeout" = "20000000" ｝ 。根据数据库大小、可以更改超时值、并且可以设置的最大值为86400000毫秒。</block>
   <block id="2bdfb7ceab741b8d183afcf3b24c6f17" category="list-text">克隆生命周期向导页面上的大多数字段都是不言自明的。以下信息介绍了可能需要指导的字段。</block>
   <block id="59080c688ea671f9f0cc2eed3afb7bf8" category="paragraph">请勿在密码中使用双引号(")或反勾号(`)。不应使用小于(&lt;)和感叹号(！) 密码中的符号。例如、小于&lt;！10、小于10&lt;！、回退键`12。</block>
-  <block id="29a6d4ddcd28e22d7ba6ab65da50bf6f" category="paragraph">有关运行 cmdlet 的信息，请参见<block ref="9af97e8a01b20be8df7443d0a4ef81ca" category="inline-link-rx"></block></block>
   <block id="0352418be0d30e5f0f0b3f664c74e1aa" category="admonition">在该插件的故障转移或故障恢复期间、不会立即刷新该插件的整体状态。主机和插件的整体状态将在后续主机刷新操作期间更新。</block>
-  <block id="d7b3c4517cc189c6cdd986195fa3f33f" category="sidebar">SnapCenter 软件4.7文档</block>
   <block id="ad2df38df99c722f88cf142744758e07" category="paragraph">有关受支持版本的最新信息，请参见<block ref="f05f98f17d4e0568e31244784ca320bd" category="inline-link-rx"></block></block>
   <block id="d91808c8a4d610ed99302113da2f85d2" category="paragraph"><block ref="0eee65cb82c15fd964b7785d5f117a10" category="inline-link-rx"></block></block>
   <block id="e306f8020786d4a39801b24a0c26a65d" category="paragraph">Windows Server 支持 SnapCenter 配置和数据保护。有关受支持版本的最新信息，请参见<block ref="26d76f2e486b882ba3b23e9b38f63829" category="inline-link-rx"></block>。</block>
@@ -7891,8 +7818,6 @@
   <block id="0cfe29479bcdd52d04233cb07867b8dc" category="paragraph">要修改端口详细信息，请参见 <block ref="e76f469a4971f2c04dd83de4f8464750" category="inline-link-macro-rx"></block>。</block>
   <block id="66ee30700091538587a27acf4ecad692" category="inline-link">REST API概述</block>
   <block id="9a9a51f1993f5461829d8466a8fb013e" category="paragraph">有关REST API的详细信息、请参见<block ref="ea5c19f623f4ce0e4a3a37a512890f94" category="inline-link-rx"></block>。</block>
-  <block id="ac82cdc7de65b45fb896f54ac6f878a6" category="paragraph">有关Windows cmdlet的详细信息、请参见<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
-  <block id="9381fc6f6aaa8ab22b178a15c78fbc00" category="paragraph">有关UNIX命令的详细信息、请参见<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
   <block id="c41cef29e8776e4670cacce5775ec017" category="paragraph">自定义插件受社区支持，可从下载<block ref="554f546cf121f440c6cfd97d643765df" category="inline-link-rx"></block>。</block>
   <block id="0403e11795fb79ba2a2b089e5837948f" category="paragraph">有关详细信息，请参见 <block ref="5d3441c720944f2bfbf67dc2b7c68bf1" category="inline-link-macro-rx"></block></block>
   <block id="74fec6bb431ffa93b327d4933607ec3f" category="admonition">为了确保一致性， SnapCenter 文档将角色称为使用特权。OnCommand 系统管理器图形用户界面使用术语_attribute_、而不是_privilege。设置ONTAP RBAC角色时、这两个术语的含义相同。</block>
@@ -7916,4 +7841,123 @@
   <block id="dde541c94f2b033571de6bfe76fcf3c3" category="list-text"><block ref="234efccf9d477e939eeae95c37c1803f" prefix="" category="inline-code"></block></block>
   <block id="e2bb7a9783ce9c6c02e6001911562e16" category="list-text"><block ref="2e72f8b3689961923dec66f94cdf620f" prefix="" category="inline-code"></block></block>
   <block id="91ae9720ac69723481c4de57234c575e" category="paragraph">Perfalink：protect-hana或task_cancel_backup_operations_for_sap_hana.html边栏：边栏关键字：摘要："您可以取消已排队的备份操作。"--=取消SAP HANA备份操作：图标：字体：imagesdir：../media/</block>
+  <block id="6c27677d6e913bc79948a8f54acbd25c" category="list-text">位于ONTAP FAS 或AFF 主系统和二级系统上并受本地StorageGRID 对象存储保护的数据(使用NetApp BlueXP云备份集成)</block>
+  <block id="88ff864aa61d80e2b8a79a0f91b36f3b" category="list-text">位于ONTAP FAS 或AFF 主系统上并复制到Cloud Volumes ONTAP 的数据</block>
+  <block id="4715420841b96150a5fff8e31c55eeb2" category="list-text">ONTAP FAS 或AFF 主系统和二级系统上的数据、并通过NetApp BlueXP云备份集成保护到云中的对象和归档存储</block>
+  <block id="b380e442ff5c6e48e283af8b6f99806f" category="list-text">Amazon FSX for ONTAP 上的数据</block>
+  <block id="bb9b211047ca9fd3aa94d088f95891ee" category="paragraph">有关Windows cmdlet的详细信息、请参见<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="491d379e6629985a2ada1aa1be5dbaff" category="paragraph">有关UNIX命令的详细信息、请参见<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>。</block>
+  <block id="a297bacde66e3d1853eb926b992016ec" category="list-text">ONTAP for Windows和Linux主机上的SnapCenter 支持IPsec。<block ref="52c5124591037410e72e18ed041cfca4" category="inline-link-rx"></block>。</block>
+  <block id="c23c7626b0637210ef5d62fd1d1df00f" category="list-text">支持SnapCenter 服务器和ONTAP 之间的CA证书身份验证。<block ref="8dc6eaab1bf71e00e4e0bc0ca43579e6" category="inline-link-rx"></block>。</block>
+  <block id="330847308f1658ea8a183b76b1e6b361" category="list-text">完整性验证程序已添加到SnapCenter 服务器和插件中、它会在全新安装和升级操作期间验证所有已发送的二进制文件。</block>
+  <block id="70871ac0eac7d5e43a705f18b69f6651" category="admonition">您不能指定多个脚本。</block>
+  <block id="d3873d463c5b3fb3a7750ff0ae00fee1" category="paragraph">默认情况下、超时设置为60秒。您可以修改超时值。</block>
+  <block id="7dc560127d94117067b15f71651a7211" category="paragraph">与审核设置相关的配置文件不会在灾难恢复备份中备份、也不会在还原操作后在灾难恢复服务器上备份。您应手动重复审核日志设置。</block>
+  <block id="5f3dbd65abc0c8e09475825857078de8" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="7a29c89d8f76feea0ca358fb1edb3864" category="inline-link">SnapCenter 4.8注意事项</block>
+  <block id="87cf8ed19692a681dacb14a050a89217" category="paragraph"><block ref="87cf8ed19692a681dacb14a050a89217" category="inline-link-rx"></block></block>
+  <block id="7ed3417ce7f529178e5bb25b31b39fc6" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。SnapCenter cmdlet 帮助或<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block> 包含有关 PowerShell cmdlet 的详细信息。</block>
+  <block id="cab00f169fcfeb601710dd89ecbfedf0" category="admonition">您应将保留数量设置为2或更高。保留数量的最小值为2。</block>
+  <block id="5efaab231bdeaf77ed795fa0e9d5b3e4" category="paragraph"><block ref="0a3e2ef7f51b42a7ddee804547031be0" category="inline-link-rx"></block>。</block>
+  <block id="c6bac95430dac4e5070788ce23acefc4" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block></block>
+  <block id="0001160fa843faa4e5294c286bd2a184" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。SnapCenter cmdlet 帮助和 cmdlet 参考信息包含有关 PowerShell cmdlet 的详细信息。<block ref="0a3e2ef7f51b42a7ddee804547031be0" category="inline-link-rx"></block>。</block>
+  <block id="9e9b8895f32adb6f730895bc11f2874a" category="paragraph">有关可与命令结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="7d5e98342223338218f7d96b6f09048c" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block></block>
+  <block id="517b39b6edfcd923dff2604ce021f723" category="paragraph">此外，您还可以使用 _Uninstall-SmHostPackage_ cmdlet 和所需参数从多个主机卸载插件。有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="e125da4cc0e5138fb35b5f0e2a1ba201" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="a79368498522acef202a75204e93905e" category="inline-link">《SnapCenter 软件4.8发行说明》</block>
+  <block id="c9d12743ca0ae0d66da7b9ce9795a0e8" category="paragraph">有关详细信息，请参见<block ref="9b9dacb6ec864e8f90c589c7a3a6bf3e" category="inline-link-rx"></block>。</block>
+  <block id="5caa66eb9aef1c67f7e4f30ff2fa96b3" category="paragraph">还原数据库时、系统会在Oracle数据库主机上的/var/opt/snapcenter/soc/lock_目录中创建一个操作锁定文件(.sm_lock_dbsid)、以避免对数据库执行多个操作。还原数据库后，操作锁定文件将自动删除。</block>
+  <block id="6aa52762a93e2798d142fe8255a41086" category="paragraph">跳过可选的预安装检查</block>
+  <block id="b1973a0eeb1e8eeaf3ab59ec202bef7a" category="paragraph">如果您已手动安装插件、并且不想验证主机是否满足安装插件的要求、请选中此复选框。</block>
+  <block id="c2e2989cd34de9d2b93fbc71f60ffe4e" category="paragraph">或者，您也可以参考<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block> 或<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="4a320bb1e5b313ab794ae3a798ba5cde" category="paragraph">适用于 Oracle 数据库的 SnapCenter 插件可以由非 root 用户安装。但是，您应该为非 root 用户配置 sudo 权限，以便安装和启动插件过程。安装此插件后、这些进程将以有效的非root用户身份运行。</block>
+  <block id="9bcf1803da6ec5a261d57713df8efcbd" category="list-text">您必须已在Linux或AIX主机上安装Java 1.8.x或64位Java 11。</block>
+  <block id="48b525b2b37df887839c2e72d7a4a780" category="admonition">确保在Linux主机上仅安装了经过认证的Java 11版本。</block>
+  <block id="959d1796c42866efcf2433173a31c265" category="list-text">Java 1.8.x (64位) Oracle Java和OpenJDK版本</block>
+  <block id="9cc285535dae9f8a4e5b6b210f8e838e" category="list-text">Java 11 (64位) Oracle Java和OpenJDK版本</block>
+  <block id="f9c6e2752992927f2c51ce2a85236ca9" category="paragraph">通过 SnapCenter 2.0 及更高版本，非 root 用户可以安装适用于 Linux 的 SnapCenter 插件软件包并启动插件过程。此插件进程将以有效的非root用户身份运行。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。</block>
+  <block id="e3f6dee76e478bb44341e47d36be0f01" category="list-text">sudo 1.8.7或更高版本。</block>
+  <block id="8e2de751f9a0d6e07b10791d5aec1925" category="list-text">/home/_Linux_user_//.SC_NetApp/snapcenter_linux_host_plugin.bin</block>
+  <block id="8ccb5ba037aab4670372942b6305b04b" category="admonition">如果您正在设置RAC以及其他允许的命令、则应将以下命令添加到/etc/sudoers文件中："/rc/bin/olsnodes'&lt;crs_home&gt;</block>
+  <block id="be02fb47e5ce9564292c10ef20e0af69" category="paragraph">您可以从/etc/oracle/ocl.loc_文件中获取_crs_home_的值。</block>
+  <block id="656c356e64e4c0be274c5c901e543686" category="paragraph">_linux_user_是 您创建的非root用户的名称。</block>
+  <block id="b0103119f5d82629abb866083340dfee" category="paragraph">您可以从* ORACLE_checksum.txt *文件中获取_checksum_value_、该文件位于_C：\ProgramData\NetApp\SnapCenter\Package Repository _。</block>
+  <block id="5dcb853141d33f26c1df2f75da07200a" category="list-text">Java 1.8.x (64位) IBM Java</block>
+  <block id="3fe85b9e16f08cb63e5aaa5c215097d7" category="list-text">Java 11 (64位) IBM Java</block>
+  <block id="449945354085db74a6111d72389e1ae2" category="paragraph">通过 SnapCenter 4.4 及更高版本，非 root 用户可以安装适用于 AIX 的 SnapCenter 插件软件包并启动插件过程。此插件进程将以有效的非root用户身份运行。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。</block>
+  <block id="7377c325bca0c913abf66d3359e41873" category="paragraph">有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>。</block>
+  <block id="1c23de25f91ce669fff9d59cc422c0a2" category="list-text">支持任何非默认用户、而不是Oracle和GRID。</block>
+  <block id="5719854a3b7b80da5cee21080c26176d" category="paragraph">要支持非默认用户、您应通过修改位于_file /var/opt/snapcenter/soc/etc/_的* sco.properties*文件中的参数值来设置非默认用户。</block>
+  <block id="596031c7fa0294b7a2d304ec2e1bce8b" category="paragraph">参数的默认值设置为Oracle和GRID。</block>
+  <block id="4a85b53e62777e7f5c185c944d3c55a1" category="list-text">DB_USER=Oracle</block>
+  <block id="bd1da13993f5b5f04502598c088daa4d" category="list-text">DB_Group=oinstall</block>
+  <block id="663b345154500cc2d3165730e7c7b6bc" category="list-text">gi_user=网格</block>
+  <block id="e5df7718dd7d60593c1dd152b40b7e4c" category="list-text">gi_Group=oinstall</block>
+  <block id="0711b76cd7e563341c756717999a670c" category="paragraph">有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>。</block>
+  <block id="11e64631478998d0abd8d43e9b74d6a6" category="paragraph">有关 UNIX 命令的详细信息，请参见<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>。</block>
+  <block id="f121e384c92705c4b18570e5ff63adf9" category="paragraph">您也可以使用cmdlet或CLI手动安装适用于Linux或AIX的插件软件包。</block>
+  <block id="806e5ebc9beaaf28454809d5a1530f91" category="paragraph">在手动安装此插件之前、您应使用* snapcenter_public_key.pub *和* snapcenter_linux_host_plugin.bin.SIG*密钥来验证二进制软件包的签名、该密钥位于_C：\ProgramData\NetApp\SnapCenter\Package Repository_。</block>
+  <block id="f718f3aee36dcfdcdb35028984a1e647" category="admonition">确保要安装此插件的主机上安装了* OpenSSL 1.0.2g*。</block>
+  <block id="ceb8053c7838cc55543eb21a9426de24" category="paragraph">运行以下命令、验证二进制文件包的签名：</block>
+  <block id="f454a08c3c09ccd56f92c300d394cf1e" category="list-text">对于Linux主机：<block ref="c319b701e180ce91b77f310475381d12" prefix=" " category="inline-code"></block></block>
+  <block id="9da5a8f942c8a23f24249f767440fb3d" category="list-text">对于AIX主机：<block ref="df3a3103b9e18ec4362f3fe7eb83c8e3" prefix=" " category="inline-code"></block></block>
+  <block id="aaef67c26b65c13acea2119d8265ce29" category="section-title">在静默模式下安装适用于Linux的插件软件包</block>
+  <block id="6623e432bed8da22308ef3173b2ba905" category="paragraph">您可以使用命令行界面(CLI)在静默模式下安装适用于Linux的SnapCenter 插件软件包。</block>
+  <block id="82c192c42c691360a69594ce2e29350e" category="paragraph">为Oracle数据库创建备份时、会在Oracle数据库主机上的/var/opt/snapcenter/soc/lock_目录中创建一个操作锁定文件(_.sm_lock_dbsid_)、以避免对数据库执行多个操作。备份数据库后，操作锁定文件将自动删除。</block>
+  <block id="8e42557ecacac1b49fb43986a24acae3" category="list-text">在命令提示符处、导航到_/var/opt/snapcenter/soc/lock_。</block>
+  <block id="12e41bdd9444d355c65f1b199c10bb5f" category="paragraph">有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help command_name 来获取。或者，您也可以参考<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>。</block>
+  <block id="2d68b9458c6165a5eeeb8d311718b600" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份和还原操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="c6f3b6a232739129385caa78e571328f" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，请参见<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="b6a1d5caea1f8fdc446d41a31f9cfe3e" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block></block>
+  <block id="ae91f671bc06c1b556cc5ac890cddce0" category="list-text">您必须已在Linux或Windows主机上安装Java 1.8或Java 11 (64位)。</block>
+  <block id="ac9f8e08e831f7c1b56f125cc171d3e4" category="list-text">您必须已在Linux主机上安装Java 1.8或Java 11 (64位)。</block>
+  <block id="c4dff45b697890d0a8ca7ca9f815fee6" category="paragraph">如果要对SnapCenter 服务器主机使用Windows Server 2019或Windows Server 2016、则必须安装Java 1.8或Java 11 (64位)。互操作性表工具（ IMT ）包含有关要求的最新信息。</block>
+  <block id="8cab0b64f941cd66c63c70f6dcc91d69" category="list-text">您必须为非 root 用户配置 sudo 权限，才能提供对多个路径的访问权限。使用 visudo Linux 实用程序将以下行添加到 /etc/sudoers 文件中。</block>
+  <block id="2cae85768532ad729badbc9d82df69b0" category="admonition">确保使用的是sudo 1.8.7或更高版本。</block>
+  <block id="7c17a5f75782af4f820b286a07f51777" category="paragraph">有关 PowerShell cmdlet 的信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="1ef6040ccf2cfe6eabc18de550769a4f" category="list-text">如果 SVM 中有多个数据路径（ LIF ），则 SnapCenter 会选择适当的数据路径（ LIF ）来挂载 NFS 克隆卷。但是，如果要指定特定数据路径（ LIF ），则必须运行 Set-SvmPreferredDataPath CLI 。有关可与命令结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>。</block>
+  <block id="87dee260ac24c847f6318306d701cdaf" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。有关 PowerShell cmdlet 的信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block>。</block>
+  <block id="3c408f97e0a21affc59c011044498f97" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="551a33d207af23d33dc7ae8b0fcc767e" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原，恢复，验证和克隆操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block></block>
+  <block id="36b5bc8569a0d58f30345b63446499e3" category="paragraph">有关详细信息，请参见<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="2dfd0f9f208059d0a9543cb1558cea8f" category="paragraph">有关运行 cmdlet 的信息，请参见<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block></block>
+  <block id="4e8d1223f4ffd73f23495af28c3c7669" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="b1d0f68016df3655c241c0884e44b7fb" category="paragraph">有关 cmdlet 的信息，请参见<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="1e0e854d46f7fdae75748f42803b83f4" category="paragraph">有关详细信息，请参见<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="423dd9f09f9c39167ffc1c8d5030b8c6" category="list-text">在故障转移期间、审核日志设置不会反映在第二个节点上。因此、当F5被动节点变为活动状态时、您应在该节点上手动重复审核日志设置。</block>
+  <block id="b2079ecc7149f6a09b8dd46c38e9fbe6" category="paragraph">除了使用 SnapCenter 图形用户界面之外，您还可以使用 PowerShell cmdlet 创建脚本以执行配置，备份和还原操作。某些 cmdlet 可能会随每个 SnapCenter 版本而发生更改。。<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block> 了解详细信息。</block>
+  <block id="6e5f2d1e77d0e2fa921f3222dc72f4e7" category="summary">您可以配置以记录软件平台以及这些平台上运行的所有软件的安全事件。</block>
+  <block id="d454841b95073c538e44b3f3299d1ce5" category="doc">配置审核日志设置</block>
+  <block id="8e2dc41a491856f4fec28e22208ade0b" category="paragraph">系统会为SnapCenter 服务器的每个活动生成审核日志。默认情况下、审核日志会在默认安装位置_C：\Program Files\NetApp\SnapCenter WebApp\audit中受到保护。</block>
+  <block id="5ed1b0e090dc9a05e51d817a1c55c890" category="paragraph">通过为每个审核事件生成数字签名摘要来保护审核日志、防止未经授权的修改。生成的摘要保存在单独的审核校验和文件中、并定期进行完整性检查以确保内容的完整性。</block>
+  <block id="734c77935d0e356a02cffa5bdcf4eeea" category="list-text">在以下情况下会发送警报：</block>
+  <block id="f1f8c5af0be546c7d0628f3709a3e94d" category="list-text">已启用或禁用审核日志完整性检查计划或系统日志服务器</block>
+  <block id="878218ae1c3f1a803da46fc67047328e" category="list-text">审核日志完整性检查、审核日志或系统日志服务器日志失败</block>
+  <block id="1f4f6bb6a3727e7259a572df780132e9" category="list-text">磁盘空间不足</block>
+  <block id="a8b829b4549eb0268e8a4bcfdb283ccd" category="list-text">只有在完整性检查失败时、才会发送电子邮件。</block>
+  <block id="5653bc89f7b74b08b75280647c8e7814" category="list-text">您应同时修改审核日志目录和审核校验和日志目录路径。您不能仅修改其中一个。</block>
+  <block id="3561daaa2a73d8e47ede784f533c90f0" category="list-text">修改审核日志目录和审核校验和日志目录路径后、无法对早期位置的审核日志执行完整性检查。</block>
+  <block id="f2b056d9585421258b6725769cc3ef78" category="list-text">审核日志目录和审核校验和日志目录路径应位于SnapCenter 服务器的本地驱动器上。</block>
+  <block id="3c15d7a6541e416f0d13373ee63fd0c0" category="paragraph">不支持共享驱动器或网络挂载驱动器。</block>
+  <block id="d90e9077285809de90243e91ed3a10bc" category="list-text">如果在系统日志服务器设置中使用UDP协议、则由于端口关闭或不可用而导致的错误无法在SnapCenter 中捕获为错误或警报。</block>
+  <block id="b398a3651d49f0eb14349eff9cfdec58" category="list-text">您可以使用Set-SmAudit设置和Get-SmAudit设置命令配置审核日志。</block>
+  <block id="28e97aa2b5ca929ab9bd2ef8535b4f26" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 get-help command_name 来获取。或者，您也可以参考<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
+  <block id="b081c433d361cfcb39c391b352a6f526" category="list-text">在*设置*页面中、导航到*设置*&gt;*全局设置*&gt;*审核日志设置*。</block>
+  <block id="f3645e45f905156003cb2bb7741a86f3" category="list-text">在Audit log部分中、输入详细信息。</block>
+  <block id="bc622cdadddc54b812b2df6bb7115372" category="list-text">输入*审核日志目录*和*审核校验和日志目录*</block>
+  <block id="0f0fe34e5db47bfababf3c8feae7d98c" category="list-text">输入最大文件大小</block>
+  <block id="0e8e39045f055a207d497573e149652d" category="list-text">输入最大日志文件数</block>
+  <block id="935cb3c2695f175068a87c5d68e847d5" category="list-text">输入要发送警报的磁盘空间使用量百分比</block>
+  <block id="9ab05ba909846c3d7f2f7c066b084728" category="list-text">(可选)启用*记录UTC时间*。</block>
+  <block id="7f2d97437d7de429ba8a4765db91d854" category="list-text">(可选)启用*审核日志完整性检查计划*并单击*启动完整性检查*以进行按需完整性检查。</block>
+  <block id="8aee3d0fefbd000c19b3ee35aa2bc680" category="paragraph">您还可以运行*启动-小型审核集成检查*命令来启动按需完整性检查。</block>
+  <block id="69a043658ef8489e6882e8795cebb91b" category="list-text">(可选)启用转发到远程系统日志服务器的审核日志并输入系统日志服务器详细信息。</block>
+  <block id="3ea690d333a0676fa4a069c2a47f4d15" category="paragraph">您应将证书从系统日志服务器导入到TLS 1.2协议的"可信根"中。</block>
+  <block id="d8fd61c62424b805c059b1d8a8802558" category="list-text">输入系统日志服务器主机</block>
+  <block id="fe221223e4b9ae05f1cf4d2a3acb3e2b" category="list-text">输入系统日志服务器端口</block>
+  <block id="79e06e5c035a2c2f7382e995d5baa08e" category="list-text">输入系统日志服务器协议</block>
+  <block id="7a86ee54e2df90d7a4109938e53c1deb" category="list-text">输入RFC格式</block>
+  <block id="ace31f9e5f442121e5c3914671ec85d3" category="list-text">您可以通过单击*监控*&gt;*作业*来查看审核完整性检查和磁盘空间检查。</block>
+  <block id="d251696f5e122ef9209620841c14e519" category="sidebar">SnapCenter 软件4.8文档</block>
 </blocks>

@@ -18,7 +18,7 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 link:concept_develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"]
 
 * 如果要管理 MySQL 或 DB2 应用程序，必须已下载 NetApp 提供的 MySQL 和 DB2 自定义插件。
-* 您必须已在 Linux 或 Windows 主机上安装 64 位 Java 1.8 。
+* 您必须已在Linux或Windows主机上安装Java 1.8或Java 11 (64位)。
 * 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
 * 自定义插件必须在执行添加主机操作的客户端主机上可用。
 
@@ -80,9 +80,9 @@ custom_plugin_checksum_list是SnapCenter 在主机上安装的自定义插件的
 == Linux 主机
 
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
-* 您必须已在 Linux 主机上安装 Java 1.8 64 位。
+* 您必须已在Linux主机上安装Java 1.8或Java 11 (64位)。
 +
-如果您对 SnapCenter 服务器主机使用 Windows 2019 或 Windows 2016 ，则必须安装 Java 1.8 ， 64 位。互操作性表工具（ IMT ）包含有关要求的最新信息。
+如果要对SnapCenter 服务器主机使用Windows Server 2019或Windows Server 2016、则必须安装Java 1.8或Java 11 (64位)。互操作性表工具（ IMT ）包含有关要求的最新信息。
 
 +
 http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
@@ -90,13 +90,31 @@ http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=105308;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
 
-* 您必须为非 root 用户配置 sudo 权限，才能提供对多个路径的访问权限。使用 visudo Linux 实用程序将以下行添加到 /etc/sudoers 文件中。例如：
+* 您必须为非 root 用户配置 sudo 权限，才能提供对多个路径的访问权限。使用 visudo Linux 实用程序将以下行添加到 /etc/sudoers 文件中。
 +
-[listing]
+
+NOTE: 确保使用的是sudo 1.8.7或更高版本。
+
++
+[listing, subs="+quotes"]
 ----
-Cmnd_Alias SCCMD = /opt/NetApp/snapcenter/scc/bin/scc <non_root_user> ALL=(ALL) NOPASSWD:SETENV: SCCMD
+Cmnd_Alias HPPLCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin, /opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl, /opt/NetApp/snapcenter/scc/bin/scc
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/Linux_Prechecks.sh
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+Cmnd_Alias SCCCMDEXECUTOR =checksum_value== /opt/NetApp/snapcenter/scc/bin/sccCommandExecutor
+_LINUX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPLCMD, PRECHECKCMD, CONFIGCHECKCMD, SCCCMDEXECUTOR, SCCMD
+Defaults: _LINUX_USER_ !visiblepw
+Defaults: _LINUX_USER_ !requiretty
 ----
 +
-non_root_user 是您创建的非 root 用户的名称。
+_linux_user_是 您创建的非root用户的名称。
+
++
+您可以从* ORACLE_checksum.txt *文件中获取_checksum_value_、该文件位于_C：\ProgramData\NetApp\SnapCenter\Package Repository _。
+
++
+
+IMPORTANT: 此示例只能用作创建自己数据的参考。
 
 

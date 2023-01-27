@@ -75,4 +75,18 @@ SnapCenter 将 NetApp Snapshot 副本技术与适用于 Oracle 数据库的插�
 
 NOTE: 您可以通过在内核中设置原生 多路径选项来为NVMe设备配置多路径解决方案。不支持设备映射程序(Device Mapper、DM)多路径。
 
-+有关受支持版本的最新信息、请参见 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+* 支持任何非默认用户、而不是Oracle和GRID。
++
+要支持非默认用户、您应通过修改位于_file /var/opt/snapcenter/soc/etc/_的* sco.properties*文件中的参数值来设置非默认用户。
+
++
+参数的默认值设置为Oracle和GRID。
+
++
+** DB_USER=Oracle
+** DB_Group=oinstall
+** gi_user=网格
+** gi_Group=oinstall
+
+
+

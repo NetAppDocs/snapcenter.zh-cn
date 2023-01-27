@@ -27,9 +27,12 @@ SnapCenter 包括以下安全功能：
 * SnapCenter 安装在公司的防火墙内，用于访问 SnapCenter 服务器并在 SnapCenter 服务器和插件之间进行通信。
 * SnapCenter API 和操作访问使用使用 AES 加密加密的令牌，这些令牌将在 24 小时后过期。
 * SnapCenter 与 Windows Active Directory 集成，用于控制访问权限的登录和基于角色的访问控制（ Role-Based Access Control ， RBAC ）。
+* ONTAP for Windows和Linux主机上的SnapCenter 支持IPsec。 https://docs.netapp.com/us-en/ontap/networking/configure_ip_security_@ipsec@_over_wire_encryption.html#use-ipsec-identities["了解更多信息。"]。
 * SnapCenter PowerShell cmdlet 可保护会话安全。
 * 默认情况下，如果 15 分钟处于非活动状态， SnapCenter 会向您发出警告，指出您将在 5 分钟后注销。处于非活动状态 20 分钟后， SnapCenter 将注销，您必须重新登录。您可以修改注销期限。
 * 登录尝试不正确 5 次或 5 次以上后，将暂时禁用登录。
+* 支持SnapCenter 服务器和ONTAP 之间的CA证书身份验证。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_securely_connect_SnapCenter_with_ONTAP_using_CA_certificate["了解更多信息。"]。
+* 完整性验证程序已添加到SnapCenter 服务器和插件中、它会在全新安装和升级操作期间验证所有已发送的二进制文件。
 
 
 

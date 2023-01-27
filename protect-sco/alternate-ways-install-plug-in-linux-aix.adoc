@@ -10,6 +10,20 @@ summary: 您可以使用其他方法安装适用于 Linux 的 SnapCenter 插件�
 :imagesdir: ../media/
 
 
+[role="lead"]
+您也可以使用cmdlet或CLI手动安装适用于Linux或AIX的插件软件包。
+
+在手动安装此插件之前、您应使用* snapcenter_public_key.pub *和* snapcenter_linux_host_plugin.bin.SIG*密钥来验证二进制软件包的签名、该密钥位于_C：\ProgramData\NetApp\SnapCenter\Package Repository_。
+
+
+NOTE: 确保要安装此插件的主机上安装了* OpenSSL 1.0.2g*。
+
+运行以下命令、验证二进制文件包的签名：
+
+* 对于Linux主机： `openssl dgst -sha256 -verify snapcenter_public_key.pub -signature snapcenter_linux_host_plugin.bin.sig snapcenter_linux_host_plugin.bin`
+* 对于AIX主机： `openssl dgst -sha256 -verify snapcenter_public_key.pub -signature snapcenter_linux_host_plugin.bsx.sig snapcenter_linux_host_plugin.bsx`
+
+
 
 
 == 使用 cmdlet 在多个远程主机上安装
@@ -35,7 +49,7 @@ NOTE: 如果在防火墙拒绝规则中指定了插件端口防火墙状态，�
 . 输入远程安装的凭据。
 
 
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 
 
@@ -65,9 +79,9 @@ NOTE: 如果在运行任何其他 SnapCenter 操作时发生故障转移，则�
 
 
 
-== 在静默模式或控制台模式下安装适用于 Linux 的插件软件包
+== 在静默模式下安装适用于Linux的插件软件包
 
-您可以使用命令行界面（ CLI ）在控制台模式或静默模式下安装适用于 Linux 的 SnapCenter 插件软件包。
+您可以使用命令行界面(CLI)在静默模式下安装适用于Linux的SnapCenter 插件软件包。
 
 * 您需要的内容 *
 
@@ -89,32 +103,10 @@ NOTE: 如果在运行任何其他 SnapCenter 操作时发生故障转移，则�
 默认安装路径为 _C ： \ProgramData\NetApp\SnapCenter\PackageRepository 。可以从安装了 SnapCenter 服务器的主机访问此路径。
 
 . 在命令提示符处，导航到下载安装文件的目录。
-. 根据您的首选安装模式，执行以下步骤之一。
+. 运行
 +
-|===
-| 安装模式 | 步骤 
-
-
- a| 
-控制台模式
- a| 
-.. 运行
-+
-` 。 /SnapCenter_linux_host_plugin.bin – i console`
-
-.. 按照屏幕上的提示完成安装。
-
-
-
-
- a| 
-静默模式
- a| 
-运行
-
 ` ./SnapCenter_Linux_host_plugin.bin-I silent-Dport=8145-dserver_ip=SnapCenter_Server_FQDN-dserver_HTTPS_port=SnapCenter_Server_Port-Duser_install_DIR=/opt/custom_path`
 
-|===
 . 编辑位于 /var/opt/snapcenter/spl/etc/_ 的 spl.properties 文件以添加 SPL_enabled_plugins=SCO ， scu ，然后重新启动 SnapCenter 插件加载程序服务。
 
 
