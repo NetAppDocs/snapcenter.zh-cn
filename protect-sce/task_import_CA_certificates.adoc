@@ -10,6 +10,7 @@ summary: 导入 SnapCenter 服务器和 Windows 主机插件的 CA 证书
 :imagesdir: ../media/
 
 
+[role="lead"]
 您必须使用 Microsoft 管理控制台（ MMC ）将 CA 证书导入到 SnapCenter 服务器和 Windows 主机插件中。
 
 * 步骤 *

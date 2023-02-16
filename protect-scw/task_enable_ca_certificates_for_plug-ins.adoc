@@ -10,6 +10,7 @@ summary: 您应在 SnapCenter 服务器和相应插件主机中配置 CA 证书�
 :imagesdir: ../media/
 
 
+[role="lead"]
 您应在 SnapCenter 服务器和相应插件主机中配置 CA 证书并部署 CA 证书。您应为插件启用 CA 证书验证。
 
 * 您需要的内容 *

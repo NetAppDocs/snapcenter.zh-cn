@@ -10,6 +10,7 @@ summary: 如果在其他数据保护操作中不再需要备份，则可以使�
 :imagesdir: ../media/
 
 
+[role="lead"]
 如果在其他数据保护操作中不再需要备份，则可以使用 Remove-SmBackup cmdlet 删除这些备份。
 
 您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。

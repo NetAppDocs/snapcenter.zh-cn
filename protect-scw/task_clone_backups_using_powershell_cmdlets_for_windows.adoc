@@ -10,6 +10,7 @@ summary: 克隆工作流包括规划，执行克隆操作以及监控操作。
 :imagesdir: ../media/
 
 
+[role="lead"]
 克隆工作流包括规划，执行克隆操作以及监控操作。
 
 您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。

@@ -10,6 +10,7 @@ summary: 您可以使用 Remove-SmBackup cmdlet 清理不含 Snapshot 副本的�
 :imagesdir: ../media/
 
 
+[role="lead"]
 您可以使用 Remove-SmBackup cmdlet 清理不含 Snapshot 副本的二级备份的备份计数。如果管理副本拓扑中显示的 Snapshot 副本总数与二级存储 Snapshot 副本保留设置不匹配，您可能需要使用此 cmdlet 。
 
 您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。

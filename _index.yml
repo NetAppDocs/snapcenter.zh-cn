@@ -1,0 +1,75 @@
+---
+indexpage:
+  lead: SnapCenter 软件是一个简单，集中化且可扩展的平台，可为混合云中任意位置的 ONTAP 系统上运行的应用程序，数据库，主机文件系统和 VM
+    提供应用程序一致的数据保护。本文档库包含4.8版的信息。
+  tiles:
+  - title: 入门
+    links:
+    - title: 发行说明
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883299
+    - title: 了解 SnapCenter
+      url: "/concept/concept_snapcenter_overview.html"
+    - title: 有关保护 SQL Server 数据库的快速参考
+      url: "/protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html"
+    - title: 升级 SnapCenter 服务器和 SnapCenter 插件
+      url: "/upgrade/upgrade_workflow.html"
+  - title: 安装 SnapCenter 服务器
+    links:
+    - title: 所需许可证
+      url: "/install/concept_snapcenter_licenses.html"
+    - title: 配置端口
+      url: "/install/reference_connection_and_port_requirements.html"
+    - title: 安装 SnapCenter 服务器
+      url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
+    - title: 使用 F5 配置高可用性
+      url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
+    - title: SnapCenter 服务器的灾难恢复
+      url: "/sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html"
+  - title: 保护 Microsoft SQL Server 数据库
+    links:
+    - title: 安装适用于 Microsoft SQL Server 数据库的 SnapCenter 插件
+      url: "/protect-scsql/task_add_hosts_and_install_snapcenter_plug_ins_package_for_windows.html"
+    - title: 创建用于备份 SQL Server 数据库的策略
+      url: "/protect-scsql/task_create_backup_policies_for_sql_server_databases.html"
+    - title: 备份 SQL Server 数据库
+      url: "/protect-scsql/task_back_up_sql_resources.html"
+    - title: 适用于 SQL Server 的 SnapCenter 插件的灾难恢复
+      url: "/protect-scsql/task_disaster_recovery_scsql.html"
+  - title: 保护 SAP HANA 数据库
+    links:
+    - title: 安装适用于 SAP HANA 数据库的 SnapCenter 插件
+      url: "/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html"
+    - title: 创建策略以备份 SAP HANA 数据库
+      url: "/protect-hana/task_create_backup_policies_for_sap_hana_databases.html"
+    - title: 备份 SAP HANA 数据库
+      url: "/protect-hana/task_back_up_sap_hana_databases.html"
+  - title: 保护 Oracle 数据库
+    links:
+    - title: 安装适用于 Oracle 数据库的 SnapCenter 插件
+      url: "/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html"
+    - title: 创建用于备份 Oracle 数据库的策略
+      url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
+    - title: 备份 Oracle 数据库
+      url: "/protect-sco/task_back_up_oracle_resources.html"
+  - title: 保护 VMware 上的数据库
+    links:
+    - title: 了解适用于 VMware vSphere 的 SnapCenter 插件
+      url: https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html
+    - title: 部署适用于 VMware vSphere 的 SnapCenter 插件
+      url: https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html
+  - title: 博客社区
+    links:
+    - title: NetApp 博客— SnapCenter
+      url: https://blog.netapp.com/tag/snapcenter/
+    - title: NetApp 社区— SnapCenter
+      url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/backup-and-restore-discussions/label-name/snapcenter
+  - title: 更多资源
+    links:
+    - title: "《 cmdlet 参考指南》"
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300
+    - title: 命令参考指南
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301
+    - title: 早期版本的 SnapCenter 文档
+      url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
+    - title: NetApp 知识库— SnapCenter
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter

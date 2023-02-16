@@ -88,7 +88,7 @@ custom_plugin_checksum_list是SnapCenter 在主机上安装的自定义插件的
 http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=105308;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=108393;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
 
 * 您必须为非 root 用户配置 sudo 权限，才能提供对多个路径的访问权限。使用 visudo Linux 实用程序将以下行添加到 /etc/sudoers 文件中。
 +

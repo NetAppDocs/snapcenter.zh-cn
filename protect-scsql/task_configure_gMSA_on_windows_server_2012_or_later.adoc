@@ -10,6 +10,7 @@ summary: 通过 Windows Server 2012 或更高版本，您可以创建组托管�
 :imagesdir: ../media/
 
 
+[role="lead"]
 通过 Windows Server 2012 或更高版本，您可以创建组托管服务帐户（ GMSA ），以便从受管域帐户自动管理服务帐户密码。
 
 * 您需要的内容 *

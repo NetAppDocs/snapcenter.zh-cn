@@ -31,7 +31,7 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
 * 关于此任务 *
 
 * 升级操作步骤会将您的 Windows ， Linux 或 AIX 主机置于 " `m维护` " 模式，从而阻止该主机运行任何计划的作业。
-* 对于适用于Microsoft SQL Server的SnapCenter 插件、适用于Microsoft Exchange Server的SnapCenter 插件和适用于Microsoft Windows的SnapCenter 插件、建议将服务器和插件主机都升级到4.7版、以便scripts_path能够运行。
+* 对于适用于Microsoft SQL Server的SnapCenter 插件、适用于Microsoft Exchange Server的SnapCenter 插件和适用于Microsoft Windows的SnapCenter 插件、建议将服务器和插件主机升级到最新版本、以便scripts_path可以运行。
 +
 对于在策略中启用了预处理和后处理脚本的现有备份和验证计划、备份操作将在升级后继续运行。
 
@@ -54,14 +54,19 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
 
 ** 如果要升级多个主机，请选择所有主机，然后单击 image:../media/more_icon.gif[""]，然后单击 * 升级 * > * 确定 * 。
 +
+所有相关服务都会在插件升级期间重新启动。
+
++
 
 NOTE: 此时将选择软件包中的所有插件，但只会升级随早期版本的 SnapCenter 安装的插件，而不会安装其余插件。您必须使用 * 添加插件 * 选项安装任何新插件。
 
-
-
-
-
++
 如果未选中 * 跳过预检 * 复选框，则会验证主机是否满足安装插件的要求。如果不满足最低要求，则会显示相应的错误或警告消息。修复问题描述后，单击 * 升级 * 。
 
++
 
 NOTE: 如果此错误与磁盘空间或 RAM 相关，您可以更新位于 C ： \Program Files\NetApp\SnapCenter WebApp 的 web.config 或位于 C ： \Windows\System32\WindowsPowerShell\v1.0\Modules\SnapCenter\ 的 PowerShell 配置文件以修改默认值。如果此错误与其余参数相关，则必须修复问题描述，然后重新验证这些要求。
+
+
+
+

@@ -10,6 +10,7 @@ summary: 还原资源备份包括启动与 SnapCenter 服务器的连接会话�
 :imagesdir: ../media/
 
 
+[role="lead"]
 还原资源备份包括启动与 SnapCenter 服务器的连接会话，列出备份和检索备份信息以及还原备份。
 
 您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。

@@ -27,7 +27,6 @@ summary: 通过 SnapCenter 服务器，您可以将应用程序作为 SnapCenter
 
 == 所有 API 调用中的通用插件处理
 
-[role="lead"]
 对于每个 API 调用，请使用以下信息：
 
 * 插件参数

@@ -10,6 +10,7 @@ summary: 使用 Windows 主机插件服务配置 CA 证书
 :imagesdir: ../media/
 
 
+[role="lead"]
 您应使用 Windows 主机插件服务配置 CA 证书，以激活已安装的数字证书。
 
 在 SnapCenter 服务器以及已部署 CA 证书的所有插件主机上执行以下步骤。

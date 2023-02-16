@@ -10,6 +10,7 @@ summary: 如果数据库存储在虚拟机（ VM ）上，或者您要保护 VM 
 :imagesdir: ../media/
 
 
+[role="lead"]
 如果数据库存储在虚拟机（ VM ）上，或者您要保护 VM 和数据存储库，则必须部署适用于 VMware vSphere 的 SnapCenter 插件虚拟设备。
 
 有关部署的信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["部署概述"^]。

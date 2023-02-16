@@ -32,7 +32,7 @@ summary: 您应从 SnapCenter 用户界面中安装适用于 Exchange 的插件�
 
 . 将安装文件复制到要安装此插件的主机。
 . 在本地主机上的 Windows 命令提示符处，导航到保存插件安装文件的目录。
-. 输入以下命令，将变量替换为您的数据：
+. 输入以下命令以安装此插件。
 +
 _snapcenter_windows_host_plugin.exe"/silent /debuglog"<debug_Log_Path>" /log"<Log_Path>" BI_SNAPCENTER_port=<Num>suite_INSTALLDIR="<Install_Directory_Path>" BI_SERVERCACCOUNT=<domain\administrator> ， STAW=<IFICW> ， STAW=<IFORE>
 
@@ -46,8 +46,6 @@ _C ： \ProgramData\NetApp\SnapCenter\Package Repository\snapcenter_windows_host
 
 NOTE: 在安装适用于 Exchange 的插件期间传递的所有参数都区分大小写。
 
-+
-.. _/silent /debuglog"C" ： \Installdebug.log /log"C" ： \temp" BI_SNAPCENTER_port=8145 suite_INSTALLDIR="C ： \Program Files" BI_SERVERACCOUNT=demo\administrator BI_SERVERICEPWD = Netapp1 ！ISFeatureInstall=HPPW ， SCW_
 +
 为变量输入以下值：
 
@@ -99,8 +97,6 @@ ISFeatureInstall
 指定 SnapCenter 要在远程主机上部署的解决方案。
 
 |===
-
-
 . 监控 Windows 任务计划程序，主安装日志文件 _C ： \Installdebug.log_ 以及 _C ： \Temp_ 中的其他安装文件。
 . 监控 _%temp%_ 目录，检查 _msiexe.exe_ 安装程序是否在安装软件时没有错误。
 +

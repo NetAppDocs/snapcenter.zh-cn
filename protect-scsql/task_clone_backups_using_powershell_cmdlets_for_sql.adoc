@@ -1,10 +1,16 @@
-= 
+---
+permalink: protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html 
+sidebar: sidebar 
+keywords: clone 
+summary: 克隆工作流包括规划，执行克隆操作以及监控操作。 
+---
+= 使用 PowerShell cmdlet 克隆备份
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
 
-'''
-Permalink：protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html边栏：边栏关键字：克隆摘要："克隆工作流包括规划、执行克隆操作和监控操作。"--=使用PowerShell cmdlet克隆备份：图标：字体：imagesdir：../media/
-
+[role="lead"]
 克隆工作流包括规划，执行克隆操作以及监控操作。
 
 您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。
