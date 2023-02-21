@@ -6,7 +6,7 @@ indexpage:
   - title: 入门
     links:
     - title: 发行说明
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883299
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885481
     - title: 了解 SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: 有关保护 SQL Server 数据库的快速参考
