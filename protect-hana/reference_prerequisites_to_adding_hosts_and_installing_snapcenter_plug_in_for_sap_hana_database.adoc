@@ -14,6 +14,10 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 在添加主机并安装插件软件包之前，您必须满足所有要求。适用于 SAP HANA 数据库的 SnapCenter 插件可在 Windows 和 Linux 环境中使用。
 
 * 您必须已在主机上安装 Java 1.8 64 位。
++
+
+NOTE: 不支持IBM Java。
+
 * 您必须已在主机上安装 SAP HANA 数据库交互式终端（ HDBSQL 客户端）。
 * 对于 Windows ，插件 Creator 服务应使用 "`LocalSystem` " Windows 用户运行，这是以域管理员身份安装适用于 SAP HANA 数据库的插件时的默认行为。
 * 对于 Windows ，应以系统用户身份创建用户存储密钥。

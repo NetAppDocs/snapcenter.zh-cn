@@ -108,6 +108,10 @@ NOTE: 这是建议的备份类型。
 
 NOTE: 您应根据完整备份保留而不是基于分钟内（ UTM ）保留来定义日志备份所需的空间。
 
++
+
+NOTE: 在处理Exchange卷(LUN)时、为日志和数据库创建单独的存储策略、并使用相同的标签将日志策略的保留(保留)设置为每个标签的两倍数量作为数据库策略。有关详细信息、请参见、 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_for_Exchange_Backups_only_keep_half_the_Snapshots_on_the_Vault_destination_log_volume["适用于Exchange备份的SnapCenter 仅会在存储目标日志卷上保留一半的快照"^]
+
 .. 在 Database Availability Group Settings 部分中，选择一项操作：
 +
 |===

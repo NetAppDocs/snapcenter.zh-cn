@@ -4,14 +4,66 @@ sidebar: sidebar
 keywords:  
 summary: SnapCenter 灾难恢复功能使用 REST API 备份 SnapCenter 服务器。 
 ---
-= 支持 REST API 用于 SnapCenter 服务器的灾难恢复
+= 灾难恢复(DR) REST API
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
+:firstname: [.lead]
+:author: [.lead]
+:authorinitials: [
+:authors: [.lead]
 
 
-[role="lead"]
-SnapCenter 灾难恢复（ DR ）功能使用 REST API 备份 SnapCenter 服务器。使用 REST API ，您可以在 REST API Swagger 页面上执行以下操作。有关访问 Swagger 页面的信息，请参见 link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["如何使用 Swagger API 网页访问 REST API"]。
+SnapCenter 灾难恢复（ DR ）功能使用 REST API 备份 SnapCenter 服务器。在使用DR REST API之前、请执行以下步骤。
+
+* 步骤 *
+
+. 创建新的服务器灾难恢复备份、以便使用灾难恢复备份REST API从指定的服务器灾难恢复备份还原SnapCenter 服务器： `/4.5/disasterrecovery/server/backup`
+. 启动二级服务器计算机、但在二级服务器上安装SnapCenter 服务器之前、您应完成前提条件。
++
+** 备用服务器主机名/Host FQDN应与主服务器主机名相同、但IP地址可以不同。
+** 二级服务器版本应与主服务器相同。
+** 二级SnapCenter 应与主安装在同一位置和同一端口上。
+
+
+. 在触发服务器灾难恢复还原操作之前、您应启动目标路径或灾难后存储灾难恢复备份的路径。
++
+** 确保使用以下命令将灾难恢复备份文件复制到新的SnapCenter 服务器：
+`xcopy <Ssource_Path> \\<Destination_Server_IP>\<Folder_Path> /O /X /E /H /K {ex : xcopy C:\DRBackup \\10.225.81.114\c$\DRBackup /O /X /E /H /K}`
+
+
+. 在二级计算机上安装SnapCenter 服务器。
++
+** 在执行灾难恢复还原操作时、您应确保没有运行与SnapCenter 服务器相关的作业。
+
+
+. 将二级SnapCenter 服务器安装在与主服务器相同的位置和端口上。
++
+** 使用灾难恢复还原API执行服务器灾难恢复操作：  `/4.5/disasterrecovery/server/restore`
++
+如果此插件无法解析服务器主机名、请登录到每个插件主机并以<New IP> SC_SERVER_NAME格式为新IP添加etc/host条目。例如： `10.225.81.35 SCServer1`
+
++
+服务器 etc/host 条目将不会还原。您可以从灾难恢复备份文件夹手动还原它。
+
+
+
+
+
+
+NOTE: 对于F5设置、还原操作是以独立方式执行的、您应运行一组命令重新创建F5。请参见链接： https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Migrate_SnapCenter_migrate_to_another_Server["如何将SnapCenter 迁移到其他服务器"^]
+
+
+NOTE: 灾难恢复还原后、系统将添加主机、但您应手动安装此插件。
+
+
+NOTE: 只有在安装适用于Windows的SnapCenter 插件并将NetApp LUN连接到服务器计算机时、才会还原存储库备份计划。
+
+
+
+== 支持 REST API 用于 SnapCenter 服务器的灾难恢复
+
+使用 REST API ，您可以在 REST API Swagger 页面上执行以下操作。有关访问 Swagger 页面的信息，请参见 link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["如何使用 Swagger API 网页访问 REST API"]。
 
 * 您需要的内容 *
 
@@ -23,13 +75,10 @@ SnapCenter 灾难恢复（ DR ）功能使用 REST API 备份 SnapCenter 服务�
 
 SnapCenter 服务器灾难恢复支持所有插件。
 
-[cols="10,40,50,10"]
 |===
-| 步骤 | Description | REST API | HTTP 方法 
+| Description | REST API | HTTP 方法 
 
 
- a| 
-1.
  a| 
 提取现有 SnapCenter 服务器灾难恢复备份
 
@@ -43,8 +92,6 @@ NOTE: 您应提供存储灾难恢复备份的目标路径。
 
 
  a| 
-2.
- a| 
 创建新的服务器灾难恢复备份。
  a| 
 ` /4.5/disasterrecovery/server/backup`
@@ -54,25 +101,7 @@ NOTE: 您应提供存储灾难恢复备份的目标路径。
 
 
  a| 
-3.
- a| 
 从指定的服务器灾难恢复备份还原 SnapCenter 服务器。
-
-* 前提条件 *
-
-* 备用服务器主机名应与主服务器相同，但 IP 地址可以不同。
-* 服务器版本应与主服务器相同。
-* 确保使用以下命令将灾难恢复备份文件复制到新的 SnapCenter 服务器：
-+
-`xcopy <Ssource_Path>\< 目标服务器 IP >\< 文件夹路径 >/O /X /E /H /K ｛ ex ： xcopy C ： \DRBackup \\10.225.81.114\c$\DRBackup /O /X /E /H /K ｝`
-
-
-
-如果此插件无法解析服务器主机名，请登录到每个插件主机并以以下格式为新 IP 添加 etc/host 条目： ` <New IP> SC_SERVER_Name`
-
-例如， 10.225.81.35 SCServer1
-
-服务器etc/host文件将不会还原。您可以从灾难恢复备份文件夹手动还原它。
  a| 
 ` /4.5/disasterrecovery/server/restore`
  a| 
@@ -80,8 +109,6 @@ NOTE: 您应提供存储灾难恢复备份的目标路径。
 
 
 
- a| 
-4.
  a| 
 根据备份名称删除服务器灾难恢复备份。
  a| 
@@ -91,8 +118,6 @@ NOTE: 您应提供存储灾难恢复备份的目标路径。
 
 
 
- a| 
-5.
  a| 
 启用或禁用存储灾难恢复
  a| 
