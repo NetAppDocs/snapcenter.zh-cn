@@ -30,13 +30,6 @@ NOTE: SnapCenter 不支持在不同集群上使用相同名称的多个 SVM 。S
 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["适用于 VMware vSphere 的 SnapCenter 插件文档"]
 
 * 使用适用于 Microsoft Windows 的 SnapCenter 插件执行主机端存储配置。
-* 将现有数据库移动到 NetApp 存储上。
-+
-有关详细信息，请参见 SnapCenter 导入信息。
-
-+
-link:concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["将归档备份从 SnapManager for Microsoft SQL Server 导入到 SnapCenter"]
-
 * 如果要进行备份复制，请设置 SnapMirror 和 SnapVault 关系。
 
 

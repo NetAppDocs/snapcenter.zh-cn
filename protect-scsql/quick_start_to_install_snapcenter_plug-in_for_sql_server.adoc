@@ -196,13 +196,13 @@ ONTAP 集群或 SVM 通信端口
 
 您应具有一个对 SQL Server 具有 sysadmin 权限的用户。此插件使用 Microsoft VDI Framework ，需要 sysadmin 访问权限。
 
-如果您使用的是适用于 Microsoft SQL Server 的 SnapManager ，并且希望将数据从适用于 Microsoft SQL Server 的 SnapManager 导入到 SnapCenter ，请参见 link:../protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["导入归档备份"^]
-
 
 
 == 安装 SnapCenter 服务器
 
-* 下载并安装 SnapCenter Server*
+
+
+=== 下载并安装SnapCenter 服务器
 
 * 步骤 *
 
@@ -221,7 +221,9 @@ NOTE: 自定义安装路径不支持特殊字符 "%" 。如果在路径中包含
 . 单击 * 立即安装 * 。
 
 
-* 登录到 SnapCenter *
+
+
+=== 登录到 SnapCenter
 
 * 步骤 *
 
@@ -236,7 +238,9 @@ NOTE: 自定义安装路径不支持特殊字符 "%" 。如果在路径中包含
 . 单击 * 登录 * 。
 
 
-* 添加基于 SnapCenter 标准控制器的许可证 *
+
+
+=== 添加基于 SnapCenter 标准控制器的许可证
 
 * 步骤 *
 
@@ -250,7 +254,9 @@ NOTE: 自定义安装路径不支持特殊字符 "%" 。如果在路径中包含
 
 
 
-* 添加基于 SnapCenter 容量的许可证 *
+
+
+=== 添加基于SnapCenter 容量的许可证
 
 * 步骤 *
 
@@ -265,7 +271,9 @@ NOTE: 自定义安装路径不支持特殊字符 "%" 。如果在路径中包含
 . 单击 * 完成 * 。
 
 
-* 设置存储系统连接 *
+
+
+=== 设置存储系统连接
 
 * 步骤 *
 
@@ -285,7 +293,9 @@ NOTE: 自定义安装路径不支持特殊字符 "%" 。如果在路径中包含
 
 == 安装适用于 Microsoft SQL Server 的插件
 
-* 设置运行身份凭据以安装适用于 Microsoft SQL Server* 的插件
+
+
+=== 设置运行身份凭据以安装适用于Microsoft SQL Server的插件
 
 * 步骤 *
 
@@ -299,7 +309,9 @@ NOTE: 自定义安装路径不支持特殊字符 "%" 。如果在路径中包含
 
 
 
-* 添加主机并安装适用于 Microsoft SQL Server* 的插件
+
+
+=== 添加主机并安装适用于Microsoft SQL Server的插件
 
 * 步骤 *
 

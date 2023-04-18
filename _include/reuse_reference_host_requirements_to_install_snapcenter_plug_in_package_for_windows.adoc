@@ -44,6 +44,6 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
 
 有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
-有关.NET故障排除信息、请参见、 link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["对于没有Internet连接的原有系统、SnapCenter 升级或安装失败。"]
+有关.NET专用的故障排除信息、请参见 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["对于没有Internet连接的原有系统、SnapCenter 升级或安装失败。"]
 
 |===
