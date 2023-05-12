@@ -24,7 +24,7 @@ NetApp 提供了存储插件，可使用 SnapCenter 中内置的自定义插件�
 
 link:task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html["添加主机并在远程主机上安装插件软件包。"^]
 
-NetApp 还提供 MySQL ， MaxDB ， DB2 ， Sybase ， DPGLUE ， MongoDB ， ORASCPM 和 PostgreSQL 自定义插件。这些插件可从下载 https://automationstore.netapp.com/home.shtml["NetApp 存储自动化商店"^]。
+NetApp 还提供 MySQL ， MaxDB ， DB2 ， Sybase ， DPGLUE ， MongoDB ， ORASCPM 和 PostgreSQL 自定义插件。这些插件可从下载 https://["NetApp 存储自动化商店"^]。
 
 
 NOTE: SnapCenter 支持策略将涵盖对 SnapCenter 自定义插件框架，核心引擎和关联 API 的支持。支持范围不包括插件源代码以及基于自定义插件框架构建的关联脚本。

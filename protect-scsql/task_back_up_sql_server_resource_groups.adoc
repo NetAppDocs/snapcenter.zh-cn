@@ -45,6 +45,6 @@ link:task_create_resource_groups_and_attach_policies_for_sql_server.html["为 SQ
 
 link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["使用 PowerShell cmdlet 备份资源"]
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["由于 tcp_timeout 存在延迟，备份操作失败并显示 MySQL 连接错误"]
+https://["由于 tcp_timeout 存在延迟，备份操作失败并显示 MySQL 连接错误"]
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["备份失败，并显示 Windows 计划程序错误"]
+https://["备份失败，并显示 Windows 计划程序错误"]

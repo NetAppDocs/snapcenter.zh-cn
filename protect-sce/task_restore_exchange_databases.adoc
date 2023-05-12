@@ -23,7 +23,7 @@ summary: 您可以使用 SnapCenter 还原备份的 Exchange 数据库。
 运行 `Move-ActiveMailboxDatabase` 命令将被动数据库副本设置为活动数据库副本。
 
 +
-。 https://docs.microsoft.com/en-us/powershell/module/exchange/move-activemailboxdatabase?view=exchange-ps["Microsoft 文档"^] 包含有关此命令的信息。
+。 https://["Microsoft 文档"^] 包含有关此命令的信息。
 
 
 

@@ -106,6 +106,6 @@ NOTE: SnapCenter 高级版和 SnapCenter NAS 文件服务许可证已弃用，�
 
 如果您使用适用于 Exchange 的 SnapCenter 插件管理 Microsoft Exchange Server 数据库和单邮箱恢复（ SMBR ），则需要为 SMBR 提供额外的许可证，此许可证需要根据用户邮箱单独购买。
 
-请联系您的 NetApp 销售代表以购买 SMBR 许可证，此许可证可作为 1000 ， 5000 ， 15000 和 25000 邮箱的捆绑包单元提供。购买 SKU 后，您可以按照中的说明获取许可证 https://library.netapp.com/ecm/ecm_download_file/ECMLP2863893["《 SMBR 发行说明》"^]。
+请联系您的 NetApp 销售代表以购买 SMBR 许可证，此许可证可作为 1000 ， 5000 ， 15000 和 25000 邮箱的捆绑包单元提供。购买 SKU 后，您可以按照中的说明获取许可证 https://["《 SMBR 发行说明》"^]。
 
 提交许可证密钥请求时， KrollOntrack 将问题描述 50 个邮箱许可证密钥。根据您的授权， KrollOntrack 将在验证后升级邮箱许可证。

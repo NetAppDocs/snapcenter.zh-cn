@@ -55,7 +55,7 @@ Microsoft Exchange Server ， Microsoft SQL Server ， Linux 或 AIX 上的 Orac
 通过提供一个用于创建用户定义的 SnapCenter 插件的框架，其他标准或自定义应用程序和数据库也支持数据保护。这样就可以通过同一个单一管理平台为其他应用程序和数据库提供数据保护。通过利用此框架， NetApp 在 NetApp 自动化商店中发布了适用于 IBM DB2 ， MongoDB ， MySQL 等的 SnapCenter 自定义插件。
 
 +
-https://automationstore.netapp.com/home.shtml["NetApp 存储自动化商店"^]
+https://["NetApp 存储自动化商店"^]
 
 * 基于策略的备份
 +
@@ -82,13 +82,13 @@ SnapCenter 图形用户界面提供了一个一站式界面，用于管理混合
 SnapCenter 包含 REST API ，可提供与任何业务流程软件集成的大多数功能，并可使用 Windows PowerShell cmdlet 和命令行界面。
 
 +
-有关REST API的详细信息、请参见 https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["REST API概述"]。
+有关REST API的详细信息、请参见 https://["REST API概述"]。
 
 +
-有关Windows cmdlet的详细信息、请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关Windows cmdlet的详细信息、请参见 https://["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 +
-有关UNIX命令的详细信息、请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["《 SnapCenter 软件命令参考指南》"^]。
+有关UNIX命令的详细信息、请参见 https://["《 SnapCenter 软件命令参考指南》"^]。
 
 * 集中式数据保护信息板和报告
 * 基于角色的访问控制（ Role-Based Access Control ， RBAC ），确保安全性和委派。
@@ -158,7 +158,7 @@ NOTE: 适用于 UNIX 的 SnapCenter 插件不是独立插件，不能单独安�
 
 * SnapCenter 自定义插件
 +
-自定义插件受社区支持，可从下载 https://automationstore.netapp.com/home.shtml["NetApp 存储自动化商店"^]。
+自定义插件受社区支持，可从下载 https://["NetApp 存储自动化商店"^]。
 
 
 
@@ -265,7 +265,7 @@ Linux 或 Windows
  a| 
 自定义插件
  a| 
-https://automationstore.netapp.com/home.shtml["NetApp 存储自动化商店"^]
+https://["NetApp 存储自动化商店"^]
  a| 
 对于文件系统备份，请使用适用于 Windows 的插件
  a| 
@@ -277,7 +277,7 @@ Linux 或 Windows
 
 NOTE: 适用于 VMware vSphere 的 SnapCenter 插件支持对虚拟机（ VM ），数据存储库和虚拟机磁盘（ VMDK ）执行崩溃状态一致和 VM 一致的备份和还原操作，并支持 SnapCenter 应用程序专用插件，以保护虚拟化数据库和文件系统的应用程序一致的备份和还原操作。
 
-对于 SnapCenter 4.1.1 用户，适用于 VMware vSphere 的 SnapCenter 插件 4.1.1 文档提供了有关保护虚拟化数据库和文件系统的信息。对于 SnapCenter 4.2.x 用户，即 NetApp Data Broker 1.0 和 1.0.1 ，文档提供了有关使用适用于 VMware vSphere 的 SnapCenter 插件保护虚拟化数据库和文件系统的信息，该插件由基于 Linux 的 NetApp 数据代理虚拟设备（开放式虚拟设备格式）提供。对于使用 SnapCenter 4.3 或更高版本的用户， https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["适用于 VMware vSphere 的 SnapCenter 插件文档"^] 提供有关使用适用于 VMware vSphere 的基于 Linux 的 SnapCenter 插件虚拟设备（开放式虚拟设备格式）保护虚拟化数据库和文件系统的信息。
+对于 SnapCenter 4.1.1 用户，适用于 VMware vSphere 的 SnapCenter 插件 4.1.1 文档提供了有关保护虚拟化数据库和文件系统的信息。对于 SnapCenter 4.2.x 用户，即 NetApp Data Broker 1.0 和 1.0.1 ，文档提供了有关使用适用于 VMware vSphere 的 SnapCenter 插件保护虚拟化数据库和文件系统的信息，该插件由基于 Linux 的 NetApp 数据代理虚拟设备（开放式虚拟设备格式）提供。对于使用 SnapCenter 4.3 或更高版本的用户， https://["适用于 VMware vSphere 的 SnapCenter 插件文档"^] 提供有关使用适用于 VMware vSphere 的基于 Linux 的 SnapCenter 插件虚拟设备（开放式虚拟设备格式）保护虚拟化数据库和文件系统的信息。
 
 
 
@@ -348,7 +348,7 @@ NOTE: 适用于 Windows 的插件在物理和 RDM LUN 上配置 SMB 共享和 Wi
 * 同时支持 Windows 和 Linux 环境。在 Windows 环境中，通过自定义插件的自定义应用程序可以选择使用适用于 Microsoft Windows 的 SnapCenter 插件进行文件系统一致的备份。
 
 
-可以从下载适用于 SnapCenter 软件的 MySQL ， DB2 和 MongoDB 自定义插件示例 https://automationstore.netapp.com/home.shtml["NetApp 存储自动化商店"^]。
+可以从下载适用于 SnapCenter 软件的 MySQL ， DB2 和 MongoDB 自定义插件示例 https://["NetApp 存储自动化商店"^]。
 
 
 NOTE: MySQL ， DB2 和 MongoDB 自定义插件仅可通过 NetApp 社区获得支持。

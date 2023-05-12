@@ -20,4 +20,4 @@ Microsoft Exchange Eseutil 工具是 Exchange 服务器随附的命令行实用�
 
 | * 最佳实践： * 对于数据库可用性组（ Database Availability Group ， DAG ）配置中包含至少包含两个副本的数据库，无需执行一致性检查。 
 |===
-对于追加信息，请参见 https://docs.microsoft.com/en-us/exchange/exchange-server?view=exchserver-2019["Microsoft Exchange Server 文档"^]。
+对于追加信息，请参见 https://["Microsoft Exchange Server 文档"^]。

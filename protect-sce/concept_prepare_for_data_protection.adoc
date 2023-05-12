@@ -45,7 +45,7 @@ NOTE: 不支持 VMDK 。
 
 对于 SnapCenter 4.1.1 用户，适用于 VMware vSphere 的 SnapCenter 插件 4.1.1 文档提供了有关保护虚拟化数据库和文件系统的信息。对于 SnapCenter 4.2.x 用户，即 NetApp Data Broker 1.0 和 1.0.1 ，文档提供了有关使用适用于 VMware vSphere 的 SnapCenter 插件保护虚拟化数据库和文件系统的信息，该插件由基于 Linux 的 NetApp 数据代理虚拟设备（开放式虚拟设备格式）提供。对于 SnapCenter 4.3.x 用户，适用于 VMware vSphere 的 SnapCenter 插件 4.3 文档提供了有关使用适用于 VMware vSphere 的基于 Linux 的 SnapCenter 插件虚拟设备（开放式虚拟设备格式）保护虚拟化数据库和文件系统的信息。
 
-https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["适用于 VMware vSphere 的 SnapCenter 插件文档"^]
+https://["适用于 VMware vSphere 的 SnapCenter 插件文档"^]
 
 
 

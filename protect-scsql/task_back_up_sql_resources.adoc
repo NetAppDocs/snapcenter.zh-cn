@@ -140,7 +140,7 @@ NOTE: 您不应重命名在Windows计划程序或SQL Server代理中创建的备
 
 * 在 MetroCluster 配置中， SnapCenter 可能无法在故障转移后检测到保护关系。
 +
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster 故障转移后无法检测 SnapMirror 或 SnapVault 关系"]
+https://["MetroCluster 故障转移后无法检测 SnapMirror 或 SnapVault 关系"]
 
 * 如果要备份 VMDK 上的应用程序数据，并且适用于 VMware vSphere 的 SnapCenter 插件的 Java 堆大小不够大，则备份可能会失败。要增加 Java 堆大小，请找到脚本文件 /opt/netapp/init_scripts/scvservice 。在该脚本中， `do_start 方法` 命令将启动 SnapCenter VMware 插件服务。将该命令更新为以下命令： `java -JAR -Xmx8192M -Xms4096M` 。
 
@@ -151,8 +151,8 @@ link:task_create_backup_policies_for_sql_server_databases.html["为 SQL Server �
 
 link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["使用 PowerShell cmdlet 备份资源"]
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["由于 tcp_timeout 存在延迟，备份操作失败并显示 MySQL 连接错误"]
+https://["由于 tcp_timeout 存在延迟，备份操作失败并显示 MySQL 连接错误"]
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["备份失败，并显示 Windows 计划程序错误"]
+https://["备份失败，并显示 Windows 计划程序错误"]
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["暂停或分组资源操作失败"]
+https://["暂停或分组资源操作失败"]

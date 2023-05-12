@@ -33,9 +33,9 @@ IMPORTANT: 如果您在 Web 浏览器中打开了多个选项卡，则仅关闭 
 |===
 默认图形用户界面 URL 是与安装 SnapCenter 服务器的服务器上的默认端口 8146 （ _\https://server:8146_ ）的安全连接。如果您在 SnapCenter 安装期间提供了其他服务器端口，则会改用该端口。
 
-对于高可用性（ High Availability ， HA ）部署，您必须使用虚拟集群 IP _\https://Virtual_Cluster_IP_or_FQDN:8146_ 访问 SnapCenter 。如果在 Internet Explorer （ IE ）中导航到 >\https://Virtual_Cluster_IP_or_FQDN:8146_ 时未看到 SnapCenter UI ，则必须在每个插件主机的 IE 中将虚拟集群 IP 地址或 FQDN 添加为受信任站点，或者必须在每个插件主机上禁用 IE 增强安全性。有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["无法从外部网络访问集群 IP 地址"^]。
+对于高可用性（ High Availability ， HA ）部署，您必须使用虚拟集群 IP _\https://Virtual_Cluster_IP_or_FQDN:8146_ 访问 SnapCenter 。如果在 Internet Explorer （ IE ）中导航到 >\https://Virtual_Cluster_IP_or_FQDN:8146_ 时未看到 SnapCenter UI ，则必须在每个插件主机的 IE 中将虚拟集群 IP 地址或 FQDN 添加为受信任站点，或者必须在每个插件主机上禁用 IE 增强安全性。有关详细信息，请参见 https://["无法从外部网络访问集群 IP 地址"^]。
 
-除了使用 SnapCenter 图形用户界面之外，您还可以使用 PowerShell cmdlet 创建脚本以执行配置，备份和还原操作。某些 cmdlet 可能会随每个 SnapCenter 版本而发生更改。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^] 了解详细信息。
+除了使用 SnapCenter 图形用户界面之外，您还可以使用 PowerShell cmdlet 创建脚本以执行配置，备份和还原操作。某些 cmdlet 可能会随每个 SnapCenter 版本而发生更改。。 https://["《 SnapCenter 软件 cmdlet 参考指南》"^] 了解详细信息。
 
 
 NOTE: 如果您是首次登录到 SnapCenter ，则必须使用安装过程中提供的凭据进行登录。
@@ -78,7 +78,7 @@ Username
 
 此时将显示信息板页面。
 
-如果日志记录失败并显示错误，指出无法访问站点，则应将 SSL 证书映射到 SnapCenter 。 https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Protection_and_Security%2FSnapCenter%2FSnapCenter_will_not_open_with_error_%2522This_site_can%2527t_be_reached%2522["了解更多信息。"^]
+如果日志记录失败并显示错误，指出无法访问站点，则应将 SSL 证书映射到 SnapCenter 。 https://["了解更多信息。"^]
 
 * 完成后 *
 

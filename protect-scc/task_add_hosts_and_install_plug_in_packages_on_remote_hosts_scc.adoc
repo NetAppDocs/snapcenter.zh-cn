@@ -131,7 +131,7 @@ NOTE: 如果您手动安装了插件并指定了自定义端口，则必须指�
 此时将列出上传到 SnapCenter 服务器的自定义插件。
 
 +
-如果要管理 MySQL 或 DB2 应用程序，可以使用 NetApp 提供的 MySQL 和 DB2 自定义插件。MySQL 和 DB2 自定义插件可从获取 https://automationstore.netapp.com/home.shtml["NetApp 自动化商店"]
+如果要管理 MySQL 或 DB2 应用程序，可以使用 NetApp 提供的 MySQL 和 DB2 自定义插件。MySQL 和 DB2 自定义插件可从获取 https://["NetApp 自动化商店"]
 
 
 

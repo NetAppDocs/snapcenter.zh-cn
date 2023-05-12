@@ -30,7 +30,7 @@ summary: 如果要在独立配置或网络负载平衡 \ （ NLB ）配置中确
 
 . 使用 openssl 命令在 Windows 上为 MySQL 服务器和客户端设置 SSL 证书和密钥文件。
 +
-有关信息，请参见 https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL 5.7 ：使用 openssl 创建 SSL 证书和密钥"^]
+有关信息，请参见 https://["MySQL 5.7 ：使用 openssl 创建 SSL 证书和密钥"^]
 
 +
 
@@ -146,7 +146,7 @@ ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-key.pem"
 
 . 对于第一个 HA 节点，请使用 openssl 命令在 Windows 上为 MySQL 服务器和客户端设置 SSL 证书和密钥文件。
 +
-有关信息，请参见 https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL 5.7 ：使用 openssl 创建 SSL 证书和密钥"^]
+有关信息，请参见 https://["MySQL 5.7 ：使用 openssl 创建 SSL 证书和密钥"^]
 
 +
 
@@ -221,7 +221,7 @@ NOTE: 您不能再次创建 CA 证书。您应仅创建服务器公有证书，�
 
 .. 对于第一个 HA 节点，请使用 openssl 命令在 Windows 上为 MySQL 服务器和客户端设置 SSL 证书和密钥文件。
 +
-https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL 5.7 ：使用 openssl 创建 SSL 证书和密钥"]
+https://["MySQL 5.7 ：使用 openssl 创建 SSL 证书和密钥"]
 
 +
 

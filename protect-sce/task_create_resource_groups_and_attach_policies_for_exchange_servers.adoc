@@ -126,7 +126,7 @@ NOTE: 如果某个策略包含 * 备份作业创建时间要选择的服务器�
 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 `SET-SmtpServer` 指定 SMTP 服务器详细信息。
 
 +
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 . 查看摘要，然后单击 * 完成 * 。
 

@@ -27,7 +27,7 @@ link:task_back_up_resource_groups_sap_hana.html["备份资源组"]
 
 * 如果要在一个或多个租户数据库关闭时创建基于文件的备份，请使用 `SET-SmConfigSettings` cmdlet 在 HANA 属性文件中将 allow_file_based _backup_IFINACTIVE_tenants_present 参数设置为 * 是 * 。
 +
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"]
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考 https://["《 SnapCenter 软件 cmdlet 参考指南》"]
 
 * 对于用于暂停、Snapshot副本和取消静默操作的预后和后命令、您应通过以下路径检查这些命令是否位于插件主机上的命令列表中：
 +
@@ -155,7 +155,7 @@ _policy_name_ 是所选策略的名称。
 +
 ** 在 MetroCluster 配置中， SnapCenter 可能无法在故障转移后检测到保护关系。
 +
-有关信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster 故障转移后无法检测 SnapMirror 或 SnapVault 关系"^]
+有关信息，请参见 https://["MetroCluster 故障转移后无法检测 SnapMirror 或 SnapVault 关系"^]
 
 ** 如果要备份 VMDK 上的应用程序数据，并且适用于 VMware vSphere 的 SnapCenter 插件的 Java 堆大小不够大，则备份可能会失败。
 +

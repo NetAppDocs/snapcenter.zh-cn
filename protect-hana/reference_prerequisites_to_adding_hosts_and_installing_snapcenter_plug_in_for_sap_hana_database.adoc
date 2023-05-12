@@ -35,10 +35,10 @@ NOTE: 不支持IBM Java。
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
 * 您必须已在 Windows 主机上安装 Java 1.8 64 位。
 +
-http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
+http://["适用于所有操作系统的 Java 下载"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
+https://["NetApp 互操作性表工具"]
 
 
 
@@ -49,10 +49,10 @@ https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
 * 您必须已在 Linux 主机上安装 Java 1.8 64 位。
 +
-http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
+http://["适用于所有操作系统的 Java 下载"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
+https://["NetApp 互操作性表工具"]
 
 * 对于在 Linux 主机上运行的 SAP HANA 数据库，在安装适用于 SAP HANA 数据库的插件时，系统会自动安装适用于 UNIX 的 SnapCenter 插件。
 

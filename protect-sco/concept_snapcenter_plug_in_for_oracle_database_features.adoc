@@ -55,7 +55,7 @@ SnapCenter 将 NetApp Snapshot 副本技术与适用于 Oracle 数据库的插�
 
 +
 ** 您可以通过将enable_lunpath_monitoring参数的值设置为false来禁用此功能。
-** 您可以通过为lunpath_monitoring_interval参数分配值(以小时为单位)来指定自动修复LUN路径的频率。有关 SLM 的信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["《 ONTAP 9 SAN 管理指南》"^]。
+** 您可以通过为lunpath_monitoring_interval参数分配值(以小时为单位)来指定自动修复LUN路径的频率。有关 SLM 的信息，请参见 http://["《 ONTAP 9 SAN 管理指南》"^]。
 
 
 * 在Linux上支持非易失性内存快速(NVMe)

@@ -16,7 +16,7 @@ summary: 资源是指文件系统中由已安装的插件维护的 LUN 和类似
 * 您需要的内容 *
 
 * 您必须已完成安装 SnapCenter 服务器，添加主机，创建 Storage Virtual Machine （ SVM ）连接和添加凭据等任务。
-* 如果文件驻留在 VMware RDM LUN 或 VMDK 上，则必须部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件。有关详细信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["适用于 VMware vSphere 的 SnapCenter 插件文档"^]。
+* 如果文件驻留在 VMware RDM LUN 或 VMDK 上，则必须部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件。有关详细信息，请参见 https://["适用于 VMware vSphere 的 SnapCenter 插件文档"^]。
 
 
 * 步骤 *

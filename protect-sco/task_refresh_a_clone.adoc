@@ -59,6 +59,6 @@ NOTE: 克隆规范文件创建位置为： /var/opt/snapcenter/soc/clone_specs_ 
 如果操作失败并显示 "PL-SCO-20032 ： canExecute operation failed with error ： PL-SCo-30031 ： redo log file +SC_2959770772_clmdb/clmdb/redolog/redo01_01.log exists" 错误消息，请为 _-WaitToTriggerClone_ 指定更高的值。
 
 +
-有关 UNIX 命令的详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["《 SnapCenter 软件命令参考指南》"^]。
+有关 UNIX 命令的详细信息，请参见 https://["《 SnapCenter 软件命令参考指南》"^]。
 
 

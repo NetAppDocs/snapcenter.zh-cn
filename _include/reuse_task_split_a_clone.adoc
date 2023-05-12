@@ -14,7 +14,7 @@
 拆分 clone2 后，您可以对 clone1 执行克隆拆分操作，因为 clone1 不再是中间克隆。
 
 * 拆分克隆时，克隆的备份副本和克隆作业将被删除。
-* 有关克隆拆分操作限制的信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 ONTAP 9 逻辑存储管理指南》"^]。
+* 有关克隆拆分操作限制的信息，请参见 http://["《 ONTAP 9 逻辑存储管理指南》"^]。
 * 确保存储系统上的卷或聚合处于联机状态。
 
 
@@ -68,4 +68,4 @@
 
 * 查找更多信息 *
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["SnapCenter 克隆或验证失败，并且聚合不存在"]
+https://["SnapCenter 克隆或验证失败，并且聚合不存在"]

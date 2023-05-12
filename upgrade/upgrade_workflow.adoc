@@ -65,4 +65,4 @@ image::../media/upgrade_workflow.png[升级工作流]
 IMPORTANT: 例如、如果您使用的是SnapCenter 4.4.x版、并希望升级到4.7、则应先升级到4.6.x、然后再滚动升级到4.7。
 
 
-NOTE: 有关升级适用于 VMware vSphere 的 SnapCenter 插件的信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["升级适用于 VMware vSphere 的 SnapCenter 插件"^]。
+NOTE: 有关升级适用于 VMware vSphere 的 SnapCenter 插件的信息，请参见 https://["升级适用于 VMware vSphere 的 SnapCenter 插件"^]。

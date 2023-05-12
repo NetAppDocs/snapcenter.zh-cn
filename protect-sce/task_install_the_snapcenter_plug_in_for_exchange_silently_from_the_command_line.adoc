@@ -19,7 +19,7 @@ summary: 您应从 SnapCenter 用户界面中安装适用于 Exchange 的插件�
 * 您必须已安装 SnapCenter 插件软件包。
 * 在安装之前，必须删除适用于 Microsoft SQL Server 的早期版本的 SnapCenter 插件。
 +
-有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Install_a_SnapCenter_Plug-In_manually_and_directly_from_thePlug-In_Host["如何手动或直接从插件主机安装 SnapCenter 插件"^]。
+有关详细信息，请参见 https://["如何手动或直接从插件主机安装 SnapCenter 插件"^]。
 
 
 

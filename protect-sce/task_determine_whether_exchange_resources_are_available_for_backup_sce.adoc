@@ -17,7 +17,7 @@ summary: 资源是指由您安装的插件维护的数据库和 Exchange 数据�
 
 * 您必须已完成安装 SnapCenter 服务器，添加主机，创建存储系统连接，添加凭据以及安装适用于 Exchange 的插件等任务。
 * 要利用 Single Mailbox Recovery 软件功能，您必须已在安装了 Single Mailbox Recovery 软件的 Exchange Server 上找到活动数据库。
-* 如果数据库驻留在 VMware RDM LUN 上，则必须部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件。。 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["适用于 VMware vSphere 的 SnapCenter 插件文档"] 了解更多信息。
+* 如果数据库驻留在 VMware RDM LUN 上，则必须部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件。。 https://["适用于 VMware vSphere 的 SnapCenter 插件文档"] 了解更多信息。
 
 
 * 关于此任务 *

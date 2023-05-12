@@ -47,4 +47,4 @@ summary: 如果不再希望使用 SnapCenter 管理主机的数据保护作业�
 * 您应已以 RBAC 用户身份登录 SnapCenter 。
 
 
-有关卸载适用于 VMware vSphere 的 SnapCenter 插件的信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#remove-snapcenter-plug-in-for-vmware-vsphere["删除适用于 VMware vSphere 的 SnapCenter 插件"^]。
+有关卸载适用于 VMware vSphere 的 SnapCenter 插件的信息，请参见 https://["删除适用于 VMware vSphere 的 SnapCenter 插件"^]。

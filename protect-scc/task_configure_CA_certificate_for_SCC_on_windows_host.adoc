@@ -117,7 +117,7 @@ _keytool -keypasswd -alias "alias_name_in_CA_ct" -keystore keystore.jks_
 
 * 关于此任务 *
 
-* 要下载相关 CA 证书的最新 CRL 文件，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_update_certificate_revocation_list_file_in_SnapCenter_CA_Certificate["如何更新 SnapCenter CA 证书中的证书撤消列表文件"]。
+* 要下载相关 CA 证书的最新 CRL 文件，请参见 https://["如何更新 SnapCenter CA 证书中的证书撤消列表文件"]。
 * SnapCenter 自定义插件将在预配置的目录中搜索 CRL 文件。
 * SnapCenter 自定义插件的 CRL 文件的默认目录为： _C ： \Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\ etc\CRL'_ 。
 

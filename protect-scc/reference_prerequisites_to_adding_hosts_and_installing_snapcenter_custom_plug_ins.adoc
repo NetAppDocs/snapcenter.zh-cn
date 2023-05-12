@@ -49,7 +49,7 @@ custom_plugin_checksum_list是SnapCenter 在主机上安装的自定义插件的
 +
 .. 已生成插件zip文件的SHA512哈希。
 +
-您可以使用等联机工具 https://emn178.github.io/online-tools/sha512_file_hash.html["SHA512哈希"^]。
+您可以使用等联机工具 https://["SHA512哈希"^]。
 
 .. 已将生成的SHA512哈希添加到custom_plugin_checksum_list文件中的新行。
 +
@@ -85,10 +85,10 @@ custom_plugin_checksum_list是SnapCenter 在主机上安装的自定义插件的
 如果要对SnapCenter 服务器主机使用Windows Server 2019或Windows Server 2016、则必须安装Java 1.8或Java 11 (64位)。互操作性表工具（ IMT ）包含有关要求的最新信息。
 
 +
-http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
+http://["适用于所有操作系统的 Java 下载"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=108393;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
+https://["NetApp 互操作性表工具"]
 
 * 您必须为非 root 用户配置 sudo 权限，才能提供对多个路径的访问权限。使用 visudo Linux 实用程序将以下行添加到 /etc/sudoers 文件中。
 +

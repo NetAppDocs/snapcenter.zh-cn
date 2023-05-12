@@ -108,7 +108,7 @@ NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 se
 +
 ** 在 MetroCluster 配置中， SnapCenter 可能无法在故障转移后检测到保护关系。
 +
-有关信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster 故障转移后无法检测 SnapMirror 或 SnapVault 关系"^]
+有关信息，请参见 https://["MetroCluster 故障转移后无法检测 SnapMirror 或 SnapVault 关系"^]
 
 ** 如果要备份 VMDK 上的应用程序数据，并且适用于 VMware vSphere 的 SnapCenter 插件的 Java 堆大小不够大，则备份可能会失败。
 +

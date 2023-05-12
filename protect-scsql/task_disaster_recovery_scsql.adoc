@@ -29,4 +29,4 @@ link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["�
 . 从灾难恢复备份中的适用于 SQL Server 的 SnapCenter 插件文件夹导入 Windows 和 SQL 计划。
 
 
-有关详细信息，请参见 https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["灾难恢复 API"^] 视频。
+有关详细信息，请参见 https://["灾难恢复 API"^] 视频。

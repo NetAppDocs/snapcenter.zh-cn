@@ -112,7 +112,7 @@ NOTE: 预处理脚本或后处理脚本路径不应包含驱动器或共享。�
 NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 set-SmtpServer 指定 SMTP 服务器详细信息。
 
 +
-对于 EMS ，请参见 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["管理 EMS 数据收集"]
+对于 EMS ，请参见 https://["管理 EMS 数据收集"]
 
 . 查看摘要，然后单击 * 完成 * 。
 

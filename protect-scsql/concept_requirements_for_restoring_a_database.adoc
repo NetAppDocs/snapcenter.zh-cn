@@ -31,7 +31,7 @@ summary: 在从适用于 Microsoft SQL Server 的 SnapCenter 插件备份还原 
 * 如果要将自定义日志目录备份还原到备用主机，则 SnapCenter 服务器和插件主机必须安装相同的 SnapCenter 版本。
 * 您必须已安装 Microsoft 热修补程序 KB2887595 。Microsoft 支持站点包含有关 KB2887595 的详细信息。
 +
-https://support.microsoft.com/kb/2887595["Microsoft 支持文章 2887595 ： Windows RT 8.1 ， Windows 8.1 和 Windows Server 2012 R2 更新汇总： 2013 年 11 月"]
+https://["Microsoft 支持文章 2887595 ： Windows RT 8.1 ， Windows 8.1 和 Windows Server 2012 R2 更新汇总： 2013 年 11 月"]
 
 * 您必须已备份资源组或数据库。
 * 如果要将 Snapshot 副本复制到镜像或存储， SnapCenter 管理员必须已为您分配源卷和目标卷的 Storage Virtual Machine （ SVM ）。

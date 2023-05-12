@@ -33,7 +33,7 @@ NOTE: 如果命令列表中不存在这些命令、则操作将失败。
 
 * 关于此任务 *
 
-有关克隆拆分操作限制的信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 ONTAP 9 逻辑存储管理指南》"^]。
+有关克隆拆分操作限制的信息，请参见 http://["《 ONTAP 9 逻辑存储管理指南》"^]。
 
 * 步骤 *
 

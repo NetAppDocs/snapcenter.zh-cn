@@ -90,7 +90,7 @@ host
 
 
 
-IMPORTANT: 如果您使用适用于 VMware vSphere 的 SnapCenter 插件功能来保护 VM ， VMDK 或数据存储库，则应使用 VMware vSphere GUI 将 vCenter 用户添加到适用于 VMware vSphere 的 SnapCenter 插件角色中。有关 VMware vSphere 角色的信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_predefined_roles_packaged_with_snapcenter.html["适用于 VMware vSphere 的 SnapCenter 插件附带的预定义角色"^]。
+IMPORTANT: 如果您使用适用于 VMware vSphere 的 SnapCenter 插件功能来保护 VM ， VMDK 或数据存储库，则应使用 VMware vSphere GUI 将 vCenter 用户添加到适用于 VMware vSphere 的 SnapCenter 插件角色中。有关 VMware vSphere 角色的信息，请参见 https://["适用于 VMware vSphere 的 SnapCenter 插件附带的预定义角色"^]。
 
 * 步骤 *
 

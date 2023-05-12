@@ -40,7 +40,7 @@ summary: '您可以从 " 资源 " 页面按需备份资源组。如果资源组�
 +
 ** 在 MetroCluster 配置中， SnapCenter 可能无法在故障转移后检测到保护关系。
 +
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster 故障转移后无法检测 SnapMirror 或 SnapVault 关系"]
+https://["MetroCluster 故障转移后无法检测 SnapMirror 或 SnapVault 关系"]
 
 ** 如果要备份 VMDK 上的应用程序数据，并且适用于 VMware vSphere 的 SnapCenter 插件的 Java 堆大小不够大，则备份可能会失败。要增加 Java 堆大小，请找到脚本文件 /opt/netapp/init_scripts/scvservice 。在该脚本中， `do_start 方法` 命令将启动 SnapCenter VMware 插件服务。将该命令更新为以下命令： `java -JAR -Xmx8192M -Xms4096M` 。
 
