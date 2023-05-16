@@ -7963,4 +7963,5 @@
   <block id="158e3fb1c7bf72fb1db969f281a7a097" category="list-text"><block ref="f5ba209e62536d23f7b5fe25e81421e2" prefix="" category="inline-code"></block></block>
   <block id="198803c71459bc222adc91a3d7048f01" category="paragraph">仅当您选择了*将数据库还原到备用主机*或*使用现有数据库文件还原数据库*时，*使用自定义日志目录*选项才可用。您也可以使用共享路径、但要确保该路径可由SQL用户访问。</block>
   <block id="17049c1cdf73c2b4b41219f99ace3f81" category="list-text">您应将*bash*用作插件安装的默认shell。</block>
+  <block id="b3fae7a36581789e46e17a83505c11b3" category="paragraph">如果您以非root用户身份安装了此插件、则应手动将执行权限分配给预处理和后处理目录。</block>
 </blocks>
