@@ -1942,7 +1942,6 @@
   <block id="01e025a69fb0e3e37bdca75ddd65d273" category="paragraph">在 RAC 设置中，只有在恢复了数据库的节点上才会打开 PDB 。您应在 RAC 设置的所有其他节点上手动打开已恢复的 PDB 。</block>
   <block id="30cfe0e278c990bda4b09d81fbb0ec6c" category="doc">监控 Oracle 数据库还原操作</block>
   <block id="8d70bdd589ad1d5053591608060dd666" category="summary">资源是指主机上由 SnapCenter 管理的 Oracle 数据库。发现可用数据库后，您可以将这些数据库添加到资源组以执行数据保护操作。</block>
-  <block id="b235b91c85e6ff24696d87bf417b2277" category="doc">确定 Oracle 数据库是否可用于备份</block>
   <block id="04e793c2d8facdc933edd3335c890a34" category="list-text">您必须已完成安装 SnapCenter 服务器，添加主机，创建存储系统连接和添加凭据等任务。</block>
   <block id="14391af03493ba1cebd9404bb5bda74c" category="list-text">如果数据库驻留在虚拟机磁盘（ VMDK ）或原始设备映射（ RDM ）上，则必须部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件。</block>
   <block id="2ab45cdd9c7a68b490dde7ff87978512" category="paragraph">有关详细信息，请参见<block ref="147b933388a6511d6c294a95b67dd2ec" category="inline-link-rx"></block>。</block>
@@ -2013,16 +2012,12 @@
   <block id="b34b9f5decf78eb62a8145da0940d7d1" category="paragraph">_policy_name_ 是所选策略的名称。</block>
   <block id="a263a024ecfc193325fde48303936fd7" category="list-text">在验证页面上，执行以下步骤：</block>
   <block id="aa60fb0ff9f13cd254813c318d11d1bf" category="list-text">单击 * 加载定位器 * 以加载 SnapMirror 或 SnapVault 卷，以便在二级存储上执行验证。</block>
-  <block id="60819b0f333a60a877f3b241274ddbfd" category="list-text">单击 <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block> 在 Configure Schedules 列中，为策略的所有计划类型配置验证计划。</block>
   <block id="73d5c45d8fe4cd81e69573ed4a382644" category="list-text">在添加验证计划 _policy_name_ 对话框中，执行以下操作：</block>
-  <block id="d3fbced85b7ea3c853c32d56707ed82f" category="paragraph">选择 * 运行计划的验证 * ，然后从下拉列表中选择计划类型。</block>
   <block id="014b5d6fbe7be4e31085d3f8a60c9445" category="admonition">在 FlexASM 设置中，如果基数小于 RAC 集群中的节点数，则无法对叶节点执行验证操作。</block>
   <block id="86d0a1c0a1c24b3fd3e7c61cd7b71901" category="list-text">选择 * 在二级位置验证 * 以验证二级存储上的备份。</block>
   <block id="158960e40cea9822bb4339b4f8995696" category="paragraph">已配置的验证计划将列在 "applied Schedules" 列中。</block>
   <block id="f1959398bc1be9959fe83a99b07fd5d3" category="paragraph">您还必须指定发件人和收件人电子邮件地址以及电子邮件主题。如果要附加对资源执行的备份操作的报告，请选择 * 附加作业报告 * 。</block>
-  <block id="259d3ed1b70f5247f9e2fc2be475381a" category="list-text">在 AIX 设置中，您可以使用 lkdev 命令锁定，并使用 rendev 命令重命名备份的数据库所在的磁盘。</block>
   <block id="8a1c4d8854ab495e687e6155302b5e31" category="paragraph">使用该备份还原时，锁定或重命名设备不会影响还原操作。</block>
-  <block id="0c2aa1683107d10f559e2505dfb5befc" category="list-text">如果备份操作因数据库查询执行时间超过超时值而失败，则应运行 Set-SmConfigSettings cmdlet 来更改 ORACLE_SQL_query_timeout 和 ORACLE_plugin_SQL_query_timeout 参数的值：</block>
   <block id="31bbfd3d5f153e5da05f4114737ea2cd" category="paragraph">修改参数值后，运行以下命令 ` /opt/netapp/snapcenter/spl/bin/spl restart` 以重新启动 SnapCenter 插件加载程序（ SPL ）服务</block>
   <block id="14894175a6559422772ab07b7e553342" category="list-text">如果在验证过程中无法访问此文件，并且挂载点不可用，则此操作可能会失败，并显示错误代码 DBV-00100 指定文件。您应修改 sco.properties 中 verification_delay 和 verification_retry_count 参数的值。</block>
   <block id="2a1878497d482cf8e9e56639ad6cb01e" category="list-text">如果要备份 VMDK 上的应用程序数据，并且适用于 VMware vSphere 的 SnapCenter 插件的 Java 堆大小不够大，则备份可能会失败。</block>
@@ -2038,7 +2033,6 @@
   <block id="55abc85a57dc4521b07b9255c349e483" category="list-text">您应已验证在 ASM 磁盘组上包含文件的数据库应处于 `Mount` 或`open` 状态，以便使用 Oracle DBVERIFY 实用程序验证其备份。</block>
   <block id="3d963ba9da839641b29329d2008be606" category="list-text">您应已验证卷挂载点长度不超过 240 个字符。</block>
   <block id="7d61484685130c3cdd5533d35c2e1a49" category="paragraph">修改这些值时，请确保没有正在运行的作业，并在增加此值后重新启动 SnapCenter SMCore 服务。</block>
-  <block id="0b467061f52733da68bf2a4d7726c3f9" category="summary">在创建备份作业之前定义备份策略可确保您拥有成功还原或克隆数据库所需的备份。您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO ）在很大程度上决定了您的备份策略。</block>
   <block id="4aad6a55b7d830fe36a2a075e0a60363" category="doc">为 Oracle 数据库定义备份策略</block>
   <block id="fa8467a355232709f9161185e426b477" category="paragraph">SLA 定义了预期的服务级别，并解决了许多与服务相关的问题，包括服务的可用性和性能。RTO 是指服务中断后必须恢复业务流程的时间。RPO 定义了必须从备份存储中恢复的文件的使用期限策略，以便在发生故障后恢复常规操作。SLA ， RTO 和 RPO 有助于实施数据保护策略。</block>
   <block id="837133a617997f77e41ae32488daeff9" category="section-title">支持用于备份的 Oracle 数据库配置</block>
@@ -2285,10 +2279,7 @@
   <block id="083ad21990802d20fc5fdefdb7255565" category="paragraph">2 GB</block>
   <block id="3a955e6f54e73fa288537f456087e118" category="paragraph">Java 1.8.x （ 64 位） Oracle Java 和 OpenJDK 版本</block>
   <block id="4e665afb5c15dd75650eeba423b153f0" category="list-text">登录到要安装适用于 Linux 的 SnapCenter 插件软件包的 Linux 主机。</block>
-  <block id="6b33644191204350f20a3a84f6152f47" category="summary">资源组是指必须向其添加要备份和保护的资源的容器。通过资源组，您可以同时备份与给定应用程序关联的所有数据。</block>
   <block id="a79101df6f2655709b2aa6b2ec32c488" category="doc">为 Oracle 数据库创建资源组和附加策略</block>
-  <block id="e525da83465049bad6a7bf2676a73ce2" category="paragraph">您应确保在 ASM 磁盘组上包含文件的数据库应处于 "mount" 或 "open" 状态，以便使用 Oracle DBVERIFY 实用程序验证其备份。</block>
-  <block id="c58481c5b8cfb4b2b7162b1b1cf5c8dd" category="paragraph">您应将一个或多个策略附加到资源组，以定义要执行的数据保护作业类型。</block>
   <block id="fa4d1c967d467deb12174bc6b1b3355b" category="paragraph">输入资源组的名称。</block>
   <block id="7651838ffd9b279a9ff6c4c63159427e" category="paragraph">输入一个或多个标签，以帮助您稍后搜索资源组。</block>
   <block id="dc5b15d16c6cbd04c1864901ca5f2732" category="paragraph">例如，如果您将 HR 作为标记添加到多个资源组，则稍后可以找到与 HR 标记关联的所有资源组。</block>
@@ -2300,7 +2291,6 @@
   <block id="be00178f4e91d4901871234d117ca9d0" category="admonition">您也可以单击来创建策略 <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="d89a925c7347eda26320229d83214fd3" category="paragraph">其中， _policy_name_ 是选定策略的名称。</block>
   <block id="eecd36c568b40385bb729410ba711a64" category="paragraph">如果第三方备份计划与 SnapCenter 备份计划重叠，则不支持这些计划。</block>
-  <block id="52fb8cc6d977f4b0c5a28fca774e1265" category="list-text">单击 *<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* 在 Configure Schedules 列中，为策略的所有计划类型配置验证计划。</block>
   <block id="5b6546a020e7d5a17b75b6f6e6be79a3" category="paragraph">选择 * 运行计划验证 * ，然后从下拉列表中选择计划类型。</block>
   <block id="8dc3eb18807f6424ec895a845ced71bb" category="list-text">选择 * 在二级位置验证 * 以验证二级存储系统上的备份。</block>
   <block id="e058be158ad9231e0b1b44d9048f0ff8" category="summary">您可以取消正在运行，已排队或无响应的备份操作。</block>
@@ -2487,10 +2477,8 @@
   <block id="eebf4dbc30cb79473f44b0746798f0d8" category="list-text">运行 _Refresh-SmClone_ 。</block>
   <block id="2dca23ddca1615e63d449ef4dd543431" category="paragraph">如果操作失败并显示 "PL-SCO-20032 ： canExecute operation failed with error ： PL-SCo-30031 ： redo log file +SC_2959770772_clmdb/clmdb/redolog/redo01_01.log exists" 错误消息，请为 _-WaitToTriggerClone_ 指定更高的值。</block>
   <block id="1aac38ab9167eb6ae3a199d0a8bc7915" category="doc">备份 Oracle 数据库</block>
-  <block id="cb21f64b7aa1d58307ba1cfcc254fb77" category="paragraph">您可以为资源（数据库）或资源组创建备份。备份工作流包括规划，确定要备份的资源，创建备份策略，创建资源组和附加策略，创建备份以及监控操作。</block>
   <block id="b9721a35a6c374ded595576ccbd2f789" category="paragraph">以下工作流显示了必须执行备份操作的顺序：</block>
   <block id="fb21695f6b72866357b3e3381a3dd8d4" category="image-alt">Oracle 的备份工作流</block>
-  <block id="74be1413d8c1294602864c1d9e25f626" category="paragraph">但是，如果上次备份完成并显示警告，则操作锁定文件可能不会被删除，下次备份操作将进入等待队列。如果未删除 * 。 sm_lock_dbsid* 文件，则此文件最终可能会被取消。在这种情况下，您必须执行以下步骤来手动删除操作锁定文件：</block>
   <block id="3ab07b443e5100312a8428cab6f6a083" category="list-text">删除操作锁定：``rm -rf .sm_lock_dbsid.``</block>
   <block id="8bfbb41a79c1c2438e1a53e2a727fb3c" category="paragraph">您应使用 _Install-SmHostPackage_ PowerShell cmdlet 在多个主机上安装适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包。</block>
   <block id="367659a073d284a1e67b11ac7a540d28" category="paragraph">您应在要安装此插件软件包的每个主机上以具有本地管理员权限的域用户身份登录到 SnapCenter 。</block>
@@ -2529,7 +2517,6 @@
   <block id="912fcac3286444ef7e6ea296ea17e9b6" category="paragraph">` ./snapcenter_aix_host_plugin.bsx-I silent-Dport=8145-dserver_ip=SnapCenter_Server_FQDN-dserver_HTTPS_port=SnapCenter_Server_Port-Duser_install_DIR=/opt/custom_path-DINSTALL_log_name=SnapCenter_AIX_Host_Plug_User_List_User_CN_US_CNES_US_US_USER_DIR=/CTO_USER_USER_CH_USER.CHOCH_USER.CH_USER_USER_DIR=DTO_NAME=DTO_USER.`</block>
   <block id="543eb3b9143ccc1ed273dbc9f064ffa2" category="summary">资源组是主机或集群上的一组资源。系统会对资源组中定义的所有资源执行备份操作。</block>
   <block id="7fac35e2e64a179ee0279256e1dc195f" category="doc">备份 Oracle 数据库资源组</block>
-  <block id="ab266f443637649193c14fb7a9370e7e" category="admonition">如果您的联合资源组包含两个数据库，而其中一个数据库在非 NetApp 存储上具有数据文件，则即使另一个数据库位于 NetApp 存储上，备份操作也会中止。</block>
   <block id="cad5c11b4fef48d75eb3db98fb343e1b" category="summary">您可以还原已损坏或丢弃的部分表空间，而不会影响数据库中的其他表空间。SnapCenter 使用 RMAN 对表空间执行时间点恢复 \ （ PITR\ ）。</block>
   <block id="40114ba0156baf553fcde8f3a74bb20d" category="doc">使用时间点恢复还原和恢复表空间</block>
   <block id="4291e94658d31afa6cbfc0020f3c2c2f" category="paragraph">您可以还原已损坏或丢弃的部分表空间，而不会影响数据库中的其他表空间。SnapCenter 使用 RMAN 对表空间执行时间点恢复（ PITR ）。</block>
@@ -7465,7 +7452,6 @@
   <block id="0ac22ed74dd628cec8a2c5e2f64bf612" category="list-text">如果要备份的数据库很大(以TB为单位)、则应将SnapCenter 服务器主机中的_C：\Program Files\NetApp \SMCore\SMCoreServiceHost.exe配置_文件中的RESTTimeout值增加到86400000毫秒。</block>
   <block id="12030a592b1dcd9007e06eda350e5904" category="list-text">如果要恢复到特定日期和时间，请选择 * 日期和时间 * 并指定日期和时间以及辅助目标。</block>
   <block id="740364074f07d3ca5c0b017db01d8838" category="paragraph">SnapCenter 可根据指定的SCN或选定的日期和时间确定并挂载并编目执行PITR所需的最佳数据和日志备份数。</block>
-  <block id="46eafed7afc11552d8171b2eb6ae91d0" category="section-title">如何防止SnapCenter 发现非数据库条目</block>
   <block id="8bd0906e1408858d04adcc36035359ac" category="paragraph">您可以阻止SnapCenter 发现在oratab文件中添加的非数据库条目。</block>
   <block id="a91c1695dbc901f96299c334e515e6b0" category="list-text">安装适用于Oracle的插件后、root用户应在目录/var/opt/snapcenter/SCC/etc/_下创建* sc_oratab.config*文件。</block>
   <block id="e52e8b1290260b6f01eec0c767b91bb9" category="paragraph">向Oracle二进制文件所有者和组授予写入权限、以便将来可以保留该文件。</block>
@@ -7970,4 +7956,122 @@
   <block id="0f5b112cebb37022dbfe2c80e388d605" category="paragraph">请参见 <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block>。</block>
   <block id="a8d67928879d7cbd7d3c5d1b6d797736" category="list-text">使用禁用MFA并清理在启用MFA时创建的配置文件<block ref="3f459b2c524cc44ef57664fd75d5c093" prefix=" " category="inline-code"></block> cmdlet。</block>
   <block id="6bcc192d7209e867a0f8afd8938c62eb" category="sidebar">管理多因素身份验证(MFA)</block>
+  <block id="d9372adbc1bed6681e74cd02004081f0" category="summary">SnapCenter 如何发现Oracle数据库。</block>
+  <block id="f3c021a5eae937a13601d397b792c2d2" category="paragraph">您可以使用Oracle Recovery Manager (RMAN)为Oracle数据库的备份编制目录、以便将备份信息存储在Oracle RMAN存储库中。</block>
+  <block id="084690c33c7b29b1780ab8f409fb8650" category="section-title">外部目录数据库</block>
+  <block id="c5c4e8f374f512a056ca1205e002a1fd" category="section-title">RMAN命令</block>
+  <block id="f49c2881ffbdaf870ec7ed9ea88f4343" category="paragraph">如果在从 SnapCenter 图形用户界面创建 Oracle 备份策略时启用了编目选项，则在备份操作中会使用 Oracle RMAN 对备份进行编目。您还可以通过运行来执行延迟备份编目<block ref="a0b1ab6ae251c2e9971158956eaa5c76" prefix=" " category="inline-code"></block> 命令：</block>
+  <block id="b0d14c022e51c262621e79e943a3b6d0" category="paragraph">编制备份目录后、您可以运行<block ref="c307f2fb096a201d2b32b2d18a240364" prefix=" " category="inline-code"></block> 命令以获取已编制目录的备份信息、例如、已编制目录的数据文件的标记、控制文件目录路径以及已编制目录的归档日志位置。</block>
+  <block id="5e5ff61214eb4873285663f81049ec20" category="section-title">命名格式</block>
+  <block id="059297ebf3935d6b4bcb000628a9d653" category="section-title">交叉检查操作</block>
+  <block id="8e03216fb8576194a8567507d59c56b7" category="paragraph">您可以执行交叉检查来更新有关存储库记录与其物理状态不匹配的备份的过时 RMAN 存储库信息。例如，如果用户使用操作系统命令从磁盘中删除归档日志，则控制文件仍会指示这些日志位于磁盘上，而实际上不在磁盘上。</block>
+  <block id="7944aae88fbc469a9edfc7d9ae22e633" category="paragraph">通过交叉检查操作，您可以使用信息更新控制文件。您可以通过运行 set-SmConfigSettings 命令并为 enable_casscheck 参数分配值 true 来启用交叉检查。默认值设置为 false 。</block>
+  <block id="14fbb4ba3858c107f2599916d3b51cbb" category="section-title">删除目录信息</block>
+  <block id="3fc370e9504ca2ebb69ee1e9030a971f" category="paragraph">有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help command_name 来获取。或者，您也可以参考<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
+  <block id="4c4d4c133d15d97bf3bef74ffeeeb66a" category="list-text">在左侧导航窗格中，选择*Resoles*，然后从列表中选择相应的插件。</block>
+  <block id="ba4484b740822363967ef7dbb090de6a" category="inline-image-macro">筛选器图标</block>
+  <block id="bdf18e1416fb037a66cb2e8b6bf34e50" category="list-text">单击 <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>，然后选择主机名和数据库类型以筛选资源。</block>
+  <block id="36fae2ba23dbe8fc737f85fdffde333e" category="paragraph">然后，您可以单击 <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block> 以关闭筛选器窗格。</block>
+  <block id="90db41db3c301da492422a8fbb244c83" category="list-text">在资源页面中、您可以执行以下步骤：</block>
+  <block id="00f0529a96533b63a21705811e1addce" category="list-text">选中此复选框、然后输入要用于Snapshot副本名称的自定义名称格式。</block>
+  <block id="8319f5e3f98fcec5a71bd43e8454a8fd" category="paragraph">例如：<block ref="6d242f6ac938ffb13709f54d68cd3c4a" prefix=" " category="inline-code"></block> 或<block ref="90ea7aa0cb61dd49e32f6dcf8afac143" prefix=" " category="inline-code"></block>。默认情况下、Snapshot副本名称会附加时间戳。</block>
+  <block id="e0af3bf36c9535530ed431b3358aa176" category="inline-image-macro">添加符号</block>
+  <block id="a2fbabd2b5fd55db991eb64739e8189a" category="admonition">您可以单击来创建策略 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="a04dff3ca18f5d27eeb205537402b01c" category="list-text">单击 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> 在配置计划列中、为所需策略配置计划。</block>
+  <block id="37f44ce16715c2bf101710578d0cdd78" category="list-text">在为policy _policy_name_添加计划窗口中、配置计划、然后选择<block ref="e0aa021e21dddbd6d8cecec71e9cf564" prefix=" " category="inline-code"></block>。</block>
+  <block id="8152b7fd31613e401469a6547fe7ab3f" category="list-text">单击*加载定位器*加载SnapMirror或SnapVault 卷以验证二级存储。</block>
+  <block id="b4795af650dd450875d0affec7e81c42" category="list-text">单击 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> 在 Configure Schedules 列中，为策略的所有计划类型配置验证计划。+在添加验证计划_policy_name_对话框中、可以执行以下步骤：</block>
+  <block id="2226a89f0e569aafd7ff5ef91e17aca2" category="list-text">选择*运行计划验证*，然后从下拉列表中选择计划类型。</block>
+  <block id="a40e69276b6e9ce163d85fd729a42eae" category="list-text">在通知页面中，从*电子邮件首选项*下拉列表中选择要发送电子邮件的场景。</block>
+  <block id="d7a872f323113f381eb79316af450829" category="paragraph">您必须指定发件人和收件人电子邮件地址以及电子邮件的主题。如果要附加对资源执行的备份操作的报告，请选择 * 附加作业报告 * 。</block>
+  <block id="56f30e0902c1ab371ccae5be347a631e" category="admonition">对于电子邮件通知、您必须已使用GUI或PowerShell命令指定SMTP服务器详细信息<block ref="997c102f406bdf4b18d046c49ffaa8f9" prefix=" " category="inline-code"></block>。</block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="list-title">完成后</block>
+  <block id="b27045f6d55975ea692f5ae0a715da51" category="list-text">在AIX设置中、您可以使用<block ref="9c24f53e48c98577b16ec56f199c0106" prefix=" " category="inline-code"></block> 用于锁定的命令和<block ref="6fec2b39344b576b753af3936b8b4491" prefix=" " category="inline-code"></block> 命令重命名已备份数据库所在的磁盘。</block>
+  <block id="407eab8241b7b3d334f9f6b403d230f9" category="list-text">如果备份操作因数据库查询执行时间超过超时值而失败、则应运行来更改oracle_sql_query_timeout和oracle_plugin_sql_query_timeout参数的值<block ref="c49971dbd0f66cf4e6b62fc441967947" prefix=" " category="inline-code"></block> cmdlet：</block>
+  <block id="9c83e144e5481ac6766f4055e566594d" category="list-title">了解更多信息</block>
+  <block id="8dc85b73e2cb5020859a39480b17009c" category="list-text"><block ref="802c82c89baa4a09096a77864bb21fb2" category="inline-link-rx"></block> (需要登录)</block>
+  <block id="40a2df546d9e9d7c560fe96c630c6c74" category="doc">备份操作步骤 概述</block>
+  <block id="e5325159577ee33e354dc9b247eb5a41" category="paragraph">您可以为资源（数据库）或资源组创建备份。备份操作步骤 包括规划、确定备份资源、创建备份策略、创建资源组和附加策略、创建备份以及监控操作。</block>
+  <block id="380f9875e9dac40e8c0bc082d654be88" category="paragraph">但是，如果上次备份完成并显示警告，则操作锁定文件可能不会被删除，下次备份操作将进入等待队列。如果未删除 * 。 sm_lock_dbsid* 文件，则此文件最终可能会被取消。在这种情况下、您必须执行以下步骤来手动删除操作锁定文件：</block>
+  <block id="bcbd15ff750a5bdd0a69b69272c96224" category="doc">发现可供备份的Oracle数据库</block>
+  <block id="6e511cfe87a95df884e3eeb9f86e7f6c" category="paragraph">* 您需要的内容 *</block>
+  <block id="43a1b5ca6be8bdd76245bbef93eb42c3" category="section-title">第1步：阻止SnapCenter 发现非数据库条目</block>
+  <block id="6ff7029ca2037b63aa334483b3f6dbd1" category="section-title">第2步：发现资源</block>
+  <block id="afe43493934ee712f4ff5ce8418fc255" category="paragraph">在Oracle Real Application Clusters (RAC)设置中、您可以指定SnapCenter 用于执行备份操作的首选节点。如果未指定首选节点， SnapCenter 会自动将某个节点分配为首选节点，并在该节点上创建备份。</block>
+  <block id="9cf00451682ac5fbc7ad037c5033fbe7" category="paragraph">首选节点可能是存在 RAC 数据库实例的一个或所有集群节点。备份操作仅会按首选顺序在这些首选节点上触发。</block>
+  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="paragraph-title">示例</block>
+  <block id="c9328c682f9cde36ed9275b8d6076776" category="paragraph">RAC数据库cdbrac有三个实例：node1上的cdbrac1、node2上的cdbrac2和node3上的cdbrac3。</block>
+  <block id="ef86a82fdcc178a3727d5487d64da0f7" category="paragraph">node1 和 node2 实例配置为首选节点，其中 node2 为第一个首选项， node1 为第二个首选项。执行备份操作时，系统会首先尝试对 node2 执行此操作，因为它是第一个首选节点。</block>
+  <block id="b9a9b52da26d376bae745caa147a52ef" category="paragraph">如果 node2 未处于备份状态，这可能是由于多种原因造成的，例如插件代理未在主机上运行，则主机上的数据库实例对于指定的备份类型不处于所需状态。 或者，在 FlexASM 配置中， node2 上的数据库实例不由本地 ASM 实例提供服务；则会尝试对 node1 执行此操作。</block>
+  <block id="4002c4b6b0a844b5972c38c7594c4329" category="paragraph">node3 不会用于备份，因为它不在首选节点列表中。</block>
+  <block id="b250d1148a21c87bd22c0e130bc63078" category="section-title">Flex ASM设置</block>
+  <block id="4ea8079fa2f37d718bf02e968bee364b" category="paragraph">资源是指主机上由SnapCenter 维护的Oracle数据库。发现可用数据库后，您可以将这些数据库添加到资源组以执行数据保护操作。</block>
+  <block id="35cd5d3812d5d01441ea27f0cc23e846" category="paragraph">以下各节介绍了SnapCenter 发现不同类型和版本的Oracle数据库的过程。</block>
+  <block id="c3840e3ab25ce9f30ec697c152655f28" category="paragraph-title">RAC数据库</block>
+  <block id="fde91ef302aa0e3bbe841036968b5490" category="paragraph">RAC数据库只会根据/etc/oratab`条目进行发现。您应在 /etc/oratab 文件中包含数据库条目。</block>
+  <block id="5c80f101108a356211fcb26b3f83eabb" category="paragraph-title">独立</block>
+  <block id="bea76d34a87d4264ca025e2d88b3350d" category="paragraph">仅会根据/etc/oratab条目发现独立数据库。</block>
+  <block id="7ccbb03cb795734415a0b6924a8d7aed" category="paragraph-title">ASM</block>
+  <block id="10d2161a02aedfc95234b3a3456eb306" category="paragraph">ASM实例条目应位于/etc/oratab文件中。</block>
+  <block id="2e870bce056fbce1cb37f62a4e47660e" category="paragraph-title">RAC One Node</block>
+  <block id="14eaca04b4e6fa17b6fb76a780747d7b" category="paragraph">RAC One Node数据库仅会根据/etc/oratab条目进行发现。数据库应处于nomount、mount或open状态。您应在 /etc/oratab 文件中包含数据库条目。</block>
+  <block id="0490fa938898aedef2dc7269ec3361ba" category="list-text">从资源页面中选择RAC One Node数据库、然后单击Database Settings。</block>
+  <block id="141229b009a397273fc34bf2467990b8" category="list-text">如果已将数据库从一个节点重新定位到另一个节点、并且未删除早期节点中的oratab条目、请手动删除oratab条目、以避免同一数据库显示两次。</block>
+  <block id="b6b2be55c51c8c3e0d58ffcc788b57d0" category="section-title">适用于Oracle 12cR2至18c版本</block>
+  <block id="138ac8a924ba70371a9fccc55eeffc50" category="paragraph">RAC数据库是使用srvCTLconfig命令发现的。您应在 /etc/oratab 文件中包含数据库条目。</block>
+  <block id="bdc631ac0c61f623f88a03e50eb10d04" category="paragraph">独立数据库是根据/etc/oratab文件中的条目和srvCTLconfig命令的输出来发现的。</block>
+  <block id="065a682f6e2ff04149d8f73d3a4f075e" category="paragraph">ASM实例条目不需要位于/etc/oratab文件中。</block>
+  <block id="d9fa3141119141b68b1c5d32ed6a8e02" category="paragraph">RAC One Node数据库只能使用srvCTLconfig命令来发现。数据库应处于nomount、mount或open状态。如果已发现 RAC One Node 数据库，并且备份与该数据库关联，则该数据库状态将标记为已重命名或删除。</block>
+  <block id="3d4a391fad87ee2d69bf0079369db6c0" category="paragraph">如果数据库已重新定位，则应执行以下步骤：。手动刷新资源。。从资源页面中选择RAC One Node数据库、然后单击Database Settings。。配置数据库以将首选集群节点设置为当前托管数据库的 RAC 节点。。执行 SnapCenter 操作。</block>
+  <block id="036a4f113c3f6512ad117bb7e1be7b43" category="summary">定义备份策略可确保您能够成功还原或克隆数据库。</block>
+  <block id="6444121a0917776aa4b9274dfa1ee288" category="paragraph">定义备份策略、确保您有能力成功还原或克隆数据库。</block>
+  <block id="6716420f42ba61453a4039a2a57b594e" category="paragraph">您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO ）在很大程度上决定了您的备份策略。</block>
+  <block id="da336ad1b4deba370d6b260076b2dcd0" category="list-text">SLA定义预期的服务级别、并解决服务可用性和性能等服务相关问题。</block>
+  <block id="a17429e26b7d75928370e09d647110b1" category="list-text">RTO用于定义服务中断后必须恢复业务流程的时间。</block>
+  <block id="7b83aa0b7e4a5f3e6532d57158f7e601" category="list-text">RPO用于定义必须从备份存储中恢复的文件的期限、以便在发生故障后恢复常规操作。</block>
+  <block id="3e2d2f6a646250c8b750be0ca26e5b46" category="summary">使用主存储卷或二级存储卷验证备份副本。</block>
+  <block id="77536321746ee899d10dbbec054c87ce" category="doc">从何处验证备份副本</block>
+  <block id="de7c468dab6738fd4fc26a1bc2e0b578" category="doc">监控Oracle数据库备份</block>
+  <block id="65cd6f58b54a9ee1b5e15bdbfdbaa326" category="paragraph">了解如何监控备份操作和数据保护操作的进度。</block>
+  <block id="1656f43643ea92a562ccdd7e31691e03" category="summary">Oracle数据库支持的备份类型。</block>
+  <block id="92d3f2f0912d79a31442f669496dcfa5" category="list-text">仅限数据文件和控制文件</block>
+  <block id="5894ddcf494ce28f1eb272ca5e723710" category="list-text">完整数据库、包括数据文件、控制文件和归档日志文件</block>
+  <block id="2d92b3df61f86e9074ba4418a26c533e" category="paragraph">当数据库处于挂载或关闭状态时创建的备份称为脱机备份。脱机备份也称为冷备份。您只能在脱机备份中包含数据文件和控制文件。您可以创建脱机挂载或脱机关闭备份。</block>
+  <block id="fd9859cb151774e34b52a6d747daab3d" category="list-text">在搜索框中输入资源组名称、或者单击 <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>，然后选择所需标记。</block>
+  <block id="6baaca80281eda4a251e4e932a39cd4b" category="paragraph">单击 <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block> 以关闭筛选器窗格。</block>
+  <block id="50aa129d52e712ab3c9a0f93f956d9e2" category="list-text">在资源组页面中，选择要备份的资源组。</block>
+  <block id="3ce47918d2033ed0d68d1e7c6a9b1c45" category="admonition">如果您的联合资源组包含两个数据库、而其中一个数据库的数据位于非NetApp存储上、则备份操作将中止、即使另一个数据库位于NetApp存储上也是如此。</block>
+  <block id="5655480ae4615b223f1d67d63b4ee784" category="list-text">如果有多个策略与资源组相关联，请从*Policy*下拉列表中选择要使用的备份策略。</block>
+  <block id="fec2251f36365f1f041be06f3809bae9" category="list-text">选择 * 备份 * 。</block>
+  <block id="005c73b58486c2584da03a7d43bff568" category="list-text">选择*监视&gt;作业*来监视进度。</block>
+  <block id="1a48e10f2aae9eca9186a1b6176fb05a" category="list-text">如果在验证过程中无法访问此文件，并且挂载点不可用，则此操作可能会失败，并显示错误代码 DBV-00100 指定文件。您应修改sco.properties中的verification_delay_和verification_retry_count参数的值。</block>
+  <block id="510a95fea4bba025da5889c50cbbd219" category="summary">备份保留选项。</block>
+  <block id="47360f25b760514cfd5222ea8efb3fca" category="list-text">ASM standalone (ASM独立)和ASM RAC on Raw Device Mapping (RDM)+您可以在ASM上的Oracle数据库上执行备份、还原和克隆操作、无论是否使用ASMLib。</block>
+  <block id="d9f5c0652a9a0f5a632c2b39950788b1" category="paragraph">有关支持的 Oracle 版本的最新信息，请参见<block ref="ad50fcde58174eb161421bebd1f28ec8" category="inline-link-rx"></block>。</block>
+  <block id="a725ff47fefe45fbde2b714b9bee12db" category="summary">资源组是一个容器、您可以在其中添加要备份和保护的资源。通过资源组、您可以同时备份与给定应用程序关联的所有数据。</block>
+  <block id="75d10fc733cbe6199ca2e7cebf31fe9c" category="paragraph">包含ASM磁盘组中文件的数据库必须处于"mount"或"open"状态、才能使用Oracle DBVERIFY实用程序验证其备份。</block>
+  <block id="471e47d90bffd9838cf1d00548360b40" category="paragraph">将一个或多个策略附加到资源组以定义要执行的数据保护作业的类型。</block>
+  <block id="8acf498a277189bb79aa36e916139901" category="list-text">在“名称”字段中输入资源组的名称。</block>
+  <block id="47389d06ffe3699c36bdd3b61cbdf438" category="list-text">在“标记”字段中输入一个或多个标签，以帮助您稍后搜索资源组。</block>
+  <block id="ff3276d4a1ffa99a43f3ee9d1c3033ae" category="admonition">您也可以单击来创建策略 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="21a93b161e735360df0b1231bd93b5fa" category="list-text">单击 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> 在要配置计划的策略的 Configure Schedules 列中。</block>
+  <block id="4fbbc0d543d28393f6ded666ac8879d5" category="list-text">单击 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> 在配置计划列中、为策略的所有计划类型配置验证计划。</block>
+  <block id="86091b14782c404e5145daaead644698" category="sidebar">备份概述</block>
+  <block id="af46c480ec54c1f970bfe4a7284749a5" category="sidebar">备份配置信息</block>
+  <block id="eb241a142f75605588c77651c591cbd7" category="sidebar">支持的备份配置</block>
+  <block id="7b5fc8f40436e2a3bd39d3f81c4d938f" category="sidebar">备份类型</block>
+  <block id="4116ef53488b8262b4f31ee9190138d3" category="sidebar">要使用的首选节点</block>
+  <block id="43b06239a1de902160f64efacd46fd64" category="sidebar">目录备份</block>
+  <block id="8d6dff35d77be2858cb012c9525717f5" category="sidebar">预定义的环境变量</block>
+  <block id="d275b6dbfd1b9b66915ebb6018551bec" category="sidebar">备份保留</block>
+  <block id="12e6d0dc88f359dcf5383de2e7e9270d" category="sidebar">命名约定</block>
+  <block id="e9dd934a8e85b48c6d3946a93f06f678" category="sidebar">定义备份策略</block>
+  <block id="2f914c665c66ccefda5991dcf0a8eea3" category="sidebar">查看备份要求</block>
+  <block id="a9f304050cba6c177490ec2a73015cbe" category="sidebar">发现Oracle数据库</block>
+  <block id="0a4a3719bc7519d1162060e0f0e08f8a" category="sidebar">创建备份策略</block>
+  <block id="53a051ccb17163d7cd9ed3432619fb1d" category="sidebar">创建资源组(可选)</block>
+  <block id="dc99555922001c1adae2d9d4baee2217" category="sidebar">监控备份进度</block>
+  <block id="cfe10065fd0fa721a87935a2eac20f7b" category="sidebar">其他备份操作</block>
+  <block id="75b8e448161fa30feba883267dc81521" category="sidebar">使用UNIX命令备份</block>
+  <block id="de148ec1fc3c9bb7b03f1506761bed93" category="sidebar">查看备份</block>
 </blocks>

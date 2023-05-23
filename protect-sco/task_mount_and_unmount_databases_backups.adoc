@@ -30,7 +30,7 @@ NOTE: 在 FlexASM 设置中，如果基数小于 RAC 集群中的节点数，则
 
 
 
-NOTE: 有关如何编辑 asm_diskstring 参数的信息，请参见 https://["如何向 asm_diskstring 添加磁盘路径"^]。
+NOTE: 有关如何编辑 asm_diskstring 参数的信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["如何向 asm_diskstring 添加磁盘路径"^]。
 
 * 挂载备份时，如果 ASM 凭据和 ASM 端口与源数据库主机的凭据不同，则应进行配置。
 * 如果要挂载到备用主机，则必须验证备用主机是否满足以下要求：
@@ -78,7 +78,7 @@ NOTE: 有关如何编辑 asm_diskstring 参数的信息，请参见 https://["�
 ` ./sccli Get-Smbackup-BackupNamebackup_name`
 
 +
-有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考 https://["《 SnapCenter 软件命令参考指南》"^]。
+有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["《 SnapCenter 软件命令参考指南》"^]。
 
 
 

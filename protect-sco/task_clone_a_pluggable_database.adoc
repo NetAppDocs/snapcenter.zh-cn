@@ -206,6 +206,6 @@ NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 se
 
 * 查找更多信息 *
 
-* https://["还原或克隆失败，并显示 ORA-00308 错误消息"^]
-* https://["可自定义的参数，用于在 AIX 系统上执行备份，还原和克隆操作"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["还原或克隆失败，并显示 ORA-00308 错误消息"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["可自定义的参数，用于在 AIX 系统上执行备份，还原和克隆操作"^]
 

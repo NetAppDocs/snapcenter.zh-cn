@@ -1,0 +1,42 @@
+---
+permalink: protect-sco/preferred-nodes.html 
+sidebar: sidebar 
+keywords: oracle databases discover 
+summary: SnapCenter 如何发现Oracle数据库。 
+---
+= RAC 设置中的首选节点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Oracle Real Application Clusters (RAC)设置中、您可以指定SnapCenter 用于执行备份操作的首选节点。如果未指定首选节点， SnapCenter 会自动将某个节点分配为首选节点，并在该节点上创建备份。
+
+首选节点可能是存在 RAC 数据库实例的一个或所有集群节点。备份操作仅会按首选顺序在这些首选节点上触发。
+
+.示例
+RAC数据库cdbrac有三个实例：node1上的cdbrac1、node2上的cdbrac2和node3上的cdbrac3。
+
+node1 和 node2 实例配置为首选节点，其中 node2 为第一个首选项， node1 为第二个首选项。执行备份操作时，系统会首先尝试对 node2 执行此操作，因为它是第一个首选节点。
+
+如果 node2 未处于备份状态，这可能是由于多种原因造成的，例如插件代理未在主机上运行，则主机上的数据库实例对于指定的备份类型不处于所需状态。 或者，在 FlexASM 配置中， node2 上的数据库实例不由本地 ASM 实例提供服务；则会尝试对 node1 执行此操作。
+
+node3 不会用于备份，因为它不在首选节点列表中。
+
+
+
+== Flex ASM设置
+
+在 FlexASM 设置中，如果基数小于 RAC 集群中的节点数，则叶节点不会列为首选节点。如果 FlexASM 集群节点角色发生任何更改，您应手动发现，以便刷新首选节点。
+
+
+
+== 所需的数据库状态
+
+要成功完成备份，首选节点上的 RAC 数据库实例必须处于所需状态：
+
+* 要创建联机备份，已配置的首选节点中的一个 RAC 数据库实例必须处于打开状态。
+* 配置的首选节点中的一个 RAC 数据库实例必须处于挂载状态，所有其他实例（包括其他首选节点）必须处于挂载状态或更低，才能创建脱机挂载备份。
+* RAC 数据库实例可以处于任何状态，但您必须指定首选节点以创建脱机关闭备份。
+

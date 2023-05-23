@@ -13,12 +13,12 @@ summary: 通过单邮箱恢复（ SMBR ）软件，您可以还原和恢复邮�
 [role="lead"]
 通过单邮箱恢复（ SMBR ）软件，您可以还原和恢复邮件或邮箱，而不是整个 Exchange 数据库。
 
-仅为恢复单封邮件而还原完整数据库将占用大量时间和资源。SMBR 可通过创建 Snapshot 的克隆副本，然后使用 Microsoft API 在 SMBR 中挂载邮箱来帮助快速恢复邮件。有关如何使用 SMBR 的信息，请参见 https://["《 SMBR 管理指南》"^]。
+仅为恢复单封邮件而还原完整数据库将占用大量时间和资源。SMBR 可通过创建 Snapshot 的克隆副本，然后使用 Microsoft API 在 SMBR 中挂载邮箱来帮助快速恢复邮件。有关如何使用 SMBR 的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2871407["《 SMBR 管理指南》"^]。
 
 * 查找更多信息 *
 
 * link:../install/concept_snapcenter_licenses.html#single-mailbox-recovery-smbr-licenses["SMBR 许可证"^]
-* https://["SMBR 文档库"^]
-* https://["如何使用 SnapCenter 从 SMBR 中的二级存储还原"^]
-* https://["使用 SMBR 从 SnapVault 恢复 Microsoft Exchange 邮件"^]
+* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30035["SMBR 文档库"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Single_Mailbox_Recovery_(SMBR)/How_to_restore_from_secondary_storage_in_SMBR_with_SnapCenter["如何使用 SnapCenter 从 SMBR 中的二级存储还原"^]
+* https://www.youtube.com/watch?v=fOMuaaXrreI&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg&index=3["使用 SMBR 从 SnapVault 恢复 Microsoft Exchange 邮件"^]
 

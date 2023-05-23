@@ -25,7 +25,7 @@ summary: 资源是指由您安装的插件维护的数据库，应用程序实�
 * 要发现 Windows 集群中的 Microsoft SQL 数据库，必须取消阻止故障转移集群实例（ FCI ） TCP/IP 端口。
 * 如果数据库驻留在 VMware RDM LUN 或 VMDK 上，则必须部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件。
 +
-有关详细信息，请参见 https://["部署适用于 VMware vSphere 的 SnapCenter 插件"^]
+有关详细信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["部署适用于 VMware vSphere 的 SnapCenter 插件"^]
 
 * 如果使用 GMSA 添加主机，并且 GMSA 具有登录和系统管理员权限，则将使用 GMSA 连接到 SQL 实例。
 

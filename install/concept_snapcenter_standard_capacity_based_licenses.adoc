@@ -80,7 +80,7 @@ VS1     Marketing    2.62TB
 
 * 步骤 *
 
-. 登录到 NetApp 支持站点，网址为 http://["mysupport.netapp.com"^]。
+. 登录到 NetApp 支持站点，网址为 http://mysupport.netapp.com/["mysupport.netapp.com"^]。
 . 导航到 * 系统 * > * 软件许可证 * 。
 . 在选择条件区域中，从全部显示：序列号和许可证下拉菜单中选择 * SC_STANDARE* 。
 +
@@ -108,7 +108,7 @@ image::../media/nss_license_selection.gif[选择 NSS 许可证]
 
 * 步骤 *
 
-. 导航到 https://["NetApp 许可证文件生成器"^]。
+. 导航到 https://register.netapp.com/register/eclg.xwic["NetApp 许可证文件生成器"^]。
 . 输入所需信息。
 . 在产品线字段中，从下拉菜单中选择 * SnapCenter 标准（基于容量） * 。
 . 在产品序列号字段中，输入 SnapCenter 许可证序列号

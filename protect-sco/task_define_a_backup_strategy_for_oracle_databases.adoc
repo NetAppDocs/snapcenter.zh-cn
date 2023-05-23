@@ -2,7 +2,7 @@
 permalink: protect-sco/task_define_a_backup_strategy_for_oracle_databases.html 
 sidebar: sidebar 
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
-summary: 在创建备份作业之前定义备份策略可确保您拥有成功还原或克隆数据库所需的备份。您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO ）在很大程度上决定了您的备份策略。 
+summary: 定义备份策略可确保您能够成功还原或克隆数据库。 
 ---
 = 为 Oracle 数据库定义备份策略
 :allow-uri-read: 
@@ -11,9 +11,14 @@ summary: 在创建备份作业之前定义备份策略可确保您拥有成功�
 
 
 [role="lead"]
-在创建备份作业之前定义备份策略可确保您拥有成功还原或克隆数据库所需的备份。您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO ）在很大程度上决定了您的备份策略。
+定义备份策略、确保您有能力成功还原或克隆数据库。
 
-SLA 定义了预期的服务级别，并解决了许多与服务相关的问题，包括服务的可用性和性能。RTO 是指服务中断后必须恢复业务流程的时间。RPO 定义了必须从备份存储中恢复的文件的使用期限策略，以便在发生故障后恢复常规操作。SLA ， RTO 和 RPO 有助于实施数据保护策略。
+您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO ）在很大程度上决定了您的备份策略。
+
+* SLA定义预期的服务级别、并解决服务可用性和性能等服务相关问题。
+* RTO用于定义服务中断后必须恢复业务流程的时间。
+* RPO用于定义必须从备份存储中恢复的文件的期限、以便在发生故障后恢复常规操作。
+
 
 
 
@@ -55,7 +60,7 @@ NOTE: 不支持 PDB 迁移和 PDB 克隆操作。
 
 
 
-有关支持的 Oracle 版本的最新信息，请参见 https://["NetApp 互操作性表工具"^]。
+有关支持的 Oracle 版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 
@@ -224,7 +229,7 @@ NOTE: 强制删除 SnapCenter 主机时，不会删除与该主机关联的已�
 
 ` /opt/netapp/snapcenter/spl/bin/spl restart`
 
-有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help command_name 来获取。或者，您也可以参考 https://["《 SnapCenter 软件命令参考指南》"^]。
+有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help command_name 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["《 SnapCenter 软件命令参考指南》"^]。
 
 
 

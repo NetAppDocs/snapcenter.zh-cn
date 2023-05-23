@@ -72,7 +72,7 @@ Windows 插件主机
 
 除了端口 135 和 445 之外， Microsoft 指定的动态端口范围也应处于打开状态。远程安装操作使用 Windows Management Instrumentation （ WMI ）服务，该服务会动态搜索此端口范围。
 
-有关支持的动态端口范围的信息，请参见 https://["Windows 的服务概述和网络端口要求"^]
+有关支持的动态端口范围的信息，请参见 https://support.microsoft.com/kb/832017["Windows 的服务概述和网络端口要求"^]
 
 这些端口用于在 SnapCenter 服务器与要安装此插件的主机之间进行通信。要将插件软件包二进制文件推送到 Windows 插件主机，这些端口只能在插件主机上打开，并且可以在安装后关闭。
 

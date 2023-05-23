@@ -51,7 +51,7 @@ summary: 您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用
 |===
 适用于 Exchange 的插件取决于适用于 Windows 的 SnapCenter 插件软件包，并且版本必须相同。在安装适用于 Exchange 的插件期间，默认情况下会选择适用于 Windows 的 SnapCenter 插件软件包，该软件包会随 VSS 硬件提供程序一起安装。
 
-如果已安装 SnapManager for Microsoft Exchange Server 和 SnapDrive for Windows ， 如果要在同一 Exchange Server 上安装适用于 Exchange 的插件，则必须取消注册 SnapDrive for Windows 使用的 VSS 硬件提供程序，因为它与随适用于 Exchange 的插件和适用于 Windows 的 SnapCenter 插件软件包一起安装的 VSS 硬件提供程序不兼容。有关详细信息，请参见 https://["如何手动注册 Data ONTAP VSS 硬件提供程序"]。
+如果已安装 SnapManager for Microsoft Exchange Server 和 SnapDrive for Windows ， 如果要在同一 Exchange Server 上安装适用于 Exchange 的插件，则必须取消注册 SnapDrive for Windows 使用的 VSS 硬件提供程序，因为它与随适用于 Exchange 的插件和适用于 Windows 的 SnapCenter 插件软件包一起安装的 VSS 硬件提供程序不兼容。有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_manually_register_the_Data_ONTAP_VSS_Hardware_Provider["如何手动注册 Data ONTAP VSS 硬件提供程序"]。
 
 * 步骤 *
 

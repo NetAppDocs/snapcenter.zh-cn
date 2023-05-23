@@ -77,7 +77,7 @@ link:task_configure_CA_client_certificate_for_LDAPS.html["为 LDAPS 配置 CA �
  a| 
 如果无法从 SnapCenter 服务器解析域 FQDN ，请指定一个或多个域控制器 IP 地址。
 
-有关详细信息，请参见 https://["从图形用户界面中为不可信域添加域控制器 IP"^]。
+有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_does_not_allow_to_add_Domain_Controller_IP_for_untrusted_domain_from_GUI["从图形用户界面中为不可信域添加域控制器 IP"^]。
 
 |===
 .. 如果选择 * LDAP* ，请指定为 LDAPS 注册不可信域所需的信息：

@@ -67,7 +67,7 @@ SnapCenter 使用凭据验证授权的 SnapCenter 用户是否也具有应用程
 
 如果您使用 SnapCenter VMware 插件进行 VM 一致的数据保护，则 vCenter Server 可提供额外级别的 RBAC 。SnapCenter VMware 插件既支持 vCenter Server RBAC ，又支持 Data ONTAP RBAC 。
 
-有关信息，请参见 https://["适用于 VMware vSphere RBAC 的 SnapCenter 插件"^]
+有关信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_role_based_access_control.html["适用于 VMware vSphere RBAC 的 SnapCenter 插件"^]
 
 
 

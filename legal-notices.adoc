@@ -20,7 +20,7 @@ summary: 法律声明提供对版权声明、商标、专利等的访问。
 
 == 版权
 
-http://[]
+http://www.netapp.com/us/legal/copyright.aspx[]
 
 
 
@@ -28,7 +28,7 @@ http://[]
 
 NetApp 、 NetApp 徽标和 NetApp 商标页面上列出的标记是 NetApp 、 Inc. 的商标。其他公司和产品名称可能是其各自所有者的商标。
 
-http://[]
+http://www.netapp.com/us/legal/netapptmlist.aspx[]
 
 
 
@@ -36,13 +36,13 @@ http://[]
 
 有关 NetApp 拥有的专利的最新列表，请访问：
 
-https://[]
+https://www.netapp.com/us/media/patents-page.pdf[]
 
 
 
 == 隐私政策
 
-https://[]
+https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 
 
@@ -50,4 +50,4 @@ https://[]
 
 通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。
 
-https://["SnapCenter 4.8注意事项"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2884814["SnapCenter 4.8注意事项"^]

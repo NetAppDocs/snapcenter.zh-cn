@@ -176,7 +176,7 @@ All-Flash Optimized: false
 
 * 步骤 *
 
-. 登录到 NetApp 支持站点，网址为 http://["mysupport.netapp.com"^]。
+. 登录到 NetApp 支持站点，网址为 http://mysupport.netapp.com/["mysupport.netapp.com"^]。
 . 导航到 * 系统 * > * 软件许可证 * 。
 . 在选择条件区域中，确保选择了序列号（位于设备背面），输入控制器序列号，然后单击 * 执行！ * 。
 +
@@ -238,7 +238,7 @@ NOTE: 只有在使用基于 SnapCenter 标准控制器的许可证时，才需�
 .. 运行 Open-SmConnection cmdlet ，为 SnapCenterAdmin 帐户启动与 SnapCenter 服务器的连接会话。
 .. 运行 Set-SmRepositoryPassword 以重置 MySQL 密码。
 +
-有关 cmdlet 的信息，请参见 https://["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关 cmdlet 的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 
 

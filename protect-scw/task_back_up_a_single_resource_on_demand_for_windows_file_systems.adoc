@@ -53,7 +53,7 @@ IMPORTANT: 如果您在 Windows 文件系统环境中工作，请勿备份数据
 已配置的计划将列在为选定策略配置计划部分的已应用计划列中。
 
 +
-https://["计划的操作可能会失败"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Scheduled_data_protection_operations_fail_if_the_number_of_operations_running_reaches_maximum_limit["计划的操作可能会失败"]
 
 
 

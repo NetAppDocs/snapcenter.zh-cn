@@ -334,7 +334,7 @@ ExitCode
 此列表包含插件要返回到服务器的所有消息。SnapCenter 服务器会在命令行界面或图形用户界面中显示这些消息。
 
 |===
-SnapCenter 代理可提供构建程序 (https://["构建程序模式"]）。这使得使用它们变得非常简单：
+SnapCenter 代理可提供构建程序 (https://en.wikipedia.org/wiki/Builder_pattern["构建程序模式"]）。这使得使用它们变得非常简单：
 
 ....
 Result result = Result.builder()

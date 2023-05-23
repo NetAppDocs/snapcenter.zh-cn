@@ -1,0 +1,65 @@
+---
+permalink: protect-sco/discover-oracle-database.html 
+sidebar: sidebar 
+keywords: oracle databases discover 
+summary: SnapCenter 如何发现Oracle数据库。 
+---
+= SnapCenter 如何发现 Oracle 数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+资源是指主机上由SnapCenter 维护的Oracle数据库。发现可用数据库后，您可以将这些数据库添加到资源组以执行数据保护操作。
+
+以下各节介绍了SnapCenter 发现不同类型和版本的Oracle数据库的过程。
+
+
+
+== 适用于 Oracle 版本 11_g_ 到 12_c_R1
+
+.RAC数据库
+RAC数据库只会根据/etc/oratab`条目进行发现。您应在 /etc/oratab 文件中包含数据库条目。
+
+.独立
+仅会根据/etc/oratab条目发现独立数据库。
+
+.ASM
+ASM实例条目应位于/etc/oratab文件中。
+
+.RAC One Node
+RAC One Node数据库仅会根据/etc/oratab条目进行发现。数据库应处于nomount、mount或open状态。您应在 /etc/oratab 文件中包含数据库条目。
+
+如果已发现 RAC One Node 数据库，并且备份与该数据库关联，则该数据库状态将标记为已重命名或删除。
+
+如果数据库已重新定位，则应执行以下步骤：
+
+. 在故障转移 RAC 节点上的 /etc/oratab 文件中手动添加重新定位的数据库条目。
+. 手动刷新资源。
+. 从资源页面中选择RAC One Node数据库、然后单击Database Settings。
+. 配置数据库以将首选集群节点设置为当前托管数据库的 RAC 节点。
+. 执行 SnapCenter 操作。
+. 如果已将数据库从一个节点重新定位到另一个节点、并且未删除早期节点中的oratab条目、请手动删除oratab条目、以避免同一数据库显示两次。
+
+
+
+
+== 适用于Oracle 12cR2至18c版本
+
+.RAC数据库
+RAC数据库是使用srvCTLconfig命令发现的。您应在 /etc/oratab 文件中包含数据库条目。
+
+.独立
+独立数据库是根据/etc/oratab文件中的条目和srvCTLconfig命令的输出来发现的。
+
+.ASM
+ASM实例条目不需要位于/etc/oratab文件中。
+
+.RAC One Node
+RAC One Node数据库只能使用srvCTLconfig命令来发现。数据库应处于nomount、mount或open状态。如果已发现 RAC One Node 数据库，并且备份与该数据库关联，则该数据库状态将标记为已重命名或删除。
+
+如果数据库已重新定位，则应执行以下步骤：。手动刷新资源。。从资源页面中选择RAC One Node数据库、然后单击Database Settings。。配置数据库以将首选集群节点设置为当前托管数据库的 RAC 节点。。执行 SnapCenter 操作。
+
+
+NOTE: 如果 /etc/oratab 文件中存在任何 Oracle 12_c_R2 和 18_c_ 数据库条目，并且已使用 vscvctl config 命令注册同一数据库，则 SnapCenter 将删除重复的数据库条目。如果存在陈旧的数据库条目，则会发现数据库，但数据库将无法访问，并且状态将为脱机。

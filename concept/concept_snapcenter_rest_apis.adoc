@@ -30,4 +30,4 @@ https://<OVA_IP_address_or_host_name>:<scv_plugin_port>/api/swagger-ui.html#
 |===
 有关 SnapCenter REST API 的信息，请参见 link:../sc-automation/overview_rest_apis.html["REST API 概述"^]
 
-有关适用于 VMware vSphere 的 SnapCenter 插件 REST API 的信息，请参见 https://["适用于 VMware vSphere 的 SnapCenter 插件 REST API"^]
+有关适用于 VMware vSphere 的 SnapCenter 插件 REST API 的信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_rest_apis_overview.html["适用于 VMware vSphere 的 SnapCenter 插件 REST API"^]

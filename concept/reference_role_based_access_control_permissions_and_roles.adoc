@@ -40,7 +40,7 @@ SnapCenter 附带以下预定义角色。您可以将用户和组分配给这些
 * SCV 子系统文件还原
 
 
-有关详细信息，请参见 https://["适用于 VMware vSphere 的 SnapCenter 插件用户的 RBAC 类型"^]
+有关详细信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["适用于 VMware vSphere 的 SnapCenter 插件用户的 RBAC 类型"^]
 
 |===
 

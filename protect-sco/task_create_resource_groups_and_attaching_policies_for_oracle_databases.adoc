@@ -1,8 +1,8 @@
 ---
-permalink: protect-sco/task_create_resource_groups_and_attaching_policies_for_oracle_databases.html 
+permalink: protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html 
 sidebar: sidebar 
 keywords: run as 
-summary: 资源组是指必须向其添加要备份和保护的资源的容器。通过资源组，您可以同时备份与给定应用程序关联的所有数据。 
+summary: 资源组是一个容器、您可以在其中添加要备份和保护的资源。通过资源组、您可以同时备份与给定应用程序关联的所有数据。 
 ---
 = 为 Oracle 数据库创建资源组和附加策略
 :allow-uri-read: 
@@ -11,62 +11,38 @@ summary: 资源组是指必须向其添加要备份和保护的资源的容器�
 
 
 [role="lead"]
-资源组是指必须向其添加要备份和保护的资源的容器。通过资源组，您可以同时备份与给定应用程序关联的所有数据。
+资源组是一个容器、您可以在其中添加要备份和保护的资源。通过资源组、您可以同时备份与给定应用程序关联的所有数据。
 
-* 关于此任务 *
+.关于此任务
+包含ASM磁盘组中文件的数据库必须处于"mount"或"open"状态、才能使用Oracle DBVERIFY实用程序验证其备份。
 
-您应确保在 ASM 磁盘组上包含文件的数据库应处于 "mount" 或 "open" 状态，以便使用 Oracle DBVERIFY 实用程序验证其备份。
-
-您应将一个或多个策略附加到资源组，以定义要执行的数据保护作业类型。
+将一个或多个策略附加到资源组以定义要执行的数据保护作业的类型。
 
 下图显示了数据库的资源，资源组和策略之间的关系：
 
 image::../media/sco_resourcegroup_policy.gif[SCO 资源组策略]
 
-* 步骤 *
-
-. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+.步骤
+. 在左侧导航窗格中，选择*Resoles*，然后从列表中选择相应的插件。
 . 在资源页面中，单击 * 新建资源组 * 。
 . 在名称页面中，执行以下操作：
 +
-|===
-| 对于此字段 ... | 执行此操作 ... 
-
-
- a| 
-Name
- a| 
-输入资源组的名称。
-
+.. 在“名称”字段中输入资源组的名称。
++
 
 NOTE: 资源组名称不应超过 250 个字符。
 
-
-
- a| 
-Tags
- a| 
-输入一个或多个标签，以帮助您稍后搜索资源组。
-
+.. 在“标记”字段中输入一个或多个标签，以帮助您稍后搜索资源组。
++
 例如，如果您将 HR 作为标记添加到多个资源组，则稍后可以找到与 HR 标记关联的所有资源组。
 
-
-
- a| 
-对 Snapshot 副本使用自定义名称格式
- a| 
-选中此复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。
-
+.. 选中此复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。
++
 例如， customtext_resource group_policy_hostname 或 resource group_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。
 
+.. 指定不希望备份的归档日志文件的目标。
 
 
- a| 
-从备份中排除归档日志目标
- a| 
-指定不希望备份的归档日志文件的目标。
-
-|===
 . 在资源页面中，从 * 主机 * 下拉列表中选择 Oracle 数据库主机名。
 +
 
@@ -82,12 +58,12 @@ NOTE: 您可以将 Linux 和 AIX 主机中的数据库添加到一个资源组�
 .. 从下拉列表中选择一个或多个策略。
 +
 
-NOTE: 您也可以单击来创建策略 image:../media/add_policy_from_resourcegroup.gif[""]。
+NOTE: 您也可以单击来创建策略 image:../media/add_policy_from_resourcegroup.gif["添加符号"]。
 
 +
 在为选定策略配置计划部分中，将列出选定策略。
 
-.. 单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 。
+.. 单击 image:../media/add_policy_from_resourcegroup.gif["添加符号"] 在要配置计划的策略的 Configure Schedules 列中。
 .. 在添加策略 _policy_name_ 的计划窗口中，配置该计划，然后单击 * 确定 * 。
 +
 其中， _policy_name_ 是选定策略的名称。
@@ -103,7 +79,7 @@ NOTE: 您也可以单击来创建策略 image:../media/add_policy_from_resourceg
 . 在验证页面上，执行以下步骤：
 +
 .. 单击 * 加载定位器 * 以加载 SnapMirror 或 SnapVault 卷，以便在二级存储上执行验证。
-.. 单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 在 Configure Schedules 列中，为策略的所有计划类型配置验证计划。
+.. 单击 image:../media/add_policy_from_resourcegroup.gif["添加符号"] 在配置计划列中、为策略的所有计划类型配置验证计划。
 .. 在添加验证计划 policy_name 对话框中，执行以下操作：
 +
 |===

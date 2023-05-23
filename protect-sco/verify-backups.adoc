@@ -1,0 +1,18 @@
+---
+permalink: protect-sco/verify-backups.html 
+sidebar: sidebar 
+keywords: oracle databases backup 
+summary: 使用主存储卷或二级存储卷验证备份副本。 
+---
+= 从何处验证备份副本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以验证主存储卷或 SnapMirror 或 SnapVault 二级存储卷上的备份副本。使用二级存储卷进行验证可减少主存储卷上的负载。
+
+在验证主存储卷或二级存储卷上的备份时，所有主 Snapshot 副本和二级 Snapshot 副本都会标记为已验证。
+
+要验证 SnapMirror 和 SnapVault 二级存储卷上的备份副本，需要 SnapRestore 许可证。

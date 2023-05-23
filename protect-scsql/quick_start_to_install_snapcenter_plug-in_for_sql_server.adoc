@@ -78,7 +78,7 @@ NOTE: 建议（但不要求）将 SnapCenter 标准版许可证添加到二级�
 |===
 * 其他要求 *
 
-有关 ONTAP 和应用程序插件的最低要求，请参见 https://["互操作性表工具"^]
+有关 ONTAP 和应用程序插件的最低要求，请参见 https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["互操作性表工具"^]
 
 |===
 | 主机 | 最低要求 
@@ -87,7 +87,7 @@ NOTE: 建议（但不要求）将 SnapCenter 标准版许可证添加到二级�
  a| 
 操作系统（ 64 位）
  a| 
-请参见 https://["互操作性表工具"^]
+请参见 https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["互操作性表工具"^]
 
 
 
@@ -171,7 +171,7 @@ Windows 插件主机
 
 除了端口 135 和 445 之外， Microsoft 指定的动态端口范围也应处于打开状态。远程安装操作使用 Windows Management Instrumentation （ WMI ）服务，该服务会动态搜索此端口范围。
 
-有关支持的动态端口范围的信息，请参见 https://["Windows 的服务概述和网络端口要求"^]。
+有关支持的动态端口范围的信息，请参见 https://docs.microsoft.com/en-US/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements["Windows 的服务概述和网络端口要求"^]。
 
 
 
@@ -206,7 +206,7 @@ ONTAP 集群或 SVM 通信端口
 
 * 步骤 *
 
-. 从下载 SnapCenter 服务器安装包 https://["NetApp 支持站点"^] 然后双击该 exe 。
+. 从下载 SnapCenter 服务器安装包 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp 支持站点"^] 然后双击该 exe 。
 +
 启动安装后，系统将执行所有预检，如果不满足最低要求，则会显示相应的错误或警告消息。您可以忽略警告消息并继续安装；但是，错误应予以修复。
 

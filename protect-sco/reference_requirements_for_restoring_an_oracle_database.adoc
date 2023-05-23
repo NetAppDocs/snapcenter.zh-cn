@@ -23,7 +23,7 @@ summary: 在还原 Oracle 数据库之前，您应确保满足前提条件。
 * 在 asm_diskstring 参数中，如果使用的是 ASMFD ，则应配置 _afd ： * _ ；如果使用的是 ASMLIB ，则应配置 _ORCL ： * _ 。
 +
 
-NOTE: 有关如何编辑 asm_diskstring 参数的信息，请参见 https://["如何向 asm_diskstring 添加磁盘路径"^]
+NOTE: 有关如何编辑 asm_diskstring 参数的信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["如何向 asm_diskstring 添加磁盘路径"^]
 
 * 如果您禁用了操作系统身份验证并为 Oracle 数据库启用了 Oracle 数据库身份验证，并且希望还原该数据库的数据文件和控制文件，则应在非 ASM 数据库的 * listener.ora* 文件（网址为： _$ORACLE_HOME/network/admin_ ）和 ASM 数据库的 _$GRID_HOME/network/admin_ 中配置静态侦听器。
 * 如果数据库大小以 TB 为单位，则应运行 set- SmConfigSettings 命令来增加 SCorestoreTimeout 参数的值。

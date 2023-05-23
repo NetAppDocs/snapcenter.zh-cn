@@ -170,8 +170,8 @@ NOTE: 不会为非 Data Guard 数据库备份重做日志文件。对于非 Data
 
 NOTE: 您应先验证挂载路径的路径和内容、然后再将其列为外部日志位置。
 
-** http://["NetApp 技术报告 4591 ：《数据库数据保护备份，恢复，复制和灾难恢复》"^]
-** https://["操作失败，并显示 ORA-00308 错误"^]
+** http://www.netapp.com/us/media/tr-4591.pdf["NetApp 技术报告 4591 ：《数据库数据保护备份，恢复，复制和灾难恢复》"^]
+** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["操作失败，并显示 ORA-00308 错误"^]
 
 
 |===
@@ -232,8 +232,8 @@ NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 se
 
 * 有关详细信息 *
 
-* https://["跳过 Oracle RAC 单节点数据库以执行 SnapCenter 操作"^]
-* https://["无法从二级 SnapMirror 或 SnapVault 位置还原"^]
-* https://["无法从孤立变体的备份还原"^]
-* https://["可自定义的参数，用于在 AIX 系统上执行备份，还原和克隆操作"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["跳过 Oracle RAC 单节点数据库以执行 SnapCenter 操作"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_from_a_secondary_SnapMirror_or_SnapVault_location["无法从二级 SnapMirror 或 SnapVault 位置还原"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_when_a_backup_of_an_orphan_incarnation_is_selected["无法从孤立变体的备份还原"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["可自定义的参数，用于在 AIX 系统上执行备份，还原和克隆操作"^]
 

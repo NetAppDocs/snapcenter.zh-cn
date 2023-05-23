@@ -21,7 +21,7 @@ summary: '您应使用 SnapCenter 用户界面（ UI ）安装适用于 SAP HANA
 互操作性表工具（ IMT ）包含有关受支持配置的最新信息。
 
 +
-https://["NetApp 互操作性表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
 
 * 适用于 SAP HANA 数据库的 SnapCenter 插件是适用于 Linux 的 SnapCenter 插件包的一部分。在安装适用于 Linux 的 SnapCenter 插件软件包之前，您应已在 Windows 主机上安装 SnapCenter 。
 
@@ -50,6 +50,6 @@ https://["NetApp 互操作性表工具"]
 . 编辑 /< 安装目录 >/NetApp/snapcenter/SCC/etc/SC_SMS_Services.properties 文件，然后添加 plugins_enabled = HANA ： 3.0 参数。
 . 使用 Add-Smhost cmdlet 和所需参数将主机添加到 SnapCenter 服务器。
 +
-有关可与命令结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与命令结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 

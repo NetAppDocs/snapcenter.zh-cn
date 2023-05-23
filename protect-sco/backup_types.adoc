@@ -1,0 +1,43 @@
+---
+permalink: protect-sco/backup_types.html 
+sidebar: sidebar 
+keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
+summary: Oracle数据库支持的备份类型。 
+---
+= Oracle 数据库支持的备份类型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+备份类型指定要创建的备份类型。SnapCenter 支持 Oracle 数据库的联机和脱机备份类型。
+
+
+
+== 联机备份
+
+当数据库处于联机状态时创建的备份称为联机备份。联机备份也称为热备份，可用于创建数据库备份，而无需关闭数据库。
+
+在联机备份过程中，您可以为以下文件创建备份：
+
+* 仅限数据文件和控制文件
+* 仅归档日志文件（在此情况下，数据库不会进入备份模式）
+* 完整数据库、包括数据文件、控制文件和归档日志文件
+
+
+
+
+== 脱机备份
+
+当数据库处于挂载或关闭状态时创建的备份称为脱机备份。脱机备份也称为冷备份。您只能在脱机备份中包含数据文件和控制文件。您可以创建脱机挂载或脱机关闭备份。
+
+* 创建脱机挂载备份时，必须确保数据库处于挂载状态。
++
+如果数据库处于任何其他状态，备份操作将失败。
+
+* 创建脱机关闭备份时，数据库可以处于任何状态。
++
+数据库状态将更改为所需状态以创建备份。创建备份后，数据库状态将还原为原始状态。
+
+

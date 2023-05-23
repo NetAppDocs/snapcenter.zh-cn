@@ -40,9 +40,9 @@ NOTE: SnapCenter 不支持在不同集群上使用相同名称的多个 SVM 。�
 
 * 如果在 SAN 环境中使用 Oracle 数据库，请确保按照以下指南中所述的建议配置 SAN 环境：
 +
-** https://["Linux Unified Host Utilities 的建议主机设置"^]
-** https://["将 Linux 主机与 ONTAP 存储结合使用"^]
-** https://["受 AIX Host Utilities 影响的主机设置"^]
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547957["Linux Unified Host Utilities 的建议主机设置"^]
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547958["将 Linux 主机与 ONTAP 存储结合使用"^]
+** https://library.netapp.com/ecm/ecm_download_file/ECMP1119218["受 AIX Host Utilities 影响的主机设置"^]
 
 
 * 如果 Oracle 数据库位于 Oracle Linux 或 RHEL 操作系统中的 LVM 上，请安装最新版本的逻辑卷管理（ LVM ）。
@@ -54,7 +54,7 @@ NOTE: SnapCenter 不支持在不同集群上使用相同名称的多个 SVM 。�
 
 * 查找更多信息 *
 
-* https://["互操作性表工具"^]
-* https://["适用于 VMware vSphere 的 SnapCenter 插件文档"^]
-* https://["在 RHEL 7 及更高版本的非多路径环境中，数据保护操作失败"^]
+* https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["互操作性表工具"^]
+* https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["适用于 VMware vSphere 的 SnapCenter 插件文档"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Data_protection_operation_fails_in_a_non-multipath_environment_in_RHEL_7_and_later["在 RHEL 7 及更高版本的非多路径环境中，数据保护操作失败"^]
 

@@ -1,0 +1,33 @@
+---
+permalink: protect-sco/naming-backups.html 
+sidebar: sidebar 
+keywords: oracle databases discover 
+summary: SnapCenter 如何发现Oracle数据库。 
+---
+= 备份命名约定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用默认 Snapshot 副本命名约定，也可以使用自定义命名约定。默认备份命名约定会为 Snapshot 副本名称添加一个时间戳，以帮助您确定副本的创建时间。
+
+Snapshot 副本使用以下默认命名约定：
+
+`resourcegroupname_hostname_timestamp`
+
+您应按逻辑方式命名备份资源组，如以下示例所示：
+
+[listing]
+----
+dts1_mach1x88_03-12-2015_23.17.26
+----
+在此示例中，语法元素具有以下含义：
+
+* _dts1_ 是资源组名称。
+* _mach1X88_ 是主机名。
+* _03-12-2015_23.17.26_ 是日期和时间戳。
+
+
+或者，您也可以通过选择 * 对 Snapshot 副本使用自定义名称格式 * 来在保护资源或资源组时指定 Snapshot 副本名称格式。例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下，时间戳后缀会添加到 Snapshot 副本名称中。

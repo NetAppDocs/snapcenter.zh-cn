@@ -24,7 +24,7 @@ NOTE: 不支持使用命令行静默安装 SnapCenter 服务器。
 * 您应确保计划安装 SnapCenter 服务器的主机上未安装 MySQL 服务器。
 * 您应已启用 Windows 安装程序调试。
 +
-有关启用的信息，请参见 Microsoft 网站 https://["Windows 安装程序日志记录"^]。
+有关启用的信息，请参见 Microsoft 网站 https://support.microsoft.com/kb/223300["Windows 安装程序日志记录"^]。
 
 +
 
@@ -34,7 +34,7 @@ NOTE: 您不应将 SnapCenter 服务器安装在具有 Microsoft Exchange Server
 
 * 步骤 *
 
-. 从下载 SnapCenter 服务器安装包 https://["NetApp 支持站点"^]。
+. 从下载 SnapCenter 服务器安装包 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp 支持站点"^]。
 . 双击下载的 .exe 文件启动 SnapCenter 服务器安装。
 +
 启动安装后，系统将执行所有预检，如果不满足最低要求，则会显示相应的错误或警告消息。

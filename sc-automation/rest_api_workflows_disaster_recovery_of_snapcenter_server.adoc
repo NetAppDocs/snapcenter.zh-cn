@@ -51,7 +51,7 @@ SnapCenter 灾难恢复（ DR ）功能使用 REST API 备份 SnapCenter 服务�
 
 
 
-NOTE: 对于F5设置、还原操作是以独立方式执行的、您应运行一组命令重新创建F5。请参见链接： https://["如何将SnapCenter 迁移到其他服务器"^]
+NOTE: 对于F5设置、还原操作是以独立方式执行的、您应运行一组命令重新创建F5。请参见链接： https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Migrate_SnapCenter_migrate_to_another_Server["如何将SnapCenter 迁移到其他服务器"^]
 
 
 NOTE: 灾难恢复还原后、系统将添加主机、但您应手动安装此插件。
@@ -126,4 +126,4 @@ NOTE: 您应提供存储灾难恢复备份的目标路径。
 发布
 
 |===
-有关详细信息，请参见 https://["灾难恢复 API"^] 视频。
+有关详细信息，请参见 https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["灾难恢复 API"^] 视频。

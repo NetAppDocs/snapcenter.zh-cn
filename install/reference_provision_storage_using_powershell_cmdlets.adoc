@@ -15,6 +15,6 @@ summary: 如果您不想使用 SnapCenter 图形用户界面执行主机配置�
 
 如果要在远程插件主机上运行 cmdlet ，则必须运行 SnapCenter Open-SMConnection cmdlet 以打开与 SnapCenter 服务器的连接。
 
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
-如果由于从服务器中删除 SnapDrive for Windows 而导致 SnapCenter PowerShell cmdlet 损坏，请参见 https://["卸载 SnapDrive for Windows 后， SnapCenter cmdlet 断开"^]。
+如果由于从服务器中删除 SnapDrive for Windows 而导致 SnapCenter PowerShell cmdlet 损坏，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_cmdlets_broken_when_SnapDrive_for_Windows_is_uninstalled["卸载 SnapDrive for Windows 后， SnapCenter cmdlet 断开"^]。

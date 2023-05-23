@@ -17,4 +17,4 @@ summary: 您可以使用 SnapCenter 通过将一个或多个备份还原到活�
 
 image:../media/all_plug_ins_restore_workflow.png[""]
 
-您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份和还原操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见 https://["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份和还原操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。

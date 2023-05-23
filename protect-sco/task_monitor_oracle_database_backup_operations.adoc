@@ -4,13 +4,19 @@ sidebar: sidebar
 keywords: SnapCenter Server, monitor, backup, activity pane, data protection 
 summary: 您可以使用 SnapCenter Jobs 页面监控不同备份操作的进度。您可能需要检查进度以确定完成时间或是否存在问题描述。 
 ---
-= 监控 Oracle 数据库备份操作
+= 监控Oracle数据库备份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+了解如何监控备份操作和数据保护操作的进度。
+
+
+
+== 监控 Oracle 数据库备份操作
+
 您可以使用 SnapCenterJobs 页面监控不同备份操作的进度。您可能需要检查进度以确定完成时间或是否存在问题描述。
 
 * 关于此任务 *

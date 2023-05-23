@@ -17,7 +17,7 @@ SnapCenter 不包括 Host Utilities 或 DSM 。如果 SnapCenter 主机属于 SA
 
 * Host Utilities
 +
-Host Utilities 支持 FC 和 iSCSI ，并可用于在 Windows 服务器上使用 MPIO 。有关信息，请参见 https://["Host Utilities 文档"^]。
+Host Utilities 支持 FC 和 iSCSI ，并可用于在 Windows 服务器上使用 MPIO 。有关信息，请参见 https://docs.netapp.com/us-en/ontap-sanhost/["Host Utilities 文档"^]。
 
 * 适用于 Windows MPIO 的 Microsoft DSM
 +
@@ -28,6 +28,6 @@ Host Utilities 支持 FC 和 iSCSI ，并可用于在 Windows 服务器上使用
 
 +
 
-NOTE: 如果您使用的是 ONTAP DSM ，则应迁移到 Microsoft DSM 。有关详细信息，请参见 https://["如何从 ONTAP DSM 迁移到 Microsoft DSM"^]。
+NOTE: 如果您使用的是 ONTAP DSM ，则应迁移到 Microsoft DSM 。有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Data_ONTAP_DSM_for_Windows_MPIO/How_to_migrate_from_Data_ONTAP_DSM_4.1p1_to_Microsoft_native_DSM["如何从 ONTAP DSM 迁移到 Microsoft DSM"^]。
 
 

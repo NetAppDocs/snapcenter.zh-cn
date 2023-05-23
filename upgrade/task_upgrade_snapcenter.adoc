@@ -45,7 +45,7 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
 
 . 从 NetApp 支持站点下载 SnapCenter 服务器安装包。
 +
-https://[]
+https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab[]
 
 . 创建位于 C ： \Program Files\NetApp\SnapCenter WebApp 的 web.config 副本。
 . 从 Windows 任务计划导出与插件主机相关的 SnapCenter 计划，以便在升级失败时使用该计划还原计划。

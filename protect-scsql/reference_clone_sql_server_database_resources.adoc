@@ -19,7 +19,7 @@ summary: 在从备份克隆数据库资源之前，您必须使用 SnapCenter �
 
 image::../media/scsql_clone_workflow.png[克隆工作流图]
 
-您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原，恢复，验证和克隆操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见 https://["《 SnapCenter 软件 cmdlet 参考指南》"]
+您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原，恢复，验证和克隆操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"]
 
 * 查找更多信息 *
 

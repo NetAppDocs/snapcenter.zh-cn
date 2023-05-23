@@ -16,7 +16,7 @@ summary: 要在 SnapCenter 中支持高可用性 \ （ HA\ ），您可以安装
 
 IMPORTANT: 如果您已从 SnapCenter 4.2.x 升级，并且先前使用的是网络负载平衡（ NLB ），则可以继续使用该配置或切换到 F5 。
 
-此工作流图列出了使用 F5 负载平衡器配置 SnapCenter 服务器以实现高可用性的步骤。有关详细说明，请参见 https://["如何使用 F5 负载平衡器配置 SnapCenter 服务器以实现高可用性"^]。
+此工作流图列出了使用 F5 负载平衡器配置 SnapCenter 服务器以实现高可用性的步骤。有关详细说明，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["如何使用 F5 负载平衡器配置 SnapCenter 服务器以实现高可用性"^]。
 
 image::../media/sc-F5-configure-workflow.png[SC F5 配置工作流]
 
@@ -26,7 +26,7 @@ image::../media/sc-F5-configure-workflow.png[SC F5 配置工作流]
 * Add-SmServer
 * Remove-SmServerCluster
 +
-有关详细信息，请参见 https://["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 
 
