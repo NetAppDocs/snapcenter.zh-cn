@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_disaster_recovery_scsql.html 
 sidebar: sidebar 
 keywords:  
-summary: 当适用于 SQL Server 的 SnapCenter 插件关闭时，您可以通过执行几个手动步骤来恢复。 
+summary: 当适用于SQL Server的SnapCenter 插件关闭时、请执行以下手动步骤来恢复此插件。 
 ---
 = 适用于 SQL Server 的 SnapCenter 插件的灾难恢复
 :allow-uri-read: 
@@ -11,22 +11,18 @@ summary: 当适用于 SQL Server 的 SnapCenter 插件关闭时，您可以通�
 
 
 [role="lead"]
-当适用于 SQL Server 的 SnapCenter 插件关闭时，切换到另一个 SQL 主机，并通过执行几个步骤来恢复数据。
+当适用于SQL Server的SnapCenter 插件关闭时、请执行以下步骤以切换到其他SQL主机并恢复数据。
 
-* 您需要的内容 *
-
+.您需要的内容
 * 二级主机应与主主机具有相同的操作系统，应用程序和主机名。
-* 使用 * 添加主机 * 或 * 修改主机 * 页面将适用于 SQL Server 的 SnapCenter 插件推送到备用主机。
-+
-link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["管理主机"]
+* 使用 * 添加主机 * 或 * 修改主机 * 页面将适用于 SQL Server 的 SnapCenter 插件推送到备用主机。请参见 link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["管理主机"] 有关详细信息 ...
 
 
-
-* 步骤 *
-
+.步骤
 . 从 * 主机 * 页面中选择主机，以修改和安装适用于 SQL Server 的 SnapCenter 插件。
 . （可选）将适用于 SQL Server 的 SnapCenter 插件配置文件从灾难恢复（ DR ）备份更换到新计算机。
 . 从灾难恢复备份中的适用于 SQL Server 的 SnapCenter 插件文件夹导入 Windows 和 SQL 计划。
 
 
-有关详细信息，请参见 https://["灾难恢复 API"^] 视频。
+.有关详细信息 ...
+请参见 link:https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["灾难恢复 API"^] 视频。
