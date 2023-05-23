@@ -60,15 +60,13 @@ entries:
       url: "/protect-sco/schedule-backups.html"
     - title: 命名约定
       url: "/protect-sco/naming-backups.html"
-  - title: 定义备份策略
-    url: "/protect-sco/task_define_a_backup_strategy_for_oracle_databases.html"
   - title: 查看备份要求
     url: "/protect-sco/reference_requirements_for_backing_up_an_oracle_database.html"
   - title: 发现Oracle数据库
     url: "/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html"
   - title: 创建备份策略
     url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
-  - title: 创建资源组(可选)
+  - title: 创建资源组
     url: "/protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html"
   - title: 备份 Oracle 资源
     url: "/protect-sco/task_back_up_oracle_resources.html"
