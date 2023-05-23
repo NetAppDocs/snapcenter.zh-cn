@@ -94,50 +94,36 @@
   <block id="c09e638cb8ee35698e3172550b12d8fa" category="list-text">在左侧导航窗格中，单击 * 设置 * 。</block>
   <block id="1f02ceac906eeeae0a190f295fe12381" category="list-text">在设置页面中，单击 * 策略 * 。</block>
   <block id="a5bb4561024cbac1f26c361cff68730e" category="list-text">单击 * 新建 * 。</block>
-  <block id="1fbcfaad372de4aa8c4263630714d810" category="list-text">选择备份类型：</block>
   <block id="5d920b501536441ea32ecc24679c72a2" category="cell">如果您要 ...</block>
   <block id="5e2ad6fd9deb412d871137094ee43ef0" category="cell">执行此操作 ...</block>
-  <block id="881a5cadbf2af4892868c95a8925ecdd" category="paragraph">备份数据库文件和事务日志并截断事务日志</block>
   <block id="63afd0069eb731a8e67418ebe1db655d" category="list-text">选择 * 完整备份和日志备份 * 。</block>
   <block id="18d4675bdba207949ceb7f704c54e620" category="list-text">输入应为每个 Snapshot 副本备份的最大数据库数。</block>
   <block id="b0c8f062df15022a6331b14e3bf5591e" category="admonition">如果要同时运行多个备份操作，则必须增加此值。</block>
-  <block id="21b100df4a632d596f4e051c57940f20" category="paragraph">备份数据库文件</block>
   <block id="787c49e1272644a793119d13fc551e84" category="list-text">选择 * 完整备份 * 。</block>
   <block id="846c94f31178e6465f3c62be3f42cb3d" category="list-text">输入应为每个 Snapshot 副本备份的最大数据库数。默认值为 100</block>
-  <block id="fa9adcfe2bdc31067811e93485d16b7e" category="paragraph">备份事务日志</block>
   <block id="ad53595de135edab4a537a97159316b6" category="paragraph">选择 * 日志备份 * 。</block>
   <block id="f16fca991ae99058ce41f2b4b1614852" category="list-text">如果要使用另一个备份应用程序备份资源，请选择 * 仅复制备份 * 。</block>
   <block id="619da134802c3fcab97a2b7c6d14c4ec" category="paragraph">保持事务日志完好无损可使任何备份应用程序恢复数据库。在任何其他情况下，通常不应使用仅复制选项。</block>
   <block id="31bbc81dcc68057ff34be7ba42a87cf4" category="admonition">对于二级存储， Microsoft SQL 不支持 * 仅复制备份 * 选项以及 * 完整备份和日志备份 * 选项。</block>
   <block id="e55dcbdf8fe92f0410aacdc7a5cf00d7" category="list-text">在可用性组设置部分中，执行以下操作：</block>
   <block id="21f831502a413a739e20cbf9f2eefe54" category="cell">对于此字段 ...</block>
-  <block id="ed9c1af05d86fe993f785a78cddb82d4" category="paragraph">仅在首选备份副本上备份</block>
   <block id="6ebdb233abe23750440d3e587915a892" category="paragraph">选择此选项可仅在首选备份副本上进行备份。首选备份副本由为 SQL Server 中的 AG 配置的备份首选项决定。</block>
-  <block id="f5c39ada6d74538eb8f8540a5b0f8397" category="paragraph">选择要备份的副本</block>
   <block id="0a87197768544d35cfd757d20f1dab26" category="paragraph">为备份选择主 AG 副本或二级 AG 副本。</block>
-  <block id="e7ee0e14cb9b3655f5828c64aa7cc0e9" category="paragraph">备份优先级（最小和最大备份优先级）</block>
   <block id="fb8750264c3bbfea89908048e10ef06c" category="paragraph">指定最小备份优先级数和最大备份优先级数，用于确定要备份的 AG 副本。例如，您可以将最小优先级设置为 10 ，最大优先级设置为 50 。在这种情况下，优先级大于 10 且小于 50 的所有 AG 副本都会考虑进行备份。</block>
   <block id="4035686675283d0f53d4a20e3a9588f0" category="admonition">默认情况下，最小优先级为 1 ，最大优先级为 100 。</block>
   <block id="95f62fbbdd8b59bc3cdee3bd3e382046" category="admonition">在集群配置中，备份会根据策略中设置的保留设置保留在集群的每个节点上。如果 AG 的所有者节点发生更改，则会根据保留设置进行备份，并保留先前所有者节点的备份。AG 的保留仅适用于节点级别。</block>
-  <block id="17c27964395af2cc0989da0544595045" category="list-text">如果要计划要使用此策略创建的备份，请选择 * 按需 * ， * 每小时 * ， * 每日 * ， * 每周 * 或 * 每月 * 来指定计划类型。</block>
-  <block id="e6383c275762841518a895807d340c7f" category="paragraph">您可以为策略选择一种计划类型。</block>
   <block id="6b09ab256ee91abfcbae14dc82d761dc" category="image-alt">备份设置</block>
   <block id="1947481e76eb40f4adf8f5246fa95ff6" category="admonition">您可以在创建资源组时为备份操作指定计划（开始日期，结束日期和频率）。这样，您可以创建共享相同策略和备份频率的资源组，但可以为每个策略分配不同的备份计划。</block>
   <block id="a16b9f3426d9cfca29c06a875b667023" category="admonition">如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不会触发此计划。</block>
   <block id="73d1997538c5c2799ee681d5e59023ad" category="list-text">在最新还原操作的保留设置部分中，执行以下操作之一：</block>
   <block id="35c585b251342f8a3ef5f785412f91be" category="paragraph">仅保留特定数量的 Snapshot 副本</block>
-  <block id="5556fc25e3c9c42cb802a3ec13aa865f" category="paragraph">选择 * 保留适用于过去 &lt; 天数 &gt; 天 * 的日志备份选项，并指定要保留的天数。如果您接近此限制，则可能需要删除较早的副本。</block>
   <block id="94ce778033bf4abe093ce9cc1e7a0498" category="paragraph">将备份副本保留特定天数</block>
   <block id="9bbf41d74c8f89f293d3299ea7bebf83" category="paragraph">选择 * 保留适用于最后 &lt; 天数 &gt; 天完整备份 * 选项，并指定保留日志备份副本的天数。</block>
   <block id="9de90deec5302da2195d39aecfada280" category="list-text">在按需保留设置的 * 完整备份保留设置 * 部分中，执行以下操作：</block>
-  <block id="e1282ba4f34b11ff282fb7d9970b2736" category="paragraph">要保留的 Snapshot 副本总数</block>
-  <block id="206b2713043077c94ab3e4473a9897d7" category="paragraph">如果要指定要保留的 Snapshot 副本数，请选择 * 要保留的 Snapshot 副本总数 * 。</block>
   <block id="3aaac4c94ecda8362dc70a2825de8b24" category="paragraph">如果 Snapshot 副本数超过指定数量，则会删除这些 Snapshot 副本，并首先删除最旧的副本。</block>
   <block id="225ea283dca2590a2a542a782ac56927" category="admonition">对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，对于 ONTAP 9.3 或更早版本上的资源，最大保留值为 254 。如果将保留设置为高于底层 ONTAP 版本支持的值，则备份将失败。</block>
   <block id="a0257f49f5547a6ef191dd6c2f9b4c75" category="admonition">默认情况下，保留计数值设置为 2 。如果将保留数量设置为 1 ，则保留操作可能会失败，因为第一个 Snapshot 副本是 SnapVault 关系的参考 Snapshot 副本，直到将较新的 Snapshot 副本复制到目标。</block>
-  <block id="890049ee281f6f438392008ad804b79b" category="paragraph">保留 Snapshot 副本</block>
   <block id="6d8af80369897e48f5d0073fb1d5235e" category="paragraph">如果要指定删除 Snapshot 副本之前要保留这些副本的天数，请选择 * 保留 Snapshot 副本 * 。</block>
-  <block id="827a94fd354ba8465165672c359a430d" category="paragraph">如果要指定要保留的 Snapshot 副本数，请选择 * 要保留的 Snapshot 副本总数 * 。如果 Snapshot 副本数超过指定数量，则会删除这些 Snapshot 副本，并首先删除最旧的副本。</block>
   <block id="6127fccc91f52e5ee1702cdfa7fa1673" category="admonition">如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留数量设置为 1 ，则保留操作可能会失败，因为第一个 Snapshot 副本是 SnapVault 关系的参考 Snapshot 副本，直到将较新的 Snapshot 副本复制到目标。</block>
   <block id="efa04a2e0b433b54ed88de4c3b1b5a79" category="paragraph">日志 Snapshot 副本保留默认设置为 7 天。使用 Set-SmPolicy cmdlet 更改日志 Snapshot 副本保留。</block>
   <block id="723fe9aea6dfe1a0a822f218095c1c11" category="paragraph">此示例将日志 Snapshot 副本保留设置为 2 ：</block>
@@ -157,7 +143,6 @@
   <block id="a0e2a78c6c2fd62817afcae7e0b538f5" category="admonition">您必须在 ONTAP 中配置 SnapMirror 保留策略，以使二级存储不会达到 Snapshot 副本的最大限制。</block>
   <block id="369cd91c3e11b99e6fa5850b92b3090a" category="paragraph">将完整性结构限制为数据库的物理结构（ physical_only ）</block>
   <block id="0de87de3224e64a78ce1093052a47d1d" category="paragraph">选择 * 将完整性结构限制为数据库的物理结构（ physical_only ） * 可将完整性检查限制为数据库的物理结构，并检测影响数据库的已破页面，校验和故障以及常见硬件故障。</block>
-  <block id="fdfc39464fafdd6ce6b729e0738e48a3" category="paragraph">禁止所有信息消息（无 INFOMSGS ）</block>
   <block id="82f15136daedc726dba1051c43c28284" category="paragraph">选择 * 禁止所有信息消息（ NO_INFOMSGS ） * 以禁止所有信息消息。默认情况下处于选中状态。</block>
   <block id="a01ae415547e2368a45ed1cc209949a9" category="paragraph">显示每个对象报告的所有错误消息（ all_ERRORMSGS ）</block>
   <block id="afac60f293b05dc186f67c671aabe6bc" category="paragraph">选择 * 显示每个对象报告的所有错误消息（ all_ERRORMSGS ） * 以显示每个对象报告的所有错误。</block>
@@ -623,23 +608,16 @@
   <block id="3a1dd416224e7a96b7d4be1dfc9536cf" category="list-text">满足以下条件时，必须将凭据分配给不具有 sysadmin 访问权限的基于角色的访问控制（ Role-Based Access Control ， RBAC ）用户：</block>
   <block id="7a16850a47fecec0d6cb2c66daae6fca" category="list-text">此凭据将分配给 SQL 实例。</block>
   <block id="6707464a5871a6aa26dcf785bea4052c" category="list-text">SQL 实例或主机已分配给 RBAC 用户。</block>
-  <block id="4970872b4e7e80683035b5383cddcfad" category="paragraph">用户必须同时具有资源组和备份权限</block>
   <block id="afebb28fd320ef1336620e367e1e9af9" category="list-text">要添加新凭据，请单击 * 新建 * 。</block>
-  <block id="e98129085674125eccfb10fdf1a8b903" category="paragraph">* 凭据名称 *</block>
   <block id="18274e168d1fce1bedb612015e797fb4" category="paragraph">输入凭据的名称。</block>
-  <block id="22a9d94cc3dd3f3f504402ee57041a90" category="paragraph">* 用户名 *</block>
   <block id="2babd6364b44c08eef5ab4738c3db862" category="paragraph">输入用于 SQL Server 身份验证的用户名。</block>
   <block id="2532aba4399cff0e09437703bc91a9d4" category="list-text">域管理员或管理员组的任何成员指定要安装 SnapCenter 插件的系统上的域管理员或管理员组的任何成员。* 用户名 * 字段的有效格式为：</block>
   <block id="e9c2622b465de104c38e33657be6878b" category="list-text">_netbios\username_</block>
   <block id="e945adbfe4c1a1de7443c2cb0ded2ba9" category="list-text">域 FQDN\username_</block>
   <block id="b2634f07b0a3a46ef7a5b2fe1993d6e2" category="list-text">本地管理员（仅适用于工作组）对于属于工作组的系统，请指定要安装 SnapCenter 插件的系统上的内置本地管理员。如果用户帐户具有提升的权限或在主机系统上禁用了用户访问控制功能，则可以指定属于本地管理员组的本地用户帐户。* 用户名 * 字段的有效格式为： _username_</block>
-  <block id="519a06883e7db4dbb9a21eeecb16986a" category="paragraph">* 密码 *</block>
   <block id="3e63265716df2dfbce34fbae052f782c" category="paragraph">输入用于身份验证的密码。</block>
-  <block id="95d647afc6713e290a68698e8521e757" category="paragraph">* 身份验证模式 *</block>
   <block id="66c5f2a1877b1e04cfa2731f1e12aa5e" category="paragraph">选择 SQL Server 身份验证模式。如果 Windows 用户在 SQL 服务器上具有 sysadmin 权限，您也可以选择 Windows 身份验证。</block>
-  <block id="34a7588e855afcffbec3ec292d335369" category="paragraph">* 主机 *</block>
   <block id="d82b9729484cf5fd2948c596280e72fb" category="paragraph">选择主机。</block>
-  <block id="e1f1f62be4a53aaecc160ddb197e5ecd" category="paragraph">* SQL Server 实例 *</block>
   <block id="1c6aec216640420d37199ef0555beab9" category="paragraph">选择 SQL Server 实例。</block>
   <block id="a52c72cddb788a0e54ae847cfde710d9" category="list-text">单击 * 确定 * 以添加凭据。</block>
   <block id="9cfc80fa5227a423a76220ce430d990c" category="list-text">在左侧导航窗格中，单击 * 资源 * 。</block>
@@ -1006,11 +984,9 @@
   <block id="303271a6fa371310673fc55e65bf3af0" category="doc">快速开始安装适用于 SQL Server 的 SnapCenter 插件</block>
   <block id="e05bc1fb0d09110d2709b8329ca82a1f" category="paragraph">提供了一组有关安装 SnapCenter 服务器和适用于 Microsoft SQL Server 的 SnapCenter 插件的简要安装说明。</block>
   <block id="67f289221dc2b8315be57c85a28e0619" category="section-title">准备安装</block>
-  <block id="e03ce187e39230106155230cb020dfa3" category="paragraph">* 域和工作组要求 *</block>
   <block id="c85265a6c5841b0f019403a50b63c44d" category="paragraph">SnapCenter 服务器可以安装在域或工作组中的系统上。</block>
   <block id="43727cf7c1f0b9055bad0d2c9c2e19ea" category="paragraph">如果您使用的是 Active Directory 域，则应使用具有本地管理员权限的域用户。域用户应是 Windows 主机上本地管理员组的成员。</block>
   <block id="2632504d1b7b1f77434679b6906040dd" category="paragraph">如果您使用的是工作组，则应使用具有本地管理员权限的本地帐户。</block>
-  <block id="8091c23d0ce9e48e2abcbbcf443c75a5" category="paragraph">* 许可证要求 *</block>
   <block id="d5c59f9587c1784732bff8ebcc03f9fb" category="paragraph">您安装的许可证类型取决于您的环境。</block>
   <block id="794df3791a8c800841516007427a2aa3" category="cell">许可证</block>
   <block id="b428bd66304bced88a8f85c2e42e2a8d" category="cell">必要时</block>
@@ -1029,7 +1005,6 @@
   <block id="a036788a7ed73379ca117ad8b6a48afa" category="paragraph">SnapCenter 标准许可证（可选）</block>
   <block id="5be74f1e9c3cdce99e50c0e439ec19b3" category="paragraph">二级目标</block>
   <block id="7dbd4083dc9a93160940c1e53d03999f" category="admonition">建议（但不要求）将 SnapCenter 标准版许可证添加到二级目标。如果二级目标上未启用 SnapCenter 标准许可证，则在执行故障转移操作后，您将无法使用 SnapCenter 备份二级目标上的资源。但是，要执行克隆和验证操作，二级目标需要 FlexClone 许可证。</block>
-  <block id="89a71adc7ceff2f08a2162d1abfd9de6" category="paragraph">* 其他要求 *</block>
   <block id="918d32b75f0ab883abba3a8dc0c3ae8d" category="inline-link">互操作性表工具</block>
   <block id="8124579383e90243e4b06323d2b37f8d" category="cell">主机</block>
   <block id="a55b17d8324fe50e023be8010d4b5474" category="cell">最低要求</block>
@@ -1066,7 +1041,6 @@
   <block id="48552dce4d9810446c70f66f21f08120" category="paragraph">ONTAP 集群或 SVM 通信端口</block>
   <block id="de80df6466db891ed7d7a31d71335ae1" category="paragraph">443 （ HTTPS ），双向； 80 （ HTTP ），双向</block>
   <block id="228eb7fa9d28577ec427d7baedfa7ded" category="paragraph">此端口用于在 SnapCenter 服务器主机，插件主机和 SVM 或 ONTAP 集群之间进行通信。</block>
-  <block id="353c85d985312d2d61ab0aeb4ee52759" category="paragraph">* 适用于 Microsoft SQL Server 的 SnapCenter 插件要求 *</block>
   <block id="4bd535cc745449316aa463a5f52133d6" category="paragraph">您应拥有一个具有本地管理员权限的用户，并在远程主机上拥有本地登录权限。如果您管理集群节点，则需要一个对集群中所有节点具有管理权限的用户。</block>
   <block id="cf94e6be5912bb698bcc03d64c605bc4" category="paragraph">您应具有一个对 SQL Server 具有 sysadmin 权限的用户。此插件使用 Microsoft VDI Framework ，需要 sysadmin 访问权限。</block>
   <block id="354c84f19db927b615f7e75880c69840" category="section-title">安装 SnapCenter 服务器</block>
@@ -2662,7 +2636,6 @@
   <block id="8103ea1f974b6fe78b3263b7a1107692" category="paragraph">SnapCenter 将建立 iSCSI 会话。</block>
   <block id="d92abf366bd9060c59bb86c051a977d0" category="list-text">重复此操作步骤，为每个目标建立一个会话。</block>
   <block id="f8a549c5d60e74034419845623f5c51a" category="summary">您可以使用 SnapCenter 标准容量许可证来保护 ONTAP Select 和 Cloud Volumes ONTAP 平台上的数据。</block>
-  <block id="a6f6b8e1900f201c352d37d7ad4eee46" category="paragraph">此许可证具有以下特征：</block>
   <block id="1e1ad6d102344db746935e8ae7b4053a" category="list-text">由一个九位数序列号组成，格式为 51xxxxxxx</block>
   <block id="8df6c319bc0dd3bc17034d6f7b0b0d01" category="paragraph">您可以使用许可证序列号和有效的 NetApp 支持站点登录凭据通过 SnapCenter 图形用户界面启用许可证。</block>
   <block id="f8b3fa2bcdc37eb746dd0ca2b1318a58" category="list-text">作为单独的永久许可证提供，成本基于已用存储容量或要保护的数据大小（以较低者为准），并且数据由 SnapCenter 管理</block>
@@ -2670,12 +2643,8 @@
   <block id="3ad8f1015a5748dc3e790e64bb9a4e26" category="paragraph">例如，您可以获取 1 TB ， 2 TB ， 4 TB 等基于容量的许可证。</block>
   <block id="ec72ca404ef39d44f067aaaae39cf0e4" category="list-text">提供 90 天试用许可证，可获得 100 TB 容量授权</block>
   <block id="2743dc2e5d64cfecd6d65ef69f417e95" category="summary">您的订单确认函或文档包中提供了基于 SnapCenter 容量的许可证序列号；但是，如果您没有此序列号，则可以从 NetApp 支持站点检索此序列号。</block>
-  <block id="0373910e51252c7b97dcbea9f4942604" category="inline-link">mysupport.netapp.com</block>
-  <block id="260c486181bff01291b08f4368caf4e0" category="list-text">登录到 NetApp 支持站点，网址为<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block>。</block>
   <block id="55b506dcddf68638833e19d289e73897" category="list-text">导航到 * 系统 * &gt; * 软件许可证 * 。</block>
   <block id="a83a5d4a0177a0501c4a3ed3bc37cd53" category="list-text">在选择条件区域中，从全部显示：序列号和许可证下拉菜单中选择 * SC_STANDARE* 。</block>
-  <block id="afdb1414f39146e968c3e38bd864c000" category="image-alt">选择 NSS 许可证</block>
-  <block id="969166d70500094403472cee53c7eb80" category="list-text">键入您的公司名称，然后单击 * 执行！ * 。</block>
   <block id="072c7ce9ef654fbadd39bfb8d07dd1f6" category="paragraph">显示格式为 51xxxxxxx 的九位 SnapCenter 许可证序列号。</block>
   <block id="4f208af6a990c3a6dbb3b1a7f78ab5d4" category="summary">要在 Storage Virtual Machine （ SVM ）上配置 SMB3 共享，您可以使用 SnapCenter 用户界面或 PowerShell cmdlet 。</block>
   <block id="61e81eb53b72fd5418e7a2bd125c8686" category="doc">创建和管理 SMB 共享</block>
@@ -2710,10 +2679,7 @@
   <block id="febaac7ceadda0aca80556bfc7f22a33" category="list-text">在左侧导航窗格中，单击 * 存储系统 * 。</block>
   <block id="9ba45610f0250c3f3d93d968194d341c" category="list-text">要查看已添加的所有 SVM ，请选择 * ONTAP SVM* 。</block>
   <block id="91fd94b5750743b0b4db66d235c0cab9" category="list-text">要查看已添加的所有集群，请选择 * ONTAP Clusters* 。</block>
-  <block id="784f9d2e91aebe7dc2a98209e667372a" category="paragraph">单击集群名称后，属于集群的所有 SVM 都会显示在 Storage Virtual Machine 部分中。</block>
   <block id="56ea331cb0dea9dc3bddc3e0e2f3ef88" category="paragraph">控制器许可证列显示以下状态：</block>
-  <block id="2522d4d4da08f9de2686d2c18e41a94b" category="list-text"><block ref="da9849daa2aa04218f87948a7256713b" category="inline-image-macro-rx" type="image"></block> 表示 SnapManager 套件许可证安装在 FAS 或 AFF 主存储系统上。</block>
-  <block id="3064686d0324adfa86cb183026ea8a66" category="list-text"><block ref="355b5886443669e7ad5ff1741a77218f" category="inline-image-macro-rx" type="image"></block> 表示 SnapManager 套件许可证未安装在 FAS 或 AFF 主存储系统上。</block>
   <block id="e095aee1efd740c71961a13e76576da6" category="list-text">二级存储</block>
   <block id="f13e95a655fb97423bd52082209d8781" category="list-text">添加许可证</block>
   <block id="c2267a540cdece9a806b765d927ba8ef" category="list-text">查看许可证详细信息以快速查找有关每个许可证的信息。</block>
@@ -2721,17 +2687,14 @@
   <block id="fd6d824ad448d73f9d1f6b3c5509232a" category="list-text">如果要替换现有许可证或不再需要许可证，请删除此许可证。</block>
   <block id="ba2f4fc969f990edea2a0f9e7c17885f" category="admonition">无法使用 SnapCenter 图形用户界面删除试用许可证（序列号以 50 结尾）。添加已获取的基于 SnapCenter 标准容量的许可时，试用许可证会自动被覆盖。</block>
   <block id="20788a45506cca03e1c2a88f6259baa6" category="list-text">在设置页面中，单击 * 软件 * 。</block>
-  <block id="0b5bbb1f8e9316f184ffc46a55fde594" category="list-text">在软件页面的许可证部分中，单击 * 添加 * （<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>）。</block>
   <block id="d72c1df6aa761e08a22ad7e68c16406d" category="list-text">在添加 SnapCenter 许可证向导中，选择以下方法之一以获取要添加的许可证：</block>
   <block id="a1d8662559bac2669232432df90e6db3" category="paragraph">输入 NetApp 支持站点（ NSS ）登录凭据以导入许可证</block>
   <block id="a426e2b1ae7b2ed68b622079636cb9f8" category="list-text">输入您的 NSS 用户名。</block>
   <block id="21b830aba4d35dd682d3fb99b5c39c58" category="list-text">输入 NSS 密码。</block>
   <block id="07cb62e97402d6f5f7ae164e960f673c" category="paragraph">NetApp 许可证文件</block>
   <block id="358adfd23e97ae6d9631faacdf38349f" category="list-text">浏览到许可证文件的位置，然后选择它。</block>
-  <block id="31d9f23fbb53d2787e021e33f512537e" category="list-text">单击 * 打开 * 。</block>
   <block id="139acbc75e1fdf242ad639e953306c0d" category="list-text">在 Notifications 页面中，输入 SnapCenter 发送电子邮件， EMS 和 AutoSupport 通知的容量阈值。</block>
   <block id="ca8d06ca31fa65de1d7fa189cbd9053a" category="paragraph">默认阈值为 90% 。</block>
-  <block id="c5ac91f9d71868d67600ac6e3d555ce9" category="list-text">要为 SMTP 服务器配置电子邮件通知，请单击 * 设置 * &gt; * 全局设置 * &gt; * 通知服务器设置 * ，然后输入以下详细信息：</block>
   <block id="fe7c6832f02e9c6d619cf94f17ad3887" category="paragraph">电子邮件首选项</block>
   <block id="a4e7a8fc83bab6b154d5ea518f9f930c" category="paragraph">选择 * 始终 * 或 * 从不 * 。</block>
   <block id="0ea82c1bf7269950e927586b6dba0eac" category="paragraph">提供电子邮件设置</block>
@@ -2740,8 +2703,6 @@
   <block id="a70a5bbea3c1a0732c3b119e34ac958c" category="list-text">收件人电子邮件地址</block>
   <block id="d97e109d66d82a3998e928297ea76bdc" category="list-text">可选：编辑默认主题行</block>
   <block id="fb929cc1541d57b8296794b2a588840d" category="paragraph">默认主题如下所示： SnapCenter 许可证容量通知。</block>
-  <block id="8440ad9407c2e5813eaab7eb5fa92051" category="list-text">如果要将事件管理系统（ EMS ）消息发送到存储系统系统系统日志或将 AutoSupport 消息发送到存储系统以处理失败的操作，请选中相应的复选框。</block>
-  <block id="3327dba9ffd8c9c2d9846fc889607703" category="cell">* 最佳实践 * ：建议启用 AutoSupport 以帮助您解决可能遇到的问题。</block>
   <block id="5a378b18f7bf0c4cabc6c655cd2f535e" category="list-text">单击 * 下一步 * 。</block>
   <block id="cf3152e36e70eecd5ed2d294f623eb90" category="summary">如果 SnapCenter 主机属于 FC/iSCSI 环境，则可能需要在系统上安装其他软件才能访问 ONTAP 存储。</block>
   <block id="8e9816159074c93c5490453d542c7149" category="doc">SAN 主机要求</block>
@@ -2965,7 +2926,6 @@
   <block id="16e7597f6d1a1595520060010a775409" category="paragraph">域控制器通信端口</block>
   <block id="fa51be75ce838b88fdd3475b507591a3" category="paragraph">请参见 Microsoft 文档以确定域控制器上应在防火墙中打开的端口，以便身份验证能够正常工作。</block>
   <block id="c659718bc9e53e4da63cb36d6025798c" category="paragraph">必须在域控制器上打开 Microsoft 所需的端口，以便 SnapCenter 服务器，插件主机或其他 Windows 客户端能够对用户进行身份验证。</block>
-  <block id="a2e769316816cc255f9f37fbed415c69" category="doc">删除试用许可证</block>
   <block id="87d0fa08c99bcc9a194b85ddcbe3da26" category="paragraph">只有在使用基于 SnapCenter 标准控制器的许可证时，才需要手动删除试用许可证。如果您购买了基于 SnapCenter 标准容量的许可证并将其添加到 SnapCenter 图形用户界面中，则试用许可证将自动被覆盖。</block>
   <block id="68dae2573ac7874d6dd234af4fa4c752" category="list-text">在 SnapCenter 服务器上，打开 PowerShell 窗口以重置 MySQL 密码。</block>
   <block id="aa5c2438bb48bc6f9fc91294d9f5f2c1" category="list-text">运行 Open-SmConnection cmdlet ，为 SnapCenterAdmin 帐户启动与 SnapCenter 服务器的连接会话。</block>
@@ -3056,7 +3016,6 @@
   <block id="02f25ba36a2907c8f8d0598b962b14ed" category="list-text">关闭注册表编辑器。</block>
   <block id="21b55e1babd986a5f3ed39019361ea07" category="summary">您可以在 VMware 环境中使用适用于 Microsoft Windows 的 SnapCenter 插件创建和管理 LUN 以及管理 Snapshot 备份副本。</block>
   <block id="e2d0fdb0252253026c4030313d523287" category="doc">在 VMware 环境中配置存储</block>
-  <block id="9c665690c697cc93e5a897a8a63d25c2" category="doc">检索控制器序列号</block>
   <block id="ed996e97427b9382e039c0a5dde5d493" category="list-text">使用 ONTAP 命令行登录到控制器。</block>
   <block id="1220394f5402b4332338e11150062d91" category="list-text">输入 system show -instance 命令，然后查看输出以查找控制器序列号。</block>
   <block id="065b83de49a875bb4bd71dbe16fad428" category="list-text">记录序列号。</block>
@@ -3176,7 +3135,6 @@
   <block id="541eb9f7e4046db89bc6e649fea3e51d" category="admonition">如果单击 * 取消 * 按钮，则正在执行的步骤将完成，然后启动回滚操作。SnapCenter 服务器将从主机中完全删除。</block>
   <block id="0a72b5ed9e647b1bccffb29f78092df4" category="paragraph">但是，如果在执行 SnapCenter 服务器站点重新启动或等待 SnapCenter 服务器启动操作时单击 * 取消 * ，则安装将继续进行，而不会取消此操作。</block>
   <block id="bf81ea5010d5d85942a2a57301afd2ac" category="paragraph">日志文件始终列在管理员用户的 %temp% 文件夹中（最早的先列出）。如果要重定向日志位置，请从命令提示符处运行以下命令来启动 SnapCenter 服务器安装：``C ： \installer_location\installer_name.exe /log"C" ： \"``</block>
-  <block id="b15a52a99ef14861ba148ae197add182" category="doc">SnapCenter 如何计算容量使用量</block>
   <block id="10680a7aa79949d8b454b29a782cc64a" category="summary">在使用 FC RDM LUN 在 Microsoft 集群中的节点之间共享存储之前，必须先创建共享仲裁磁盘和共享存储磁盘，然后将其添加到集群中的两个虚拟机。</block>
   <block id="5010ac065b072d3a5a66d4913af22358" category="doc">创建共享 FC RDM LUN</block>
   <block id="cbdb6828febec04786f22df9a1ccc748" category="inline-link">跨物理主机的集群虚拟机</block>
@@ -3310,17 +3268,13 @@
   <block id="e641334b8b39e850790bd4b25b2e3cec" category="paragraph">提交许可证密钥请求时， KrollOntrack 将问题描述 50 个邮箱许可证密钥。根据您的授权， KrollOntrack 将在验证后升级邮箱许可证。</block>
   <block id="da68fe81ae35bfda8d512b213d4ea64f" category="summary">如果您使用的是 FAS 或 AFF 存储，则可以先从 NetApp 支持站点检索基于 SnapCenter 控制器的许可证，然后再使用 ONTAP 命令行进行安装。</block>
   <block id="315713e21026e04eaaa2b9a3821e4c3d" category="paragraph">如果未输入有效凭据，则不会为搜索返回任何信息。</block>
-  <block id="371319a0c9817abb98eea29d4567a795" category="list-text">在选择条件区域中，确保选择了序列号（位于设备背面），输入控制器序列号，然后单击 * 执行！ * 。</block>
-  <block id="d9996bb23744ed1a95dc297c99d45d4d" category="image-alt">NSS 控制器许可证选择</block>
   <block id="b5ddaee766816307a016e7736f50313d" category="paragraph">此时将显示指定控制器的许可证列表。</block>
   <block id="5da6f07d19afc1937b1b5b064152d98e" category="list-text">找到并记录 SnapCenter 标准版或 SnapManagerSuite 许可证。</block>
-  <block id="aec2fa195585d5a55c735b267231ecf8" category="doc">生成 NetApp 许可证文件</block>
   <block id="eeb818d6636d7675fb1108e834a0fed1" category="inline-link">NetApp 许可证文件生成器</block>
   <block id="5064ce102d4c25981e21e76e6aa515d3" category="list-text">导航到<block ref="52825a9f9c75513bbd1f360c2df7f081" category="inline-link-rx"></block>。</block>
   <block id="cc5aaa62ea65ba445a0ca28e684ec137" category="list-text">输入所需信息。</block>
   <block id="aa96972d8a9d395572c58293f4cfc359" category="list-text">在产品线字段中，从下拉菜单中选择 * SnapCenter 标准（基于容量） * 。</block>
   <block id="abd5fbd31eb442bc0a035e9cad7fe8f3" category="list-text">在产品序列号字段中，输入 SnapCenter 许可证序列号</block>
-  <block id="32b485c6c6f806ed5cacdc290d9f46ae" category="list-text">阅读并接受 NetApp 数据隐私政策，然后单击 * 提交 * 。</block>
   <block id="352b74507f3abbcaae93745904ef3f5a" category="list-text">保存许可证文件，然后记录文件位置。</block>
   <block id="5fd3d0b8e71c4f64cfbad31e3fde1863" category="summary">在安装 SnapCenter 服务器之前，您应熟悉空间和规模估算要求。您还应应用可用的系统和安全更新。</block>
   <block id="18cd7192921dd5ac27a1a7c5ef795c20" category="doc">空间和规模估算要求</block>
@@ -5897,7 +5851,6 @@
   <block id="86f7f637d3819a7b4814644b7f8d8972" category="image-alt">scc 安装配置工作流</block>
   <block id="48f5a315d78b006c306e66d7b35fa6f4" category="summary">您必须添加要备份或克隆的资源。根据您的环境，资源可能是要备份或克隆的数据库实例或集合。</block>
   <block id="5acceba2cee4fe40d121e90d997fa439" category="doc">向 SnapCenter 自定义插件添加资源</block>
-  <block id="09f1a1e976c751f8b861a75492f30752" category="list-text">您必须已创建自定义插件。</block>
   <block id="797f1e031962d70e46335925184febf4" category="list-text">您必须已将插件上传到 SnapCenter 服务器。</block>
   <block id="eb609425665410a2e3cc5d5000880798" category="paragraph">您还可以为 MySQL 和 DB2 应用程序添加资源。这些插件可从下载<block ref="14adb94a4faec9ea0e0992d90e98b640" category="inline-link-rx"></block>。</block>
   <block id="0750f05e0542388153777a63b5fa887c" category="paragraph">输入资源的名称。</block>
@@ -5906,7 +5859,6 @@
   <block id="22d904afc998596607ae9259692598fb" category="paragraph">选择 Credential 或创建新凭据。</block>
   <block id="16e83f7e57633cd58a4377b7c1b63e8b" category="paragraph">挂载路径</block>
   <block id="1b77d8b94cdc028e50a0681f82c70f25" category="paragraph">输入挂载资源的挂载路径。这仅适用于 Windows 主机。</block>
-  <block id="dc502ecfca6ae1ebeee4b624e9b44123" category="paragraph">可选：单击 <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block> 图标，用于从其他存储系统添加更多卷， LUN 和 qtree 。</block>
   <block id="e0a8c4d2ea78ad79b3f4ddb809734576" category="admonition">SnapCenter 自定义插件不支持自动发现物理和虚拟环境中的资源和存储详细信息。您必须在创建资源时提供物理和虚拟环境的存储信息。</block>
   <block id="e855bfeca424d5d865b9bac0eaf01f53" category="image-alt">存储占用空间</block>
   <block id="863fe064f77b5a2b8dd60206770de2c1" category="paragraph">如果要传递特定于资源的信息，请使用自定义密钥值对。例如，在使用 MySQL 插件时，您必须将主机指定为 host=hostname ， port =port-no 用于 MySQL ，而主从配置指定为 master_slave = "`Yes` " 或 "`no` " （名称是 master_slave ，值为 "`Yes` " 或 "`no` " ）。</block>
@@ -5944,16 +5896,11 @@
   <block id="ee81cae3ec3e0c9309ae63b9a03ca91a" category="list-text">能够在 Windows 环境中创建文件系统一致的 Snapshot 副本。</block>
   <block id="aa5531c2ecb8be9440f8c1f83b8e7d4f" category="summary">资源组是指必须向其添加要备份和保护的资源的容器。</block>
   <block id="a80db864d152c8b32afdc8aba08be8a4" category="paragraph">例如， _customtext_resource group_policy_hostname 或 resource group_hostname_ 。默认情况下， Snapshot 副本名称会附加时间戳。</block>
-  <block id="b681aca5ebc16cfa17fba43067418799" category="list-text">单击备份箭头可设置其他备份选项：</block>
-  <block id="b23b98054bcf29cc3dd1bd3464052bcb" category="list-text">单击脚本箭头，然后输入用于暂停， Snapshot 副本和取消暂停操作的 PRE 和 POST 命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。</block>
-  <block id="18c6405661af0f133718c3a6c6e5b2b9" category="list-text">单击 "Custom Configurations" 箭头，然后输入使用此资源执行所有数据保护操作所需的自定义密钥值对。</block>
   <block id="3beb0a9c61be39e8320fe0059a03c74a" category="paragraph">启用归档日志管理以删除归档日志。</block>
   <block id="dc703326700303bf93d1386ba9fca6a5" category="paragraph">选择 SnapCenter with File System Consistency 。</block>
   <block id="cc1f89ce717207d3bd06c999199b9304" category="paragraph">选择 SnapCenter without File System Consistency 。</block>
   <block id="fb99cb02e8a44f5112f8225ca020b979" category="paragraph">选择其他，然后输入要在主机上执行的命令以创建 Snapshot 副本。</block>
   <block id="bfd0e05a188a0885b5397fae78f649b8" category="paragraph">这些策略将在 * 为选定策略配置计划 * 部分中列出。</block>
-  <block id="7968dcde042f7f2966214a9d3b89b418" category="list-text">在 * 配置计划 * 列中，单击 *<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* 表示要配置的策略。</block>
-  <block id="1e414da00e22b0ba0fa519e7325b7ea9" category="list-text">在添加策略 _policy_name_ 的计划对话框中，配置计划，然后单击确定。</block>
   <block id="6041b17ee877813c3440ee714e48b911" category="paragraph">已配置的计划将列在 "applied Schedules" 列中。如果第三方备份计划与 SnapCenter 备份计划重叠，则不支持这些计划。</block>
   <block id="6728b4a43abbebd3cc07a2cacc5e0c06" category="paragraph">添加主机的用户应具有该主机的管理权限。</block>
   <block id="75358aefb0b5382303d826391e171b80" category="summary">使用原生模式开发此插件。</block>
@@ -6558,37 +6505,23 @@
   <block id="6d60bb075e677f1c265ebdaa41edebc7" category="paragraph">适用于 Oracle 数据库的插件可使用 Oracle Recovery Manager （ RMAN ）自动执行备份，目录编制和取消目录编制，验证，挂载，卸载，还原， 在 SnapCenter 环境中恢复和克隆 Oracle 数据库。适用于 Oracle 数据库的插件安装适用于 UNIX 的 SnapCenter 插件以执行所有数据保护操作。</block>
   <block id="de1dc9ecd8b785149fcee2f9c27647bd" category="section-title">在活动窗格中监控数据保护操作</block>
   <block id="247c902b5f932e2e47b98b966ab41a08" category="doc">添加基于 SnapCenter 标准容量的许可证</block>
-  <block id="b7045e270f9ec5cdf3d4a2f1516dd0fd" category="section-title">添加基于容量的许可证的前提条件</block>
-  <block id="fc839d90b395c50c0f0c94028073c2fc" category="paragraph">在添加基于容量的许可证之前，您应计算容量要求，检索基于容量的许可证的序列号，并可选择生成许可证文件。</block>
-  <block id="b0c7f3b2e1c49f12743f8681bad9f4d9" category="section-title">计算容量需求</block>
   <block id="fff248d88b8e6fe585098d0e2e47af26" category="paragraph">您应是 Cloud Volumes ONTAP 或 ONTAP Select 系统上的集群管理员。</block>
-  <block id="8653cfd71a4452fb9ae4b9ab1e4f43c5" category="section-title">检索基于容量的许可证的序列号</block>
   <block id="8e4be97b92b5d685df7ecc1adcda7baf" category="paragraph">您应具有有效的 NetApp 支持站点登录凭据。</block>
   <block id="2be4e86fec9db8038212e41252f1f190" category="list-text">记录序列号。</block>
-  <block id="7ab335ae0eb6b3dd5aa9c839cf5ead00" category="paragraph">如果您不想在 SnapCenter 图形用户界面中输入 NetApp 支持站点凭据和 SnapCenter 许可证序列号，或者您无法从 SnapCenter 访问 NetApp 支持站点的 Internet ，则可以生成 NetApp 许可证文件（ NLF ）， 然后，将文件下载并存储在可从 SnapCenter 主机访问的位置。</block>
   <block id="b38bcb46a26616707e57598919123e4f" category="list-text">您应将 SnapCenter 与 ONTAP Select 或 Cloud Volumes ONTAP 结合使用。</block>
   <block id="26e6565b87611c0e2e61e424bbf253a8" category="list-text">您应具有有效的 NetApp 支持站点登录凭据。</block>
   <block id="ef37f690ac766ca61a4b063851b90274" category="list-text">您应具有格式为 51xxxxxxx 的九位数许可证序列号。</block>
-  <block id="2fab191a54d328d06a3a746dee5bbad2" category="section-title">添加基于容量的许可证</block>
   <block id="8c1f23f212262c3300e93f874826f6e5" category="paragraph">如果您将 SnapCenter 与 ONTAP Select 或 Cloud Volumes ONTAP 平台结合使用，则应安装一个或多个基于 SnapCenter 容量的许可证。</block>
   <block id="7497c6eb5b40c317a0e3ac59d973ce6b" category="list-text">您应以 SnapCenter 管理员用户身份登录。</block>
   <block id="55f664ebb6051a6a8020142e125c7571" category="paragraph">如果您使用 NetApp 许可证文件（ NLF ）添加许可证，则应知道许可证文件的位置。</block>
   <block id="d6cd0a28d068c868d81bfecd02276ee3" category="list-text">输入基于控制器的许可证的序列号。</block>
-  <block id="33e4a71d44495d6f1fd89da8547d2ff8" category="paragraph">SnapCenter 每天午夜自动计算其管理的 ONTAP Select 和 Cloud Volumes ONTAP 存储的容量使用量。为了确保 SnapCenter 配置正确，您应了解 SnapCenter 如何计算容量。</block>
-  <block id="b49e5091a9fa2af83579f7097033c636" category="paragraph">使用标准容量许可证时， SnapCenter 会从总许可容量中扣除所有卷上的已用容量，从而计算未用容量。如果已用容量超过许可容量， SnapCenter 信息板上将显示过度使用警告。如果您在 SnapCenter 中配置了容量阈值和通知，则在已用容量达到您指定的阈值时，系统会发送电子邮件。</block>
   <block id="f011a01ebc3350e546311efaf71140bc" category="doc">添加基于 SnapCenter 标准控制器的许可证</block>
-  <block id="20284ac6e2b70536e661c28917c1f549" category="section-title">添加基于控制器的许可证的前提条件</block>
-  <block id="caaa0ad9310c0a99138c911b96b968e3" category="paragraph">在添加基于控制器的许可证之前，您应验证是否已安装 SnapManager 套件许可证，确定控制器上安装的许可证，检索控制器的序列号以及检索基于控制器的许可证的序列号。</block>
-  <block id="3a6c1a3709f142da8374f25ad7aabeda" category="section-title">验证是否已安装 SnapManager 套件许可证</block>
   <block id="6aa5717c99b34de9980debfbe3c6fa76" category="admonition">如果您的控制器上已安装 SnapManagerSuite 许可证，则系统会自动提供基于 SnapCenter 标准控制器的许可证授权。SnapManagerSuite 许可证和基于 SnapCenter 标准控制器的许可证这两个名称可以互换使用，但它们表示的是同一个许可证。</block>
   <block id="a909f2df296012a51dc7da77f9e20dc6" category="list-text">不适用表示 SnapManager 套件许可证不适用，因为存储控制器位于 Cloud Volumes ONTAP ， ONTAP Select 或二级存储平台上。</block>
-  <block id="3991b99f14bb81b2f89217b235be9e25" category="section-title">确定控制器上安装的许可证</block>
   <block id="6709a231567d24784eb3e160f2720365" category="paragraph">您可以使用 ONTAP 命令行查看控制器上安装的所有许可证。您应是 FAS 或 AFF 系统上的集群管理员。</block>
   <block id="e7590fb47d0f1f083a0a8a323aa643a0" category="admonition">基于 SnapCenter 标准控制器的许可证在控制器上显示为 SnapManagerSuite 许可证。</block>
   <block id="aa9f3e3dd8188fb5cf1d9979b4a7a787" category="paragraph">您需要具有控制器序列号才能检索基于控制器的许可证的序列号。您可以使用 ONTAP 命令行检索控制器序列号。您应是 FAS 或 AFF 系统上的集群管理员。</block>
-  <block id="8903a54a74657bc9f41f9375ea9d6adc" category="section-title">检索基于控制器的许可证的序列号</block>
   <block id="253fa4a7008b4934e4b20001065ef254" category="list-text">您应具有控制器序列号。</block>
-  <block id="f11c7003376367fce75352e6129d04ca" category="section-title">添加基于控制器的许可证</block>
   <block id="8109f2b1a2b4fcb7f972be2b07c29c46" category="list-text">您应是 FAS 或 AFF 系统上的集群管理员。</block>
   <block id="9a935baf19dae6c50cae12b831745abd" category="list-text">您应具有 SnapCenter 标准版或 SnapManagerSuite 许可证。</block>
   <block id="f01f22cfc141e64ad20b64a9b3f2ac85" category="paragraph">如果您使用的是基于控制器的 SnapCenter 标准许可证，并且需要删除基于容量的试用许可证（序列号以 "`50` " 结尾），则应使用 MySQL 命令手动删除此试用许可证。无法使用 SnapCenter 图形用户界面删除试用许可证。</block>
@@ -7345,10 +7278,8 @@
   <block id="726980167284c65abff52d65b5d3232b" category="list-text">在恢复类型页面中，执行以下步骤：选择选项以应用日志。在选择此插件之前，请确保此插件支持所有日志和日志，直到达到还原类型为止。</block>
   <block id="80cb8ef1d01a491a4a563ec56f39cedc" category="list-text">在资源页面中，如果要使用自定义名称，请选中 * 对 Snapshot 副本使用自定义名称格式 * 复选框，然后为 Snapshot 副本名称输入自定义名称格式。</block>
   <block id="dd4b762c191c7a235ce898c094749679" category="paragraph">您可以从添加主机页面安装自定义插件和存储插件。</block>
-  <block id="134848154c843b2b7ebbc0c3bf4c17a4" category="list-text">在资源页面中，单击 * 添加资源 * 。</block>
   <block id="d98e943b0122d016274bcbbeba1d647d" category="list-text">在资源设置页面中，为资源提供自定义密钥值对。</block>
   <block id="fc239c2b2a79ad8ee77cc5430b1803fe" category="paragraph">完成凭据设置后，您可能需要在 " 用户和访问 " 页面上为用户或用户组分配凭据维护。</block>
-  <block id="f316f1145e3342e626b49461ffc2ab89" category="list-text">在资源页面中，单击新建资源组。</block>
   <block id="94f48d06961651ce76410fb0e6059f76" category="list-text">可选：在资源页面中，从 * 主机 * 下拉列表中选择主机名，从 * 资源类型 * 下拉列表中选择资源类型。</block>
   <block id="08b935061f93c6a0dff0b7e6979bd0d5" category="list-text">可选：在应用程序设置页面中，执行以下操作：</block>
   <block id="3b1aa43ebee12f3a0512b18010894a41" category="list-text">在设置页面中，执行以下操作：</block>
@@ -7872,7 +7803,6 @@
   <block id="07a646d112ec3924e97a5c5bd588d4c2" category="paragraph">有关受支持版本的最新信息，请参见<block ref="b7a3cb4f690df02dff49048f9cc465b2" category="inline-link-rx"></block></block>
   <block id="44dcf11fb80178db211421840242c071" category="summary">您应使用 SnapCenter 用户界面（ UI ）安装 SnapCenter 自定义插件。如果您的环境不允许从SnapCenter UI远程安装此插件、则可以使用命令行界面(CLI)在控制台模式或静默模式下安装自定义插件。</block>
   <block id="f779fc9eb5facb1b4cb7f109a2d58be2" category="paragraph"><block ref="063c6867f0d5dcf21978239569098f3b" category="inline-link-rx"></block></block>
-  <block id="ed27eadf4ae8e8750cfd2fbc61ad72d7" category="paragraph">有关 ONTAP 和应用程序插件的最低要求，请参见<block ref="c50d85e9b4db596cb2a135c4e622135b" category="inline-link-rx"></block></block>
   <block id="6128abac450b413be3b6d65797422307" category="paragraph">请参见<block ref="c50d85e9b4db596cb2a135c4e622135b" category="inline-link-rx"></block></block>
   <block id="62daf6a07ef62b5f47d64602451886c4" category="paragraph">有关受支持版本的最新信息，请参见<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
   <block id="8b64c44e24e9cf1c59554cf2c41479bf" category="paragraph">有关支持的应用程序和数据库的详细信息，请参见<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
@@ -7902,12 +7832,6 @@
   <block id="b885eb831c1b0ea66dc957240ef0bacd" category="admonition">在还原控制文件时、请确保目录结构存在、或者应使用正确的用户和组所有权(如果有)创建目录结构、以便在还原过程中将这些文件复制到目标位置。如果此目录不存在、还原作业将失败。</block>
   <block id="3a6eb59ee064b09b020c1a87c5de4988" category="admonition">不支持IBM Java。</block>
   <block id="bb92d00cc055d1fa0c3023946870bfd5" category="paragraph">有关.NET专用的故障排除信息、请参见<block ref="d20f19fe60cd205f06739b1a5caeb450" category="inline-link-rx"></block></block>
-  <block id="cf846ac585e82924ea1ad8c03b4b9bdf" category="section-title">下载并安装SnapCenter 服务器</block>
-  <block id="9575d89eee3d9cea045cdf8003c58424" category="section-title">添加基于 SnapCenter 标准控制器的许可证</block>
-  <block id="9859b0644d4667764577eb03a1fcda53" category="section-title">添加基于SnapCenter 容量的许可证</block>
-  <block id="cc12c6014b5ec85f58b6fb31a26a66f7" category="section-title">设置存储系统连接</block>
-  <block id="1d765f352f6f5ec7cfa899be682026d8" category="section-title">设置运行身份凭据以安装适用于Microsoft SQL Server的插件</block>
-  <block id="10976e15f1cbbbbb65eaf072d358489b" category="section-title">添加主机并安装适用于Microsoft SQL Server的插件</block>
   <block id="9756c6d75626032c8da05d425c1d0ca9" category="inline-link">对于没有Internet连接的原有系统、SnapCenter 升级或安装失败</block>
   <block id="462fbac4d281be78bedf063a9dbd9f61" category="paragraph">有关.NET专用的故障排除信息、请参见<block ref="b173f6267e94bec8cf82a1d95b991ed7" category="inline-link-rx"></block>。</block>
   <block id="0cf3e7b313a6954f7aed921dae42be39" category="list-text"><block ref="36ad9b98fe40ea7db5d149de26f34551" prefix="" category="inline-code"></block></block>
@@ -8073,4 +7997,131 @@
   <block id="75b8e448161fa30feba883267dc81521" category="sidebar">使用UNIX命令备份</block>
   <block id="de148ec1fc3c9bb7b03f1506761bed93" category="sidebar">查看备份</block>
   <block id="020a36deb114af1bb518c70d5975e940" category="sidebar">创建资源组</block>
+  <block id="0a02bf5b6e4ef63d70216baaf241dd57" category="paragraph">用户必须同时具有资源组和备份权限。</block>
+  <block id="476db1bd23910410216ee3e35ccd94a9" category="section-title">第1步：添加和配置凭据</block>
+  <block id="8471bcaa60af0da808996bbee1cb49ed" category="paragraph">身份验证模式</block>
+  <block id="b814c14851890120c8936eb5b4e76601" category="paragraph">SQL Server实例</block>
+  <block id="57dec0d5fea8ca9066aa74005656dde3" category="section-title">第2步：配置实例</block>
+  <block id="dddaf244cf1e3908c97cc243765422db" category="summary">提供有关安装适用于Microsoft SQL Server的SnapCenter 服务器的说明。</block>
+  <block id="5bb995f2cea5f09b3870d6cba0a2bff4" category="doc">安装SnapCenter 服务器for Microsoft SQL Server</block>
+  <block id="696fdc5b81985319a8afbf8c7c554de1" category="paragraph">提供了一组精简的安装说明、用于安装SnapCenter Server for Microsoft SQL Server。</block>
+  <block id="44d77fb23ef94aa2e99acffb06349cce" category="section-title">第1步：下载并安装SnapCenter 服务器</block>
+  <block id="182fe557d952dd099523bf0f0a12a03d" category="section-title">第2步：登录到SnapCenter</block>
+  <block id="6dbb525493b617ed15acb54f48a1fb80" category="section-title">第3步：添加基于SnapCenter 标准控制器的许可证</block>
+  <block id="1e6838af3ca39fb21a3ce673d779549e" category="section-title">第4步：添加基于SnapCenter 容量的许可证</block>
+  <block id="a1e54ab14313eddc39c36f7ae4c3bdbf" category="section-title">第5步：设置存储系统连接</block>
+  <block id="e7080d37366699598c6a93289cf833a8" category="summary">提供有关安装适用于Microsoft SQL Server的SnapCenter 插件的说明。</block>
+  <block id="665256d7cf5062280fa2126edee4e9ed" category="paragraph">提供了一组精简的适用于Microsoft SQL Server的SnapCenter 插件安装说明。</block>
+  <block id="13c41a91e51556266f1446c3f3118575" category="section-title">第1步：设置运行身份凭据以安装适用于Microsoft SQL Server的插件</block>
+  <block id="50e45622cbe6ba6b72a9cba939e77623" category="section-title">第2步：添加主机并安装适用于Microsoft SQL Server的插件</block>
+  <block id="3f205e124554b1be0d5f3a4955ed598c" category="paragraph">默认值为 false 。</block>
+  <block id="398199fedb54e43a278fa46313e8a350" category="section-title">第1步：创建策略名称</block>
+  <block id="efb5373e3d8e2817008f63857d38a814" category="section-title">第2步：配置备份选项</block>
+  <block id="f7b8f416ca34a425d97e1cba3100233c" category="list-text">选择备份类型</block>
+  <block id="c4dee4ab1e265b9beacb9e140fafa516" category="open-title">完整备份和日志备份</block>
+  <block id="7e26a626a8bd9210daa716e7391b1a91" category="paragraph">备份数据库文件和事务日志、并将事务日志进行truncate。</block>
+  <block id="daf1071588d67be46c2b3881de2b7f3e" category="open-title">完整备份</block>
+  <block id="a06cb63b4e5676ff4993e87c5a096590" category="paragraph">备份数据库文件。</block>
+  <block id="4357e1f197bec05bc87b0ef0557cd533" category="open-title">日志备份</block>
+  <block id="9bc97b084411adbb231ca53ca80640b7" category="paragraph">备份事务日志。。选择 * 日志备份 * 。</block>
+  <block id="197904dc82a19f6818f66048a61e90f9" category="open-title">仅复制备份</block>
+  <block id="17d5127f9f01a5ee99467658118a5e9b" category="list-text">仅在首选备份副本上备份。</block>
+  <block id="c61f65bb5aa14eca9140c3d0e7ece927" category="list-text">选择要备份的副本。</block>
+  <block id="868b11998351ef690a54ffedfc194731" category="list-text">选择备份优先级(最小和最大备份优先级)</block>
+  <block id="a9e3835459894cca73ddb217d50af0db" category="list-text">为此策略计划备份频率。通过选择*按需*、*每小时*、*每日*、*每周*或*每月*来指定计划类型。</block>
+  <block id="016bcd6d9710c9d2dde84a3ff020b0de" category="paragraph">您只能为策略选择一种计划类型。</block>
+  <block id="ef077dad77fac08deaf5fe61aced7bc3" category="section-title">第3步：配置保留设置</block>
+  <block id="d8d914bba3878c80c4a43efb4e1ce72c" category="open-title">特定份数</block>
+  <block id="5a0290e9f5b4a432c42379432ee6f5c8" category="paragraph">仅保留特定数量的Snapshot副本。</block>
+  <block id="619f22faf39c2dfe9a11af29647bb1a6" category="list-text">选择 * 保留适用于过去 &lt; 天数 &gt; 天 * 的日志备份选项，并指定要保留的天数。如果您接近此限制，则可能需要删除较早的副本。</block>
+  <block id="fe9e179b8597c5b1e7f1e2ff0644a5c8" category="open-title">特定天数</block>
+  <block id="82c2224d099110596a9863d056598afe" category="paragraph">将备份副本保留特定天数。</block>
+  <block id="805b73e03f8c3c7c7a8238ed9766dee3" category="list-text">指定要保留的Snapshot副本总数</block>
+  <block id="ffe60c98392393713d4e1d365c27b6be" category="list-text">要指定要保留的Snapshot副本数、请选择*要保留的Snapshot副本总数*。</block>
+  <block id="d4f0bf88ec19106300653daff553435f" category="list-text">保留Snapshot副本的时间长度</block>
+  <block id="7fcb4d3ce02337b7e14c71c970e6aa6e" category="list-text">要指定要保留的Snapshot副本数、请选择*要保留的Snapshot副本总数*。如果 Snapshot 副本数超过指定数量，则会删除这些 Snapshot 副本，并首先删除最旧的副本。</block>
+  <block id="6618a5f84aa25633e669aa723e59a0cd" category="list-text">要指定在删除Snapshot副本之前保留这些副本的天数、请选择*保留Snapshot副本的时间*。</block>
+  <block id="92ac5fc0212c94ee50e6dc85913caeec" category="example-title">显示示例</block>
+  <block id="8047dd542f0833c625160d18deaef831" category="paragraph">set-smPolicy -PolicyName 'newpol'-PolicyType 'Backup'-PluginPolicyType 'CSQL'-sqlbackuptype 'FullBackupAndLogBackup'-RetenituSettings @｛BackupType='Data'；scheduletType=' Hourly'；Retenitone=2｝、@@｛BackupType='Log_Snapshot；Retettype='、schedulettype=2｝</block>
+  <block id="b1cf83519efa64342d0b96985ded3691" category="section-title">第4步：配置复制设置</block>
+  <block id="df5624cba097e4a1613f2162cfe02d72" category="open-title">更新SnapMirror</block>
+  <block id="4fbf861fa73d7c46a9d919de9dba7f88" category="paragraph">创建本地Snapshot副本后更新SnapMirror。</block>
+  <block id="721dcaba6ffe06898a1264f811fd7874" category="open-title">更新SnapVault</block>
+  <block id="aafae6ead4b01f0afa9e2d2dcfc5ecdd" category="paragraph">创建Snapshot副本后更新SnapVault。</block>
+  <block id="c174e73377b0caee145d55a594cd4122" category="open-title">二级策略标签</block>
+  <block id="103ff4d651f40a22f8ac13b7d439054e" category="open-title">错误重试计数</block>
+  <block id="d9179dd8d5b7e66714a9152a60aff94d" category="section-title">第5步：配置脚本设置</block>
+  <block id="a6e367864d05c1235a3dc068e29fb052" category="section-title">第6步：配置验证设置</block>
+  <block id="e11807f1f1cff5721f85802ddac261ed" category="list-text">禁止所有信息消息(无INFOMSGS)</block>
+  <block id="79418e51dfe3ef30c9d30317f30d19e2" category="section-title">第7步：查看摘要</block>
+  <block id="96ccca164f6b65c860546bba66a6485a" category="summary">提供有关准备安装SnapCenter 服务器和适用于Microsoft SQL Server的SnapCenter 插件的说明。</block>
+  <block id="bb7367ec62fb74511977df150181bc7f" category="doc">准备SnapCenter 服务器和插件安装</block>
+  <block id="63408836354c40518fc610de2ff61aef" category="paragraph">提供了一组有关安装SnapCenter 服务器和适用于Microsoft SQL Server的SnapCenter 插件的精简准备说明。</block>
+  <block id="7527dcedb498a9e111f7eb26b4f075a6" category="section-title">许可证要求</block>
+  <block id="7a98b5f499da77fa6e09b98a638328d7" category="section-title">主机和端口要求</block>
+  <block id="1cd526ed887ba66c61f02b843ef02d9d" category="paragraph">有关 ONTAP 和应用程序插件的最低要求，请参见<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block>。</block>
+  <block id="cfcb453ff70ad933cab89769866a7ca8" category="paragraph">请参见<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block></block>
+  <block id="bc6cdf099cec9fa3dce7fb43c644e659" category="section-title">适用于Microsoft SQL Server的SnapCenter 插件要求</block>
+  <block id="aa829ddf1acbdd2a8aa6a61635c33dec" category="inline-link-macro">导入归档备份</block>
+  <block id="b06af5128852d56366a94b0a3584c1a6" category="paragraph">如果您使用的是适用于 Microsoft SQL Server 的 SnapManager ，并且希望将数据从适用于 Microsoft SQL Server 的 SnapManager 导入到 SnapCenter ，请参见 <block ref="0079f46f6850618db9fdf32f5f6051e0" category="inline-link-macro-rx"></block></block>
+  <block id="96a63fe0cf1de573b75ba5f458cbdc60" category="doc">在SnapCenter 中创建资源组并附加策略</block>
+  <block id="3b6d3b427a92116014d4ee868e0f04ba" category="paragraph">资源组是指必须向其添加要备份和保护的资源的容器。通过它、您可以同时备份与给定应用程序关联的所有数据、这些数据是任何数据保护作业所必需的。您还必须将一个或多个策略附加到资源组，才能定义要执行的数据保护作业类型。</block>
+  <block id="0b5045b3b137ebb25cf08b5081075426" category="list-text">在左侧导航窗格中，选择*Resoles*，然后从列表中选择相应的插件。</block>
+  <block id="b68b243f9420806e3cfb840322caf2eb" category="list-text">在资源页面中、选择新建资源组。</block>
+  <block id="2ace8412659382e8d9b1bc3d644b1428" category="paragraph">注意：资源组名称不应超过250个字符。</block>
+  <block id="4cf0a65bb5f9d16da67277436248fba9" category="list-text">从“*可用资源*”部分中选择资源，然后选择右箭头将其移动到“*选定资源*”部分。</block>
+  <block id="7bc2103c2a80cd91e9a026c0f2b3f943" category="list-text">选择备份箭头以设置其他备份选项：</block>
+  <block id="6ab7eeea8e6b1dcd3c8360b245f0e3c0" category="inline-image-macro">一致性组备份选项的屏幕截图：紧急、中等或宽松。</block>
+  <block id="072de5e2138004f9a67883cb0ff2aaa6" category="paragraph"><block ref="072de5e2138004f9a67883cb0ff2aaa6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e92d78d72bbcff05469cd98c282ac8c4" category="list-text">选择Scripts (脚本)箭头、然后输入用于quisee (静噪)、Snapshot copy (Snapshot副本)和unquisee (取消静噪)操作的pre和post命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。</block>
+  <block id="3328b0dbde4c99683e19eca586842ffb" category="list-text">选择Custom Configurations箭头、然后输入使用此资源执行所有数据保护操作所需的自定义键值对。</block>
+  <block id="dfa18f81ec763693ffdac89624763ae3" category="list-text">选择*Snapshot副本工具*箭头以选择用于创建Snapshot副本的工具：</block>
+  <block id="7f368ffa9ab4869382c31a28f17f3a4a" category="inline-image-macro">一个加号图标</block>
+  <block id="f79b4ba47e778727c1290b36487ea0bc" category="admonition">您也可以通过选择*来创建策略<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>*</block>
+  <block id="b11a42908bee80055dfed2bb0e9a583a" category="list-text">在*配置计划*列中，选择*<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>* 表示要配置的策略。</block>
+  <block id="729d9de2082bbc8f839869a30daadc5d" category="list-text">在为policy _policy_name_添加计划对话框中、配置计划并选择确定。</block>
+  <block id="f389a38ece1c258dbc71da8826870236" category="paragraph">其中policy_name是选定策略的名称。</block>
+  <block id="8417b61ea6ac680285a40b7f679829a2" category="list-text">从“通知”页面的*电子邮件首选项*下拉列表中，选择要发送电子邮件的场景。</block>
+  <block id="7444cb400c788a3d3aad71fb264fbbee" category="list-text">查看摘要，然后选择*完成*。</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">开始之前</block>
+  <block id="be2d786365162f9949969e2f176ef13a" category="inline-link-macro">已为您的应用程序创建自定义插件</block>
+  <block id="86de8a90b3fba9ddc4880b8903987555" category="list-text">您必须拥有 <block ref="4ad0bd1144546248adc0fb1c490ceec4" category="inline-link-macro-rx"></block>。</block>
+  <block id="b828f6db4e08909e879dfbf229208eff" category="list-text">在“资源”页面中，选择*Add ResResource *。</block>
+  <block id="20fc40c342831a6dee50cd66efb74566" category="list-text">在提供存储占用空间页面中，选择一个存储系统并选择一个或多个卷、LUN和qtrees，然后选择*Save*。</block>
+  <block id="1e5544d55f6c9334a30e6a4bef8c3c4a" category="inline-image-macro">加号图标</block>
+  <block id="a28f52bcf0c820558e017ed65d61bbc4" category="paragraph">可选：选择 <block ref="0f5cf3219ae11ea795d8e8abf4dbc7f0" category="inline-image-macro-rx" type="image"></block> 图标，用于从其他存储系统添加更多卷， LUN 和 qtree 。</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">结果</block>
+  <block id="da13ae3255e491cec106772af9fdae44" category="paragraph">容量许可证具有以下特征：</block>
+  <block id="f5dfa5a7bae196d1dd8c957d9f4d6ee5" category="paragraph">SnapCenter 每天午夜自动计算其管理的 ONTAP Select 和 Cloud Volumes ONTAP 存储的容量使用量。使用标准容量许可证时， SnapCenter 会从总许可容量中扣除所有卷上的已用容量，从而计算未用容量。如果已用容量超过许可容量， SnapCenter 信息板上将显示过度使用警告。如果您在 SnapCenter 中配置了容量阈值和通知，则在已用容量达到您指定的阈值时，系统会发送电子邮件。</block>
+  <block id="2406c708606f0c3c933decdd65dc3b7d" category="section-title">第1步：计算容量要求</block>
+  <block id="44cdaaa6b20a4237e33563c8be0bf929" category="section-title">第2步：检索基于容量的许可证的序列号</block>
+  <block id="9340114ddf8bf8ff75303afd847a3076" category="list-text">登录到<block ref="1850de052c61829b534b07ba1a2ca402" category="inline-link-rx"></block>。</block>
+  <block id="c6faeb7fe853ef1d638674945ae59142" category="image-alt">许可证选择UI的屏幕截图、其中突出显示了序列号和许可证下拉菜单。</block>
+  <block id="765c7784df072a40de94af7161fbb973" category="list-text">键入您的公司名称，然后选择*GO！*。</block>
+  <block id="ef8acdd4fcda9cad2a21f3a15c796340" category="section-title">第3步：生成NetApp许可证文件</block>
+  <block id="97ccd9ecd4ac0cb4ebb4d3d991db3790" category="paragraph">如果您不想在SnapCenter 图形用户界面中输入NetApp 支持站点 凭据和SnapCenter 许可证序列号、或者无法从SnapCenter 通过Internet访问NetApp 支持站点 、则可以生成NetApp许可证文件(NLG)。然后、您可以将文件下载并存储在可从SnapCenter 主机访问的位置。</block>
+  <block id="af8501c4af7bf18d1d41ad63b494028d" category="list-text">阅读并接受NetApp数据隐私政策、然后选择*提交*。</block>
+  <block id="a70eeba6b0a5bfca6c7904fd0edc9fd2" category="section-title">第4步：添加基于容量的许可证</block>
+  <block id="a79d31012252514c1817004ac27f6c78" category="list-text">在左侧导航窗格中，选择*Settings*。</block>
+  <block id="a646fca044aab578f560ca4fc105e766" category="list-text">在设置页面中，选择*软件*。</block>
+  <block id="494d74fe2d3b6e8b71d672a1143d6aa0" category="list-text">在“软件”页面的“许可证”部分中，选择*Add*(<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>）。</block>
+  <block id="91dd66dbbc7bcb9ff2accc62e548e2fa" category="list-text">选择 * 打开 * 。</block>
+  <block id="cd9fa57ea794c74666a3c676c5f7a179" category="list-text">要为电子邮件通知配置SMTP服务器，请选择*Settings*&gt;*Global Settings*&gt;*Notification Server Settings*，然后输入以下详细信息：</block>
+  <block id="ae309cefe1783b2d190dcaf0c63c7f17" category="list-text">如果要将事件管理系统（ EMS ）消息发送到存储系统系统系统日志或将 AutoSupport 消息发送到存储系统以处理失败的操作，请选中相应的复选框。建议启用AutoSupport 以帮助您解决可能遇到的问题。</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">选择 * 下一步 * 。</block>
+  <block id="19a8e13fe92c770e7ed404e67e6bec99" category="section-title">第1步：验证是否已安装SnapManager 套件许可证</block>
+  <block id="cc9c449ada243c7f7945df60c3bb511a" category="list-text">在左侧导航窗格中，选择*存储系统*。</block>
+  <block id="d232915b5e459729c2ebb05cce4351c3" category="paragraph">选择集群名称后、集群中的所有SVM都会显示在Storage Virtual Machine部分中。</block>
+  <block id="b334c2fd16b2dbb1653525b0da09940d" category="inline-image-macro">一个检查图标</block>
+  <block id="b708e8602f17540d711c077ef6ce5bb6" category="list-text"><block ref="1b6b7d2df953b943aed63061cd428e2b" category="inline-image-macro-rx" type="image"></block> 表示 SnapManager 套件许可证安装在 FAS 或 AFF 主存储系统上。</block>
+  <block id="8e9f59a7ba19ac78a77252b5cc8530f6" category="inline-image-macro">取消图标</block>
+  <block id="72acec0d06c1d26aeb0b87907c970c31" category="list-text"><block ref="1ca20f925112adf63235e58f0e4483cd" category="inline-image-macro-rx" type="image"></block> 表示 SnapManager 套件许可证未安装在 FAS 或 AFF 主存储系统上。</block>
+  <block id="778623bf565f3d8f537019c7e81b0948" category="section-title">第2步：确定控制器上安装的许可证</block>
+  <block id="587b796170a9abac4701cd8aa1bb38cb" category="example-title">示例输出</block>
+  <block id="09bfdac33144afac4f96f313740dc959" category="section-title">第3步：检索控制器序列号</block>
+  <block id="4fb6996a4b0fc33cbed31ac896875422" category="section-title">第4步：检索基于控制器的许可证的序列号</block>
+  <block id="681132950ecc3ff0338e2bc9f5253c4e" category="list-text">在"Selection Criteral"(选择条件)区域中，确保选择了"Serial Number"(序列号)(位于设备背面)，输入控制器序列号，然后选择*GO！*。</block>
+  <block id="6c0673b42ebb5475d507b9bee432a6e1" category="image-alt">选择条件和序列号输入的屏幕截图。</block>
+  <block id="e54115ab5aedb070ef9c763b003e67f1" category="section-title">第5步：添加基于控制器的许可证</block>
+  <block id="392e651b70e91641288713738f526ce0" category="section-title">第6步：删除试用许可证</block>
 </blocks>

@@ -29,28 +29,21 @@ NOTE: 对于基于 SnapCenter 控制器的许可证，您不会在 SnapCenter �
 
 
 
-== 添加基于控制器的许可证的前提条件
-
-在添加基于控制器的许可证之前，您应验证是否已安装 SnapManager 套件许可证，确定控制器上安装的许可证，检索控制器的序列号以及检索基于控制器的许可证的序列号。
-
-
-
-=== 验证是否已安装 SnapManager 套件许可证
+== 第1步：验证是否已安装SnapManager 套件许可证
 
 您可以使用 SnapCenter 图形用户界面查看 SnapManager 套件许可证是安装在 FAS 还是 AFF 主存储系统上，并确定哪些存储系统可能需要 SnapManager 套件许可证。SnapManager 套件许可证仅适用于主存储系统上的 FAS 和 AFF SVM 或集群。
 
 
 NOTE: 如果您的控制器上已安装 SnapManagerSuite 许可证，则系统会自动提供基于 SnapCenter 标准控制器的许可证授权。SnapManagerSuite 许可证和基于 SnapCenter 标准控制器的许可证这两个名称可以互换使用，但它们表示的是同一个许可证。
 
-* 步骤 *
-
-. 在左侧导航窗格中，单击 * 存储系统 * 。
+.步骤
+. 在左侧导航窗格中，选择*存储系统*。
 . 在存储系统页面的 * 类型 * 下拉列表中，选择是要查看已添加的所有 SVM 还是集群：
 +
 ** 要查看已添加的所有 SVM ，请选择 * ONTAP SVM* 。
 ** 要查看已添加的所有集群，请选择 * ONTAP Clusters* 。
 +
-单击集群名称后，属于集群的所有 SVM 都会显示在 Storage Virtual Machine 部分中。
+选择集群名称后、集群中的所有SVM都会显示在Storage Virtual Machine部分中。
 
 
 
@@ -59,8 +52,8 @@ NOTE: 如果您的控制器上已安装 SnapManagerSuite 许可证，则系统�
 控制器许可证列显示以下状态：
 
 +
-** image:../media/controller_licensed_icon.gif[""] 表示 SnapManager 套件许可证安装在 FAS 或 AFF 主存储系统上。
-** image:../media/controller_not_licensed_icon.gif[""] 表示 SnapManager 套件许可证未安装在 FAS 或 AFF 主存储系统上。
+** image:../media/controller_licensed_icon.gif["一个检查图标"] 表示 SnapManager 套件许可证安装在 FAS 或 AFF 主存储系统上。
+** image:../media/controller_not_licensed_icon.gif["取消图标"] 表示 SnapManager 套件许可证未安装在 FAS 或 AFF 主存储系统上。
 ** 不适用表示 SnapManager 套件许可证不适用，因为存储控制器位于 Cloud Volumes ONTAP ， ONTAP Select 或二级存储平台上。
 
 
@@ -68,18 +61,20 @@ NOTE: 如果您的控制器上已安装 SnapManagerSuite 许可证，则系统�
 
 
 
-=== 确定控制器上安装的许可证
+== 第2步：确定控制器上安装的许可证
 
 您可以使用 ONTAP 命令行查看控制器上安装的所有许可证。您应是 FAS 或 AFF 系统上的集群管理员。
 
 
 NOTE: 基于 SnapCenter 标准控制器的许可证在控制器上显示为 SnapManagerSuite 许可证。
 
-* 步骤 *
-
+.步骤
 . 使用 ONTAP 命令行登录到 NetApp 控制器。
 . 输入 license show 命令，然后查看输出以确定是否已安装 SnapManagerSuite 许可证。
 +
+.示例输出
+[%collapsible]
+====
 [listing]
 ----
 cluster1::> license show
@@ -105,6 +100,7 @@ FlexClone         license  FlexClone License        -
 SnapVault         license  SnapVault License        -
 SnapManagerSuite  license  SnapManagerSuite License -
 ----
+====
 +
 在此示例中，安装了 SnapManagerSuite 许可证，因此无需执行其他 SnapCenter 许可操作。
 
@@ -112,20 +108,22 @@ SnapManagerSuite  license  SnapManagerSuite License -
 
 
 
-=== 检索控制器序列号
+== 第3步：检索控制器序列号
 
 您需要具有控制器序列号才能检索基于控制器的许可证的序列号。您可以使用 ONTAP 命令行检索控制器序列号。您应是 FAS 或 AFF 系统上的集群管理员。
 
-* 步骤 *
-
+.步骤
 . 使用 ONTAP 命令行登录到控制器。
 . 输入 system show -instance 命令，然后查看输出以查找控制器序列号。
 +
+.示例输出
+[%collapsible]
+====
 [listing]
 ----
 cluster1::> system show -instance
 
-Node: fas8080-41-42-01
+Node: fasxxxx-xx-xx-xx
 Owner:
 Location: RTP 1.5
 Model: FAS8080
@@ -156,17 +154,17 @@ Differentiated Services: false
 All-Flash Optimized: false
 2 entries were displayed.
 ----
+====
 . 记录序列号。
 
 
 
 
-=== 检索基于控制器的许可证的序列号
+== 第4步：检索基于控制器的许可证的序列号
 
 如果您使用的是 FAS 或 AFF 存储，则可以先从 NetApp 支持站点检索基于 SnapCenter 控制器的许可证，然后再使用 ONTAP 命令行进行安装。
 
-* 您需要的内容 *
-
+.开始之前
 * 您应具有有效的 NetApp 支持站点登录凭据。
 +
 如果未输入有效凭据，则不会为搜索返回任何信息。
@@ -174,13 +172,12 @@ All-Flash Optimized: false
 * 您应具有控制器序列号。
 
 
-* 步骤 *
-
-. 登录到 NetApp 支持站点，网址为 http://mysupport.netapp.com/["mysupport.netapp.com"^]。
+.步骤
+. 登录到 http://mysupport.netapp.com/["NetApp 支持站点"^]。
 . 导航到 * 系统 * > * 软件许可证 * 。
-. 在选择条件区域中，确保选择了序列号（位于设备背面），输入控制器序列号，然后单击 * 执行！ * 。
+. 在"Selection Criteral"(选择条件)区域中，确保选择了"Serial Number"(序列号)(位于设备背面)，输入控制器序列号，然后选择*GO！*。
 +
-image::../media/nss_controller_license_select.gif[NSS 控制器许可证选择]
+image::../media/nss_controller_license_select.gif[选择条件和序列号输入的屏幕截图。]
 
 +
 此时将显示指定控制器的许可证列表。
@@ -190,24 +187,21 @@ image::../media/nss_controller_license_select.gif[NSS 控制器许可证选择]
 
 
 
-== 添加基于控制器的许可证
+== 第5步：添加基于控制器的许可证
 
 如果您使用的是 FAS 或 AFF 系统，并且拥有 SnapCenter 标准版或 SnapManagerSuite 许可证，则可以使用 ONTAP 命令行添加基于 SnapCenter 控制器的许可证。
 
-* 您需要的内容 *
-
+.开始之前
 * 您应是 FAS 或 AFF 系统上的集群管理员。
 * 您应具有 SnapCenter 标准版或 SnapManagerSuite 许可证。
 
 
-* 关于此任务 *
-
+.关于此任务
 如果您要在 FAS 或 AFF 存储中试用 SnapCenter ，则可以获得一个高级捆绑包评估许可证，以便在控制器上安装。
 
 如果要试用 SnapCenter ，应联系销售代表以获取要在控制器上安装的超值包评估许可证。
 
-* 步骤 *
-
+.步骤
 . 使用 ONTAP 命令行登录到 NetApp 集群。
 . 添加 SnapManagerSuite 许可证密钥：
 +
@@ -224,15 +218,14 @@ image::../media/nss_controller_license_select.gif[NSS 控制器许可证选择]
 
 
 
-=== 删除试用许可证
+== 第6步：删除试用许可证
 
 如果您使用的是基于控制器的 SnapCenter 标准许可证，并且需要删除基于容量的试用许可证（序列号以 "`50` " 结尾），则应使用 MySQL 命令手动删除此试用许可证。无法使用 SnapCenter 图形用户界面删除试用许可证。
 
 
 NOTE: 只有在使用基于 SnapCenter 标准控制器的许可证时，才需要手动删除试用许可证。如果您购买了基于 SnapCenter 标准容量的许可证并将其添加到 SnapCenter 图形用户界面中，则试用许可证将自动被覆盖。
 
-* 步骤 *
-
+.步骤
 . 在 SnapCenter 服务器上，打开 PowerShell 窗口以重置 MySQL 密码。
 +
 .. 运行 Open-SmConnection cmdlet ，为 SnapCenterAdmin 帐户启动与 SnapCenter 服务器的连接会话。

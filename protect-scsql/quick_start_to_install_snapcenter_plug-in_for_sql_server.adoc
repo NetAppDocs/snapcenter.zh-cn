@@ -17,7 +17,9 @@ summary: 提供有关安装 SnapCenter 服务器和适用于 Microsoft SQL Serve
 
 == 准备安装
 
-* 域和工作组要求 *
+
+
+=== 域和工作组要求
 
 SnapCenter 服务器可以安装在域或工作组中的系统上。
 
@@ -25,10 +27,13 @@ SnapCenter 服务器可以安装在域或工作组中的系统上。
 
 如果您使用的是工作组，则应使用具有本地管理员权限的本地帐户。
 
-* 许可证要求 *
+
+
+=== 许可证要求
 
 您安装的许可证类型取决于您的环境。
 
+[cols="1,3"]
 |===
 | 许可证 | 必要时 
 
@@ -76,10 +81,13 @@ SnapCenter 标准许可证（可选）
 NOTE: 建议（但不要求）将 SnapCenter 标准版许可证添加到二级目标。如果二级目标上未启用 SnapCenter 标准许可证，则在执行故障转移操作后，您将无法使用 SnapCenter 备份二级目标上的资源。但是，要执行克隆和验证操作，二级目标需要 FlexClone 许可证。
 
 |===
-* 其他要求 *
 
-有关 ONTAP 和应用程序插件的最低要求，请参见 https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["互操作性表工具"^]
 
+=== 主机和端口要求
+
+有关 ONTAP 和应用程序插件的最低要求，请参见 https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["互操作性表工具"^]。
+
+[cols="1,3"]
 |===
 | 主机 | 最低要求 
 
@@ -139,6 +147,7 @@ SnapCenter 服务器主机和插件主机上需要：
 Chrome ， Internet Explorer 和 Microsoft Edge
 
 |===
+[cols="1,3"]
 |===
 | 端口类型 | 默认端口 
 
@@ -190,7 +199,9 @@ ONTAP 集群或 SVM 通信端口
 此端口用于在 SnapCenter 服务器主机，插件主机和 SVM 或 ONTAP 集群之间进行通信。
 
 |===
-* 适用于 Microsoft SQL Server 的 SnapCenter 插件要求 *
+
+
+=== 适用于Microsoft SQL Server的SnapCenter 插件要求
 
 您应拥有一个具有本地管理员权限的用户，并在远程主机上拥有本地登录权限。如果您管理集群节点，则需要一个对集群中所有节点具有管理权限的用户。
 
@@ -202,9 +213,7 @@ ONTAP 集群或 SVM 通信端口
 
 
 
-=== 下载并安装SnapCenter 服务器
-
-* 步骤 *
+=== 第1步：下载并安装SnapCenter 服务器
 
 . 从下载 SnapCenter 服务器安装包 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp 支持站点"^] 然后双击该 exe 。
 +
@@ -223,9 +232,7 @@ NOTE: 自定义安装路径不支持特殊字符 "%" 。如果在路径中包含
 
 
 
-=== 登录到 SnapCenter
-
-* 步骤 *
+=== 第2步：登录到SnapCenter
 
 . 从主机桌面上的快捷方式或安装提供的 URL 启动 SnapCenter （对于安装 SnapCenter 服务器的默认端口 8146 ，为 _\https://server:8146_ ）。
 . 输入凭据。
@@ -240,9 +247,7 @@ NOTE: 自定义安装路径不支持特殊字符 "%" 。如果在路径中包含
 
 
 
-=== 添加基于 SnapCenter 标准控制器的许可证
-
-* 步骤 *
+=== 第3步：添加基于SnapCenter 标准控制器的许可证
 
 . 使用 ONTAP 命令行登录到控制器并输入：
 +
@@ -256,9 +261,7 @@ NOTE: 自定义安装路径不支持特殊字符 "%" 。如果在路径中包含
 
 
 
-=== 添加基于SnapCenter 容量的许可证
-
-* 步骤 *
+=== 第4步：添加基于SnapCenter 容量的许可证
 
 . 在 SnapCenter 图形用户界面左窗格中，单击 * 设置 > 软件 * ，然后在许可证部分中单击 * 。
 . 选择以下两种获取许可证的方法之一：
@@ -273,9 +276,7 @@ NOTE: 自定义安装路径不支持特殊字符 "%" 。如果在路径中包含
 
 
 
-=== 设置存储系统连接
-
-* 步骤 *
+=== 第5步：设置存储系统连接
 
 . 在左窗格中，单击 * 存储系统 > 新建 * 。
 . 在添加存储系统页面中，执行以下操作：
@@ -295,9 +296,7 @@ NOTE: 自定义安装路径不支持特殊字符 "%" 。如果在路径中包含
 
 
 
-=== 设置运行身份凭据以安装适用于Microsoft SQL Server的插件
-
-* 步骤 *
+=== 第1步：设置运行身份凭据以安装适用于Microsoft SQL Server的插件
 
 . 在左窗格中，单击 * 设置 > 凭据 > 新建 * 。
 . 输入凭据。
@@ -311,9 +310,7 @@ NOTE: 自定义安装路径不支持特殊字符 "%" 。如果在路径中包含
 
 
 
-=== 添加主机并安装适用于Microsoft SQL Server的插件
-
-* 步骤 *
+=== 第2步：添加主机并安装适用于Microsoft SQL Server的插件
 
 . 在 SnapCenter 图形用户界面左窗格中，单击 * 主机 > 受管主机 > 添加 * 。
 . 在向导的主机页面中，执行以下操作：

@@ -1,0 +1,52 @@
+---
+permalink: protect-scsql/task-install-snapcenter-plug-in-for-sql-server.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 提供有关安装适用于Microsoft SQL Server的SnapCenter 插件的说明。 
+---
+= 安装适用于 Microsoft SQL Server 的 SnapCenter 插件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+提供了一组精简的适用于Microsoft SQL Server的SnapCenter 插件安装说明。
+
+
+
+== 第1步：设置运行身份凭据以安装适用于Microsoft SQL Server的插件
+
+. 在左窗格中，单击 * 设置 > 凭据 > 新建 * 。
+. 输入凭据。
++
+对于内置的域管理员用户名格式，请使用： _netbios\< 用户名 >_ 或 _ < 用户名 >@ < 域 >_ 或 _ < 域 FQDN>\ < 用户名 >_ 。
+
++
+对于内置的本地管理员用户名格式，请使用 _ < 用户名 >_ 。
+
+
+
+
+
+== 第2步：添加主机并安装适用于Microsoft SQL Server的插件
+
+. 在 SnapCenter 图形用户界面左窗格中，单击 * 主机 > 受管主机 > 添加 * 。
+. 在向导的主机页面中，执行以下操作：
++
+.. Host Type ：选择 Windows 主机类型。
+.. 主机名：使用 SQL 主机或指定专用 Windows 主机的 FQDN 。
+.. Credentials ：选择您创建的主机的有效凭据名称或创建新凭据。
+
+
+. 在选择要安装的插件部分中，选择 * Microsoft SQL Server* 。
+. 单击 * 更多选项 * 以指定以下详细信息：
++
+.. port ：保留默认端口号或指定端口号。
+.. 安装路径：默认路径为 _C ： \Program Files\NetApp\SnapCenter_ 。您可以选择自定义路径。
+.. 添加集群中的所有主机：如果您在 WSFC 中使用 SQL ，请选中此复选框。
+.. 跳过安装前检查：如果您已手动安装插件或不想验证主机是否满足插件安装要求，请选中此复选框。
+
+
+. 单击 * 提交 * 。
+

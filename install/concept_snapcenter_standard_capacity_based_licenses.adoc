@@ -13,7 +13,7 @@ summary: 您可以使用 SnapCenter 标准容量许可证来保护 ONTAP Select 
 [role="lead"]
 您可以使用 SnapCenter 标准容量许可证来保护 ONTAP Select 和 Cloud Volumes ONTAP 平台上的数据。
 
-此许可证具有以下特征：
+容量许可证具有以下特征：
 
 * 由一个九位数序列号组成，格式为 51xxxxxxx
 +
@@ -25,30 +25,25 @@ summary: 您可以使用 SnapCenter 标准容量许可证来保护 ONTAP Select 
 例如，您可以获取 1 TB ， 2 TB ， 4 TB 等基于容量的许可证。
 
 * 提供 90 天试用许可证，可获得 100 TB 容量授权
-
-
++
 有关所需许可证的信息，请参见 link:../install/concept_snapcenter_licenses.html["SnapCenter 许可证"^]。
 
 
 
-== 添加基于容量的许可证的前提条件
-
-在添加基于容量的许可证之前，您应计算容量要求，检索基于容量的许可证的序列号，并可选择生成许可证文件。
+SnapCenter 每天午夜自动计算其管理的 ONTAP Select 和 Cloud Volumes ONTAP 存储的容量使用量。使用标准容量许可证时， SnapCenter 会从总许可容量中扣除所有卷上的已用容量，从而计算未用容量。如果已用容量超过许可容量， SnapCenter 信息板上将显示过度使用警告。如果您在 SnapCenter 中配置了容量阈值和通知，则在已用容量达到您指定的阈值时，系统会发送电子邮件。
 
 
 
-=== 计算容量需求
+=== 第1步：计算容量要求
 
 在获取基于 SnapCenter 容量的许可证之前，您应计算要由 SnapCenter 管理的主机上的容量。
 
 您应是 Cloud Volumes ONTAP 或 ONTAP Select 系统上的集群管理员。
 
-* 关于此任务 *
-
+.关于此任务
 SnapCenter 将计算实际使用的容量。如果文件系统或数据库的大小为 1 TB ，但仅使用了 500 GB 的空间，则 SnapCenter 将计算 500 GB 的已用容量。卷容量是在重复数据删除和数据压缩之后计算得出的，它基于整个卷的已用容量。
 
-* 步骤 *
-
+.步骤
 . 使用 ONTAP 命令行登录到 NetApp 控制器。
 . 要查看已用卷容量，请输入命令。
 +
@@ -72,21 +67,20 @@ VS1     Marketing    2.62TB
 
 
 
-=== 检索基于容量的许可证的序列号
+=== 第2步：检索基于容量的许可证的序列号
 
 您的订单确认函或文档包中提供了基于 SnapCenter 容量的许可证序列号；但是，如果您没有此序列号，则可以从 NetApp 支持站点检索此序列号。
 
 您应具有有效的 NetApp 支持站点登录凭据。
 
-* 步骤 *
-
-. 登录到 NetApp 支持站点，网址为 http://mysupport.netapp.com/["mysupport.netapp.com"^]。
+.步骤
+. 登录到 http://mysupport.netapp.com/["NetApp 支持站点"^]。
 . 导航到 * 系统 * > * 软件许可证 * 。
 . 在选择条件区域中，从全部显示：序列号和许可证下拉菜单中选择 * SC_STANDARE* 。
 +
-image::../media/nss_license_selection.gif[选择 NSS 许可证]
+image::../media/nss_license_selection.gif[许可证选择UI的屏幕截图、其中突出显示了序列号和许可证下拉菜单。]
 
-. 键入您的公司名称，然后单击 * 执行！ * 。
+. 键入您的公司名称，然后选择*GO！*。
 +
 显示格式为 51xxxxxxx 的九位 SnapCenter 许可证序列号。
 
@@ -95,35 +89,32 @@ image::../media/nss_license_selection.gif[选择 NSS 许可证]
 
 
 
-=== 生成 NetApp 许可证文件
+=== 第3步：生成NetApp许可证文件
 
-如果您不想在 SnapCenter 图形用户界面中输入 NetApp 支持站点凭据和 SnapCenter 许可证序列号，或者您无法从 SnapCenter 访问 NetApp 支持站点的 Internet ，则可以生成 NetApp 许可证文件（ NLF ）， 然后，将文件下载并存储在可从 SnapCenter 主机访问的位置。
+如果您不想在SnapCenter 图形用户界面中输入NetApp 支持站点 凭据和SnapCenter 许可证序列号、或者无法从SnapCenter 通过Internet访问NetApp 支持站点 、则可以生成NetApp许可证文件(NLG)。然后、您可以将文件下载并存储在可从SnapCenter 主机访问的位置。
 
-* 您需要的内容 *
-
+.开始之前
 * 您应将 SnapCenter 与 ONTAP Select 或 Cloud Volumes ONTAP 结合使用。
 * 您应具有有效的 NetApp 支持站点登录凭据。
 * 您应具有格式为 51xxxxxxx 的九位数许可证序列号。
 
 
-* 步骤 *
-
+.步骤
 . 导航到 https://register.netapp.com/register/eclg.xwic["NetApp 许可证文件生成器"^]。
 . 输入所需信息。
 . 在产品线字段中，从下拉菜单中选择 * SnapCenter 标准（基于容量） * 。
 . 在产品序列号字段中，输入 SnapCenter 许可证序列号
-. 阅读并接受 NetApp 数据隐私政策，然后单击 * 提交 * 。
+. 阅读并接受NetApp数据隐私政策、然后选择*提交*。
 . 保存许可证文件，然后记录文件位置。
 
 
 
 
-== 添加基于容量的许可证
+=== 第4步：添加基于容量的许可证
 
 如果您将 SnapCenter 与 ONTAP Select 或 Cloud Volumes ONTAP 平台结合使用，则应安装一个或多个基于 SnapCenter 容量的许可证。
 
-* 您需要的内容 *
-
+.开始之前
 * 您应以 SnapCenter 管理员用户身份登录。
 * 您应具有有效的 NetApp 支持站点登录凭据。
 * 您应具有格式为 51xxxxxxx 的九位数许可证序列号。
@@ -132,8 +123,7 @@ image::../media/nss_license_selection.gif[选择 NSS 许可证]
 
 
 
-* 关于此任务 *
-
+.关于此任务
 您可以在设置页面中执行以下任务：
 
 * 添加许可证
@@ -146,11 +136,10 @@ NOTE: 无法使用 SnapCenter 图形用户界面删除试用许可证（序列�
 
 
 
-* 步骤 *
-
-. 在左侧导航窗格中，单击 * 设置 * 。
-. 在设置页面中，单击 * 软件 * 。
-. 在软件页面的许可证部分中，单击 * 添加 * （image:../media/add_policy_from_resourcegroup.gif[""]）。
+.步骤
+. 在左侧导航窗格中，选择*Settings*。
+. 在设置页面中，选择*软件*。
+. 在“软件”页面的“许可证”部分中，选择*Add*(image:../media/add_policy_from_resourcegroup.gif["一个加号图标"]）。
 . 在添加 SnapCenter 许可证向导中，选择以下方法之一以获取要添加的许可证：
 +
 |===
@@ -171,7 +160,7 @@ NOTE: 无法使用 SnapCenter 图形用户界面删除试用许可证（序列�
 NetApp 许可证文件
  a| 
 .. 浏览到许可证文件的位置，然后选择它。
-.. 单击 * 打开 * 。
+.. 选择 * 打开 * 。
 
 
 |===
@@ -179,7 +168,7 @@ NetApp 许可证文件
 +
 默认阈值为 90% 。
 
-. 要为 SMTP 服务器配置电子邮件通知，请单击 * 设置 * > * 全局设置 * > * 通知服务器设置 * ，然后输入以下详细信息：
+. 要为电子邮件通知配置SMTP服务器，请选择*Settings*>*Global Settings*>*Notification Server Settings*，然后输入以下详细信息：
 +
 |===
 | 对于此字段 ... | 执行此操作 ... 
@@ -206,21 +195,7 @@ NetApp 许可证文件
 
 
 |===
-. 如果要将事件管理系统（ EMS ）消息发送到存储系统系统系统日志或将 AutoSupport 消息发送到存储系统以处理失败的操作，请选中相应的复选框。
-+
-|===
+. 如果要将事件管理系统（ EMS ）消息发送到存储系统系统系统日志或将 AutoSupport 消息发送到存储系统以处理失败的操作，请选中相应的复选框。建议启用AutoSupport 以帮助您解决可能遇到的问题。
+. 选择 * 下一步 * 。
+. 查看摘要，然后选择*完成*。
 
-
-| * 最佳实践 * ：建议启用 AutoSupport 以帮助您解决可能遇到的问题。 
-|===
-. 单击 * 下一步 * 。
-. 查看摘要，然后单击 * 完成 * 。
-
-
-
-
-=== SnapCenter 如何计算容量使用量
-
-SnapCenter 每天午夜自动计算其管理的 ONTAP Select 和 Cloud Volumes ONTAP 存储的容量使用量。为了确保 SnapCenter 配置正确，您应了解 SnapCenter 如何计算容量。
-
-使用标准容量许可证时， SnapCenter 会从总许可容量中扣除所有卷上的已用容量，从而计算未用容量。如果已用容量超过许可容量， SnapCenter 信息板上将显示过度使用警告。如果您在 SnapCenter 中配置了容量阈值和通知，则在已用容量达到您指定的阈值时，系统会发送电子邮件。
