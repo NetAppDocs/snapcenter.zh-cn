@@ -8124,4 +8124,6 @@
   <block id="6c0673b42ebb5475d507b9bee432a6e1" category="image-alt">选择条件和序列号输入的屏幕截图。</block>
   <block id="e54115ab5aedb070ef9c763b003e67f1" category="section-title">第5步：添加基于控制器的许可证</block>
   <block id="392e651b70e91641288713738f526ce0" category="section-title">第6步：删除试用许可证</block>
+  <block id="46d55a8aefdec15a8ce44087c8123826" category="inline-link">操作失败、并显示错误Unable to discover the device for LUN</block>
+  <block id="24642a08e354f43168ca4f1178850f84" category="list-text">您应确保LUN未使用由混合协议iSCSI和FC组成的iGroup映射到AIX主机。有关详细信息，请参见<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>。</block>
 </blocks>

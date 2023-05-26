@@ -31,4 +31,5 @@ NOTE: 有关如何编辑 asm_diskstring 参数的信息，请参见 https://kb.n
 +
 如果许可证未安装或未更新，则会显示一条警告消息。如果忽略此警告并继续，则从 RDM 还原将失败。
 
+* 您应确保LUN未使用由混合协议iSCSI和FC组成的iGroup映射到AIX主机。有关详细信息，请参见 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_Plug-in_for_Oracle_operations_fail_with_error_Unable_to_discover_the_device_for_LUN_LUN_PATH["操作失败、并显示错误Unable to discover the device for LUN"^]。
 
