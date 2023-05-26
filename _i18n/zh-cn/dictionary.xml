@@ -4787,7 +4787,6 @@
   <block id="77b44cc84c18e6f68f7831889cfc9abd" category="paragraph">SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe ， config 等。</block>
   <block id="6246f3e3294191ea51e0e29f715acfad" category="list-text">在升级期间，主机将自动置于维护模式，以防止主机运行任何计划的作业。升级后，主机将自动退出维护模式。</block>
   <block id="9b8f4a16b159f7670582bbc9d12e5328" category="list-text">在启动升级操作之前，如果已手动将主机置于维护模式，则在升级后，您需要通过单击 * 主机 * &gt; * 激活计划 * 手动将主机置于维护模式。</block>
-  <block id="fef826a349ca99b933042ba1dfa73260" category="paragraph">4.4.x</block>
   <block id="d6d9056bd3ccaf6f2ea25c46f86b217c" category="list-text">从 NetApp 支持站点下载 SnapCenter 服务器安装包。</block>
   <block id="8e3a959801db0274c8bf2982a663244b" category="paragraph"><block ref="8e3a959801db0274c8bf2982a663244b" category="inline-link-rx"></block></block>
   <block id="b74248c6cef601e9db35af2dd0a5b036" category="list-text">创建位于 C ： \Program Files\NetApp\SnapCenter WebApp 的 web.config 副本。</block>
@@ -7358,7 +7357,6 @@
   <block id="8159134911a3775f77dfaeafb846c0d3" category="paragraph">在*作业详细信息*页面中、会显示一条警告消息、建议客户将脚本复制到scripts_path并编辑策略、以提供与scripts_path相关的路径。对于克隆生命周期作业、子作业级别将显示警告消息。</block>
   <block id="adebd9b53fa49781be98cf46c0afc646" category="summary">介绍如何升级SnapCenter 服务器和插件以及支持的升级路径</block>
   <block id="820341dc67dd887805f2620efabe6669" category="cell">4.7</block>
-  <block id="e581eab69cb147759b9dbeb0af1e93f2" category="admonition">例如、如果您使用的是SnapCenter 4.4.x版、并希望升级到4.7、则应先升级到4.6.x、然后再滚动升级到4.7。</block>
   <block id="7cbf140d17e0f4c0fe27276252add63e" category="list-text">按以下格式创建用户组帐户：</block>
   <block id="780fc7bdbc05c3ae8dcfc1e6ea26a283" category="list-text">脚本路径使用位于插件主机SMCoreServiceHost.exe配置文件中的预定义WindowsScriptsDirectory密钥进行定义。</block>
   <block id="487a34d280250073f86b353bd430b05b" category="paragraph">如果需要、您可以更改此路径并重新启动SMcore服务。建议您使用默认安全路径。</block>
@@ -8126,4 +8124,6 @@
   <block id="392e651b70e91641288713738f526ce0" category="section-title">第6步：删除试用许可证</block>
   <block id="46d55a8aefdec15a8ce44087c8123826" category="inline-link">操作失败、并显示错误Unable to discover the device for LUN</block>
   <block id="24642a08e354f43168ca4f1178850f84" category="list-text">您应确保LUN未使用由混合协议iSCSI和FC组成的iGroup映射到AIX主机。有关详细信息，请参见<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>。</block>
+  <block id="4fb437564892944d73f87c822342e2bb" category="cell">4.8</block>
+  <block id="7d9be6a6877ece66779a3e8834d493df" category="admonition">例如、如果您使用的是SnapCenter 4.5.x、并希望升级到4.8、则应先升级到4.6.x、然后再滚动升级到4.8。</block>
 </blocks>
