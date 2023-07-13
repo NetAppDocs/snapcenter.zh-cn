@@ -20,7 +20,7 @@ summary: 当 SnapCenter 服务器删除主机时，它会先删除 SnapCenter �
 * 如果主机中的某个资源组与另一主机共享，而您删除了该主机，则该资源组也会被删除。
 * 您应使用 _Remove-SmHost_ cmdlet 删除已停用或无法访问的插件主机。
 +
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]
 
 * 删除主机所需的时间取决于备份数量和保留设置。这是因为 Snapshot 副本会从每个控制器中删除，并且元数据会被清理。
 

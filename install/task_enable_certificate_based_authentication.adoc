@@ -1,0 +1,24 @@
+---
+permalink: install/task_enable_certificate_based_authentication.html 
+sidebar: sidebar 
+keywords: enable certificate-based authentication, certificate-based authentication 
+summary: 您应该为SnapCenter服务器和Windows插件主机启用基于证书的身份验证。 
+---
+= 启用基于证书的身份验证
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要为SnapCenter服务器和Windows插件主机启用基于证书的身份验证、请运行以下PowerShell cmdlet。  对于Linux插件主机、启用双向SSL后、将启用基于证书的身份验证。
+
+* 启用基于客户端证书的身份验证：
++
+`Set-SmConfigSettings -Agent –configSettings @{"EnableClientCertificateAuthentication"="true"}` `-HostName`<<hostname>>
+
+* 禁用基于客户端证书的身份验证：
++
+`Set-SmConfigSettings -Agent –configSettings @{"EnableClientCertificateAuthentication"="false"}` `-HostName` `<<hostname>>``
+
+

@@ -35,7 +35,7 @@ summary: 您可以使用 SnapCenter 自定义插件执行数据保护操作。
 
 * 使用 SnapCenter 策略利用现有复制关系（ SnapVault/SnapMirror/ 统一复制）将在主系统上创建的 Snapshot 副本更新到 ONTAP 二级系统
 +
-ONTAP 主卷和二级卷可以是 ONTAP FAS ， AFF ， Select 或 Cloud ONTAP 。
+ONTAP主存储系统和二级存储系统可以是ONTAP FAS、AFF、全SAN阵列(ASA)、Select或Cloud ONTAP。
 
 * 恢复完整的 ONTAP 卷， LUN 或文件。
 +

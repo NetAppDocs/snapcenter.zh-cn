@@ -2,7 +2,7 @@
 permalink: admin/concept_overview_of_dashboard.html 
 sidebar: sidebar 
 keywords:  
-summary: 从 SnapCenter 左侧导航窗格中，您可以通过信息板首次查看系统运行状况，包括近期作业活动，警报，保护摘要，存储效率和使用情况， SnapCenter 作业的状态（备份，克隆，还原），独立和 Windows 集群主机的配置状态， 由 SnapCenter 管理的 Storage Virtual Machine （ SVM\ ）的数量以及许可证容量。 
+summary: '在SnapCenter左侧导航窗格中、您可以通过信息板初步了解系统的运行状况、包括最近的作业活动、警报、保护摘要、存储效率和使用情况、SnapCenter作业的状态\(备份、克隆、还原\)、独立和Windows集群主机的配置状态、 由SnapCenter管理的Storage Virtual Machine (SVM)数量以及许可证容量。' 
 ---
 = 信息板概述
 :allow-uri-read: 
@@ -263,7 +263,7 @@ NOTE: 如果使用 SnapCenter 服务器 4.2 和插件的早期版本（ 4.2 之�
 " 已许可容量 " 图块可显示有关 SnapCenter 基于容量的标准许可证的总许可容量，已用容量，容量阈值警报和许可证到期警报的信息。
 
 
-NOTE: 只有在 Cloud Volumes ONTAP 或 ONTAP Select 平台上使用基于 SnapCenter 标准容量的许可证时，才会显示此显示。对于 FAS 或 AFF 平台， SnapCenter 许可证基于控制器并获得无限容量许可，不需要容量许可证。
+NOTE: 只有在 Cloud Volumes ONTAP 或 ONTAP Select 平台上使用基于 SnapCenter 标准容量的许可证时，才会显示此显示。对于FAS、AFF或全SAN阵列(ASA)平台、SnapCenter许可证基于控制器、许可的容量不受限制、不需要容量许可证。
 
 |===
 | 许可证状态 | Description 

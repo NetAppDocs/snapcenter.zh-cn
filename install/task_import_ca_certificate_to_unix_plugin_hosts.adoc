@@ -1,0 +1,31 @@
+---
+permalink: install/task_import_ca_certificate_to_unix_plugin_hosts.html 
+sidebar: sidebar 
+keywords: security,authentication,import CA certificates 
+summary: 您应将CA证书导入到UNIX插件主机中。 
+---
+= 将CA证书导入到UNIX插件主机
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您应将CA证书导入到UNIX插件主机中。
+
+* 关于此任务 *
+
+* 您可以管理SPL密钥库的密码以及正在使用的CA签名密钥对的别名。
+* SPL密钥库的密码和专用密钥的所有关联别名密码应相同。
+
+
+* 步骤 *
+
+. 您可以从 SPL 属性文件检索 SPL 密钥库默认密码。它是与密钥对应的值 `SPL_KEYSTORE_PASS`。
+. 更改密钥库密码：
+`$ keytool -storepasswd -keystore keystore.jks`
+. 将密钥库中私钥条目的所有别名的密码更改为密钥库使用的相同密码：
+`$ keytool -keypasswd -alias "<alias_name>" -keystore keystore.jks`
+. 为中的密钥SPL_KEYORE_Pass更新相同的值 `spl.properties`` 文件
+. 更改密码后重新启动服务。
+

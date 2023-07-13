@@ -43,6 +43,8 @@ SnapCenter 端口
 
 用于 SnapCenter 客户端（ SnapCenter 用户）与 SnapCenter 服务器之间的通信。也用于从插件主机到 SnapCenter 服务器的通信。
 
+要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安装向导安装SnapCenter服务器。"]
+
 
 
  a| 
@@ -51,6 +53,8 @@ SnapCenter SMCore 通信端口
 8145 （ HTTPS ），双向，可自定义
 
 此端口用于在 SnapCenter 服务器与安装 SnapCenter 插件的主机之间进行通信。
+
+要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安装向导安装SnapCenter服务器。"]
 
 
 
@@ -62,6 +66,8 @@ MySQL 端口
 此端口用于在 SnapCenter 和 MySQL 存储库数据库之间进行通信。
 
 您可以创建从 SnapCenter 服务器到 MySQL 服务器的安全连接。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["了解更多信息。"]
+
+要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安装向导安装SnapCenter服务器。"]
 
 
 
@@ -96,6 +102,8 @@ Linux 或 AIX 插件主机
 
 此外，还需要在 SVM 管理 LIF 和 SnapCenter 服务器之间打开通信路径。
 
+要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html["添加主机并安装适用于 Microsoft Windows 的 SnapCenter 插件"] 或 https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["添加主机并安装适用于Linux或AIX的SnapCenter插件软件包。"]
+
 
 
  a| 
@@ -104,6 +112,8 @@ Linux 或 AIX 插件主机
 27216 ，可自定义
 
 适用于 Oracle 的插件使用默认 JDBC 端口连接到 Oracle 数据库。
+
+要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["添加主机并安装适用于Linux或AIX的SnapCenter插件软件包。"]
 
 
 
@@ -135,6 +145,8 @@ SAL （存储抽象层）使用此端口在运行 SnapCenter 服务器的主机�
 对于多租户数据库容器（ MDC ）单租户，端口号以 13 结尾；对于非 MDC ，端口号以 15 结尾。
 
 例如， 32013 是实例 20 的端口号， 31015 是实例 10 的端口号。
+
+要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html["添加主机并在远程主机上安装插件软件包。"]
 
 
 

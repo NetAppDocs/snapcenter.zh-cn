@@ -60,6 +60,15 @@ NOTE: 灾难恢复还原后、系统将添加主机、但您应手动安装此�
 NOTE: 只有在安装适用于Windows的SnapCenter 插件并将NetApp LUN连接到服务器计算机时、才会还原存储库备份计划。
 
 
+NOTE: 如果DLL损坏、您可以尝试修复SnapCenter服务器或更正错误的安装。
+
+
+NOTE: 如果NSM或配置文件损坏、您可以卸载并重新安装相同版本的SnapCenter服务器。
+
+
+NOTE: 如果虚拟机已损坏、请启动另一个虚拟机或同名计算机、然后安装相同版本的SnapCenter服务器。
+
+
 
 == 支持 REST API 用于 SnapCenter 服务器的灾难恢复
 

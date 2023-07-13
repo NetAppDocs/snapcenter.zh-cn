@@ -26,7 +26,7 @@ image::../media/sc-F5-configure-workflow.png[SC F5 配置工作流]
 * Add-SmServer
 * Remove-SmServerCluster
 +
-有关详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 
 

@@ -47,6 +47,10 @@ link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Serve
 
 
 
+
+NOTE: 如果同一主机(插件主机)已经是工作组的一部分并已更改为其他域、或者相反、SnapCenter不支持将该主机添加到SnapCenter。
+如果要添加同一主机、则应从SnapCenter中删除该主机、然后重新添加。
+
 * 步骤 *
 
 . 在左侧导航窗格中，单击 * 主机 * 。

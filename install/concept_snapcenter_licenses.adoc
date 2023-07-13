@@ -1,7 +1,7 @@
 ---
 permalink: install/concept_snapcenter_licenses.html 
 sidebar: sidebar 
-keywords: licenses, FAS, AFF, SnapMirror, SnapVault, SnapRestore, FlexClone, SMBR, Single Mailbox Recovery 
+keywords: licenses, FAS, AFF, ASA, SnapMirror, SnapVault, SnapRestore, FlexClone, SMBR, Single Mailbox Recovery 
 summary: SnapCenter 需要多个许可证才能启用数据保护操作。您安装的 SnapCenter 许可证类型取决于您的存储环境和要使用的功能。 
 ---
 = SnapCenter 许可证
@@ -20,9 +20,9 @@ SnapCenter 需要多个许可证才能对应用程序，数据库，文件系统
  a| 
 基于 SnapCenter 标准控制器
  a| 
-对于FAS 和AFF 为必需项
+对于FAS、AFF、全SAN阵列(ASA)为必需项
 
-SnapCenter 标准版许可证是一种基于控制器的许可证，作为高级包的一部分提供。如果您拥有 SnapManager 套件许可证，则还可以获得 SnapCenter 标准许可证授权。如果要在 FAS 或 AFF 存储中试用 SnapCenter ，您可以联系销售代表以获取超值包评估许可证。
+SnapCenter 标准版许可证是一种基于控制器的许可证，作为高级包的一部分提供。如果您拥有 SnapManager 套件许可证，则还可以获得 SnapCenter 标准许可证授权。如果您要在FAS、AFF或ASA存储中试用SnapCenter、可以联系销售代表获取超值包评估许可证。
 
 
 NOTE: SnapCenter 也作为数据保护包的一部分提供。如果您购买的是 A400 或更高版本，则应购买数据保护包。
@@ -106,6 +106,6 @@ NOTE: SnapCenter 高级版和 SnapCenter NAS 文件服务许可证已弃用，�
 
 如果您使用适用于 Exchange 的 SnapCenter 插件管理 Microsoft Exchange Server 数据库和单邮箱恢复（ SMBR ），则需要为 SMBR 提供额外的许可证，此许可证需要根据用户邮箱单独购买。
 
-请联系您的 NetApp 销售代表以购买 SMBR 许可证，此许可证可作为 1000 ， 5000 ， 15000 和 25000 邮箱的捆绑包单元提供。购买 SKU 后，您可以按照中的说明获取许可证 https://library.netapp.com/ecm/ecm_download_file/ECMLP2863893["《 SMBR 发行说明》"^]。
+NetApp®Single Mailbox Recovery已于2023年5月12日终止提供(EOA)。有关详细信息、请参见 link:https://mysupport.netapp.com/info/communications/ECMLP2885729.html["CP-00507"]。在支持授权期间、NetApp将继续通过2020年6月24日推出的营销部件号为已购买邮箱容量、维护和支持的客户提供支持。
 
-提交许可证密钥请求时， KrollOntrack 将问题描述 50 个邮箱许可证密钥。根据您的授权， KrollOntrack 将在验证后升级邮箱许可证。
+NetApp Single Mailbox Recovery是Ontrack提供的合作伙伴产品。Ontrack PowerControls提供的功能与NetApp Single Mailbox Recovery类似。在EOA日期2023年5月12日之后、客户可以从Ontrack (通过licensingteam@ontrack.com)购买新的Ontrack PowerControls软件许可证以及Ontrack PowerControls维护和支持续订、以实现邮箱粒度恢复。

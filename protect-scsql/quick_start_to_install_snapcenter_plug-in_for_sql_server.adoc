@@ -41,9 +41,10 @@ SnapCenter 服务器可以安装在域或工作组中的系统上。
  a| 
 基于 SnapCenter 标准控制器
  a| 
-对于 FAS 或 AFF 存储控制器为必需项
+对于FAS、AFF或全SAN阵列(ASA)存储控制器为必需项
 
-SnapCenter 标准版许可证是一种基于控制器的许可证，作为高级包的一部分提供。如果您拥有 SnapManager 套件许可证，则还可以获得 SnapCenter 标准许可证授权。如果要在 FAS 或 AFF 存储中试用 SnapCenter ，您可以联系销售代表以获取超值包评估许可证。
+SnapCenter 标准版许可证是一种基于控制器的许可证，作为高级包的一部分提供。如果您拥有 SnapManager 套件许可证，则还可以获得 SnapCenter 标准许可证授权。
+如果您要在FAS、AFF或ASA存储中试用SnapCenter、可以联系销售代表获取超值包评估许可证。
 
 
 
@@ -85,7 +86,7 @@ NOTE: 建议（但不要求）将 SnapCenter 标准版许可证添加到二级�
 
 === 主机和端口要求
 
-有关 ONTAP 和应用程序插件的最低要求，请参见 https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["互操作性表工具"^]。
+有关 ONTAP 和应用程序插件的最低要求，请参见 https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1259&isHWU&src=IMT["互操作性表工具"^]。
 
 [cols="1,3"]
 |===

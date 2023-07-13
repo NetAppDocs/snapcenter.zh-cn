@@ -1,0 +1,56 @@
+---
+permalink: install/task_import_ca_certificate_to_windows_plugin_hosts.html 
+sidebar: sidebar 
+keywords: security,authentication, export CA certificates 
+summary: 要使用导出的SnapCenter服务器CA证书、应将相关证书导入到SnapCenter Windows插件主机 
+---
+= 将证书颁发机构(Certificate Authority、CA)证书导入到Windows插件主机
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要使用导出的SnapCenter服务器CA证书、应使用Microsoft管理控制台(MMC)将相关证书导入到SnapCenter Windows插件主机。
+
+* 步骤 *
+
+. 转到 Microsoft 管理控制台（ MMC ），然后单击 * 文件 * > * 添加 / 删除 Snapin * 。
+. 在添加或删除管理单元窗口中，选择 * 证书 * ，然后单击 * 添加 * 。
+. 在"证书管理单元"窗口中，选择*计算机帐户*选项，然后单击*完成*。
+. 单击*控制台根*>*证书-本地计算机*>*个人*>*证书*。
+. 右键单击“个人”文件夹，然后选择*All Tasks*>*Import*以启动导入向导。
+. 在向导中执行以下操作。
+
+
+|===
+| 对于此选项... | 执行以下操作 ... 
+
+
+ a| 
+存储位置
+ a| 
+单击 * 下一步 * 。
+
+
+
+ a| 
+要导入的文件
+ a| 
+选择以.cer扩展名结尾的SnapCenter服务器证书。
+
+
+
+ a| 
+证书存储
+ a| 
+单击 * 下一步 * 。
+
+
+
+ a| 
+正在完成证书导出向导
+ a| 
+查看摘要，然后单击 * 完成 * 开始导入。
+
+|===

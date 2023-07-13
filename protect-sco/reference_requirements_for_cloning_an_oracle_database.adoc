@@ -32,13 +32,11 @@ summary: 克隆 Oracle 数据库之前，您应确保满足前提条件。
 ** 克隆主机应能够从主存储或二级存储中发现 LUN 。
 +
 *** 如果要从主存储或二级（存储或镜像）存储克隆到备用主机，请确保在二级存储和备用主机之间建立 iSCSI 会话，或者为 FC 正确分区 iSCSI 会话。
-+
-**** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["《 Linux Host Utilities 安装和设置指南》"^]
-**** https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["《 AIX Host Utilities 安装和设置指南》"^]
-
-
 *** 如果要从存储或镜像存储克隆到同一主机，请确保在存储或镜像存储与主机之间建立 iSCSI 会话，或者为 FC 正确分区 iSCSI 会话。
 *** 如果要在虚拟化环境中克隆，请确保在主存储或二级存储与托管备用主机的 ESX 服务器之间建立 iSCSI 会话，或者为 FC 正确分区 iSCSI 会话。
++
+有关信息、请参见 https://docs.netapp.com/us-en/ontap-sanhost/["Host Utilities文档"]。
+
 
 
 ** 如果源数据库是 ASM 数据库：

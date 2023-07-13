@@ -16,3 +16,6 @@ summary: 适用于 Microsoft Exchange Server 的 SnapCenter 插件是 NetAppSnap
 安装适用于 Exchange 的插件后，您可以使用采用 NetApp SnapMirror 技术的 SnapCenter 在另一个卷上创建备份集的镜像副本，并使用 NetApp SnapVault 技术执行磁盘到磁盘备份复制，以满足标准合规性或归档要求。
 
 如果要还原和恢复邮件或邮箱，而不是整个 Exchange 数据库，则可以使用 Single Mailbox Recovery （ SMBR ）软件。
+NetApp®Single Mailbox Recovery已于2023年5月12日终止提供(EOA)。在支持授权期间、NetApp将继续通过2020年6月24日推出的营销部件号为已购买邮箱容量、维护和支持的客户提供支持。
+
+NetApp Single Mailbox Recovery是Ontrack提供的合作伙伴产品。Ontrack PowerControls提供的功能与NetApp Single Mailbox Recovery类似。客户可以从Ontrack (通过licensingteam@ontrack.com)购买新的Ontrack PowerControls软件许可证以及Ontrack PowerControls维护和支持续订、以实现精细邮箱恢复。

@@ -19,7 +19,7 @@ summary: 您应在 SnapCenter 服务器和相应插件主机中配置 CA 证书�
 * 您可以使用 _Get-SmCertificateSettings_ 显示插件的证书状态。
 
 
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 * 步骤 *
 

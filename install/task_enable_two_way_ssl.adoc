@@ -1,0 +1,72 @@
+---
+permalink: install/task_enable_two_way_ssl.html 
+sidebar: sidebar 
+keywords: security,disable two-way SSL,enable two-way SSL 
+summary: 您可以使用PowerShell命令启用双向SSL通信、以确保SnapCenter服务器与插件之间的相互通信安全。 
+---
+= 启用双向SSL通信
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用PowerShell命令启用双向SSL通信、以确保SnapCenter服务器与插件之间的相互通信安全。
+
+* 开始之前 *
+
+先对所有插件和SMCore代理执行命令、然后再对服务器执行命令。
+
+* 步骤 *
+
+. 要启用双向SSL通信、请在SnapCenter服务器上为需要双向SSL通信的插件、服务器和每个代理运行以下命令。
++
+`> Set-SmConfigSettings -Agent -configSettings @{"EnableTwoWaySSL"="true"} -HostName <Plugin_HostName>`
+
++
+`> Set-SmConfigSettings -Agent -configSettings @{"EnableTwoWaySSL"="true"} -HostName localhost`
+
++
+`> Set-SmConfigSettings -Server -configSettings @{"EnableTwoWaySSL"="true"}`
+
+. 使用以下命令执行IIS SnapCenter应用程序池回收操作。
+`> Restart-WebAppPool -Name "SnapCenter"`
+. 对于Windows插件、运行以下PowerShell命令重新启动SMCore服务：
++
+`> Restart-Service -Name SnapManagerCoreService`
+
+
+
+
+
+== 禁用双向SSL通信
+
+您可以使用PowerShell命令禁用双向SSL通信。
+
+* 关于此任务 *
+
+* 先对所有插件和SMCore代理执行命令、然后再对服务器执行命令。
+* 禁用双向SSL通信时、不会删除CA证书及其配置。
+* 要向SnapCenter服务器添加新主机、必须对所有插件主机禁用双向SSL。
+* 不支持NLB和F5。
+
+
+* 步骤 *
+
+. 要禁用双向SSL通信、请在SnapCenter服务器上对所有插件主机和SnapCenter主机运行以下命令。
++
+`> Set-SmConfigSettings -Agent -configSettings @{"EnableTwoWaySSL"="false"} -HostName <Agent_HostName>`
+
++
+`> Set-SmConfigSettings -Agent -configSettings @{"EnableTwoWaySSL"="false"} -HostName localhost`
+
++
+`> Set-SmConfigSettings -Server -configSettings @{"EnableTwoWaySSL"="false"}`
+
+. 使用以下命令执行IIS SnapCenter应用程序池回收操作。
+`> Restart-WebAppPool -Name "SnapCenter"`
+. 对于Windows插件、运行以下PowerShell命令重新启动SMCore服务：
++
+`> Restart-Service -Name SnapManagerCoreService`
+
+

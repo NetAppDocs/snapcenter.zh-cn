@@ -1,28 +1,26 @@
 ---
 settings:
-  name: SnapCenter Software 4.8
+  name: SnapCenter Software 4.9
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - name: SnapCenter 软件
+  - version-number: '4.9'
     url: "/snapcenter"
-    version-number: '4.8'
-  - name: SnapCenter 软件
+  - version-number: '4.8'
+    url: "/snapcenter-48"
+  - version-number: '4.7'
     url: "/snapcenter-47"
-    version-number: '4.7'
-  - name: SnapCenter 软件
+  - version-number: '4.6'
     url: "/snapcenter-46"
-    version-number: '4.6'
-  - name: SnapCenter 软件
+  - version-number: '4.5'
     url: "/snapcenter-45"
-    version-number: '4.5'
   langs: zh-cn,us-en,ja-jp,ko-kr,zh-tw,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
-  - title: SnapCenter 软件4.8文档
+  - title: SnapCenter软件4.9文档
     url: "/index.html"
   - title: 发行说明
     url: "/release-notes.html"

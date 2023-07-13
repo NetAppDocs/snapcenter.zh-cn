@@ -60,7 +60,7 @@ NOTE: 不支持 PDB 迁移和 PDB 克隆操作。
 
 
 
-有关支持的 Oracle 版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+有关支持的 Oracle 版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=112391;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 
@@ -229,7 +229,7 @@ NOTE: 强制删除 SnapCenter 主机时，不会删除与该主机关联的已�
 
 ` /opt/netapp/snapcenter/spl/bin/spl restart`
 
-有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help command_name 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["《 SnapCenter 软件命令参考指南》"^]。
+有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help command_name 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["《 SnapCenter 软件命令参考指南》"^]。
 
 
 

@@ -118,4 +118,4 @@ C:\PS> Get-SmJobSummaryReport -JobId 168
 ----
 
 
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。

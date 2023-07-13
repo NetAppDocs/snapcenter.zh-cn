@@ -48,7 +48,7 @@ VMDK 和 RDM 配置不支持灾难恢复（ DR ）。
 * 您可以使用 UI 或以下 cmdlet 删除在故障转移期间创建的适用于 SQL Server 的 SnapCenter 插件备份： `Remove-SmBackup`
 * 故障转移后，如果您希望某些资源处于非 DR 模式，请使用以下 cmdlet ： `Remove-SmResourceDRMode`
 +
-有关详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 * SnapCenter 服务器将管理处于灾难恢复或非灾难恢复模式的各个存储资源（ SQL 数据库），但不管理存储资源处于灾难恢复模式或非灾难恢复模式的资源组。
 

@@ -1,0 +1,56 @@
+---
+permalink: install/task_configure_root_or_intermediate_certificates_to_trust_store.html 
+sidebar: sidebar 
+keywords: enable certificate-based authentication,configure CA signed key pair,configure root, configure intermediate certificates 
+summary: 您应将根证书或中间证书配置为SPL信任存储库。 
+---
+= 配置根证书或中间证书以 SPL 信任存储
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您应将根证书或中间证书配置为SPL信任存储库。您应先添加根 CA 证书，然后再添加中间 CA 证书。
+
+* 步骤 *
+
+. 导航到SPL密钥库所在的文件夹： `/var/opt/snapcenter/spl/etc`。
+. 找到文件 `keystore.jks`。
+. 列出密钥库中添加的证书：
+`$ keytool -list -v -keystore keystore.jks`
+. 添加根证书或中间证书：
+`$ keytool -import -trustcacerts -alias <AliasNameForCerticateToBeImported> -file /<CertificatePath> -keystore` `keystore.jks`
+. 将根证书或中间证书配置为 SPL 信任存储后重新启动服务。
+
+
+
+
+== 将 CA 签名密钥对配置为 SPL 信任存储
+
+您应将CA签名密钥对配置为SPL信任存储库。
+
+* 步骤 *
+
+. 导航到SPL密钥库所在的文件夹 `/var/opt/snapcenter/spl/etc`。
+. 找到文件 `keystore.jks``。
+. 列出密钥库中添加的证书：
+`$ keytool -list -v -keystore keystore.jks`
+. 添加同时具有私钥和公有密钥的 CA 证书。
+`$ keytool -importkeystore -srckeystore <CertificatePathToImport> -srcstoretype pkcs12 -destkeystore keystore.jks` `-deststoretype JKS`
+. 列出密钥库中添加的证书。
+`$ keytool -list -v -keystore keystore.jks`
+. 验证密钥库是否包含与已添加到密钥库中的新 CA 证书对应的别名。
+. 将为 CA 证书添加的私钥密码更改为密钥库密码。
++
+默认SPL密钥库密码是输入的SPL_keykeykeyStore传递密钥的值 `spl.properties` 文件
+
++
+`$ keytool -keypasswd -alias "<aliasNameOfAddedCertInKeystore>" -keystore keystore.jks``
+
+. 如果 CA 证书中的别名较长，并且包含空格或特殊字符（ "*" ， " ， " ），请将别名更改为简单名称：
+`$ keytool -changealias -alias "<OrignalAliasName>" -destalias "<NewAliasName>" -keystore keystore.jks``
+. 从中的密钥库配置别名 `spl.properties` 文件
+根据密钥 SPL_certificate_alias 更新此值。
+. 将 CA 签名密钥对配置为 SPL 信任存储后重新启动服务。
+

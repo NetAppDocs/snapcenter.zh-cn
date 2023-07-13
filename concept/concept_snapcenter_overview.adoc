@@ -26,15 +26,15 @@ SnapCenter 既包括 SnapCenter 服务器，也包括单个轻型插件。您可
 
 * 内部部署以保护以下内容：
 +
-** 位于 ONTAP FAS 或 AFF 主系统上并复制到 ONTAP FAS 或 AFF 二级系统的数据
+** 位于ONTAP FAS、AFF或全SAN阵列(ASA)主系统上并复制到ONTAP FAS、AFF或ASA二级系统的数据
 ** ONTAP Select 主系统上的数据
-** 位于ONTAP FAS 或AFF 主系统和二级系统上并受本地StorageGRID 对象存储保护的数据(使用NetApp BlueXP云备份集成)
+** 位于ONTAP FAS、AFF或ASA主系统和二级系统上并受本地StorageGRID对象存储保护的数据(使用NetApp BlueXP云备份集成)
 
 
 * 内部部署在混合云中以保护以下内容：
 +
-** 位于ONTAP FAS 或AFF 主系统上并复制到Cloud Volumes ONTAP 的数据
-** ONTAP FAS 或AFF 主系统和二级系统上的数据、并通过NetApp BlueXP云备份集成保护到云中的对象和归档存储
+** 位于ONTAP FAS、AFF或ASA主系统上并复制到Cloud Volumes ONTAP的数据
+** 位于ONTAP FAS、AFF或ASA主系统和二级系统上并受云中对象存储和归档存储保护的数据(使用NetApp BlueXP云备份集成)
 
 
 * 在公有云中保护以下内容：
@@ -85,10 +85,10 @@ SnapCenter 包含 REST API ，可提供与任何业务流程软件集成的大�
 有关REST API的详细信息、请参见 https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["REST API概述"]。
 
 +
-有关Windows cmdlet的详细信息、请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关Windows cmdlet的详细信息、请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 +
-有关UNIX命令的详细信息、请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["《 SnapCenter 软件命令参考指南》"^]。
+有关UNIX命令的详细信息、请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["《 SnapCenter 软件命令参考指南》"^]。
 
 * 集中式数据保护信息板和报告
 * 基于角色的访问控制（ Role-Based Access Control ， RBAC ），确保安全性和委派。

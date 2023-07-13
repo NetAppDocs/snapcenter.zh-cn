@@ -56,7 +56,7 @@ NOTE: 如果更改存储系统密码，计划的作业，按需备份和还原�
 输入存储系统名称或 IP 地址。
 
 
-NOTE: 存储系统名称（不包括域名）必须包含 15 个或更少字符，并且名称必须可解析。要创建名称包含超过 15 个字符的存储系统连接，可以使用 Add-SmStorageConnectionPowerShell cmdlet 。
+NOTE: 存储系统名称(不包括域名)必须包含15个或更少字符、并且这些名称必须可进行析。要创建名称包含超过 15 个字符的存储系统连接，可以使用 Add-SmStorageConnectionPowerShell cmdlet 。
 
 
 NOTE: 对于采用 MetroCluster 配置（ MCC ）的存储系统，建议同时注册本地集群和对等集群，以实现无中断运行。
@@ -91,6 +91,9 @@ NOTE: 如果添加的 SVM 使用短名称或 FQDN ，则必须可从 SnapCenter 
 .. 在平台中，从下拉列表中选择一个选项。
 +
 如果 SVM 是备份关系中的二级存储系统，请选中 * 二级 * 复选框。如果选择 * 二级 * 选项，则 SnapCenter 不会立即执行许可证检查。
+
++
+如果您已在SnapCenter中添加SVM、则用户需要从下拉列表中手动选择平台类型。
 
 .. 在协议中，选择在 SVM 或集群设置期间配置的协议，通常为 HTTPS 。
 .. 输入存储系统可接受的端口。
@@ -127,6 +130,9 @@ NOTE: 如果添加的 SVM 使用短名称或 FQDN ，则必须可从 SnapCenter 
 如果使用 ONTAP 图形用户界面将新的 SVM 添加到 ONTAP 集群中，请单击 * 重新发现 * 以查看新添加的 SVM 。
 
 
+
+
+NOTE: 如果已将FAS或AFF存储系统升级到全SAN阵列(ASA)、则必须刷新SnapCenter服务器中的存储连接、以在SnapCenter中反映新的存储类型。
 
 * 完成后 *
 
