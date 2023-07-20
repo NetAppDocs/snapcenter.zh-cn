@@ -2357,7 +2357,6 @@
   <block id="03101d2d05b95aa8395d372be971ceec" category="cell">参数名称</block>
   <block id="e2072f9dd36121658dfb70db997cac48" category="paragraph">log_level</block>
   <block id="27ef522d71e1457c1d75f1a9fbdffdb9" category="paragraph">显示支持的日志级别。</block>
-  <block id="9dec2839914c450a2eba38fd6ed0037d" category="paragraph">可能的值包括 info ， debug ， trace ， error ， fal ， 并发出警告。</block>
   <block id="54e3ff300a85eed4faafba9e929fcc68" category="paragraph">SPL_Protocol</block>
   <block id="7af9608cb14f57495b1335e877ee3b0e" category="paragraph">显示 SnapCenter 插件加载程序支持的协议。</block>
   <block id="36c24cffc745e8682deaec9e2c0960f8" category="paragraph">仅支持 HTTPS 协议。如果缺少默认值，您可以添加此值。</block>
@@ -8443,4 +8442,5 @@ NetApp®Single Mailbox Recovery已于2023年5月12日终止提供(EOA)。在支�
   <block id="dc085c0453f245659c31e067671c65b0" category="sidebar">将CA证书导入到UNIX主机插件、并将根证书或中间证书配置到SPL信任存储库</block>
   <block id="78a044d413487b3c49b37567f8df9e4f" category="sidebar">将CA证书导入到UNIX主机插件</block>
   <block id="7fbe6e40125b7d1b2f5c5c05044e7526" category="sidebar">启用基于证书的身份验证</block>
+  <block id="20c5c92c0148a7ebef737c442e93b7ec" category="paragraph">可能的值包括trace、debug、info、warn、error、 和致命的。</block>
 </blocks>
