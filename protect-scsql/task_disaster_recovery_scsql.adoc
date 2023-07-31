@@ -11,7 +11,7 @@ summary: 当适用于SQL Server的SnapCenter 插件关闭时、请执行以下�
 
 
 [role="lead"]
-当适用于SQL Server的SnapCenter 插件关闭时、请执行以下步骤以切换到其他SQL主机并恢复数据。
+当适用于SQL Server的SnapCenter插件关闭时、请使用以下步骤切换到其他SQL主机并恢复数据。
 
 .您需要的内容
 * 二级主机应与主主机具有相同的操作系统，应用程序和主机名。

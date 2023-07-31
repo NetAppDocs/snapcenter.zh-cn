@@ -13,8 +13,7 @@ summary: '对于直接在 SnapCenter 中注册的 SAP HANA 主机，安装或升
 [role="lead"]
 对于直接在 SnapCenter 中注册的 SAP HANA 主机，安装或升级适用于 SAP HANA 数据库的 SnapCenter 插件将触发主机上资源的自动发现。安装或升级此插件后，对于插件主机上的每个多租户数据库容器（ MDC ）资源，系统将自动发现另一个采用不同 GUID 格式的 MDC 资源并在 SnapCenter 中注册。新资源将处于 "`locked` " 状态。
 
-* 关于此任务 *
-
+.关于此任务
 例如，在 SnapCenter 4.2 中，如果 E90 MDC 资源位于插件主机上并手动注册，则在升级到 SnapCenter 4.3 后，将在 SnapCenter 中发现并注册具有不同 GUID 的另一个 E90 MDC 资源。
 
 
@@ -24,8 +23,7 @@ NOTE: 必须保留与 SnapCenter 4.2 及更早版本资源关联的备份，直�
 
 执行以下步骤，开始使用在 SnapCenter 4.3 中发现的新资源执行数据保护操作：
 
-* 步骤 *
-
+.步骤
 . 在资源页面中，选择已添加到早期 SnapCenter 版本的备份的旧资源，然后将其从拓扑页面置于 " 维护模式 `m` " 。
 +
 `m资源属于某个资源组，请将该资源组置于 " 维护模式` " 。
@@ -43,8 +41,7 @@ NOTE: 必须保留与 SnapCenter 4.2 及更早版本资源关联的备份，直�
 
 
 
-* 查找更多信息 *
-
+.相关信息
 link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["为 SAP HANA 数据库配置 HDB 用户存储密钥和 HDBSQL 操作系统用户"]
 
 link:task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["在拓扑页面中查看 SAP HANA 数据库备份和克隆"]

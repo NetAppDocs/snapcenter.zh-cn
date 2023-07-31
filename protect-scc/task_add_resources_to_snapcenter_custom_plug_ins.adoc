@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_add_resources_to_snapcenter_custom_plug_ins.html 
 sidebar: sidebar 
-keywords:  
+keywords: custom plug-in, resources, snapcenter 
 summary: 您必须添加要备份或克隆的资源。根据您的环境，资源可能是要备份或克隆的数据库实例或集合。 
 ---
 = 向 SnapCenter 自定义插件添加资源
@@ -13,7 +13,7 @@ summary: 您必须添加要备份或克隆的资源。根据您的环境，资�
 [role="lead"]
 您必须添加要备份或克隆的资源。根据您的环境，资源可能是要备份或克隆的数据库实例或集合。
 
-.开始之前
+.您需要的内容
 * 您必须已完成安装 SnapCenter 服务器，添加主机，创建存储系统连接和添加凭据等任务。
 * 您必须拥有 link:concept_develop_a_plug_in_for_your_application.html["已为您的应用程序创建自定义插件"]。
 * 您必须已将插件上传到 SnapCenter 服务器。
@@ -73,7 +73,7 @@ Type
 
 +
 
-NOTE: SnapCenter 自定义插件不支持自动发现物理和虚拟环境中的资源和存储详细信息。您必须在创建资源时提供物理和虚拟环境的存储信息。
+NOTE: SnapCenter自定义插件不支持自动发现资源。物理和虚拟环境的存储详细信息也不会自动发现。您必须在创建资源时提供物理和虚拟环境的存储信息。
 
 +
 image::../media/storage_footprint.gif[存储占用空间]

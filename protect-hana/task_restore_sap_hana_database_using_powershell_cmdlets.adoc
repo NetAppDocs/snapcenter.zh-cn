@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.html 
 sidebar: sidebar 
-keywords: restore 
+keywords: restore, sap hana database, snapcenter 
 summary: 还原 SAP HANA 数据库备份包括启动与 SnapCenter 服务器的连接会话，列出备份和检索备份信息以及还原备份。 
 ---
 = 使用 PowerShell cmdlet 还原 SAP HANA 数据库
@@ -13,12 +13,10 @@ summary: 还原 SAP HANA 数据库备份包括启动与 SnapCenter 服务器的�
 [role="lead"]
 还原 SAP HANA 数据库备份包括启动与 SnapCenter 服务器的连接会话，列出备份和检索备份信息以及还原备份。
 
-* 您需要的内容 *
-
+.您需要的内容
 您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。
 
-* 步骤 *
-
+.步骤
 . 使用 Open-SmConnection cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
 +
 [listing]

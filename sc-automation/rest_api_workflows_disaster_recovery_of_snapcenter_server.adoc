@@ -1,7 +1,7 @@
 ---
 permalink: sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: REST API, disaster recovery, DR 
 summary: SnapCenter 灾难恢复功能使用 REST API 备份 SnapCenter 服务器。 
 ---
 = 灾难恢复(DR) REST API
@@ -74,14 +74,12 @@ NOTE: 如果虚拟机已损坏、请启动另一个虚拟机或同名计算机�
 
 使用 REST API ，您可以在 REST API Swagger 页面上执行以下操作。有关访问 Swagger 页面的信息，请参见 link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["如何使用 Swagger API 网页访问 REST API"]。
 
-* 您需要的内容 *
-
+.您需要的内容
 * 您应以 SnapCenter 管理员用户身份登录。
 * SnapCenter 服务器应已启动且正在运行，以运行灾难恢复还原 API 。
 
 
-* 关于此任务 *
-
+.关于此任务
 SnapCenter 服务器灾难恢复支持所有插件。
 
 |===
@@ -91,8 +89,7 @@ SnapCenter 服务器灾难恢复支持所有插件。
  a| 
 提取现有 SnapCenter 服务器灾难恢复备份
 
-
-NOTE: 您应提供存储灾难恢复备份的目标路径。
+您应提供存储灾难恢复备份的目标路径。
  a| 
 ` /4.5/disasterrecovery/server/backup ？ TargetPath= ｛ path ｝`
  a| 
@@ -135,4 +132,5 @@ NOTE: 您应提供存储灾难恢复备份的目标路径。
 发布
 
 |===
-有关详细信息，请参见 https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["灾难恢复 API"^] 视频。
+.有关详细信息 ...
+请参见 link:https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["灾难恢复 API"^] 视频。

@@ -13,14 +13,12 @@ summary: 备份数据库包括与 SnapCenter 服务器建立连接，添加资�
 [role="lead"]
 备份数据库包括与 SnapCenter 服务器建立连接，添加资源，添加策略，创建备份资源组和备份。
 
-* 您需要的内容 *
-
+.您需要的内容
 * 您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。
 * 您必须已添加存储系统连接并创建凭据。
 
 
-* 步骤 *
-
+.步骤
 . 使用 Open-SmConnection cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
 +
 [listing]
