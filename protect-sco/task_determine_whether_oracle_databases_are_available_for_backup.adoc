@@ -81,7 +81,7 @@ IMPORTANT: 在升级SnapCenter 插件之前、始终建议对SC_oratab.config文
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
 . 在资源页面中，从 * 视图 * 列表中选择 * 数据库 * 。
 +
-单击 image:../media/filter_icon.gif[""]，然后选择主机名和数据库类型以筛选资源。然后，您可以单击 image:../media/filter_icon.gif[""] 图标以关闭筛选器窗格。
+单击 image:../media/filter_icon.png[""]，然后选择主机名和数据库类型以筛选资源。然后，您可以单击 image:../media/filter_icon.png[""] 图标以关闭筛选器窗格。
 
 . 单击 * 刷新资源 * 。
 +

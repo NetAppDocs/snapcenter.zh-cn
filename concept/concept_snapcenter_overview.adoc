@@ -28,13 +28,13 @@ SnapCenter 既包括 SnapCenter 服务器，也包括单个轻型插件。您可
 +
 ** 位于ONTAP FAS、AFF或全SAN阵列(ASA)主系统上并复制到ONTAP FAS、AFF或ASA二级系统的数据
 ** ONTAP Select 主系统上的数据
-** 位于ONTAP FAS、AFF或ASA主系统和二级系统上并受本地StorageGRID对象存储保护的数据(使用NetApp BlueXP云备份集成)
+** 位于ONTAP FAS、AFF或ASA主系统和二级系统上并受本地StorageGRID对象存储保护的数据
 
 
 * 内部部署在混合云中以保护以下内容：
 +
 ** 位于ONTAP FAS、AFF或ASA主系统上并复制到Cloud Volumes ONTAP的数据
-** 位于ONTAP FAS、AFF或ASA主系统和二级系统上并受云中对象存储和归档存储保护的数据(使用NetApp BlueXP云备份集成)
+** 位于ONTAP FAS、AFF或ASA主系统和二级系统上并受云中对象存储和归档存储保护的数据(使用BlueXP备份和恢复集成)
 
 
 * 在公有云中保护以下内容：
@@ -184,9 +184,10 @@ SnapCenter 服务器通过主机代理与 Windows 插件进行通信。
 
 
 
-SnapCenter 服务器和插件使用 HTTPS 与主机代理进行通信。
+SnapCenter 服务器和插件使用 HTTPS 与主机代理进行通信。有关 SnapCenter 操作的信息存储在 SnapCenter 存储库中。
 
-有关 SnapCenter 操作的信息存储在 SnapCenter 存储库中。
+
+NOTE: SnapCenter支持对Windows主机使用非联合命名空间。如果在使用不连续命名空间时遇到问题、请参见 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_is_unable_to_discover_resources_when_using_disjoint_namespace["使用非联合命名空间时、SnapCenter无法发现资源"]。
 
 
 

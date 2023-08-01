@@ -39,7 +39,7 @@ summary: '如果数据库不属于任何资源组，您可以从 " 资源 " 页�
 NOTE: 在 DAG 中，如果活动数据库副本位于非 NetApp 存储上，并且至少有一个被动数据库副本驻留在 NetApp 存储上，则可以保护数据库。
 
 +
-单击 *image:../media/filter_icon.gif[""]* ，然后选择主机名和数据库类型以筛选资源。然后，您可以单击 *image:../media/filter_icon.gif[""]* 以关闭筛选器窗格。
+单击 *image:../media/filter_icon.png[""]* ，然后选择主机名和数据库类型以筛选资源。然后，您可以单击 *image:../media/filter_icon.png[""]* 以关闭筛选器窗格。
 
 +
 ** 如果要备份数据库，请单击数据库名称。
