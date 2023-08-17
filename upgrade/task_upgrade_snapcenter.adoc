@@ -13,8 +13,7 @@ summary: 您可以使用 SnapCenter 服务器安装程序可执行文件升级 S
 [role="lead"]
 您可以使用 SnapCenter 服务器安装程序可执行文件升级 SnapCenter 服务器。
 
-* 您需要的内容 *
-
+.开始之前
 * SnapCenter 服务器主机必须是最新的 Windows 更新，并且不会发生待定系统重新启动。
 * 在启动升级操作之前，应确保没有其他操作正在运行。
 * 在确保未运行任何作业之后，您应备份 SnapCenter 存储库（ MySQL ）数据库。建议在升级 SnapCenter 服务器和 Exchange 插件之前执行此操作。
@@ -27,8 +26,7 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
 
 
 
-* 关于此任务 *
-
+.关于此任务
 * 在升级期间，主机将自动置于维护模式，以防止主机运行任何计划的作业。升级后，主机将自动退出维护模式。
 * 升级期间，系统会执行 SQL 脚本以更新 NSM 数据库中的 Exchange 数据，从而将 DAG 和主机短名称转换为 FQDN 。只有在将 SnapCenter 服务器与 Exchange 插件结合使用时，此选项才适用。
 * 在启动升级操作之前，如果已手动将主机置于维护模式，则在升级后，您需要通过单击 * 主机 * > * 激活计划 * 手动将主机置于维护模式。
@@ -41,8 +39,7 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
 
 
 
-* 步骤 *
-
+.步骤
 . 从 NetApp 支持站点下载 SnapCenter 服务器安装包。
 +
 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab[]
@@ -79,8 +76,7 @@ NOTE: SnapCenter 将继续使用在安装早期版本的 SnapCenter 服务器期
 |===
 
 
-* 完成后 *
-
+.完成后
 * 如果此插件是使用 sudo 用户安装的，则应复制 _C ： \ProgramData\NetApp\SnapCenter\Package Repository\ORACLE_checksum.txt _ 处提供的 sha224 密钥以更新 _/etc/sudoers_ 文件。
 * 您应重新发现主机上的资源。
 +

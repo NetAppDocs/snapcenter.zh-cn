@@ -15,8 +15,7 @@ summary: 您可以使用 SnapCenter 服务器主机命令行界面上的 Uninsta
 
 您应已在要卸载此插件的每个主机上以具有本地管理员权限的域用户身份登录到 SnapCenter 。
 
-* 步骤 *
-
+.步骤
 . 启动 PowerShell 。
 . 在 SnapCenter 服务器主机上，输入： _Open-SMConnection -SMSbaseUrl \https://SNAPCENTER_SERVER_NAME/DOMAIN_NAME_ 命令，然后输入凭据。
 . 使用 _Uninstall-SmHostPackage_ cmdlet 和所需参数卸载 Windows 插件。

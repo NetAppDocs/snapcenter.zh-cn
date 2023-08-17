@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_clone_custom_plug_in_resource_backups.html 
 sidebar: sidebar 
-keywords:  
+keywords: clone, custom plug-in 
 summary: 克隆工作流包括执行克隆操作和监控操作。 
 ---
 = 克隆自定义插件资源备份
@@ -13,8 +13,7 @@ summary: 克隆工作流包括执行克隆操作和监控操作。
 [role="lead"]
 克隆工作流包括执行克隆操作和监控操作。
 
-* 关于此任务 *
-
+.关于此任务
 克隆资源备份的原因如下：
 
 * 测试在应用程序开发周期中必须使用当前资源结构和内容实施的功能

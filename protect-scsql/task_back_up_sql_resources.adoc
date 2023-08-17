@@ -134,7 +134,7 @@ NOTE: 您不应重命名在Windows计划程序或SQL Server代理中创建的备
 . 通过选择*Monitor*>*Jobs*来监视操作进度。
 
 
-.下一步是什么？
+.完成后
 * 在 MetroCluster 配置中， SnapCenter 可能无法在故障转移后检测到保护关系。
 +
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster 故障转移后无法检测 SnapMirror 或 SnapVault 关系"]

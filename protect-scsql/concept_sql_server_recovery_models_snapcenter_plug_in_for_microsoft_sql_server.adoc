@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_sql_server_recovery_models_snapcenter_plug_in_for_microsoft_sql_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft SQL Server 
 summary: 默认情况下，系统会为每种数据库类型分配特定的恢复模型。SQL Server 数据库管理员可以将每个数据库重新分配给不同的恢复模式。 
 ---
 = SnapCenter 支持的 SQL Server 恢复模式

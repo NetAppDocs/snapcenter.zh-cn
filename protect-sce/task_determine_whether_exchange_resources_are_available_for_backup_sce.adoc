@@ -13,15 +13,13 @@ summary: 资源是指由您安装的插件维护的数据库和 Exchange 数据�
 [role="lead"]
 资源是指由您安装的插件维护的数据库和 Exchange 数据库可用性组。您可以将这些资源添加到资源组中，以便执行数据保护作业，但首先必须确定哪些资源可用。确定可用资源还会验证插件安装是否已成功完成。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须已完成安装 SnapCenter 服务器，添加主机，创建存储系统连接，添加凭据以及安装适用于 Exchange 的插件等任务。
 * 要利用 Single Mailbox Recovery 软件功能，您必须已在安装了 Single Mailbox Recovery 软件的 Exchange Server 上找到活动数据库。
 * 如果数据库驻留在 VMware RDM LUN 上，则必须部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件。。 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["适用于 VMware vSphere 的 SnapCenter 插件文档"] 了解更多信息。
 
 
-* 关于此任务 *
-
+.关于此任务
 * 如果详细信息页面中的 * 整体状态 * 选项设置为不可用于备份，则无法备份数据库。如果满足以下任一条件，则 * 整体状态 * 选项将设置为不可用于备份：
 +
 ** 数据库不在 NetApp LUN 上。
@@ -34,15 +32,14 @@ summary: 资源是指由您安装的插件维护的数据库和 Exchange 数据�
 * 如果您有数据库可用性组（ Database Availability Group ， DAG ），则可以通过从 DAG 运行备份作业来备份该组中的所有数据库。
 
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从 " 资源 " 页面左上角的插件下拉列表中选择 * Microsoft Exchange Server* 。
 . 在资源页面的 * 视图 * 下拉列表中选择 * 数据库 * ， * 数据库可用性组 * 或 * 资源组 * 。
 +
 所有数据库和 DAG 都以 FQDN 格式显示，并显示其 DAG 或主机名，以便您可以区分多个数据库。
 
 +
-单击 image:../media/filter_icon.png[""] 并选择主机名和 Exchange Server 以筛选资源。然后，您可以单击 image:../media/filter_icon.png[""] 以关闭筛选器窗格。
+单击 image:../media/filter_icon.png["筛选器图标"] 并选择主机名和 Exchange Server 以筛选资源。然后，您可以单击 image:../media/filter_icon.png["筛选器图标"] 以关闭筛选器窗格。
 
 . 单击 * 刷新资源 * 。
 +

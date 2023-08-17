@@ -17,8 +17,7 @@ REST API 通过 Swagger 网页公开。您可以访问 Swagger 网页以显示 S
 
 运行 REST API 客户端不需要特殊权限。任何用户都可以访问 Swagger 网页。通过 REST API 访问的对象的相应权限取决于生成令牌以登录到 REST API 的用户。
 
-* 步骤 *
-
+.步骤
 . 在浏览器中，输入用于访问 Swagger 网页的 URL ，格式为： _\https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_ 。
 +
 

@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_request_status_reports_of_the_jobs_from_the_dashboard.html 
 sidebar: sidebar 
-keywords:  
+keywords: dashboard, snapcenter 
 summary: 您可以从信息板页面请求有关备份，还原和克隆作业的报告。如果要确定 SnapCenter 环境中成功或失败的作业总数，此选项非常有用。 
 ---
 = 从信息板请求作业状态报告

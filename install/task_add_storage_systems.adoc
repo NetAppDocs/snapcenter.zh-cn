@@ -15,8 +15,7 @@ summary: 您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储，�
 
 您可以添加一个独立 SVM ，也可以添加一个由多个 SVM 组成的集群。如果您使用的是适用于 NetApp ONTAP 的 Amazon FSX ，则可以使用 fsxadmin 帐户添加由多个 SVM 组成的 FSX 管理 LIF ，也可以在 SnapCenter 中添加 FSX SVM 。
 
-* 您需要的内容 *
-
+.开始之前
 * 您应具有创建存储连接所需的基础架构管理员角色权限。
 * 您应确保插件安装未在进行中。
 +
@@ -138,7 +137,7 @@ NOTE: 如果已将FAS或AFF存储系统升级到全SAN阵列(ASA)、则必须刷
 
 集群管理员必须在每个存储系统节点上启用 AutoSupport ，才能通过在存储系统命令行中运行以下命令从 SnapCenter 有权访问的所有存储系统发送电子邮件通知：
 
-`AutoSupport trigger modify -node nodename -autosupport-message client.app.info enable -noteto enable`
+`autosupport trigger modify -node nodename -autosupport-message client.app.info -to enable -noteto enable`
 
 
 NOTE: Storage Virtual Machine （ SVM ）管理员无法访问 AutoSupport 。

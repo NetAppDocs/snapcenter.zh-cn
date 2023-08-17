@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html 
 sidebar: sidebar 
-keywords:  
+keywords: install, snapcenter 
 summary: 如果无法从 SnapCenter 图形用户界面远程安装适用于 Microsoft Windows 的 SnapCenter 插件，则可以在 Windows 主机上本地安装此插件。您可以通过 Windows 命令行在无人参与的情况下以静默模式运行适用于 Microsoft Windows 的 SnapCenter 插件安装程序。 
 ---
 = 通过命令行无提示安装适用于 Microsoft Windows 的 SnapCenter 插件
@@ -13,16 +13,14 @@ summary: 如果无法从 SnapCenter 图形用户界面远程安装适用于 Micr
 [role="lead"]
 如果无法从 SnapCenter 图形用户界面远程安装适用于 Microsoft Windows 的 SnapCenter 插件，则可以在 Windows 主机上本地安装此插件。您可以通过 Windows 命令行在无人参与的情况下以静默模式运行适用于 Microsoft Windows 的 SnapCenter 插件安装程序。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须已安装Microsoft .Net 4.7.2或更高版本。
 * 您必须已安装 PowerShell 4.0 或更高版本。
 * 您必须已启用 Windows 消息队列。
 * 您必须是主机上的本地管理员。
 
 
-* 步骤 *
-
+.步骤
 . 从安装位置下载适用于 Microsoft Windows 的 SnapCenter 插件。
 +
 例如，默认安装路径为 C ： \ProgramData\NetApp\SnapCenter\Package Repository 。

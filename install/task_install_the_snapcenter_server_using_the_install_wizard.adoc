@@ -18,8 +18,7 @@ summary: 您可以运行 SnapCenter 服务器安装程序可执行文件来安�
 
 NOTE: 不支持使用命令行静默安装 SnapCenter 服务器。
 
-* 您需要的内容 *
-
+.开始之前
 * SnapCenter 服务器主机必须是最新的 Windows 更新，并且不会发生待定系统重新启动。
 * 您应确保计划安装 SnapCenter 服务器的主机上未安装 MySQL 服务器。
 * 您应已启用 Windows 安装程序调试。

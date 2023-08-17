@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_restore_and_recover_resources_using_powershell_cmdlets_for_windows.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore resources 
 summary: 还原资源备份包括启动与 SnapCenter 服务器的连接会话，列出备份和检索备份信息以及还原备份。 
 ---
 = 使用 PowerShell cmdlet 还原资源
@@ -15,8 +15,7 @@ summary: 还原资源备份包括启动与 SnapCenter 服务器的连接会话�
 
 您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。
 
-* 步骤 *
-
+.步骤
 . 使用 Open-SmConnection cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
 +
 [listing]

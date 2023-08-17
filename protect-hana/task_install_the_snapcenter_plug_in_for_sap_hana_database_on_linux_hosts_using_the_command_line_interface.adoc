@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_install_the_snapcenter_plug_in_for_sap_hana_database_on_linux_hosts_using_the_command_line_interface.html 
 sidebar: sidebar 
-keywords:  
+keywords: install, SnapCenter Plug-in for SAP HANA Database 
 summary: '您应使用 SnapCenter 用户界面（ UI ）安装适用于 SAP HANA 数据库的 SnapCenter 插件。如果您的环境不允许从SnapCenter UI远程安装此插件、则可以使用命令行界面(CLI1)在控制台模式或静默模式下安装适用于SAP HANA数据库的插件。' 
 ---
 = 使用命令行界面在 Linux 主机上安装适用于 SAP HANA 数据库的 SnapCenter 插件
@@ -13,7 +13,7 @@ summary: '您应使用 SnapCenter 用户界面（ UI ）安装适用于 SAP HANA
 [role="lead"]
 您应使用 SnapCenter 用户界面（ UI ）安装适用于 SAP HANA 数据库的 SnapCenter 插件。如果您的环境不允许从 SnapCenter UI 远程安装此插件，则可以使用命令行界面（ CLI ）在控制台模式或静默模式下安装适用于 SAP HANA 数据库的插件。
 
-.您需要的内容
+.开始之前
 * 您应在 HDBSQL 客户端所在的每个 Linux 主机上安装适用于 SAP HANA 数据库的插件。
 * 要安装适用于 SAP HANA 数据库的 SnapCenter 插件的 Linux 主机必须满足相关的软件，数据库和操作系统要求。
 +

@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_manage_resource_groups.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage resource groups 
 summary: 您可以对资源组执行各种操作。 
 ---
 = 管理资源组

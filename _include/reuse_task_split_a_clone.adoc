@@ -4,8 +4,7 @@
 
 您可以使用 SnapCenter 从父资源拆分克隆的资源。拆分的克隆将独立于父资源。
 
-* 关于此任务 *
-
+.关于此任务
 * 您不能对中间克隆执行克隆拆分操作。
 +
 例如，从数据库备份创建 clone1 后，您可以创建 clone1 的备份，然后克隆此备份（ clone2 ）。创建 clone2 后， clone1 是一个中间克隆，无法对 clone1 执行克隆拆分操作。但是，您可以对 clone2 执行克隆拆分操作。
@@ -18,10 +17,9 @@
 * 确保存储系统上的卷或聚合处于联机状态。
 
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
-. 在资源页面中，从视图列表中选择相应的选项：
+. 在 * 资源 * 页面中，从视图列表中选择相应的选项：
 +
 |===
 | 选项 | Description 
@@ -44,7 +42,7 @@
 +
 此时将显示资源拓扑页面。
 
-. 在管理副本视图中，选择克隆的资源（例如数据库或 LUN ），然后单击 *image:../media/split_cone.gif[""]*
+. 从*管理副本*视图中、选择克隆的资源(例如数据库或LUN)、然后单击*image:../media/split_cone.gif["拆分克隆图标"]*
 . 查看要拆分的克隆的估计大小以及聚合上所需的可用空间，然后单击 * 开始 * 。
 . 单击 * 监控 * > * 作业 * 以监控操作进度。
 +
@@ -66,6 +64,5 @@
 
 
 
-* 查找更多信息 *
-
+.相关信息
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["SnapCenter 克隆或验证失败，并且聚合不存在"]

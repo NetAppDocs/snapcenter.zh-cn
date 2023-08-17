@@ -13,7 +13,7 @@ summary: 资源是指 Linux 主机上由 SnapCenter 管理的 SAP HANA 数据库
 [role="lead"]
 资源是指 Linux 主机上由 SnapCenter 管理的 SAP HANA 数据库和非数据卷。在发现可用的 SAP HANA 数据库后，您可以将这些资源添加到资源组以执行数据保护操作。
 
-.您需要的内容
+.开始之前
 * 您必须已完成安装 SnapCenter 服务器，添加 HDB 用户存储密钥，添加主机和设置存储系统连接等任务。
 * 您必须已在 Linux 主机上配置 HDB 安全用户存储密钥和 HDB SQL OS 用户。
 +
@@ -31,9 +31,9 @@ summary: 资源是指 Linux 主机上由 SnapCenter 管理的 SAP HANA 数据库
 .步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择适用于 SAP HANA 数据库的插件。
 . 在资源页面中，从视图列表中选择资源类型。
-. （可选）单击 *image:../media/filter_icon.png[""]* ，然后选择主机名。
+. （可选）单击 *image:../media/filter_icon.png["筛选器图标"]* ，然后选择主机名。
 +
-然后，您可以单击 *image:../media/filter_icon.png[""]* 以关闭筛选器窗格。
+然后，您可以单击 *image:../media/filter_icon.png["筛选器图标"]* 以关闭筛选器窗格。
 
 . 单击 * 刷新资源 * 以发现主机上可用的资源。
 +
@@ -52,7 +52,7 @@ NOTE: 如果 SAP HANA 数据库未配置 HDB 安全用户存储密钥，则资�
 
 IMPORTANT: 如果在 SnapCenter 外部重命名了数据库，则必须刷新资源。
 
-.下一步是什么？
+.完成后
 您必须配置 HDB 安全用户存储密钥和 HDBSQL 操作系统用户，以便能够保护数据库或将其添加到资源组中以执行数据保护操作。
 
 link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["为 SAP HANA 数据库配置 HDB 用户存储密钥和 HDBSQL 操作系统用户"]

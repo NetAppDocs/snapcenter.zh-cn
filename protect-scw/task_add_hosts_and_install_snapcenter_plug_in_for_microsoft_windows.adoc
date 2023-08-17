@@ -13,8 +13,7 @@ summary: 您可以使用 SnapCenter 添加主机页面添加 Windows 主机。�
 [role="lead"]
 您可以使用 SnapCenter 添加主机页面添加 Windows 主机。适用于 Microsoft Windows 的 SnapCenter 插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须是分配给具有插件安装和卸载权限的角色的用户，例如 SnapCenter 管理员角色。
 * 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
 * 应将 SnapCenter 用户添加到 Windows 服务器的 "`以服务身份登录` " 角色中。
@@ -25,8 +24,7 @@ link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Serve
 
 
 
-* 关于此任务 *
-
+.关于此任务
 * 您不能将 SnapCenter 服务器作为插件主机添加到另一个 SnapCenter 服务器。
 * Windows 插件
 +
@@ -51,8 +49,7 @@ link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Serve
 NOTE: 如果同一主机(插件主机)已经是工作组的一部分并已更改为其他域、或者相反、SnapCenter不支持将该主机添加到SnapCenter。
 如果要添加同一主机、则应从SnapCenter中删除该主机、然后重新添加。
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 主机 * 。
 . 确保在顶部选择了 * 受管主机 * 。
 . 单击 * 添加 * 。

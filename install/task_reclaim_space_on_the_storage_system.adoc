@@ -15,8 +15,7 @@ summary: 虽然在删除或修改文件时 NTFS 会跟踪 LUN 上的可用空间
 
 如果要在远程插件主机上运行 cmdlet ，则必须先运行 SnapCenterOpen-SMConnection cmdlet 以打开与 SnapCenter 服务器的连接。
 
-* 您需要的内容 *
-
+.开始之前
 * 在执行还原操作之前，您必须确保空间回收过程已完成。
 * 如果 LUN 由 Windows Server 故障转移集群中的主机共享，则必须在拥有集群组的主机上执行空间回收。
 * 为了获得最佳存储性能，您应尽可能频繁地执行空间回收。

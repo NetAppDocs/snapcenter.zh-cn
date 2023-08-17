@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 您可以从二级存储（镜像或存储）还原备份的 Exchange Server 数据库。 
 ---
 = 从二级存储还原 Exchange Server 数据库
@@ -15,8 +15,7 @@ summary: 您可以从二级存储（镜像或存储）还原备份的 Exchange S
 
 您必须已将 Snapshot 副本从主存储复制到二级存储。
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择 * Microsoft Exchange Server 插件 * 。
 . 在资源页面中，从 * 视图 * 下拉列表中选择 * 数据库 * 或 * 资源组 * 。
 . 选择数据库或资源组。

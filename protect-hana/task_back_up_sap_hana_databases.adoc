@@ -13,7 +13,7 @@ summary: '如果某个资源尚未加入任何资源组，您可以从 "Resource
 [role="lead"]
 如果某个资源尚未加入任何资源组，您可以从 "Resources" 页面备份该资源。
 
-.您需要的内容
+.开始之前
 * 您必须已创建备份策略。
 * 如果要备份与二级存储具有 SnapMirror 关系的资源，则分配给存储用户的 ONTAP 角色应包括 " `snapmirror all` " 权限。但是，如果您使用的是 "`vsadmin` " 角色，则不需要 " `snapmirror all` " 特权。
 * 对于基于 Snapshot 副本的备份操作，请确保所有租户数据库均有效且处于活动状态。

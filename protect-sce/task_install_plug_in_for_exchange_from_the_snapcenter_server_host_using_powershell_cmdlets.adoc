@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_install_plug_in_for_exchange_from_the_snapcenter_server_host_using_powershell_cmdlets.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 您应从 SnapCenter 图形用户界面安装适用于 Exchange 的插件。如果不想使用此 GUI ，可以在 SnapCenter 服务器主机或远程主机上使用 PowerShell cmdlet 。 
 ---
 = 使用 PowerShell cmdlet 从 SnapCenter 服务器主机安装适用于 Exchange 的插件
@@ -13,8 +13,7 @@ summary: 您应从 SnapCenter 图形用户界面安装适用于 Exchange 的插�
 [role="lead"]
 您应从 SnapCenter 图形用户界面安装适用于 Exchange 的插件。如果不想使用此 GUI ，可以在 SnapCenter 服务器主机或远程主机上使用 PowerShell cmdlet 。
 
-* 您需要的内容 *
-
+.开始之前
 * 必须已安装和配置 SnapCenter 服务器。
 * 您必须是主机上的本地管理员或具有管理权限的用户。
 * 您必须是分配给具有插件，安装和卸载权限的角色的用户，例如 SnapCenter 管理员
@@ -22,8 +21,7 @@ summary: 您应从 SnapCenter 图形用户界面安装适用于 Exchange 的插�
 * 要安装适用于 Exchange 的插件的主机必须是 Windows 主机。
 
 
-* 步骤 *
-
+.步骤
 . 在 SnapCenter 服务器主机上，使用 _Open-SmConnection_ cmdlet 建立会话，然后输入凭据。
 . 使用带有所需参数的 _Add-SmHost_ cmdlet 添加要安装适用于 Exchange 的插件的主机。
 +

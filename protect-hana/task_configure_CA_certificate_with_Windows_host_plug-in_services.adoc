@@ -15,8 +15,7 @@ summary: 使用 Windows 主机插件服务配置 CA 证书
 
 在 SnapCenter 服务器以及已部署 CA 证书的所有插件主机上执行以下步骤。
 
-* 步骤 *
-
+.步骤
 . 运行以下命令，删除与 SMCore 默认端口 8145 的现有证书绑定：
 +
 ` > netsh http delete sslcert ipport=0.0.0.0 ： _<SMCore Port>`

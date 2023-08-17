@@ -1,7 +1,7 @@
 ---
 permalink: concept/concept_disaster_recovery.html 
 sidebar: sidebar 
-keywords:  
+keywords: Disaster Recovery 
 summary: 您可以使用 SnapCenter 灾难恢复功能在发生资源损坏或服务器崩溃等灾难时恢复 SnapCenter 服务器。 
 ---
 = SnapCenter 灾难恢复

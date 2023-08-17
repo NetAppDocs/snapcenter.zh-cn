@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_install_the_snapcenter_plug_in_for_sql_server_silently.html 
 sidebar: sidebar 
-keywords:  
+keywords: install, snapcenter 
 summary: 您应从 SnapCenter 用户界面中安装适用于 Microsoft SQL Server 的 SnapCenter 插件。但是，如果由于某种原因而无法运行此插件，则可以通过 Windows 命令行在无人参与的情况下以静默模式运行适用于 SQL Server 的插件安装程序。 
 ---
 = 通过命令行以静默方式安装适用于 Microsoft SQL Server 的 SnapCenter 插件
@@ -13,16 +13,14 @@ summary: 您应从 SnapCenter 用户界面中安装适用于 Microsoft SQL Serve
 [role="lead"]
 您应从 SnapCenter 用户界面中安装适用于 Microsoft SQL Server 的 SnapCenter 插件。但是，如果由于某种原因而无法运行此插件，则可以通过 Windows 命令行在无人参与的情况下以静默模式运行适用于 SQL Server 的插件安装程序。
 
-* 您需要的内容 *
-
+.开始之前
 * 在安装之前，必须删除适用于 Microsoft SQL Server 的早期版本的 SnapCenter 插件。
 +
 有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Install_a_SnapCenter_Plug-In_manually_and_directly_from_thePlug-In_Host["如何手动或直接从插件主机安装 SnapCenter 插件"^]。
 
 
 
-* 步骤 *
-
+.步骤
 . 验证插件主机上是否存在 C ： \temp 文件夹，并且已登录用户是否具有对该文件夹的完全访问权限。
 . 从 C ： \ProgramData\NetApp\SnapCenter\Package Repository 下载适用于 SQL Server 的插件软件。
 +

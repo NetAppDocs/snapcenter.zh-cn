@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_sql_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft SQL Server 
 summary: 在您的环境中安装适用于 Microsoft SQL Server 的 SnapCenter 插件后，您可以使用 SnapCenter 备份，还原和克隆 SQL Server 数据库。 
 ---
 = 适用于 Microsoft SQL Server 的 SnapCenter 插件的功能

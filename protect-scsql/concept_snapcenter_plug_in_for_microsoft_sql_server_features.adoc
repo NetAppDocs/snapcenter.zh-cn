@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_features.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft SQL Server 
 summary: 适用于 SQL Server 的插件可与 Windows 主机上的 Microsoft SQL Server 以及存储系统上的 NetApp Snapshot 副本技术集成。要使用适用于 SQL Server 的插件，请使用 SnapCenter 界面。 
 ---
 = 适用于 Microsoft SQL Server 的 SnapCenter 插件功能

@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_monitor_jobs_schedules_events_and_logs.html 
 sidebar: sidebar 
-keywords:  
+keywords: Monitor jobs, schedules, events, logs 
 summary: '您可以从 " 监控 " 页面监控作业进度，获取有关已计划作业的信息以及查看事件和日志。' 
 ---
 = 监控作业，计划，事件和日志
@@ -135,6 +135,5 @@ NOTE: 要在故障转移作业完成后访问运行状况或配置信息，请�
 . 在作业页面中，查看作业的状态。
 
 
-* 查找更多信息 *
-
+.相关信息
 有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。

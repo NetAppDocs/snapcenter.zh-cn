@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_backups.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage backups 
 summary: 您可以重命名和删除备份。您也可以同时删除多个备份。 
 ---
 = 管理备份
@@ -44,8 +44,7 @@ summary: 您可以重命名和删除备份。您也可以同时删除多个备�
 
 如果您不再需要备份来执行其他数据保护操作，则可以删除备份。
 
-* 您需要的内容 *
-
+.开始之前
 在删除备份之前，您必须已删除关联的克隆。
 
 

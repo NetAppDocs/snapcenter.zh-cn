@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_number_of_backup_jobs_needed_for_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: Number of backup jobs 
 summary: 决定所需备份作业数量的因素包括数据库大小，已用卷数，数据库更改率以及您的服务级别协议（ SLA ）。 
 ---
 = 数据库所需的备份作业数

@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: 您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用于 Exchange 的插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。 
 ---
 = 添加主机并安装适用于 Exchange 的插件
@@ -13,16 +13,14 @@ summary: 您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用
 [role="lead"]
 您可以使用 SnapCenter 添加主机页面添加 Windows 主机。适用于 Exchange 的插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须是分配给具有插件安装和卸载权限的角色的用户，例如 SnapCenter 管理员
 * 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
 * 消息队列服务必须正在运行。
 * 如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。有关信息，请参见link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Server 2012 或更高版本上为 Microsoft Exchange Server 配置组托管服务帐户"^]。
 
 
-* 关于此任务 *
-
+.关于此任务
 * 您不能将 SnapCenter 服务器作为插件主机添加到另一个 SnapCenter 服务器。
 * 您可以为单个主机或集群添加主机并安装插件软件包。
 * 如果某个 Exchange 节点属于 DAG ，则不能仅向 SnapCenter 服务器添加一个节点。
@@ -53,8 +51,7 @@ summary: 您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用
 
 如果已安装 SnapManager for Microsoft Exchange Server 和 SnapDrive for Windows ， 如果要在同一 Exchange Server 上安装适用于 Exchange 的插件，则必须取消注册 SnapDrive for Windows 使用的 VSS 硬件提供程序，因为它与随适用于 Exchange 的插件和适用于 Windows 的 SnapCenter 插件软件包一起安装的 VSS 硬件提供程序不兼容。有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_manually_register_the_Data_ONTAP_VSS_Hardware_Provider["如何手动注册 Data ONTAP VSS 硬件提供程序"]。
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 主机 * 。
 . 验证顶部是否已选择 * 受管主机 * 。
 . 单击 * 添加 * 。

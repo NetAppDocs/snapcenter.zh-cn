@@ -1,7 +1,7 @@
 ---
 permalink: install/task_register_untrusted_active_directory_domains.html 
 sidebar: sidebar 
-keywords:  
+keywords: Active Directory 
 summary: 您应向 SnapCenter 服务器注册 Active Directory ，以管理多个不可信 Active Directory 域中的主机，用户和组。 
 ---
 = 注册不可信的 Active Directory 域
@@ -13,8 +13,7 @@ summary: 您应向 SnapCenter 服务器注册 Active Directory ，以管理多�
 [role="lead"]
 您应向 SnapCenter 服务器注册 Active Directory ，以管理多个不可信 Active Directory 域中的主机，用户和组。
 
-* 您需要的内容 *
-
+.开始之前
 * LDAP 和 LDAPS 协议 *
 
 * 您可以使用 LDAP 或 LDAPS 协议注册不可信的 Active Directory 域。

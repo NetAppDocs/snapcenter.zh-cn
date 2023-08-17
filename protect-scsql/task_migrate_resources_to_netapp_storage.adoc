@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_migrate_resources_to_netapp_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: migrate resources 
 summary: 在使用适用于 Microsoft Windows 的 SnapCenter 插件配置 NetApp 存储系统后，您可以使用 SnapCenter 图形用户界面（图形用户界面）或 PowerShell cmdlet 将资源迁移到 NetApp 存储系统，或者从一个 NetApp LUN 迁移到另一个 NetApp LUN 。 
 ---
 = 将资源迁移到 NetApp 存储系统
@@ -13,16 +13,14 @@ summary: 在使用适用于 Microsoft Windows 的 SnapCenter 插件配置 NetApp
 [role="lead"]
 在使用适用于 Microsoft Windows 的 SnapCenter 插件配置 NetApp 存储系统后，您可以使用 SnapCenter 图形用户界面（ GUI ）或 PowerShell cmdlet 将资源迁移到 NetApp 存储系统或从一个 NetApp LUN 迁移到另一个 NetApp LUN 。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须已将存储系统添加到 SnapCenter 服务器。
 * 您必须已刷新（发现） SQL Server 资源。
 
 
 这些向导页面上的大多数字段都是不言自明的。以下信息介绍了一些可能需要指导的字段。
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
 . 在资源页面中，从 * 视图 * 下拉列表中选择 * 数据库 * 或 * 实例 * 。
 . 从列表中选择数据库或实例，然后单击 * 迁移 * 。

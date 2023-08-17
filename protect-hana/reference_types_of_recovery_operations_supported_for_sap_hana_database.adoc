@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/reference_types_of_recovery_operations_supported_for_sap_hana_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: recovery operations 
 summary: 通过 SnapCenter ，您可以对 SAP HANA 数据库执行不同类型的恢复操作。 
 ---
 = SAP HANA 数据库支持的恢复操作类型

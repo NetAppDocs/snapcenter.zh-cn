@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_minimum_ontap_privileges_required_for_sql_plug_in.html 
 sidebar: sidebar 
-keywords:  
+keywords: Minimum ONTAP privileges 
 summary: 所需的最小 ONTAP 权限因用于数据保护的 SnapCenter 插件而异。 
 ---
 = SQL 插件所需的最小 ONTAP 权限

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_configure_gMSA_on_windows_server_2012_or_later.html 
 sidebar: sidebar 
-keywords:  
+keywords: gMSA 
 summary: 通过 Windows Server 2012 或更高版本，您可以创建组托管服务帐户（ GMSA\ ），以便从受管域帐户自动管理服务帐户密码。 
 ---
 = 在 Windows Server 2012 或更高版本上配置 GMSA
@@ -13,14 +13,12 @@ summary: 通过 Windows Server 2012 或更高版本，您可以创建组托管�
 [role="lead"]
 通过 Windows Server 2012 或更高版本，您可以创建组托管服务帐户（ GMSA ），以便从受管域帐户自动管理服务帐户密码。
 
-* 您需要的内容 *
-
+.开始之前
 * 您应具有 Windows Server 2012 或更高版本的域控制器。
 * 您应该拥有一个 Windows Server 2012 或更高版本的主机，该主机是域的成员。
 
 
-* 步骤 *
-
+.步骤
 . 创建一个 KDS 根密钥，以便为 GMSA 中的每个对象生成唯一的密码。
 . 对于每个域，从 Windows 域控制器运行以下命令： Add-KDSRootKey -EffectiveImmediately
 . 创建和配置 GMSA ：

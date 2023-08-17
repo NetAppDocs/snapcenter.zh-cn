@@ -13,8 +13,7 @@ summary: 任何数据保护作业都需要资源组。您还必须将一个或�
 [role="lead"]
 任何数据保护作业都需要资源组。您还必须将一个或多个策略附加到资源组，以定义要执行的数据保护作业类型和保护计划。
 
-* 关于此任务 *
-
+.关于此任务
 * 脚本路径使用位于插件主机SMCoreServiceHost.exe配置文件中的预定义WindowsScriptsDirectory密钥进行定义。
 +
 如果需要、您可以更改此路径并重新启动SMcore服务。建议您使用默认安全路径。
@@ -27,8 +26,7 @@ summary: 任何数据保护作业都需要资源组。您还必须将一个或�
 
 
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择 Microsoft Exchange Server 插件。
 . 在资源页面中，从 * 视图 * 列表中选择 * 数据库 * 。
 +
@@ -99,7 +97,7 @@ SnapCenter for Microsoft Exchange Server 的资源组中的每个 Snapshot 副�
 .. 从下拉列表中选择一个或多个策略。
 +
 
-NOTE: 您也可以单击 * 来创建策略image:../media/add_policy_from_resourcegroup.gif[""]*
+NOTE: 您也可以单击 * 来创建策略image:../media/add_policy_from_resourcegroup.gif["加号图标"]*
 
 +
 
@@ -108,7 +106,7 @@ NOTE: 如果某个策略包含 * 备份作业创建时间要选择的服务器�
 +
 在为选定策略配置计划部分中，将列出选定策略。
 
-.. 在为选定策略配置计划部分中，单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 。
+.. 在为选定策略配置计划部分中，单击 *image:../media/add_policy_from_resourcegroup.gif["加号图标"]* 。
 .. 在添加策略 _policy_name_ 的计划对话框中，指定开始日期，到期日期和频率来配置计划，然后单击 * 确定 * 。
 +
 您必须对策略中列出的每个频率执行此操作。已配置的计划将在为选定策略配置计划部分的 * 已应用计划 * 列中列出。

@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_ems_data_collection.html 
 sidebar: sidebar 
-keywords:  
+keywords: EMS data collection 
 summary: 您可以使用 PowerShell cmdlet 计划和管理事件管理系统（ EMS ）数据收集。EMS 数据收集涉及收集有关 SnapCenter 服务器，已安装的 SnapCenter 插件软件包，主机和类似信息的详细信息，然后将其发送到指定的 ONTAP Storage Virtual Machine \ （ SVM\ ）。 
 ---
 = 管理 EMS 数据收集
@@ -69,6 +69,5 @@ EMS 数据收集默认处于启用状态，计划从安装日期起每七天运�
 . 输入 _Get-SmDataCollectionEmsTarget_ 以检索有关 EMS 数据收集目标的信息。
 
 
-* 查找更多信息 *
-
+.相关信息
 有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。

@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_install_the_snapcenter_plug_in_for_exchange_silently_from_the_command_line.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 您应从 SnapCenter 用户界面中安装适用于 Exchange 的插件。但是，如果由于某种原因而无法运行此插件，则可以通过 Windows 命令行在无人参与的情况下以静默模式运行适用于 Exchange 的插件安装程序。 
 ---
 = 通过命令行以静默方式安装适用于 Exchange 的 SnapCenter 插件
@@ -13,8 +13,7 @@ summary: 您应从 SnapCenter 用户界面中安装适用于 Exchange 的插件�
 [role="lead"]
 您应从 SnapCenter 用户界面中安装适用于 Exchange 的插件。但是，如果由于某种原因而无法运行此插件，则可以通过 Windows 命令行在无人参与的情况下以静默模式运行适用于 Exchange 的插件安装程序。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须已备份 Microsoft Exchange Server 资源。
 * 您必须已安装 SnapCenter 插件软件包。
 * 在安装之前，必须删除适用于 Microsoft SQL Server 的早期版本的 SnapCenter 插件。
@@ -23,8 +22,7 @@ summary: 您应从 SnapCenter 用户界面中安装适用于 Exchange 的插件�
 
 
 
-* 步骤 *
-
+.步骤
 . 验证插件主机上是否存在 _C ： \temp_ 文件夹，并且已登录用户是否具有对该文件夹的完全访问权限。
 . 从 _C ： \ProgramData\NetApp\SnapCenter\Package_ 存储库下载适用于 Microsoft Windows 的 SnapCenter 插件。
 +

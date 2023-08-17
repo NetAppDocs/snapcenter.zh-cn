@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_failback_from_scsql_secondary_storage_to_primary_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: failback, snapcenter 
 summary: 在适用于 SQL Server 的 SnapCenter 插件主存储恢复联机后，您应故障恢复到主存储。 
 ---
 = 从适用于 SQL Server 的 SnapCenter 插件二级存储故障恢复到主存储
@@ -13,8 +13,7 @@ summary: 在适用于 SQL Server 的 SnapCenter 插件主存储恢复联机后�
 [role="lead"]
 在适用于 SQL Server 的 SnapCenter 插件主存储恢复联机后，您应故障恢复到主存储。
 
-* 您需要的内容 *
-
+.开始之前
 * 从 " 受管主机 " 页面将适用于 SQL Server 的 SnapCenter 插件置于 * 维护 * 模式。
 * 断开二级存储与主机的连接，并与主存储进行连接。
 * 要故障恢复到主存储，请通过执行反向重新同步操作，确保关系方向与故障转移前的关系方向保持一致。
@@ -31,15 +30,12 @@ summary: 在适用于 SQL Server 的 SnapCenter 插件主存储恢复联机后�
 
 NOTE: 在该插件的故障转移或故障恢复期间、不会立即刷新该插件的整体状态。主机和插件的整体状态将在后续主机刷新操作期间更新。
 
-* 步骤 *
-
+.步骤
 . 在设置页面中，导航到 * 设置 * > * 全局设置 * > * 灾难恢复 * 。
 . 取消选择 * 启用灾难恢复 * 。
 . 单击 * 应用 * 。
 . 单击 * 监控 * > * 作业 * 以验证是否已启用灾难恢复作业。
 
 
-* 完成后 *
-
-* 您可以使用 UI 或以下 cmdlet 删除在故障转移期间创建的适用于 SQL Server 的 SnapCenter 插件备份： `Remove-SmDRFailoverBackups`
-
+.完成后
+您可以使用 UI 或以下 cmdlet 删除在故障转移期间创建的适用于 SQL Server 的 SnapCenter 插件备份： `Remove-SmDRFailoverBackups`

@@ -17,8 +17,7 @@ summary: 如果在其他数据保护操作中不再需要备份，则可以使�
 
 有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
-* 步骤 *
-
+.步骤
 . 使用 Open-SmConnection cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
 +
 [listing]

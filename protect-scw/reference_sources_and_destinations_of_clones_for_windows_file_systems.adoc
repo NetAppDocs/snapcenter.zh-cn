@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: snapcenter 
 summary: 您可以从主存储或二级存储克隆文件系统备份。您还可以选择满足要求的目标：原始备份位置，同一主机或不同主机上的其他目标。目标必须与克隆源备份位于同一个卷上。 
 ---
 = Windows 文件系统克隆的源和目标

@@ -36,7 +36,7 @@ summary: '您可以从 " 资源 " 页面按需备份资源组。如果资源组�
 . 通过选择*Monitor*>*Jobs*来监视操作进度。
 
 
-.下一步是什么？
+.相关信息
 link:task_create_backup_policies_for_sql_server_databases.html["为 SQL Server 数据库创建备份策略"]
 
 link:task_create_resource_groups_and_attach_policies_for_sql_server.html["为 SQL Server 创建资源组并附加策略"]

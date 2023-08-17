@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_get_the_CA_certificate_thumbprint.html 
 sidebar: sidebar 
-keywords: SnapCenter 
+keywords: SnapCenter, CA certificate 
 summary: 获取 CA 证书指纹。 
 ---
 = 获取 CA 证书指纹
@@ -13,8 +13,7 @@ summary: 获取 CA 证书指纹。
 [role="lead"]
 证书指纹是用于标识证书的十六进制字符串。指纹是使用指纹算法根据证书内容计算得出的。
 
-* 步骤 *
-
+.步骤
 . 在 GUI 上执行以下操作：
 +
 .. 双击证书。

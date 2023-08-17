@@ -13,8 +13,7 @@ summary: '资源组是主机或集群上的一组资源。系统会对资源组�
 [role="lead"]
 资源组是主机或集群上的一组资源。系统会对资源组中定义的所有资源执行备份操作。您可以从 " 资源 " 页面按需备份资源组。如果资源组附加了策略并配置了计划，则会根据计划自动进行备份。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须已创建附加了策略的资源组。
 * 如果要将具有 SnapMirror 关系的资源备份到二级存储，则分配给存储用户的角色应包括 " `snapmirror all` " 权限。但是，如果您使用的是 "`vsadmin` " 角色，则不需要 " `snapmirror all` " 特权。
 * 如果某个资源组包含来自不同主机的多个数据库，则由于网络问题，某些主机上的备份操作可能会稍后触发。您应使用 Set-SmConfigSettings PowerShell cmdlet 在 web.config 中配置 MaxRetransyForUninitializedHosts 的值
@@ -26,8 +25,7 @@ NOTE: 备份文件系统时， SnapCenter 不会备份挂载在要备份的文�
 
 IMPORTANT: 如果您在 Windows 文件系统环境中工作，请勿备份数据库文件。这样做会导致备份不一致，并且在还原时可能会丢失数据。要保护数据库文件，您必须使用适用于数据库的 SnapCenter 插件（例如，适用于 Microsoft SQL Server 的 SnapCenter 插件，适用于 Microsoft Exchange Server 的 SnapCenter 插件或适用于数据库文件的自定义插件）。
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
 . 在资源页面中，从 * 视图 * 列表中选择 * 资源组 * 。
 +

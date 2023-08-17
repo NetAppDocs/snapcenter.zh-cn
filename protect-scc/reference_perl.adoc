@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_perl.html 
 sidebar: sidebar 
-keywords:  
+keywords: custom plug-in 
 summary: 使用 Perl 开发此插件。 
 ---
 = 基于 Perl 的开发

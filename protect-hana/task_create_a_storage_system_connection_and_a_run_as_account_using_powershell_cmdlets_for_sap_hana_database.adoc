@@ -13,7 +13,7 @@ summary: 在使用 PowerShell cmdlet 备份，还原或克隆 SAP HANA 数据库
 [role="lead"]
 在使用 PowerShell cmdlet 备份，还原或克隆 SAP HANA 数据库之前，您必须创建 Storage Virtual Machine （ SVM ）连接和凭据。
 
-.您需要的内容
+.开始之前
 * 您应已准备好 PowerShell 环境以执行 PowerShell cmdlet 。
 * 您应具有创建存储连接所需的基础架构管理员角色权限。
 * 您应确保插件安装未在进行中。

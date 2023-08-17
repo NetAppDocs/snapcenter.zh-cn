@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_cancel_backup_operations_for_scc.html 
 sidebar: sidebar 
-keywords:  
+keywords: cancel backup, custom plug-in 
 summary: 您可以取消已排队的备份操作。 
 ---
 = 取消自定义插件的备份操作

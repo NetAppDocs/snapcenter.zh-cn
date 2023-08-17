@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore operation 
 summary: 您可以从二级存储系统上的物理 LUN （ RDM ， iSCSI 或 FCP\ ）还原备份的 SQL Server 数据库。还原功能是一个多阶段过程，可将所有数据和日志页面从位于二级存储系统上的指定 SQL Server 备份复制到指定数据库。 
 ---
 = 从二级存储还原 SQL Server 数据库
@@ -13,15 +13,13 @@ summary: 您可以从二级存储系统上的物理 LUN （ RDM ， iSCSI 或 FC
 [role="lead"]
 您可以从二级存储系统上的物理 LUN （ RDM ， iSCSI 或 FCP ）还原备份的 SQL Server 数据库。还原功能是一个多阶段过程，可将所有数据和日志页面从位于二级存储系统上的指定 SQL Server 备份复制到指定数据库。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须已将 Snapshot 副本从主存储系统复制到二级存储系统。
 * 您必须确保 SnapCenter 服务器和插件主机能够连接到二级存储系统。
 * 还原向导页面上的大部分字段在基本还原过程中进行了说明。以下信息介绍了一些可能需要指导的字段。
 
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择 * 适用于 SQL Server* 的 SnapCenter 插件。
 . 在资源页面中，从 * 视图 * 下拉列表中选择 * 数据库 * 或 * 资源组 * 。
 . 选择数据库或资源组。

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_backup_copy_verification_using_the_primary_or_secondary_storage_volume_for_plugin_for_sql.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup copy verification 
 summary: 您可以验证主存储卷或 SnapMirror 或 SnapVault 二级存储卷上的备份副本。使用二级存储卷进行验证可减少主存储卷上的负载。 
 ---
 = 使用适用于 SQL Server 的插件的主存储卷或二级存储卷进行备份副本验证

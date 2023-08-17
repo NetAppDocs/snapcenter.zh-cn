@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/concept_back_up_exchange_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup workflow 
 summary: 在环境中安装适用于 Microsoft Exchange Server 的 SnapCenter 插件时，您可以使用 SnapCenter 备份 Exchange 资源。 
 ---
 = 备份工作流

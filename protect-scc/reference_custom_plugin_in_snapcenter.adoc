@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_custom_plugin_in_snapcenter.html 
 sidebar: sidebar 
-keywords:  
+keywords: Custom plug-in 
 summary: 可以使用 SnapCenter 服务器将创建的自定义插件安装在主机上，以便为应用程序启用数据保护。 
 ---
 = SnapCenter 中的自定义插件

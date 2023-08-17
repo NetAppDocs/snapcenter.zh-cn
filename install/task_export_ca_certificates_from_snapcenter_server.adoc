@@ -13,8 +13,7 @@ summary: 您应将CA证书从SnapCenter服务器导出到插件主机。
 [role="lead"]
 您应使用Microsoft管理控制台(MMC)将CA证书从SnapCenter服务器导出到插件主机。
 
-* 您需要的内容 *
-
+.开始之前
 您应已配置双向SSL。
 
 * 步骤 *

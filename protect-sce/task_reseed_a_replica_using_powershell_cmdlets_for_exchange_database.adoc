@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 您可以使用 PowerShell cmdlet 通过使用同一主机上的最新副本或备用主机上的最新副本来还原运行状况不正常的副本。 
 ---
 = 使用适用于 Exchange 数据库的 PowerShell cmdlet 重新获取副本
@@ -15,8 +15,7 @@ summary: 您可以使用 PowerShell cmdlet 通过使用同一主机上的最新�
 
 有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
-* 步骤 *
-
+.步骤
 . 使用 `Open-SmConnection` cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
 +
 [listing]

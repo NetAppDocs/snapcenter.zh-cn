@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_install_snapcenter_custom_plug_in.html 
 sidebar: sidebar 
-keywords: installing 
+keywords: install workflow, custom plug-in 
 summary: 如果要保护自定义插件资源，应安装和设置 SnapCenter 自定义插件。 
 ---
 = SnapCenter 自定义插件的安装工作流
@@ -13,6 +13,6 @@ summary: 如果要保护自定义插件资源，应安装和设置 SnapCenter �
 [role="lead"]
 如果要保护自定义插件资源，应安装和设置 SnapCenter 自定义插件。
 
-image::../media/scc_install_configure_workflow.png[scc 安装配置工作流]
+image::../media/scc_install_configure_workflow.png[SnapCenter自定义插件的工作流]
 
 link:concept_develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"]

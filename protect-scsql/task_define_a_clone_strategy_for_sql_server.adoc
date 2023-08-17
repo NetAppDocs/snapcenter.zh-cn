@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_define_a_clone_strategy_for_sql_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: clone strategy 
 summary: 通过定义克隆策略，您可以成功克隆数据库。 
 ---
 = 为 SQL Server 定义克隆策略

@@ -13,8 +13,7 @@ summary: SnapCenter 支持基于角色的访问控制（ Role-Based Access Contr
 [role="lead"]
 SnapCenter 支持基于角色的访问控制（ Role-Based Access Control ， RBAC ）。SnapCenter 管理员通过 SnapCenter RBAC 将角色和资源分配给工作组或 Active Directory 中的用户或 Active Directory 中的组。现在， RBAC 用户可以使用分配的角色登录到 SnapCenter 。
 
-* 您需要的内容 *
-
+.开始之前
 * 您应在 Windows Server Manager 中启用 Windows 进程激活服务（ Wwas ）。
 * 如果要使用 Internet Explorer 作为浏览器登录到 SnapCenter 服务器，应确保已禁用 Internet Explorer 中的保护模式。
 
@@ -92,8 +91,7 @@ Username
 
 SnapCenter 服务器支持将MFA用于域帐户、此帐户属于活动目录。
 
-* 您需要的内容 *
-
+.开始之前
 * 您应已启用MFA。
 +
 有关如何启用MFA的信息、请参见 link:../install/enable_multifactor_authentication.html["启用多因素身份验证"]

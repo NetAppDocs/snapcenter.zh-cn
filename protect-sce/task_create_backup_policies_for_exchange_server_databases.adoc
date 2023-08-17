@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_create_backup_policies_for_exchange_server_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 您可以在使用 SnapCenter 备份 Microsoft Exchange Server 资源之前为 Exchange 资源或资源组创建备份策略，也可以在创建资源组或备份单个资源时创建备份策略。 
 ---
 = 为 Exchange Server 数据库创建备份策略
@@ -13,8 +13,7 @@ summary: 您可以在使用 SnapCenter 备份 Microsoft Exchange Server 资源�
 [role="lead"]
 您可以在使用 SnapCenter 备份 Microsoft Exchange Server 资源之前为 Exchange 资源或资源组创建备份策略，也可以在创建资源组或备份单个资源时创建备份策略。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须已定义数据保护策略。
 +
 有关详细信息，请参见有关为 Exchange 数据库定义数据保护策略的信息。
@@ -28,8 +27,7 @@ summary: 您可以在使用 SnapCenter 备份 Microsoft Exchange Server 资源�
 
 
 
-* 关于此任务 *
-
+.关于此任务
 * 备份策略是一组规则，用于控制如何管理和保留备份以及备份资源或资源组的频率。此外，您还可以指定脚本设置。在策略中指定选项可节省将策略重复用于其他资源组的时间。
 * 完整备份保留是特定于给定策略的。使用策略 A 且完整备份保留为 4 的数据库或资源会保留 4 个完整备份，并且不会对同一数据库或资源的策略 B 产生影响，该策略可能会保留 3 个完整备份。
 * 日志备份保留在各个策略中有效，并对数据库或资源的所有日志备份进行适用场景。因此，使用策略 B 执行完整备份时，日志保留设置会影响策略 A 在同一数据库或资源上创建的日志备份。同样，策略 A 的日志保留设置也会影响策略 B 在同一数据库上创建的日志备份。
@@ -50,8 +48,7 @@ summary: 您可以在使用 SnapCenter 备份 Microsoft Exchange Server 资源�
 
 | * 最佳实践： * 最好根据要保留的完整备份和日志备份总数配置二级保留策略。在配置二级保留策略时，请注意，如果数据库和日志位于不同的卷中，则每个备份可以包含三个 Snapshot 副本，而数据库和日志位于同一个卷中，则每个备份可以包含两个 Snapshot 副本。 
 |===
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 设置 * 。
 . 在设置页面中，单击 * 策略 * 。
 . 单击 * 新建 * 。

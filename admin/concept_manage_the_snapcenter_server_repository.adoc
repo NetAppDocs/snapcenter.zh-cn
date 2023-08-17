@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_the_snapcenter_server_repository.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Server 
 summary: 与从 SnapCenter 执行的各种操作相关的信息存储在 SnapCenter 服务器数据库存储库中。您必须为存储库创建备份，以防止 SnapCenter 服务器数据丢失。 
 ---
 = 管理 SnapCenter 服务器存储库
@@ -139,8 +139,7 @@ NOTE: 在执行还原操作后检索存储库备份时，不会列出用于执�
 
 从 SnapCenter 4.2 安装 SnapCenter 服务器期间，系统会自动生成 MySQL 服务器存储库数据库密码。SnapCenter 用户在任何时候都不知道自动生成的密码。如果要访问存储库数据库，应重置密码。
 
-* 您需要的内容 *
-
+.开始之前
 要重置密码，您应具有 SnapCenter 管理员权限。
 
 * 步骤 *
@@ -163,6 +162,5 @@ Successfully updated the MySQL server password.
 ----
 
 
-* 查找更多信息 *
-
+.相关信息
 有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。

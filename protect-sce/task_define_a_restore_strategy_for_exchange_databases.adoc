@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_define_a_restore_strategy_for_exchange_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 通过为 Exchange Server 定义还原策略，您可以成功还原数据库。 
 ---
 = 定义 Exchange 数据库的还原策略

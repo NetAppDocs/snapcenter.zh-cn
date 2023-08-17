@@ -13,8 +13,7 @@ summary: 备份 Exchange Server 数据库包括与 SnapCenter 服务器建立连
 [role="lead"]
 备份 Exchange Server 数据库包括与 SnapCenter 服务器建立连接，发现 Exchange Server 数据库，添加策略，创建备份资源组，备份和查看备份状态。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。
 * 您必须已添加存储系统连接并创建凭据。
 * 您必须已添加主机和发现的资源。
@@ -23,8 +22,7 @@ summary: 备份 Exchange Server 数据库包括与 SnapCenter 服务器建立连
 
 NOTE: 适用于 Exchange 的插件不支持克隆操作；因此，适用于 Exchange 的插件不支持 Add-SmPolicy cmdlet 的 CloneType 参数
 
-* 步骤 *
-
+.步骤
 . 使用 Open-SmConnection cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
 +
 [listing]

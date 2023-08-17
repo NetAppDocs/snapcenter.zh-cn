@@ -72,4 +72,4 @@ https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["适用于 VMware vSpher
 
 将某个资源组视为定义了您要保护的内容，以及您希望在日期和时间保护的时间。将某个策略视为定义了要保护的 _how _ 。例如，如果要备份主机的所有数据库，则可以创建一个资源组，其中包含主机中的所有数据库。然后，您可以将两个策略附加到资源组：每日策略和每小时策略。在创建资源组并附加策略时，您可以将资源组配置为每天执行完整备份，并执行另一个计划，以便每小时执行一次日志备份。下图显示了数据库的资源，资源组和策略之间的关系：
 
-image::../media/sce_resourcegroup_policy.gif[SCE 资源组策略]
+image::../media/sce_resourcegroup_policy.gif[资源组策略的屏幕截图]

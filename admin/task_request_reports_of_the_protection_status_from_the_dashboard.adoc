@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_request_reports_of_the_protection_status_from_the_dashboard.html 
 sidebar: sidebar 
-keywords:  
+keywords: dashboard 
 summary: 您可以使用信息板为特定插件管理的资源请求保护详细信息。 
 ---
 = 从信息板请求保护状态报告

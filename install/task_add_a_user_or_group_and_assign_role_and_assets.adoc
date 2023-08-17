@@ -13,8 +13,7 @@ summary: 要为 SnapCenter 用户配置基于角色的访问控制，您可以�
 [role="lead"]
 要为 SnapCenter 用户配置基于角色的访问控制，您可以添加用户或组并分配角色。此角色决定了 SnapCenter 用户可以访问的选项。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须已以 "SnapCenterAdmin" 角色登录。
 * 您必须已在操作系统或数据库的 Active Directory 中创建用户或组帐户。您不能使用 SnapCenter 创建这些帐户。
 +

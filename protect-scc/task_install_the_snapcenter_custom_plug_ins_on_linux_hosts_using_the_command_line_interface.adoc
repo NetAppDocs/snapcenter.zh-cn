@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_install_the_snapcenter_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html 
 sidebar: sidebar 
-keywords:  
+keywords: install, custom plug-in 
 summary: '您应使用 SnapCenter 用户界面（ UI ）安装 SnapCenter 自定义插件。如果您的环境不允许从SnapCenter UI远程安装此插件、则可以使用命令行界面(CLI)在控制台模式或静默模式下安装自定义插件。' 
 ---
 = 使用命令行界面在 Linux 主机上安装 SnapCenter 自定义插件
@@ -13,8 +13,7 @@ summary: '您应使用 SnapCenter 用户界面（ UI ）安装 SnapCenter 自定
 [role="lead"]
 您应使用 SnapCenter 用户界面（ UI ）安装 SnapCenter 自定义插件。如果您的环境不允许从 SnapCenter UI 远程安装此插件，则可以使用命令行界面（ CLI ）在控制台模式或静默模式下安装此自定义插件。
 
-* 步骤 *
-
+.步骤
 . 将适用于 Linux 的 SnapCenter 插件软件包安装文件（ snapcenter_linux_host_plugin.bin ）从 C ： \ProgramData\NetApp\SnapCenter\Package Repository 复制到要安装自定义插件的主机。
 +
 您可以从安装了 SnapCenter 服务器的主机访问此路径。

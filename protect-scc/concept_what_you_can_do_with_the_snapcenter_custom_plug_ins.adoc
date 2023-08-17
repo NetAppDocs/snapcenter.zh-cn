@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/concept_what_you_can_do_with_the_snapcenter_custom_plug_ins.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Custom Plug-ins 
 summary: 您可以使用 SnapCenter 自定义插件执行数据保护操作。 
 ---
 = 您可以使用 SnapCenter 自定义插件和存储插件执行什么操作

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_back_up_individual_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup, custom plug-in 
 summary: '如果单个自定义插件资源不属于任何资源组，您可以从 " 资源 " 页面备份该资源。您可以按需备份资源，或者，如果资源已附加策略并配置了计划，则会根据计划自动进行备份。' 
 ---
 = 备份各个自定义插件资源
@@ -13,18 +13,16 @@ summary: '如果单个自定义插件资源不属于任何资源组，您可以�
 [role="lead"]
 如果单个自定义插件资源不属于任何资源组，您可以从 " 资源 " 页面备份该资源。您可以按需备份资源，或者，如果资源已附加策略并配置了计划，则会根据计划自动进行备份。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须已创建备份策略。
 * 如果要备份与二级存储具有 SnapMirror 关系的资源，则分配给存储用户的 ONTAP 角色应包括 " `snapmirror all` " 权限。但是，如果您使用的是 "`vsadmin` " 角色，则不需要 " `snapmirror all` " 特权。
 
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
 . 在资源页面中，根据资源类型从 * 视图 * 下拉列表中筛选资源。
 +
-单击 image:../media/filter_icon.png[""]，然后选择主机名和资源类型以筛选资源。然后，您可以单击 image:../media/filter_icon.png[""] 以关闭筛选器窗格。
+单击 image:../media/filter_icon.png[""]，然后选择主机名和资源类型以筛选资源。然后，您可以单击 image:../media/filter_icon.png["筛选器图标"] 以关闭筛选器窗格。
 
 . 单击要备份的资源。
 . 在资源页面中，如果要使用自定义名称，请选中 * 对 Snapshot 副本使用自定义名称格式 * 复选框，然后为 Snapshot 副本名称输入自定义名称格式。
@@ -58,7 +56,7 @@ summary: '如果单个自定义插件资源不属于任何资源组，您可以�
 
 |===
 +
-image:../media/application_settings.gif[""]
+image:../media/application_settings.gif["应用程序设置页面"]
 
 .. 单击 * 脚本 * 箭头可运行用于暂停， Snapshot 副本和取消静默操作的 PRE 和 POST 命令。您也可以在退出备份操作之前运行 PRE 命令。
 +
@@ -98,12 +96,12 @@ SnapCenter 以使用适用于 Windows 的插件将文件系统置于一致状态
 .. 从下拉列表中选择一个或多个策略。
 +
 
-NOTE: 您也可以单击来创建策略 image:../media/add_policy_from_resourcegroup.gif[""]。
+NOTE: 您也可以单击来创建策略 image:../media/add_policy_from_resourcegroup.gif["添加图标"]。
 
 +
 在为选定策略配置计划部分中，将列出选定策略。
 
-.. 单击 image:../media/add_policy_from_resourcegroup.gif[""] 在要配置计划的策略的 Configure Schedules 列中。
+.. 单击 image:../media/add_policy_from_resourcegroup.gif["添加图标"] 在要配置计划的策略的 Configure Schedules 列中。
 .. 在添加策略 _policy_name_ 的计划对话框中，配置计划，然后单击 * 确定 * 。
 +
 其中， _policy_name_ 是选定策略的名称。

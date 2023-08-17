@@ -6,8 +6,7 @@
 
 您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。
 
-* 步骤 *
-
+.步骤
 . 使用 Open-SmConnection cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
 +
 [listing]

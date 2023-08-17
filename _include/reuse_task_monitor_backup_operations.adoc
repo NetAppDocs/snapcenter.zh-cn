@@ -4,8 +4,7 @@
 
 您可以使用 SnapCenterJobs 页面监控不同备份操作的进度。您可能需要检查进度以确定完成时间或是否存在问题描述。
 
-* 关于此任务 *
-
+.关于此任务
 以下图标将显示在作业页面上，并指示相应的操作状态：
 
 * image:../media/progress_icon.gif["正在进行中图标"] 正在进行中
@@ -13,11 +12,10 @@
 * image:../media/failed_icon.gif["失败图标"] 失败
 * image:../media/warning_icon.gif["已完成，但显示警告图标"] 已完成，但出现警告或由于出现警告而无法启动
 * image:../media/verification_job_in_queue.gif["验证作业已排队"] 已排队
-* image:../media/cancel_icon.gif[""] 已取消
+* image:../media/cancel_icon.gif["取消图标"] 已取消
 
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 监控 * 。
 . 在监控页面中，单击 * 作业 * 。
 . 在作业页面中，执行以下步骤：

@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/reference_restore_exchange_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: 您可以使用 SnapCenter 通过将一个或多个备份还原到活动文件系统来还原 Exchange 数据库。 
 ---
 = 还原工作流
@@ -15,6 +15,6 @@ summary: 您可以使用 SnapCenter 通过将一个或多个备份还原到活�
 
 以下工作流显示了必须执行 Exchange 数据库还原操作的顺序：
 
-image:../media/all_plug_ins_restore_workflow.png[""]
+image:../media/all_plug_ins_restore_workflow.png["还原工作流"]
 
 您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份和还原操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。

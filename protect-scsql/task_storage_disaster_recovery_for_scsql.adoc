@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_storage_disaster_recovery_for_scsql.html 
 sidebar: sidebar 
-keywords:  
+keywords: disaster recovery 
 summary: 您可以通过在全局设置页面中启用存储的 DR 模式来恢复适用于 SQL Server 的 SnapCenter 插件存储。 
 ---
 = 适用于 SQL Server 的 SnapCenter 插件的存储灾难恢复（ DR ）
@@ -13,8 +13,7 @@ summary: 您可以通过在全局设置页面中启用存储的 DR 模式来恢�
 [role="lead"]
 您可以通过在全局设置页面中启用存储的 DR 模式来恢复适用于 SQL Server 的 SnapCenter 插件存储。
 
-* 您需要的内容 *
-
+.开始之前
 * 确保插件处于维护模式。
 * 中断 SnapMirror/SnapVault 关系。link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-950/GUID-8A3F828F-CD3D-48E8-A171-393581FEB2ED.html["中断 SnapMirror 关系"]
 * 使用相同的驱动器盘符将 LUN 从二级系统连接到主机。
@@ -23,20 +22,17 @@ summary: 您可以通过在全局设置页面中启用存储的 DR 模式来恢�
 * 确保 SQL 资源重新联机。
 
 
-* 关于此任务 *
-
+.关于此任务
 VMDK 和 RDM 配置不支持灾难恢复（ DR ）。
 
-* 步骤 *
-
+.步骤
 . 在设置页面中，导航到 * 设置 * > * 全局设置 * > * 灾难恢复 * 。
 . 选择 * 启用灾难恢复 * 。
 . 单击 * 应用 * 。
 . 单击 * 监控 * > * 作业 * 以验证是否已启用灾难恢复作业。
 
 
-* 完成后 *
-
+.完成后
 * 如果在故障转移后创建了新数据库，则这些数据库将处于非 DR 模式。
 +
 新数据库将继续像故障转移前一样运行。

@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_policies.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage policies 
 summary: 您可以将策略与资源或资源组分离，修改，删除，查看和复制。 
 ---
 = 管理策略
@@ -78,8 +78,7 @@ summary: 您可以将策略与资源或资源组分离，修改，删除，查�
 
 如果您不再需要策略，则可能需要将其删除。
 
-* 您需要的内容 *
-
+.开始之前
 如果策略与任何资源或资源组关联，则应将此策略与资源或资源组分离。
 
 * 步骤 *

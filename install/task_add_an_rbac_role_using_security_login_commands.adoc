@@ -13,8 +13,7 @@ summary: 如果存储系统运行的是集群模式 ONTAP ，则可以使用 sec
 [role="lead"]
 如果存储系统运行的是集群模式 ONTAP ，则可以使用 security login 命令添加 ONTAP RBAC 角色。
 
-* 您需要的内容 *
-
+.开始之前
 * 在为运行集群模式 ONTAP 的存储系统创建 ONTAP RBAC 角色之前，您必须确定以下内容：
 +
 ** 要执行的一项或多项任务

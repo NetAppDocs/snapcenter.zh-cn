@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup, custom plug-in 
 summary: '您可以从 " 资源 " 页面按需备份资源组。如果资源组附加了策略并配置了计划，则会根据计划自动进行备份。' 
 ---
 = 备份自定义插件资源的资源组
@@ -13,18 +13,16 @@ summary: '您可以从 " 资源 " 页面按需备份资源组。如果资源组�
 [role="lead"]
 您可以从 " 资源 " 页面按需备份资源组。如果资源组附加了策略并配置了计划，则会根据计划自动进行备份。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须已创建附加了策略的资源组。
 * 如果要将具有 SnapMirror 关系的资源备份到二级存储，则分配给存储用户的 ONTAP 角色应包括 " `snapmirror all` " 特权。但是，如果您使用的是 "`vsadmin` " 角色，则不需要 " `snapmirror all` " 特权。
 
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
 . 在资源页面中，从 * 视图 * 列表中选择 * 资源组 * 。
 +
-您可以通过在搜索框中输入资源组名称或单击来搜索资源组 image:../media/filter_icon.png[""] 并选择标记。然后，您可以单击 image:../media/filter_icon.png[""] 以关闭筛选器窗格。
+您可以通过在搜索框中输入资源组名称或单击来搜索资源组 image:../media/filter_icon.png["筛选器图标"] 并选择标记。然后，您可以单击 image:../media/filter_icon.png["筛选器图标"] 以关闭筛选器窗格。
 
 . 在资源组页面中，选择要备份的资源组，然后单击 * 立即备份 * 。
 . 在备份页面中，执行以下步骤：

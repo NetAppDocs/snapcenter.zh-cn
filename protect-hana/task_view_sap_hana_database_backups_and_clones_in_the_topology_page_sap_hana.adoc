@@ -56,6 +56,6 @@ NOTE: 对于 SAP HANA 系统复制主资源，支持还原和删除操作；对�
 
 NOTE: 您不能重命名或删除二级存储上的备份。
 
-. 如果要删除克隆，请从表中选择此克隆，然后单击 image:../media/delete_icon.gif[""]。
-. 如果要拆分克隆，请从表中选择此克隆，然后单击 image:../media/split_cone.gif[""]。
+. 如果要删除克隆，请从表中选择此克隆，然后单击 image:../media/delete_icon.gif["删除图标"]。
+. 如果要拆分克隆，请从表中选择此克隆，然后单击 image:../media/split_cone.gif["克隆拆分图标"]。
 

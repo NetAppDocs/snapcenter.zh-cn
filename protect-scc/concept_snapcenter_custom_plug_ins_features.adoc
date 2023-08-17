@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/concept_snapcenter_custom_plug_ins_features.html 
 sidebar: sidebar 
-keywords:  
+keywords: Custom Plug-ins features 
 summary: SnapCenter 可与插件应用程序以及存储系统上的 NetApp 技术集成。要使用自定义插件，请使用 SnapCenter 图形用户界面。 
 ---
 = SnapCenter 自定义插件功能

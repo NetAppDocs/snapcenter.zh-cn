@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/concept_how_snapcenter_backs_up_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter 
 summary: SnapCenter 使用 Snapshot 副本技术备份驻留在 LUN ， CSV （集群共享卷）， RDM （原始设备映射）卷， Windows 集群中的 ALM （非对称 LUN 映射）以及基于 VMFS/NFS （使用 NFS 的 VMware 虚拟机文件系统）的 VMDK 上的 Windows 文件系统资源。 
 ---
 = SnapCenter 如何备份 Windows 文件系统

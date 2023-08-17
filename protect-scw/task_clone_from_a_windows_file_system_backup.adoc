@@ -13,8 +13,7 @@ summary: 您可以使用 SnapCenter 克隆 Windows 文件系统备份。如果�
 [role="lead"]
 您可以使用 SnapCenter 克隆 Windows 文件系统备份。如果您需要错误删除或更改的单个文件的副本，则可以克隆备份并访问克隆中的该文件。
 
-* 您需要的内容 *
-
+.开始之前
 * 您应已准备好通过完成添加主机，识别资源和创建 Storage Virtual Machine （ SVM ）连接等任务来保护数据。
 * 您应具有文件系统的备份。
 * 您应确保托管卷的聚合应位于 Storage Virtual Machine （ SVM ）的已分配聚合列表中。
@@ -28,8 +27,7 @@ summary: 您可以使用 SnapCenter 克隆 Windows 文件系统备份。如果�
 * 您不能跨环境克隆。例如，从物理磁盘克隆到虚拟磁盘，反之亦然。
 
 
-* 关于此任务 *
-
+.关于此任务
 * 脚本路径使用位于插件主机SMCoreServiceHost.exe配置文件中的预定义WindowsScriptsDirectory密钥进行定义。
 +
 如果需要、您可以更改此路径并重新启动SMcore服务。建议您使用默认安全路径。
@@ -42,8 +40,7 @@ summary: 您可以使用 SnapCenter 克隆 Windows 文件系统备份。如果�
 
 
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
 . 在资源页面中，从列表中选择 * 文件系统 * 。
 . 选择主机。

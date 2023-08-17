@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/concept_develop_a_plug_in_for_your_application.html 
 sidebar: sidebar 
-keywords:  
+keywords: overview snapcenter 
 summary: 通过 SnapCenter 服务器，您可以将应用程序作为 SnapCenter 的插件进行部署和管理。 
 ---
 = 概述

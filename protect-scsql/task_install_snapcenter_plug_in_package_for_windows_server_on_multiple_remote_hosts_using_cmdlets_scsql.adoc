@@ -13,12 +13,10 @@ summary: 您可以使用 Install-SmHostPackage PowerShell cmdlet 在多个主机
 [role="lead"]
 您可以使用 Install-SmHostPackage PowerShell cmdlet 在多个主机上同时安装适用于 Microsoft SQL Server 的 SnapCenter 插件。
 
-* 您需要的内容 *
-
+.开始之前
 您必须已在要安装此插件软件包的每个主机上以具有本地管理员权限的域用户身份登录到 SnapCenter 。
 
-* 步骤 *
-
+.步骤
 . 启动 PowerShell 。
 . 在 SnapCenter 服务器主机上，使用 Open-SmConnection cmdlet 建立会话，然后输入凭据。
 . 使用 Install-SmHostPackage cmdlet 和所需参数在多个远程主机上安装适用于 Microsoft SQL Server 的 SnapCenter 插件。

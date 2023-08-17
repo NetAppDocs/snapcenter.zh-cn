@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_configure_snapmanager_7_x_for_exchange_and_snapcenter_plug_in_for_exchange_to_coexist.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 要使适用于 Microsoft Exchange Server 的 SnapCenter 插件能够与适用于 Microsoft Exchange Server 的 SnapManager 共存，您需要在安装了适用于 Microsoft Exchange Server 的 SnapManager 的同一个 Exchange Server 上安装适用于 Microsoft Exchange Server 的 SnapCenter 插件，并禁用 SnapManager for Exchange 计划， 并使用适用于 Microsoft Exchange Server 的 SnapCenter 插件配置新计划和备份。 
 ---
 = 将 SnapManager 7.x 配置为使 Exchange 和 SnapCenter 共存
@@ -13,8 +13,7 @@ summary: 要使适用于 Microsoft Exchange Server 的 SnapCenter 插件能够�
 [role="lead"]
 要使适用于 Microsoft Exchange Server 的 SnapCenter 插件能够与适用于 Microsoft Exchange Server 的 SnapManager 共存，您需要在安装了适用于 Microsoft Exchange Server 的 SnapManager 的同一个 Exchange Server 上安装适用于 Microsoft Exchange Server 的 SnapCenter 插件，并禁用 SnapManager for Exchange 计划， 并使用适用于 Microsoft Exchange Server 的 SnapCenter 插件配置新计划和备份。
 
-* 您需要的内容 *
-
+.开始之前
 * 已安装适用于 Microsoft Exchange Server 的 SnapManager 和适用于 Windows 的 SnapDrive ，系统和 SnapInfo 目录中都存在适用于 Microsoft Exchange Server 的 SnapManager 备份。
 * 您应已删除或回收 SnapManager for Microsoft Exchange Server 所创建的不再需要的备份。
 * 您应已从 Windows 计划程序暂停或删除 SnapManager for Microsoft Exchange Server 创建的所有计划。
@@ -28,8 +27,7 @@ SnapCenter 不提供升级选项。
 
 
 
-* 步骤 *
-
+.步骤
 . 在所有 DAG 节点上使用 PowerShell ，确定是否已注册适用于 Windows VSS 硬件提供程序的 SnapDrive ： _vssadmin list provider_
 +
 [listing]

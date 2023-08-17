@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_restore_exchange_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 您可以使用 SnapCenter 还原备份的 Exchange 数据库。 
 ---
 = 还原 Exchange 数据库
@@ -13,8 +13,7 @@ summary: 您可以使用 SnapCenter 还原备份的 Exchange 数据库。
 [role="lead"]
 您可以使用 SnapCenter 还原备份的 Exchange 数据库。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须已备份资源组，数据库或数据库可用性组（ DAG ）。
 * 当 Exchange 数据库迁移到其他位置时，还原操作对旧备份不起作用。
 * 如果要将 Snapshot 副本复制到镜像或存储， SnapCenter 管理员必须已为您分配源卷和目标卷的 SVM 。
@@ -27,8 +26,7 @@ summary: 您可以使用 SnapCenter 还原备份的 Exchange 数据库。
 
 
 
-* 关于此任务 *
-
+.关于此任务
 * 对数据库执行还原操作时，数据库将挂载回同一主机，并且不会创建任何新卷。
 * 必须从单个数据库还原 DAG 级别的备份。
 * 如果存在 Exchange 数据库（ .edb ）文件以外的文件，则不支持完整磁盘还原。
@@ -48,8 +46,7 @@ summary: 您可以使用 SnapCenter 还原备份的 Exchange 数据库。
 
 
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击资源页面左上角的 * 资源 * 。
 . 从下拉列表中选择 Exchange Server 插件。
 . 在资源页面中，从视图列表中选择 * 数据库 * 。

@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_overview_of_snapcenter_reports.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter reports 
 summary: SnapCenter 提供了多种报告选项，可用于监控和管理系统运行状况以及操作成功情况。 
 ---
 = SnapCenter 报告功能概述
@@ -130,8 +130,7 @@ SnapCenter 提供了多种报告选项，可用于监控和管理系统运行状
 
 如果您希望定期向自己或他人发送 SnapCenter 数据保护作业更新，以便监控这些更新的状态，则可以配置在创建资源组时通过电子邮件发送 SnapCenter 报告的选项。
 
-* 您需要的内容 *
-
+.开始之前
 您必须已在设置下的全局设置页面中配置 SMTP 服务器。
 
 * 步骤 *

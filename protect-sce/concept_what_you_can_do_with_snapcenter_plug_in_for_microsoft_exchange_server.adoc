@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/concept_what_you_can_do_with_snapcenter_plug_in_for_microsoft_exchange_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: 您可以使用适用于 Exchange 的插件备份和还原 Exchange Server 数据库。 
 ---
 = 适用于 Microsoft Exchange Server 的 SnapCenter 插件的功能

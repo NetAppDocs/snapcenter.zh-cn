@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_backup_schedules_for_plugin_for_sql.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup schedules 
 summary: 备份频率 \ （计划类型 \ ）在策略中指定；备份计划在资源组配置中指定。 
 ---
 = 适用于 SQL Server 的插件的备份计划
