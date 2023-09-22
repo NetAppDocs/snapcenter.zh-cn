@@ -66,9 +66,9 @@ indexpage:
   - title: 更多资源
     links:
     - title: "《 cmdlet 参考指南》"
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205
     - title: 命令参考指南
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206
     - title: 早期版本的 SnapCenter 文档
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: NetApp 知识库— SnapCenter
