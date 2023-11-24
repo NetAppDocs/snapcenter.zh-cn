@@ -13,120 +13,77 @@ summary: 所需的最小 ONTAP 权限因用于数据保护的 SnapCenter 插件�
 [role="lead"]
 所需的最小 ONTAP 权限因用于数据保护的 SnapCenter 插件而异。
 
-|===
-| all-access 命令： ONTAP 8.3.0 及更高版本所需的最低权限 
-
-
- a| 
-* event generate-autosupport-log
-
-
-
-
- a| 
-* 作业历史记录显示
-* 作业停止
-
-
-
-
- a| 
-* LUN
-* lun attribute show
-* 创建 LUN
-* LUN 删除
-* LUN 几何结构
-* lun igroup add
-* lun igroup create
-* LUN igroup 删除
-* LUN igroup 重命名
-* lun igroup show
-* LUN 映射 add-reporting-nodes
-* 创建 LUN 映射
-* LUN 映射删除
-* LUN 映射 remove-reporting-nodes
-* lun mapping show
-* 修改 LUN
-* LUN 移动卷
-* LUN 脱机
-* LUN 联机
-* 清除 LUN 持久预留
-* 调整 LUN 大小
-* LUN 串行
-* lun show
-
-
-
-
- a| 
-* SnapMirror 策略附加规则
-* snapmirror policy modify-rule
-* snapmirror policy remove-rule
-* snapmirror policy show
-* SnapMirror 还原
-* snapmirror show
-* snapmirror show-history
-* SnapMirror 更新
-* snapmirror update-ls-set
-* snapmirror list-destinations
-
-
-
-
- a| 
-* version
-
-
-
-
- a| 
-* 创建卷克隆
-* volume clone show
-* 卷克隆拆分开始
-* 卷克隆拆分停止
-* 卷创建
-* 卷销毁
-* 创建卷文件克隆
-* volume file show-disk-usage
-* 卷脱机
-* 卷联机
-* 卷修改
-* 卷 qtree create
-* 卷 qtree 删除
-* 卷 qtree 修改
-* volume qtree show
-* 卷限制
-* volume show
-* 创建卷快照
-* 卷快照删除
-* 卷快照修改
-* 卷快照重命名
-* 卷快照还原
-* 卷快照还原文件
-* volume snapshot show
-* 卷卸载
+* all-access 命令： ONTAP 8.3.0 及更高版本所需的最低权限
++
+** event generate-autosupport-log
+** 作业历史记录显示
+** 作业停止
+** LUN
+** lun attribute show
+** 创建 LUN
+** LUN 删除
+** LUN 几何结构
+** lun igroup add
+** lun igroup create
+** LUN igroup 删除
+** LUN igroup 重命名
+** lun igroup show
+** LUN 映射 add-reporting-nodes
+** 创建 LUN 映射
+** LUN 映射删除
+** LUN 映射 remove-reporting-nodes
+** lun mapping show
+** 修改 LUN
+** LUN 移动卷
+** LUN 脱机
+** LUN 联机
+** 清除 LUN 持久预留
+** 调整 LUN 大小
+** LUN 串行
+** lun show
+** SnapMirror 策略附加规则
+** snapmirror policy modify-rule
+** snapmirror policy remove-rule
+** snapmirror policy show
+** SnapMirror 还原
+** snapmirror show
+** snapmirror show-history
+** SnapMirror 更新
+** snapmirror update-ls-set
+** snapmirror list-destinations
+** version
+** 创建卷克隆
+** volume clone show
+** 卷克隆拆分开始
+** 卷克隆拆分停止
+** 卷创建
+** 卷销毁
+** 创建卷文件克隆
+** volume file show-disk-usage
+** 卷脱机
+** 卷联机
+** 卷修改
+** 卷 qtree create
+** 卷 qtree 删除
+** 卷 qtree 修改
+** volume qtree show
+** 卷限制
+** volume show
+** 创建卷快照
+** 卷快照删除
+** 卷快照修改
+** 卷快照重命名
+** 卷快照还原
+** 卷快照还原文件
+** volume snapshot show
+** 卷卸载
+** vserver
+** Vserver CIFS
+** vserver cifs ShadowCopy show
+** vserver show
+** 网络接口
+** network interface show
+** MetroCluster 显示
 
 
 
-
- a| 
-* vserver
-* Vserver CIFS
-* vserver cifs ShadowCopy show
-* vserver show
-
-
-
-
- a| 
-* 网络接口
-* network interface show
-
-
-
-
- a| 
-* MetroCluster 显示
-
-
-|===

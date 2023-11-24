@@ -77,7 +77,7 @@ NOTE: 如果在 Oracle Linux 或 Red Hat Enterprise Linux 6.6 或 7.0 操作系�
  a| 
 主机上 SnapCenter 插件的最小 RAM
  a| 
-1 GB
+2 GB
 
 
 
@@ -211,7 +211,7 @@ AIX 6.1 或更高版本
  a| 
 主机上 SnapCenter 插件的最小安装和日志空间
  a| 
-1 GB
+2 GB
 
 
 NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消耗。所需的日志空间因要保护的实体数量和数据保护操作的频率而异。如果没有足够的磁盘空间，则不会为最近运行的操作创建日志。
