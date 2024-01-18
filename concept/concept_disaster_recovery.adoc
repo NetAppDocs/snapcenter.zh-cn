@@ -19,7 +19,7 @@ summary: 您可以使用 SnapCenter 灾难恢复功能在发生资源损坏或�
 * SnapCenter 服务器数据会进行备份、并且可以在不向SnapCenter 服务器添加任何插件或由服务器管理的情况下进行恢复。
 * 二级SnapCenter 服务器应安装在与主SnapCenter 服务器相同的安装目录和端口上。
 * 对于多因素身份验证(MFA)、请在SnapCenter 服务器灾难恢复期间关闭所有浏览器选项卡、然后重新打开浏览器以再次登录。这将清除现有或活动会话Cookie并更新正确的配置数据。
-* SnapCenter 灾难恢复功能使用 REST API 备份 SnapCenter 服务器。请参见 link:../sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["用于 SnapCenter 服务器灾难恢复的 REST API 工作流"]。
+* SnapCenter 灾难恢复功能使用 REST API 备份 SnapCenter 服务器。请参见 link:../tech-refresh/task_tech_refresh_server_host.html["用于 SnapCenter 服务器灾难恢复的 REST API 工作流"]。
 * 与审核设置相关的配置文件不会在灾难恢复备份中备份、也不会在还原操作后在灾难恢复服务器上备份。您应手动重复审核日志设置。
 
 

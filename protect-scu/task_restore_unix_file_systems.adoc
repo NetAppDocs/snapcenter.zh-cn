@@ -1,0 +1,58 @@
+---
+permalink: protect-scu/task_restore_unix_file_systems.html 
+sidebar: sidebar 
+keywords: restore, recover, Unix file systems 
+summary: 如果发生数据丢失、您可以使用SnapCenter还原数据。 
+---
+= 还原Unix文件系统
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果发生数据丢失、您可以使用SnapCenter还原Unix文件系统。
+
+.步骤
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在“资源”页中，从*view*列表中选择*Path*或*Resource Group*。
+. 从详细信息视图或资源组详细信息视图中选择文件系统。
++
+此时将显示拓扑页面。
+
+. 从管理副本视图中，从主存储系统或二级（镜像或复制的）存储系统中选择 * 备份 * 。
+. 从表中选择备份，然后单击 *image:../media/restore_icon.gif["还原图标"]*
+. 在"Restore scope (还原范围)"页面中：
++
+** 对于NFS文件系统，默认情况下会选择*Connect and Copy* restore。您也可以选择*Volume Restore*或*Fast Restore*。
+** 对于非NFS文件系统、将根据布局选择还原范围。
++
+根据文件系统类型和布局、在备份后创建的新文件可能在还原后不可用。
+
+
+
+. 在"PreOps"页面中、输入要在执行还原作业之前运行的还原前命令。
+. 在"PostOps"页面中、输入要在执行还原作业后运行的还原后命令。
++
+
+NOTE: 您应通过以下路径检查插件主机上的命令列表中是否存在这些命令：_/opt/NetApp/snapcentre/SCC//etc/ALLOED_commands.config_。
+
+. 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件通知的场景。
++
+您还必须指定发件人和收件人电子邮件地址以及电子邮件主题。如果要附加所执行还原操作的报告，必须选择 * 附加作业报告 * 。
+
++
+
+NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 set-SmtpServer 指定 SMTP 服务器详细信息。
+
+. 查看摘要，然后单击 * 完成 * 。
++
+
+IMPORTANT: 如果还原操作失败、则不支持回滚。
+
++
+
+NOTE: 如果要还原驻留在卷组上的文件系统、则不会删除文件系统上的旧内容。只会将克隆文件系统中的内容复制到源文件系统。如果卷组上有多个文件系统并还原了默认NFS文件系统、则此选项适用。
+
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
+

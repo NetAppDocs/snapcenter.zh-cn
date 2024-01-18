@@ -1,12 +1,12 @@
 ---
 indexpage:
   lead: SnapCenter 软件是一个简单，集中化且可扩展的平台，可为混合云中任意位置的 ONTAP 系统上运行的应用程序，数据库，主机文件系统和 VM
-    提供应用程序一致的数据保护。本文档库包含4.9版的信息。
+    提供应用程序一致的数据保护。本文档库包含5.0版的信息。
   tiles:
   - title: 入门
     links:
     - title: 发行说明
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886204
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886893
     - title: 了解 SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: 有关保护 SQL Server 数据库的快速参考
@@ -24,7 +24,7 @@ indexpage:
     - title: 使用 F5 配置高可用性
       url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
     - title: SnapCenter 服务器的灾难恢复
-      url: "/sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html"
+      url: "/tech-refresh/task_tech_refresh_server_host.html"
   - title: 保护 Microsoft SQL Server 数据库
     links:
     - title: 安装适用于 Microsoft SQL Server 数据库的 SnapCenter 插件
@@ -66,9 +66,9 @@ indexpage:
   - title: 更多资源
     links:
     - title: "《 cmdlet 参考指南》"
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895
     - title: 命令参考指南
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896
     - title: 早期版本的 SnapCenter 文档
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: NetApp 知识库— SnapCenter

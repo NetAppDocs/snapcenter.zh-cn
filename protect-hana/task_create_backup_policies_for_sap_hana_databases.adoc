@@ -38,7 +38,17 @@ summary: 在使用 SnapCenter 备份 SAP HANA 数据库资源之前，您必须�
 
 
 
+* SnapLock
++
+** 如果选择了"将备份副本保留特定天数"选项、则SnapLock保留期限必须小于或等于上述保留天数。
+** 指定Snapshot副本锁定期限可防止删除Snapshot副本、直到保留期限到期为止。这可能会导致保留的Snapshot副本数量超过策略中指定的数量。
+** 对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。您应在SnapLock到期时间后手动清理克隆。
 
+
+
+
+
+NOTE: 主SnapLock设置在SnapCenter备份策略中进行管理、辅SnapLock设置由ONTAP进行管理。
 
 .步骤
 . 在左侧导航窗格中，单击 * 设置 * 。
@@ -116,6 +126,15 @@ NOTE: 对于 SAP HANA 系统复制，创建的 Snapshot 副本总数将等于为
  a| 
 选择 * 保留 Snapshot 副本 * ，然后指定删除 Snapshot 副本之前要保留这些副本的天数。
 
+
+
+ a| 
+Snapshot副本锁定期限
+ a| 
+选择Snapshot副本锁定期限、然后选择天、月或年。
+
+SnapLock保留期限应少于100年。
+
 |===
 . 对于基于 Snapshot 副本的备份，请在复制页面中指定复制设置：
 +
@@ -130,12 +149,26 @@ NOTE: 对于 SAP HANA 系统复制，创建的 Snapshot 副本总数将等于为
 
 如果 ONTAP 中的保护关系类型为镜像和存储，并且仅选择此选项，则在主系统上创建的 Snapshot 副本不会传输到目标系统，而是会列在目标系统中。如果从目标位置选择此 Snapshot 副本以执行还原操作，则会显示二级位置不可用于选定的存储 / 镜像备份错误消息。
 
+在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。
+
+单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
+
+请参见 link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["在拓扑页面中查看 SAP HANA 数据库备份和克隆"]。
+
 
 
  a| 
 * 创建本地 Snapshot 副本后更新 SnapVault *
  a| 
 选择此选项可执行磁盘到磁盘备份复制（ SnapVault 备份）。
+
+在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
+
+如果仅在ONTAP中称为SnapLock存储的二级系统上配置了SnapLock，则单击“拓扑”页面中的*Refresh*按钮可刷新从ONTAP检索到的二级系统上的锁定期限。
+
+有关SnapLock存储的详细信息、请参见 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["将Snapshot副本提交到存储目标上的WORM"]
+
+请参见 link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["在拓扑页面中查看 SAP HANA 数据库备份和克隆"]。
 
 
 

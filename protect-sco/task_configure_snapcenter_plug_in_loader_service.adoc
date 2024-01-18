@@ -156,25 +156,40 @@ enable_certificate_validation
 
 . 根据需要执行以下操作之一：
 +
-** 以 root 用户身份启动 SnapCenter 插件加载程序服务：
+** 启动SnapCenter插件加载程序服务：
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl start`
+*** 以root用户身份运行： `/custom_location/NetApp/snapcenter/spl/bin/spl start`
+*** 以非root用户身份运行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl start`
+
+
 ** 停止 SnapCenter 插件加载程序服务：
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
+*** 以root用户身份运行： `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
+*** 以非root用户身份运行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl stop`
 +
 
 NOTE: 您可以将 -force 选项与 stop 命令结合使用来强制停止 SnapCenter 插件加载程序服务。但是，在执行此操作之前应谨慎，因为它还会终止现有操作。
 
+
+
 ** 重新启动 SnapCenter 插件加载程序服务：
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
+*** 以root用户身份运行： `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
+*** 以非root用户身份运行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl restart`
+
+
 ** 查找 SnapCenter 插件加载程序服务的状态：
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl status`
+*** 以root用户身份运行： `/custom_location/NetApp/snapcenter/spl/bin/spl status`
+*** 以非root用户身份运行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl status`
+
+
 ** 在 SnapCenter 插件加载程序服务中查找所做的更改：
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl change`
+*** 以root用户身份运行： `/custom_location/NetApp/snapcenter/spl/bin/spl change`
+*** 以非root用户身份运行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl change`
+
+
 
 
 

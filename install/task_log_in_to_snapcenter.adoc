@@ -34,7 +34,7 @@ IMPORTANT: 如果您在 Web 浏览器中打开了多个选项卡，则仅关闭 
 
 对于高可用性（ High Availability ， HA ）部署，您必须使用虚拟集群 IP _\https://Virtual_Cluster_IP_or_FQDN:8146_ 访问 SnapCenter 。如果在 Internet Explorer （ IE ）中导航到 >\https://Virtual_Cluster_IP_or_FQDN:8146_ 时未看到 SnapCenter UI ，则必须在每个插件主机的 IE 中将虚拟集群 IP 地址或 FQDN 添加为受信任站点，或者必须在每个插件主机上禁用 IE 增强安全性。有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["无法从外部网络访问集群 IP 地址"^]。
 
-除了使用 SnapCenter 图形用户界面之外，您还可以使用 PowerShell cmdlet 创建脚本以执行配置，备份和还原操作。某些 cmdlet 可能会随每个 SnapCenter 版本而发生更改。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^] 了解详细信息。
+除了使用 SnapCenter 图形用户界面之外，您还可以使用 PowerShell cmdlet 创建脚本以执行配置，备份和还原操作。某些 cmdlet 可能会随每个 SnapCenter 版本而发生更改。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"^] 了解详细信息。
 
 
 NOTE: 如果您是首次登录到 SnapCenter ，则必须使用安装过程中提供的凭据进行登录。

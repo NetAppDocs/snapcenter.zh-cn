@@ -48,7 +48,7 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
  a| 
 所需的软件包
  a| 
-Java 1.8.x （ 64 位） Oracle Java 和 OpenJDK 版本
+Java 1.8.x (64位) Oracle Java和OpenJDK
 
 如果已将 Java 升级到最新版本，则必须确保 /var/opt/snapcenter/spl/etc/spl.properties 上的 java_home 选项设置为正确的 Java 版本和路径。
 

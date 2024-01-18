@@ -19,6 +19,26 @@ summary: 在使用 SnapCenter 备份 Oracle 数据库资源之前，您必须为
 * 您必须已通过完成安装 SnapCenter ，添加主机，发现数据库和创建存储系统连接等任务为数据保护做好准备。
 * 如果要将 Snapshot 副本复制到镜像或存储二级存储， SnapCenter 管理员必须已为源卷和目标卷分配 SVM 。
 * 如果您以非root用户身份安装了此插件、则应手动将执行权限分配给预处理和后处理目录。
+* 有关SnapMirror业务连续性(SM-BC)的前提条件和限制、请参见 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror业务连续性的对象限制"]。
+
+
+.关于此任务
+* SnapLock
++
+** 如果选择了"将备份副本保留特定天数"选项、则SnapLock保留期限必须小于或等于上述保留天数。
++
+指定Snapshot副本锁定期限可防止删除Snapshot副本、直到保留期限到期为止。这可能会导致保留的Snapshot副本数量超过策略中指定的数量。
+
++
+对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。您应在SnapLock到期时间后手动清理克隆。
+
++
+
+NOTE: 主SnapLock设置在SnapCenter备份策略和二级中进行管理
+SnapLock设置由ONTAP管理。
+
+
+
 
 
 * 步骤 *
@@ -139,6 +159,15 @@ IMPORTANT: 如果计划启用 SnapVault 复制，则必须将保留计数设置�
  a| 
 选择 * 保留 Snapshot 副本 * ，然后指定删除 Snapshot 副本之前要保留这些副本的天数。
 
+
+
+ a| 
+Snapshot副本锁定期限
+ a| 
+选择Snapshot副本锁定期限、然后选择天、月或年。
+
+SnapLock保留期限应少于100年。
+
 |===
 +
 
@@ -155,12 +184,24 @@ NOTE: 只有在备份过程中选择了归档日志文件时，才能保留归�
  a| 
 选择此字段可在另一个卷上创建备份集的镜像副本（ SnapMirror 复制）。
 
+应为SnapMirror业务连续性(SM-BC)启用此选项。
+
+在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。
+
+单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
+
 
 
  a| 
 创建本地 Snapshot 副本后更新 SnapVault
  a| 
 选择此选项可执行磁盘到磁盘备份复制（ SnapVault 备份）。
+
+如果仅在ONTAP中称为SnapLock存储的二级系统上配置了SnapLock，则单击“拓扑”页面中的*Refresh*按钮可刷新从ONTAP检索到的二级系统上的锁定期限。
+
+有关SnapLock存储的详细信息、请参见 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["将Snapshot副本提交到存储目标上的WORM"]
+
+请参见 link:..protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html["在 Topology 页面中查看 Oracle 数据库备份和克隆"]。
 
 
 

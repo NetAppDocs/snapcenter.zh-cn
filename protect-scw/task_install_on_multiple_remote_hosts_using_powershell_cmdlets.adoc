@@ -20,7 +20,7 @@ summary: 如果要一次在多个主机上安装适用于 Microsoft Windows 的 
 . 在 SnapCenter 服务器主机上，使用 `Open-SmConnection` cmdlet 建立会话，然后输入凭据。
 . 使用 `Add-SmHost` cmdlet 和所需参数将独立主机或集群添加到 SnapCenter 。
 +
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 . 使用 `Install-SmHostPackage` cmdlet 和所需参数在多个主机上安装此插件。
 +

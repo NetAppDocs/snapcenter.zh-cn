@@ -32,6 +32,7 @@ NOTE: 如果命令列表中不存在这些命令、则操作将失败。
 .关于此任务
 * 无法从 SnapCenter 还原基于文件的备份副本。
 * 升级到 SnapCenter 4.3 后，可以还原在 SnapCenter 4.2 中创建的备份，但无法恢复。您必须使用 SnapCenter 外部的 HANA Studio 或 HANA 恢复脚本恢复在 SnapCenter 4.2 中创建的备份。
+* 对于启用了SnapLock的策略、对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则在还原过程中从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 .步骤
@@ -156,6 +157,10 @@ NOTE: 您可以选择 * 完整资源 * （使用或不使用 * 卷还原 * ）�
 . 在操作后页面中，输入要在执行还原作业后运行的 mount 和 post restore 命令。
 +
 自动发现的资源不能使用挂载命令。
+
++
+
+NOTE: 对于用于静宿、Snapshot副本和取消静宿操作的PRE和POST命令、您应从Linux的/opt/snapcenter/snapenter/scC/ALLOED_commands.config_路径和Windows的_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creer\ETC\ALLOED_commands_list.txt检查这些命令是否位于插件主机上的命令列表中。
 
 . 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
 +

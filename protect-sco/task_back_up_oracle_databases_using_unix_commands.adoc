@@ -30,7 +30,7 @@ NOTE: 此连接会话的有效期仅为 24 小时。但是，您可以使用 Tok
 
 您应执行以下命令以建立与 SnapCenter 服务器的连接，发现 Oracle 数据库实例，添加策略和资源组，备份并验证备份。
 
-有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["《 SnapCenter 软件命令参考指南》"^]。
+有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896["《 SnapCenter 软件命令参考指南》"^]。
 
 * 步骤 *
 

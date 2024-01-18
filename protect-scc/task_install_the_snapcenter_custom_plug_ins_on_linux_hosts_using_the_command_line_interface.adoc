@@ -35,7 +35,7 @@ summary: '您应使用 SnapCenter 用户界面（ UI ）安装 SnapCenter 自定
 ----
 . 使用 Add-Smhost cmdlet 和所需参数将主机添加到 SnapCenter 服务器。
 +
-有关可与命令结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与命令结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 . 登录到 SnapCenter ，然后从 UI 或使用 PowerShell cmdlet 上传自定义插件。
 +
@@ -45,6 +45,6 @@ summary: '您应使用 SnapCenter 用户界面（ UI ）安装 SnapCenter 自定
 SnapCenter cmdlet 帮助和 cmdlet 参考信息包含有关 PowerShell cmdlet 的详细信息。
 
 +
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 

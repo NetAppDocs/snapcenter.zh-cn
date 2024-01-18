@@ -1,0 +1,120 @@
+---
+permalink: tech-refresh/task_tech_refresh_plugin_host.html 
+sidebar: sidebar 
+keywords: tech refresh, plug-in host, supported plug-ins, prerequisites to refresh plug-in hosts, application hosts, limitations for tech refresh of plug-in hosts 
+summary: 将资源从旧主机移至新主机、以对插件主机执行技术更新。 
+---
+= 对SnapCenter插件主机进行技术更新
+:allow-uri-read: 
+
+
+[role="lead"]
+如果SnapCenter插件主机需要刷新、则应将资源从旧主机移至新主机。将新主机添加到SnapCenter后、它将发现所有资源、但会被视为新资源。
+
+.关于此任务
+您应运行API或cmdlet、该API或cmdlet将使用旧主机名和新主机名作为输入、按名称比较资源、并将旧主机中匹配资源的对象重新链接到新主机。匹配的资源将标记为受保护。
+
+* 默认情况下、_IsDryRun_参数设置为True、此参数用于标识新旧主机的匹配资源。
++
+验证匹配资源后、应将_IsDryRun_参数设置为False、以便将匹配资源的对象从旧主机重新链接到新主机。
+
+* 默认情况下、_AutoMigratemanuallyAddedResources_参数设置为True、此选项会自动将手动添加的资源从旧主机复制到新主机。
++
+_AutoMigrateAllyAddedResources_参数仅适用于Oracle和SAP HANA资源。
+
+* 如果旧主机和新主机的实例名称不同、则应使用_SQLInstanceMapping_参数。如果是默认实例、请使用_default_instance_作为 实例名称。
+
+
+以下SnapCenter插件支持技术更新：
+
+* 适用于 Microsoft SQL Server 的 SnapCenter 插件
++
+** 如果SQL数据库在实例级别受到保护、并且在主机技术更新期间、只有部分资源移至新主机、则现有实例级别的保护将转换为资源组保护、并且两个主机中的实例将添加到资源组中。
+** 如果SQL主机(例如host1)用作另一主机(例如host2)的资源的计划程序或验证服务器、则在host1上执行技术刷新时、不会迁移计划或验证详细信息、而会继续在host1上运行。如果必须进行修改、则应在相应主机中手动进行更改。
+** 如果您使用的是SQL故障转移集群实例(FCI)设置、则可以通过向FCI集群添加新节点并在SnapCenter中刷新插件主机来执行技术更新。
+** 如果您使用的是SQL可用性组(AG)设置、则不需要进行技术更新。您可以将新节点添加到AG并在SnapCenter中刷新主机。
+
+
+* 适用于 Windows 的 SnapCenter 插件
+* 适用于 Oracle 数据库的 SnapCenter 插件
++
+如果您使用的是Oracle Real Application Cluster (RAC)设置、则可以通过向RAC集群添加新节点并在SnapCenter中刷新插件主机来执行技术更新。
+
+* 适用于 SAP HANA 数据库的 SnapCenter 插件
+
+
+支持的使用情形包括：
+
+* 将资源从一台主机迁移到另一台主机。
+* 将资源从多个主机迁移到一个或更少的主机。
+* 将资源从一台主机迁移到多台主机。
+
+
+支持的方案包括：
+
+* 新主机的名称与旧主机不同
+* 已重命名现有主机
+
+
+.开始之前
+由于此工作流会修改SnapCenter存储库中的数据、因此建议备份SnapCenter存储库。如果出现任何数据问题、可以使用备份将SnapCenter存储库还原到旧状态。
+
+有关详细信息，请参见 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["备份 SnapCenter 存储库"]。
+
+.步骤
+. 部署新主机并安装应用程序。
+. 暂停旧主机的计划。
+. 将所需资源从旧主机移动到新主机。
++
+.. 从同一存储启动新主机中所需的数据库。
++
+*** 确保存储映射到与旧主机相同的驱动器或相同的挂载路径。如果存储未正确映射、则在旧主机中创建的备份无法用于还原。
++
+
+NOTE: 默认情况下、Windows会自动分配下一个可用驱动器。
+
+*** 如果启用了存储灾难恢复、则应将相应的存储挂载到新主机中。
+
+
+.. 如果应用程序版本发生变化、请检查兼容性。
+.. 仅对于Oracle插件主机、请确保Oracle及其组用户的ID和GID与旧主机的相同。
++
+有关信息、请参见：
+
++
+*** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_SQL_host_tech_refresh["如何将SQL数据库从旧主机迁移到新主机"]
+*** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_Oracle_host_tech_refresh["如何将Oracle数据库从旧主机迁移到新主机"]
+*** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_Hana_host_tech_refresh["如何将SAP HANA数据库启动到新主机上"]
+
+
+
+
+. 将新主机添加到SnapCenter。
+. 验证是否已发现所有资源。
+. 运行主机刷新API： `/5.0/techrefresh/host` 或cmdlet：_Invoke - SmTechRefreshHost_。
++
+
+NOTE: 默认情况下、演练处于启用状态、并确定要重新链接的匹配资源。您可以通过运行API："/Jobs/｛jobid｝"或cmdlet _GET和SmJobSumaryReport_来验证资源。
+
++
+如果已从多个主机迁移资源、则应对所有主机运行API或cmdlet。如果新主机中的驱动器或挂载路径与旧主机不同、则以下还原操作将失败：
+
++
+** SQL原位还原将失败。但是、也可以利用RTAN功能。
+** 还原Oracle和SAP HANA数据库将失败。
++
+如果要迁移到多个主机、应对所有主机执行步骤1中的所有步骤。
+
++
+
+NOTE: 您可以在同一主机上多次运行API或cmdlet、只有在发现新资源时、它才会重新链接。
+
+
+
+. (可选)从SnapCenter中删除旧主机。
+
+
+.相关信息
+有关API的信息，您需要访问Swagger页面。请参见 link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["如何使用 Swagger API 网页访问 REST API"]。
+
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"^]。

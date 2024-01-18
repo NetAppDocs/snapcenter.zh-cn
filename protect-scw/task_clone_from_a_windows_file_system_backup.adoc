@@ -38,6 +38,7 @@ summary: 您可以使用 SnapCenter 克隆 Windows 文件系统备份。如果�
 +
 您可以使用GET API显示密钥的值。不支持设置API。
 
+* 对于启用了SnapLock的策略、对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则在还原过程中从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 .步骤

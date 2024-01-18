@@ -1,0 +1,10 @@
+---
+section: tech-refresh
+title: 技术更新
+entries:
+- title: SnapCenter服务器主机技术更新
+  url: "/tech-refresh/task_tech_refresh_server_host.html"
+- title: 对SnapCenter插件主机进行技术更新
+  url: "/tech-refresh/task_tech_refresh_plugin_host.html"
+- title: 存储系统技术更新
+  url: "/tech-refresh/task_tech_refresh_storage_system.html"

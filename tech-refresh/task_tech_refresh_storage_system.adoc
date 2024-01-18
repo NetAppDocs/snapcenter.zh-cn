@@ -1,0 +1,149 @@
+---
+permalink: tech-refresh/task_tech_refresh_storage_system.html 
+sidebar: sidebar 
+keywords: tech refresh, storage system, 
+summary: 通过将数据从旧存储移至新存储、将新存储挂载到相应主机、然后启动数据库来执行存储系统技术更新。 
+---
+= 存储系统技术更新
+:allow-uri-read: 
+
+
+[role="lead"]
+存储技术更新后、数据将迁移到新存储、应用程序主机将挂载新存储。SnapCenter备份工作流可确定新存储、如果新存储已在SnapCenter中注册、则会创建快照。
+
+您可以对存储刷新后创建的新备份执行还原、挂载和克隆。但是、如果对存储刷新之前创建的备份执行这些操作、则会失败、因为这些备份具有旧的存储详细信息。您应运行存储技术刷新API或cmdlet、以使用新的存储详细信息更新SnapCenter中的旧备份。
+
+以下SnapCenter插件支持技术更新：
+
+* 适用于 Microsoft SQL Server 的 SnapCenter 插件
+* 适用于 Windows 的 SnapCenter 插件
+* 适用于 Oracle 数据库的 SnapCenter 插件
+* 适用于 SAP HANA 数据库的 SnapCenter 插件
+* 适用于 Microsoft Exchange Server 的 SnapCenter 插件
+
+
+支持的使用情形包括：
+
+* 主存储刷新
++
+支持通过存储技术更新将主存储更换为新存储。您不能将现有二级存储转换为主存储。
+
+* 二级存储刷新
+
+
+支持的其他方案包括：
+
+* SVM名称更改
+* 卷名称更改
+
+
+
+
+== 更新主存储的备份
+
+在对存储进行技术更新后、您应运行存储技术刷新API或cmdlet、以便使用新的存储详细信息更新SnapCenter中的旧备份。
+
+.开始之前
+由于此工作流会修改SnapCenter存储库中的数据、因此建议备份SnapCenter存储库。如果出现任何数据问题、可以使用备份将SnapCenter存储库还原到旧状态。
+
+有关详细信息，请参见 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["备份 SnapCenter 存储库"]。
+
+.步骤
+. 将数据从旧存储迁移到新存储。
++
+有关如何迁移的信息、请参见：
+
++
+** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_Storage_tech_refresh["如何将数据迁移到新存储"]
+** https://kb.netapp.com/onprem/ontap/dp/SnapMirror/How_can_I_copy_a_volume_and_preserve_all_of_the_Snapshot_copies["如何复制卷并保留所有Snapshot副本？"]
+
+
+. 将主机置于维护模式。
+. 在相应主机中挂载新存储并启动数据库。
++
+新存储应以与以前相同的方式连接到主机。例如、如果它以SAN形式连接、则需要以SAN形式连接。
+
++
+新存储需要挂载到与旧存储相同的驱动器或路径上。
+
+. 验证所有资源是否均已启动且正在运行。
+. 在SnapCenter中添加新存储。
++
+确保在SnapCenter中的各个集群之间具有唯一的SVM名称。如果在新存储中使用相同的SVM名称、并且在执行存储刷新之前可以迁移SVM的所有卷、 然后、建议删除旧集群中的SVM、并在SnapCenter中重新发现旧集群、这将从缓存中删除SVM。
+
+. 将主机置于生产模式。
+. 在SnapCenter中、为要迁移其存储的资源创建备份。SnapCenter需要使用新备份来确定最新的存储占用空间、此备份将用于更新现有旧备份的元数据。
++
+
+NOTE: 只要将新LUN连接到主机、它就会具有新的序列号。在发现Windows文件系统期间、SnapCenter会将每个唯一序列号视为新资源。在存储技术更新期间、如果新存储中的LUN使用相同的驱动器号或路径连接到主机、 在SnapCenter中发现Windows文件系统会将现有资源标记为已删除、即使它是使用相同的驱动器号或路径挂载的、也会将新LUN显示为新资源。由于该资源已标记为已删除、因此不会考虑在SnapCenter中对其进行存储技术更新、并且旧资源的所有备份都将丢失。发生存储刷新时、对于Windows文件系统资源、不应在执行存储刷新API或cmdlet之前执行资源发现。
+
+. 运行存储刷新API之一： `/5.0/techrefresh/primarystorage` 或cmdlet：_Invoe-SmTechRefreshPrimaryStorage_。
++
+
+NOTE: 如果为资源配置了已启用复制的策略、则在存储刷新后的最新备份应包含二级存储的详细信息。
+
++
+.. 如果您使用的是SQL故障转移集群实例(FCI)设置、则备份将在集群级别进行维护。您应提供集群名称作为存储技术更新的输入。
+.. 如果您使用的是SQL可用性组(AG)设置、则备份将在节点级别进行维护。您应提供节点名称作为存储技术更新的输入。
+.. 如果您使用的是Oracle Real Application Clusters (RAC)设置、则可以在任何节点上执行存储技术刷新。
++
+默认情况下，_IsDryRun_属性设置为True。它将标识要为其刷新存储的资源。您可以通过运行API："5.0/Jobs/｛jobid｝"或cmdlet _GET _SmJobSumaryReport_来查看资源和更改的存储详细信息。
+
+
+
+. 验证存储详细信息后、将_IsDryRun_属性设置为False并运行存储刷新API： `/5.0/techrefresh/primarystorage` 或cmdlet：_Invoe-SmTechRefreshPrimaryStorage_。
++
+此操作将更新旧备份中的存储详细信息。
+
++
+您可以在同一主机上多次运行API或cmdlet、只有在刷新存储后、它才会更新旧备份中的存储详细信息。
+
++
+
+NOTE: 无法在ONTAP中迁移克隆层次结构。如果要迁移的存储在SnapCenter中具有任何克隆元数据、则克隆的资源将标记为独立资源。克隆元数据的克隆将以递归方式删除。
+
+. (可选)如果未将所有快照从旧主存储移至新主存储、请运行以下API： `/5.0/hosts/primarybackupsexistencecheck` 或cmdlet _Invoe-SmPrimaryBackupsExistenceCheck_。
++
+此操作将对新主存储执行快照存在性检查、并将相应备份标记为不可用于SnapCenter中的任何操作。
+
+
+
+
+
+== 更新二级存储的备份
+
+在对存储进行技术更新后、您应运行存储技术刷新API或cmdlet、以便使用新的存储详细信息更新SnapCenter中的旧备份。
+
+.开始之前
+由于此工作流会修改SnapCenter存储库中的数据、因此建议备份SnapCenter存储库。如果出现任何数据问题、可以使用备份将SnapCenter存储库还原到旧状态。
+
+有关详细信息，请参见 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["备份 SnapCenter 存储库"]。
+
+.步骤
+. 将数据从旧存储迁移到新存储。
++
+有关如何迁移的信息、请参见：
+
++
+** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_Storage_tech_refresh["如何将数据迁移到新存储"]
+** https://kb.netapp.com/onprem/ontap/dp/SnapMirror/How_can_I_copy_a_volume_and_preserve_all_of_the_Snapshot_copies["如何复制卷并保留所有Snapshot副本？"]
+
+
+. 在主存储和新二级存储之间建立SnapMirror关系、并确保关系状态良好。
+. 在SnapCenter中、为要迁移其存储的资源创建备份。
++
+SnapCenter需要使用新备份来确定最新的存储占用空间、此备份将用于更新现有旧备份的元数据。
+
++
+
+IMPORTANT: 您应等待此操作完成。如果在完成前继续执行下一步、SnapCenter将完全丢失旧的二级快照元数据。
+
+. 成功为主机中的所有资源创建备份后、请运行二级存储刷新API： `/5.0/techrefresh/secondarystorage` 或cmdlet：_Invoe-SmTechRefreshSecondaryStorage_。
++
+此操作将更新给定主机中较早备份的二级存储详细信息。
+
++
+如果要在资源级别运行此命令，请对每个资源单击*Refresh*以更新二级存储元数据。
+
+. 成功更新旧备份后、您可以断开与主存储的旧二级存储关系。
+

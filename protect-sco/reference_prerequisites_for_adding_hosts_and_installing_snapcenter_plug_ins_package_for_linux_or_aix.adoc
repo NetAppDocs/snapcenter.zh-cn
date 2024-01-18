@@ -94,8 +94,8 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
  a| 
 所需的软件包
  a| 
-* Java 1.8.x (64位) Oracle Java和OpenJDK版本
-* Java 11 (64位) Oracle Java和OpenJDK版本
+* Java 1.8.x (64位) Oracle Java和OpenJDK
+* Java 11 (64位) Oracle Java和OpenJDK
 
 
 

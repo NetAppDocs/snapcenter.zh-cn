@@ -1,0 +1,95 @@
+---
+permalink: protect-scu/concept_overview_snapcenter_plug_in_for_UNIX_file_systems.html 
+sidebar: sidebar 
+keywords: overview, unix file system, plug-in for unix file system, backup, restore, clone 
+summary: 适用于Unix文件系统的插件支持备份、还原和克隆Unix文件系统。 
+---
+= 适用于Unix文件系统的SnapCenter插件的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在您的环境中安装适用于Unix文件系统的插件后、您可以使用SnapCenter备份、还原和克隆Unix文件系统。您还可以执行支持这些操作的任务。
+
+* 发现资源
+* 备份Unix文件系统
+* 计划备份操作
+* 还原文件系统备份
+* 克隆文件系统备份
+* 监控备份，还原和克隆操作
+
+
+
+
+== 支持的配置
+
+|===
+| 项目 | 支持的配置 
+
+
+ a| 
+环境
+ a| 
+* 物理服务器
+* 虚拟服务器
+
+
+
+
+ a| 
+操作系统
+ a| 
+* Red Hat Enterprise Linux
+* Oracle Linux
+* SUSE Linux Enterprise Server （ SLES ）
+
+
+
+
+ a| 
+文件系统
+ a| 
+* SAN ：
++
+** 基于LVM和非基于LVM的文件系统
+** 基于VMDK ext3、ext4和xfs的LVM
+
+
+* NFS：NFS v3、NFS v4.x
+
+
+
+
+ a| 
+协议
+ a| 
+* FC
+* FCoE
+* iSCSI
+* NFS
+
+
+
+
+ a| 
+多路径
+ a| 
+是的。
+
+|===
+
+
+== 限制
+
+* 不支持在一个卷组中混合使用VMM和虚拟磁盘。
+* 不支持文件级还原。
++
+但是、您可以通过克隆备份然后手动复制文件来手动执行文件级还原。
+
+* 不支持混合使用分布在NFS和VMFS数据存储库中的VMDK中的文件系统。
+* 不支持NVMe。
+* 不支持SnapMirror业务连续性(SM-BC)。
+* 不支持配置。
+

@@ -24,6 +24,7 @@ summary: 您可以在使用 SnapCenter 备份 Windows 文件系统之前为资�
 +
 默认值为 false 。
 
+* 有关SnapMirror业务连续性(SM-BC)的详细信息、请参见 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror业务连续性的对象限制"]。
 
 
 .关于此任务
@@ -37,7 +38,17 @@ summary: 您可以在使用 SnapCenter 备份 Windows 文件系统之前为资�
 +
 您可以使用GET API显示密钥的值。不支持设置API。
 
+* SnapLock
++
+** 如果选择了"将备份副本保留特定天数"选项、则SnapLock保留期限必须小于或等于上述保留天数。
+** 指定Snapshot副本锁定期限可防止删除Snapshot副本、直到保留期限到期为止。这可能会导致保留的Snapshot副本数量超过策略中指定的数量。
+** 对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。您应在SnapLock到期时间后手动清理克隆。
 
+
+
+
+
+NOTE: 主SnapLock设置在SnapCenter备份策略中进行管理、辅SnapLock设置由ONTAP进行管理。
 
 .步骤
 . 在左侧导航窗格中，单击 * 设置 * 。
@@ -103,6 +114,15 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
  a| 
 如果要指定 SnapCenter 在删除备份副本之前保留备份副本的天数，请选择此选项。
 
+
+
+ a| 
+Snapshot副本锁定期限
+ a| 
+选择Snapshot副本锁定期限、然后选择天、月或年。
+
+SnapLock保留期限应少于100年。
+
 |===
 +
 
@@ -119,9 +139,15 @@ NOTE: 对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，
 
 
  a| 
-创建本地 Snapshot 副本后更新 SnapMirror
+* 创建本地 Snapshot 副本后更新 SnapMirror *
  a| 
 选择此选项可在另一个卷（ SnapMirror ）上创建备份集的镜像副本。
+
+应为SnapMirror业务连续性(SM-BC)启用此选项。
+
+在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
+
+请参见 link:../protect-scw/task_view_related_backups_and_clones_in_the_topology_page.html["在 Topology 页面中查看相关备份和克隆"]。
 
 
 
@@ -129,6 +155,12 @@ NOTE: 对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，
 创建 Snapshot 副本后更新 SnapVault
  a| 
 选择此选项可执行磁盘到磁盘备份复制。
+
+在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。单击"Topology"页面中的"Refresh"按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
+
+如果仅在ONTAP中称为SnapLock存储的二级系统上配置了SnapLock、则单击"拓扑"页面中的"刷新"按钮可刷新从ONTAP检索到的二级系统上的锁定期限。
+
+有关SnapLock存储的详细信息、请参见 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["将Snapshot副本提交到存储目标上的WORM"]
 
 
 

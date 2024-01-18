@@ -19,19 +19,26 @@ summary: 您可以使用 SnapCenter 通过数据库备份克隆 Oracle 数据库
 
 * 关于此任务 *
 
-克隆操作会创建数据库数据文件的副本，并创建新的联机重做日志文件和控制文件。可以根据指定的恢复选项选择将数据库恢复到指定的时间。
-
+* 克隆操作会创建数据库数据文件的副本，并创建新的联机重做日志文件和控制文件。可以根据指定的恢复选项选择将数据库恢复到指定的时间。
++
 
 NOTE: 如果您尝试将 Linux 主机上创建的备份克隆到 AIX 主机，或者相反，则克隆将失败。
 
++
 从 Oracle RAC 数据库备份克隆时， SnapCenter 会创建一个独立数据库。SnapCenter 支持从数据防护备用数据库和活动数据防护备用数据库的备份创建克隆。
 
++
 克隆期间， SnapCenter 会根据 SCN 或 dat 以及恢复操作的时间挂载最佳数量的日志备份。恢复后，日志备份将被卸载。所有此类克隆都挂载在 _/var/opt/snapcenter/scU/cips/_ 下。如果您使用基于 NFS 的 ASM ，则应将 _/var/opt/snapcenter/scU/cles/*/* 添加到 asm_diskstring 参数中定义的现有路径中。
 
++
 在 SAN 环境中克隆 ASM 数据库的备份时，克隆的主机设备的 udev 规则会在 _/etc/udev/rules.d/999-scu-netapp.rules_ 上创建。删除克隆后，与克隆的主机设备关联的这些 udev 规则将被删除。
 
++
 
 NOTE: 在 FlexASM 设置中，如果基数小于 RAC 集群中的节点数，则无法对叶节点执行克隆操作。
+
+* 对于启用了SnapLock的策略、对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则在还原过程中从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+
 
 * 步骤 *
 

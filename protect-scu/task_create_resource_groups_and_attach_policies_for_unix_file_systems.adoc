@@ -1,0 +1,93 @@
+---
+permalink: protect-scu/task_create_resource_groups_and_attach_policies_for_unix_file_systems.html 
+sidebar: sidebar 
+keywords: unix file systems, resource group, policy 
+summary: 资源组是一个容器、您可以在其中添加要备份和保护的资源。 
+---
+= 为Unix文件系统创建资源组并附加策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+资源组是一个容器、您可以在其中添加要备份和保护的资源。通过资源组、您可以备份与文件系统关联的所有数据。
+
+.步骤
+. 在左侧导航窗格中，选择*Resoles*，然后从列表中选择相应的插件。
+. 在资源页面中，单击 * 新建资源组 * 。
+. 在名称页面中，执行以下操作：
++
+.. 在“名称”字段中输入资源组的名称。
++
+
+NOTE: 资源组名称不应超过 250 个字符。
+
+.. 在“标记”字段中输入一个或多个标签，以帮助您稍后搜索资源组。
++
+例如，如果您将 HR 作为标记添加到多个资源组，则稍后可以找到与 HR 标记关联的所有资源组。
+
+.. 选中此复选框、然后输入要用于Snapshot副本名称的自定义名称格式。
++
+例如， customtext_resource group_policy_hostname 或 resource group_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。
+
+
+
+. 在资源页面中，从*Host*下拉列表中选择一个Unix文件系统主机名。
++
+
+NOTE: 只有在成功发现资源后，这些资源才会列在 "Available Resources" 部分中。如果您最近添加了资源，则只有在刷新资源列表后，这些资源才会显示在可用资源列表中。
+
+. 从 "Available Resources" 部分中选择资源，然后将其移动到 "Selected Resources" 部分。
+. 在应用程序设置页面中、执行以下操作：
++
+** 选择Scripts (脚本)箭头、然后输入用于quisee (静噪)、Snapshot copy (Snapshot副本)和unquisee (取消静噪)操作的pre和post命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。
+** 选择一个备份一致性选项：
++
+*** 如果要确保在创建备份之前刷新文件系统缓存的数据，并且创建备份时不允许对文件系统执行任何输入或输出操作，请选择*文件系统一致*。
++
+
+NOTE: 对于文件系统一致性、将为卷组中涉及的LUN创建一致性组快照。
+
+*** 如果要确保在创建备份之前刷新文件系统缓存的数据，请选择*"崩溃 状态一致的*"。
++
+
+NOTE: 如果在资源组中添加了不同的文件系统、则该资源组中不同文件系统中的所有卷都将置于一致性组中。
+
+
+
+
+
+. 在策略页面中，执行以下步骤：
++
+.. 从下拉列表中选择一个或多个策略。
++
+
+NOTE: 您也可以单击来创建策略 image:../media/add_policy_from_resourcegroup.gif["添加符号"]。
+
++
+在为选定策略配置计划部分中，将列出选定策略。
+
+.. 单击 image:../media/add_policy_from_resourcegroup.gif["添加符号"] 在要配置计划的策略的 Configure Schedules 列中。
+.. 在添加策略 _policy_name_ 的计划窗口中，配置该计划，然后单击 * 确定 * 。
++
+其中， _policy_name_ 是选定策略的名称。
+
++
+已配置的计划将列在 "applied Schedules" 列中。
+
+
+
++
+如果第三方备份计划与 SnapCenter 备份计划重叠，则不支持这些计划。
+
+. 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
++
+您还必须指定发件人和收件人电子邮件地址以及电子邮件主题。如果要附加对资源组执行的操作的报告，请选择 * 附加作业报告 * 。
+
++
+
+NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 set-SmtpServer 指定 SMTP 服务器详细信息。
+
+. 查看摘要，然后单击 * 完成 * 。
+

@@ -1,0 +1,156 @@
+---
+permalink: tech-refresh/task_tech_refresh_server_host.html 
+sidebar: sidebar 
+keywords: tech refresh, SnapCenter Server, cmdlet, APIs, F5, rollback, decommission, disaster recovery, standalone 
+summary: 在新主机上安装相同版本的SnapCenter服务器、然后运行API或执行cmdlet从旧服务器备份SnapCenter并将其还原到新服务器上。 
+---
+= SnapCenter服务器主机技术更新
+:allow-uri-read: 
+
+
+[role="lead"]
+当SnapCenter服务器主机需要刷新时、您可以在新主机上安装相同版本的SnapCenter服务器、然后运行API从旧服务器备份SnapCenter并将其还原到新服务器上。
+
+.步骤
+. 部署新主机并执行以下任务：
++
+.. 安装相同版本的SnapCenter服务器。
+.. (可选)配置CA证书并启用双向SSL。有关详细信息，请参见 https://docs.netapp.com/us-en/snapcenter/install/reference_generate_CA_certificate_CSR_file.html["配置 CA 证书"] 和 https://docs.netapp.com/us-en/snapcenter/install/task_configure_two_way_ssl.html["配置并启用双向SSL"]。
+.. (可选)配置多因素身份验证。有关详细信息，请参见 https://docs.netapp.com/us-en/snapcenter/install/enable_multifactor_authentication.html["启用多因素身份验证"]。
+
+
+. 以SnapCenter管理员用户身份登录。
+. 使用API在旧主机上为SnapCenter服务器创建备份： `/5.0/server/backup` 或cmdlet：_New-SmServerBackup_。
++
+
+NOTE: 在创建备份之前、请暂停所有计划的作业、并确保没有正在运行的作业。
+
++
+
+IMPORTANT: 如果要在新域上运行的SnapCenter服务器上还原备份、则在创建备份之前、应在旧SnapCenter主机中添加新域用户并分配SnapCenter管理员角色。
+
+. 将备份从旧主机复制到新主机。
+. 使用API在新主机上还原SnapCenter服务器的备份： `/5.0/server/restore` 或cmdlet：_Restore-SmServerBackup_。
++
+默认情况下、还原操作将更新所有主机中的新SnapCenter服务器URL。如果要跳过更新，请使用--SkipSMSURLInHosts_属性，并通过使用API之一运行来单独更新服务器URL： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+
++
+
+NOTE: 如果插件主机无法解析服务器主机名、请登录到每个插件主机、并以<New IP> SC_SERVER_NAME格式为新IP添加_ETC/HOST_条目。
+
++
+
+NOTE: 服务器_/etc/host_条目将不会还原。您可以从旧服务器手动还原它。
+
++
+如果在新域上运行的SnpCenter服务器上还原了备份、并且要继续使用旧域用户、则应在新的SnapCenter服务器中注册旧域。
+
++
+
+NOTE: 如果已手动更新旧SnapCenter主机中的web.config文件、则更新不会复制到新主机。您应在新主机的web.config文件中手动进行相同的更改。
+
+. 如果您跳过更新SnapCenter服务器URL、或者任何主机在还原过程中发生故障、请使用API更新由SnapCenter管理的所有主机或指定主机中的新服务器名称： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+. 从新的SnapCenter服务器激活所有主机上的已计划作业。
+
+
+
+
+== F5集群中节点的技术更新
+
+您可以通过删除F5集群中的任何节点并添加新节点来对该节点进行技术更新。如果需要刷新的节点处于活动状态、请将集群中的另一个节点设置为活动状态、然后删除该节点。
+
+有关如何将节点添加到F5集群的信息、请参见 https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["使用 F5 配置 SnapCenter 服务器以实现高可用性"]。
+
+
+NOTE: 如果F5集群的URL发生更改、则可以使用API在所有主机中更新此URL： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+
+
+
+== 停用旧SnapCenter服务器主机
+
+您可以在验证新SnapCenter服务器是否已启动且正在运行、并且所有插件主机均可与新SnapCenter服务器主机通信之后删除旧的SnapCenter服务器主机。
+
+
+
+== 回滚到旧的SnapCenter服务器主机
+
+如果出现任何问题、您可以通过使用API更新所有主机中的SnapCenter服务器URL来恢复旧的SnapCenter服务器主机： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+
+
+
+== 灾难恢复
+
+
+
+=== 对独立SnapCenter主机进行灾难恢复
+
+您可以通过将服务器备份还原到新主机来执行灾难恢复。
+
+.开始之前
+确保您已备份旧SnapCenter服务器。
+
+.步骤
+. 部署新主机并执行以下任务：
++
+.. 安装相同版本的SnapCenter服务器。
+.. 配置CA证书并启用双向SSL。有关详细信息，请参见 https://docs.netapp.com/us-en/snapcenter/install/reference_generate_CA_certificate_CSR_file.html["配置 CA 证书"] 和 https://docs.netapp.com/us-en/snapcenter/install/task_configure_two_way_ssl.html["配置并启用双向SSL"]。
+
+
+. 将旧的SnapCenter服务器备份复制到新主机。
+. 以SnapCenter管理员用户身份登录。
+. 使用API在新主机上还原SnapCenter服务器的备份： `/5.0/server/restore` 或cmdlet：_Restore-SmServerBackup_。
++
+默认情况下、还原操作将更新所有主机中的新SnapCenter服务器URL。如果要跳过更新，请使用--SkipSMSURLInHosts_属性，并使用API单独更新服务器URL： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+
++
+
+NOTE: 如果插件主机无法解析服务器主机名、请登录到每个插件主机、并以<New IP> SC_SERVER_NAME格式为新IP添加_ETC/HOST_条目。
+
++
+
+NOTE: 服务器_/etc/host_条目将不会还原。您可以从旧服务器手动还原它。
+
+. 如果您跳过了更新URL的操作、或者任何主机在还原过程中出现故障、请使用API更新由SnapCenter管理的所有主机或指定主机中的新服务器名称： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+
+
+
+
+=== 对SnapCenter F5集群进行灾难恢复
+
+您可以通过将服务器备份还原到新主机、然后将独立主机转换为集群来执行灾难恢复。
+
+.开始之前
+确保您已备份旧SnapCenter服务器。
+
+.步骤
+. 部署新主机并执行以下任务：
++
+.. 安装相同版本的SnapCenter服务器。
+.. 配置CA证书并启用双向SSL。有关详细信息，请参见 https://docs.netapp.com/us-en/snapcenter/install/reference_generate_CA_certificate_CSR_file.html["配置 CA 证书"] 和 https://docs.netapp.com/us-en/snapcenter/install/task_configure_two_way_ssl.html["配置并启用双向SSL"]。
+
+
+. 将旧的SnapCenter服务器备份复制到新主机。
+. 以SnapCenter管理员用户身份登录。
+. 使用API在新主机上还原SnapCenter服务器的备份： `/5.0/server/restore` 或cmdlet：_Restore-SmServerBackup_。
++
+默认情况下、还原操作将更新所有主机中的新SnapCenter服务器URL。如果要跳过更新，请使用--SkipSMSURLInHosts_属性，并使用API单独更新服务器URL： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+
++
+
+NOTE: 如果插件主机无法解析服务器主机名、请登录到每个插件主机、并以<New IP> SC_SERVER_NAME格式为新IP添加_ETC/HOST_条目。
+
++
+
+NOTE: 服务器_/etc/host_条目将不会还原。您可以从旧服务器手动还原它。
+
+. 如果您跳过了更新URL的操作、或者任何主机在还原过程中出现故障、请使用API更新由SnapCenter管理的所有主机或指定主机中的新服务器名称： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+. 将独立主机转换为F5集群。
++
+有关如何配置F5的信息、请参见 https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["使用 F5 配置 SnapCenter 服务器以实现高可用性"]。
+
+
+
+.相关信息
+有关API的信息、您需要访问Swagger页面。请参见 link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["如何使用 Swagger API 网页访问 REST API"]。
+
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"^]。

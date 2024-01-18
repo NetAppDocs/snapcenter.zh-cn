@@ -11,7 +11,7 @@ summary: 如果数据库存储在虚拟机（ VM ）上，或者您要保护 VM 
 
 
 [role="lead"]
-如果数据库存储在虚拟机（ VM ）上，或者您要保护 VM 和数据存储库，则必须部署适用于 VMware vSphere 的 SnapCenter 插件虚拟设备。
+如果数据库或文件系统存储在虚拟机(VM)上、或者您要保护虚拟机和数据存储库、则必须部署适用于VMware vSphere虚拟设备的SnapCenter插件。
 
 有关部署的信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["部署概述"^]。
 

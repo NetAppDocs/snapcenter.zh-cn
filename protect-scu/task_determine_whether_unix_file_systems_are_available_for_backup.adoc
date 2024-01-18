@@ -1,0 +1,31 @@
+---
+permalink: protect-scu/task_determine_whether_unix_file_systems_are_available_for_backup.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for UNIX file systems, discovery,file systems, UNIX, Unix file systems 
+summary: '安装适用于Unix文件系统的插件后、系统会自动发现主机上的文件系统、并将其显示在"ResResu材料"页面中。' 
+---
+= 发现可供备份的UNIX文件系统
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安装此插件后、系统会自动发现此主机上的所有文件系统、并将其显示在"Resus"页面中。您可以将这些文件系统添加到资源组中以执行数据保护操作。
+
+.开始之前
+* 您必须已完成安装SnapCenter服务器、添加主机和创建存储系统连接等任务。
+* 如果文件系统驻留在虚拟机磁盘(VMDK)或原始设备映射(RDM)上、则必须部署适用于VMware vSphere的SnapCenter插件并向SnapCenter注册此插件。
++
+有关详细信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["部署适用于 VMware vSphere 的 SnapCenter 插件"^]。
+
+
+
+.步骤
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在“资源”页面中，从“视图”列表中选择*Path*。
+. 单击 * 刷新资源 * 。
++
+此时将显示文件系统以及类型、主机名、关联资源组和策略以及状态等信息。
+
+

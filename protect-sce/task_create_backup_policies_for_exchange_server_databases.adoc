@@ -41,13 +41,29 @@ summary: 您可以在使用 SnapCenter 备份 Microsoft Exchange Server 资源�
 +
 您可以使用GET API显示密钥的值。不支持设置API。
 
-
-
++
 |===
 
 
 | * 最佳实践： * 最好根据要保留的完整备份和日志备份总数配置二级保留策略。在配置二级保留策略时，请注意，如果数据库和日志位于不同的卷中，则每个备份可以包含三个 Snapshot 副本，而数据库和日志位于同一个卷中，则每个备份可以包含两个 Snapshot 副本。 
 |===
+* SnapLock
++
+** 如果选择了"将备份副本保留特定天数"选项、则SnapLock保留期限必须小于或等于上述保留天数。
++
+指定Snapshot副本锁定期限可防止删除Snapshot副本、直到保留期限到期为止。  这可能会导致保留的Snapshot副本数量超过策略中指定的数量。
+
++
+对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。  您应在SnapLock到期时间后手动清理克隆。
+
++
+
+NOTE: 主SnapLock设置在SnapCenter备份策略中进行管理、辅SnapLock设置由ONTAP进行管理。
+
+
+
+
+
 .步骤
 . 在左侧导航窗格中，单击 * 设置 * 。
 . 在设置页面中，单击 * 策略 * 。
@@ -190,6 +206,15 @@ IMPORTANT: 如果计划启用 SnapVault 复制，则必须将保留计数设置�
 
 日志备份会保留到完整备份的天数。
 
+
+
+ a| 
+Snapshot副本锁定期限
+ a| 
+选择*Snapshot副本锁定期限*，然后选择天、月或年。
+
+SnapLock保留期限应少于100年。
+
 |===
 +
 如果您选择 * 日志备份 * 作为备份类型，则日志备份将作为完整备份的最新保留设置的一部分保留。
@@ -213,6 +238,15 @@ IMPORTANT: 如果计划启用 SnapVault 复制，则必须将保留计数设置�
 将完整备份保留特定天数
  a| 
 选择 * 将 Snapshot 副本保留 * 选项，并指定保留 Snapshot 副本（完整备份）的天数。
+
+
+
+ a| 
+Snapshot副本锁定期限
+ a| 
+选择*Snapshot副本锁定期限*，然后选择天、月或年。
+
+SnapLock保留期限应少于100年。
 
 |===
 +
@@ -239,6 +273,12 @@ NOTE: 如果您的数据库在 DAG 配置中的主机上仅具有日志备份，
 
  a| 
 创建本地 Snapshot 副本后更新 SnapMirror
+
+在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。
+
+单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
+
+请参见 link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["在 Topology 页面中查看 Exchange 备份"]。
  a| 
 选择此选项可将备份集的镜像副本保留在另一个卷（ SnapMirror ）上。
 

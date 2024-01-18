@@ -25,7 +25,7 @@ summary: 您应从 SnapCenter 图形用户界面安装适用于 Exchange 的插�
 . 在 SnapCenter 服务器主机上，使用 _Open-SmConnection_ cmdlet 建立会话，然后输入凭据。
 . 使用带有所需参数的 _Add-SmHost_ cmdlet 添加要安装适用于 Exchange 的插件的主机。
 +
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 +
 主机可以是独立主机或 DAG 。如果指定 DAG ，则需要使用 _-isDAG_ 参数。

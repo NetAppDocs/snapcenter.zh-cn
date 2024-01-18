@@ -80,7 +80,7 @@ NOTE: 有关如何编辑 asm_diskstring 参数的信息，请参见 https://kb.n
 
 +
 有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。
-或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["《 SnapCenter 软件命令参考指南》"^]。
+或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896["《 SnapCenter 软件命令参考指南》"^]。
 
 
 
