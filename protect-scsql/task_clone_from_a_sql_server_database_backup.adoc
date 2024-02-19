@@ -41,7 +41,7 @@ summary: 您可以使用 SnapCenter 克隆 SQL Server 数据库备份。如果�
 
 NOTE: 对于虚拟环境（ VMDB/RDM ），请确保挂载点是专用磁盘。
 
-* 对于启用了SnapLock的策略、对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 .步骤

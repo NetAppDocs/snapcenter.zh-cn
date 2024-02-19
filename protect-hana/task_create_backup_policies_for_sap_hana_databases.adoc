@@ -42,7 +42,7 @@ summary: 在使用 SnapCenter 备份 SAP HANA 数据库资源之前，您必须�
 +
 ** 如果选择了"将备份副本保留特定天数"选项、则SnapLock保留期限必须小于或等于上述保留天数。
 ** 指定Snapshot副本锁定期限可防止删除Snapshot副本、直到保留期限到期为止。这可能会导致保留的Snapshot副本数量超过策略中指定的数量。
-** 对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。您应在SnapLock到期时间后手动清理克隆。
+** 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 

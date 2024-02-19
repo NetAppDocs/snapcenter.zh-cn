@@ -24,7 +24,7 @@ summary: 任何数据保护作业都需要资源组。您还必须将一个或�
 +
 您可以使用GET API显示密钥的值。不支持设置API。
 
-* 对于启用了SnapLock的策略、对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则在还原过程中从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 .步骤

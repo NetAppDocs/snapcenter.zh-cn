@@ -44,4 +44,4 @@ SnapCenter 支持备份不同的 Oracle 数据库配置。
 
 
 
-有关支持的 Oracle 版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=112391;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+有关支持的 Oracle 版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=117016;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"^]。

@@ -54,7 +54,7 @@ summary: 您可以在使用 SnapCenter 备份 Microsoft Exchange Server 资源�
 指定Snapshot副本锁定期限可防止删除Snapshot副本、直到保留期限到期为止。  这可能会导致保留的Snapshot副本数量超过策略中指定的数量。
 
 +
-对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。  您应在SnapLock到期时间后手动清理克隆。
+对于ONTAP 9.12.1及更低版本、从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 +
 

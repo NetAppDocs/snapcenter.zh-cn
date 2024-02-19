@@ -15,7 +15,7 @@ summary: 资源组是指必须向其添加要备份和保护的资源的容器�
 
 .关于此任务
 * 要创建 SAP HANA 系统复制备份，建议将 SAP HANA 系统的所有资源添加到一个资源组中。这样可以确保在接管 - 故障恢复模式下进行无缝备份。
-* 对于启用了SnapLock的策略、对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 .步骤

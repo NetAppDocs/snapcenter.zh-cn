@@ -20,7 +20,7 @@ summary: '您应使用 SnapCenter 用户界面（ UI ）安装适用于 SAP HANA
 互操作性表工具（ IMT ）包含有关受支持配置的最新信息。
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=112393;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
 
 * 适用于 SAP HANA 数据库的 SnapCenter 插件是适用于 Linux 的 SnapCenter 插件包的一部分。在安装适用于 Linux 的 SnapCenter 插件软件包之前，您应已在 Windows 主机上安装 SnapCenter 。
 
