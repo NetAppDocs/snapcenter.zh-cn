@@ -41,6 +41,7 @@ SnapCenter 既包括 SnapCenter 服务器，也包括单个轻型插件。您可
 +
 ** 位于 Cloud Volumes ONTAP （原 ONTAP 云）主系统上的数据
 ** Amazon FSX for ONTAP 上的数据
+** 主Azure NetApp Files (Oracle、Microsoft SQL和SAP HANA)上的数据
 
 
 

@@ -1,0 +1,35 @@
+---
+permalink: protect-azure/create-backup-policies-oracle.html 
+sidebar: sidebar 
+keywords: create policies, Oracle, backup policies 
+summary: 为要备份的资源或资源组创建备份策略。 
+---
+= 为 Oracle 数据库创建备份策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在使用 SnapCenter 备份 Oracle 数据库资源之前，您必须为要备份的资源或资源组创建备份策略。
+
+.步骤
+. 在左侧导航窗格中，单击 * 设置 * 。
+. 在设置页面中，单击 * 策略 * 。
+. 从下拉列表中选择Oracle Database。
+. 单击 * 新建 * 。
+. 在名称页面中，输入策略名称和问题描述。
+. 在备份类型页面中，执行以下步骤：
++
+.. 选择联机或脱机备份类型。
+.. 指定计划频率。
+.. 如果要使用 Oracle Recovery Manager （ RMAN ）对备份进行目录编制，请选择 * 使用 Oracle Recovery Manager （ RMAN ）对备份进行目录编制 * 。
+.. 如果要在备份后对归档日志进行修剪，请选择 * 备份后对归档日志进行修剪 * 。
+.. 指定删除归档日志设置。
+
+
+. 在保留页面中、指定保留设置。
+. 在脚本页面中，分别输入要在备份操作之前或之后运行的预处理或后处理的路径和参数。
+. 在验证页面中、选择要执行验证操作的备份计划、并分别输入要在验证操作之前或之后运行的规定或后处理脚本的路径和参数。
+. 查看摘要并单击 * 完成 * 。
+

@@ -1,0 +1,52 @@
+---
+permalink: protect-azure/clone-sap-hana-database-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database, clone, database, backups 
+summary: 您可以使用 SnapCenter 克隆备份。 
+---
+= 克隆SAP HANA数据库备份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SnapCenter 克隆备份。
+
+.步骤
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面中，根据资源类型从 * 视图 * 下拉列表中筛选资源。
+. 选择资源或资源组。
+. 从管理副本视图中，从主存储系统中选择*备份*。
+. 从表中选择数据备份，然后单击 image:../media/clone_icon.gif["克隆图标"]。
+. 在位置页面中，执行以下操作：
++
+.. 选择安装了SAP HANA插件以管理克隆的HANA系统的主机。
++
+它可以是集中式插件主机、也可以是HANA系统主机。
+
+.. 输入要从现有备份克隆的SAP HANA SID。
+.. 输入要导出克隆卷的 IP 地址或主机名。
+.. 如果在手动QoS容量池中配置了SAP HANA数据库ANF卷、请为克隆的卷指定QoS。
++
+如果未为克隆的卷指定QoS、则会使用源卷的QoS。如果使用自动QoS容量池、则指定的QoS值将被忽略。
+
+
+
+. 在脚本页面中，执行以下步骤：
++
+.. 输入克隆前或克隆后分别应在克隆操作之前或之后运行的命令。
+.. 输入 mount 命令将文件系统挂载到主机。
++
+如果自动发现源HANA系统、并且在SAP HANA主机上安装了克隆目标主机插件、则SnapCenter会自动卸载克隆目标主机上的现有HANA数据卷、并挂载新克隆的HANA数据卷。
+
+
+
+. 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
+. 查看摘要，然后单击 * 完成 * 。
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
++
+
+NOTE: 已对ANF克隆禁用克隆拆分、因为ANF克隆已是使用选定Snapshot副本创建的独立卷。
+
+

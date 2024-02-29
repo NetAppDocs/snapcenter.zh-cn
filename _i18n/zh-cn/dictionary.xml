@@ -8840,4 +8840,210 @@ SnapLock设置由ONTAP管理。</block>
   <block id="f70e7af7132291b170364c37c143af5f" category="paragraph">对于ONTAP 9.12.1及更低版本、从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。</block>
   <block id="d24a44cebb5d893d4a6ffefcfde236ea" category="paragraph">有关 ONTAP 和应用程序插件的最低要求，请参见<block ref="fb6518117a57311639cf7e25ef1c11e1" category="inline-link-rx"></block>。</block>
   <block id="9f15a95270d57c31e3fbf8e82eb6d5a6" category="paragraph">请参见<block ref="fb6518117a57311639cf7e25ef1c11e1" category="inline-link-rx"></block></block>
+  <block id="9166c380efba6c6a0d61dc08bcc135ee" category="summary">为要备份的资源或资源组创建备份策略。</block>
+  <block id="73f45971c435fbf9828b3c34fe76a670" category="paragraph">在使用 SnapCenter 备份 Oracle 数据库资源之前，您必须为要备份的资源或资源组创建备份策略。</block>
+  <block id="32005b30ff172564875bf82c9538168f" category="list-text">从下拉列表中选择Oracle Database。</block>
+  <block id="079151e2a65ec7ff3445310b706078c0" category="list-text">选择联机或脱机备份类型。</block>
+  <block id="e1f4feb4c45f5316b8eb2a7570b14cec" category="list-text">指定计划频率。</block>
+  <block id="35968ec44acc7cc8a13556f173c47cc3" category="list-text">指定删除归档日志设置。</block>
+  <block id="8bf586bfc11638f24bb033f322fb6ce1" category="list-text">在保留页面中、指定保留设置。</block>
+  <block id="7db2a3f013bbf7ae548baa053e8f7584" category="list-text">在验证页面中、选择要执行验证操作的备份计划、并分别输入要在验证操作之前或之后运行的规定或后处理脚本的路径和参数。</block>
+  <block id="5dac7fdec7dddd64bc366ee8bd5cd09d" category="list-text">在“资源”页中，从“视图”列表中选择*Database或*Resource Group*。</block>
+  <block id="58b7e36fa95125edcb8d66ea2e67582f" category="list-text">从管理副本视图中，从主存储系统中选择*备份*。</block>
+  <block id="2f8a690686af1b1cda975ef6f4f1bed0" category="list-text">如果您在RAC环境中选择了数据库的备份、请选择RAC。</block>
+  <block id="1399d83514b742ea6df34f461fcc4de2" category="list-text">如果只想恢复数据库文件，请选择*所有数据文件*。</block>
+  <block id="acdb11b54cf63e8364ce855a4985b70a" category="list-text">如果只想还原表空间，请选择*Tableespies*。</block>
+  <block id="e2d164854dc02140bc455818e74a5c33" category="list-text">如果要还原Data Guard备用数据库或Active Data Guard备用数据库的重做日志文件，请选择*重做日志文件*。</block>
+  <block id="03853c460c3f942eb442c5ca0ad40fad" category="list-text">选择*可插拔数据库*并指定要恢复的PDB。</block>
+  <block id="57845f4a15c2596bee374a61bd147668" category="list-text">如果要将数据库还原到创建备份的同一SQL Server，请选择*将数据库还原到创建备份的同一主机*。</block>
+  <block id="5ccb59313a41bd2c5b6739ff2b109e74" category="list-text">如果要将数据库恢复到同一或不同主机中的其他SQL Server，请选择*将数据库恢复到备用主机*。</block>
+  <block id="d3848423ad873508b35dee4f882c93c1" category="list-text">如果要恢复到上一个事务，请选择*所有日志*。</block>
+  <block id="5d5be53ceca242c265f3132067176acf" category="list-text">如果要恢复到特定的scn，请选择*Until scn (系统变更号)*。</block>
+  <block id="876471c99dbc13177cc4d457546d7871" category="list-text">如果要恢复到特定日期和时间，请选择*日期和时间*。</block>
+  <block id="29efffe1f66a8912fca8bb27c93fc1b8" category="list-text">如果不想恢复，请选择*不恢复*。</block>
+  <block id="961e01d405e8a902edb16845143ab971" category="list-text">如果要指定外部归档日志文件的位置，请选择*指定外部归档日志位置*。</block>
+  <block id="6882420907ef9d77d69021bc2b742fdf" category="list-text">在操作前和操作后页面中、指定所需的详细信息。</block>
+  <block id="dfd5f1051da1aa9e9af8ea3369dfdb2f" category="paragraph">您可以还原已损坏或丢弃的部分表空间、而不会影响数据库中的其他表空间。SnapCenter 使用 RMAN 对表空间执行时间点恢复（ PITR ）。</block>
+  <block id="35e42acf13f657c4bd3843e31c6b7b55" category="list-text">选择类型为单实例(多租户)的数据库。</block>
+  <block id="9a40b04f123f9d768ad814799ac13ed6" category="list-text">选择编目备份、然后单击*<block ref="401f8f248ae37b21256b9fc8e83bcaa3" category="inline-image-macro-rx" type="image"></block>*</block>
+  <block id="f10007ef38ad8ef0be191acdb24506f2" category="list-text">如果在RAC环境中选择了数据库的备份，请选择*RAC*。</block>
+  <block id="c319a65d4dabd1b8676673c0f51fbca4" category="list-text">如果要还原PDB，请选择*可插拔数据库(PDB)*。</block>
+  <block id="7a30df58c32f2e58ee04367dc1a289ff" category="list-text">如果要在PDB中还原表空间，请选择*可插拔数据库(PDB)表空间*。</block>
+  <block id="d9c103e9b28e2bebca1491609f830d9e" category="list-text">选择备份类型。</block>
+  <block id="8b7749a11c408f4525e8b6cd3dbf31fa" category="list-text">如果要备份数据库文件和事务日志，请选择*完整备份和日志备份*。</block>
+  <block id="411148f58714b813c6fcff4f84e64c7e" category="list-text">如果只想备份数据库文件，请选择*Full Backup*。</block>
+  <block id="181c2702cfecfcccae058cc9bef558cf" category="list-text">如果只想备份事务日志，请选择*Log Backup*。</block>
+  <block id="4f33ec7f0b6c5efe51b9298d732010fe" category="list-text">如果要使用其他应用程序备份资源，请选择*仅复制备份*。</block>
+  <block id="1a97eb2e4853a1fca9bc58dd7af59b48" category="list-text">如果只想备份首选备份副本、请选择备份首选备份副本。</block>
+  <block id="9ec51e1bd21eedcf15db405459689d24" category="list-text">为备份选择主AG副本或二级AG副本。</block>
+  <block id="ec3712a222adf7900d9abd47ada2d148" category="list-text">选择备份优先级。</block>
+  <block id="e392de06f36aab499d20ac2874bd6a7a" category="list-text">指定计划类型。</block>
+  <block id="1616215a05c2a11b9d7f8a7b0c957551" category="list-text">在保留页面中、根据所选备份类型、指定保留设置。</block>
+  <block id="8164c29499ad21176441bff9c0dfb5a6" category="admonition">不支持复制到二级存储。</block>
+  <block id="c9d5c0fdf2d0d7d116a31da7f7075cf2" category="list-text">选择*Suppress all information messages (NO_INFOMSGS)*以禁止所有信息性讯息。</block>
+  <block id="1ecb3b72a5b2c2c1236cd984534e09ff" category="paragraph">默认情况下处于选中状态。</block>
+  <block id="d3f2f88e0e51cd1bb2e765ff2a9329ea" category="list-text">如果不想检查非集群索引，请选择 * 不检查非集群索引（ NOINDEX ） * 。</block>
+  <block id="7ce3afddd78d2c95f3288b6c71328476" category="summary">从"Resourcs"页面备份资源。</block>
+  <block id="cffecc178cc1b99a91effece6bd4417b" category="doc">备份在Azure NetApp Files上运行的SQL Server数据库</block>
+  <block id="79acc61170d146040e6782f199b67161" category="list-text">在“资源”页中，从“视图”下拉列表中选择*Database *、*Instance*或*Availability Group*。</block>
+  <block id="fddaa056d058e982a13036e05323d6f8" category="list-text">选择*使用Microsoft SQL Server计划程序*，然后从与计划策略关联的*计划程序实例*下拉列表中选择计划程序实例。</block>
+  <block id="444abdb0adbf904dfeb2b6b85da3e698" category="list-text">选择验证服务器。</block>
+  <block id="102beeaa44096cb1c4640f46b3cabe69" category="list-text">选择*备份后运行验证*或*运行计划的验证*。</block>
+  <block id="2c7804d18e9ae000973714b450e90bee" category="list-text">如果有多个策略与资源相关联，请从*Policy*下拉列表中选择要用于备份的策略。</block>
+  <block id="51bfdba913c7ca3420c862bcfa885fba" category="list-text">选择*备份后验证*。</block>
+  <block id="1a8b5d536181d67e04a2989ce55f1471" category="summary">您可以使用 SnapCenter 克隆备份。</block>
+  <block id="e42122c0e464caa33250257fa8321c7b" category="doc">克隆Oracle数据库备份</block>
+  <block id="11e13a2f33d440e2a7175548ecae015f" category="list-text">选择数据库。</block>
+  <block id="f27570b9a0395e940f2b631b70c9c9f3" category="list-text">从管理副本视图页面中、从主存储系统选择备份。</block>
+  <block id="dc1a7c9a6c9105494aa3e624b96a4a8a" category="list-text">选择数据备份、然后单击*<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*</block>
+  <block id="e5c5d189e7dca60262ce11d4d8948a36" category="list-text">在名称页面中、选择是要克隆数据库(CDB还是非CDB)还是克隆可插拔数据库(PDB)。</block>
+  <block id="9b65003600b751fccc76508227fd13ab" category="list-text">在位置页面中、指定所需的详细信息。</block>
+  <block id="b1410d725eb84bd1cd2dc5a0773800ed" category="paragraph">如果在手动QoS容量池中配置了Oracle数据库ANF卷、请为克隆的卷指定QoS。</block>
+  <block id="3cf00704aaf3ff788104ae85f809de64" category="paragraph">如果未为克隆的卷指定QoS、则会使用源卷的QoS。如果使用自动QoS容量池、则指定的QoS值将被忽略。</block>
+  <block id="3bac96329347bd387d3dc16e22e55c99" category="list-text">在凭据页面中、执行以下操作之一：</block>
+  <block id="fa4de18b260a3195ce9f3aa2275053fe" category="list-text">对于sys用户的凭据名称、选择用于定义克隆数据库的sys用户密码的凭据。</block>
+  <block id="21daac57ff613e2256c134d57a24b7fe" category="list-text">对于ASM Instance凭据名称，如果启用了操作系统身份验证以连接到克隆主机上的ASM实例，请选择*None*。</block>
+  <block id="478856c905ade2c9882f8f0df0259cdc" category="paragraph">否则、请选择配置了"sys"用户或具有适用于克隆主机的"sysasm"权限的用户的Oracle ASM凭据。</block>
+  <block id="68571f7a88ba34fcf2f6bd54a8757e49" category="list-text">在"Pre-Ops"页面中、指定预置参数的路径和参数、并在"Database Parameter Settings"部分中、修改用于初始化数据库的预填充数据库参数的值。</block>
+  <block id="b5b8ca4c1991a55b0219f5cabf10cfcf" category="list-text">默认情况下，在“操作后”页面中，选择了“恢复数据库”和“直到取消”来恢复克隆的数据库。</block>
+  <block id="f27d210631347656f8a0cd665f480ed0" category="list-text">如果您选择*取消*，SnapCenter将通过在选择进行克隆的数据备份之后挂载最新日志备份来执行恢复，该备份包含完整的归档日志序列。</block>
+  <block id="2aac70261177d063218ac71d31d5ea6b" category="list-text">如果选择*日期和时间*，SnapCenter将数据库恢复到指定的日期和时间。</block>
+  <block id="8e177bbd95dbc94a22433e0d93d58971" category="list-text">如果选择*Until scn*，SnapCenter将数据库恢复到指定的scn。</block>
+  <block id="7bf7e16e76dcebbcabe537cf40e7eaa0" category="list-text">如果选择*指定外部归档日志位置*，SnapCenter将根据指定的scn或选定的日期和时间确定并装载最佳数量的日志备份。</block>
+  <block id="c3117bb6d1093367c8c8311f31a140cd" category="list-text">默认情况下，选中*Create new DBID*复选框，为克隆的数据库生成唯一编号(DBID)，将其与源数据库区分开来。</block>
+  <block id="0b001fe4141b08084edf2ba3b8c346a0" category="list-text">如果要为克隆的数据库的默认临时表空间创建临时文件，请选中*为临时表空间创建临时文件*复选框。</block>
+  <block id="cfd2830969742a0cf37ec3c88a0c7896" category="list-text">在*输入创建克隆时要应用的SQL条目*中，添加要在创建克隆时应用的SQL条目。</block>
+  <block id="95ec4bf6dbf6754ecfda5bb09b3a8415" category="list-text">在*输入克隆操作后运行的脚本*中，指定要在克隆操作后运行的PostScript的路径和参数。</block>
+  <block id="dcc66de93aefa3105fda8cbdb3cdc2cf" category="list-text">选择备份，然后单击 *<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*</block>
+  <block id="13bc47d703b82b962d33b3cf47bf64fb" category="list-text">在名称页面中，选择*PDB克隆*并指定其他详细信息。</block>
+  <block id="92336218cb59d91f7080fee85c60b95f" category="list-text">在"Post-Ops"页面中、默认情况下会选中*直到取消*以执行克隆数据库的恢复。</block>
+  <block id="82a14f04b2bdde64af5a7a694ab98bba" category="section-title">拆分Oracle数据库克隆</block>
+  <block id="787b61c3679ebc574f4962a1f5aebb0c" category="list-text">选择克隆的资源(例如数据库或LUN)、然后单击*<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*</block>
+  <block id="562ffa91cb05be38d306e7ac7ab12d9c" category="list-text">从管理副本视图中，从主存储系统中选择*Clones *。</block>
+  <block id="62ef6c6e852eca46dfc82fdc6ad386b2" category="list-text">选择PDB克隆(目标CDB：PDBClone)、然后单击*<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*</block>
+  <block id="06297b8a736154148ec90e3788831eaa" category="doc">还原和恢复SQL Server数据库</block>
+  <block id="b01943524a657671dfae0f3f1f0948e5" category="paragraph">您可以使用 SnapCenter 还原备份的 SQL Server 数据库。数据库还原是一个多阶段过程、它会将所有数据和日志页面从指定的SQL Server备份复制到指定的数据库。</block>
+  <block id="ddec2d3a4d88b9b7250ed10e6ef19f3f" category="list-text">从管理副本视图中，选择*从存储系统备份*。</block>
+  <block id="6408662ebc634bb326a1dde94a44620f" category="list-text">选择*所有日志备份*最新备份还原操作、在完整备份后还原所有可用的日志备份。</block>
+  <block id="aa9472a7b9cb1fc29c7cbe53b4716e81" category="summary">在SnapCenter中配置Azure存储帐户。</block>
+  <block id="118cba115d0fa759158cb2faa450d5de" category="doc">配置Azure存储帐户</block>
+  <block id="fadf22d2749d2c990d51a1177ed75a3c" category="paragraph">您应在SnapCenter中配置Azure存储帐户。</block>
+  <block id="f2a9b03c9542d4be6aef4bdb2f408f9e" category="paragraph">Azure存储帐户包含有关订阅ID、Azure凭据和Azure NetApp帐户的详细信息。</block>
+  <block id="8f8706f3da7c34c2111a8e25ce94e098" category="list-text">在存储系统页面中，选择*New*并单击Azure NetApp Files。</block>
+  <block id="b67933dc97bd3a16f77741efb04c9c6a" category="list-text">从相应的下拉列表中选择凭据、订阅ID和NetApp帐户。</block>
+  <block id="b19cf02c2424a0928eeec4a9d7a2f2f8" category="summary">在Azure虚拟机上下载并安装SnapCenter。</block>
+  <block id="cefcdf7a4638575f474bc5a3bda6c998" category="doc">在Azure虚拟机上安装SnapCenter</block>
+  <block id="4370482304eb1ca0418f2cd3fd63eb67" category="paragraph">您可以从NetApp 支持站点 下载SnapCenter软件、然后在Azure虚拟机上安装该软件。</block>
+  <block id="ce65cbdd1461bceb86d66ab0fad635e1" category="paragraph">确保Azure Windows虚拟机满足SnapCenter服务器安装要求。有关信息，请参见 <block ref="b3dec771f92c2fb9f455ad37ca093b8b" category="inline-link-macro-rx"></block>。</block>
+  <block id="70c594713d865f6147d93e740c40169b" category="list-text">从下载 SnapCenter 服务器安装包<block ref="ae591c0a5c1f7ed1b2805b45c211ae4c" category="inline-link-rx"></block>。</block>
+  <block id="ba1d33ffe1922d93bdd900b985993172" category="paragraph">启动安装后、将执行所有预检、如果不满足最低要求、则会显示相应的错误或警告消息。您可以忽略警告消息并继续安装；但是，错误应予以修复。</block>
+  <block id="944ed313a3d76953a4897da7159e4286" category="admonition">存储库数据库的自定义路径不支持特殊字符"%"。如果在路径中包含 "%" ，则安装将失败。</block>
+  <block id="a8ba59cefefd06f7932de8d4f14fea85" category="paragraph">如果指定的值无效，则会显示相应的错误消息。您应重新输入这些值、然后启动安装。</block>
+  <block id="3c075b0794a69a869247bae0fa8232c3" category="summary">创建凭据以添加插件主机。</block>
+  <block id="fc2036df5c2e9ad58052254d635ada38" category="doc">创建凭据以添加插件主机</block>
+  <block id="ab21a8c77f03ed9714c3a24a550e2416" category="paragraph">SnapCenter 使用凭据对 SnapCenter 操作的用户进行身份验证。</block>
+  <block id="2af8c72fafd2de00780256e0886cf680" category="paragraph">您应创建用于安装SnapCenter插件的凭据、以及用于执行数据保护操作的其他凭据。</block>
+  <block id="2c918b288cc3e2bd0419ef617cee7af1" category="list-text">在凭据页面中、指定创建凭据所需的以下信息。</block>
+  <block id="dcd46a1f9a42cb16a43e224e294b8f7a" category="paragraph">凭据名称</block>
+  <block id="29a3c3b668504b90c64c2a6ed618330f" category="paragraph">从下拉列表中选择身份验证模式。</block>
+  <block id="77a89adb2bed495492c121bfa080d52c" category="paragraph">身份验证类型</block>
+  <block id="5517313827872a130ab285b0e5e37dce" category="paragraph">选择*基于密码*或*基于SSH密钥*(仅适用于Linux主机)。</block>
+  <block id="df8915ff8479f150e2964f44c91d2fd4" category="paragraph">指定用户名。</block>
+  <block id="fa7df0dba25d02121ff5ab3fb162be91" category="paragraph">如果选择了基于密码的身份验证、请指定密码。</block>
+  <block id="fab1bac8f68d0e85c7d853e7cc89dee8" category="paragraph">SSH专用密钥</block>
+  <block id="66f8dac0eed0421ac7fcaabbabc37a68" category="paragraph">如果选择了基于SSH密钥的身份验证、请指定专用密钥。</block>
+  <block id="c07c0cf4af9b314370d0665aadeaf338" category="paragraph">如果要为非root用户创建凭据、请选中使用sudo权限复选框。</block>
+  <block id="703b449c96829cc800359f1d8ec271aa" category="admonition">这仅适用于Linux用户。</block>
+  <block id="ad7e2b46dbd658b836afa67739728364" category="doc">备份Oracle资源组</block>
+  <block id="3e069730cfbdc79be14782b101342cba" category="paragraph">您可以备份包含多个资源的资源组。系统会对资源组中定义的所有资源执行备份操作。</block>
+  <block id="5aec80aae3b9f1be4549537d901f39a5" category="list-text">如果有多个策略与资源组相关联，请从*Policy*下拉列表中选择要用于备份的策略。</block>
+  <block id="a762c8a08fd8dd6ac2427dad067d141f" category="doc">创建资源组并附加SAP HANA备份策略</block>
+  <block id="257763ed8a159d456a92e8b44d26aa9e" category="paragraph">通过资源组，您可以同时备份与给定应用程序关联的所有数据。任何数据保护作业都需要资源组。您还必须将一个或多个策略附加到资源组，才能定义要执行的数据保护作业类型。</block>
+  <block id="4b94425e098b41d12bc8e290ef43106f" category="summary">添加主机、然后安装插件软件包。</block>
+  <block id="5a19eafc64d4b27754e1ea4fcdfa49f1" category="doc">添加主机并安装适用于Oracle数据库的SnapCenter插件</block>
+  <block id="836b7a28ba9782fad01628dc33073d15" category="paragraph">您可以为单个主机或集群添加主机并安装插件软件包。如果要在集群(Oracle RAC)上安装此插件、则此插件将安装在集群的所有节点上。对于 Oracle RAC One Node ，您应在主动节点和被动节点上安装此插件。</block>
+  <block id="25df78dd01892122ff0e8b622af903f3" category="list-text">验证是否已选择*受管主机*选项卡。</block>
+  <block id="70d62db3cdc3b09c944b95bb46579a2d" category="list-text">在主机类型字段中、选择主机类型。</block>
+  <block id="aee77bbd57baf3f9ef22c7fc4d9bdef8" category="list-text">在主机名字段中、输入主机的完全限定域名(FQDN)或IP地址。</block>
+  <block id="2e22c5b13053f3515b22c9c1ede2d7a8" category="list-text">在凭据字段中、输入您创建的凭据。</block>
+  <block id="cc01060000f3f813df5ac7a397f6c747" category="list-text">(可选)单击*更多选项*并指定详细信息。</block>
+  <block id="b75f291f313008e72d9ff0963164ee31" category="doc">创建资源组并附加SQL备份策略</block>
+  <block id="2fd8d5ede56ca6e33060f1eb3dd0734b" category="paragraph">在使用 SnapCenter 备份 SAP HANA 数据库资源之前，您必须为要备份的资源或资源组创建备份策略。</block>
+  <block id="e479da34c5ed7685fcd981da443e348b" category="list-text">如果要对数据库执行完整性检查，请选择*基于文件的备份*。</block>
+  <block id="9b13b3a5ddf2908f3bd7c006d6b212ee" category="list-text">如果要使用Snapshot副本技术创建备份，请选择*基于Snapshot *。</block>
+  <block id="ed5262a9aab3035c8548c5f3793c76f6" category="list-text">在保留页面中、指定备份类型和选定计划类型的保留设置。</block>
+  <block id="98950caea953c79d817eba870ba7ae48" category="summary">在SnapCenter中创建Azure凭据以访问Azure NetApp帐户。</block>
+  <block id="1ed01bab203e8745a0dcfe58f019c1d9" category="doc">在SnapCenter中创建Azure凭据</block>
+  <block id="df807c6f76450e7af962b9ec2ffe867e" category="paragraph">您应在SnapCenter中创建Azure凭据以访问Azure NetApp帐户。</block>
+  <block id="c564c60262d5040cb9b4b2cb05c8532d" category="paragraph">在创建Azure凭据之前、请确保已在Azure中创建服务主体。要创建Azure凭据、需要提供与服务主体关联的租户ID、客户端ID和机密密钥。</block>
+  <block id="aeec85b47cdcde0a1bea1e8a52e7efae" category="paragraph">从下拉列表中选择*Azure凭据*。</block>
+  <block id="7131a7a6bfe81200d21d5a33c64847b6" category="paragraph">租户ID</block>
+  <block id="797fc8989dfaa45ed85ce3b352fc0fb9" category="paragraph">输入租户ID。</block>
+  <block id="4836681379c28438ec7ff8290c2fe10d" category="paragraph">输入客户端ID。</block>
+  <block id="6c5562c545345e1e93d50451b999407b" category="paragraph">客户端机密密钥</block>
+  <block id="3f809529e531a829d1af35c6277c0600" category="paragraph">输入客户端密钥。</block>
+  <block id="83a5e957cdd4905f7e78a688fa59e4a6" category="doc">克隆SAP HANA数据库备份</block>
+  <block id="3e37c81f26466e5aef19ea7d64f141ae" category="list-text">选择安装了SAP HANA插件以管理克隆的HANA系统的主机。</block>
+  <block id="e3455d720fcc40e26f0d36ee7581259f" category="paragraph">它可以是集中式插件主机、也可以是HANA系统主机。</block>
+  <block id="5c197ff6b8d148a9f919430a485adff2" category="list-text">输入要从现有备份克隆的SAP HANA SID。</block>
+  <block id="11dae6129ac88bf8ce4b74a3f04b2931" category="list-text">如果在手动QoS容量池中配置了SAP HANA数据库ANF卷、请为克隆的卷指定QoS。</block>
+  <block id="db72f6a27d253d274b29062a99ea2856" category="paragraph">如果自动发现源HANA系统、并且在SAP HANA主机上安装了克隆目标主机插件、则SnapCenter会自动卸载克隆目标主机上的现有HANA数据卷、并挂载新克隆的HANA数据卷。</block>
+  <block id="42558f3e0d13c5a3ab297f0a09e3dce0" category="admonition">已对ANF克隆禁用克隆拆分、因为ANF克隆已是使用选定Snapshot副本创建的独立卷。</block>
+  <block id="1d085da91833ced7df79bd36f6ed095f" category="doc">克隆SQL Server数据库备份</block>
+  <block id="98649dd054e392acef8b60637dd1e4eb" category="list-text">从*管理副本*视图页面中，从主存储系统中选择备份。</block>
+  <block id="064cfc5ceb5ed3cddf1bdbcfa6887172" category="list-text">在*克隆选项*页面中，提供所有必需的详细信息。</block>
+  <block id="de9209bd485fee913b85e751555d74c3" category="paragraph">如果在手动QoS容量池中配置了SQL Server数据库ANF卷、请为克隆的卷指定QoS。</block>
+  <block id="b157956c9a5d380bfe61bbff0addd0ac" category="list-text">如果只想克隆完整备份而不创建任何日志、请选择*无*。</block>
+  <block id="8079e6a754354a9a6eac9e4b8e07e1a0" category="list-text">如果要克隆完整备份之后的所有可用日志备份，请选择*所有日志备份*。</block>
+  <block id="e43d167835a003da76fd0c153beda160" category="list-text">如果要根据在选定日期之前备份日志中创建的备份日志克隆数据库，请选择“*通过日志备份直到*”。</block>
+  <block id="aff03f4a9d4bb9f6f9919a54f788b1b8" category="list-text">如果您不想在指定日期和时间之后应用事务日志，请选择*截止日期*。</block>
+  <block id="337965cee791a041ec57dfa24fedd746" category="list-text">如果要确定克隆操作的频率、克隆计划的启动时间、克隆操作的执行日期、计划的到期时间以及是否必须在计划到期后删除克隆，请选择*Configure SCHEDULE*。</block>
+  <block id="f89c4239b02a9740bafee733a8c2165e" category="doc">创建资源组并附加Oracle备份策略</block>
+  <block id="092f39203912611ce7a36e3e869ded6b" category="paragraph">归档日志文件目标</block>
+  <block id="041394902f3d98321d4bfd68f857de13" category="paragraph">指定归档日志文件的目标。</block>
+  <block id="9563afdee3cf0b9796a53f40dab22f0c" category="list-text">选择要为其配置验证计划的策略，然后单击 *<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="ac90f60a6a5dd000206a2912f740697f" category="doc">备份SAP HANA资源组</block>
+  <block id="974344da42d421b4dd34c3a98dedb9c1" category="doc">还原和恢复SAP HANA数据库</block>
+  <block id="2d09f159dc8f2cf742ceb30290c92ea6" category="paragraph">您可以从备份中还原和恢复数据。</block>
+  <block id="0d9e685a9c99b721efacde42faca34d9" category="paragraph">对于自动发现的HANA系统、如果选择了*完整资源*选项、则会使用单文件快照还原技术执行还原。如果选中了*Fast Restore*复选框，则使用卷恢复技术。</block>
+  <block id="99b3dba223899e7fb94fd6d1e2ec6105" category="paragraph">对于手动添加的资源、始终使用卷还原技术。</block>
+  <block id="6ebabcb2ba7b30c2d0a0aa41d985c7bc" category="list-text">在“恢复范围”页中，选择*Complete Resource*。</block>
+  <block id="17d91aa5af0e524138bf305183ffe871" category="paragraph">此时将还原为SAP HANA数据库配置的所有数据卷。</block>
+  <block id="d084cf7b664db6d86e5773141e47c52f" category="list-text">对于自动发现的HANA系统、在"Recovery Scope (恢复范围)"页面中、执行以下操作：</block>
+  <block id="54e194bf5cfb154480d284f314afb664" category="list-text">如果要尽可能接近当前时间进行恢复，请选择*恢复到最新状态*。</block>
+  <block id="c01b52c5a76f239c6646e3f7088568c6" category="list-text">如果要恢复到指定的时间点，请选择*恢复到时间点*。</block>
+  <block id="f2f7d2a8ee1240bdbd4b04cf378241ab" category="list-text">如果要恢复到特定数据备份，请选择*REVER to specified data backup*。</block>
+  <block id="bf61d8f4770f97cbbd31703c6d730b3b" category="list-text">如果不想立即恢复，请选择*不恢复*。</block>
+  <block id="22b709ce565c80098fe2e4182927f525" category="list-text">指定日志备份位置。</block>
+  <block id="eca17d3ca3df1d216ab9ee9a1a31fb70" category="list-text">指定备份目录位置。</block>
+  <block id="10ee6df71b74c57a6b9f1595f3efce16" category="doc">备份在Azure NetApp Files上运行的SAP HANA数据库</block>
+  <block id="13c7c834f7b8414cef2ddebbd37e4d86" category="list-text">选择*备份*箭头以设置其他备份选项。</block>
+  <block id="820ce0339ce64af93adc295b0695c2f8" category="list-text">选择*自定义配置*箭头，然后输入使用此资源的所有作业所需的自定义值对。</block>
+  <block id="54e4bfc320112c89c44dab7ba656c966" category="list-text">选择*Snapshot副本工具&gt;无文件系统一致性的SnapCenter *以创建Snapshot副本。</block>
+  <block id="40defed757ae2b8a311e0272f6d77f1b" category="paragraph">*文件系统一致性*选项仅适用于在Windows主机上运行的应用程序。</block>
+  <block id="f3d79571b40021bb0ad32b78398ef057" category="doc">备份在Azure NetApp Files上运行的Oracle数据库</block>
+  <block id="5afb14e7449db1f35fc15f6f85899c21" category="list-text">在“资源”页中，从“视图”下拉列表中选择*Database *。</block>
+  <block id="a73fd7b4976dfcc1e3546be7ca66ef9a" category="doc">添加主机并安装适用于SQL Server数据库的SnapCenter插件</block>
+  <block id="eac029c95aaaeafaf99dc2f35db06dd6" category="paragraph">SnapCenter支持对Azure NetApp Files上SMB共享上的SQL实例进行数据保护。支持独立和可用性组(AG)配置。</block>
+  <block id="d1172cfcd7a47a2529d53edd244acfc5" category="paragraph">您必须使用SnapCenter添加主机页面添加主机、然后安装插件软件包。这些插件会自动安装在远程主机上。</block>
+  <block id="016ddebcc4c9bce19a86657e974ffb35" category="list-text">选择*Configure log directory*，然后在Configure host log directory页面中输入主机日志目录的SMB路径，然后单击*Save*。</block>
+  <block id="9c03188338f33fbc98c0bedf6a655e99" category="list-text">单击*Submit*并监视安装进度。</block>
+  <block id="10033039ea407528903621059143983f" category="summary">添加SAP HANA数据库。</block>
+  <block id="65072a18905d082d8c0ec964ee899a87" category="doc">添加SAP HANA数据库</block>
+  <block id="983432516052147b4195eff39945656b" category="paragraph">您应手动添加SAP HANA数据库。</block>
+  <block id="42db56a55cf7b2e7c082bec753ed991f" category="paragraph">如果插件安装在集中式服务器上、则需要手动添加资源。如果SAP HANA插件安装在HANA数据库主机上、则会自动发现HANA系统。</block>
+  <block id="44ad4fb3028a44dd7e1cccf4676046cc" category="admonition">HANA多主机配置不支持自动发现、只能通过集中式插件添加。</block>
+  <block id="027f450221ddb96bc1d081ea94a7dd4a" category="list-text">输入资源类型、例如"单个容器"、"多租户数据库容器"或"非数据卷"。</block>
+  <block id="e898199c829d90ae41784a78cdd2d6d9" category="list-text">输入SAP HANA系统名称。</block>
+  <block id="cf253dc5a484d80a6b33ae68007e2d62" category="list-text">输入系统 ID （ SID ）。</block>
+  <block id="f9c8e114a36ca0b831ecce357d1e5abf" category="list-text">输入为其配置HDB安全用户存储密钥的用户名。</block>
+  <block id="2b0d7d4552b59040e15317cfff8068a4" category="list-text">在提供存储占用空间页面中，选择* Azure NetApp Files *作为存储类型。</block>
+  <block id="76a43e4fdf38d1bf2ab7cd64e1d24429" category="list-text">选择Azure NetApp帐户。</block>
+  <block id="b2a12ed50ab788953d23c52c8962eab8" category="list-text">选择容量池和关联的卷。</block>
+  <block id="ca326a551325da6560358f1a719a2589" category="doc">添加主机并安装适用于SAP HANA数据库的SnapCenter插件</block>
+  <block id="60c3e5dbe50b3ac1a499a2fd4014ef1b" category="paragraph">您必须使用 SnapCenter 添加主机页面添加主机，然后安装插件软件包。这些插件会自动安装在远程主机上。</block>
+  <block id="2e5a7588f1caf86b5977da7c11079d6c" category="list-text">如果要在集中式主机上安装、请确保在该主机上安装了SAP HANA客户端软件、并在SAP HANA数据库主机上打开所需端口以远程运行HDB SQL查询。</block>
+  <block id="97f2c8bf124398ba05bca9cc6fb869b1" category="list-text">主Azure NetApp Files (Oracle、Microsoft SQL和SAP HANA)上的数据</block>
+  <block id="3559da2fac74b3e69a2cd678efee3582" category="sidebar">保护在Azure NetApp Files上运行的应用程序</block>
+  <block id="dd5c6b13be74557c3408d452b60be7a6" category="sidebar">安装SnapCenter并创建凭据</block>
 </blocks>

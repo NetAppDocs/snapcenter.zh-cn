@@ -1,0 +1,43 @@
+---
+permalink: protect-azure/add-sap-hana-database.html 
+sidebar: sidebar 
+keywords: add, add SAP HANA database, manual discovery, automatic discovery 
+summary: 添加SAP HANA数据库。 
+---
+= 添加SAP HANA数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您应手动添加SAP HANA数据库。
+
+.关于此任务
+如果插件安装在集中式服务器上、则需要手动添加资源。如果SAP HANA插件安装在HANA数据库主机上、则会自动发现HANA系统。
+
+
+NOTE: HANA多主机配置不支持自动发现、只能通过集中式插件添加。
+
+.步骤
+. 在左侧导航窗格中，从下拉列表中选择适用于 SAP HANA 数据库的 SnapCenter 插件，然后单击 * 资源 * 。
+. 在资源页面中，单击 * 添加 SAP HANA 数据库 * 。
+. 在提供资源详细信息页面中，执行以下操作：
++
+.. 输入资源类型、例如"单个容器"、"多租户数据库容器"或"非数据卷"。
+.. 输入SAP HANA系统名称。
+.. 输入系统 ID （ SID ）。
+.. 选择插件主机。
+.. 输入密钥以连接到 SAP HANA 系统。
+.. 输入为其配置HDB安全用户存储密钥的用户名。
+
+
+. 在提供存储占用空间页面中，选择* Azure NetApp Files *作为存储类型。
++
+.. 选择Azure NetApp帐户。
+.. 选择容量池和关联的卷。
+.. 单击 * 保存 * 。
+
+
+. 查看摘要，然后单击 * 完成 * 。
+

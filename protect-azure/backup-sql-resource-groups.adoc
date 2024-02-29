@@ -1,0 +1,28 @@
+---
+permalink: protect-azure/backup-sql-resource-groups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SQL Server Database, back up, resource groups 
+summary: 资源组是主机上的一组资源。系统会对资源组中定义的所有资源执行备份操作。 
+---
+= 备份 SQL Server 资源组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以备份包含多个资源的资源组。系统会对资源组中定义的所有资源执行备份操作。
+
+.步骤
+. 在左侧导航窗格中，选择*Resoles*，然后从列表中选择相应的插件。
+. 在资源页面中，从 * 视图 * 列表中选择 * 资源组 * 。
+. 在“资源组”页面中，选择要备份的资源组，然后选择*Back up now *。
+. 在备份页面中，执行以下步骤：
++
+.. 如果有多个策略与资源组相关联，请从*Policy*下拉列表中选择要用于备份的策略。
+.. 备份后，选择 * 验证 * 以验证按需备份。
+.. 选择 * 备份 * 。
+
+
+. 通过选择*Monitor*>*Jobs*来监视操作进度。
+

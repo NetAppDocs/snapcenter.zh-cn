@@ -1,0 +1,39 @@
+---
+permalink: protect-azure/add-hosts-install-plugin-for-sql.html 
+sidebar: sidebar 
+keywords: add host, install, install plug-in, SQL 
+summary: 添加主机、然后安装插件软件包。 
+---
+= 添加主机并安装适用于SQL Server数据库的SnapCenter插件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter支持对Azure NetApp Files上SMB共享上的SQL实例进行数据保护。支持独立和可用性组(AG)配置。
+
+您必须使用SnapCenter添加主机页面添加主机、然后安装插件软件包。这些插件会自动安装在远程主机上。
+
+.开始之前
+* 您必须是分配给具有插件安装和卸载权限的角色的用户，例如 SnapCenter 管理员角色。
+* 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
+
+
+.步骤
+. 在左侧导航窗格中，选择 * 主机 * 。
+. 验证顶部是否已选中 * 受管主机 * 选项卡。
+. 选择 * 添加 * 。
+. 在主机页面中，执行以下操作：
++
+.. 在主机类型字段中、选择主机类型。
+.. 在主机名字段中、输入主机的完全限定域名(FQDN)或IP地址。
+.. 在凭据字段中、输入您创建的凭据。
+
+
+. 在 * 选择要安装的插件 * 部分中，选择要安装的插件。
+. (可选)单击*更多选项*并指定详细信息。
+. 选择 * 提交 * 。
+. 选择*Configure log directory*，然后在Configure host log directory页面中输入主机日志目录的SMB路径，然后单击*Save*。
+. 单击*Submit*并监视安装进度。
+

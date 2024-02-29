@@ -1,0 +1,58 @@
+---
+permalink: protect-azure/create-resource-groups-attach-sap-hana-backup-policies.html 
+sidebar: sidebar 
+keywords: resource groups, attach policies, snapcenter, SAP HANA, backup polices, schedule 
+summary: 资源组是指必须向其添加要备份和保护的资源的容器。 
+---
+= 创建资源组并附加SAP HANA备份策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+资源组是指必须向其添加要备份和保护的资源的容器。
+
+通过资源组，您可以同时备份与给定应用程序关联的所有数据。任何数据保护作业都需要资源组。您还必须将一个或多个策略附加到资源组，才能定义要执行的数据保护作业类型。
+
+.步骤
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面中，单击 * 新建资源组 * 。
+. 在名称页面中，执行以下操作：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+Name
+ a| 
+输入资源组的名称。
+
+
+
+ a| 
+Tags
+ a| 
+输入一个或多个标签，以帮助您稍后搜索资源组。
+
+
+
+ a| 
+对 Snapshot 副本使用自定义名称格式
+ a| 
+选中此复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。
+
+|===
+. 在资源页面中，从 * 主机 * 下拉列表中选择主机名，从 * 资源类型 * 下拉列表中选择资源类型。
+. 从 * 可用资源 * 部分中选择资源，然后单击右箭头将其移动到 * 选定资源 * 部分。
+. 在策略页面中，执行以下步骤：
++
+.. 从下拉列表中选择一个或多个策略。
+.. 在配置计划列中，单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 表示要配置的策略。
+.. 在添加策略 _policy_name_ 的计划对话框中，配置计划，然后单击 * 确定 * 。
+
+
+. 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
+. 查看摘要，然后单击 * 完成 * 。
+

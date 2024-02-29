@@ -57,6 +57,16 @@ indexpage:
       url: https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html
     - title: 部署适用于 VMware vSphere 的 SnapCenter 插件
       url: https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html
+  - title: 保护在Azure NetApp Files上运行的应用程序
+    links:
+    - title: 在Azure虚拟机上安装SnapCenter
+      url: "/protect-azure/install-snapcenter-azure-virtual-machine.html"
+    - title: 备份在Azure NetApp Files上运行的SAP HANA数据库
+      url: "/protect-azure/backup-sap-hana-databases.html"
+    - title: 备份在Azure NetApp Files上运行的SQL Server数据库
+      url: "/protect-azure/backup-sql-server-databases.html"
+    - title: 备份在Azure NetApp Files上运行的Oracle数据库
+      url: "/protect-azure/backup-oracle-databases.html"
   - title: 博客社区
     links:
     - title: NetApp 博客— SnapCenter

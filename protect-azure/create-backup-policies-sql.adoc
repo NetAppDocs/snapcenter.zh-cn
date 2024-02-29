@@ -1,0 +1,69 @@
+---
+permalink: protect-azure/create-backup-policies-sql.html 
+sidebar: sidebar 
+keywords: create policies, sql, backup policies 
+summary: 为要备份的资源或资源组创建备份策略。 
+---
+= 为 SQL Server 数据库创建备份策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在使用 SnapCenter 备份 SQL Server 资源之前为资源或资源组创建备份策略，也可以在创建资源组或备份单个资源时创建备份策略。
+
+.步骤
+. 在左侧导航窗格中，单击 * 设置 * 。
+. 在设置页面中，单击 * 策略 * 。
+. 单击 * 新建 * 。
+. 在名称页面中，输入策略名称和问题描述。
+. 在设置页面中，执行以下步骤：
++
+.. 选择备份类型。
++
+... 如果要备份数据库文件和事务日志，请选择*完整备份和日志备份*。
+... 如果只想备份数据库文件，请选择*Full Backup*。
+... 如果只想备份事务日志，请选择*Log Backup*。
+... 如果要使用其他应用程序备份资源，请选择*仅复制备份*。
+
+
+.. 在可用性组设置部分中，执行以下操作：
++
+... 如果只想备份首选备份副本、请选择备份首选备份副本。
+... 为备份选择主AG副本或二级AG副本。
+... 选择备份优先级。
+
+
+.. 指定计划类型。
+
+
+. 在保留页面中、根据所选备份类型、指定保留设置。
++
+
+NOTE: 不支持复制到二级存储。
+
+. 在验证页面中，执行以下步骤：
++
+.. 在 Run verification for following backup schedules 部分中，选择计划频率。
+.. 在 Database consistency check options 部分中，执行以下操作：
++
+... 选择 * 将完整性结构限制为数据库的物理结构（ physical_only ） * 可将完整性检查限制为数据库的物理结构，并检测影响数据库的已破页面，校验和故障以及常见硬件故障。
+... 选择*Suppress all information messages (NO_INFOMSGS)*以禁止所有信息性讯息。
++
+默认情况下处于选中状态。
+
+... 选择 * 显示每个对象报告的所有错误消息（ all_ERRORMSGS ） * 以显示每个对象报告的所有错误。
+... 如果不想检查非集群索引，请选择 * 不检查非集群索引（ NOINDEX ） * 。
++
+SQL Server 数据库使用 Microsoft SQL Server 数据库一致性检查程序（ DBCC ）来检查数据库中对象的逻辑和物理完整性。
+
+... 选择 * 限制检查并获取锁定，而不是使用内部数据库 Snapshot 副本（ TABLOCK ） * 来限制检查并获取锁定，而不是使用内部数据库 Snapshot 副本。
+
+
+.. 在 * 日志备份 * 部分中，选择 * 完成时验证日志备份 * 以在完成后验证日志备份。
+.. 在 * 验证脚本设置 * 部分中，分别输入在验证操作之前或之后应运行的预处理或后处理脚本的路径和参数。
+
+
+. 查看摘要并单击 * 完成 * 。
+

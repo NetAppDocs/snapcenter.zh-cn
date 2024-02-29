@@ -1,0 +1,58 @@
+---
+permalink: protect-azure/backup-sap-hana-databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database, back up, databases, Azure NetApp Files 
+summary: '从"Resourcs"页面备份资源。' 
+---
+= 备份在Azure NetApp Files上运行的SAP HANA数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果某个资源尚未加入任何资源组，您可以从 "Resources" 页面备份该资源。
+
+.步骤
+. 在左侧导航窗格中，选择*Resoles*，然后从列表中选择相应的插件。
+. 在资源页面中，根据资源类型从 * 视图 * 下拉列表中筛选资源。
+. 选择要备份的资源。
+. 在资源页面中，选择 * 对 Snapshot 副本使用自定义名称格式 * ，然后输入要用于 Snapshot 副本名称的自定义名称格式。
+. 在应用程序设置页面中，执行以下操作：
++
+.. 选择*备份*箭头以设置其他备份选项。
+.. 选择*Scripts*箭头可运行用于静修、Snapshot副本和取消静修操作的PRE和POST命令。
+.. 选择*自定义配置*箭头，然后输入使用此资源的所有作业所需的自定义值对。
+.. 选择*Snapshot副本工具>无文件系统一致性的SnapCenter *以创建Snapshot副本。
++
+*文件系统一致性*选项仅适用于在Windows主机上运行的应用程序。
+
+
+
+. 在策略页面中，执行以下步骤：
++
+.. 从下拉列表中选择一个或多个策略。
+.. 选择*image:../media/add_policy_from_resourcegroup.gif[""]* 。
+.. 在为policy _policy_name_添加计划对话框中，配置该计划，然后选择*OK*。
++
+_policy_name_ 是所选策略的名称。
+
+
+
+. 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
++
+您还必须指定发件人和收件人电子邮件地址以及电子邮件主题。此外，还必须在 * 设置 * > * 全局设置 * 中配置 SMTP 。
+
+. 查看摘要，然后选择*完成*。
+. 选择*立即备份*。
+. 在备份页面中，执行以下步骤：
++
+.. 如果有多个策略与资源相关联，请从*Policy*下拉列表中选择要用于备份的策略。
++
+如果为按需备份选择的策略与备份计划关联，则按需备份将根据为计划类型指定的保留设置进行保留。
+
+
+
+. 选择 * 备份 * 。
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
+
