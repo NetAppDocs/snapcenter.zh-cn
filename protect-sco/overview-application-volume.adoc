@@ -1,0 +1,27 @@
+---
+permalink: protect-sco/overview-application-volume.html 
+sidebar: sidebar 
+keywords: application volume, overview, backup, non-data volumes 
+summary: 应用程序卷是存储与Oracle数据库相关的信息的存储。 
+---
+= 什么是应用程序卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+应用程序卷是存储配置、安装程序和其他与Oracle数据库相关的非数据文件等信息的存储。
+
+使用适用于Oracle数据库的SnapCenter插件、您可以为应用程序卷(非数据卷)和Oracle数据库创建一致的备份。
+
+此插件可自动备份和克隆应用程序卷。
+
+* 在一个资源组中保护应用程序卷和Oracle数据库卷。
+* 为应用程序卷创建备份。
+* 为Oracle数据库和应用程序卷创建备份。
+* 创建数据库和应用程序卷的克隆、直到达到时间点为止。
+* 计划备份操作。
+* 监控所有操作。
+* 查看备份和克隆操作报告。
+

@@ -3491,7 +3491,6 @@
   <block id="96c2f121719642c9bb76de237a79a8f7" category="list-text">SnapCenter 中的所有凭据均使用高级加密标准（ Advanced Encryption Standard ， AES ）加密进行保护。</block>
   <block id="f8f9feb00e019b3a4905536ed6898cbc" category="list-text">SnapCenter 使用符合联邦信息处理标准（ FIPS ）的安全算法。</block>
   <block id="6e48ef9c3b9eee75beadb62ef46ee1fe" category="list-text">SnapCenter 支持使用客户提供的授权 CA 证书。</block>
-  <block id="4c0acb13d249f2227e8b1f1cf0ce1119" category="list-text">SnapCenter 4.1.1 或更高版本支持与 ONTAP 进行传输层安全（ TLS ） 1.2 通信。您还可以在客户端和服务器之间使用 TLS 1.2 通信。</block>
   <block id="40739afaa7fdf9957a38216f97ce0321" category="list-text">SnapCenter 安装在公司的防火墙内，用于访问 SnapCenter 服务器并在 SnapCenter 服务器和插件之间进行通信。</block>
   <block id="60b7c3e24f63b13c2f4abe5f1a7def8e" category="list-text">SnapCenter API 和操作访问使用使用 AES 加密加密的令牌，这些令牌将在 24 小时后过期。</block>
   <block id="52804460cb53f83bd632c8bb5678e86c" category="list-text">SnapCenter 与 Windows Active Directory 集成，用于控制访问权限的登录和基于角色的访问控制（ Role-Based Access Control ， RBAC ）。</block>
@@ -8607,7 +8606,6 @@ destination</block>
   <block id="ffc2be1279cc0930ef2358aa6770f7ff" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，请参见<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="43fd8846b62a01de615c215f6601836d" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份和还原操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="d239ebbabeedcdb87dfeedbd548986ac" category="list-text">SnapCenter 灾难恢复功能使用 REST API 备份 SnapCenter 服务器。请参见 <block ref="6bd0ca01dc1606a35edfa9534e3c90d2" category="inline-link-macro-rx"></block>。</block>
-  <block id="71e2b65158ea1d86e4f878e40777dafd" category="list-text">SnapCenter 5.0支持与ONTAP进行传输层安全(Transport Layer Security、TLS) 1.3通信。</block>
   <block id="c53d4394b4b820e8039b31483c1dfd5e" category="paragraph">有关Windows cmdlet的详细信息、请参见<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="9f41dc9894f346b6e32aabf91c683469" category="paragraph">有关UNIX命令的详细信息、请参见<block ref="a6fc2394a8b2095d1929066d59f6fcc9" category="inline-link-rx"></block>。</block>
   <block id="e6c4248fcff66b43c157dbc37ec22080" category="paragraph">SnapLock是一款高性能合规性解决方案、适用于使用一次写入、多次读取(Write Unes、Read M众多、WORM)存储以原始形式保留文件以满足合规和监管要求的组织。</block>
@@ -9046,4 +9044,16 @@ SnapLock设置由ONTAP管理。</block>
   <block id="97f2c8bf124398ba05bca9cc6fb869b1" category="list-text">主Azure NetApp Files (Oracle、Microsoft SQL和SAP HANA)上的数据</block>
   <block id="3559da2fac74b3e69a2cd678efee3582" category="sidebar">保护在Azure NetApp Files上运行的应用程序</block>
   <block id="dd5c6b13be74557c3408d452b60be7a6" category="sidebar">安装SnapCenter并创建凭据</block>
+  <block id="e353c96a332f0cabee61ee0d1183ced5" category="list-text">SnapCenter 4.1.1或更高版本支持使用传输层安全(Transport Layer Security、TLS) 1.2与ONTAP进行通信。您还可以使用TLS 1.2在客户端和服务器之间进行通信。</block>
+  <block id="35fdfe6dd04402c29d3fc6d0df727357" category="paragraph">从5.0开始、SnapCenter支持(TLS) 1.3与ONTAP进行通信。</block>
+  <block id="e9d6209daed73f3a8f0578d27a8a2a85" category="summary">应用程序卷是存储与Oracle数据库相关的信息的存储。</block>
+  <block id="daa2e304f0d45a22bbdaee82fe42256f" category="doc">什么是应用程序卷</block>
+  <block id="b9ef14bd380b22129789d2a58055fd71" category="paragraph">应用程序卷是存储配置、安装程序和其他与Oracle数据库相关的非数据文件等信息的存储。</block>
+  <block id="6a6e355317fc46c557aae7efee2616ae" category="paragraph">使用适用于Oracle数据库的SnapCenter插件、您可以为应用程序卷(非数据卷)和Oracle数据库创建一致的备份。</block>
+  <block id="23c8668967f14b47c49239015f1a75e6" category="paragraph">此插件可自动备份和克隆应用程序卷。</block>
+  <block id="460056168fe8cfae225fcede48618f89" category="list-text">在一个资源组中保护应用程序卷和Oracle数据库卷。</block>
+  <block id="8d4879d1f00447108f920120663f3d07" category="list-text">为应用程序卷创建备份。</block>
+  <block id="af3d150952bdf0ab3693bd9da33bd032" category="list-text">为Oracle数据库和应用程序卷创建备份。</block>
+  <block id="39240126e5a114efbf72c14cc21a7094" category="list-text">创建数据库和应用程序卷的克隆、直到达到时间点为止。</block>
+  <block id="c3f918653f9d61e3b2472e16235d9f90" category="list-text">查看备份和克隆操作报告。</block>
 </blocks>

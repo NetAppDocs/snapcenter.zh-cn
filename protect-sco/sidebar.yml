@@ -134,6 +134,8 @@ entries:
     url: "/protect-sco/task_delete_clone_of_a_pluggable_database.html"
 - title: 管理应用程序卷
   entries:
+  - title: 什么是应用程序卷
+    url: "/protect-sco/overview-application-volume.html"
   - title: 添加应用程序卷
     url: "/protect-sco/add-application-volume.html"
   - title: 备份应用程序卷
