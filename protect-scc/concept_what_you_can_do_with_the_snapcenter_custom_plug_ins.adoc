@@ -28,12 +28,12 @@ summary: 您可以使用 SnapCenter 自定义插件执行数据保护操作。
 
 您可以使用存储插件执行数据保护操作。
 
-* 为 ONTAP 集群中的存储卷创建一致性组 Snapshot 副本。
+* 为ONTAP集群中的存储卷创建一致性组快照。
 * 使用内置的脚本编写前后框架备份自定义应用程序
 +
 您可以备份 ONTAP 卷， LUN 或 qtree 。
 
-* 使用 SnapCenter 策略利用现有复制关系（ SnapVault/SnapMirror/ 统一复制）将在主系统上创建的 Snapshot 副本更新到 ONTAP 二级系统
+* 使用SnapCenter策略利用现有复制关系(SnapVault或SnapMirror)将主系统上创建的快照更新到ONTAP二级系统
 +
 ONTAP主存储系统和二级存储系统可以是ONTAP FAS、AFF、全SAN阵列(ASA)、Select或Cloud ONTAP。
 

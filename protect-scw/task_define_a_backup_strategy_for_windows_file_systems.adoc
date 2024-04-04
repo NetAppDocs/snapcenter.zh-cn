@@ -47,9 +47,9 @@ SLA 定义了预期的服务级别，并解决了许多与服务相关的问题�
 
 == Windows 文件系统的备份命名约定
 
-Windows 文件系统备份使用默认的 Snapshot 副本命名约定。默认备份命名约定会为 Snapshot 副本名称添加一个时间戳，以帮助您确定副本的创建时间。
+Windows文件系统备份使用默认的Snapshot命名约定。默认备份命名约定会为Snapshot名称添加一个时间戳、以帮助您确定副本的创建时间。
 
-Snapshot 副本使用以下默认命名约定： resourcegroupname_hostname_timestamp
+Snapshot会使用以下默认命名约定：resourcegroupname_hostname_TimeStamp
 
 您应按逻辑方式命名备份资源组，如以下示例所示：
 

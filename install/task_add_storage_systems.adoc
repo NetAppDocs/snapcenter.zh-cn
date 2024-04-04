@@ -33,7 +33,7 @@ SnapCenter 不支持在不同集群上使用相同名称的多个存储系统。
 +
 如果启用了这些功能，则在资源受保护，还原或克隆操作成功完成或操作失败时， SnapCenter 会将 AutoSupport 信息发送到存储系统，并将 EMS 消息发送到存储系统系统系统日志。
 
-* 如果您计划将 Snapshot 副本复制到 SnapMirror 目标或 SnapVault 目标，则必须为目标 SVM 或集群以及源 SVM 或集群设置存储系统连接。
+* 如果您计划将Snapshot复制到SnapMirror目标或SnapVault目标、则必须为目标SVM或集群以及源SVM或集群设置存储系统连接。
 
 
 

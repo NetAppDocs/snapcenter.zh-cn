@@ -14,7 +14,7 @@ summary: 资源组是指可以向其中添加要保护的多个文件系统的�
 资源组是指可以向其中添加要保护的多个文件系统的容器。您还必须将一个或多个策略附加到资源组，以定义要执行的数据保护作业类型，然后指定备份计划。
 
 .关于此任务
-* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 * 不支持将不带SM-BC的新文件系统添加到包含带SM-BC的资源的现有资源组。
 * 不支持在SM-BC故障转移模式下向现有资源组添加新文件系统。您只能在常规或故障恢复状态下向资源组添加资源。
 
@@ -46,9 +46,9 @@ NOTE: 资源组名称不应超过 250 个字符。
  a| 
 对 Snapshot 副本使用自定义名称格式
  a| 
-可选：输入自定义 Snapshot 副本的名称和格式。
+可选：输入自定义Snapshot名称和格式。
 
-例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。
+例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下、Snapshot名称会附加一个时间戳。
 
 
 

@@ -19,7 +19,7 @@ SLA 定义了预期的服务级别，并解决了许多与服务相关的问题�
 
 == Exchange 数据库支持的备份类型
 
-使用 SnapCenter 备份 Exchange 邮箱要求您选择资源类型，例如数据库和数据库可用性组（ DAG ）。Snapshot 副本技术用于为资源所在的卷创建联机只读副本。
+使用 SnapCenter 备份 Exchange 邮箱要求您选择资源类型，例如数据库和数据库可用性组（ DAG ）。利用Snapshot技术为资源所在的卷创建联机只读副本。
 
 |===
 | 备份类型 | Description 
@@ -85,9 +85,9 @@ SLA 定义了预期的服务级别，并解决了许多与服务相关的问题�
 
 == 备份命名约定
 
-您可以使用默认 Snapshot 副本命名约定，也可以使用自定义命名约定。默认备份命名约定会为 Snapshot 副本名称添加一个时间戳，以帮助您确定副本的创建时间。
+您可以使用默认的Snapshot命名约定、也可以使用自定义的命名约定。默认备份命名约定会为Snapshot名称添加一个时间戳、以帮助您确定副本的创建时间。
 
-Snapshot 副本使用以下默认命名约定：
+Snapshot使用以下默认命名约定：
 
 `resourcegroupname_hostname_timestamp`
 
@@ -104,7 +104,7 @@ dts1_mach1x88_03-12-2015_23.17.26
 * _03-12-2015_23.17.26_ 是日期和时间戳。
 
 
-或者，您也可以通过选择 * 对 Snapshot 副本使用自定义名称格式 * 来在保护资源或资源组时指定 Snapshot 副本名称格式。例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下，时间戳后缀会添加到 Snapshot 副本名称中。
+或者，您也可以在保护资源或资源组时通过选择*Use custom name format for Snapshot copy*来指定Snapshot名称格式。例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下、时间戳后缀会添加到Snapshot名称中。
 
 
 

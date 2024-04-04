@@ -18,7 +18,7 @@ summary: 您可以在使用 SnapCenter 备份 SQL Server 资源之前为资源�
 * 您必须已通过完成安装 SnapCenter ，添加主机，识别资源以及创建存储系统连接等任务为数据保护做好准备。
 * 您必须已为日志备份配置主机日志目录。
 * 您必须已刷新（发现） SQL Server 资源。
-* 如果要将 Snapshot 副本复制到镜像或存储， SnapCenter 管理员必须已为源卷和目标卷分配 Storage Virtual Machine （ SVM ）。
+* 如果要将快照复制到镜像或存储、SnapCenter管理员必须已将源卷和目标卷的Storage Virtual Machine (SVM)分配给您。
 +
 有关管理员如何为用户分配资源的信息，请参见 SnapCenter 安装信息。
 
@@ -47,10 +47,10 @@ summary: 您可以在使用 SnapCenter 备份 SQL Server 资源之前为资源�
 +
 ** 如果选择了"将备份副本保留特定天数"选项、则SnapLock保留期限必须小于或等于上述保留天数。
 +
-指定Snapshot副本锁定期限可防止删除Snapshot副本、直到保留期限到期为止。  这可能会导致保留的Snapshot副本数量超过策略中指定的数量。
+指定Snapshot锁定期限可防止删除Snapshot、直到保留期限到期为止。  这样可能会导致保留的Snapshot数量超过策略中指定的数量。
 
 +
-对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 +
 
@@ -84,7 +84,7 @@ NOTE: 主SnapLock设置在SnapCenter备份策略中进行管理、辅SnapLock设
 备份数据库文件和事务日志、并将事务日志进行truncate。
 
 . 选择 * 完整备份和日志备份 * 。
-. 输入应为每个 Snapshot 副本备份的最大数据库数。
+. 输入应为每个Snapshot备份的最大数据库数。
 +
 
 NOTE: 如果要同时运行多个备份操作，则必须增加此值。
@@ -97,7 +97,8 @@ NOTE: 如果要同时运行多个备份操作，则必须增加此值。
 备份数据库文件。
 
 . 选择 * 完整备份 * 。
-. 输入应为每个 Snapshot 副本备份的最大数据库数。默认值为 100
+. 输入应为每个Snapshot备份的最大数据库数。
+默认值为 100
 +
 
 NOTE: 如果要同时运行多个备份操作，则必须增加此值。
@@ -175,7 +176,7 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
 ====
 .特定份数
 --
-仅保留特定数量的Snapshot副本。
+仅保留特定数量的快照。
 
 . 选择 * 保留适用于过去 < 天数 > 天 * 的日志备份选项，并指定要保留的天数。如果您接近此限制，则可能需要删除较早的副本。
 
@@ -192,10 +193,10 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
 ====
 . 在按需保留设置的 * 完整备份保留设置 * 部分中，执行以下操作：
 +
-.. 指定要保留的Snapshot副本总数
+.. 指定要保留的Snapshot总数
 +
-... 要指定要保留的Snapshot副本数、请选择*要保留的Snapshot副本总数*。
-... 如果 Snapshot 副本数超过指定数量，则会删除这些 Snapshot 副本，并首先删除最旧的副本。
+... 要指定要保留的Snapshot数量、请选择*要保留的Snapshot副本总数*。
+... 如果快照数量超过指定数量、则会删除快照、并首先删除最早的副本。
 
 
 
@@ -203,17 +204,17 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
 
 
 
-IMPORTANT: 默认情况下，保留计数值设置为 2 。如果将保留数量设置为 1 ，则保留操作可能会失败，因为第一个 Snapshot 副本是 SnapVault 关系的参考 Snapshot 副本，直到将较新的 Snapshot 副本复制到目标。
+IMPORTANT: 默认情况下，保留计数值设置为 2 。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。
 
 
 NOTE: 对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，对于 ONTAP 9.3 或更早版本上的资源，最大保留值为 254 。如果将保留设置为高于底层 ONTAP 版本支持的值，则备份将失败。
 
-. 保留Snapshot副本的时间长度
+. 保留快照的时间长度
 +
-.. 如果要指定删除 Snapshot 副本之前要保留这些副本的天数，请选择 * 保留 Snapshot 副本 * 。
+.. 如果要指定在删除快照之前要保留这些快照的天数，请选择*保留Snapshot副本*。
 
 
-. 如果要指定Snapshot副本锁定期限、请选择* Snapshot副本锁定期限*、然后选择天、月或年。
+. 如果要指定Snapshot锁定期限、请选择* Snapshot副本锁定期限*、然后选择天、月或年。
 +
 SnapLock保留期限应少于100年。
 
@@ -221,9 +222,9 @@ SnapLock保留期限应少于100年。
 
 . 在每小时，每天，每周和每月保留设置的 * 完整备份保留设置 * 部分中，为备份类型页面中选择的计划类型指定保留设置。
 +
-.. 指定要保留的Snapshot副本总数
+.. 指定要保留的Snapshot总数
 +
-... 要指定要保留的Snapshot副本数、请选择*要保留的Snapshot副本总数*。如果 Snapshot 副本数超过指定数量，则会删除这些 Snapshot 副本，并首先删除最旧的副本。
+... 要指定要保留的Snapshot数量、请选择*要保留的Snapshot副本总数*。如果快照数量超过指定数量、则会删除快照、并首先删除最早的副本。
 
 
 
@@ -231,23 +232,23 @@ SnapLock保留期限应少于100年。
 
 
 
-IMPORTANT: 如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留数量设置为 1 ，则保留操作可能会失败，因为第一个 Snapshot 副本是 SnapVault 关系的参考 Snapshot 副本，直到将较新的 Snapshot 副本复制到目标。
+IMPORTANT: 如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。
 
-. 保留Snapshot副本的时间长度
+. 保留快照的时间长度
 +
-.. 要指定在删除Snapshot副本之前保留这些副本的天数、请选择*保留Snapshot副本的时间*。
+.. 要指定在删除快照之前要保留这些快照的天数，请选择*保留Snapshot副本*。
 
 
-. 如果要指定Snapshot副本锁定期限、请选择* Snapshot副本锁定期限*、然后选择天、月或年。
+. 如果要指定Snapshot锁定期限、请选择* Snapshot副本锁定期限*、然后选择天、月或年。
 +
 SnapLock保留期限应少于100年。
 
 +
-日志 Snapshot 副本保留默认设置为 7 天。使用 Set-SmPolicy cmdlet 更改日志 Snapshot 副本保留。
+默认情况下、日志Snapshot保留时间设置为7天。使用Set-SmPolicy cmdlet更改日志Snapshot保留。
 
 
 
-此示例将日志 Snapshot 副本保留设置为 2 ：
+以下示例将日志Snapshot保留设置为2：
 
 .显示示例
 []
@@ -308,7 +309,7 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 . 选择 Snapshot 标签。
 
 
-根据您选择的 Snapshot 副本标签， ONTAP 会应用与该标签匹配的二级 Snapshot 副本保留策略。
+根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。
 
 
 NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
@@ -335,7 +336,7 @@ NOTE: 预处理脚本或后处理脚本路径不应包含驱动器或共享。�
 
 +
 
-NOTE: 您必须在 ONTAP 中配置 SnapMirror 保留策略，以使二级存储不会达到 Snapshot 副本的最大限制。
+NOTE: 您必须在ONTAP中配置SnapMirror保留策略、以使二级存储不会达到Snapshot的最大限制。
 
 
 
@@ -368,9 +369,9 @@ NOTE: 您必须在 ONTAP 中配置 SnapMirror 保留策略，以使二级存储�
 ... 如果不想检查非集群索引，请选择 * 不检查非集群索引（ NOINDEX ） * 。SQL Server 数据库使用 Microsoft SQL Server 数据库一致性检查程序（ DBCC ）来检查数据库中对象的逻辑和物理完整性。
 
 
-.. 限制检查并获取锁定，而不是使用内部数据库 Snapshot 副本（ TABLOCK ）
+.. 限制检查并获取锁定、而不是使用内部数据库快照(TABLOCk)
 +
-... 选择 * 限制检查并获取锁定，而不是使用内部数据库 Snapshot 副本（ TABLOCK ） * 来限制检查并获取锁定，而不是使用内部数据库 Snapshot 副本。
+... 选择*限制检查并获取锁定，而不是使用内部数据库Snapshot副本(TABLOC)*来限制检查并获取锁定，而不是使用内部数据库Snapshot。
 
 
 

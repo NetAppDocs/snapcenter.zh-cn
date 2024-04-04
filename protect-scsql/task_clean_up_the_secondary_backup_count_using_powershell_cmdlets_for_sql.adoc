@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_sql.html 
 sidebar: sidebar 
 keywords: backups 
-summary: 您可以使用 Remove-SmBackup cmdlet 清理不含 Snapshot 副本的二级备份的备份计数。如果管理副本拓扑中显示的 Snapshot 副本总数与二级存储 Snapshot 副本保留设置不匹配，您可能需要使用此 cmdlet 。 
+summary: '您可以使用Remove-SmBackup cmdlet清理无Snapshot的二级备份的备份计数。如果"管理副本"拓扑中显示的总Snapshot与二级存储Snapshot保留设置不匹配、您可能需要使用此cmdlet。' 
 ---
 = 使用 PowerShell cmdlet 清理二级备份计数
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您可以使用 Remove-SmBackup cmdlet 清理不含 Snapshot 副本的�
 
 
 [role="lead"]
-您可以使用 Remove-SmBackup cmdlet 清理不含 Snapshot 副本的二级备份的备份计数。如果管理副本拓扑中显示的 Snapshot 副本总数与二级存储 Snapshot 副本保留设置不匹配，您可能需要使用此 cmdlet 。
+您可以使用Remove-SmBackup cmdlet清除没有Snapshot的二级备份的备份计数。如果"管理副本"拓扑中显示的总快照数与二级存储Snapshot保留设置不匹配、您可能需要使用此cmdlet。
 
 您必须已准备好 PowerShell 环境以执行 PowerShell cmdlet 。
 
@@ -26,7 +26,7 @@ Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
 ----
 . 使用 -CleanupSecondaryBackups 参数清理二级备份计数。
 +
-此示例将清理不含 Snapshot 副本的二级备份的备份计数：
+以下示例将清理无Snapshot的二级备份的备份计数：
 
 +
 [listing]

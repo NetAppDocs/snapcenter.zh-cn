@@ -34,7 +34,7 @@ summary: 在从适用于 Microsoft SQL Server 的 SnapCenter 插件备份还原 
 https://support.microsoft.com/kb/2887595["Microsoft 支持文章 2887595 ： Windows RT 8.1 ， Windows 8.1 和 Windows Server 2012 R2 更新汇总： 2013 年 11 月"]
 
 * 您必须已备份资源组或数据库。
-* 如果要将 Snapshot 副本复制到镜像或存储， SnapCenter 管理员必须已为您分配源卷和目标卷的 Storage Virtual Machine （ SVM ）。
+* 如果要将快照复制到镜像或存储、SnapCenter管理员必须已为源卷和目标卷分配Storage Virtual Machine (SVM)。
 +
 有关管理员如何为用户分配资源的信息，请参见 SnapCenter 安装信息。
 

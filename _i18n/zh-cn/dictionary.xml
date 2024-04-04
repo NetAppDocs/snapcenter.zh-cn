@@ -84,7 +84,6 @@
   <block id="df9aaac67048ed67c2a2f97b808aed95" category="list-text">您必须已通过完成安装 SnapCenter ，添加主机，识别资源以及创建存储系统连接等任务为数据保护做好准备。</block>
   <block id="9628575eeeb967c57fd9fea29650a3d6" category="list-text">您必须已为日志备份配置主机日志目录。</block>
   <block id="8c200fb6f4068d92863b1feb9c91e202" category="list-text">您必须已刷新（发现） SQL Server 资源。</block>
-  <block id="938aaddabdc2e2a3ed4141288699bf43" category="list-text">如果要将 Snapshot 副本复制到镜像或存储， SnapCenter 管理员必须已为源卷和目标卷分配 Storage Virtual Machine （ SVM ）。</block>
   <block id="14310a3e36aca9ee4f8ae01ecce176f6" category="paragraph">有关管理员如何为用户分配资源的信息，请参见 SnapCenter 安装信息。</block>
   <block id="8c47f48c6fb5493126c980bf2e721bcd" category="list-text">如果要在预处理脚本和后处理脚本中运行 PowerShell 脚本，应在 web.config 文件中将 usePowershellProcessforScripts 参数的值设置为 true 。</block>
   <block id="9f35f4e7b1b8337e12bc210c7cc37233" category="paragraph">默认值为 false 。</block>
@@ -97,10 +96,8 @@
   <block id="5d920b501536441ea32ecc24679c72a2" category="cell">如果您要 ...</block>
   <block id="5e2ad6fd9deb412d871137094ee43ef0" category="cell">执行此操作 ...</block>
   <block id="63afd0069eb731a8e67418ebe1db655d" category="list-text">选择 * 完整备份和日志备份 * 。</block>
-  <block id="18d4675bdba207949ceb7f704c54e620" category="list-text">输入应为每个 Snapshot 副本备份的最大数据库数。</block>
   <block id="b0c8f062df15022a6331b14e3bf5591e" category="admonition">如果要同时运行多个备份操作，则必须增加此值。</block>
   <block id="787c49e1272644a793119d13fc551e84" category="list-text">选择 * 完整备份 * 。</block>
-  <block id="846c94f31178e6465f3c62be3f42cb3d" category="list-text">输入应为每个 Snapshot 副本备份的最大数据库数。默认值为 100</block>
   <block id="ad53595de135edab4a537a97159316b6" category="paragraph">选择 * 日志备份 * 。</block>
   <block id="f16fca991ae99058ce41f2b4b1614852" category="list-text">如果要使用另一个备份应用程序备份资源，请选择 * 仅复制备份 * 。</block>
   <block id="619da134802c3fcab97a2b7c6d14c4ec" category="paragraph">保持事务日志完好无损可使任何备份应用程序恢复数据库。在任何其他情况下，通常不应使用仅复制选项。</block>
@@ -115,17 +112,10 @@
   <block id="1947481e76eb40f4adf8f5246fa95ff6" category="admonition">您可以在创建资源组时为备份操作指定计划（开始日期，结束日期和频率）。这样，您可以创建共享相同策略和备份频率的资源组，但可以为每个策略分配不同的备份计划。</block>
   <block id="a16b9f3426d9cfca29c06a875b667023" category="admonition">如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不会触发此计划。</block>
   <block id="73d1997538c5c2799ee681d5e59023ad" category="list-text">在最新还原操作的保留设置部分中，执行以下操作之一：</block>
-  <block id="35c585b251342f8a3ef5f785412f91be" category="paragraph">仅保留特定数量的 Snapshot 副本</block>
   <block id="94ce778033bf4abe093ce9cc1e7a0498" category="paragraph">将备份副本保留特定天数</block>
   <block id="9bbf41d74c8f89f293d3299ea7bebf83" category="paragraph">选择 * 保留适用于最后 &lt; 天数 &gt; 天完整备份 * 选项，并指定保留日志备份副本的天数。</block>
   <block id="9de90deec5302da2195d39aecfada280" category="list-text">在按需保留设置的 * 完整备份保留设置 * 部分中，执行以下操作：</block>
-  <block id="3aaac4c94ecda8362dc70a2825de8b24" category="paragraph">如果 Snapshot 副本数超过指定数量，则会删除这些 Snapshot 副本，并首先删除最旧的副本。</block>
   <block id="225ea283dca2590a2a542a782ac56927" category="admonition">对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，对于 ONTAP 9.3 或更早版本上的资源，最大保留值为 254 。如果将保留设置为高于底层 ONTAP 版本支持的值，则备份将失败。</block>
-  <block id="a0257f49f5547a6ef191dd6c2f9b4c75" category="admonition">默认情况下，保留计数值设置为 2 。如果将保留数量设置为 1 ，则保留操作可能会失败，因为第一个 Snapshot 副本是 SnapVault 关系的参考 Snapshot 副本，直到将较新的 Snapshot 副本复制到目标。</block>
-  <block id="6d8af80369897e48f5d0073fb1d5235e" category="paragraph">如果要指定删除 Snapshot 副本之前要保留这些副本的天数，请选择 * 保留 Snapshot 副本 * 。</block>
-  <block id="6127fccc91f52e5ee1702cdfa7fa1673" category="admonition">如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留数量设置为 1 ，则保留操作可能会失败，因为第一个 Snapshot 副本是 SnapVault 关系的参考 Snapshot 副本，直到将较新的 Snapshot 副本复制到目标。</block>
-  <block id="efa04a2e0b433b54ed88de4c3b1b5a79" category="paragraph">日志 Snapshot 副本保留默认设置为 7 天。使用 Set-SmPolicy cmdlet 更改日志 Snapshot 副本保留。</block>
-  <block id="723fe9aea6dfe1a0a822f218095c1c11" category="paragraph">此示例将日志 Snapshot 副本保留设置为 2 ：</block>
   <block id="f2d35fb96ac070e63c88b1b43cf8c70b" category="inline-link">SnapCenter 会保留数据库的 Snapshot 副本</block>
   <block id="96df6a4d32e4546cfd055ffa3e9a7097" category="paragraph"><block ref="96df6a4d32e4546cfd055ffa3e9a7097" category="inline-link-rx"></block></block>
   <block id="1841ccf0461e2eaacdadd6d0965185ca" category="paragraph">创建本地 Snapshot 副本后更新 SnapMirror</block>
@@ -134,12 +124,10 @@
   <block id="74634d46f4094928b9a2dbffb638ae7f" category="paragraph">选择此选项可执行磁盘到磁盘备份复制。</block>
   <block id="58d70fc926069f010ab51ffa86e123d8" category="paragraph">二级策略标签</block>
   <block id="7236d615f588fda61e35cc1fa07c46cb" category="paragraph">选择 Snapshot 标签。</block>
-  <block id="57f81f76ee742c3e6fdc3de05738646d" category="paragraph">根据您选择的 Snapshot 副本标签， ONTAP 会应用与该标签匹配的二级 Snapshot 副本保留策略。</block>
   <block id="f4d84b8f919668d97d6f1c1e6384cfac" category="admonition">如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。</block>
   <block id="e64e99351ad3ec8079ffd2d91fbd7f12" category="paragraph">错误重试次数</block>
   <block id="39007747bb71ef47183e492e75b22469" category="paragraph">输入在进程暂停之前应进行的复制尝试次数。</block>
   <block id="1701175190dfd6dd06812a1b97af8f95" category="paragraph">例如，您可以运行脚本来更新 SNMP 陷阱，自动执行警报和发送日志。</block>
-  <block id="a0e2a78c6c2fd62817afcae7e0b538f5" category="admonition">您必须在 ONTAP 中配置 SnapMirror 保留策略，以使二级存储不会达到 Snapshot 副本的最大限制。</block>
   <block id="369cd91c3e11b99e6fa5850b92b3090a" category="paragraph">将完整性结构限制为数据库的物理结构（ physical_only ）</block>
   <block id="0de87de3224e64a78ce1093052a47d1d" category="paragraph">选择 * 将完整性结构限制为数据库的物理结构（ physical_only ） * 可将完整性检查限制为数据库的物理结构，并检测影响数据库的已破页面，校验和故障以及常见硬件故障。</block>
   <block id="82f15136daedc726dba1051c43c28284" category="paragraph">选择 * 禁止所有信息消息（ NO_INFOMSGS ） * 以禁止所有信息消息。默认情况下处于选中状态。</block>
@@ -347,7 +335,6 @@
   <block id="0a5070b538c653ac59aaa80bcbf05055" category="summary">您可以从二级存储系统上的物理 LUN （ RDM ， iSCSI 或 FCP\ ）还原备份的 SQL Server 数据库。还原功能是一个多阶段过程，可将所有数据和日志页面从位于二级存储系统上的指定 SQL Server 备份复制到指定数据库。</block>
   <block id="86cc84259391356d6bc58883c4b14046" category="doc">从二级存储还原 SQL Server 数据库</block>
   <block id="322e2c0228e3fa3086aa2d2caa7e24ad" category="paragraph">您可以从二级存储系统上的物理 LUN （ RDM ， iSCSI 或 FCP ）还原备份的 SQL Server 数据库。还原功能是一个多阶段过程，可将所有数据和日志页面从位于二级存储系统上的指定 SQL Server 备份复制到指定数据库。</block>
-  <block id="6490dd6973f2704b0b377c24b0992a87" category="list-text">您必须已将 Snapshot 副本从主存储系统复制到二级存储系统。</block>
   <block id="e1573e93dec4a09a53c7948b08bea942" category="list-text">您必须确保 SnapCenter 服务器和插件主机能够连接到二级存储系统。</block>
   <block id="48d655df40608a314f5332ec2869cbed" category="list-text">还原向导页面上的大部分字段在基本还原过程中进行了说明。以下信息介绍了一些可能需要指导的字段。</block>
   <block id="f72a9173829a8f26c57c075519f73a90" category="paragraph">此时将显示数据库或资源组拓扑页面。</block>
@@ -382,7 +369,6 @@
   <block id="6b3f89d4de284eef9726110270f3aca6" category="list-text">选择要备份的数据库，实例或可用性组。</block>
   <block id="8aacc4f53fdad965d551d7ddc2e431d1" category="paragraph">备份某个实例时，有关上次备份状态或该实例的时间戳的信息将不会显示在 "Resources" 页面中。</block>
   <block id="9d82e2623af61fdfe7b6c68017db0226" category="paragraph">在拓扑视图中，您无法区分备份状态，时间戳或备份是针对实例还是数据库。</block>
-  <block id="d8e872fb73120498da08d2eb2e952e1f" category="paragraph">例如， customtext_policy_hostname 或 resource_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。</block>
   <block id="204b899f0e95e32b80ec8ea79f53c1ec" category="paragraph">在 * 为选定策略配置计划 * 部分中，将列出选定策略。</block>
   <block id="d9efe8cd3b84ef411469a4acc1e9bb8a" category="list-text">单击 *<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* 。</block>
   <block id="08fe75bd987fb2dedbe7641f478927f0" category="paragraph">此处 `policy_name` 是所选策略的名称。</block>
@@ -436,7 +422,6 @@
   <block id="c27ceb4a4892c429a975a62841762540" category="list-text">计划备份操作和克隆操作</block>
   <block id="aa71cd3a5a90a32aafb3072b19a68b09" category="list-text">监控备份操作，还原操作和克隆操作</block>
   <block id="c343d8ab7af87f16e58b8e8040d7813a" category="admonition">适用于 SQL Server 的插件不支持备份和恢复 SMB 共享上的 SQL Server 数据库。</block>
-  <block id="60b2a4dd687e5b16ce91fc08c7273c8b" category="summary">您可以取消正在运行，已排队或无响应的备份操作。取消备份操作后，如果创建的备份未注册到 SnapCenter 服务器， SnapCenter 服务器将停止该操作并从存储中删除所有 Snapshot 副本。如果备份已注册到 SnapCenter 服务器，则即使在触发取消操作后，它也不会回滚已创建的 Snapshot 副本。</block>
   <block id="6895fc6b34ff814dd8d20f8eb70439e5" category="doc">取消适用于 Microsoft SQL Server 的 SnapCenter 插件备份操作</block>
   <block id="d15cddcc0f2911c53261943c85948fab" category="list-text">要取消还原操作，您必须以 SnapCenter 管理员或作业所有者的身份登录。</block>
   <block id="1e4f7aaf5f275f33488c6753583b5d84" category="list-text">您只能取消已排队或正在运行的日志或完整备份操作。</block>
@@ -465,12 +450,7 @@
   <block id="a9a36931adb350bdf3480cb9845a8fc8" category="image-alt">SCSQL 备份工作流</block>
   <block id="780c1b490607a3963a4db9b069dbf1e2" category="admonition">如果选择非 NetApp LUN ，已损坏的数据库或正在还原的数据库，则 " 资源 " 页面上的 " 立即备份 " ， " 还原 " ， " 管理备份 " 和 " 克隆 " 选项将被禁用。</block>
   <block id="70a3b8963fff53a1f81a125297906687" category="section-title">SnapCenter 如何备份数据库</block>
-  <block id="fe38a38405ced1973299d2b175c66a79" category="paragraph">SnapCenter 使用 Snapshot 副本技术备份 LUN 或 VMDK 上的 SQL Server 数据库。SnapCenter 通过创建数据库的 Snapshot 副本来创建备份。</block>
   <block id="05e0444569b01c1a835c376c06e5d120" category="paragraph">从资源页面选择数据库进行完整数据库备份时， SnapCenter 会自动选择驻留在同一存储卷上的所有其他数据库。如果 LUN 或 VMDK 仅存储一个数据库，则可以单独清除或重新选择该数据库。如果 LUN 或 VMDK 包含多个数据库，则必须清除或重新选择数据库作为一个组。</block>
-  <block id="94d411efd4d509b79e37c7e4a295be9d" category="paragraph">驻留在单个卷上的所有数据库都使用 Snapshot 副本同时进行备份。如果并发备份数据库的最大数量为 35 个，而存储卷中驻留的数据库超过 35 个，则创建的 Snapshot 副本总数等于数据库数除以 35 个。</block>
-  <block id="ec785954577f393169b08b9820597d33" category="admonition">您可以为备份策略中的每个 Snapshot 副本配置最大数据库数。</block>
-  <block id="3c4ba880bf5f444b48a27b0feee215a3" category="paragraph">当 SnapCenter 创建 Snapshot 副本时，整个存储系统卷会捕获到 Snapshot 副本中。但是，备份仅对为其创建备份的 SQL 主机服务器有效。</block>
-  <block id="797732091f9ad14b5fbe3406e6d7ed15" category="paragraph">如果来自其他 SQL 主机服务器的数据驻留在同一个卷上，则无法从 Snapshot 副本还原此数据。</block>
   <block id="832cb1b396b5451b24475f6f96d26d25" category="paragraph"><block ref="832cb1b396b5451b24475f6f96d26d25" category="inline-link-macro-rx"></block></block>
   <block id="463e628d0fee92af59d880953c74bf11" category="summary">在从备份克隆数据库资源之前，您必须使用 SnapCenter 服务器执行多项任务。数据库克隆是为生产数据库或其备份集创建时间点副本的过程。您可以克隆数据库以测试在应用程序开发周期中必须使用当前数据库结构和内容实施的功能，在填充数据仓库时使用数据提取和操作工具，或者恢复错误删除或更改的数据。</block>
   <block id="c53965a1bce6ec0b6c1fa17e3314a375" category="doc">克隆 SQL Server 数据库资源</block>
@@ -776,7 +756,6 @@
   <block id="834a032ae363b3b656aaeecb6f1b7c3e" category="inline-link">Microsoft 支持文章 2887595 ： Windows RT 8.1 ， Windows 8.1 和 Windows Server 2012 R2 更新汇总： 2013 年 11 月</block>
   <block id="145ee2da76e280f3ab74f8e48a4f6229" category="paragraph"><block ref="145ee2da76e280f3ab74f8e48a4f6229" category="inline-link-rx"></block></block>
   <block id="3a398ade5cc2db068632e3780c5f9812" category="list-text">您必须已备份资源组或数据库。</block>
-  <block id="c9be9cc5ba5ff68efaa119bed3d4a11a" category="list-text">如果要将 Snapshot 副本复制到镜像或存储， SnapCenter 管理员必须已为您分配源卷和目标卷的 Storage Virtual Machine （ SVM ）。</block>
   <block id="9ab48724fd891b73fc67de8664319345" category="list-text">在还原数据库之前，必须停止所有备份和克隆作业。</block>
   <block id="10344402be0db5fed4bdb763360d91a4" category="list-text">如果数据库大小为 TB ，则还原操作可能会超时。</block>
   <block id="67758aec18021f6235b6a5ed9330f493" category="paragraph">如果要在数据库处于联机状态时进行还原，应在还原页面中启用联机还原选项。</block>
@@ -881,7 +860,6 @@
   <block id="189f63f277cd73395561651753563065" category="paragraph">Tags</block>
   <block id="80b4392036b2c71988077d45b3eedc67" category="paragraph">输入一个或多个标签，以帮助您稍后搜索资源组。例如，如果您将 HR 作为标记添加到多个资源组，则稍后可以找到与 HR 标记关联的所有资源组。</block>
   <block id="52a580de823d89b3d7b0e19883cf0a1b" category="paragraph">对 Snapshot 副本使用自定义名称格式</block>
-  <block id="14896f2f427d28611f36aa160295c034" category="paragraph">可选：输入自定义 Snapshot 副本的名称和格式。例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。</block>
   <block id="cec46940af8355298a923d623115e6a7" category="list-text">从下拉列表中选择主机名，资源类型和 SQL Server 实例以筛选资源列表。</block>
   <block id="78504af1df199590dc7639bdc6191b6f" category="admonition">如果您最近添加了资源，则只有在刷新资源列表后，这些资源才会显示在可用资源列表中。</block>
   <block id="3c8499d37e5b698773c087e64ded0e3e" category="list-text">要将资源从 * 可用资源 * 部分移至 " 选定资源 " 部分，请执行以下步骤之一：</block>
@@ -902,16 +880,13 @@
   <block id="b39614f1e3ff23cc5b5cd5fd6bf27259" category="inline-image-macro">用于编辑已配置计划的图标</block>
   <block id="5f11c7889df3330ff1f653f5e5702931" category="inline-image-macro">删除图标</block>
   <block id="028663e79f1637979085ec64bff7081d" category="paragraph">已配置的计划将列在 "applied Schedules" 列中。您可以单击 * 进行查看和编辑<block ref="2d7d19a80eadfa8bd69c03954ae600b5" category="inline-image-macro-rx" type="image"></block>* 或单击 * 删除<block ref="07738f780882ec9b17642d6716f5c477" category="inline-image-macro-rx" type="image"></block>*</block>
-  <block id="0a3ee0e4442fc13af19fee91daba03ad" category="summary">您可以使用默认 Snapshot 副本命名约定，也可以使用自定义命名约定。默认备份命名约定会为 Snapshot 副本名称添加一个时间戳，以帮助您确定副本的创建时间。</block>
   <block id="a54ab9a48da734a10b9ef93ce5ee4d05" category="doc">适用于 SQL Server 的插件的备份命名约定</block>
-  <block id="535e5146f6710c64096ef0bec8fde052" category="paragraph">Snapshot 副本使用以下默认命名约定：</block>
   <block id="99bb793d8518c3738d75ad0f87e31dcf" category="paragraph">`resourcegroupname_hostname_timestamp`</block>
   <block id="d5cc6c862c6a1f4384bd43917710a763" category="paragraph">您应按逻辑方式命名备份资源组，如以下示例所示：</block>
   <block id="bdd8b7afde2c57bb177f08a155eb0f00" category="paragraph">在此示例中，语法元素具有以下含义：</block>
   <block id="0a582eb0bda617d73885518760675220" category="list-text">_dts1_ 是资源组名称。</block>
   <block id="cbcca0e2763af2ef4379ffa9a0fee87d" category="list-text">_mach1X88_ 是主机名。</block>
   <block id="1cd8edb6081ac8a62963443b4802377c" category="list-text">_03-12-2015_23.17.26_ 是日期和时间戳。</block>
-  <block id="a17dc09f2a6c5969ecc6d4e607cd5456" category="paragraph">或者，您也可以通过选择 * 对 Snapshot 副本使用自定义名称格式 * 来在保护资源或资源组时指定 Snapshot 副本名称格式。例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下，时间戳后缀会添加到 Snapshot 副本名称中。</block>
   <block id="59554a37a60d4da009dea594241b0ae1" category="summary">获取 CA 证书指纹。</block>
   <block id="9772bdc36f54d8bb6dc779a222af547c" category="doc">获取 CA 证书指纹</block>
   <block id="cd2e2c723c403abdc6897c3987837652" category="paragraph">证书指纹是用于标识证书的十六进制字符串。指纹是使用指纹算法根据证书内容计算得出的。</block>
@@ -932,8 +907,6 @@
   <block id="bfa8c341f9069cab983b83a7b3d6e229" category="summary">您可以将所有数据库放在同一个卷上，因为备份策略可以选择设置每个备份的最大数据库数（默认值为 100\ ）。</block>
   <block id="49d3d638c72a43de1071ccafc35ba79d" category="doc">同一卷上有多个数据库</block>
   <block id="4e23a71c353d487c1b39814259994b97" category="paragraph">您可以将所有数据库放在同一个卷上，因为备份策略可以选择设置每个备份的最大数据库数（默认值为 100 ）。</block>
-  <block id="190319f351847bd1023d75c822627133" category="paragraph">例如，如果同一个卷中有 200 个数据库，则会创建两个 Snapshot 副本，其中每个副本包含 100 个数据库。</block>
-  <block id="24743f153fb0278e1e3b6f596ac1f6fa" category="summary">适用于 SQL Server 的插件可与 Windows 主机上的 Microsoft SQL Server 以及存储系统上的 NetApp Snapshot 副本技术集成。要使用适用于 SQL Server 的插件，请使用 SnapCenter 界面。</block>
   <block id="043833147a39840644f2ff01a835f90d" category="doc">适用于 Microsoft SQL Server 的 SnapCenter 插件功能</block>
   <block id="124dafa39d6abec3cd14b880f87c4178" category="paragraph">适用于 SQL Server 的插件包括以下主要功能：</block>
   <block id="fe83f9df83b3aa96b52b9e5a120baa6d" category="list-text">* 由 SnapCenter 提供支持的统一图形用户界面 *</block>
@@ -941,7 +914,6 @@
   <block id="8cab777e8f4d0f3134b1e688de9e3a14" category="list-text">* 自动化中央管理 *</block>
   <block id="76269dad3b4162847b77d8ae239cead5" category="paragraph">您可以计划例行 SQL Server 备份，配置基于策略的备份保留以及设置时间点和最新还原操作。您还可以通过配置 SnapCenter 以发送电子邮件警报来主动监控 SQL Server 环境。</block>
   <block id="989a8d53a95cf1413d4fbd7dfdc2f013" category="list-text">* 无中断 NetApp Snapshot 副本技术 *</block>
-  <block id="a621c2443659e98a79889cf634460ecb" category="paragraph">适用于 SQL Server 的插件将 NetApp Snapshot 副本技术与适用于 Microsoft Windows 的 NetApp SnapCenter 插件结合使用。这样，您就可以在几秒钟内备份数据库并快速还原它们，而无需使 SQL Server 脱机。Snapshot 副本占用的存储空间极少。</block>
   <block id="8a92e906457b4fafff3da6c975954701" category="paragraph">除了这些主要功能之外，适用于 SQL Server 的插件还具有以下优势：</block>
   <block id="19ad37e6b2da345ecd66a8304c75bdf0" category="list-text">支持备份，还原，克隆和验证工作流</block>
   <block id="5750866ea3f2f5172a0cbfaa24301be8" category="list-text">支持 RBAC 的安全性和集中式角色委派</block>
@@ -959,7 +931,6 @@
   <block id="71529fb0bca8c472c240508a96afc5cb" category="list-text">支持 SQL Server 独立数据库中的文件流和文件组。</block>
   <block id="b84d1d8c09293020f3483a11ab0dddc9" category="summary">您可以验证主存储卷或 SnapMirror 或 SnapVault 二级存储卷上的备份副本。使用二级存储卷进行验证可减少主存储卷上的负载。</block>
   <block id="ebae46e6c1cf802f26210eac01893036" category="doc">使用适用于 SQL Server 的插件的主存储卷或二级存储卷进行备份副本验证</block>
-  <block id="f9265969cb3180ece98659aeee441d5a" category="paragraph">在验证主存储卷或二级存储卷上的备份时，所有主 Snapshot 副本和二级 Snapshot 副本都会标记为已验证。</block>
   <block id="7d75df615ecc318750420253367a234c" category="paragraph">要验证 SnapMirror 和 SnapVault 二级存储卷上的备份副本，需要 SnapRestore 许可证。</block>
   <block id="3d18a8ecd9e4c9d6e8109fc7dc46902c" category="summary">提供有关安装 SnapCenter 服务器和适用于 Microsoft SQL Server 的 SnapCenter 插件的说明。</block>
   <block id="303271a6fa371310673fc55e65bf3af0" category="doc">快速开始安装适用于 SQL Server 的 SnapCenter 插件</block>
@@ -1176,11 +1147,8 @@
   <block id="949ad980c1552a4a514f54656c5e4e1e" category="paragraph">如果正在进行备份，还原或另一个克隆拆分，则克隆拆分启动操作将失败。只有在运行的操作完成后，才应重新启动克隆拆分操作。</block>
   <block id="c890d8869922996dfd86a523bb9d74d4" category="inline-link">SnapCenter 克隆或验证失败，并且聚合不存在</block>
   <block id="c4d1b109542fdbc8eef8e3b4cac85e00" category="paragraph"><block ref="c4d1b109542fdbc8eef8e3b4cac85e00" category="inline-link-rx"></block></block>
-  <block id="a61442d4f2c413e3792d7594050ba2cc" category="summary">您可以使用 Remove-SmBackup cmdlet 清理不含 Snapshot 副本的二级备份的备份计数。如果管理副本拓扑中显示的 Snapshot 副本总数与二级存储 Snapshot 副本保留设置不匹配，您可能需要使用此 cmdlet 。</block>
   <block id="11dc6d5147b38aacb94d18c088856bed" category="doc">使用 PowerShell cmdlet 清理二级备份计数</block>
-  <block id="f71dfd6c3ba5579bcd41f13631288dbe" category="paragraph">您可以使用 Remove-SmBackup cmdlet 清理不含 Snapshot 副本的二级备份的备份计数。如果管理副本拓扑中显示的 Snapshot 副本总数与二级存储 Snapshot 副本保留设置不匹配，您可能需要使用此 cmdlet 。</block>
   <block id="5d365fedd8db2449d52b5be4a9205fb5" category="list-text">使用 -CleanupSecondaryBackups 参数清理二级备份计数。</block>
-  <block id="1bea5939f16f3388c1a175f0af134c13" category="paragraph">此示例将清理不含 Snapshot 副本的二级备份的备份计数：</block>
   <block id="51d95bab000b8bd5e8f9d83c3f25d453" category="summary">使用 reseeded 可以还原可用性组（ AG\ ）数据库。如果二级数据库与 AG 中的主数据库不同步，您可以重新传输二级数据库。</block>
   <block id="951ead00aca07936d7cbe2d0eaf3bdde" category="doc">转义可用性组数据库</block>
   <block id="86c8bce86a1532578679c840db2996d0" category="paragraph">可以选择重新传送来还原可用性组（ Availability Group ， AG ）数据库。如果二级数据库与 AG 中的主数据库不同步，您可以重新传输二级数据库。</block>
@@ -1253,13 +1221,10 @@
   <block id="ce938ff2cd62772022d524bef4583928" category="list-text">如果不想检查非集群索引，请选择 * NOINDIEX* 选项。</block>
   <block id="659d429411e9bdf1792d1ee2e9be57e8" category="paragraph">SQL Server 数据库使用 Microsoft SQL Server 数据库一致性检查程序（ DBCC ）来检查数据库中对象的逻辑和物理完整性。</block>
   <block id="56e4a44986eec2c6c805eb91f2eb9f57" category="admonition">您可能需要选择此选项以缩短执行时间。</block>
-  <block id="276a2a80c1894c38febc3b5daa0e6f1e" category="list-text">选择 "**TABLOCK_" 选项以限制检查并获取锁定，而不是使用内部数据库 Snapshot 副本。</block>
   <block id="f896d9aec3aeda8f9d538e812b63bad4" category="list-text">查看摘要，然后单击 "* 完成 "* 。</block>
   <block id="0441f921ecb29005b4b309df792042a3" category="summary">通过为 SQL Server 定义还原策略，您可以成功还原数据库。</block>
   <block id="24fc557949539a292d3c18f3c9454f62" category="doc">定义 SQL Server 的还原策略</block>
-  <block id="6a34b15a40b3586e87a4c13c8590b294" category="summary">使用 SnapCenter 备份 SQL Server 系统和用户数据库需要选择资源类型，例如数据库， SQL Server 实例和可用性组 \ （ ag\ ）。Snapshot 副本技术用于为资源所在的卷创建联机只读副本。</block>
   <block id="2a681580cba5d0bac1fe8b6665a6a47e" category="doc">支持的备份类型</block>
-  <block id="83a6b4f4d698b5886d410ecf41ce092e" category="paragraph">使用 SnapCenter 备份 SQL Server 系统和用户数据库需要选择资源类型，例如数据库， SQL Server 实例和可用性组（ Availability Group ， AG ）。Snapshot 副本技术用于为资源所在的卷创建联机只读副本。</block>
   <block id="3f2b6cc2adaf1a1f28214b5ed39ff5cd" category="paragraph">您可以选择仅复制选项以指定 SQL Server 不截断事务日志。如果同时使用其他备份应用程序管理 SQL Server ，则应使用此选项。保持事务日志完好无损可使任何备份应用程序恢复系统数据库。纯副本备份与计划的备份顺序无关，它们不会影响数据库的备份和还原过程。</block>
   <block id="a3c82f66d39159c3e9d428cd534beb34" category="cell">备份类型</block>
   <block id="6c8a86b32ee2dec60604a9f5961cc1c5" category="cell">具有备份类型的仅复制选项</block>
@@ -1443,7 +1408,6 @@
   <block id="a3a63bd1ddab3e696228b7b61878c09d" category="doc">为 Oracle 数据库创建备份策略</block>
   <block id="ed740a0593e2888b4f41c0fd5c5e3ca9" category="list-text">您必须已定义备份策略。</block>
   <block id="e457b5ee7ca69de08b3486e30ef1d570" category="list-text">您必须已通过完成安装 SnapCenter ，添加主机，发现数据库和创建存储系统连接等任务为数据保护做好准备。</block>
-  <block id="2619f2e63fc2bcfbbef6d5861952e68b" category="list-text">如果要将 Snapshot 副本复制到镜像或存储二级存储， SnapCenter 管理员必须已为源卷和目标卷分配 SVM 。</block>
   <block id="12a8a88fbbb12cf46de8ed3c3c9c4df5" category="list-text">从下拉列表中选择 * Oracle Database* 。</block>
   <block id="3c6544f27197f56a0b07b5ed264760dc" category="list-text">在名称页面中，输入策略名称和问题描述。</block>
   <block id="49868beda0a485f260d92cbafbd9e394" category="list-text">在备份类型页面中，执行以下步骤：</block>
@@ -1474,17 +1438,12 @@
   <block id="3330083979ff2e07d7e4609ee2228f08" category="paragraph">选择 * 从属于备份一部分的目标中删除归档日志 * 。</block>
   <block id="27f6bf9956fb5d538b6d1793de7a2624" category="paragraph"><block ref="27f6bf9956fb5d538b6d1793de7a2624" category="inline-image-macro-rx" type="image"></block></block>
   <block id="33b9f4074a30cf7699528b526f1e171d" category="list-text">在保留页面中，指定备份类型的保留设置以及在备份类型页面中选择的计划类型：</block>
-  <block id="9562758d343cb5226c22630eacf99365" category="paragraph">保留一定数量的 Snapshot 副本</block>
-  <block id="189e283fb708ef792d0d8144a72e798b" category="paragraph">选择 * 要保留的 Snapshot 副本总数 * ，然后指定要保留的 Snapshot 副本数量。</block>
-  <block id="b16c2ae9651bd34c3e7c132b0b29cf32" category="paragraph">将 Snapshot 副本保留一定数量的天</block>
-  <block id="f4a027d3dd6468d4bcffb446d92cfde1" category="paragraph">选择 * 保留 Snapshot 副本 * ，然后指定删除 Snapshot 副本之前要保留这些副本的天数。</block>
   <block id="9696f79f02f1b72ee2751fa3ac8cee1b" category="admonition">只有在备份过程中选择了归档日志文件时，才能保留归档日志备份。</block>
   <block id="7cc68b5677a3b2fc34e03106ab7871ff" category="list-text">在复制页面中，指定复制设置：</block>
   <block id="1275946d22bd30ab4fa43a93760353bd" category="paragraph">选择此字段可在另一个卷上创建备份集的镜像副本（ SnapMirror 复制）。</block>
   <block id="5599318ff76ac470ccc995aab6f33577" category="paragraph">创建本地 Snapshot 副本后更新 SnapVault</block>
   <block id="a8026657de84cf12f52f1113eca69500" category="paragraph">选择此选项可执行磁盘到磁盘备份复制（ SnapVault 备份）。</block>
   <block id="b1e8c3d6aa4aee19e19fd276e7c61e0b" category="paragraph">输入操作停止前允许的最大复制尝试次数。</block>
-  <block id="41c1fe93c7a860adc2ee274dfe16b5f6" category="admonition">您应在 ONTAP 中为二级存储配置 SnapMirror 保留策略，以避免达到二级存储上 Snapshot 副本的最大限制。</block>
   <block id="92690dd16a9c4d48908bc7f3eaf042ac" category="list-text">在脚本页面中，分别输入要在备份操作之前或之后运行的预处理或后处理的路径和参数。</block>
   <block id="ffb3ae9f69a62e97d1deccf8e6b8f1ff" category="paragraph">您必须将预处理脚本和后处理脚本存储在此路径中的 /var/opt/snapcenter/spl/scripts_ 或任何文件夹中。默认情况下，系统会填充 _/var/opt/snapcenter/spl/scripts_ 路径。如果您在此路径中创建了任何文件夹来存储脚本，则必须在此路径中指定这些文件夹。</block>
   <block id="1b4b1a8701700f9bb0245d7c920ebd16" category="paragraph">您还可以指定脚本超时值。默认值为 60 秒。</block>
@@ -1567,7 +1526,6 @@
   <block id="3b12138a7f752b38337d4dfdf997ddc1" category="paragraph">SnapCenter 支持对 Oracle 数据库进行连接和复制或原位还原。在还原操作期间， SnapCenter 会确定适用于在不丢失任何数据的情况下用于还原的文件系统的还原方法。</block>
   <block id="df3cf38e44637d2165eb181af223b67b" category="section-title">连接和复制还原</block>
   <block id="b1e6525cac3e5ba1f6afa5b22a0816a0" category="paragraph">如果数据库布局与备份不同，或者创建备份后有任何新文件，则会执行连接和复制还原。在连接和复制还原方法中，将执行以下任务：</block>
-  <block id="9010183ca92e32bb60cc8b7403d1d2ae" category="list-text">此卷会从 Snapshot 副本克隆，而文件系统堆栈是在使用克隆的 LUN 或卷的主机上构建的。</block>
   <block id="f829cb1081f9c94375e8005905c13c01" category="list-text">这些文件将从克隆的文件系统复制到原始文件系统。</block>
   <block id="af50d714aae8420f1fba06fef93a651c" category="list-text">然后，克隆的文件系统将从主机中卸载，克隆的卷将从 ONTAP 中删除。</block>
   <block id="f3d8e7bed549389cd494b6bfbb85a42f" category="admonition">对于 FlexASM 设置（基数小于 RAC 集群中的节点数）或 VMDK 或 RDM 上的 ASM RAC 数据库，仅支持连接和复制还原方法。</block>
@@ -1654,7 +1612,6 @@
   <block id="241427aa082547643032d9ac47ab0dda" category="summary">在还原 Oracle 数据库之前，您应确保满足前提条件。</block>
   <block id="e4efd46999918866976643fdf1c3041d" category="doc">还原 Oracle 数据库的要求</block>
   <block id="58f28c7080a3b5a4d907dfdece1ece75" category="list-text">您应已定义还原和恢复策略。</block>
-  <block id="86e3376af807930c08ffb54560870134" category="list-text">如果要将 Snapshot 副本复制到镜像或存储， SnapCenter 管理员应已为您分配源卷和目标卷的 Storage Virtual Machine （ SVM ）。</block>
   <block id="61b9803a1cd8f34e415ade3146621c10" category="list-text">如果在备份过程中对归档日志进行了修剪，则您应已手动挂载所需的归档日志备份。</block>
   <block id="1db970b2a6105a2ea2fd5097ac660cbe" category="list-text">如果要还原驻留在虚拟机磁盘（ VMDK ）上的 Oracle 数据库，则应确保子计算机具有所需数量的可用插槽来分配克隆的 VMDK 。</block>
   <block id="ba4dc32189ac55cef59ce8019633507c" category="list-text">如果为数据库启用了二级保护，则应确保属于该数据库的所有数据卷和归档日志卷均受保护。</block>
@@ -1947,7 +1904,6 @@
   <block id="bb3bb922fc2fe1b5851c8c139e13f07b" category="doc">备份 Oracle 资源</block>
   <block id="d8e3db119b7cf9c31602a2121bfa4365" category="list-text">选择要备份的数据库。</block>
   <block id="d24902f60cccf9a4d0ef979587d1d4fd" category="paragraph">此时将显示 " 数据库保护 " 页面。</block>
-  <block id="81e3d6d459d6185662dc1ac418aeba95" category="paragraph">选中此复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。</block>
   <block id="056af176267461e7d6a2a9e357208bd7" category="paragraph">从备份中排除归档日志目标</block>
   <block id="491a86dab4dbb4636159b9c8d91d9c09" category="paragraph">指定不希望备份的归档日志文件的目标。</block>
   <block id="db9cc4a2ed12e21bb79e9346714c68b9" category="paragraph">在为选定策略配置计划部分中，将列出选定策略。</block>
@@ -2180,8 +2136,6 @@
   <block id="7140c9ed643472273949574e79ba9b60" category="paragraph">SnapCenter 界面可在插件和环境之间实现标准化和一致性。通过 SnapCenter 界面，您可以跨插件完成一致的备份，还原，恢复和克隆操作，使用集中式报告，使用信息板概览视图，设置基于角色的访问控制（ Role-Based Access Control ， RBAC ）以及监控所有插件中的作业。</block>
   <block id="194512dda07e4cc0aca1533656efba55" category="list-text">自动化中央管理</block>
   <block id="25ec8c1a8c1cbba6a91ecfb52cfacecc" category="paragraph">您可以计划备份和克隆操作，配置基于策略的备份保留以及执行还原操作。您还可以通过配置 SnapCenter 以发送电子邮件警报来主动监控您的环境。</block>
-  <block id="3823b5d9d8dc7e47a02c4aa6ea80105b" category="list-text">无中断 NetApp Snapshot 副本技术</block>
-  <block id="5b106f222bf3db55d42731c8112c039b" category="paragraph">SnapCenter 将 NetApp Snapshot 副本技术与适用于 Oracle 数据库的插件和适用于 UNIX 的插件结合使用来备份数据库。Snapshot 副本占用的存储空间极少。</block>
   <block id="07ef9882c6d102197c21c087f1bcb441" category="paragraph">适用于 Oracle 数据库的插件还具有以下优势：</block>
   <block id="98c168ef2d3d275c5131b78a27b98fbf" category="list-text">支持备份，还原，克隆，挂载，卸载， 和验证工作流</block>
   <block id="7042e4b6e6cd168a927b1bbc1790a57e" category="list-text">自动发现主机上配置的 Oracle 数据库</block>
@@ -2191,7 +2145,6 @@
   <block id="da7d10a7d1bd2a2e5acc1a7e98e314b4" category="paragraph">要创建克隆的存储系统需要 FlexClone 许可证。</block>
   <block id="60c01eaf63f6f84994a18b3ef120f90f" category="list-text">在 SAN 和 ASM 环境中创建备份时，支持 ONTAP 的一致性组（ Consistency Group ， CG ）功能</block>
   <block id="791e3048ca35b220103df4a3c759f26a" category="list-text">能够在多个数据库主机之间同时运行多个备份</block>
-  <block id="49ad63a9d87c64bd33da05af5cb09e1c" category="paragraph">在一次操作中，如果一个主机中的数据库共享同一个卷，则会整合 Snapshot 副本。</block>
   <block id="ba616d0f67fed92e5664508021cbd276" category="list-text">支持 NFS ， iSCSI ，光纤通道（ FC ）， RDM ，基于 NFS 和 VMFS 的 VMDK 以及基于 NFS ， SAN ， RDM 和 VMDK 的 ASM</block>
   <block id="abd96a9e67c87700d0ddbbf79ca1ad42" category="list-text">支持 ONTAP 的选择性 LUN 映射（ SLM ）功能</block>
   <block id="fcc8a219537ae52cbcb4de4b42305ef7" category="paragraph">默认情况下， SLM 功能会定期发现没有优化路径的 LUN 并对其进行修复。您可以通过修改位于 /var/opt/snapcenter/scU/etc 的 scu.properties 文件中的参数来配置 SLM</block>
@@ -2224,8 +2177,6 @@
   <block id="fa4d1c967d467deb12174bc6b1b3355b" category="paragraph">输入资源组的名称。</block>
   <block id="7651838ffd9b279a9ff6c4c63159427e" category="paragraph">输入一个或多个标签，以帮助您稍后搜索资源组。</block>
   <block id="dc5b15d16c6cbd04c1864901ca5f2732" category="paragraph">例如，如果您将 HR 作为标记添加到多个资源组，则稍后可以找到与 HR 标记关联的所有资源组。</block>
-  <block id="aff716d8309a2ea5e7dcffc15638b023" category="paragraph">选中此复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。</block>
-  <block id="f575e6fdc603f5206dc21a87a354406b" category="paragraph">例如， customtext_resource group_policy_hostname 或 resource group_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。</block>
   <block id="dea54623aa643ec856baf8abb4233177" category="admonition">只有在成功发现资源后，这些资源才会列在 "Available Resources" 部分中。如果您最近添加了资源，则只有在刷新资源列表后，这些资源才会显示在可用资源列表中。</block>
   <block id="5dcd20433605552bfe1ee3f21d0564ef" category="list-text">从 "Available Resources" 部分中选择资源，然后将其移动到 "Selected Resources" 部分。</block>
   <block id="16a4d8b6ed11330e0e6e2c8f2b58a1b0" category="admonition">您可以将 Linux 和 AIX 主机中的数据库添加到一个资源组中。</block>
@@ -2236,7 +2187,6 @@
   <block id="e058be158ad9231e0b1b44d9048f0ff8" category="summary">您可以取消正在运行，已排队或无响应的备份操作。</block>
   <block id="725a197c7788c699a7829d49ed273483" category="doc">取消 Oracle 数据库的备份操作</block>
   <block id="799f83c785fdbd8c224ff6863ef07529" category="paragraph">要取消备份操作，您必须以 SnapCenter 管理员或作业所有者的身份登录。</block>
-  <block id="b9713525162207c91f2908e3c4c7af7a" category="paragraph">取消备份操作后，如果创建的备份未注册到 SnapCenter 服务器， SnapCenter 服务器将停止该操作并从存储中删除所有 Snapshot 副本。如果备份已注册到 SnapCenter 服务器，则即使在触发取消操作后，它也不会回滚已创建的 Snapshot 副本。</block>
   <block id="f9f556d2b6534722edff515d5f7bc15b" category="list-text">您只能取消已排队或正在运行的日志或完整备份操作。</block>
   <block id="01e1dfaf1adc24343f71395bd122bae5" category="list-text">目录操作启动后，您无法取消备份操作。</block>
   <block id="6ead40700edacacddf2e163b14792949" category="list-text">除了使用 SnapCenter 图形用户界面之外，您还可以使用命令行界面命令取消操作。</block>
@@ -2767,9 +2717,6 @@
   <block id="d75b221a62d4c54927e045808754179b" category="list-text">对于厚配置 LUN ，可扩展大小（卷中的可用大小）显示为最大大小。</block>
   <block id="378f0e048b351847c673c327b1b01b2f" category="list-text">具有 MBR 模式分区的 LUN 的大小限制为 2 TB 。</block>
   <block id="3da1df07fc5b3e4a8b649955e81299b8" category="list-text">具有 GPT 模式分区的 LUN 的存储系统大小限制为 16 TB 。</block>
-  <block id="b60be6496fbd5e8e48e41b61ba470027" category="list-text">最好在调整 LUN 大小之前创建 Snapshot 副本。</block>
-  <block id="95c6d63a469de5afcddc96c6c1ea3f34" category="list-text">如果需要从调整 LUN 大小之前创建的 Snapshot 副本还原 LUN ， SnapCenter 会自动将 LUN 大小调整为 Snapshot 副本的大小。</block>
-  <block id="3d68d9692f770a9139cf370f132ca172" category="paragraph">执行还原操作后，必须从调整大小后创建的 Snapshot 副本还原在调整 LUN 大小后添加到 LUN 中的数据。</block>
   <block id="3015ed368b1638274f7638b11f4d1ab1" category="list-text">从主机下拉列表中选择主机。</block>
   <block id="8cba961b1ec5d7c289472ddf43619739" category="list-text">选择要调整大小的磁盘，然后单击 * 调整大小 * 。</block>
   <block id="27b4f01bf1710435fa0b0b60a7a494a0" category="list-text">在调整磁盘大小对话框中，使用滑块工具指定磁盘的新大小，或者在大小字段中输入新大小。</block>
@@ -2897,7 +2844,6 @@
   <block id="70991649072f70fdb060c64c2144c8c8" category="paragraph">SnapCenter 不支持在不同集群上使用相同名称的多个存储系统。SnapCenter 支持的每个存储系统都应具有唯一的名称和唯一的数据 LIF IP 地址。</block>
   <block id="d8c79769d1510f53b50beb7c46e3e14f" category="list-text">配置存储系统时，您还可以启用事件管理系统（ EMS ）和 AutoSupport 功能。AutoSupport 工具可收集有关系统运行状况的数据，并自动将这些数据发送给 NetApp 技术支持，使其能够对系统进行故障排除。</block>
   <block id="8066687b2002e6c5af9c9a8c64166d49" category="paragraph">如果启用了这些功能，则在资源受保护，还原或克隆操作成功完成或操作失败时， SnapCenter 会将 AutoSupport 信息发送到存储系统，并将 EMS 消息发送到存储系统系统系统日志。</block>
-  <block id="90e51e88af6422ac879c0c7acebf28ca" category="list-text">如果您计划将 Snapshot 副本复制到 SnapMirror 目标或 SnapVault 目标，则必须为目标 SVM 或集群以及源 SVM 或集群设置存储系统连接。</block>
   <block id="af0393ab7c1c21394683b80f2704864d" category="admonition">如果更改存储系统密码，计划的作业，按需备份和还原操作可能会失败。更改存储系统密码后，您可以通过单击存储选项卡中的 * 修改 * 来更新密码。</block>
   <block id="d907195077a50076f92791c10bb76a87" category="list-text">在存储系统页面中，单击 * 新建 * 。</block>
   <block id="7e3e16c1661e45c7df525db25b2af547" category="list-text">在添加存储系统页面中，提供以下信息：</block>
@@ -3140,7 +3086,6 @@
   <block id="8877dc9fcfb6df8dad34589e1a225411" category="paragraph">创建资源组</block>
   <block id="3e84305a1bfb0bb3f17a78c50889f512" category="list-text">将新节点添加到 Windows 集群或 DAG （ Exchange Server 数据库可用性组）资产中后，如果将此新节点分配给用户，则必须将此资产重新分配给用户或组，以便将此新节点包含到用户或组中。</block>
   <block id="077b5968d54f25c57e3cff7cb71fb295" category="paragraph">您应将 RBAC 用户或组重新分配给集群或 DAG ，以便将新节点包含给 RBAC 用户或组。例如，您有一个双节点集群，并且已为此集群分配 RBAC 用户或组。向集群添加另一个节点时，应将 RBAC 用户或组重新分配给集群，以便为 RBAC 用户或组添加新节点。</block>
-  <block id="7a2bea54d65bdb486c21225326f24168" category="list-text">如果您计划复制 Snapshot 副本，则必须将源卷和目标卷的存储连接分配给执行此操作的用户。</block>
   <block id="1a30a23470dfab273d5a6b116e08627b" category="paragraph">您应先添加资产，然后再为用户分配访问权限。</block>
   <block id="3b94205bc2616f2bf8416a810bbba1b8" category="inline-link">适用于 VMware vSphere 的 SnapCenter 插件附带的预定义角色</block>
   <block id="61dc06ea09d65aec5db611ccff43e263" category="admonition">如果您使用适用于 VMware vSphere 的 SnapCenter 插件功能来保护 VM ， VMDK 或数据存储库，则应使用 VMware vSphere GUI 将 vCenter 用户添加到适用于 VMware vSphere 的 SnapCenter 插件角色中。有关 VMware vSphere 角色的信息，请参见<block ref="428cb7b96c1d9798e75623fa5c5801df" category="inline-link-rx"></block>。</block>
@@ -3439,7 +3384,6 @@
   <block id="c75f7811d70d17dbcd88e9d03752cbed" category="section-title">身份验证</block>
   <block id="f99af3f9d6fe830ae8bd2fc15f75f35f" category="paragraph">用户需要在登录期间通过图形用户界面（ GUI ）或 PowerShell cmdlet 提供身份验证。如果用户是多个角色的成员，则在输入登录凭据后，系统会提示用户指定要使用的角色。用户还需要提供身份验证才能运行 API 。</block>
   <block id="4621c32301e9db3796cade120966e4ac" category="paragraph">SnapCenter 使用凭据验证授权的 SnapCenter 用户是否也具有应用程序级别的权限。</block>
-  <block id="86668b4509f462ece126907d84f808c1" category="paragraph">例如，如果要在 SQL Server 环境中执行 Snapshot 副本和数据保护操作，则必须使用正确的 Windows 或 SQL 凭据设置凭据。SnapCenter 服务器使用任一方法对设置的凭据进行身份验证。如果要在 ONTAP 存储上的 Windows 文件系统环境中执行 Snapshot 副本和数据保护操作，则 SnapCenter 管理员角色必须对 Windows 主机具有管理员权限。</block>
   <block id="1247a4f73aec617351c15da7677f2470" category="paragraph">同样，如果要对 Oracle 数据库执行数据保护操作，并且在数据库主机中禁用了操作系统（ OS ）身份验证，则必须使用 Oracle 数据库或 Oracle ASM 凭据设置凭据。SnapCenter 服务器会根据操作使用以下方法之一对凭据集进行身份验证。</block>
   <block id="880474ac5a13e7ace0b497d868bfcec8" category="section-title">适用于 VMware vSphere RBAC 的 SnapCenter 插件</block>
   <block id="f801aae5c222a63a7b4293067447308c" category="paragraph">如果您使用 SnapCenter VMware 插件进行 VM 一致的数据保护，则 vCenter Server 可提供额外级别的 RBAC 。SnapCenter VMware 插件既支持 vCenter Server RBAC ，又支持 Data ONTAP RBAC 。</block>
@@ -3570,7 +3514,6 @@
   <block id="614d75d82c03a359210029561e76c31c" category="paragraph">Microsoft Exchange Server ， Microsoft SQL Server ， Linux 或 AIX 上的 Oracle 数据库， SAP HANA 数据库以及 ONTAP 系统上运行的 Windows 主机文件系统均支持数据保护。</block>
   <block id="91fc009ef552fe282ad4103bc4542688" category="paragraph">通过提供一个用于创建用户定义的 SnapCenter 插件的框架，其他标准或自定义应用程序和数据库也支持数据保护。这样就可以通过同一个单一管理平台为其他应用程序和数据库提供数据保护。通过利用此框架， NetApp 在 NetApp 自动化商店中发布了适用于 IBM DB2 ， MongoDB ， MySQL 等的 SnapCenter 自定义插件。</block>
   <block id="1e06a8cc16bd3bc423f81e8ff56e4fc0" category="list-text">基于策略的备份</block>
-  <block id="5120c9ef4a7041813fe0f5dd0dceb9e7" category="paragraph">基于策略的备份利用 NetApp Snapshot 副本技术创建快速，节省空间，应用程序一致且基于磁盘的备份。或者，您也可以通过更新现有保护关系自动将这些备份保护到二级存储。</block>
   <block id="c6f23063f5e9e828f1d4a0d52255f07c" category="list-text">备份多个资源</block>
   <block id="050fe282bd8b711ba366c400655d1e2a" category="paragraph">您可以使用 SnapCenter 资源组同时备份多个相同类型的资源（应用程序，数据库或主机文件系统）。</block>
   <block id="6be8f3086a30e59e908d53eb620b51dd" category="list-text">还原和恢复</block>
@@ -3650,7 +3593,6 @@
   <block id="2f75224064f651f17be474084e7a7ff5" category="section-title">适用于 Microsoft Windows 的 SnapCenter 插件功能</block>
   <block id="1b789581aeaa48640561ebae3b263a76" category="list-text">为 SnapCenter 环境中 Windows 主机上运行的其他插件启用应用程序感知型数据保护</block>
   <block id="d764b7be86ece9a7b21fa445a8e1493c" category="list-text">自动对 SnapCenter 环境中的 Microsoft 文件系统执行应用程序感知型备份，还原和克隆操作</block>
-  <block id="6654f600f78c3ef362da3ccd2f7edf7c" category="list-text">支持 Windows 主机的存储配置， Snapshot 副本一致性和空间回收</block>
   <block id="dea9211ac8214ee6078ef38e9e19fd1b" category="admonition">适用于 Windows 的插件在物理和 RDM LUN 上配置 SMB 共享和 Windows 文件系统，但不支持在 SMB 共享上对 Windows 文件系统执行备份操作。</block>
   <block id="bb1a0267e6190653f6b95ebf12a64e69" category="section-title">适用于 Microsoft Exchange Server 的 SnapCenter 插件功能</block>
   <block id="b1af2c6f8c468738169b12e770baea8c" category="list-text">为 SnapCenter 环境中的 Microsoft Exchange Server 数据库和数据库可用性组（ DAG ）自动执行应用程序感知型备份和还原操作</block>
@@ -3727,14 +3669,10 @@
   <block id="b1d3c10985fe921d1cd4f1920df9beb6" category="list-text">* 统一图形用户界面 *</block>
   <block id="6fb6e736abe2121b5ad7a964c6879b29" category="paragraph">SnapCenter 界面可在插件和环境之间实现标准化和一致性。通过 SnapCenter 界面，您可以跨插件完成一致的备份，还原和克隆操作，使用集中式报告，使用信息板概览视图，设置基于角色的访问控制（ Role-Based Access Control ， RBAC ）以及监控所有插件中的作业。</block>
   <block id="c977f209575b6b5d579a260964bb7de1" category="paragraph">您可以计划备份操作，配置基于策略的备份保留以及执行还原操作。您还可以通过配置 SnapCenter 以发送电子邮件警报来主动监控您的环境。</block>
-  <block id="cdeab085bb0baca278e3fd127c3bba01" category="paragraph">SnapCenter 将 NetApp Snapshot 副本技术与适用于 SAP HANA 数据库的插件结合使用来备份资源。</block>
   <block id="e7e4cc54822b6895b1ed2f1d8b2ba77b" category="paragraph">使用适用于 SAP HANA 数据库的插件还具有以下优势：</block>
   <block id="fda7113d1825e99bb5e099dfa43e494e" category="list-text">支持备份，还原和克隆工作流</block>
   <block id="77f89c57ca9a76d1b05a0a6547343371" category="list-text">使用 NetApp FlexClone 技术为测试或数据提取创建节省空间的时间点资源副本</block>
-  <block id="9e4633462318910dca2edeae9ec80ba5" category="list-text">在创建备份过程中支持 ONTAP 的一致性组（ CG ） Snapshot 副本功能。</block>
   <block id="b2d4bf2086608858ce65205273756f72" category="list-text">能够在多个资源主机之间同时运行多个备份</block>
-  <block id="9fbdf25f5f7438e8ad28dc70e5ff6afe" category="paragraph">在一次操作中，如果一个主机中的资源共享同一个卷，则会整合 Snapshot 副本。</block>
-  <block id="9596ee91c9b7773aba04b6a3a9a68174" category="list-text">可以使用外部命令创建 Snapshot 副本。</block>
   <block id="6f52ab5eb8ac5cf70bdcac9134b36a7c" category="list-text">支持基于文件的备份。</block>
   <block id="691f9dff16ebd5da65b5dbbe0c978b53" category="list-text">支持 XFS 文件系统上的 Linux LVM 。</block>
   <block id="8f088fc353589a53b22d09fce118b2a6" category="doc">设置适用于 SAP HANA 数据库的 SnapCenter 插件的凭据</block>
@@ -3753,7 +3691,6 @@
   <block id="d26e732ff4468b921ec70bf797290866" category="section-title">完成资源还原</block>
   <block id="6dac61f5c61b1654fa020acda2c2434d" category="list-text">还原资源的所有卷， qtree 和 LUN</block>
   <block id="d938214bd1f967593b0d24509b05926b" category="list-text">要还原整个卷，应选择 * 卷还原 * 选项。</block>
-  <block id="ce909fbfd1d823785d6ae63b6e197807" category="admonition">如果资源包含卷或 qtree ，则在这些卷或 qtree 上选择要还原的 Snapshot 副本之后创建的 Snapshot 副本将被删除，并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。</block>
   <block id="f65460564c5df7b62418453394ef7ab4" category="section-title">租户数据库</block>
   <block id="6740dd361543128b03c632e2f040c34a" category="list-text">还原租户数据库</block>
   <block id="c16654b142eb8136e56ba77b732301d5" category="paragraph">如果选择了 * 租户数据库 * 选项，则必须使用 SnapCenter 外部的 HANA Studio 或 HANA 恢复脚本执行恢复操作。</block>
@@ -3808,7 +3745,6 @@
   <block id="1b5d71bcf3ad020a170874b19a197c5e" category="paragraph">如果用户选择 * 租户数据库 * 或 * 完整还原 * 选项，则 SnapCenter 服务器不支持对多个租户执行恢复操作。您必须使用 HANA Studio 或 HANA python 脚本执行恢复操作。</block>
   <block id="328fe5af43dcf98de458cd96c45d01e5" category="list-text">如果要还原整个卷，请选择 * 卷还原 * 。</block>
   <block id="688445a2db4c04104799e570d7137a10" category="paragraph">此选项可用于在 NFS 环境中的 SnapCenter 4.3 中进行的备份。</block>
-  <block id="403cf9a84060a96d70c006583dd1730f" category="paragraph">如果资源包含卷或 qtree ，则在这些卷或 qtree 上选择要还原的 Snapshot 副本之后创建的 Snapshot 副本将被删除，并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。如果选择了 * 使用 * 卷还原 * 选项完成资源 * ，则此选项适用。</block>
   <block id="adbdea83f9a3ed8226883751435bfbf1" category="list-text">选择 * 租户数据库 * 。</block>
   <block id="ebe1639cfdfd980b05c9bbb602656161" category="paragraph">此选项仅适用于 MDC 资源。</block>
   <block id="b8b567d4ba521c0d72dfa10acaf6a9b9" category="paragraph">在执行还原操作之前，请确保停止租户数据库。</block>
@@ -3844,7 +3780,6 @@
   <block id="569d7ad91ac8653d08a314e2f0c4f16d" category="paragraph">此操作将被取消，并且资源将还原到先前的状态。</block>
   <block id="1dd409d7b835d13842d9f347c93a6de3" category="doc">还原和恢复手动添加的资源备份</block>
   <block id="c3b3d774c585dd79fb37eb8f605a3cdc" category="list-text">如果选择 * 完整资源 * ，则会还原 SAP HANA 数据库中所有已配置的数据卷。</block>
-  <block id="cbfab698f18b454fe4b80a18cff2ed7f" category="paragraph">如果资源包含卷或 qtree ，则在这些卷或 qtree 上选择要还原的 Snapshot 副本之后创建的 Snapshot 副本将被删除，并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。</block>
   <block id="5992dc084820c1bb7deda13d5ca23184" category="list-text">如果选择 * 文件级别 * ，则可以选择 * 所有 * 或选择特定卷或 qtree ，然后输入与这些卷或 qtree 相关的路径，以逗号分隔</block>
   <block id="f47a1af7a319b571a0bacba2d5bdd6cf" category="list-text">您可以选择多个卷和 qtree 。</block>
   <block id="57235293b58bcee8f885f03c7cc2bf98" category="list-text">如果资源类型为 lun ，则会还原整个 LUN 。</block>
@@ -3873,7 +3808,6 @@
   <block id="51637044cc8ef099cbd7a621fcec5a60" category="list-text">根据保留设置删除在 SnapCenter 4.2 或更早版本中创建的备份。</block>
   <block id="053b2f9960ca5511b7f50f4c35408867" category="list-text">从 Topology 页面中删除资源组。</block>
   <block id="f8e1875f1ca7bafd5da6a29fa6bcda74" category="list-text">从 "Resources" 页面中删除旧的 MDC 资源。</block>
-  <block id="14b1f939d4d6ad1f9002f584e1e54fa8" category="paragraph">例如，如果主 Snapshot 副本保留期限为 7 天，而二级 Snapshot 副本保留期限为 45 天，则在完成 45 天后以及删除所有备份后，您必须删除资源组和旧的 MDC 资源。</block>
   <block id="ade90ffda7ebb71155bc6fea900cdfc2" category="inline-link-macro">为 SAP HANA 数据库配置 HDB 用户存储密钥和 HDBSQL 操作系统用户</block>
   <block id="edd858f144c3c1107be70381811fd6f2" category="paragraph"><block ref="edd858f144c3c1107be70381811fd6f2" category="inline-link-macro-rx"></block></block>
   <block id="e010280946f254b9face32c9e91fa35e" category="inline-link-macro">在拓扑页面中查看 SAP HANA 数据库备份和克隆</block>
@@ -3890,7 +3824,6 @@
   <block id="515099a9db2d69620b1bbc080fe5200a" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。SnapCenter cmdlet 帮助和 cmdlet 参考信息包含有关 PowerShell cmdlet 的详细信息。</block>
   <block id="780c0ca05b56b9c80b7a61ef7ff2efa8" category="summary">SnapCenter 负责在存储系统和文件系统级别以及 SAP HANA 备份目录中管理日志和数据备份。</block>
   <block id="9024e1f264db01cbcede096090ebf938" category="doc">SnapCenter 如何管理日志和数据备份的内务管理</block>
-  <block id="d92a8f6f3c2b6a9c57099c523a22f5b2" category="paragraph">主存储或二级存储上的 Snapshot 副本及其在 SAP HANA 目录中对应的条目将根据保留设置删除。在备份和资源组删除期间， SAP HANA 目录条目也会被删除。</block>
   <block id="6fee97e44353ed8e1ca5358c6abe1798" category="doc">监控 SAP HANA 数据库备份操作</block>
   <block id="d03608911fb0f378ca59b86a32adfb17" category="summary">如果要保护 SAP HANA 数据库，您应安装和设置适用于 SAP HANA 数据库的 SnapCenter 插件。</block>
   <block id="8eb6eae2f08f541d02277c6746c4fa05" category="image-alt">SAP HANA 安装配置工作流</block>
@@ -4006,12 +3939,9 @@
   <block id="3ee4871644963356f98fad58d0b99216" category="paragraph">您必须指定恢复的日期和时间。</block>
   <block id="7ba57e19f3511ec8095d5f1239ebabca" category="list-text">将数据库恢复到特定的数据备份</block>
   <block id="91e17023cada2b1f21dbf9949614b65a" category="paragraph">SnapCenter 还为 SAP HANA 数据库提供了 " 无恢复 " 选项。</block>
-  <block id="29921091f69f41a95339ffb3d8dc4dc8" category="summary">您可以使用此插件为资源组创建一致性组 Snapshot 副本。一致性组是一个容器，可以容纳多个卷，以便将其作为一个实体进行管理。一致性组是指多个卷的同时 Snapshot 副本，可为一组卷提供一致的副本。</block>
   <block id="9e869fca025d68642fcd561a55b8416a" category="doc">适用于 SAP HANA 数据库的 SnapCenter 插件如何使用一致性组 Snapshot 副本</block>
-  <block id="cda7be8fe8913527bfa13f746d857c84" category="paragraph">您还可以指定存储控制器对 Snapshot 副本进行一致分组的等待时间。可用的等待时间选项包括 * 紧急 * ， * 中等 * 和 * 宽松 * 。在一致的组 Snapshot 副本操作期间，您还可以启用或禁用任意位置写入文件布局（ Write Anywhere File Layout ， WAFL ）同步。WAFL 同步可提高一致性组 Snapshot 副本的性能。</block>
   <block id="19bbc201cd8c48b8e705b901f38df232" category="paragraph">如果资源受保护，则会显示选定资源的拓扑页面。</block>
   <block id="0aa6b4b4509f20915de241ab3125773b" category="list-text">查看 * 摘要卡 * ，查看主存储和二级存储上可用的备份和克隆数量的摘要。</block>
-  <block id="7f6ba439286f41d27f288dd7335169c5" category="paragraph">摘要卡 * 部分显示基于文件的备份， Snapshot 副本备份和克隆的总数。</block>
   <block id="8decbf1aae0caf98d11e0d7812d18fa5" category="list-text">从表中选择备份，然后单击数据保护图标以执行还原，克隆和删除操作。</block>
   <block id="f70451089f1e1bfca806390a988a70f9" category="summary">某些 HANA 实例不支持自动发现。您必须手动添加这些资源。</block>
   <block id="b39d1e4f73b157bb2f5b3a972e89eeb6" category="doc">手动将资源添加到插件主机</block>
@@ -4050,23 +3980,16 @@
   <block id="28fcd30ab7740350640e0c975b072b39" category="doc">监控 SAP HANA 数据库克隆操作</block>
   <block id="8896e4ff5c38407b9b105f9412d0f746" category="doc">为 SAP HANA 数据库的 SnapMirror 和 SnapVault 复制准备存储系统</block>
   <block id="7394e84832837e7d0dc503d85eb3f36c" category="doc">备份 SAP HANA 数据库</block>
-  <block id="8f0e9744b1000b3672d2bdcf50a74d27" category="list-text">对于基于 Snapshot 副本的备份操作，请确保所有租户数据库均有效且处于活动状态。</block>
   <block id="085ab917326888bb9fd0378b5efb84b9" category="list-text">单击要备份的资源。</block>
-  <block id="8deb8aa93ea3b02fc36610daf36edad9" category="paragraph">例如， _customtext_policy_hostname_ 或 _resource_hostname_ 。默认情况下， Snapshot 副本名称会附加时间戳。</block>
   <block id="23ce0178ca7588539a792fb41d10d6d6" category="list-text">单击 * 备份 * 箭头可设置其他备份选项：</block>
   <block id="75acd63fc160c8f401a6e89437895634" category="paragraph">根据需要启用一致性组备份，并执行以下任务：</block>
   <block id="50ce6bc02d574c2cab1fc82a19854cf8" category="paragraph">等待 "Consistency Group Snapshot" 操作完成的时间</block>
   <block id="33d8fc89984b399b5f14da8a76d58c5a" category="paragraph">禁用 WAFL 同步</block>
   <block id="27a16d7d61f6682ceaf4d8022ffa250f" category="paragraph">选择此选项可避免强制设置 WAFL 一致点。</block>
   <block id="419f55f97321a95d51e21f7ca2e9b02d" category="paragraph">您也可以在退出备份操作之前运行 PRE 命令。预处理脚本和后处理脚本在 SnapCenter 服务器中运行。</block>
-  <block id="97d85b626e97047020a03812221a5f99" category="list-text">单击 * Snapshot 副本工具 * 箭头以选择用于创建 Snapshot 副本的工具：</block>
   <block id="70ea5c730ba565a725b5e6a5ce34b32d" category="cell">如果您希望 ...</block>
-  <block id="2ca1729f14a40401626e0eaac1397926" category="paragraph">SnapCenter 以创建存储级别的 Snapshot 副本</block>
   <block id="6d9c2c737b6e3a27597d11ff3b1d8a05" category="paragraph">选择 * 不使用文件系统一致性的 SnapCenter * 。</block>
-  <block id="106e549635779a49f4846a54f63000c8" category="paragraph">SnapCenter 以使用适用于 Windows 的插件将文件系统置于一致状态，然后创建 Snapshot 副本</block>
   <block id="1accc18e0f25decba79f224ccd167283" category="paragraph">选择 * 具有文件系统一致性的 SnapCenter * 。</block>
-  <block id="b0be4061cee618df981a407920b78462" category="paragraph">可输入命令以创建 Snapshot 副本</block>
-  <block id="530fb3b2ba42bf6ae30b22ac27b110a9" category="paragraph">选择 * 其他 * ，然后输入命令创建 Snapshot 副本。</block>
   <block id="129db5e4908943c18847d24dd577782f" category="paragraph"><block ref="129db5e4908943c18847d24dd577782f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a4412452c9cff96f8d11e97e688ba35e" category="list-text">在添加策略 _policy_name_ 的计划对话框中，配置计划，然后单击 * 确定 * 。</block>
   <block id="90334c9b6a705f8c6dafb182257f149b" category="paragraph">_policy_name_ 是所选策略的名称。</block>
@@ -4108,33 +4031,26 @@
   <block id="96deff25f1bface148544989647467e9" category="list-text">确定应在何时备份资源。</block>
   <block id="729874d0711acb352c13d8a3e53aa0b2" category="list-text">确定需要多少备份作业。</block>
   <block id="63942c738344e1f1c6049b7faf74c632" category="list-text">确定如何为备份命名。</block>
-  <block id="62d32bd76c6f8fcf3452d35ef4b7af47" category="list-text">确定是否要创建基于 Snapshot 副本的策略来备份数据库中应用程序一致的 Snapshot 副本。</block>
   <block id="8122a0c069e9fbb65067d3355a80e0fb" category="list-text">确定是否要验证数据库的完整性。</block>
   <block id="ef5e5410c69045de99fe88c248670ea8" category="list-text">确定是要使用 NetApp SnapMirror 技术进行复制，还是使用 NetApp SnapVault 技术进行长期保留。</block>
-  <block id="3d26c33abc24209e09a71f676df43fda" category="list-text">确定源存储系统和 SnapMirror 目标上 Snapshot 副本的保留期限。</block>
   <block id="082307c48bdbc0df0689128d4a08ad92" category="list-text">确定要在备份操作之前还是之后运行任何命令，并提供预处理或后处理。</block>
   <block id="bb24de3098becb559d31066692208382" category="summary">在使用 SnapCenter 备份 SAP HANA 数据库资源之前，您必须为要备份的资源或资源组创建备份策略。备份策略是一组规则，用于控制如何管理，计划和保留备份。</block>
   <block id="2dad511118029c962a70a1aac4b16b52" category="doc">为 SAP HANA 数据库创建备份策略</block>
   <block id="59aa9d59aeca6426e049e4b2a67f90db" category="paragraph">有关详细信息，请参见有关为 SAP HANA 数据库定义数据保护策略的信息。</block>
   <block id="9b6c869445c45bd1d2092d2ac627e089" category="list-text">您必须已通过完成安装 SnapCenter ，添加主机，设置存储系统连接和添加资源等任务为数据保护做好准备。</block>
-  <block id="88566b8e3d506e3456db8c4304c99e1c" category="list-text">如果要将 SnapCenter 副本复制到镜像或存储，则 管理员必须已为源卷和目标卷分配 SVM 。</block>
   <block id="51cf7b8ece53780d2da7c680d87db751" category="paragraph">此外，您还可以在策略中指定复制，脚本和应用程序设置。如果要将策略重复用于其他资源组，这些选项可节省时间。</block>
   <block id="19999b58b15a4b6c9b7d47212a32aeba" category="list-text">选择备份类型：</block>
   <block id="1ec8e0dcd181569d863906d3db3cbc7a" category="paragraph">对数据库执行完整性检查</block>
   <block id="5ea8c203a8e8ed3f981e261385d48b32" category="paragraph">选择 * 基于文件的备份 * 。仅备份活动租户。</block>
-  <block id="c7ca59353b5fbf390c454a539e22a12e" category="paragraph">使用 Snapshot 副本技术创建备份</block>
   <block id="58c4ab72512763368202ec9054d5b838" category="paragraph">选择 * 基于 Snapshot * 。</block>
   <block id="b8d6ee3998ffd19868fb72c367024f19" category="list-text">通过选择 * 按需 * ， * 每小时 * ， * 每日 * ， * 每周 * 或 * 每月 * 来指定计划类型。</block>
   <block id="6dfee293c05174bbd44cb5148876cd2b" category="admonition">您可以在创建资源组时为备份操作指定计划（开始日期，结束日期和频率）。这样，您就可以创建共享相同策略和备份频率的资源组，但也可以为每个策略分配不同的备份计划。</block>
   <block id="b093b4eff25852e5f19297a922c5587f" category="list-text">在 * 自定义备份设置 * 部分中，提供必须以密钥值格式传递到插件的任何特定备份设置。</block>
   <block id="fc757224d0f11cae40cba577a1aa87f2" category="paragraph">您可以提供多个要传递到插件的密钥值。</block>
-  <block id="7c180945c3efa4def592180bfeae77c5" category="admonition">对于基于 Snapshot 副本的备份，如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留数量设置为 1 ，则保留操作可能会失败，因为第一个 Snapshot 副本是 SnapVault 关系的参考 Snapshot 副本，直到将较新的 Snapshot 副本复制到目标。</block>
   <block id="53ef3d7584a54991b60fba81e93d201f" category="paragraph">* 创建本地 Snapshot 副本后更新 SnapMirror *</block>
-  <block id="b1b35a317e8c296440243c1d7986c039" category="paragraph">如果 ONTAP 中的保护关系类型为镜像和存储，并且仅选择此选项，则在主系统上创建的 Snapshot 副本不会传输到目标系统，而是会列在目标系统中。如果从目标位置选择此 Snapshot 副本以执行还原操作，则会显示二级位置不可用于选定的存储 / 镜像备份错误消息。</block>
   <block id="f5568337c8feae7a044bdfdfc53b4769" category="paragraph">* 创建本地 Snapshot 副本后更新 SnapVault *</block>
   <block id="e95e870e56d78f07b5959255a76d16ab" category="paragraph">* 二级策略标签 *</block>
   <block id="e14f71eb0e90d4bbfc5445a42a5c2a4c" category="paragraph">* 错误重试计数 *</block>
-  <block id="dfc2bb18d15f87135d39c7efb3d45284" category="admonition">您应在 ONTAP 中为二级存储配置 SnapMirror 保留策略，以避免达到二级存储上 Snapshot 副本的最大限制。</block>
   <block id="993d084476d90eaf8ecb0ad1a0a2f901" category="summary">在添加主机并安装插件软件包之前，您必须满足所有要求。适用于 SAP HANA 数据库的 SnapCenter 插件可在 Windows 和 Linux 环境中使用。</block>
   <block id="66cf3f797a37d99d37e260746f767101" category="doc">添加主机和安装适用于 SAP HANA 数据库的 SnapCenter 插件的前提条件</block>
   <block id="ea55c7834ccad039ebb60450265886eb" category="list-text">您必须已在主机上安装 Java 1.8 64 位。</block>
@@ -4191,9 +4107,7 @@
   <block id="c7e757b993a892f1adbc4d9d429ada9a" category="list-text">从 * 可用资源 * 部分中选择资源，然后单击右箭头将其移动到 * 选定资源 * 部分。</block>
   <block id="8cc859910effe8112e2912d3644f0bc8" category="paragraph">启用一致性组备份并执行以下任务：</block>
   <block id="a99f0aeaf38081c20a7370fb0f80e5fb" category="paragraph">有时间等待一致性组 Snapshot 操作完成</block>
-  <block id="ed8207a67488af27356940d5feaf9f82" category="paragraph">选择 * 紧急 * ， * 中等 * 或 * 宽松 * 以指定 Snapshot 副本操作完成的等待时间。</block>
   <block id="01509b1df2505486f61f51b88bcefee0" category="paragraph">紧急 = 5 秒，中等 = 7 秒，宽松 = 20 秒。</block>
-  <block id="0d7285674023c3795c1345455bf18c08" category="list-text">单击 * 脚本 * 箭头，然后输入用于暂停， Snapshot 副本和取消静默操作的 PRE 和 POST 命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。</block>
   <block id="775b811b88d8fc4fc28b0d206dcc4c05" category="list-text">单击 * 自定义配置 * 箭头，然后输入使用此资源执行所有数据保护操作所需的自定义密钥值对。</block>
   <block id="83f499a540b1323009c200d6f8cc9396" category="cell">参数</block>
   <block id="51ac4bf63a0c6a9cefa7ba69b4154ef1" category="cell">正在设置 ...</block>
@@ -4215,11 +4129,8 @@
   <block id="f5c64a8a00482e0316a9a53b3ee3affc" category="paragraph">用于管理子目录中的归档日志。</block>
   <block id="88ff0775a15d5ae4d05b9ecdeb6b5a48" category="paragraph">如果归档日志位于子目录下，则应使用此参数。</block>
   <block id="0d1c37a6cf22ce8a58bdf0cb6bb40c68" category="admonition">自定义密钥值对支持 SAP HANA Linux 插件系统，而注册为集中式 Windows 插件的 SAP HANA 数据库则不支持自定义密钥值对。</block>
-  <block id="a2efdbdb435f556e1303999ceee52ac3" category="paragraph">SnapCenter ，以便在创建 Snapshot 副本之前使用适用于 Windows 的插件并将文件系统置于一致状态。对于 Linux 资源，此选项不适用。</block>
   <block id="62559cf2803ff56106a84e128591c337" category="paragraph">此选项不适用于适用于 SAP HANA 数据库的 SnapCenter 插件。</block>
-  <block id="e81b2d9360690a59303d1e9e24590085" category="paragraph">SnapCenter 以创建存储级别的 Snapshot 副本</block>
   <block id="086beaa9afd2391b7d5204a8db47791c" category="paragraph">可输入要在主机上执行的命令以创建 Snapshot 副本。</block>
-  <block id="f3534eb85a79e67d42411ae7be3de94f" category="paragraph">选择 * 其他 * ，然后输入要在主机上执行的命令以创建 Snapshot 副本。</block>
   <block id="39fba97fa35b3e2df0e6339cd21abe23" category="paragraph">这些策略将在为选定策略配置计划部分列出。</block>
   <block id="eb40bd4c68324257632328b6d08fa139" category="list-text">在配置计划列中，单击 *<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* 表示要配置的策略。</block>
   <block id="2a7c4561536268cef70578e0e4124a6c" category="paragraph">其中， policy_name 是选定策略的名称。</block>
@@ -4264,7 +4175,6 @@
   <block id="7856cdeaea7e701262739e1779b10aa3" category="section-title">File-Based 备份</block>
   <block id="4c61ae71e16d4bd98d42fac16e453319" category="paragraph">基于文件的备份可验证数据库的完整性。您可以计划按特定间隔执行基于文件的备份操作。仅备份活动租户。您不能从 SnapCenter 还原和克隆基于文件的备份。</block>
   <block id="c6dba23441b7b81118b01afb845de37e" category="section-title">基于 Snapshot 副本的备份</block>
-  <block id="471cd56f3a3ff2711bc53c71b2a143ac" category="paragraph">基于 Snapshot 副本的备份利用 NetApp Snapshot 副本技术为 SAP HANA 数据库所在的卷创建联机只读副本。</block>
   <block id="e1470cbc380c0e4285ea434aa1f30381" category="doc">准备用于 SnapMirror 和 SnapVault 复制的存储系统</block>
   <block id="145f4e41c29b520e1d8d5a4e3691ae25" category="summary">如果数据库不属于任何资源组，您可以从 " 资源 " 页面备份数据库或数据库可用性组。</block>
   <block id="3b149cd899fbd2201eebaa6d8ac21929" category="doc">备份 Exchange 数据库</block>
@@ -4352,7 +4262,6 @@
   <block id="3b1c41a3ee3aff318c023951dec40c5c" category="paragraph">备份策略是一组规则，用于控制如何管理和保留备份以及备份资源或资源组的频率。此外，您还可以指定脚本设置。在策略中指定选项可节省将策略重复用于其他资源组的时间。</block>
   <block id="3bfd01447cc8c1d1ca4a07e4794a25fd" category="paragraph">完整备份保留是特定于给定策略的。使用策略 A 且完整备份保留为 4 的数据库或资源会保留 4 个完整备份，并且不会对同一数据库或资源的策略 B 产生影响，该策略可能会保留 3 个完整备份。</block>
   <block id="ec7b72a8c05860fe4c7bb1822dfccbc0" category="paragraph">日志备份保留在各个策略中有效，并对数据库或资源的所有日志备份进行适用场景。因此，使用策略 B 执行完整备份时，日志保留设置会影响策略 A 在同一数据库或资源上创建的日志备份。同样，策略 A 的日志保留设置也会影响策略 B 在同一数据库上创建的日志备份。</block>
-  <block id="8de37c701110ee880cc06580b3fdfef3" category="cell">* 最佳实践： * 最好根据要保留的完整备份和日志备份总数配置二级保留策略。在配置二级保留策略时，请注意，如果数据库和日志位于不同的卷中，则每个备份可以包含三个 Snapshot 副本，而数据库和日志位于同一个卷中，则每个备份可以包含两个 Snapshot 副本。</block>
   <block id="18566ccb16fd84825b0033ada84ed5cc" category="paragraph">备份数据库文件和所需的事务日志</block>
   <block id="6fb4b31a97c87aedb302e6ece87a9cf3" category="paragraph">数据库会通过日志截断进行备份，并备份所有日志，包括截断的日志。</block>
   <block id="47475fc6bab6ba370a9a22a7fd5bc6a2" category="admonition">这是建议的备份类型。</block>
@@ -4383,15 +4292,12 @@
   <block id="da7954ba99f4a804cabb7b3971ad3c05" category="paragraph">通过完整备份或日志备份创建的实时（ UTM ）保留适用场景日志备份。例如，如果将 UTM 保留设置配置为保留最后 5 个完整备份的日志备份，则最后 5 个完整备份的日志备份将保留下来。</block>
   <block id="ea11649af713bda838dbd3f31bea61cf" category="paragraph">作为完整备份和日志备份的一部分创建的日志文件夹会作为 UTM 的一部分自动删除。您不能手动删除日志文件夹。例如，如果保留设置为 Full 或 Full ，日志备份设置为 1 个月，而 UTM 保留设置为 10 天，则作为这些备份一部分创建的日志文件夹将根据 UTM 被删除。因此，只会有 10 天的日志文件夹，所有其他备份都标记为时间点还原。</block>
   <block id="0799f0da10f294f7e56ccccbd18b0563" category="paragraph">如果您不想执行最新的还原，可以将 UTM 保留值设置为 0 。这将启用时间点还原操作。</block>
-  <block id="7ffbf0bc0e312d01d73b618966eaead2" category="paragraph">* 最佳实践： * 最佳做法是，此设置必须等于完整备份保留设置部分中 Snapshot 副本总数（完整备份）的设置。这样可以确保每次完整备份都保留日志文件。</block>
   <block id="924bb3d49c882cde2f529f1e98dd247a" category="paragraph">选择 * 保留日志备份作为最后一个 * 选项，并指定保留日志备份副本的天数。</block>
   <block id="6ae95201d922def8d78c44a121a1c9f0" category="paragraph">日志备份会保留到完整备份的天数。</block>
   <block id="6f5031cdcf133378861489abd6b5d343" category="paragraph">如果您选择 * 日志备份 * 作为备份类型，则日志备份将作为完整备份的最新保留设置的一部分保留。</block>
   <block id="cc9d7c0546d0c50559930bffe9ed629e" category="list-text">在完整备份保留设置部分中，为按需备份选择以下选项之一，然后为完整备份选择一项：</block>
-  <block id="0c71e9e3fed0ab387a61ef5b84879b86" category="paragraph">如果要指定要保留的完整备份数，请选择 * 要保留的 Snapshot 副本总数 * 选项，并指定要保留的 Snapshot 副本数（完整备份）。</block>
   <block id="a0867498c7500f2a4591bc4f28b90d46" category="paragraph">如果完整备份数超过指定数量，则会删除超过指定数量的完整备份，并首先删除最旧的副本。</block>
   <block id="e9ba8713c7585ec0d2ad1f92ebd3f16d" category="paragraph">将完整备份保留特定天数</block>
-  <block id="4ff5a76a54ac539be51aee685c82a121" category="paragraph">选择 * 将 Snapshot 副本保留 * 选项，并指定保留 Snapshot 副本（完整备份）的天数。</block>
   <block id="f470bf7c40d41dd4f2e04814c226f575" category="admonition">如果您的数据库在 DAG 配置中的主机上仅具有日志备份，而没有完整备份，则日志备份将按以下方式保留：</block>
   <block id="5c63811228c15739fc821ea5492e3502" category="list-text">默认情况下， SnapCenter 会在 DAG 中的所有其他主机中查找此数据库的最旧完整备份，并删除此主机上在完整备份之前创建的所有日志备份。</block>
   <block id="9363a6dd8a937e03c1a0328e0f457267" category="list-text">通过在 _C ： \Program Files\NetApp\SnapCenter WebApp\web.config 文件中添加 * MaxLogBackupOnlyCountWithoutFullBackup* 密钥，您可以仅使用日志备份覆盖 DAG 中主机上数据库的上述默认保留行为。</block>
@@ -4458,10 +4364,8 @@
   <block id="bb3cdc866288305ce31a483a8074dfe8" category="list-text">在管理副本视图中，单击主存储或二级存储中的 * 备份 * 以查看备份的详细信息。</block>
   <block id="611ffb27775c37bf7e60cd26cf9094c8" category="paragraph">备份的详细信息以表格形式显示。</block>
   <block id="85000b203e676bc7818219dc9faf5391" category="list-text">从表中选择备份，然后单击数据保护图标以执行还原，重命名和删除操作。</block>
-  <block id="940f5685e97ecab99340ae1beaa57791" category="admonition">您不能重命名或删除二级存储上的备份。删除 Snapshot 副本由 ONTAP 保留设置处理。</block>
   <block id="4f61ab8a2a0c2852922b2d5a0f7a634a" category="summary">您可以从二级存储（镜像或存储）还原备份的 Exchange Server 数据库。</block>
   <block id="877b673d5c7c5e44277b4a9a4f2c7495" category="doc">从二级存储还原 Exchange Server 数据库</block>
-  <block id="2a2d320b7960913eaeb585eb75c4ad27" category="paragraph">您必须已将 Snapshot 副本从主存储复制到二级存储。</block>
   <block id="f4bfc70881af07e0b233d284dd9a5c22" category="list-text">在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择 * Microsoft Exchange Server 插件 * 。</block>
   <block id="55301fa99490f8c21d0fdb7c28363f5b" category="list-text">在资源页面中，从 * 视图 * 下拉列表中选择 * 数据库 * 或 * 资源组 * 。</block>
   <block id="66f39c9d213bfdbae4fbc70e6b626a20" category="list-text">选择数据库或资源组。</block>
@@ -4476,14 +4380,11 @@
   <block id="28b4b7e6162ba7285f066beb06fc6f83" category="summary">任何数据保护作业都需要资源组。您还必须将一个或多个策略附加到资源组，以定义要执行的数据保护作业类型和保护计划。</block>
   <block id="5bd6b169e9e0ed64f898dc3a02bd5dc0" category="doc">为 Exchange Server 创建资源组并附加策略</block>
   <block id="60fa9fd8411bf39b1b035ddbdb6f8543" category="list-text">在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择 Microsoft Exchange Server 插件。</block>
-  <block id="0394f23db0f190b75cbe21e4a5a40ee7" category="paragraph">可选：输入自定义 Snapshot 副本的名称和格式。</block>
-  <block id="03f5752c8a2bd8ac3f833f6139819b87" category="paragraph">例如， _customtext_resourcegroup_policy_hostname_ 或 _resourcegroup_hostname_ 。默认情况下， Snapshot 副本名称会附加时间戳。</block>
   <block id="1dfefedcde6c869266d5859ab23ccea2" category="list-text">从下拉列表中选择资源类型和数据库可用性组，以筛选可用资源列表。</block>
   <block id="11ef45d816fd55939848d9cd23e6b990" category="admonition">如果您最近添加了资源，则只有在刷新资源列表后，这些资源才会显示在可用资源列表中。</block>
   <block id="fd9b238aef877a65aa688cbed16038c8" category="list-text">在搜索文本框中键入资源名称，或者滚动查找资源。</block>
   <block id="88fd9ea8ef5d6be2e4dbe0754f9b540c" category="list-text">要将资源从 "Available Resources" 部分移至 "Selected Resources" 部分，请执行以下步骤之一：</block>
   <block id="7cb4d9086d6c1cf01b806f319a85cc63" category="list-text">从 "Available Resources" 部分中选择资源，然后单击右箭头将其移动到 "Selected Resources" 部分。</block>
-  <block id="40d8f5c9b7ab33a156de7775f928f1c6" category="paragraph">SnapCenter for Microsoft Exchange Server 的资源组中的每个 Snapshot 副本不能包含 30 个以上的数据库。如果一个资源组中的数据库超过 30 个，则会为其他数据库创建另一个 Snapshot 副本。因此，在主备份作业下创建了 2 个子作业。对于具有二级复制的备份，在进行 SnapMirror 或 SnapVault 更新期间，可能会出现两个子作业的更新重叠的情况。即使日志指示作业已完成，主备份作业也会始终保持运行状态。</block>
   <block id="615d8aed25e6e033e2c4a35b84715c0e" category="admonition">如果某个策略包含 * 备份作业创建时间要选择的服务器上的副本 * 选项，则会显示一个服务器选择选项以选择一个或多个服务器。服务器选择选项将仅列出选定数据库位于 NetApp 存储上的服务器。</block>
   <block id="13d62cafc9cfc5929565224152d9294b" category="paragraph">您必须对策略中列出的每个频率执行此操作。已配置的计划将在为选定策略配置计划部分的 * 已应用计划 * 列中列出。</block>
   <block id="632e8f771f2b94f3016767f9170f82e3" category="paragraph">对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 `SET-SmtpServer` 指定 SMTP 服务器详细信息。</block>
@@ -4578,7 +4479,6 @@
   <block id="aa14e187b593d2a11c1d14cbbec8aadc" category="doc">还原 Exchange 数据库</block>
   <block id="b016fed9d8e76be8e2b8327a19c79e1c" category="list-text">您必须已备份资源组，数据库或数据库可用性组（ DAG ）。</block>
   <block id="e41a54e30fee34f56cdc085b137684ba" category="list-text">当 Exchange 数据库迁移到其他位置时，还原操作对旧备份不起作用。</block>
-  <block id="dc7e224e68acf9c07eb62ae6faae36fb" category="list-text">如果要将 Snapshot 副本复制到镜像或存储， SnapCenter 管理员必须已为您分配源卷和目标卷的 SVM 。</block>
   <block id="8a422d49b5d70c11466a0e5c0147bc9d" category="list-text">在 DAG 中，如果活动数据库副本位于非 NetApp 存储上，而您希望从 NetApp 存储上的被动数据库副本备份进行还原，请将被动副本（ NetApp 存储）设置为活动副本，刷新资源并执行还原操作。</block>
   <block id="fba073acc19f8172d74430f92eb03d51" category="paragraph">运行 `Move-ActiveMailboxDatabase` 命令将被动数据库副本设置为活动数据库副本。</block>
   <block id="727d6ec7c143ece348a58c5723f2f025" category="inline-link">Microsoft 文档</block>
@@ -4651,7 +4551,6 @@
   <block id="7fc686e60d66e170f709548904c946f0" category="doc">为 Exchange Server 资源定义备份策略</block>
   <block id="a1232051e6c5e893c86adc35d8552a57" category="paragraph">在创建备份作业之前定义备份策略有助于确保您拥有成功还原数据库所需的备份。您的服务级别协议（ Service Level Agreement ， SLA ），恢复时间目标（ Recovery Time Objective ， RTO ）和恢复点目标（ Recovery Point Objective ， RPO ）在很大程度上决定了您的备份策略。</block>
   <block id="5947ba0032a3037dbf7c6e98581f0d07" category="section-title">Exchange 数据库支持的备份类型</block>
-  <block id="0ba326934a946ce406e1443b1fbae49f" category="paragraph">使用 SnapCenter 备份 Exchange 邮箱要求您选择资源类型，例如数据库和数据库可用性组（ DAG ）。Snapshot 副本技术用于为资源所在的卷创建联机只读副本。</block>
   <block id="77a2dc238b9d72214020436ab4f4364f" category="paragraph">完整备份和日志备份</block>
   <block id="c0ccfcb0fa212601291c0ab7fc0d5274" category="paragraph">备份数据库和所有事务日志，包括截断的日志。</block>
   <block id="f1d6025290f1888db5af91ebbe3a8e9f" category="paragraph">完整备份完成后， Exchange Server 会截断已提交到数据库的事务日志。</block>
@@ -4762,7 +4661,6 @@
   <block id="8f8654928a0369230f1d533710a0be96" category="doc">为 Windows 文件系统创建资源组</block>
   <block id="62305fdbdeb0bfd0c2832cfd34ad6507" category="list-text">在资源页面中，从列表中选择 * 文件系统 * 。</block>
   <block id="bd268863b796bc63e2713dc5a39dbb1e" category="admonition">如果您最近向 SnapCenter 添加了文件系统，请单击 * 刷新资源 * 以查看新添加的资源。</block>
-  <block id="690a9bec3617f718bd8cc89a054f296c" category="paragraph">例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。</block>
   <block id="c101058e7ea21bbbf2a5ac893088e90b" category="paragraph">标记</block>
   <block id="97bb2f32b5c5b00dd996d61d3d89e4f8" category="paragraph">输入一个描述性标记以帮助查找资源组。</block>
   <block id="40320bb5aab2bc3ee432d214bae12756" category="list-text">选择主机以筛选资源列表。</block>
@@ -4834,7 +4732,6 @@
   <block id="e370a7ee0bb74d7599ae4a101282e69b" category="paragraph">debuglog_ 参数包括 SnapCenter 日志文件的路径。写入此日志文件是获取故障排除信息的首选方法，因为此文件包含安装对插件前提条件执行的检查的结果。</block>
   <block id="69aab0f4bbb32969d2c33fb5099aa4fa" category="paragraph">如有必要，您可以在 SnapCenter for Windows 软件包的日志文件中找到其他故障排除信息。软件包的日志文件会列在 _ %Temp%_ 文件夹中（最早的文件先列出），例如 _C ： \temp\ _ 。</block>
   <block id="3d7844d331c36c05271f66508c7df774" category="admonition">安装适用于 Windows 的插件会在主机上注册此插件，而不是在 SnapCenter 服务器上注册此插件。您可以通过使用 SnapCenter 图形用户界面或 PowerShell cmdlet 添加主机来在 SnapCenter 服务器上注册此插件。添加主机后，系统将自动发现此插件。</block>
-  <block id="8796317ad8b32fb8aef870b01b6167d3" category="summary">适用于 Microsoft Windows 的 SnapCenter 插件是 NetApp SnapCenter 软件的主机端组件，可用于对 Microsoft 文件系统资源进行应用程序感知型数据保护管理。此外，它还可以为 Windows 文件系统提供存储配置， Snapshot 副本一致性和空间回收功能。适用于 Windows 的插件可在 SnapCenter 环境中自动执行文件系统备份，还原和克隆操作。</block>
   <block id="a9a17ec2f387b7172d4f7e035744dc4b" category="doc">适用于 Microsoft Windows 的 SnapCenter 插件概述</block>
   <block id="da729e684f85b2f6417b12711de4813b" category="paragraph">安装适用于 Windows 的插件后，您可以使用采用 NetApp SnapMirror 技术的 SnapCenter 在另一个卷上创建备份集的镜像副本，并使用 NetApp SnapVault 技术执行磁盘到磁盘备份复制，以实现归档或标准合规性。</block>
   <block id="b8254bbaf2c31e637fae40e7a6bc0f8c" category="summary">您可以使用 SnapCenter 添加主机页面添加 Windows 主机。适用于 Microsoft Windows 的 SnapCenter 插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。</block>
@@ -4862,11 +4759,9 @@
   <block id="89369317547508f73174b251351213fb" category="paragraph">您可以选择自定义路径。对于适用于 Windows 的 SnapCenter 插件软件包，默认路径为 C ： \Program Files\NetApp\SnapCenter 。但是，如果需要，您可以自定义默认路径。</block>
   <block id="0f24a42c91809cffb3303665febc60e6" category="paragraph">选中此复选框可添加 WSFC 中的所有集群节点。</block>
   <block id="ef3600a5849bde43368ee5e3a3f04387" category="paragraph">如果未选中 * 跳过预检查 * 复选框，则会验证主机是否满足安装插件的要求。已根据最低要求验证磁盘空间， RAM ， PowerShell 版本， .NET 版本和位置。如果不满足最低要求，则会显示相应的错误或警告消息。</block>
-  <block id="07117ad816bc94530a93fd42336f2f79" category="summary">适用于 Windows 的插件可与存储系统上的 NetApp Snapshot 副本技术集成。要使用适用于 Windows 的插件，请使用 SnapCenter 界面。</block>
   <block id="6c2908e5cc43162ef9ecea994b17389d" category="doc">适用于 Windows 的 SnapCenter 插件功能</block>
   <block id="5152783556f9f44813fcbba2514ba270" category="paragraph">适用于 Windows 的插件包括以下主要功能：</block>
   <block id="f865c48aa56189960fc5c9a515903527" category="paragraph">您可以计划例行文件系统备份，配置基于策略的备份保留以及设置还原操作。您还可以通过将 SnapCenter 配置为发送电子邮件警报来主动监控文件系统环境。</block>
-  <block id="01579da5d7cdc4848493e7de2b549b68" category="paragraph">适用于 Windows 的插件使用 NetApp Snapshot 副本技术。这样，您就可以在几秒钟内备份文件系统并快速还原它们，而无需使主机脱机。Snapshot 副本占用的存储空间极少。</block>
   <block id="5e552e263b3cac8a0ad4ef299469911f" category="paragraph">除了这些主要功能之外，适用于 Windows 的插件还具有以下优势：</block>
   <block id="aa3fb9fca5fdb4ad7f86964cd9fd89cc" category="list-text">备份，还原和克隆工作流支持</block>
   <block id="4a3e39ebca9c4f0e9238b4f749f8eda1" category="list-text">使用 NetApp FlexClone 技术为生产文件系统创建节省空间的副本，以供测试或数据提取之用</block>
@@ -4891,7 +4786,6 @@
   <block id="1c726678cd6140171263bcf8b41347de" category="list-text">在资源页面中，选择文件系统资源类型，然后选择要备份的资源。</block>
   <block id="94470133339a09768284b95eccb8271a" category="list-text">如果文件系统 - 保护向导未自动启动，请单击 * 保护 * 启动向导。</block>
   <block id="c62706269a2329ff51bf94ff5010638a" category="paragraph">指定保护设置，如创建资源组任务中所述。</block>
-  <block id="da4b05983b1e6447f9b34c3d68c1e1e9" category="list-text">可选：在向导的 " 资源 " 页面中，输入 Snapshot 副本的自定义名称格式。</block>
   <block id="fb87909a252e4e2dc396bcfb921e0428" category="list-text">在策略页面中，执行以下任务：</block>
   <block id="1957e5ad25b71af9fcaddadddc14180d" category="paragraph">您可以选择任何现有策略，然后单击 * 详细信息 * 以确定是否可以使用该策略。</block>
   <block id="72505ce1779969b10a827b76ce40ee9f" category="paragraph">如果现有策略不满足您的要求，您可以复制现有策略并对其进行修改，也可以单击创建新策略 <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block> 启动策略向导。</block>
@@ -4926,7 +4820,6 @@
   <block id="52b19e85e6a29b6fe5690f47944f859f" category="paragraph">此策略仅指定备份频率。用于备份的特定保护计划在资源组中定义。因此，两个或更多资源组可以共享相同的策略和备份频率，但备份计划不同。</block>
   <block id="de22735eba76a2843e4c2bd28dfb8f2c" category="list-text">在保留页面上，为按需备份以及选定的每个计划频率指定保留设置。</block>
   <block id="8e77ee8a8b856638f0a6d0872be527cd" category="paragraph">要保留的 Snapshot 副本总数</block>
-  <block id="92cc2a9a2d5824e9c2b490a8fb082801" category="paragraph">如果要在自动删除 SnapCenter 存储之前指定 Snapshot 副本的数量，请选择此选项。</block>
   <block id="0a3cfeac0775871baedb24392bc4423c" category="paragraph">删除早于的 Snapshot 副本</block>
   <block id="9fbc3fb0ee9d4d329dbc0f3053b7b871" category="paragraph">如果要指定 SnapCenter 在删除备份副本之前保留备份副本的天数，请选择此选项。</block>
   <block id="6c713d56e86f927e1bd66c7de2ed52c1" category="summary">如果要一次在多个主机上安装适用于 Microsoft Windows 的 SnapCenter 插件，可以使用 Install-SmHostPackage PowerShell cmdlet 来执行此操作。</block>
@@ -5004,17 +4897,11 @@
   <block id="1bde0647fb6f71617acb9bfadcf22c2e" category="section-title">Windows 文件系统所需的备份数</block>
   <block id="d2359e56e9afe6abfc78e46aebc63acc" category="paragraph">决定所需备份数量的因素包括 Windows 文件系统的大小，使用的卷数，文件系统的更改率以及您的服务级别协议（ Service Level Agreement ， SLA ）。</block>
   <block id="14935283082f29f3ca37aae3f791f689" category="section-title">Windows 文件系统的备份命名约定</block>
-  <block id="3d93f758a971e608a1963f204b536e13" category="paragraph">Windows 文件系统备份使用默认的 Snapshot 副本命名约定。默认备份命名约定会为 Snapshot 副本名称添加一个时间戳，以帮助您确定副本的创建时间。</block>
-  <block id="38abb24b7df715b15e98d77be09d90bc" category="paragraph">Snapshot 副本使用以下默认命名约定： resourcegroupname_hostname_timestamp</block>
   <block id="ec8d9746dfb7f8cf3bf5aafdc14bcd92" category="list-text">`dTS1` 是资源组名称。</block>
   <block id="c0f5323d1ade2329c48f90fc8ed6ff59" category="list-text">`mach1X88` 是主机名。</block>
   <block id="cd63eec15ecf1146374bcd2d2325467e" category="list-text">`03-12-2016_23.17.26` 是日期和时间戳。</block>
   <block id="7aa15b9ece3853d2adab83f8a1ac2fc0" category="paragraph">创建备份时，您还可以添加一个描述性标记来帮助识别备份。相反，如果要使用自定义备份命名约定，则需要在备份操作完成后重命名备份。</block>
-  <block id="eac2032108306b4ff1100113fd59c42a" category="summary">SnapCenter 使用 Snapshot 副本技术备份驻留在 LUN ， CSV （集群共享卷）， RDM （原始设备映射）卷， Windows 集群中的 ALM （非对称 LUN 映射）以及基于 VMFS/NFS （使用 NFS 的 VMware 虚拟机文件系统）的 VMDK 上的 Windows 文件系统资源。</block>
   <block id="43c5e19fd38af83f0ab296f57f1cfdee" category="doc">SnapCenter 如何备份 Windows 文件系统</block>
-  <block id="ff572a35b84827c88003212d894ddff1" category="paragraph">SnapCenter 通过创建文件系统的 Snapshot 副本来创建备份。在联合备份中，卷包含来自多个主机的 LUN ，与每个 LUN 的备份相比，这种备份速度更快，效率更高，因为与每个文件系统的单个 Snapshot 相比，只创建卷的一个 Snapshot 副本。</block>
-  <block id="4af088960b278bd1fc6cf8e89db9376f" category="paragraph">当 SnapCenter 创建 Snapshot 副本时，整个存储系统卷会捕获到 Snapshot 副本中。但是，备份仅对创建备份的主机服务器有效。</block>
-  <block id="555ca970deac11b0a700273f40a51b85" category="paragraph">如果来自其他主机服务器的数据驻留在同一个卷上，则无法从 Snapshot 副本还原此数据。</block>
   <block id="27a46746c79eda007f4ac37660e5a5d8" category="admonition">如果 Windows 文件系统包含数据库，则备份文件系统与备份数据库不同。要备份数据库，必须使用其中一个数据库插件。</block>
   <block id="2b286ead8eb2ff2974da65dbfdfc72f0" category="summary">在安装适用于 Windows 的插件之前，您应了解某些安装要求。</block>
   <block id="bca5d73b25b97404586748bb0cc0c9ea" category="doc">适用于 Microsoft Windows 的 SnapCenter 插件的安装要求</block>
@@ -5318,7 +5205,6 @@
   <block id="c1fb7c552ac7beaf17dc346fda22eff6" category="list-text">删除资源组时，所有关联的计划也会被删除。</block>
   <block id="622c9e28dad13fa5c04d47d33d343831" category="list-text">如果主机中的某个资源组与另一主机共享，而您删除了该主机，则该资源组也会被删除。</block>
   <block id="759ef57c3be2a273728558ce141e699a" category="list-text">您应使用 _Remove-SmHost_ cmdlet 删除已停用或无法访问的插件主机。</block>
-  <block id="40b2be8df06289f2b15c3ba4ee7adb9d" category="list-text">删除主机所需的时间取决于备份数量和保留设置。这是因为 Snapshot 副本会从每个控制器中删除，并且元数据会被清理。</block>
   <block id="5d892beace7b1624b071044ece982dcc" category="list-text">选择要删除的主机，然后单击 * 删除 * 。</block>
   <block id="19355742858cf70570e1a01c80a490ab" category="list-text">对于 Oracle RAC 集群，要从集群中的所有主机中删除 SnapCenter 软件，请选择 * 包括集群中的所有主机 * 。</block>
   <block id="f5e83038c41d36daffac320f7ddc3601" category="paragraph">您也可以删除集群中的一个节点，然后通过这种方式逐个删除所有节点。</block>
@@ -5465,7 +5351,6 @@
   <block id="6aba9ab9639862100a3f951f105883b5" category="summary">在创建备份作业之前定义备份策略可确保您拥有成功还原或克隆资源所需的备份。您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO\ ）在很大程度上决定了您的备份策略。</block>
   <block id="24940fc9df90a646aba3659646256b87" category="doc">定义备份策略</block>
   <block id="aec3dc1357d1c4a5e8173a948d80fd3c" category="paragraph">在创建备份作业之前定义备份策略可确保您拥有成功还原或克隆资源所需的备份。您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO ）在很大程度上决定了您的备份策略。</block>
-  <block id="95aef696c73e163c6ea6099b0c1c735e" category="list-text">确定是否需要一致性组 Snapshot 副本，并确定删除一致性组 Snapshot 副本的适当选项。</block>
   <block id="3342baf28ca203b7bf1c234a26c83caf" category="list-text">确定是要使用 NetApp SnapMirror 技术进行复制，还是使用 NetApp SnapVault 技术进行长期保留。</block>
   <block id="ca9c798c580412195f975431858e693e" category="list-text">确定是否要在备份操作之前或之后运行任何命令，并提供预处理或后处理。</block>
   <block id="44b5e99e5c2bcf037907be7f6d205be8" category="summary">在准备备份或克隆资源时，您可能会发现以图形方式显示主存储和二级存储上的所有备份和克隆非常有用。在拓扑页面中，您可以看到可用于选定资源或资源组的所有备份和克隆。您可以查看这些备份和克隆的详细信息，然后选择这些备份和克隆以执行数据保护操作。</block>
@@ -5566,12 +5451,8 @@
   <block id="e734e6e2e702d38ebab6ed3c050a5e72" category="doc">克隆自定义插件资源备份</block>
   <block id="edc25de414c7fe73d241458dab7bca2b" category="summary">如果单个自定义插件资源不属于任何资源组，您可以从 " 资源 " 页面备份该资源。您可以按需备份资源，或者，如果资源已附加策略并配置了计划，则会根据计划自动进行备份。</block>
   <block id="8ffa4ba0dd2df5995fd397c72a149679" category="doc">备份各个自定义插件资源</block>
-  <block id="16bfcf20ed729d5958d62a1310952406" category="paragraph">选择紧急，中或宽松以指定 Snapshot 副本操作完成的等待时间。</block>
-  <block id="6ab61c7e4778c57cf88bc1b95a583d05" category="list-text">单击 * 脚本 * 箭头可运行用于暂停， Snapshot 副本和取消静默操作的 PRE 和 POST 命令。您也可以在退出备份操作之前运行 PRE 命令。</block>
   <block id="a5094e6952e443df9b800d4f5e45d91d" category="paragraph">预处理脚本和后处理脚本在 SnapCenter 服务器中运行。</block>
   <block id="b6b1826c899350995a39684ee19f8c7d" category="list-text">单击 * 自定义配置 * 箭头，然后输入使用此资源的所有作业所需的自定义值对。</block>
-  <block id="f02ae06c15b2bac3b80b81485cd916ce" category="paragraph">SnapCenter 创建存储级别的 Snapshot 副本</block>
-  <block id="e668102d5b8a83e66e31f5c42dcbb239" category="paragraph">SnapCenter 以使用适用于 Windows 的插件将文件系统置于一致状态，然后创建 Snapshot 副本</block>
   <block id="53899dcc4360d3b8622ce5dc08a12950" category="list-text">在策略页面中，执行以下步骤：</block>
   <block id="30b65b6968f11ce5399cacf995839f65" category="list-text">在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。</block>
   <block id="fab91412eb5d45bdeeca565417bd43bb" category="summary">备份工作流包括规划，确定要备份的资源，管理备份策略，创建资源组和附加策略，创建备份以及监控操作。</block>
@@ -5604,11 +5485,9 @@
   <block id="6034a2219adc98364247fafa6c7ac86e" category="paragraph">需要返回插件的版本。</block>
   <block id="158432aca9b72e6906771c2e2fddbb8c" category="paragraph">由 SnapCenter 服务器或代理请求插件的版本。</block>
   <block id="b55904d7759e5a6f24d4ca0dbdafd019" category="paragraph">暂停</block>
-  <block id="6498844a78720752efd31c7ceef96db9" category="paragraph">需要对应用程序执行暂停。在大多数情况下，这意味着将应用程序置于 SnapCenter 服务器可以创建备份的状态（例如 Snapshot 副本）。</block>
   <block id="15f6d11fd1f65efe57d9b506c0e06313" category="paragraph">在 SnapCenter 服务器创建 Snapshot 副本或执行常规备份之前。</block>
   <block id="b52dd62394b28fe653e8d770689ea60c" category="paragraph">取消静默</block>
   <block id="09ed5f9b77aca4b8dd337f525d41ea4c" category="paragraph">需要对应用程序执行静默操作。在大多数情况下，这意味着将应用程序重新置于正常运行状态。</block>
-  <block id="0d8437d4c5f061421beecf8d457549e5" category="paragraph">在 SnapCenter 服务器创建 Snapshot 副本或执行常规备份之后。</block>
   <block id="8c6384dda98d8864d00e29dc96179970" category="paragraph">清理</block>
   <block id="ff36b404767cd635ab945ad85f4f04b9" category="paragraph">负责清理插件需要清理的任何内容。</block>
   <block id="5c34b664bab5b91f3ebdcd206cf4d801" category="paragraph">SnapCenter 服务器上的工作流完成后（成功或出现故障）。</block>
@@ -5728,8 +5607,6 @@
   <block id="34c6a8e1099863a52dbf55536f87b658" category="admonition">支持 Linux 文件系统（ Linux Flavors ）。不支持 AIX/Solaris （ Unix 模式）。</block>
   <block id="8cf57b0816d44a1b975402b721da2725" category="paragraph">discovery_complete</block>
   <block id="ce9d724a7186956382a6ad763f302ffc" category="admonition">支持 Linux 文件系统（ Linux Flavors ）。不支持 AIX 和 Solaris （ Unix 模式）。</block>
-  <block id="74df5012c8bd1283c16b4d90e5045b5e" category="paragraph">此存根负责执行暂停，这意味着将应用程序置于可以创建 Snapshot 副本的状态。此操作在执行 Snapshot 副本操作之前调用。要保留的应用程序元数据应设置为响应的一部分，在对相应的存储 Snapshot 副本执行后续克隆或还原操作期间，应以配置参数的形式返回。</block>
-  <block id="e1744ce71adaa3e31ac1cefb33719ea8" category="paragraph">此存根负责执行静默，这意味着将应用程序置于正常状态。创建 Snapshot 副本后会调用此命令。</block>
   <block id="6cf49b275e3f780958fd8f3a3d44acb5" category="paragraph">clone_pre</block>
   <block id="d57c24f3fe52d16e7169b912dd647f0d" category="paragraph">可选</block>
   <block id="34db83eb305843e804a58cb6bd2946a1" category="paragraph">此存根负责执行克隆前任务。此操作假定您使用的是内置的 SnapCenter 服务器克隆接口，并在执行克隆操作时触发。</block>
@@ -5781,7 +5658,6 @@
   <block id="cc6d690e073824b8326c599c6b544c1f" category="paragraph">添加资源后，您可以修改资源详细信息。如果自定义插件资源具有关联的备份，则无法修改以下字段：资源名称，资源类型和主机名。</block>
   <block id="15672c6e3417ee4aa0cd7381b560f34d" category="summary">您可以使用 SnapCenter 还原资源。还原操作的功能取决于您使用的插件。</block>
   <block id="d697fbdd5eef7a80e3797fe363484b61" category="doc">还原资源备份</block>
-  <block id="6f07fad9174a2429e52c321216b14548" category="list-text">如果要将 Snapshot 副本复制到镜像或存储， SnapCenter 管理员必须已为您分配源卷和目标卷的 Storage Virtual Machine （ SVM ）。</block>
   <block id="fdb09cc42e4c011a17d475c9e1a1815e" category="list-text">您必须已取消要还原的资源或资源组当前正在进行的任何备份操作。</block>
   <block id="2124f96b55bd8bcfe23c27d4d7c30129" category="paragraph">默认还原操作仅还原存储对象。只有在自定义插件提供应用程序级别的还原操作时，才能执行此功能。</block>
   <block id="d40ea75f2b075d0e778b5d5f091abd87" category="paragraph">此时将显示资源以及类型，主机或集群名称，关联的资源组和策略以及状态等信息。</block>
@@ -5791,7 +5667,6 @@
   <block id="038a510e6124e7cea7f4514a9473584a" category="list-text">在 * 管理副本 * 视图中，从主存储系统或二级（镜像或存储）存储系统中选择 * 备份 * 。</block>
   <block id="26d6fe8240bb84db3aac12f067bd7006" category="list-text">在主备份表中，选择要从中还原的备份，然后单击 <block ref="401f8f248ae37b21256b9fc8e83bcaa3" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="e665a840f7240ecfe0bd9c88c7d36b0c" category="list-text">如果选择 * 完成资源 * ，则会还原资源备份。</block>
-  <block id="de21de4104bb03728916aa887ea228d0" category="paragraph">如果资源包含卷或 qtree 作为存储占用空间，则此类卷或 qtree 上的较新 Snapshot 副本将被删除，并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。</block>
   <block id="15390094a70f6891fc6b5bf032f36c29" category="list-text">如果选择了 * 文件级别 * ，则可以选择 * 所有 * ，也可以选择卷或 qtree ，然后输入与选定卷或 qtree 相关的路径，并用逗号分隔。</block>
   <block id="5778b765a422af2fc3146858308856d0" category="list-text">如果资源类型为 lun ，则会还原整个 LUN 。您可以选择多个 LUN 。+ 注意：如果选择 * 全部 * ，则卷， qtree 或 LUN 上的所有文件都将还原。</block>
   <block id="31bd137fb863f9fc2588f7a75e79de3d" category="paragraph">还原所有日志</block>
@@ -5802,16 +5677,9 @@
   <block id="a26531ddd22c342a5bd9860ea919b50d" category="paragraph">选择 * 无 * 。</block>
   <block id="53582adf49551bf81650e7c9447e3a03" category="paragraph">您还必须指定发件人和收件人电子邮件地址以及电子邮件主题。此外，还必须在 * 设置 * &gt; * 全局设置 * 页面中配置 SMTP 。</block>
   <block id="e0fbca907db95ebcd8e259b32ff0c736" category="summary">SnapCenter 可与插件应用程序以及存储系统上的 NetApp 技术集成。要使用自定义插件，请使用 SnapCenter 图形用户界面。</block>
-  <block id="132bc3bfff5021446bf1eec491193e6f" category="paragraph">SnapCenter 将 NetApp Snapshot 副本技术与 SnapCenter 自定义插件结合使用来备份资源。Snapshot 副本占用的存储空间极少。</block>
   <block id="69dcda31e57641c96f304474f66756ca" category="paragraph">使用自定义插件功能还具有以下优势：</block>
-  <block id="49bc745c5af6e687a7001eeef19edb34" category="list-text">可以使用外部命令创建 Snapshot 副本。</block>
-  <block id="ee81cae3ec3e0c9309ae63b9a03ca91a" category="list-text">能够在 Windows 环境中创建文件系统一致的 Snapshot 副本。</block>
   <block id="aa5531c2ecb8be9440f8c1f83b8e7d4f" category="summary">资源组是指必须向其添加要备份和保护的资源的容器。</block>
-  <block id="a80db864d152c8b32afdc8aba08be8a4" category="paragraph">例如， _customtext_resource group_policy_hostname 或 resource group_hostname_ 。默认情况下， Snapshot 副本名称会附加时间戳。</block>
   <block id="3beb0a9c61be39e8320fe0059a03c74a" category="paragraph">启用归档日志管理以删除归档日志。</block>
-  <block id="dc703326700303bf93d1386ba9fca6a5" category="paragraph">选择 SnapCenter with File System Consistency 。</block>
-  <block id="cc1f89ce717207d3bd06c999199b9304" category="paragraph">选择 SnapCenter without File System Consistency 。</block>
-  <block id="fb99cb02e8a44f5112f8225ca020b979" category="paragraph">选择其他，然后输入要在主机上执行的命令以创建 Snapshot 副本。</block>
   <block id="bfd0e05a188a0885b5397fae78f649b8" category="paragraph">这些策略将在 * 为选定策略配置计划 * 部分中列出。</block>
   <block id="6041b17ee877813c3440ee714e48b911" category="paragraph">已配置的计划将列在 "applied Schedules" 列中。如果第三方备份计划与 SnapCenter 备份计划重叠，则不支持这些计划。</block>
   <block id="6728b4a43abbebd3cc07a2cacc5e0c06" category="paragraph">添加主机的用户应具有该主机的管理权限。</block>
@@ -5829,8 +5697,6 @@
   <block id="b17bab2e169e781f68778276e3c1ff06" category="paragraph">每个操作都可以将消息发送回服务器，服务器将显示和存储内容。消息包含消息级别，时间戳和消息文本。支持多行消息。</block>
   <block id="fb2ea703b13d059f6b7ea5da806021df" category="paragraph">格式。</block>
   <block id="ef7349bf7e64c5812dde44dfe1ea9ed5" category="paragraph">SnapCenter 插件必须实施插件存根。这些方法是 SnapCenter 服务器根据特定工作流调用的。</block>
-  <block id="4305bf9c0dcb1a2a6873aac14cbecaca" category="paragraph">此存根负责执行暂停。它会将应用程序置于一种可以创建 Snapshot 副本的状态。此操作在执行存储 Snapshot 副本操作之前调用。</block>
-  <block id="449021fc86b4250dcd4ffecba5f61ca8" category="paragraph">此存根负责执行静默。它会将应用程序置于正常状态。此操作在执行存储 Snapshot 副本操作后调用。</block>
   <block id="f7eeb12c0ae87e1a428729d93636f705" category="paragraph">此存根负责执行克隆前任务。此操作假定您使用的是内置的 SnapCenter 克隆接口，并且只有在执行操作 "clone_vol 或 clone_LUN" 时才会触发此接口。</block>
   <block id="7d08df91908649fc980c6e4561c46d42" category="paragraph">此存根负责执行克隆后任务。这假定您使用的是内置的 SnapCenter 克隆接口，并且只有在执行 "clone_vol 或 clone_lun" 操作时才会触发此接口。</block>
   <block id="aadbc30f9f18452d76bb86a523d4013d" category="paragraph">此存根负责执行还原前任务。这假定您使用的是内置的 SnapCenter 还原界面，并且仅在执行还原操作时触发。</block>
@@ -5853,7 +5719,6 @@
   <block id="0b15a431b87402bce4bdb3d69d72102d" category="list-text">备份策略是一组规则，用于控制如何管理，计划和保留备份。此外，您还可以指定复制，脚本和应用程序设置。</block>
   <block id="f29871ab419804e987d1bfb5f3274244" category="list-text">在策略中指定选项可节省将策略重复用于其他资源组的时间。</block>
   <block id="42671d398be6103911a06f9936ab9855" category="admonition">您可以在创建资源组时为备份操作指定计划（开始日期，结束日期和频率）。这样，您可以创建共享相同策略和备份频率的资源组，但可以为每个策略分配不同的备份计划。</block>
-  <block id="3a30bd3496c2190790bc5bd919e52d87" category="paragraph">如果 ONTAP 中的保护关系类型为镜像和存储，并且仅选择此选项，则在主系统上创建的 Snapshot 副本不会传输到目标系统，而是会列在目标系统中。如果从目标位置选择此 Snapshot 副本以执行还原操作，则会显示以下错误消息： Secondary Location is not available for the selected vaulted/mirrored backup.</block>
   <block id="76ff1ceb8558ff2b4e47757b810cbdef" category="doc">取消自定义插件的备份操作</block>
   <block id="6af1ebe4d54e4d359cfda12fdfc23a05" category="doc">准备用于 SnapMirror 的存储系统，以及用于自定义插件的 SnapVault 复制</block>
   <block id="2c680d95270ab9050da54ca67f598551" category="summary">您可以使用 SnapCenter 克隆备份。您可以从主备份或二级备份克隆。克隆操作的功能取决于您使用的插件。</block>
@@ -5966,11 +5831,9 @@
   <block id="0834ce0d0048d3f30b3ba331b3fbfaeb" category="paragraph">" 严重 " 和 " 警告 " 类别警报的总数显示在屏幕顶部。单击 " 严重 " 或 " 警告 " 总计可重定向到 " 警报 " 页面，并在 " 警报 " 页面中应用特定筛选器。</block>
   <block id="730fa47453e87908aa833516ccc3ea45" category="paragraph">单击特定警报可重定向到警报页面，以了解有关该警报的详细信息。单击屏幕底部的 * 全部查看 * 将重定向到 " 警报 " 页面，以获取所有警报的列表。</block>
   <block id="d99a5786ad85001e24562511072e0438" category="section-title">最新保护摘要</block>
-  <block id="bded8d2469365a9282915f5f79cd9142" category="paragraph">最新的 " 保护摘要 " 图块为您提供有权访问的所有实体的保护状态。默认情况下，此显示设置为提供所有插件的状态。系统会提供有关使用 SnapMirror 和 SnapVault 技术备份到主存储作为 Snapshot 副本以及二级存储的资源的状态信息。二级存储的保护状态信息的可用性取决于所选插件类型。</block>
   <block id="e1008495c688afceab4f2b4a2cf57b5f" category="admonition">如果您使用的是镜像 - 存储保护策略，则保护摘要的计数器将显示在 SnapVault 摘要图表中，而不是 SnapMirror 图表中。</block>
   <block id="ce7dbf4c6cf16891692544eda41583e7" category="paragraph">通过从下拉菜单中选择一个插件，可以获得各个插件的保护状态。圆环图表显示选定插件的受保护资源百分比。单击一个圆环分区可重定向到 * 报告 * &gt; * 插件 * 页面，该页面可提供有关指定插件的所有主存储活动和二级存储活动的详细报告。</block>
   <block id="61918a19fed1a6f7aac77a6c590a36c8" category="admonition">有关二级存储的报告仅适用于 SnapVault ；不支持 SnapMirror 报告。</block>
-  <block id="0ead2b8872977656919ce9f01f840af9" category="admonition">SAP HANA 可为 Snapshot 副本提供主存储和二级存储的保护状态信息。仅主存储保护状态可用于基于文件的备份。</block>
   <block id="0306f309d85c77b515e2062211ad3b92" category="cell">保护状态</block>
   <block id="86b11f41cdd4202ed814b1453f2dd058" category="cell">主存储</block>
   <block id="d7c8c85bf79bbe1b7188497c32c3b0ca" category="paragraph">失败</block>
@@ -5995,8 +5858,6 @@
   <block id="5bda814c4aedb126839228f1a3d92f09" category="paragraph">正在运行</block>
   <block id="29f9814bc81dd214edb0b6be347f7229" category="paragraph">当前正在运行的作业数。</block>
   <block id="f7dba3d6d7c9c3429f0c58a4580df905" category="paragraph">" 存储 " 图块显示保护作业在 90 天内占用的主存储和二级存储，以图形方式描绘了使用趋势，并计算了主存储节省量。存储信息每 24 小时在每天中午 12 点更新一次</block>
-  <block id="8855900d93f9838e82c77bf6f804e8c3" category="paragraph">屏幕顶部将显示一天的总使用量，其中包括 SnapCenter 中可用的备份总数以及这些备份占用的大小。一个备份可能具有多个关联的 Snapshot 副本，并且计数将反映相同的内容。这适用于主 Snapshot 副本和二级 Snapshot 副本。例如，您创建了 10 个备份，其中 2 个因基于策略的备份保留而被删除， 1 个备份由您显式删除。因此，将显示 7 个备份的计数以及这 7 个备份占用的大小。</block>
-  <block id="d612286045a1daee2c40c6d4f0b3c319" category="paragraph">主存储的存储节省系数是逻辑容量（克隆和 Snapshot 副本节省加上已用存储）与主存储的物理容量之比。条形图显示了存储节省量。</block>
   <block id="b75814af78ac77b110a1f29425b27be2" category="paragraph">折线图会分别绘制连续 90 天内每天的主存储和二级存储消耗情况。将鼠标悬停在图表上可提供详细的每日结果。</block>
   <block id="e4b0253123055e5f41b264b422ac0484" category="admonition">如果使用 SnapCenter 服务器 4.2 和插件的早期版本（ 4.2 之前的版本）创建备份，则 * 存储 * 图块不会显示备份数，这些备份占用的存储， Snapshot 节省量，克隆节省量和 Snapshot 大小。</block>
   <block id="dda9cd1a94e969f6dac4fc6afb775de5" category="paragraph">" 配置 " 图块提供 SnapCenter 正在管理且您有权访问的所有活动独立主机和 Windows 集群主机的整合状态信息。其中包括与这些主机关联的插件状态信息。</block>
@@ -6075,7 +5936,6 @@
   <block id="3fcbfa7e53e0d1486b04ef88744e654b" category="list-text">从用户或组名称列表中，单击要修改的用户或组。</block>
   <block id="0a2a28430d9f7066f6a8e5f614a42f52" category="summary">您可以将策略与资源或资源组分离，修改，删除，查看和复制。</block>
   <block id="8a83564fb6cc1ce1968a698b16797b87" category="section-title">修改策略</block>
-  <block id="ba036c6de008cc90f19810d74054495f" category="paragraph">在策略附加到资源或资源组时，您可以修改复制选项， Snapshot 副本保留设置，错误重试次数或脚本信息。只有在断开策略后，才能修改计划类型（频率）。</block>
   <block id="039310fa3be7e08e1e978c195979fc63" category="paragraph">修改策略中的计划类型需要执行其他步骤，因为 SnapCenter 服务器仅在策略附加到资源或资源组时才会注册计划类型。</block>
   <block id="c420c685f1c370d3495ae3f69ab2178a" category="paragraph">添加其他计划类型</block>
   <block id="d3862d52cd407d98a5060531bcc67094" category="paragraph">创建新策略并将其附加到必要的资源或资源组。</block>
@@ -6230,7 +6090,6 @@
   <block id="09a6d5e712449f112a3dcd2169dac55a" category="paragraph">还原 SnapCenter 存储库时，正在运行的其他 SnapCenter 操作将受到影响，因为在还原操作期间，存储库数据库不可访问。</block>
   <block id="f65a265b9c1e948edcb4b8b5bd492a18" category="list-text">使用 _Restore-SmRepositoryBackup_ cmdlet 还原存储库备份。</block>
   <block id="ec9dad1ea2b1a5314f82d20d3bf23f49" category="paragraph">以下 cmdlet 可从 iSCSI LUN 或 VMDK 上的现有备份还原 SnapCenter MySQL 数据库存储库：</block>
-  <block id="8157c1b74c579bf8df97655493bf3034" category="paragraph">当 iSCSI LUN 中的备份文件意外删除时，以下 cmdlet 会还原 SnapCenter MySQL 数据库。对于 VMDK ，手动从 ONTAP Snapshot 副本还原备份。</block>
   <block id="071788d560dec04e39684f7e9734f7f8" category="section-title">迁移 SnapCenter 存储库</block>
   <block id="36a43a17d046b7175ef97b0dd0dbf8f8" category="paragraph">您可以将 SnapCenter 服务器数据库存储库从默认位置迁移到另一个磁盘。如果要将存储库重新定位到具有更多空间的磁盘，则可以迁移该存储库。</block>
   <block id="22789a017f9102ab9838cbf20e824cdc" category="list-text">在 Windows 中停止 MYSQL57 服务。</block>
@@ -6269,9 +6128,7 @@
   <block id="b5e3f82dbe3b26af86ad24f52d33eca5" category="paragraph">如果要恢复对已置于维护模式的资源组执行的操作，请选择该资源组并单击 * 生产 * 。</block>
   <block id="ad9a47e46e4ad7c3e60285f394572957" category="section-title">删除资源组</block>
   <block id="51ebd5fa5a40caec4ed936fe9898a298" category="paragraph">如果不再需要保护资源组中的资源，可以删除该资源组。在从 SnapCenter 中删除插件之前，必须确保已删除资源组。</block>
-  <block id="96f3b8867aaf11c3ad817e34c18cd41e" category="paragraph">您应手动删除为资源组中的任何资源创建的所有克隆。您可以选择强制删除与资源组关联的所有备份，元数据，策略和 Snapshot 副本。</block>
   <block id="0c2afed1ed2cb68e29011a87d947fe86" category="list-text">选择资源组，然后单击 * 删除 * 。</block>
-  <block id="e6367c97237b87006cded5c41a446fc2" category="list-text">可选：选中 * 删除与此资源组关联的备份和分离策略 * 复选框以删除与此资源组关联的所有备份，元数据，策略和 Snapshot 副本。</block>
   <block id="14a4c05c50e64f982159ddb53b74d93a" category="summary">您可以从 " 监控 " 页面监控作业进度，获取有关已计划作业的信息以及查看事件和日志。</block>
   <block id="f63bb2ed2f077a58e42dc5713a5d5843" category="doc">监控作业，计划，事件和日志</block>
   <block id="4639d0e2e2909a747265c2f704128bca" category="section-title">监控作业</block>
@@ -6677,19 +6534,14 @@
   <block id="74ae0888147d892b12bb807a0b81b3af" category="paragraph">如果已添加 FSX SVM ，此处将列出 FSX SVM 。</block>
   <block id="6f9f8c6ff90de911912e63ac72e07121" category="paragraph">如果您已使用 fsxadmin 添加 FSX 集群，此处将列出 FSX 集群。</block>
   <block id="74e84f9442fdb7717385ee092400869a" category="paragraph">如果您使用的是 IE 10 或更早版本，则无法正确加载 SnapCenter UI 。您应升级到 IE 11 。</block>
-  <block id="3b9b501ce9ff4819d459190476007edc" category="paragraph">例如， customtext_policy_hostname 或 resource_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。</block>
-  <block id="88d8212b57ef4a806bbe46dc391aebdf" category="paragraph">限制检查并获取锁定，而不是使用内部数据库 Snapshot 副本（ TABLOCK ）</block>
-  <block id="bed7a5b2a53899a17a7ddb2e244ad497" category="paragraph">选择 * 限制检查并获取锁定，而不是使用内部数据库 Snapshot 副本（ TABLOCK ） * 来限制检查并获取锁定，而不是使用内部数据库 Snapshot 副本。</block>
   <block id="cddfaa01c32e2362546c78364751248b" category="admonition">适用于 UNIX 的 SnapCenter 插件是适用于 AIX 的 SnapCenter 插件软件包的一部分，不支持并发卷组。</block>
   <block id="6ae61d1454f759ea3eb40a95ec0ab1b7" category="admonition">SnapCenter 不支持 * 同步镜像 * 复制。</block>
   <block id="885b1f9eef36019d672ac62796ed326d" category="doc">您可以使用 SnapCenter 自定义插件和存储插件执行什么操作</block>
   <block id="130912ed126ed1a0d1b727e3293210ed" category="paragraph">* 自定义插件 *</block>
   <block id="08762ef2fe73d944789541451485f737" category="paragraph">* 存储插件 *</block>
   <block id="22f14629dccbccb3ea736a953a3743c7" category="paragraph">您可以使用存储插件执行数据保护操作。</block>
-  <block id="ba35678f07666a4f1a46da2ff07d3be9" category="list-text">为 ONTAP 集群中的存储卷创建一致性组 Snapshot 副本。</block>
   <block id="c2230088d27abaa2d470e15431fe93b5" category="list-text">使用内置的脚本编写前后框架备份自定义应用程序</block>
   <block id="b7ef57ec0d80db01d4596e446c5f7c1f" category="paragraph">您可以备份 ONTAP 卷， LUN 或 qtree 。</block>
-  <block id="2ba3d313a9f79b9a7c6749bf2e99acfa" category="list-text">使用 SnapCenter 策略利用现有复制关系（ SnapVault/SnapMirror/ 统一复制）将在主系统上创建的 Snapshot 副本更新到 ONTAP 二级系统</block>
   <block id="0930cbd774389ffda4b953dfada42944" category="list-text">恢复完整的 ONTAP 卷， LUN 或文件。</block>
   <block id="01416c60ab0c357d59811f108a67d5bd" category="paragraph">由于产品中未内置浏览或索引功能，您应手动提供相应的文件路径。</block>
   <block id="17f0138477115892c87d600e535c1ed0" category="paragraph">不支持 qtree 或目录还原，但如果在 qtree 级别定义了备份范围，则只能克隆和导出 qtree 。</block>
@@ -6765,7 +6617,6 @@
   <block id="7e88bcd72ecc2784bced6913c338faa7" category="paragraph">故障转移后，可以在二级 SAP HANA 系统成为主 SAP HANA 系统时执行所有数据保护操作。</block>
   <block id="4bc5b2b92d8dcb711bd827f42e5409d1" category="paragraph">您不能为 SAP HANA 数据卷创建备份，但 SnapCenter 会继续保护非数据卷（ NDV ）。</block>
   <block id="c0ab35de65d78830f03751afe7a38d7b" category="admonition">对于 SAP HANA 系统复制，建议将 SAP HANA 系统的所有资源添加到一个资源组中。这样可以确保保留正确数量的备份。</block>
-  <block id="a6be6f24e838a4da069bddb143958a11" category="admonition">对于 SAP HANA 系统复制，创建的 Snapshot 副本总数将等于为资源组设置的保留空间。删除最旧的 Snapshot 副本取决于最旧的 Snapshot 副本所在的节点。例如，对于使用 SAP HANA System Replication primary 和 SAP HANA System Replication secondary 的资源组，保留设置为 7 。一次最多可以创建 7 个 Snapshot 副本，包括 SAP HANA System Replication 主副本和 SAP HANA System Replication 二级副本。</block>
   <block id="41d38b2eca9ea765772bfdd8438f72b8" category="admonition">对于 SAP HANA 系统复制主资源，支持还原和删除操作；对于二级资源，支持克隆操作。</block>
   <block id="9ea78ced3285e07c1b4382084f2c8082" category="list-text">多层横向扩展 HANA 系统复制</block>
   <block id="ca008dbe9fac2013096d5e5cf923c44e" category="list-text">系统复制模式下的级联复制环境</block>
@@ -6943,7 +6794,6 @@
   <block id="9e2e9c4d3a7b699f2c9da7b1c1f252d5" category="list-text">* ， * 用于分隔同一数据库的一组变量。</block>
   <block id="087342b75abe5b9e56fe1ef5c1366716" category="paragraph">示例： nfs32@@buck ： /vol/scspr2417819002_nfs_cb_nfs32_data/RG2_scs2417819002_07-21-2021_02.28.26.3973_0 ， buck ： /vol/scspr2417819002_nfs_CDB_sb_sb32_redo /R202_NFS202_NFS202_SC202_NFS202_NFS202_SC202_NFS202_NFS202_NFS202_NFS202_NFS202_SC202_NFS202_NFS202_NFS202_NFS202_NFS202_NFS202_NFS202_NFS202_NFS202_NFS202_NFS201_NFS202_NFS202_NFS202_NFS202_SC201_NFS201_NFS202_NFS201_NFS</block>
   <block id="98ecfe0d837e77006a17452ca412bc0a" category="doc">还原和恢复 Oracle 数据库</block>
-  <block id="588fdca387b41a3ed6e9915f94a10eb5" category="paragraph">可以使用配置的归档日志位置提供的归档日志执行恢复。如果数据库在 ARCHIVELOG 模式下运行， Oracle 数据库会将填充的重做日志文件组保存到一个或多个脱机目标，统称为归档重做日志。SnapCenter 会根据指定的 SCN ，选定的日期和时间或所有日志选项确定并挂载最佳数量的日志备份。如果所配置位置没有恢复所需的归档日志，则应挂载包含这些日志的 Snapshot 副本，并将路径指定为外部归档日志。</block>
   <block id="835be123689a0c878d2a9b458e5bf334" category="paragraph">如果数据库在 ARCHIVELOG 模式下运行，则 SnapCenter 会根据指定的 SCN ，选定的日期和时间或所有日志选项确定并挂载最佳日志备份数。</block>
   <block id="f99510060ae91e89fdabd39c0e222578" category="paragraph">如果仍要指定外部归档日志文件的位置，请选择 * 指定外部归档日志位置 * 。</block>
   <block id="8d0b25f92b903a24620536866eec34e9" category="paragraph">使用 SnapCenter ，您可以在执行预处理和后处理脚本时使用预定义的环境变量。 <block ref="5b7d02e10c9ec6b7cbb457e491f8bd48" category="inline-link-macro-rx"></block></block>
@@ -7026,7 +6876,6 @@
   <block id="1c41074e44dc2e55551dfb68d2bc354d" category="list-text">在作业详细信息页面中，单击 * 查看日志 * 。</block>
   <block id="c6c1feaee0176e99111e0aef49c594be" category="list-text">在证书管理单元窗口中，选择 * 计算机帐户 * 选项，然后单击 * 完成 * 。</block>
   <block id="a2286f0c6fbfecb0501c43aa965242b6" category="list-text">在资源页面中，根据资源类型从 * 视图 * 下拉列表中筛选资源。</block>
-  <block id="0ab7e5f8a6ae4c1833f0606e717b782e" category="list-text">在资源页面中，选择 * 对 Snapshot 副本使用自定义名称格式 * ，然后输入要用于 Snapshot 副本名称的自定义名称格式。</block>
   <block id="007bb45dbc12aff746ee53defa1f784f" category="list-text">在应用程序设置页面中，执行以下操作：</block>
   <block id="1bf25096670c9621cda8c9d3e8bee4ad" category="list-text">在资源页面中，根据资源类型从 * 视图 * 下拉列表中筛选资源。</block>
   <block id="4da4dfc97db1c4c71939b200e576ecc4" category="list-text">在位置页面中，执行以下操作：</block>
@@ -7095,7 +6944,6 @@
   <block id="f03c757efff1b7a92c7b30cbc8c7c0b8" category="doc">适用于 Microsoft SQL Server 的 SnapCenter 插件的安装工作流</block>
   <block id="5d1ccbabeac3da21e18ec5dee9e1b5d3" category="list-text">在灾难恢复模式下创建的新备份将在拓扑页面的 SnapMirror 或 SnapVault （二级）下列出。</block>
   <block id="1e898ea74f227f6f8576a3c8a19476db" category="list-text">在资源页面中，从 * 查看 * 下拉列表中选择 * 数据库 * ， * 实例 * 或 * 可用性组 * 。</block>
-  <block id="53c98fb3ede460fb23424f1db6ea0273" category="list-text">在资源页面中，选中 * Snapshot 副本的自定义名称格式 * 复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。</block>
   <block id="075e5d48960664645c5727a530a7c640" category="list-text">在策略部分中，从下拉列表中选择一个或多个策略。</block>
   <block id="1ca9ef3a64115b9b5155a63404740914" category="paragraph">此时将创建一个隐式资源组。您可以通过从用户访问页面中选择相应的用户或组来查看此信息。隐式资源组类型为 "`Resource` " 。</block>
   <block id="e5acff5734e40c3c2497b77505329dc5" category="paragraph">您可以在设置页面中执行以下任务：</block>
@@ -7146,7 +6994,6 @@
   <block id="ea651e7d348fad133122cd96d8a57514" category="paragraph">在 Available Resources 和 Selected Resources 部分中，数据库名称将显示为主机的 FQDN 。此 FQDN 仅指示数据库在该特定主机上处于活动状态，并且可能不会在此主机上创建备份。您应从服务器选择选项中选择一个或多个备份服务器，以便在策略中选择了 * 备份作业创建时间要选择的服务器上的备份副本 * 选项时进行备份。</block>
   <block id="56211ba6636186607e13945dac559a10" category="list-text">在资源页面中，从 * 查看 * 列表中选择 * 数据库 * 或 * 数据库可用性组 * 。</block>
   <block id="6da272f1d69c440674470ba19591ba05" category="paragraph">在资源页面中， <block ref="362bbfc4e46b557d6a4f1f7a4cbeaf25" category="inline-image-macro-rx" type="image"></block> 图标表示数据库位于非 NetApp 存储上。</block>
-  <block id="15729e255e75ea1df4e86881a1909cec" category="list-text">如果要指定自定义 Snapshot 副本名称，请在资源页面中选中 * 对 Snapshot 副本使用自定义名称格式 * 复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。</block>
   <block id="d99fed20823b9c8ab623e15a5dda6022" category="list-text">在保留页面中，配置保留设置。</block>
   <block id="5aeb9e6d879dba508efed2806a37d0b1" category="list-text">在复制页面中，选择以下一个或两个二级复制选项：</block>
   <block id="31db120ce3e7f7d5198a060e87905d01" category="doc">适用于 Microsoft Exchange Server 的 SnapCenter 插件的安装工作流</block>
@@ -7156,7 +7003,6 @@
   <block id="5693c7d2b02d83427ab807d73a04e2e7" category="list-text">在位置页面中，选择用于还原选定资源的目标卷。</block>
   <block id="ce6e296d4e6f07e1cb707c2eaeaf04ad" category="list-text">在自定义备份设置部分中，以密钥值格式提供必须传递到插件的任何特定备份设置。您可以提供多个要传递到插件的密钥值。</block>
   <block id="d9ac41630ae6a20177466403e2d328d8" category="doc">SnapCenter 自定义插件的安装工作流</block>
-  <block id="80cb8ef1d01a491a4a563ec56f39cedc" category="list-text">在资源页面中，如果要使用自定义名称，请选中 * 对 Snapshot 副本使用自定义名称格式 * 复选框，然后为 Snapshot 副本名称输入自定义名称格式。</block>
   <block id="dd4b762c191c7a235ce898c094749679" category="paragraph">您可以从添加主机页面安装自定义插件和存储插件。</block>
   <block id="d98e943b0122d016274bcbbeba1d647d" category="list-text">在资源设置页面中，为资源提供自定义密钥值对。</block>
   <block id="fc239c2b2a79ad8ee77cc5430b1803fe" category="paragraph">完成凭据设置后，您可能需要在 " 用户和访问 " 页面上为用户或用户组分配凭据维护。</block>
@@ -7209,7 +7055,6 @@
   <block id="d80b7e944064bf3bd382ae2be696ab9e" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "vserver export-policy show"-access all`</block>
   <block id="1c1ebdb4d2cea4a9f1b480ef6387ebbd" category="list-text">`ssecurity login role create -vserver SVM_name -role SVM_role_name -cmddirname "vserver iscsi connection show"-access all`</block>
   <block id="2bad882b7fb5945b0373cf8c526cb4ac" category="list-text">`ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "volume clone split status"-access all`</block>
-  <block id="af9210ab244187eb84af56c8e51b082c" category="paragraph">您可以在VMware环境中使用适用于Microsoft Windows的SnapCenter 插件来创建和管理LUN以及管理Snapshot副本。</block>
   <block id="c9956993c3473df3ea1961fead514074" category="paragraph">logs_MAX_count</block>
   <block id="9b24859b2a7f9c7d8afb9ec3b025e927" category="paragraph">log_MAX_size</block>
   <block id="92cb537bc0c912cec1e9669f256ebc89" category="paragraph">显示作业日志文件的最大大小。</block>
@@ -7239,7 +7084,6 @@
   <block id="487a34d280250073f86b353bd430b05b" category="paragraph">如果需要、您可以更改此路径并重新启动SMcore服务。建议您使用默认安全路径。</block>
   <block id="cb0f6b6fa4cffa93ac67dd15850cae3d" category="paragraph">可以通过API：API /4.7/configsettings从Swagger显示密钥值</block>
   <block id="cf2ded6f4d7ccf880ce7a042e4726b3e" category="paragraph">您可以使用GET API显示密钥的值。不支持设置API。</block>
-  <block id="3bcbed691a828d3bec798c7f504ae72f" category="paragraph">SnapCenter 会在完成Snapshot副本操作后对SnapMirror和SnapVault 执行更新。SnapMirror和SnapVault 更新是在SnapCenter 作业中执行的；请勿创建单独的ONTAP 计划。</block>
   <block id="d332f88a3886e736c322b3643225a6cd" category="admonition">SnapCenter 不支持 SnapMirror 和 SnapVault 卷之间的级联关系（ * 主卷 * &gt; * 镜像 * &gt; * 存储 * ）。您应使用扇出关系。</block>
   <block id="08e9631e1208ded677a67844beb7e0f6" category="list-text">您必须已安装Microsoft .Net 4.7.2或更高版本。</block>
   <block id="f9e40bd22b133e93e9c9d3b4c3adef6e" category="list-text">Microsoft .NET Framework 4.7.2或更高版本</block>
@@ -7489,7 +7333,6 @@
   <block id="e7b4efc5dd5b16a36c26e91652b78194" category="paragraph">对于Linux：/var/opt/snapcenter/scC/allowed_commands_list.txt</block>
   <block id="2dd7c4421097b3d796ff9bf355ebaa6e" category="admonition">如果命令列表中不存在这些命令、则操作将失败。</block>
   <block id="e61e5d73b3b042b28dcdf96a5c438a4e" category="list-text">对于克隆前或克隆后命令、您应通过以下路径检查这些命令是否位于插件主机上的命令列表中：</block>
-  <block id="d5d9a4c4e51c27e556fb89bfdd11f0b0" category="list-text">对于用于暂停、Snapshot副本和取消静默操作的预后和后命令、您应通过以下路径检查这些命令是否位于插件主机上的命令列表中：</block>
   <block id="3c8f1b708d97734299340f633acf1b28" category="paragraph">如果使用的是iSCSI、则iSCSI服务应正在运行。</block>
   <block id="9415aa73bf3f3a2a034e0e07c5d506cf" category="section-title">SHA512哈希</block>
   <block id="aeff1fc8cacc5ff5c9b086664b2f5560" category="list-text">对于NetApp提供的自定义插件、您应确保已将自定义插件文件的SHA512哈希添加到_custom_plugin_checksum_list_文件中。</block>
@@ -7674,8 +7517,6 @@
   <block id="4c4d4c133d15d97bf3bef74ffeeeb66a" category="list-text">在左侧导航窗格中，选择*Resoles*，然后从列表中选择相应的插件。</block>
   <block id="ba4484b740822363967ef7dbb090de6a" category="inline-image-macro">筛选器图标</block>
   <block id="90db41db3c301da492422a8fbb244c83" category="list-text">在资源页面中、您可以执行以下步骤：</block>
-  <block id="00f0529a96533b63a21705811e1addce" category="list-text">选中此复选框、然后输入要用于Snapshot副本名称的自定义名称格式。</block>
-  <block id="8319f5e3f98fcec5a71bd43e8454a8fd" category="paragraph">例如：<block ref="6d242f6ac938ffb13709f54d68cd3c4a" prefix=" " category="inline-code"></block> 或<block ref="90ea7aa0cb61dd49e32f6dcf8afac143" prefix=" " category="inline-code"></block>。默认情况下、Snapshot副本名称会附加时间戳。</block>
   <block id="e0af3bf36c9535530ed431b3358aa176" category="inline-image-macro">添加符号</block>
   <block id="a2fbabd2b5fd55db991eb64739e8189a" category="admonition">您可以单击来创建策略 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="a04dff3ca18f5d27eeb205537402b01c" category="list-text">单击 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> 在配置计划列中、为所需策略配置计划。</block>
@@ -7806,15 +7647,9 @@
   <block id="016bcd6d9710c9d2dde84a3ff020b0de" category="paragraph">您只能为策略选择一种计划类型。</block>
   <block id="ef077dad77fac08deaf5fe61aced7bc3" category="section-title">第3步：配置保留设置</block>
   <block id="d8d914bba3878c80c4a43efb4e1ce72c" category="open-title">特定份数</block>
-  <block id="5a0290e9f5b4a432c42379432ee6f5c8" category="paragraph">仅保留特定数量的Snapshot副本。</block>
   <block id="619f22faf39c2dfe9a11af29647bb1a6" category="list-text">选择 * 保留适用于过去 &lt; 天数 &gt; 天 * 的日志备份选项，并指定要保留的天数。如果您接近此限制，则可能需要删除较早的副本。</block>
   <block id="fe9e179b8597c5b1e7f1e2ff0644a5c8" category="open-title">特定天数</block>
   <block id="82c2224d099110596a9863d056598afe" category="paragraph">将备份副本保留特定天数。</block>
-  <block id="805b73e03f8c3c7c7a8238ed9766dee3" category="list-text">指定要保留的Snapshot副本总数</block>
-  <block id="ffe60c98392393713d4e1d365c27b6be" category="list-text">要指定要保留的Snapshot副本数、请选择*要保留的Snapshot副本总数*。</block>
-  <block id="d4f0bf88ec19106300653daff553435f" category="list-text">保留Snapshot副本的时间长度</block>
-  <block id="7fcb4d3ce02337b7e14c71c970e6aa6e" category="list-text">要指定要保留的Snapshot副本数、请选择*要保留的Snapshot副本总数*。如果 Snapshot 副本数超过指定数量，则会删除这些 Snapshot 副本，并首先删除最旧的副本。</block>
-  <block id="6618a5f84aa25633e669aa723e59a0cd" category="list-text">要指定在删除Snapshot副本之前保留这些副本的天数、请选择*保留Snapshot副本的时间*。</block>
   <block id="92ac5fc0212c94ee50e6dc85913caeec" category="example-title">显示示例</block>
   <block id="8047dd542f0833c625160d18deaef831" category="paragraph">set-smPolicy -PolicyName 'newpol'-PolicyType 'Backup'-PluginPolicyType 'CSQL'-sqlbackuptype 'FullBackupAndLogBackup'-RetenituSettings @｛BackupType='Data'；scheduletType=' Hourly'；Retenitone=2｝、@@｛BackupType='Log_Snapshot；Retettype='、schedulettype=2｝</block>
   <block id="b1cf83519efa64342d0b96985ded3691" category="section-title">第4步：配置复制设置</block>
@@ -7844,9 +7679,7 @@
   <block id="7bc2103c2a80cd91e9a026c0f2b3f943" category="list-text">选择备份箭头以设置其他备份选项：</block>
   <block id="6ab7eeea8e6b1dcd3c8360b245f0e3c0" category="inline-image-macro">一致性组备份选项的屏幕截图：紧急、中等或宽松。</block>
   <block id="072de5e2138004f9a67883cb0ff2aaa6" category="paragraph"><block ref="072de5e2138004f9a67883cb0ff2aaa6" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e92d78d72bbcff05469cd98c282ac8c4" category="list-text">选择Scripts (脚本)箭头、然后输入用于quisee (静噪)、Snapshot copy (Snapshot副本)和unquisee (取消静噪)操作的pre和post命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。</block>
   <block id="3328b0dbde4c99683e19eca586842ffb" category="list-text">选择Custom Configurations箭头、然后输入使用此资源执行所有数据保护操作所需的自定义键值对。</block>
-  <block id="dfa18f81ec763693ffdac89624763ae3" category="list-text">选择*Snapshot副本工具*箭头以选择用于创建Snapshot副本的工具：</block>
   <block id="7f368ffa9ab4869382c31a28f17f3a4a" category="inline-image-macro">一个加号图标</block>
   <block id="f79b4ba47e778727c1290b36487ea0bc" category="admonition">您也可以通过选择*来创建策略<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>*</block>
   <block id="b11a42908bee80055dfed2bb0e9a583a" category="list-text">在*配置计划*列中，选择*<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>* 表示要配置的策略。</block>
@@ -8322,8 +8155,6 @@ NetApp®Single Mailbox Recovery已于2023年5月12日终止提供(EOA)。在支�
   <block id="9eb8278143c5b25686cc1b6c525a9b8d" category="paragraph">选择*<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>* ，然后选择主机名和资源类型以筛选资源。然后、您可以选择 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 以关闭筛选器窗格。</block>
   <block id="45b6721b8137bd82de1f2497a525d57a" category="list-text">选择要备份的资源。</block>
   <block id="0666d07a296860de6e0a6f6e4fd0425e" category="list-text">选择*备份*箭头以设置其他备份选项：</block>
-  <block id="cd713ffb7f8ebc1fd9a44fb5ef40eefe" category="paragraph">选择 * 紧急 * ， * 中 * 或 * 宽松 * 以指定 Snapshot 副本操作完成的等待时间。紧急 = 5 秒，中等 = 7 秒，宽松 = 20 秒。</block>
-  <block id="8dd7963568a06d004b4a54b651ec862f" category="list-text">选择*Scripts*箭头可运行用于静修、Snapshot副本和取消静修操作的PRE和POST命令。</block>
   <block id="0644babb03e5024dbc898ead17e21f90" category="list-text">选择**自定义配置**箭头，然后输入使用此资源的所有作业所需的自定义值对。</block>
   <block id="100eb4bb64628d6bc8890851c8173103" category="list-text">在为policy _policy_name_添加计划对话框中，配置该计划，然后选择*OK*。</block>
   <block id="7dd7da1b07a05d1000eeeecb05ce4ee5" category="paragraph">您可以通过在搜索框中输入资源组名称或选择来搜索资源组 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>，然后选择标记。然后、您可以选择 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 以关闭筛选器窗格。</block>
@@ -8423,8 +8254,6 @@ Windows主机：</block>
   <block id="c58fd0a9a81f974b5b3b5db215383ed4" category="paragraph">有关运行 cmdlet 的信息，请参见<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block></block>
   <block id="6f5877ce1b560e325ddcea6ec5f7f838" category="paragraph">有关详细信息，请参见<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="6fe2ae3bc136b86813d15d08bd3465f4" category="list-text">对于SnapMirror业务连续性(SM-BC)还原操作、您必须从主位置选择备份。</block>
-  <block id="1b117b973aa08e222958e556130f2f75" category="list-text">对于启用了SnapLock的策略、对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则在还原过程中从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。</block>
-  <block id="3377f6aa07593543e3eae7ef14e25899" category="list-text">对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。</block>
   <block id="920deed37c528e013939d546655305ff" category="paragraph">活动窗格显示有关备份，还原，克隆和计划的备份操作的信息。</block>
   <block id="1d37b803d962597d71711e7a279d95e7" category="paragraph">如果您将二级关系设置为SnapMirror业务连续性(SM-BC)、则可以看到以下附加图标：</block>
   <block id="11ff410db3b99c0f2b2278663ad47a29" category="inline-image-macro">副本站点已启动</block>
@@ -8434,7 +8263,6 @@ Windows主机：</block>
   <block id="c0b99067667278701462d9633e3d936b" category="inline-image-macro">已重新建立关系</block>
   <block id="75b158522c29b4264f91885a3f9d64cd" category="list-text"><block ref="129c9657fb84202dacfb694c718f35e3" category="inline-image-macro-rx" type="image"></block> 表示尚未重新建立二级镜像或存储关系。</block>
   <block id="719868bb6bc8ea409a4ca9e3c6f76bb8" category="paragraph">如果进行了启用了SnapLock的备份，则单击*Refresh*按钮将刷新从ONTAP检索到的主和二级SnapLock到期时间。每周计划还会刷新从ONTAP检索到的主和二级SnapLock到期时间。</block>
-  <block id="8e99534f6af691fd41e00adb6770ed45" category="paragraph">如果应用程序资源分布在多个卷上、则备份的SnapLock到期时间将是为卷中的Snapshot副本设置的最长SnapLock到期时间。从ONTAP检索到最长的SnapLock到期时间。</block>
   <block id="d7b7ea0231f53dacd1c85813eafc068c" category="paragraph">对于SnapMirror业务连续性(SM-BC)，单击*刷新*按钮可通过查询主站点和副本站点的SnapCenter来刷新ONTAP备份清单。每周计划还会对包含SM-BC关系的所有数据库执行此活动。</block>
   <block id="51ec87329d3b31d6af2f107c3cc08b52" category="list-text">对于SM-BC、应在故障转移后手动配置与新主目标的异步镜像、存储或镜像存储关系。</block>
   <block id="3f7fe170db20f91655f6252fba4f2d1f" category="list-text">故障转移后、应创建一个备份、以使SnapCenter能够识别故障转移。只有在创建备份后才能单击*Refresh*。</block>
@@ -8445,10 +8273,8 @@ Windows主机：</block>
   <block id="c38a6a60f8cb7ca5af460cfef37c8426" category="list-text">有关SnapMirror业务连续性(SM-BC)的详细信息、请参见<block ref="cbb2c6fbcad65bcfffa8c7bece4e8d6b" category="inline-link-rx"></block>。</block>
   <block id="acdc6b4f6edd40f37bce01247a32ff86" category="list-text">SnapLock</block>
   <block id="5645df6d49a903d3e2faf86e08d87813" category="list-text">如果选择了"将备份副本保留特定天数"选项、则SnapLock保留期限必须小于或等于上述保留天数。</block>
-  <block id="98a5daf42cec235d66d75e2276273e50" category="paragraph">指定Snapshot副本锁定期限可防止删除Snapshot副本、直到保留期限到期为止。  这可能会导致保留的Snapshot副本数量超过策略中指定的数量。</block>
   <block id="e07d82366bc71bb060becb82a0e09448" category="admonition">主SnapLock设置在SnapCenter备份策略中进行管理、辅SnapLock设置由ONTAP进行管理。</block>
   <block id="c7075c18b2e266ad847d25c7cdafc611" category="image-alt">备份设置屏幕。</block>
-  <block id="e528a1fd853f0dc6774eed55270c67fb" category="list-text">如果要指定Snapshot副本锁定期限、请选择* Snapshot副本锁定期限*、然后选择天、月或年。</block>
   <block id="0e549e42000cf1cd2bd13dc132e61448" category="paragraph">SnapLock保留期限应少于100年。</block>
   <block id="e7c020bcc5fc6c46eea0af3b48696115" category="paragraph">SnapLock保留期限应少于100年。</block>
   <block id="5354b0db72154dc0430cb5a653a4402c" category="paragraph">应为SnapMirror业务连续性(SM-BC)或SnapMirror同步(SM-S)启用此选项。</block>
@@ -8460,14 +8286,11 @@ Windows主机：</block>
   <block id="8932ab6e3b2afa64d560fca67a0712b7" category="paragraph"><block ref="12abf3d0b43747b4f372f737c28b4029" category="inline-link-rx"></block>。</block>
   <block id="10fe11299ffddacc5ffb826021d50abb" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="c07c083ab1174f81e5a8dab86d345954" category="paragraph">Java 1.8 (64位) Oracle Java或OpenJDK</block>
-  <block id="7533ab96da9180bf079f4c8dff903a17" category="list-text">指定Snapshot副本锁定期限可防止删除Snapshot副本、直到保留期限到期为止。这可能会导致保留的Snapshot副本数量超过策略中指定的数量。</block>
   <block id="971b3c1d99a5aa6f2b187690d01d852c" category="paragraph">Snapshot副本锁定期限</block>
   <block id="86b78accb82bf0596de946657114e7dd" category="paragraph">选择Snapshot副本锁定期限、然后选择天、月或年。</block>
   <block id="cad9d181a2b84fefcf0bef1326b5660c" category="paragraph">在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。</block>
   <block id="08ec8ae585abf03648f1d4e2cb173c27" category="paragraph">单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。</block>
   <block id="6ce9eaa0f0e54448047c63d46dc547b2" category="paragraph">请参见 <block ref="e93d68617e6aa08ec2871acfeebf51e9" category="inline-link-macro-rx"></block>。</block>
-  <block id="9bfc68bbc5769d2721e29f9f8cf04fc8" category="paragraph">有关SnapLock存储的详细信息、请参阅将Snapshot副本提交到存储上的WORM
-destination</block>
   <block id="9b4a73dc1c87ef95e6224c8753affd51" category="paragraph">有关 PowerShell cmdlet 的信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="36402f90f435da43f279f9a1a4c88f5e" category="list-text">如果 SVM 中有多个数据路径（ LIF ），则 SnapCenter 会选择适当的数据路径（ LIF ）来挂载 NFS 克隆卷。但是，如果要指定特定数据路径（ LIF ），则必须运行 Set-SvmPreferredDataPath CLI 。
 有关可与命令结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="a6fc2394a8b2095d1929066d59f6fcc9" category="inline-link-rx"></block>。</block>
@@ -8637,7 +8460,6 @@ destination</block>
   <block id="d9a37470fe419a246aa1213c6650926f" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block></block>
   <block id="54f98e61788c175cab05b17b3fd5f1f6" category="paragraph">此外，您还可以使用 _Uninstall-SmHostPackage_ cmdlet 和所需参数从多个主机卸载插件。有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="ffb7780c8ab56bba323c1d49615fbd2f" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
-  <block id="29a6b619c3a60caa3635eee92628065c" category="admonition">对于用于静宿、Snapshot副本和取消静宿操作的PRE和POST命令、您应从Linux的/opt/snapcenter/snapenter/scC/ALLOED_commands.config_路径和Windows的_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creer\ETC\ALLOED_commands_list.txt检查这些命令是否位于插件主机上的命令列表中。</block>
   <block id="bf62a235cd24baabab2de8cbe3e62354" category="paragraph">您也可以手动使用PowerShell cmdlet或在脚本中使用PowerShell cmdlet来执行备份、还原和克隆操作。SnapCenter cmdlet 帮助和 cmdlet 参考信息包含有关 PowerShell cmdlet 的详细信息。
 <block ref="12abf3d0b43747b4f372f737c28b4029" category="inline-link-rx"></block>。</block>
   <block id="633ff87a38ba5733ad482699222e5df6" category="paragraph">有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block></block>
@@ -8815,7 +8637,6 @@ SnapLock设置由ONTAP管理。</block>
   <block id="acebdece1b3734e875859ee761ab347e" category="sidebar">克隆Unix文件系统</block>
   <block id="1121f6eb8ee08b3fbbc4d05a5ee6ca76" category="sidebar">技术更新</block>
   <block id="72e3ebd15de33a3a4ac48a1468899e30" category="paragraph">有关受支持版本的最新信息，请参见<block ref="96a4ccff2c2cba2d64ff2f5bfcf95100" category="inline-link-rx"></block>。</block>
-  <block id="6ef414d9ea1c137360c49ffc62ff4036" category="paragraph">对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。</block>
   <block id="8585a7e2d9203547a9e1b2e127f530dc" category="paragraph">。<block ref="3c59f2e9aad2adb626f5cfbb7cd6a195" category="inline-link-rx"></block> 包含有关受支持版本的最新信息。</block>
   <block id="059617cda1a3061ea2a2b4188965fe4d" category="paragraph">有关受支持版本的最新信息，请参见<block ref="f6a41fefbf1f1f164dbf4b318a39da2c" category="inline-link-rx"></block>。</block>
   <block id="dc01c492280ce1fd1596d5e3bfe5bf41" category="list-text"><block ref="7a8856912beac423472b387a1e95361d" category="inline-link-rx"></block></block>
@@ -8835,7 +8656,6 @@ SnapLock设置由ONTAP管理。</block>
   <block id="9dddc634db431dab44c50f3fd8460055" category="paragraph">有关受支持版本的最新信息，请参见<block ref="f427499ed0a5ab6c4e27afbbda198682" category="inline-link-rx"></block></block>
   <block id="649d8184d4bc981264b0d66852b40d56" category="paragraph"><block ref="5274e0d1c22af55a55e01a625855ced0" category="inline-link-rx"></block></block>
   <block id="924dbab7608ad7bebe0adaf9e15b8542" category="paragraph">Windows Server 支持 SnapCenter 配置和数据保护。有关受支持版本的最新信息，请参见 <block ref="c16ce45673244a1fe516b0ed4d92ee5c" category="inline-link-rx"></block>。</block>
-  <block id="f70e7af7132291b170364c37c143af5f" category="paragraph">对于ONTAP 9.12.1及更低版本、从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。</block>
   <block id="d24a44cebb5d893d4a6ffefcfde236ea" category="paragraph">有关 ONTAP 和应用程序插件的最低要求，请参见<block ref="fb6518117a57311639cf7e25ef1c11e1" category="inline-link-rx"></block>。</block>
   <block id="9f15a95270d57c31e3fbf8e82eb6d5a6" category="paragraph">请参见<block ref="fb6518117a57311639cf7e25ef1c11e1" category="inline-link-rx"></block></block>
   <block id="9166c380efba6c6a0d61dc08bcc135ee" category="summary">为要备份的资源或资源组创建备份策略。</block>
@@ -8968,7 +8788,6 @@ SnapLock设置由ONTAP管理。</block>
   <block id="b75f291f313008e72d9ff0963164ee31" category="doc">创建资源组并附加SQL备份策略</block>
   <block id="2fd8d5ede56ca6e33060f1eb3dd0734b" category="paragraph">在使用 SnapCenter 备份 SAP HANA 数据库资源之前，您必须为要备份的资源或资源组创建备份策略。</block>
   <block id="e479da34c5ed7685fcd981da443e348b" category="list-text">如果要对数据库执行完整性检查，请选择*基于文件的备份*。</block>
-  <block id="9b13b3a5ddf2908f3bd7c006d6b212ee" category="list-text">如果要使用Snapshot副本技术创建备份，请选择*基于Snapshot *。</block>
   <block id="ed5262a9aab3035c8548c5f3793c76f6" category="list-text">在保留页面中、指定备份类型和选定计划类型的保留设置。</block>
   <block id="98950caea953c79d817eba870ba7ae48" category="summary">在SnapCenter中创建Azure凭据以访问Azure NetApp帐户。</block>
   <block id="1ed01bab203e8745a0dcfe58f019c1d9" category="doc">在SnapCenter中创建Azure凭据</block>
@@ -8986,7 +8805,6 @@ SnapLock设置由ONTAP管理。</block>
   <block id="5c197ff6b8d148a9f919430a485adff2" category="list-text">输入要从现有备份克隆的SAP HANA SID。</block>
   <block id="11dae6129ac88bf8ce4b74a3f04b2931" category="list-text">如果在手动QoS容量池中配置了SAP HANA数据库ANF卷、请为克隆的卷指定QoS。</block>
   <block id="db72f6a27d253d274b29062a99ea2856" category="paragraph">如果自动发现源HANA系统、并且在SAP HANA主机上安装了克隆目标主机插件、则SnapCenter会自动卸载克隆目标主机上的现有HANA数据卷、并挂载新克隆的HANA数据卷。</block>
-  <block id="42558f3e0d13c5a3ab297f0a09e3dce0" category="admonition">已对ANF克隆禁用克隆拆分、因为ANF克隆已是使用选定Snapshot副本创建的独立卷。</block>
   <block id="1d085da91833ced7df79bd36f6ed095f" category="doc">克隆SQL Server数据库备份</block>
   <block id="98649dd054e392acef8b60637dd1e4eb" category="list-text">从*管理副本*视图页面中，从主存储系统中选择备份。</block>
   <block id="064cfc5ceb5ed3cddf1bdbcfa6887172" category="list-text">在*克隆选项*页面中，提供所有必需的详细信息。</block>
@@ -9017,7 +8835,6 @@ SnapLock设置由ONTAP管理。</block>
   <block id="10ee6df71b74c57a6b9f1595f3efce16" category="doc">备份在Azure NetApp Files上运行的SAP HANA数据库</block>
   <block id="13c7c834f7b8414cef2ddebbd37e4d86" category="list-text">选择*备份*箭头以设置其他备份选项。</block>
   <block id="820ce0339ce64af93adc295b0695c2f8" category="list-text">选择*自定义配置*箭头，然后输入使用此资源的所有作业所需的自定义值对。</block>
-  <block id="54e4bfc320112c89c44dab7ba656c966" category="list-text">选择*Snapshot副本工具&gt;无文件系统一致性的SnapCenter *以创建Snapshot副本。</block>
   <block id="40defed757ae2b8a311e0272f6d77f1b" category="paragraph">*文件系统一致性*选项仅适用于在Windows主机上运行的应用程序。</block>
   <block id="f3d79571b40021bb0ad32b78398ef057" category="doc">备份在Azure NetApp Files上运行的Oracle数据库</block>
   <block id="5afb14e7449db1f35fc15f6f85899c21" category="list-text">在“资源”页中，从“视图”下拉列表中选择*Database *。</block>
@@ -9059,4 +8876,202 @@ SnapLock设置由ONTAP管理。</block>
   <block id="4db35e04fa48549bd85b1a6d4d43fb09" category="list-text">SnapCenter 4.9 P1及更高版本支持在基于Amazon Web Services (AWS)的VMware Cloud软件定义的数据中心(SDDC)环境中保护Oracle和Microsoft SQL工作负载。</block>
   <block id="38012dbc6542f17135111019d1839fa1" category="inline-link">在AWS SDDC环境中的VMware Cloud中使用NetApp SnapCenter保护Oracle、MS SQL工作负载</block>
   <block id="50fc2fe54f751b9b7639d7a2f1fb2027" category="paragraph">有关详细信息，请参见<block ref="4adac1bb1a663de205d28f66d3207227" category="inline-link-rx"></block>。</block>
+  <block id="726d39dceafdcf2a244cb0bcdb262380" category="paragraph">此存根负责执行暂停。它将放置
+将应用程序置于可以创建Snapshot的状态。这在执行存储Snapshot操作之前调用。</block>
+  <block id="2b8b2c493b09b013588a02ac57204e14" category="paragraph">此存根负责执行静默。它的位置
+处于正常状态的应用程序。这在存储后称为
+Snapshot操作。</block>
+  <block id="e337fc3b0c344eaa85525958668d8591" category="admonition">如果此资源包含卷或qtrees、则在为此类卷或qtrees选择要还原的Snapshot之后创建的Snapshot将被删除、并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。</block>
+  <block id="ad8d3fc8faebdc68585dd1240b9fc90c" category="paragraph">选中此复选框、然后输入要用于Snapshot名称的自定义名称格式。</block>
+  <block id="f73a752fef5027614ec32183c0ee993b" category="paragraph">例如， _customtext_resource group_policy_hostname 或 resource group_hostname_ 。默认情况下、Snapshot名称会附加一个时间戳。</block>
+  <block id="168d37e62ff50182379a645020cf7152" category="paragraph">选择紧急、中或宽松以指定完成Snapshot操作的等待时间。</block>
+  <block id="b9b6466d5860f878a4a60dda95135881" category="list-text">选择Scripts (脚本)箭头、然后输入用于quisee (静噪)、Snapshot (快照)和unquisee (取消静噪)操作的pre和post命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。</block>
+  <block id="ea57a48a86501646953b0992c55066ad" category="list-text">选择*Snapshot副本工具*箭头以选择用于创建Snapshot的工具：</block>
+  <block id="b74a1dd6c2da66e7e33c0f14344382d7" category="paragraph">SnapCenter以使用适用于Windows的插件、并在创建快照之前将文件系统置于一致状态。对于 Linux 资源，此选项不适用。</block>
+  <block id="45e5304bd8ba98d8e58920d13f8503a9" category="paragraph">SnapCenter以创建存储级别快照</block>
+  <block id="a19bb018830c78e2d5637fcf602ec4d4" category="paragraph">输入要在主机上执行的命令以创建Snapshot。</block>
+  <block id="94687babf968f2e9f2633c4704893c9e" category="paragraph">选择*其他*、然后输入要在主机上执行的命令以创建Snapshot。</block>
+  <block id="98a696ecad4b4de122d523af3692ca6e" category="paragraph">如果要将快照复制到镜像或存储、SnapCenter管理员必须已将源卷和目标卷的SVM分配给您。</block>
+  <block id="4fcec4fe97075a54e91b04a9e79f56ff" category="list-text">指定Snapshot锁定期限可防止删除Snapshot、直到保留期限到期为止。这样可能会导致保留的Snapshot数量超过策略中指定的数量。</block>
+  <block id="f2c85d871e7c5ae1520349e8a3869fea" category="list-text">对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。</block>
+  <block id="cee00ab879a477aea09f4b1f404b14fc" category="paragraph">保留一定数量的快照</block>
+  <block id="b19465911649130b0ad9e7ed87b43f2f" category="paragraph">选择*要保留的Snapshot副本总数*、然后指定要保留的Snapshot数量。</block>
+  <block id="7537e0d42ad63b5bae18964aee575640" category="paragraph">如果快照数量超过指定数量、则会删除快照、并首先删除最早的副本。</block>
+  <block id="95dfd611f9419ea2abdea4d84377aeab" category="admonition">如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。</block>
+  <block id="298d4bea409e146b0187ec130a39fb72" category="paragraph">将Snapshot保留一定天数</block>
+  <block id="e736f4106d35f31cff1a51f091e56c06" category="paragraph">选择*保留Snapshot副本的时间*、然后指定要在删除快照之前保留这些快照的天数。</block>
+  <block id="7cd1d77689881addd5facf23970563df" category="paragraph">选择Snapshot锁定期限、然后选择天、月或年。</block>
+  <block id="7630e21f8142849489483b7354d0643a" category="paragraph">如果ONTAP中的保护关系类型为"镜像和存储"、而您仅选择此选项、则在主系统上创建的快照不会传输到目标系统、而是会在目标系统中列出。如果从目标中选择此Snapshot来执行还原操作、则会显示以下错误消息：Secondary Location is not available for the selected vauled/Mirrored backup。</block>
+  <block id="d2f577cb0769d7c31f2785dd590b9f27" category="paragraph">有关SnapLock存储的详细信息、请参见将快照提交到存储上的WORM
+destination</block>
+  <block id="9a5f5dfff4956ecfacfdc016d25c212b" category="paragraph">根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。</block>
+  <block id="4f2f5ecb6e9ddbc65d919530d4364ba6" category="admonition">您应在ONTAP中为二级存储配置SnapMirror保留策略、以避免达到二级存储上Snapshot的最大限制。</block>
+  <block id="2cd86db6267706ae2b61eb8f47d98ca8" category="list-text">确定是否需要一致性组快照、并确定删除一致性组快照的适当选项。</block>
+  <block id="6ec295ec28557a4fa3d2b8d853589f33" category="list-text">确定源存储系统和SnapMirror目标上的Snapshot的保留期限。</block>
+  <block id="542226a75e67e826476b8a6313eb2a61" category="list-text">*无中断NetApp快照技术*</block>
+  <block id="d7aeb41edb7600997bc3b48f534dd071" category="paragraph">SnapCenter将NetApp快照技术与SnapCenter自定义插件结合使用来备份资源。快照占用的存储空间最少。</block>
+  <block id="270b0961f4ad36c55a31c15e64b7ff91" category="list-text">在创建备份时支持ONTAP的一致性组(CG) Snapshot功能。</block>
+  <block id="2e7557b222d681ee77b3f7d1103d9851" category="paragraph">在单个操作中、如果单个主机中的资源共享同一个卷、则会整合Snapshot。</block>
+  <block id="bd3d40e64c749fcba4bd5710c7b184ab" category="list-text">能够使用外部命令创建Snapshot。</block>
+  <block id="0096aecb189c35a600788218923fbf90" category="list-text">能够在Windows环境中创建文件系统一致的快照。</block>
+  <block id="aeae183dfc696fe75906213d043a525b" category="list-text">在资源页面中，如果要使用自定义名称，请选中*Use custom name format for Snapshot copy*复选框，然后为Snapshot名称输入自定义名称格式。</block>
+  <block id="3df4bf361c2bfb2dfa84fc1cffa5779e" category="paragraph">例如， _customtext_policy_hostname_ 或 _resource_hostname_ 。默认情况下、Snapshot名称会附加一个时间戳。</block>
+  <block id="54c33b2bcea395f4a04e336452fdf01b" category="list-text">单击*Scripts*箭头可运行用于静修、快照和取消静修操作的PRE和POST命令。您也可以在退出备份操作之前运行 PRE 命令。</block>
+  <block id="c9127adbadee36ca206638ad1cccd8ad" category="list-text">单击*Snapshot副本工具*箭头选择用于创建Snapshot的工具：</block>
+  <block id="7abbc88f0fd37782c0173c64624bd002" category="paragraph">SnapCenter创建存储级别快照</block>
+  <block id="4cdad3fc327406a192cf8fddec7132e3" category="paragraph">SnapCenter以使用适用于Windows的插件将文件系统置于一致状态、然后创建Snapshot</block>
+  <block id="d03489d8edb47ae534fd09e8de3121c2" category="paragraph">以输入命令以创建Snapshot</block>
+  <block id="60c069fc0d03d8cbfeabe67ca031a729" category="paragraph">选择*其他*、然后输入命令创建Snapshot。</block>
+  <block id="0fd08e22cd8a21cd901e68b42968c2e6" category="paragraph">此存根负责执行静息、这意味着将应用程序置于可以创建Snapshot的状态。这在执行Snapshot操作之前调用。要保留的应用程序元数据应设置为响应的一部分、响应应在随后对相应存储Snapshot执行克隆或还原操作时以配置参数的形式返回。</block>
+  <block id="7371795f7797164be99265838bc9b9fa" category="paragraph">此存根负责执行静默，这意味着将应用程序置于正常状态。创建Snapshot后会调用此命令。</block>
+  <block id="b57d7f6c59e14cd0c1b2ec157185a6bc" category="paragraph">如果应用程序资源分布在多个卷上、则备份的SnapLock到期时间将是为卷中的Snapshot设置的最长SnapLock到期时间。从ONTAP检索到最长的SnapLock到期时间。</block>
+  <block id="433b97b9fd0c63b0de421dea32bde9c2" category="list-text">为ONTAP集群中的存储卷创建一致性组快照。</block>
+  <block id="b24c71863603f1e22b9646ccb63beac7" category="list-text">使用SnapCenter策略利用现有复制关系(SnapVault或SnapMirror)将主系统上创建的快照更新到ONTAP二级系统</block>
+  <block id="7a7937f1bd01629dfc078d9cfaca3c7f" category="paragraph">需要对应用程序执行暂停。在大多数情况下、这意味着将应用程序置于SnapCenter服务器可以创建备份(例如Snapshot)的状态。</block>
+  <block id="2de9454fcd2f1befcb26b81a260ae3c9" category="paragraph">在SnapCenter服务器创建快照或具有之后
+已执行常规备份。</block>
+  <block id="2033dc98d1198d5069b9ced87c4c15a3" category="list-text">如果要将快照复制到镜像或存储、则SnapCenter管理员必须已为源卷和目标卷分配Storage Virtual Machine (SVM)。</block>
+  <block id="5c2dc81500d1cc825407033c35b56981" category="paragraph">如果资源包含卷或qtrees作为存储占用空间、则此类卷或qtrees上较新的Snapshot将被删除、并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。</block>
+  <block id="970623891ebb3c641166d7ce5d32a406" category="paragraph">SnapCenter会在完成Snapshot操作后执行SnapMirror和SnapVault更新。SnapMirror和SnapVault 更新是在SnapCenter 作业中执行的；请勿创建单独的ONTAP 计划。</block>
+  <block id="b4565188a0190ae6d3db6b545812a7a1" category="list-text">最好在调整LUN大小之前创建Snapshot。</block>
+  <block id="7d4ca5d55cf34e28c22880cf6ec2eedb" category="list-text">如果您需要从调整LUN大小之前创建的快照还原LUN、SnapCenter会自动根据快照大小调整LUN的大小。</block>
+  <block id="3e47f97ded2b44c6f82b5673388c4cf5" category="paragraph">还原操作完成后、必须从调整大小后创建的Snapshot还原调整大小后添加到LUN中的数据。</block>
+  <block id="6d301ee444a1c13b7da1bf8953d5daa2" category="list-text">如果您计划复制Snapshot、则必须将源卷和目标卷的存储连接分配给执行此操作的用户。</block>
+  <block id="1de0023c56f6d86fc751b551520774b6" category="paragraph">您可以在VMware环境中使用适用于Microsoft Windows的SnapCenter插件来创建和管理LUN以及管理快照。</block>
+  <block id="9233a91d798c38a1e42098d2e0bdf521" category="list-text">如果您计划将Snapshot复制到SnapMirror目标或SnapVault目标、则必须为目标SVM或集群以及源SVM或集群设置存储系统连接。</block>
+  <block id="0855d4a7efcc5d7db4786a318d5517e6" category="paragraph">SnapCenter使用Snapshot技术备份LUN或VMDK上的SQL Server数据库。SnapCenter通过创建数据库的快照来创建备份。</block>
+  <block id="2b0e03a4cda838c9297e1f7e7ff4a27f" category="paragraph">驻留在单个卷上的所有数据库都使用Snapshot进行并发备份。如果并发备份数据库的最大数量为35个、而存储卷中驻留的数据库超过35个、则创建的Snapshot总数等于数据库数量除以35。</block>
+  <block id="72dafb1a5239fa5a8bc929bf6951f900" category="admonition">您可以为备份策略中的每个Snapshot配置最大数据库数。</block>
+  <block id="9bdd40947ff9b3833cc4fa3ca7493f5f" category="paragraph">SnapCenter创建快照时、整个存储系统卷都会捕获到该快照中。但是，备份仅对为其创建备份的 SQL 主机服务器有效。</block>
+  <block id="00446608fea557ce7f8e6f3b5b02c95a" category="paragraph">如果其他SQL主机服务器中的数据驻留在同一个卷上、则无法从Snapshot还原这些数据。</block>
+  <block id="7bd2019ba682b552d23b81c38e266cb4" category="summary">适用于SQL Server的插件可与Windows主机上的Microsoft SQL Server以及存储系统上的NetApp Snapshot技术集成。要使用适用于 SQL Server 的插件，请使用 SnapCenter 界面。</block>
+  <block id="c45d74eb4e3b48419f3ffdacf64df379" category="paragraph">适用于SQL Server的插件将NetApp快照技术与适用于Microsoft Windows的NetApp SnapCenter插件结合使用。这样，您就可以在几秒钟内备份数据库并快速还原它们，而无需使 SQL Server 脱机。快照占用的存储空间最少。</block>
+  <block id="4a62dc47918eb3194a2597130c3e3478" category="paragraph">验证主存储卷或二级存储卷上的备份后、所有主Snapshot和二级Snapshot都会标记为已验证。</block>
+  <block id="f22fa01ea126a4b35d7d1a7cadaacfb4" category="summary">您可以取消正在运行，已排队或无响应的备份操作。取消备份操作后、如果创建的备份未向SnapCenter服务器注册、SnapCenter服务器将停止该操作并从存储中删除所有Snapshot。如果备份已注册到SnapCenter服务器、则即使在触发取消操作后、它也不会回滚已创建的Snapshot。</block>
+  <block id="c6e33317d1c640092fa79c411076f1ac" category="list-text">对于ONTAP 9.12.1及更低版本、如果指定了Snapshot锁定期限、则从防篡改Snapshot创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。</block>
+  <block id="ea0a2ffd065abd8f244c2b5ba8d2eb61" category="paragraph">可选：输入自定义Snapshot名称和格式。     例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下、Snapshot名称会附加一个时间戳。</block>
+  <block id="fc2e7a6d3781a1a4d36b65845b17034f" category="list-text">对于启用了SnapLock的策略、对于ONTAP 9.12.1及更低版本、如果指定了Snapshot锁定期限、则在还原过程中从防篡改Snapshot创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。</block>
+  <block id="09b1825e6e4164ad9ae7bee22660c8a1" category="list-text">选择**TABLOC**选项以限制检查并获取锁定，而不是使用内部数据库快照。</block>
+  <block id="77da8eeb12f1568fe3ed9dda9f91d348" category="summary">您可以使用Remove-SmBackup cmdlet清理无Snapshot的二级备份的备份计数。如果"管理副本"拓扑中显示的总Snapshot与二级存储Snapshot保留设置不匹配、您可能需要使用此cmdlet。</block>
+  <block id="f4efb7f60eb91fbd6aa1b8aca204f531" category="paragraph">您可以使用Remove-SmBackup cmdlet清除没有Snapshot的二级备份的备份计数。如果"管理副本"拓扑中显示的总快照数与二级存储Snapshot保留设置不匹配、您可能需要使用此cmdlet。</block>
+  <block id="b3d3023e1077ceaca98543a186ce5cf3" category="paragraph">以下示例将清理无Snapshot的二级备份的备份计数：</block>
+  <block id="e5de086f995e9adace26013b3afa493b" category="list-text">如果要将快照复制到镜像或存储、SnapCenter管理员必须已将源卷和目标卷的Storage Virtual Machine (SVM)分配给您。</block>
+  <block id="d389a87e1086ac0f4d1de66ca0bb0ef6" category="paragraph">指定Snapshot锁定期限可防止删除Snapshot、直到保留期限到期为止。  这样可能会导致保留的Snapshot数量超过策略中指定的数量。</block>
+  <block id="367e13921e2255a8cbd12c7825418d0e" category="list-text">输入应为每个Snapshot备份的最大数据库数。</block>
+  <block id="40e1269ad4c969b2e34a183b8fe9f42e" category="list-text">输入应为每个Snapshot备份的最大数据库数。
+默认值为 100</block>
+  <block id="8822b1db0297028652e02db3e4af760f" category="paragraph">仅保留特定数量的快照。</block>
+  <block id="01161b2ea6c2a575567c66cd20fb2d2b" category="list-text">指定要保留的Snapshot总数</block>
+  <block id="3e44a8badc4e63dbe09602ec7a645d6d" category="list-text">要指定要保留的Snapshot数量、请选择*要保留的Snapshot副本总数*。</block>
+  <block id="77a7fd8cca8cbeb3ef776e9176ff5639" category="admonition">默认情况下，保留计数值设置为 2 。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。</block>
+  <block id="785922db862c289384ffb00097fa1b09" category="list-text">保留快照的时间长度</block>
+  <block id="b02e59c697fe2e431d0b9971224415f2" category="list-text">如果要指定在删除快照之前要保留这些快照的天数，请选择*保留Snapshot副本*。</block>
+  <block id="22a17a0f81564b386d059bfef330f60f" category="list-text">如果要指定Snapshot锁定期限、请选择* Snapshot副本锁定期限*、然后选择天、月或年。</block>
+  <block id="c5de403e1806c217cf2924175f84c487" category="list-text">要指定要保留的Snapshot数量、请选择*要保留的Snapshot副本总数*。如果快照数量超过指定数量、则会删除快照、并首先删除最早的副本。</block>
+  <block id="6dbf7587b461da1c5b97d671cf358311" category="list-text">要指定在删除快照之前要保留这些快照的天数，请选择*保留Snapshot副本*。</block>
+  <block id="8e21880c3d6be6527ce936f273c2dfdb" category="paragraph">默认情况下、日志Snapshot保留时间设置为7天。使用Set-SmPolicy cmdlet更改日志Snapshot保留。</block>
+  <block id="4caf8c069465c53a1a175fa4a08aa0a8" category="paragraph">以下示例将日志Snapshot保留设置为2：</block>
+  <block id="149450cb3a9e3ecae5eaba7a4573516f" category="paragraph">根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。</block>
+  <block id="dccc8011e6f51f002aae83ff00479c7d" category="admonition">您必须在ONTAP中配置SnapMirror保留策略、以使二级存储不会达到Snapshot的最大限制。</block>
+  <block id="610559e33fd2c1c02990a8421918d746" category="list-text">限制检查并获取锁定、而不是使用内部数据库快照(TABLOCk)</block>
+  <block id="3ec8d83deb8081e2273aae284a9a87c1" category="list-text">选择*限制检查并获取锁定，而不是使用内部数据库Snapshot副本(TABLOC)*来限制检查并获取锁定，而不是使用内部数据库Snapshot。</block>
+  <block id="f8037ac04b4b9ad5f1f4efa485f02267" category="list-text">您必须已将Snapshot从主存储系统复制到二级存储系统。</block>
+  <block id="be7d1513fcb4c496cc0a08dc4180b0c0" category="summary">您可以使用默认的Snapshot命名约定、也可以使用自定义的命名约定。默认备份命名约定会为Snapshot名称添加一个时间戳、以帮助您确定副本的创建时间。</block>
+  <block id="994822d5c1500de0f9f8d5222f1d1a08" category="paragraph">您可以使用默认的Snapshot命名约定、也可以使用自定义的命名约定。默认备份命名约定会为Snapshot名称添加一个时间戳、以帮助您确定副本的创建时间。</block>
+  <block id="1d220412a989e3409a81972981a34269" category="paragraph">Snapshot使用以下默认命名约定：</block>
+  <block id="5aacd591ac321cf50f17ba6d6b99482c" category="paragraph">或者，您也可以在保护资源或资源组时通过选择*Use custom name format for Snapshot copy*来指定Snapshot名称格式。例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下、时间戳后缀会添加到Snapshot名称中。</block>
+  <block id="27d1d8a7545b265c4bdec73aaeb38eed" category="paragraph">例如、如果在同一个卷中有200个数据库、则会创建两个Snapshot、其中每个Snapshot都包含100个数据库。</block>
+  <block id="ad040426d6a404a4c17cacc91a28049d" category="list-text">在资源页面中、选中* Snapshot副本的自定义名称格式*复选框、然后输入要用于Snapshot名称的自定义名称格式。</block>
+  <block id="99eb5243897677d4ecbe85a62d686e8c" category="paragraph">例如， customtext_policy_hostname 或 resource_hostname 。默认情况下、Snapshot名称会附加一个时间戳。</block>
+  <block id="1dc16d578df13bb68e843ba44a6ec58e" category="list-text">如果要将快照复制到镜像或存储、SnapCenter管理员必须已为源卷和目标卷分配Storage Virtual Machine (SVM)。</block>
+  <block id="0bfdfbd1ef58fc826a8deec759820453" category="summary">使用 SnapCenter 备份 SQL Server 系统和用户数据库需要选择资源类型，例如数据库， SQL Server 实例和可用性组 \ （ ag\ ）。利用Snapshot技术为资源所在的卷创建联机只读副本。</block>
+  <block id="b4d3eba987f9528647b8ea2102ac055f" category="paragraph">使用 SnapCenter 备份 SQL Server 系统和用户数据库需要选择资源类型，例如数据库， SQL Server 实例和可用性组（ Availability Group ， AG ）。利用Snapshot技术为资源所在的卷创建联机只读副本。</block>
+  <block id="37467ff0195d6765df22bdc34e035d04" category="list-text">如果要将快照复制到镜像或存储二级存储、则SnapCenter管理员必须已为源卷和目标卷分配SVM。</block>
+  <block id="099321e862ba2170dc1c3e6b1f02ef72" category="paragraph">对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。</block>
+  <block id="1635764350a12c1ff0349008881e57dd" category="paragraph">Snapshot锁定期限</block>
+  <block id="3c2828ba75d966a57611ae076f53de62" category="paragraph">创建本地Snapshot后更新SnapMirror</block>
+  <block id="d515aa4634219e7d2319e5e18234ff1a" category="paragraph">创建本地快照后更新SnapVault</block>
+  <block id="ea25009673ccb8c2097d73f240946554" category="list-text">选中此复选框、然后输入要用于Snapshot名称的自定义名称格式。</block>
+  <block id="3b191506717d044b1c6c116437856fa8" category="paragraph">例如：<block ref="6d242f6ac938ffb13709f54d68cd3c4a" prefix=" " category="inline-code"></block> 或<block ref="90ea7aa0cb61dd49e32f6dcf8afac143" prefix=" " category="inline-code"></block>。默认情况下、Snapshot名称会附加一个时间戳。</block>
+  <block id="65086066849df85532ada3ce3b32fabb" category="paragraph">例如， customtext_resource group_policy_hostname 或 resource group_hostname 。默认情况下、Snapshot名称会附加一个时间戳。</block>
+  <block id="edadde14dd023edf408c56082534fb18" category="paragraph">取消备份操作后、如果创建的备份未向SnapCenter服务器注册、SnapCenter服务器将停止该操作并从存储中删除所有Snapshot。如果备份已注册到SnapCenter服务器、则即使在触发取消操作后、它也不会回滚已创建的Snapshot。</block>
+  <block id="4283444ce0d2e5af852c09c8c490c9b2" category="list-text">无中断NetApp Snapshot技术</block>
+  <block id="e9c2c7f52b66305a7519773fdcb971a2" category="paragraph">SnapCenter将NetApp快照技术与适用于Oracle数据库的插件和适用于UNIX的插件结合使用来备份数据库。快照占用的存储空间最少。</block>
+  <block id="6254fd4e626c978541c1f2e7fa8e13fd" category="paragraph">在单个操作中、如果单个主机中的数据库共享同一个卷、则会整合Snapshot。</block>
+  <block id="39777df60ae8ddc1548b34cdead2def2" category="list-text">可以使用配置的归档日志位置提供的归档日志执行恢复。如果数据库在 ARCHIVELOG 模式下运行， Oracle 数据库会将填充的重做日志文件组保存到一个或多个脱机目标，统称为归档重做日志。SnapCenter 会根据指定的 SCN ，选定的日期和时间或所有日志选项确定并挂载最佳数量的日志备份。
+如果所配置的位置没有恢复所需的归档日志、则应挂载包含这些日志的Snapshot并将路径指定为外部归档日志。</block>
+  <block id="adeb26b62f8ee06b6b6bae7b4ceacf27" category="list-text">如果要将快照复制到镜像或存储、SnapCenter管理员应已为源卷和目标卷分配Storage Virtual Machine (SVM)。</block>
+  <block id="ba0a9122f311e85ab0505c551b651192" category="list-text">从Snapshot克隆卷、并使用克隆的一个或多个LUN在主机上构建文件系统堆栈。</block>
+  <block id="9e1730c2573e54b5d90f6eb3254bfc8e" category="paragraph">选中此复选框、然后输入要用于Snapshot名称的自定义名称格式。</block>
+  <block id="99b1f696253ffa3a8fb97bceb5991c38" category="paragraph">例如， customtext_policy_hostname 或 resource_hostname 。默认情况下、Snapshot名称会附加一个时间戳。</block>
+  <block id="d75cc4ee2a6f5a9c8f73c954b5b8dfb1" category="summary">您可以使用此插件为资源组创建一致性组Snapshot。一致性组是一个容器，可以容纳多个卷，以便将其作为一个实体进行管理。一致性组是指同时为多个卷创建Snapshot、从而为一组卷提供一致的副本。</block>
+  <block id="fb38bbae125d9d388142d3e839171085" category="doc">适用于SAP HANA数据库的SnapCenter插件如何使用一致性组快照</block>
+  <block id="d9be525eef97aa0a1757edb1b36e0668" category="paragraph">您还可以指定存储控制器对Snapshot进行一致分组的等待时间。可用的等待时间选项包括 * 紧急 * ， * 中等 * 和 * 宽松 * 。您还可以在一致的组快照操作期间启用或禁用任意位置写入文件布局(WAFL)同步。WAFL同步可提高一致性组Snapshot的性能。</block>
+  <block id="dc82007d2d72fe3595e4a12ab929226d" category="paragraph">使用Snapshot技术创建备份</block>
+  <block id="a73c04130d1785278e42ce85b94c154d" category="admonition">对于基于 Snapshot 副本的备份，如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。</block>
+  <block id="3d721f84f4ba496ced30bffcfa1591da" category="admonition">对于SAP HANA系统复制、生成的Snapshot总数将等于为资源组设置的保留时间。  删除最旧Snapshot取决于最旧Snapshot所在的节点。
+例如，对于使用 SAP HANA System Replication primary 和 SAP HANA System Replication secondary 的资源组，保留设置为 7 。  一次最多可以创建7个快照、包括SAP HANA系统复制主系统和SAP HANA系统复制二级系统。</block>
+  <block id="87f3bd22fc3dd40b1b5252aca5beb91f" category="paragraph">如果ONTAP中的保护关系类型为"镜像和存储"、而您仅选择此选项、则在主系统上创建的快照不会传输到目标系统、而是会在目标系统中列出。如果从目标中选择了此Snapshot来执行还原操作、则会显示"Secondary Location is not available for the selected vauled/Mirrored backup (辅助位置不可用于选定存储/镜像备份)"错误消息。</block>
+  <block id="79bbfd966b301fcff4a657ffa7b4883b" category="admonition"> 您应在ONTAP中为二级存储配置SnapMirror保留策略、以避免达到二级存储上Snapshot的最大限制。</block>
+  <block id="f73eb370f8bbfa82c1bb4c40f02b65ce" category="list-text">确定是否要创建基于Snapshot副本的策略来备份数据库的应用程序一致的Snapshot。</block>
+  <block id="2bf2937ec53ec68b5e4f4ecdeab22229" category="paragraph">SnapCenter将NetApp快照技术与适用于SAP HANA数据库的插件结合使用来备份资源。</block>
+  <block id="32d574f28776ee8b2deb390451f88886" category="list-text">能够使用外部命令创建快照。</block>
+  <block id="b98ec889f59de061a4caf0f10c44b599" category="list-text">对于基于Snapshot副本的备份操作、请确保所有租户数据库均有效且处于活动状态。</block>
+  <block id="734b47c3d3034ecc47486b3b7c947423" category="list-text">对于用于qui陈述、Snapshot和unqui陈述 操作的前后命令、您应通过以下路径检查这些命令是否位于插件主机上可用的命令列表中：</block>
+  <block id="9322b02cbab1e9e30696c6f18aa5b45e" category="list-text">在资源页面中，选择*对Snapshot副本使用自定义名称格式*，然后输入要用于Snapshot名称的自定义名称格式。</block>
+  <block id="1ddf419f4244e28efab4ce0d4d2a7429" category="paragraph">选择*紧急*、*中*或*宽松*以指定快照操作完成的等待时间。紧急 = 5 秒，中等 = 7 秒，宽松 = 20 秒。</block>
+  <block id="6fa0e3128174a7e08f019a67d401084d" category="list-text">选择*Scripts*箭头可运行用于静修、快照和取消静修操作的PRE和POST命令。</block>
+  <block id="5b0cda43c7e63de2868d2bf0d3b62f53" category="paragraph">SnapCenter以创建存储级别快照</block>
+  <block id="d00226243bd3282875e3647e34ef9ac2" category="paragraph">SnapCenter以使用适用于Windows的插件将文件系统置于一致状态、然后创建Snapshot</block>
+  <block id="513e9e5c9242c20cd3a0e1af2c91141c" category="paragraph">选择*紧急*、*中*或*宽松*以指定完成Snapshot操作的等待时间。</block>
+  <block id="7753c7b112c057fc94bcaa18ecc0f343" category="list-text">单击*Scripts*箭头并输入用于quiese, Snapshot和unquiese"操作的前处理命令和后处理命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。</block>
+  <block id="660ee777f341ef8a02048c649ceb5033" category="admonition">如果此资源包含卷或qtrees、则在为此类卷或qtrees选择要还原的Snapshot之后创建的Snapshot将被删除、并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。</block>
+  <block id="99b447de4897ad60ae2d4ef832acc11d" category="paragraph">例如、如果主Snapshot保留期限为7天、二级Snapshot保留期限为45天、则在45天完成且所有备份均被删除后、您必须删除资源组和旧的已删除资源。</block>
+  <block id="d7d148a2da0b4f8f54f724e577240359" category="paragraph">如果此资源包含卷或qtrees、则在为此类卷或qtrees选择要还原的Snapshot之后创建的Snapshot将被删除、并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。如果选择了 * 使用 * 卷还原 * 选项完成资源 * ，则此选项适用。</block>
+  <block id="a559b2571e56d5cca36de86e59757d8d" category="admonition">对于用于静宿、快照和取消静宿操作的前处理命令和后处理命令、您应从Linux的/opt/snapcenter/snapenter/scC/ALLOWED_commands.config_路径和Windows的_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creer\ETC\ALLOWED_commands_list.txt检查这些命令是否位于插件主机上的命令列表中。</block>
+  <block id="bc0228a3b27171e08e61e5a457460cc1" category="paragraph">摘要卡*部分显示基于文件的备份、基于Snapshot副本的备份和克隆的总数。</block>
+  <block id="be786b6916e284b80ab94c9292822f55" category="paragraph">如果此资源包含卷或qtrees、则在为此类卷或qtrees选择要还原的Snapshot之后创建的Snapshot将被删除、并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。</block>
+  <block id="726c62039b2a1ccfba1cc9d89c1b6047" category="paragraph">系统会根据保留设置删除主存储或二级存储上的Snapshot及其在SAP HANA目录中对应的条目。在备份和资源组删除期间， SAP HANA 目录条目也会被删除。</block>
+  <block id="360b1745b63d8c10b566bfa854abc3ac" category="paragraph">基于Snapshot副本的备份可利用NetApp Snapshot技术为SAP HANA数据库所在的卷创建联机只读副本。</block>
+  <block id="6fe96fe83e4fe586b0886b2e5017d10d" category="paragraph">例如、如果要在SQL Server环境中执行Snapshot和数据保护操作、则必须使用正确的Windows或SQL凭据设置凭据。SnapCenter 服务器使用任一方法对设置的凭据进行身份验证。如果要在Windows文件系统环境中对ONTAP存储执行快照和数据保护操作、SnapCenter管理员角色必须在Windows主机上具有管理员权限。</block>
+  <block id="9939c592ab7bc8c3264f4ed7fde3bd18" category="paragraph">基于策略的备份可利用NetApp Snapshot技术创建快速、节省空间、应用程序一致且基于磁盘的备份。或者，您也可以通过更新现有保护关系自动将这些备份保护到二级存储。</block>
+  <block id="a156a2baa4fc7e4c8c93e2f496941e06" category="list-text">支持Windows主机的存储配置、Snapshot一致性和空间回收</block>
+  <block id="3fd5f1108d9e6e2f31a2b951b94fcc66" category="list-text">删除主机所需的时间取决于备份数量和保留设置。这是因为系统会从每个控制器中删除Snapshot、并清理元数据。</block>
+  <block id="921eceabf04ab9f25c362a6542724dba" category="paragraph">最新的 " 保护摘要 " 图块为您提供有权访问的所有实体的保护状态。默认情况下，此显示设置为提供所有插件的状态。系统会提供以Snapshot形式备份到主存储以及使用SnapMirror和SnapVault技术备份到二级存储的资源的状态信息。二级存储的保护状态信息的可用性取决于所选插件类型。</block>
+  <block id="9bb33d5498eacebb490e288aa3ce44b5" category="admonition">SAP HANA可为快照的主存储和二级存储提供保护状态信息。仅主存储保护状态可用于基于文件的备份。</block>
+  <block id="b4f406ad371d4f39621c6ae9315cada8" category="paragraph">屏幕顶部将显示一天的总使用量，其中包括 SnapCenter 中可用的备份总数以及这些备份占用的大小。一个备份可能具有多个关联的Snapshot、并且计数将反映相同的Snapshot。这既适用于主快照、也适用于二级快照。例如，您创建了 10 个备份，其中 2 个因基于策略的备份保留而被删除， 1 个备份由您显式删除。因此，将显示 7 个备份的计数以及这 7 个备份占用的大小。</block>
+  <block id="c3bdf8281e5e51911c7ebc0640da8222" category="paragraph">主存储的存储节省系数是逻辑容量(克隆和Snapshot节省量加上已用存储)与主存储的物理容量之比。条形图显示了存储节省量。</block>
+  <block id="fd0998113f77a0321315b7e0948f05e1" category="paragraph">在将策略附加到资源或资源组时、您可以修改复制选项、Snapshot保留设置、错误重试次数或脚本信息。只有在断开策略后，才能修改计划类型（频率）。</block>
+  <block id="c3322261b5e365126f3bbd22ae033f3e" category="paragraph">您应手动删除为资源组中的任何资源创建的所有克隆。您可以选择强制删除与资源组关联的所有备份、元数据、策略和快照。</block>
+  <block id="4ac647997500ae801e90be76a0f09421" category="list-text">可选：选中*删除与此资源组关联的备份和断开策略*复选框，以删除与该资源组关联的所有备份、元数据、策略和快照。</block>
+  <block id="322c20f898d5631d47f9131b0ff643f9" category="paragraph">当 iSCSI LUN 中的备份文件意外删除时，以下 cmdlet 会还原 SnapCenter MySQL 数据库。对于VMDK、请手动从ONTAP快照还原备份。</block>
+  <block id="4954c41a9a08ab45a310519b5fd1e579" category="list-text">如果要使用Snapshot技术创建备份，请选择*基于Snapshot *。</block>
+  <block id="fd67ba398eb305129b3dffed5a367994" category="admonition">已对ANF克隆禁用克隆拆分、因为ANF克隆已是从选定Snapshot创建的独立卷。</block>
+  <block id="e809483d1a49ec9268e55af716571abf" category="list-text">选择*Snapshot副本工具&gt;无文件系统一致性的SnapCenter *以创建快照。</block>
+  <block id="4e84e965e1d16cd7b3116d29b62142fc" category="summary">SnapCenter使用Snapshot技术备份基于VMS/NFS (使用NFS的VMware虚拟机文件系统)的LUN、CSV (集群共享卷)、RDM (原始设备映射)卷、Windows集群中的ALM (非对称LUN映射)和VMDK上的Windows文件系统资源。</block>
+  <block id="f084fdf8914e7a02d5263759b465833b" category="paragraph">SnapCenter通过创建文件系统的快照来创建备份。在联合备份中、一个卷包含来自多个主机的LUN、这种联合备份比每个单独LUN的备份速度更快、效率更高、因为与每个文件系统的各个Snapshot相比、只会为卷创建一个Snapshot。</block>
+  <block id="1925a06d08d617bc50d7a3d659b0f2a7" category="paragraph">SnapCenter创建快照时、整个存储系统卷都会捕获到该快照中。但是，备份仅对创建备份的主机服务器有效。</block>
+  <block id="6a9942daeda54f016240682d869fe238" category="paragraph">如果来自其他主机服务器的数据驻留在同一个卷上、则无法从Snapshot还原这些数据。</block>
+  <block id="7e038afa02819cb4c7edd12ab0c9a3cf" category="paragraph">如果要在自动删除快照SnapCenter存储之前指定其数量、请选择此选项。</block>
+  <block id="39ede0b6680ded15631aad7474467c6a" category="list-text">可选：在向导的资源页面中、为Snapshot输入自定义名称格式。</block>
+  <block id="3cb5c9bda561968bd773237393992ae0" category="paragraph">例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下、Snapshot名称会附加一个时间戳。</block>
+  <block id="dbb4720e991689c622a9db7249c8c661" category="paragraph">Windows文件系统备份使用默认的Snapshot命名约定。默认备份命名约定会为Snapshot名称添加一个时间戳、以帮助您确定副本的创建时间。</block>
+  <block id="85f1de84fc13e82033f35724d5886e91" category="paragraph">Snapshot会使用以下默认命名约定：resourcegroupname_hostname_TimeStamp</block>
+  <block id="ab4ef81968bb65a88c3886c889131244" category="paragraph">可选：输入自定义Snapshot名称和格式。</block>
+  <block id="ddcb2243e0913e22a7bdaa62e5aba43f" category="summary">适用于Windows的插件可在存储系统上与NetApp Snapshot技术集成。要使用适用于 Windows 的插件，请使用 SnapCenter 界面。</block>
+  <block id="515ccc782ae168ef3b657e96aa4edf37" category="paragraph">适用于Windows的插件使用NetApp Snapshot技术。这样，您就可以在几秒钟内备份文件系统并快速还原它们，而无需使主机脱机。快照占用的存储空间最少。</block>
+  <block id="e0f0874a46e8d0e6a5ac3a9235a1074e" category="summary">适用于 Microsoft Windows 的 SnapCenter 插件是 NetApp SnapCenter 软件的主机端组件，可用于对 Microsoft 文件系统资源进行应用程序感知型数据保护管理。此外、它还可以为Windows文件系统提供存储配置、Snapshot一致性和空间回收。适用于 Windows 的插件可在 SnapCenter 环境中自动执行文件系统备份，还原和克隆操作。</block>
+  <block id="d0ed77b6d80df72d0d6acae2c4e9db85" category="list-text">如果要将快照复制到镜像或存储、SnapCenter管理员必须已为源卷和目标卷分配SVM。</block>
+  <block id="be733ae25c1f590e21e985ae94968449" category="paragraph">您必须已将Snapshot从主存储复制到二级存储。</block>
+  <block id="44946d9385e466f803e84b161d44c49d" category="cell">* 最佳实践： * 最好根据要保留的完整备份和日志备份总数配置二级保留策略。配置二级保留策略时、请注意、如果数据库和日志位于不同卷中、则每个备份可以有三个Snapshot；如果数据库和日志位于同一卷中、则每个备份可以有两个Snapshot。</block>
+  <block id="9284db278aa00bd072e713a907999f2e" category="paragraph">对于ONTAP 9.12.1及更低版本、从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。</block>
+  <block id="74f0af58207cfeaf671266f54dd2fef4" category="paragraph">*最佳实践：*最佳设置必须等于完整备份保留设置部分中的总Snapshot (完整备份)设置。这样可以确保每次完整备份都保留日志文件。</block>
+  <block id="161fa80fbfb00806b2721800e0738514" category="paragraph">仅保留特定数量的快照</block>
+  <block id="0d64a89a155466b599d67bf78b6d1097" category="paragraph">如果要指定要保留的完整备份数、请选择*要保留的Snapshot副本总数*选项、并指定要保留的Snapshot (完整备份)数。</block>
+  <block id="4afc4cedb01e8b3555973ac1d7338bfd" category="paragraph">选择*保留Snapshot副本*选项、并指定保留Snapshot (完整备份)的天数。</block>
+  <block id="165d18348f040abed6010459ceae9a6d" category="paragraph">例如， _customtext_resourcegroup_policy_hostname_ 或 _resourcegroup_hostname_ 。默认情况下、Snapshot名称会附加一个时间戳。</block>
+  <block id="d7d2c8824fad4976a2cd5e20ba3ec375" category="paragraph">SnapCenter for Microsoft Exchange Server的资源组中的每个Snapshot不能超过30个数据库。如果一个资源组中有30个以上的数据库、则会为其他数据库创建第二个Snapshot。因此，在主备份作业下创建了 2 个子作业。对于具有二级复制的备份，在进行 SnapMirror 或 SnapVault 更新期间，可能会出现两个子作业的更新重叠的情况。即使日志指示作业已完成，主备份作业也会始终保持运行状态。</block>
+  <block id="bf971f3c72b83a1aac6d9fe1cb39850c" category="admonition">您不能重命名或删除二级存储上的备份。删除快照由ONTAP保留设置处理。</block>
+  <block id="eb71c7e77b1cb5486117cdac9d378fb6" category="list-text">如果要指定自定义Snapshot名称、请在资源页面中选中*为Snapshot副本使用自定义名称格式*复选框、然后输入要用于Snapshot名称的自定义名称格式。</block>
+  <block id="2457e427df18c87448fa7fa796d115c7" category="paragraph">使用 SnapCenter 备份 Exchange 邮箱要求您选择资源类型，例如数据库和数据库可用性组（ DAG ）。利用Snapshot技术为资源所在的卷创建联机只读副本。</block>
 </blocks>

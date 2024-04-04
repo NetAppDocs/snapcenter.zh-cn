@@ -47,6 +47,6 @@ summary: 您可以使用 SnapCenter 克隆备份。
 . 单击 * 监控 * > * 作业 * 以监控操作进度。
 +
 
-NOTE: 已对ANF克隆禁用克隆拆分、因为ANF克隆已是使用选定Snapshot副本创建的独立卷。
+NOTE: 已对ANF克隆禁用克隆拆分、因为ANF克隆已是从选定Snapshot创建的独立卷。
 
 

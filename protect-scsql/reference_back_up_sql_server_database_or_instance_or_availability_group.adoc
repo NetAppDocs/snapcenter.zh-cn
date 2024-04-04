@@ -30,18 +30,18 @@ NOTE: 如果选择非 NetApp LUN ，已损坏的数据库或正在还原的数�
 
 == SnapCenter 如何备份数据库
 
-SnapCenter 使用 Snapshot 副本技术备份 LUN 或 VMDK 上的 SQL Server 数据库。SnapCenter 通过创建数据库的 Snapshot 副本来创建备份。
+SnapCenter使用Snapshot技术备份LUN或VMDK上的SQL Server数据库。SnapCenter通过创建数据库的快照来创建备份。
 
 从资源页面选择数据库进行完整数据库备份时， SnapCenter 会自动选择驻留在同一存储卷上的所有其他数据库。如果 LUN 或 VMDK 仅存储一个数据库，则可以单独清除或重新选择该数据库。如果 LUN 或 VMDK 包含多个数据库，则必须清除或重新选择数据库作为一个组。
 
-驻留在单个卷上的所有数据库都使用 Snapshot 副本同时进行备份。如果并发备份数据库的最大数量为 35 个，而存储卷中驻留的数据库超过 35 个，则创建的 Snapshot 副本总数等于数据库数除以 35 个。
+驻留在单个卷上的所有数据库都使用Snapshot进行并发备份。如果并发备份数据库的最大数量为35个、而存储卷中驻留的数据库超过35个、则创建的Snapshot总数等于数据库数量除以35。
 
 
-NOTE: 您可以为备份策略中的每个 Snapshot 副本配置最大数据库数。
+NOTE: 您可以为备份策略中的每个Snapshot配置最大数据库数。
 
-当 SnapCenter 创建 Snapshot 副本时，整个存储系统卷会捕获到 Snapshot 副本中。但是，备份仅对为其创建备份的 SQL 主机服务器有效。
+SnapCenter创建快照时、整个存储系统卷都会捕获到该快照中。但是，备份仅对为其创建备份的 SQL 主机服务器有效。
 
-如果来自其他 SQL 主机服务器的数据驻留在同一个卷上，则无法从 Snapshot 副本还原此数据。
+如果其他SQL主机服务器中的数据驻留在同一个卷上、则无法从Snapshot还原这些数据。
 
 * 查找更多信息 *
 

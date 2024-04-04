@@ -2,7 +2,7 @@
 permalink: protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_features.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Microsoft SQL Server 
-summary: 适用于 SQL Server 的插件可与 Windows 主机上的 Microsoft SQL Server 以及存储系统上的 NetApp Snapshot 副本技术集成。要使用适用于 SQL Server 的插件，请使用 SnapCenter 界面。 
+summary: 适用于SQL Server的插件可与Windows主机上的Microsoft SQL Server以及存储系统上的NetApp Snapshot技术集成。要使用适用于 SQL Server 的插件，请使用 SnapCenter 界面。 
 ---
 = 适用于 Microsoft SQL Server 的 SnapCenter 插件功能
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 适用于 SQL Server 的插件可与 Windows 主机上的 Microsoft SQL
 
 
 [role="lead"]
-适用于 SQL Server 的插件可与 Windows 主机上的 Microsoft SQL Server 以及存储系统上的 NetApp Snapshot 副本技术集成。要使用适用于 SQL Server 的插件，请使用 SnapCenter 界面。
+适用于SQL Server的插件可与Windows主机上的Microsoft SQL Server以及存储系统上的NetApp Snapshot技术集成。要使用适用于 SQL Server 的插件，请使用 SnapCenter 界面。
 
 适用于 SQL Server 的插件包括以下主要功能：
 
@@ -23,9 +23,9 @@ SnapCenter 界面为您提供了跨插件和环境的标准化和一致性。通
 +
 您可以计划例行 SQL Server 备份，配置基于策略的备份保留以及设置时间点和最新还原操作。您还可以通过配置 SnapCenter 以发送电子邮件警报来主动监控 SQL Server 环境。
 
-* * 无中断 NetApp Snapshot 副本技术 *
+* *无中断NetApp快照技术*
 +
-适用于 SQL Server 的插件将 NetApp Snapshot 副本技术与适用于 Microsoft Windows 的 NetApp SnapCenter 插件结合使用。这样，您就可以在几秒钟内备份数据库并快速还原它们，而无需使 SQL Server 脱机。Snapshot 副本占用的存储空间极少。
+适用于SQL Server的插件将NetApp快照技术与适用于Microsoft Windows的NetApp SnapCenter插件结合使用。这样，您就可以在几秒钟内备份数据库并快速还原它们，而无需使 SQL Server 脱机。快照占用的存储空间最少。
 
 
 

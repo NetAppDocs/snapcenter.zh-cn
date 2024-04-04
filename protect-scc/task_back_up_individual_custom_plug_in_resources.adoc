@@ -25,9 +25,9 @@ summary: '如果单个自定义插件资源不属于任何资源组，您可以�
 单击 image:../media/filter_icon.png[""]，然后选择主机名和资源类型以筛选资源。然后，您可以单击 image:../media/filter_icon.png["筛选器图标"] 以关闭筛选器窗格。
 
 . 单击要备份的资源。
-. 在资源页面中，如果要使用自定义名称，请选中 * 对 Snapshot 副本使用自定义名称格式 * 复选框，然后为 Snapshot 副本名称输入自定义名称格式。
+. 在资源页面中，如果要使用自定义名称，请选中*Use custom name format for Snapshot copy*复选框，然后为Snapshot名称输入自定义名称格式。
 +
-例如， _customtext_policy_hostname_ 或 _resource_hostname_ 。默认情况下， Snapshot 副本名称会附加时间戳。
+例如， _customtext_policy_hostname_ 或 _resource_hostname_ 。默认情况下、Snapshot名称会附加一个时间戳。
 
 . 在应用程序设置页面中，执行以下操作：
 +
@@ -43,7 +43,7 @@ summary: '如果单个自定义插件资源不属于任何资源组，您可以�
  a| 
 有时间等待一致性组 Snapshot 操作完成
  a| 
-选择紧急，中或宽松以指定 Snapshot 副本操作完成的等待时间。
+选择紧急、中或宽松以指定完成Snapshot操作的等待时间。
 
 紧急 = 5 秒，中等 = 7 秒，宽松 = 20 秒。
 
@@ -58,35 +58,35 @@ summary: '如果单个自定义插件资源不属于任何资源组，您可以�
 +
 image:../media/application_settings.gif["应用程序设置页面"]
 
-.. 单击 * 脚本 * 箭头可运行用于暂停， Snapshot 副本和取消静默操作的 PRE 和 POST 命令。您也可以在退出备份操作之前运行 PRE 命令。
+.. 单击*Scripts*箭头可运行用于静修、快照和取消静修操作的PRE和POST命令。您也可以在退出备份操作之前运行 PRE 命令。
 +
 预处理脚本和后处理脚本在 SnapCenter 服务器中运行。
 
 .. 单击 * 自定义配置 * 箭头，然后输入使用此资源的所有作业所需的自定义值对。
-.. 单击 * Snapshot 副本工具 * 箭头以选择用于创建 Snapshot 副本的工具：
+.. 单击*Snapshot副本工具*箭头选择用于创建Snapshot的工具：
 +
 |===
 | 如果您希望 ... | 那么 ... 
 
 
  a| 
-SnapCenter 创建存储级别的 Snapshot 副本
+SnapCenter创建存储级别快照
  a| 
 选择 * 不使用文件系统一致性的 SnapCenter * 。
 
 
 
  a| 
-SnapCenter 以使用适用于 Windows 的插件将文件系统置于一致状态，然后创建 Snapshot 副本
+SnapCenter以使用适用于Windows的插件将文件系统置于一致状态、然后创建Snapshot
  a| 
 选择 * 具有文件系统一致性的 SnapCenter * 。
 
 
 
  a| 
-可输入命令以创建 Snapshot 副本
+以输入命令以创建Snapshot
  a| 
-选择 * 其他 * ，然后输入命令创建 Snapshot 副本。
+选择*其他*、然后输入命令创建Snapshot。
 
 |===
 

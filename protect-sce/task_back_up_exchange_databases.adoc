@@ -49,9 +49,9 @@ NOTE: 在 DAG 中，如果活动数据库副本位于非 NetApp 存储上，并�
 ** 如果要备份数据库可用性组，请单击数据库可用性组名称。
 
 
-. 如果要指定自定义 Snapshot 副本名称，请在资源页面中选中 * 对 Snapshot 副本使用自定义名称格式 * 复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。
+. 如果要指定自定义Snapshot名称、请在资源页面中选中*为Snapshot副本使用自定义名称格式*复选框、然后输入要用于Snapshot名称的自定义名称格式。
 +
-例如， _customtext_policy_hostname_ 或 _resource_hostname_ 。默认情况下， Snapshot 副本名称会附加时间戳。
+例如， _customtext_policy_hostname_ 或 _resource_hostname_ 。默认情况下、Snapshot名称会附加一个时间戳。
 
 . 在策略页面中，执行以下步骤：
 +

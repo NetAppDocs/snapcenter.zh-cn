@@ -15,7 +15,7 @@ summary: 资源组是指必须向其添加要备份和保护的资源的容器�
 
 .关于此任务
 * 要创建 SAP HANA 系统复制备份，建议将 SAP HANA 系统的所有资源添加到一个资源组中。这样可以确保在接管 - 故障恢复模式下进行无缝备份。
-* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 .步骤
@@ -49,9 +49,9 @@ Tags
  a| 
 对 Snapshot 副本使用自定义名称格式
  a| 
-选中此复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。
+选中此复选框、然后输入要用于Snapshot名称的自定义名称格式。
 
-例如， customtext_resource group_policy_hostname 或 resource group_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。
+例如， customtext_resource group_policy_hostname 或 resource group_hostname 。默认情况下、Snapshot名称会附加一个时间戳。
 
 |===
 . 在资源页面中，从 * 主机 * 下拉列表中选择主机名，从 * 资源类型 * 下拉列表中选择资源类型。
@@ -73,7 +73,7 @@ Tags
  a| 
 有时间等待一致性组 Snapshot 操作完成
  a| 
-选择 * 紧急 * ， * 中等 * 或 * 宽松 * 以指定 Snapshot 副本操作完成的等待时间。
+选择*紧急*、*中*或*宽松*以指定完成Snapshot操作的等待时间。
 
 紧急 = 5 秒，中等 = 7 秒，宽松 = 20 秒。
 
@@ -88,7 +88,7 @@ Tags
 +
 image:../media/application_settings.gif[""]
 
-.. 单击 * 脚本 * 箭头，然后输入用于暂停， Snapshot 副本和取消静默操作的 PRE 和 POST 命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。
+.. 单击*Scripts*箭头并输入用于quiese, Snapshot和unquiese"操作的前处理命令和后处理命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。
 .. 单击 * 自定义配置 * 箭头，然后输入使用此资源执行所有数据保护操作所需的自定义密钥值对。
 +
 |===
@@ -149,14 +149,14 @@ archive_log_recursive_SE arch
 
 NOTE: 自定义密钥值对支持 SAP HANA Linux 插件系统，而注册为集中式 Windows 插件的 SAP HANA 数据库则不支持自定义密钥值对。
 
-.. 单击 * Snapshot 副本工具 * 箭头以选择用于创建 Snapshot 副本的工具：
+.. 单击*Snapshot副本工具*箭头选择用于创建Snapshot的工具：
 +
 |===
 | 如果您希望 ... | 那么 ... 
 
 
  a| 
-SnapCenter ，以便在创建 Snapshot 副本之前使用适用于 Windows 的插件并将文件系统置于一致状态。对于 Linux 资源，此选项不适用。
+SnapCenter以使用适用于Windows的插件、并在创建快照之前将文件系统置于一致状态。对于 Linux 资源，此选项不适用。
  a| 
 选择 * 具有文件系统一致性的 SnapCenter * 。
 
@@ -165,7 +165,7 @@ SnapCenter ，以便在创建 Snapshot 副本之前使用适用于 Windows 的�
 
 
  a| 
-SnapCenter 以创建存储级别的 Snapshot 副本
+SnapCenter以创建存储级别快照
  a| 
 选择 * 不使用文件系统一致性的 SnapCenter * 。
 
@@ -174,7 +174,7 @@ SnapCenter 以创建存储级别的 Snapshot 副本
  a| 
 可输入要在主机上执行的命令以创建 Snapshot 副本。
  a| 
-选择 * 其他 * ，然后输入要在主机上执行的命令以创建 Snapshot 副本。
+选择*其他*、然后输入要在主机上执行的命令以创建Snapshot。
 
 |===
 

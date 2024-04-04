@@ -96,7 +96,7 @@ SnapCenter 存储库主机上应至少存在一个 NetApp 存储磁盘。如果 
 C:\PS>Restore-SmRepositoryBackup -BackupName MYSQL_DS_SC_Repository_mva-x3550-s09_09-15-2016_10.32.00.4445
 ----
 +
-当 iSCSI LUN 中的备份文件意外删除时，以下 cmdlet 会还原 SnapCenter MySQL 数据库。对于 VMDK ，手动从 ONTAP Snapshot 副本还原备份。
+当 iSCSI LUN 中的备份文件意外删除时，以下 cmdlet 会还原 SnapCenter MySQL 数据库。对于VMDK、请手动从ONTAP快照还原备份。
 
 +
 [listing]

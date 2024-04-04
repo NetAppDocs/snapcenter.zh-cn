@@ -29,9 +29,9 @@ IMPORTANT: 如果您在 Windows 文件系统环境中工作，请勿备份数据
 +
 指定保护设置，如创建资源组任务中所述。
 
-. 可选：在向导的 " 资源 " 页面中，输入 Snapshot 副本的自定义名称格式。
+. 可选：在向导的资源页面中、为Snapshot输入自定义名称格式。
 +
-例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。
+例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下、Snapshot名称会附加一个时间戳。
 
 . 在策略页面中，执行以下任务：
 +

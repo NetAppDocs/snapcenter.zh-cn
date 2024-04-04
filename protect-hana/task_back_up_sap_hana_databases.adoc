@@ -16,7 +16,7 @@ summary: '如果某个资源尚未加入任何资源组，您可以从 "Resource
 .开始之前
 * 您必须已创建备份策略。
 * 如果要备份与二级存储具有 SnapMirror 关系的资源，则分配给存储用户的 ONTAP 角色应包括 " `snapmirror all` " 权限。但是，如果您使用的是 "`vsadmin` " 角色，则不需要 " `snapmirror all` " 特权。
-* 对于基于 Snapshot 副本的备份操作，请确保所有租户数据库均有效且处于活动状态。
+* 对于基于Snapshot副本的备份操作、请确保所有租户数据库均有效且处于活动状态。
 * 要创建 SAP HANA 系统复制备份，建议将 SAP HANA 系统的所有资源添加到一个资源组中。这样可以确保在接管 - 故障恢复模式下进行无缝备份。
 +
 link:task_create_resource_groups_and_attach_policies.html["创建资源组并附加策略"]。
@@ -28,7 +28,7 @@ link:task_back_up_resource_groups_sap_hana.html["备份资源组"]
 +
 有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"]
 
-* 对于用于暂停、Snapshot副本和取消静默操作的预后和后命令、您应通过以下路径检查这些命令是否位于插件主机上的命令列表中：
+* 对于用于qui陈述、Snapshot和unqui陈述 操作的前后命令、您应通过以下路径检查这些命令是否位于插件主机上可用的命令列表中：
 +
 对于Windows：_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands_list.txt
 
@@ -47,9 +47,9 @@ NOTE: 如果命令列表中不存在这些命令、则操作将失败。
 选择*image:../media/filter_icon.png[""]* ，然后选择主机名和资源类型以筛选资源。然后、您可以选择 image:../media/filter_icon.png[""] 以关闭筛选器窗格。
 
 . 选择要备份的资源。
-. 在资源页面中，选择 * 对 Snapshot 副本使用自定义名称格式 * ，然后输入要用于 Snapshot 副本名称的自定义名称格式。
+. 在资源页面中，选择*对Snapshot副本使用自定义名称格式*，然后输入要用于Snapshot名称的自定义名称格式。
 +
-例如， _customtext_policy_hostname_ 或 _resource_hostname_ 。默认情况下， Snapshot 副本名称会附加时间戳。
+例如， _customtext_policy_hostname_ 或 _resource_hostname_ 。默认情况下、Snapshot名称会附加一个时间戳。
 
 . 在应用程序设置页面中，执行以下操作：
 +
@@ -65,7 +65,7 @@ NOTE: 如果命令列表中不存在这些命令、则操作将失败。
  a| 
 等待 "Consistency Group Snapshot" 操作完成的时间
  a| 
-选择 * 紧急 * ， * 中 * 或 * 宽松 * 以指定 Snapshot 副本操作完成的等待时间。紧急 = 5 秒，中等 = 7 秒，宽松 = 20 秒。
+选择*紧急*、*中*或*宽松*以指定快照操作完成的等待时间。紧急 = 5 秒，中等 = 7 秒，宽松 = 20 秒。
 
 
 
@@ -75,35 +75,35 @@ NOTE: 如果命令列表中不存在这些命令、则操作将失败。
 选择此选项可避免强制设置 WAFL 一致点。
 
 |===
-** 选择*Scripts*箭头可运行用于静修、Snapshot副本和取消静修操作的PRE和POST命令。
+** 选择*Scripts*箭头可运行用于静修、快照和取消静修操作的PRE和POST命令。
 +
 您也可以在退出备份操作之前运行 PRE 命令。预处理脚本和后处理脚本在 SnapCenter 服务器中运行。
 
 ** 选择**自定义配置**箭头，然后输入使用此资源的所有作业所需的自定义值对。
-** 选择*Snapshot副本工具*箭头以选择用于创建Snapshot副本的工具：
+** 选择*Snapshot副本工具*箭头以选择用于创建Snapshot的工具：
 +
 |===
 | 如果您希望 ... | 那么 ... 
 
 
  a| 
-SnapCenter 以创建存储级别的 Snapshot 副本
+SnapCenter以创建存储级别快照
  a| 
 选择 * 不使用文件系统一致性的 SnapCenter * 。
 
 
 
  a| 
-SnapCenter 以使用适用于 Windows 的插件将文件系统置于一致状态，然后创建 Snapshot 副本
+SnapCenter以使用适用于Windows的插件将文件系统置于一致状态、然后创建Snapshot
  a| 
 选择 * 具有文件系统一致性的 SnapCenter * 。
 
 
 
  a| 
-可输入命令以创建 Snapshot 副本
+以输入命令以创建Snapshot
  a| 
-选择 * 其他 * ，然后输入命令创建 Snapshot 副本。
+选择*其他*、然后输入命令创建Snapshot。
 
 |===
 +

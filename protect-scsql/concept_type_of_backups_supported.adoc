@@ -2,7 +2,7 @@
 permalink: protect-scsql/concept_type_of_backups_supported.html 
 sidebar: sidebar 
 keywords: Type of backups 
-summary: 使用 SnapCenter 备份 SQL Server 系统和用户数据库需要选择资源类型，例如数据库， SQL Server 实例和可用性组 \ （ ag\ ）。Snapshot 副本技术用于为资源所在的卷创建联机只读副本。 
+summary: 使用 SnapCenter 备份 SQL Server 系统和用户数据库需要选择资源类型，例如数据库， SQL Server 实例和可用性组 \ （ ag\ ）。利用Snapshot技术为资源所在的卷创建联机只读副本。 
 ---
 = 支持的备份类型
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 使用 SnapCenter 备份 SQL Server 系统和用户数据库需要选�
 
 
 [role="lead"]
-使用 SnapCenter 备份 SQL Server 系统和用户数据库需要选择资源类型，例如数据库， SQL Server 实例和可用性组（ Availability Group ， AG ）。Snapshot 副本技术用于为资源所在的卷创建联机只读副本。
+使用 SnapCenter 备份 SQL Server 系统和用户数据库需要选择资源类型，例如数据库， SQL Server 实例和可用性组（ Availability Group ， AG ）。利用Snapshot技术为资源所在的卷创建联机只读副本。
 
 您可以选择仅复制选项以指定 SQL Server 不截断事务日志。如果同时使用其他备份应用程序管理 SQL Server ，则应使用此选项。保持事务日志完好无损可使任何备份应用程序恢复系统数据库。纯副本备份与计划的备份顺序无关，它们不会影响数据库的备份和还原过程。
 

@@ -42,9 +42,9 @@ Tags
  a| 
 对 Snapshot 副本使用自定义名称格式
  a| 
-选中此复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。
+选中此复选框、然后输入要用于Snapshot名称的自定义名称格式。
 
-例如， _customtext_resource group_policy_hostname 或 resource group_hostname_ 。默认情况下， Snapshot 副本名称会附加时间戳。
+例如， _customtext_resource group_policy_hostname 或 resource group_hostname_ 。默认情况下、Snapshot名称会附加一个时间戳。
 
 |===
 . 可选：在资源页面中，从*Host*下拉列表中选择主机名，并从*Resource Type*下拉列表中选择资源类型。
@@ -66,7 +66,7 @@ Tags
  a| 
 有时间等待一致性组 Snapshot 操作完成
  a| 
-选择紧急，中或宽松以指定 Snapshot 副本操作完成的等待时间。
+选择紧急、中或宽松以指定完成Snapshot操作的等待时间。
 
 紧急 = 5 秒，中等 = 7 秒，宽松 = 20 秒。
 
@@ -81,7 +81,7 @@ Tags
 +
 image:../media/application_settings.gif["一致性组备份选项的屏幕截图：紧急、中等或宽松。"]
 
-.. 选择Scripts (脚本)箭头、然后输入用于quisee (静噪)、Snapshot copy (Snapshot副本)和unquisee (取消静噪)操作的pre和post命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。
+.. 选择Scripts (脚本)箭头、然后输入用于quisee (静噪)、Snapshot (快照)和unquisee (取消静噪)操作的pre和post命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。
 .. 选择Custom Configurations箭头、然后输入使用此资源执行所有数据保护操作所需的自定义键值对。
 +
 |===
@@ -138,32 +138,32 @@ archive_log_recursive_SE arch
 如果归档日志位于子目录下，则应使用此参数。
 
 |===
-.. 选择*Snapshot副本工具*箭头以选择用于创建Snapshot副本的工具：
+.. 选择*Snapshot副本工具*箭头以选择用于创建Snapshot的工具：
 +
 |===
 | 如果您希望 ... | 那么 ... 
 
 
  a| 
-SnapCenter ，以便在创建 Snapshot 副本之前使用适用于 Windows 的插件并将文件系统置于一致状态。对于 Linux 资源，此选项不适用。
+SnapCenter以使用适用于Windows的插件、并在创建快照之前将文件系统置于一致状态。对于 Linux 资源，此选项不适用。
  a| 
-选择 SnapCenter with File System Consistency 。
+选择 * 具有文件系统一致性的 SnapCenter * 。
 
 此选项不适用于适用于 SAP HANA 数据库的 SnapCenter 插件。
 
 
 
  a| 
-SnapCenter 以创建存储级别的 Snapshot 副本
+SnapCenter以创建存储级别快照
  a| 
-选择 SnapCenter without File System Consistency 。
+选择 * 不使用文件系统一致性的 SnapCenter * 。
 
 
 
  a| 
-可输入要在主机上执行的命令以创建 Snapshot 副本。
+输入要在主机上执行的命令以创建Snapshot。
  a| 
-选择其他，然后输入要在主机上执行的命令以创建 Snapshot 副本。
+选择*其他*、然后输入要在主机上执行的命令以创建Snapshot。
 
 |===
 

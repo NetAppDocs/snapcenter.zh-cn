@@ -22,7 +22,7 @@ summary: 您必须先定义策略，然后才能使用 SnapCenter 成功执行�
 ** 要还原整个卷，应选择 * 卷还原 * 选项。
 +
 
-NOTE: 如果资源包含卷或 qtree ，则在这些卷或 qtree 上选择要还原的 Snapshot 副本之后创建的 Snapshot 副本将被删除，并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。
+NOTE: 如果此资源包含卷或qtrees、则在为此类卷或qtrees选择要还原的Snapshot之后创建的Snapshot将被删除、并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。
 
 
 

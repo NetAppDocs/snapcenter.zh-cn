@@ -60,7 +60,7 @@ https://automationstore.netapp.com/home.shtml["NetApp 存储自动化商店"^]
 
 * 基于策略的备份
 +
-基于策略的备份利用 NetApp Snapshot 副本技术创建快速，节省空间，应用程序一致且基于磁盘的备份。或者，您也可以通过更新现有保护关系自动将这些备份保护到二级存储。
+基于策略的备份可利用NetApp Snapshot技术创建快速、节省空间、应用程序一致且基于磁盘的备份。或者，您也可以通过更新现有保护关系自动将这些备份保护到二级存储。
 
 * 备份多个资源
 +
@@ -316,7 +316,7 @@ NOTE: 适用于 VMware vSphere 的 SnapCenter 插件支持对虚拟机（ VM ）
 
 * 为 SnapCenter 环境中 Windows 主机上运行的其他插件启用应用程序感知型数据保护
 * 自动对 SnapCenter 环境中的 Microsoft 文件系统执行应用程序感知型备份，还原和克隆操作
-* 支持 Windows 主机的存储配置， Snapshot 副本一致性和空间回收
+* 支持Windows主机的存储配置、Snapshot一致性和空间回收
 +
 
 NOTE: 适用于 Windows 的插件在物理和 RDM LUN 上配置 SMB 共享和 Windows 文件系统，但不支持在 SMB 共享上对 Windows 文件系统执行备份操作。

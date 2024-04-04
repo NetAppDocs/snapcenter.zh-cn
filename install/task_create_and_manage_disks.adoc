@@ -295,10 +295,10 @@ SnapCenter 将创建 LUN 并将其连接到主机上的指定驱动器或驱动�
 * 对于厚配置 LUN ，可扩展大小（卷中的可用大小）显示为最大大小。
 * 具有 MBR 模式分区的 LUN 的大小限制为 2 TB 。
 * 具有 GPT 模式分区的 LUN 的存储系统大小限制为 16 TB 。
-* 最好在调整 LUN 大小之前创建 Snapshot 副本。
-* 如果需要从调整 LUN 大小之前创建的 Snapshot 副本还原 LUN ， SnapCenter 会自动将 LUN 大小调整为 Snapshot 副本的大小。
+* 最好在调整LUN大小之前创建Snapshot。
+* 如果您需要从调整LUN大小之前创建的快照还原LUN、SnapCenter会自动根据快照大小调整LUN的大小。
 +
-执行还原操作后，必须从调整大小后创建的 Snapshot 副本还原在调整 LUN 大小后添加到 LUN 中的数据。
+还原操作完成后、必须从调整大小后创建的Snapshot还原调整大小后添加到LUN中的数据。
 
 
 

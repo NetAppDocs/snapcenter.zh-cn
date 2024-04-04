@@ -16,7 +16,7 @@ summary: 资源组是指添加要同时备份和保护的资源的容器。通�
 您可以单独保护资源，而无需创建新的资源组。您可以在受保护资源上创建备份。
 
 .关于此任务
-* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 * 不支持将不使用SM-BC的新数据库添加到包含使用SM-BC的资源的现有资源组。
 * 不支持在SM-BC故障转移模式下向现有资源组添加新数据库。您只能在常规或故障恢复状态下向资源组添加资源。
 
@@ -55,7 +55,7 @@ Tags
  a| 
 对 Snapshot 副本使用自定义名称格式
  a| 
-可选：输入自定义 Snapshot 副本的名称和格式。例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。
+可选：输入自定义Snapshot名称和格式。     例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下、Snapshot名称会附加一个时间戳。
 
 |===
 . 在资源页面中，执行以下步骤：

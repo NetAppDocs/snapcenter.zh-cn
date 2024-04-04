@@ -57,7 +57,7 @@ NOTE: 如果创建自定义角色，则该角色必须包含 SnapCenter 管理�
 
 SnapCenter 使用凭据验证授权的 SnapCenter 用户是否也具有应用程序级别的权限。
 
-例如，如果要在 SQL Server 环境中执行 Snapshot 副本和数据保护操作，则必须使用正确的 Windows 或 SQL 凭据设置凭据。SnapCenter 服务器使用任一方法对设置的凭据进行身份验证。如果要在 ONTAP 存储上的 Windows 文件系统环境中执行 Snapshot 副本和数据保护操作，则 SnapCenter 管理员角色必须对 Windows 主机具有管理员权限。
+例如、如果要在SQL Server环境中执行Snapshot和数据保护操作、则必须使用正确的Windows或SQL凭据设置凭据。SnapCenter 服务器使用任一方法对设置的凭据进行身份验证。如果要在Windows文件系统环境中对ONTAP存储执行快照和数据保护操作、SnapCenter管理员角色必须在Windows主机上具有管理员权限。
 
 同样，如果要对 Oracle 数据库执行数据保护操作，并且在数据库主机中禁用了操作系统（ OS ）身份验证，则必须使用 Oracle 数据库或 Oracle ASM 凭据设置凭据。SnapCenter 服务器会根据操作使用以下方法之一对凭据集进行身份验证。
 

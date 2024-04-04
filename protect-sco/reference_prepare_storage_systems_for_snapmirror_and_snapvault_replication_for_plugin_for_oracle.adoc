@@ -13,7 +13,7 @@ summary: 您可以将 SnapCenter 插件与 ONTAP SnapMirror 和 SnapVault 技术
 [role="lead"]
 您可以使用采用 ONTAP SnapMirror 技术的 SnapCenter 插件在另一个卷上为备份集创建镜像副本，并使用 ONTAP SnapVault 技术执行磁盘到磁盘备份复制，以满足标准和其他监管相关要求。在执行这些任务之前，您必须在源卷和目标卷之间配置数据保护关系并初始化此关系。
 
-SnapCenter 会在完成Snapshot副本操作后对SnapMirror和SnapVault 执行更新。SnapMirror和SnapVault 更新是在SnapCenter 作业中执行的；请勿创建单独的ONTAP 计划。
+SnapCenter会在完成Snapshot操作后执行SnapMirror和SnapVault更新。SnapMirror和SnapVault 更新是在SnapCenter 作业中执行的；请勿创建单独的ONTAP 计划。
 
 
 NOTE: 如果您是从 NetApp SnapManager 产品访问 SnapCenter 的，并且对您配置的数据保护关系感到满意，则可以跳过本节。

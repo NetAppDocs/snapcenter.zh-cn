@@ -27,9 +27,9 @@ NOTE: 资源组名称不应超过 250 个字符。
 +
 例如，如果您将 HR 作为标记添加到多个资源组，则稍后可以找到与 HR 标记关联的所有资源组。
 
-.. 选中此复选框、然后输入要用于Snapshot副本名称的自定义名称格式。
+.. 选中此复选框、然后输入要用于Snapshot名称的自定义名称格式。
 +
-例如， customtext_resource group_policy_hostname 或 resource group_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。
+例如， customtext_resource group_policy_hostname 或 resource group_hostname 。默认情况下、Snapshot名称会附加一个时间戳。
 
 
 
@@ -41,7 +41,7 @@ NOTE: 只有在成功发现资源后，这些资源才会列在 "Available Resou
 . 从 "Available Resources" 部分中选择资源，然后将其移动到 "Selected Resources" 部分。
 . 在应用程序设置页面中、执行以下操作：
 +
-** 选择Scripts (脚本)箭头、然后输入用于quisee (静噪)、Snapshot copy (Snapshot副本)和unquisee (取消静噪)操作的pre和post命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。
+** 选择Scripts (脚本)箭头、然后输入用于quisee (静噪)、Snapshot (快照)和unquisee (取消静噪)操作的pre和post命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。
 ** 选择一个备份一致性选项：
 +
 *** 如果要确保在创建备份之前刷新文件系统缓存的数据，并且创建备份时不允许对文件系统执行任何输入或输出操作，请选择*文件系统一致*。

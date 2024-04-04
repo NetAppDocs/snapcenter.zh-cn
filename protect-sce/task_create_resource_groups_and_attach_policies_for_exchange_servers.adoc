@@ -24,7 +24,7 @@ summary: 任何数据保护作业都需要资源组。您还必须将一个或�
 +
 您可以使用GET API显示密钥的值。不支持设置API。
 
-* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 .步骤
@@ -63,9 +63,9 @@ Tags
  a| 
 对 Snapshot 副本使用自定义名称格式
  a| 
-可选：输入自定义 Snapshot 副本的名称和格式。
+可选：输入自定义Snapshot名称和格式。
 
-例如， _customtext_resourcegroup_policy_hostname_ 或 _resourcegroup_hostname_ 。默认情况下， Snapshot 副本名称会附加时间戳。
+例如， _customtext_resourcegroup_policy_hostname_ 或 _resourcegroup_hostname_ 。默认情况下、Snapshot名称会附加一个时间戳。
 
 |===
 . 在资源页面中，执行以下步骤：
@@ -87,7 +87,7 @@ NOTE: 如果您最近添加了资源，则只有在刷新资源列表后，这�
 *** 选择 * 自动选择同一存储卷上的所有资源 * 可将同一卷上的所有资源移动到 " 选定资源 " 部分。
 *** 从 "Available Resources" 部分中选择资源，然后单击右箭头将其移动到 "Selected Resources" 部分。
 +
-SnapCenter for Microsoft Exchange Server 的资源组中的每个 Snapshot 副本不能包含 30 个以上的数据库。如果一个资源组中的数据库超过 30 个，则会为其他数据库创建另一个 Snapshot 副本。因此，在主备份作业下创建了 2 个子作业。对于具有二级复制的备份，在进行 SnapMirror 或 SnapVault 更新期间，可能会出现两个子作业的更新重叠的情况。即使日志指示作业已完成，主备份作业也会始终保持运行状态。
+SnapCenter for Microsoft Exchange Server的资源组中的每个Snapshot不能超过30个数据库。如果一个资源组中有30个以上的数据库、则会为其他数据库创建第二个Snapshot。因此，在主备份作业下创建了 2 个子作业。对于具有二级复制的备份，在进行 SnapMirror 或 SnapVault 更新期间，可能会出现两个子作业的更新重叠的情况。即使日志指示作业已完成，主备份作业也会始终保持运行状态。
 
 
 

@@ -54,7 +54,7 @@ summary: 在准备备份资源时，查看主存储和二级存储上所有备�
 如果进行了启用了SnapLock的备份，则单击*Refresh*按钮将刷新从ONTAP检索到的主和二级SnapLock到期时间。每周计划还会刷新从ONTAP检索到的主和二级SnapLock到期时间。
 
 +
-如果应用程序资源分布在多个卷上、则备份的SnapLock到期时间将是为卷中的Snapshot副本设置的最长SnapLock到期时间。从ONTAP检索到最长的SnapLock到期时间。
+如果应用程序资源分布在多个卷上、则备份的SnapLock到期时间将是为卷中的Snapshot设置的最长SnapLock到期时间。从ONTAP检索到最长的SnapLock到期时间。
 
 +
 按需备份后，单击*Refresh*按钮可刷新备份或克隆的详细信息。
@@ -66,6 +66,6 @@ summary: 在准备备份资源时，查看主存储和二级存储上所有备�
 . 从表中选择备份，然后单击数据保护图标以执行还原，重命名和删除操作。
 +
 
-NOTE: 您不能重命名或删除二级存储上的备份。删除 Snapshot 副本由 ONTAP 保留设置处理。
+NOTE: 您不能重命名或删除二级存储上的备份。删除快照由ONTAP保留设置处理。
 
 

@@ -13,4 +13,4 @@ summary: SnapCenter 负责在存储系统和文件系统级别以及 SAP HANA �
 [role="lead"]
 SnapCenter 负责在存储系统和文件系统级别以及 SAP HANA 备份目录中管理日志和数据备份。
 
-主存储或二级存储上的 Snapshot 副本及其在 SAP HANA 目录中对应的条目将根据保留设置删除。在备份和资源组删除期间， SAP HANA 目录条目也会被删除。
+系统会根据保留设置删除主存储或二级存储上的Snapshot及其在SAP HANA目录中对应的条目。在备份和资源组删除期间， SAP HANA 目录条目也会被删除。

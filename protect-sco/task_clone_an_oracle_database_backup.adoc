@@ -37,7 +37,7 @@ NOTE: 如果您尝试将 Linux 主机上创建的备份克隆到 AIX 主机，�
 
 NOTE: 在 FlexASM 设置中，如果基数小于 RAC 集群中的节点数，则无法对叶节点执行克隆操作。
 
-* 对于启用了SnapLock的策略、对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则在还原过程中从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于启用了SnapLock的策略、对于ONTAP 9.12.1及更低版本、如果指定了Snapshot锁定期限、则在还原过程中从防篡改Snapshot创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 * 步骤 *

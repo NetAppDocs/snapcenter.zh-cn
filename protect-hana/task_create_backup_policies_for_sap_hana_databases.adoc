@@ -19,7 +19,7 @@ summary: 在使用 SnapCenter 备份 SAP HANA 数据库资源之前，您必须�
 有关详细信息，请参见有关为 SAP HANA 数据库定义数据保护策略的信息。
 
 * 您必须已通过完成安装 SnapCenter ，添加主机，设置存储系统连接和添加资源等任务为数据保护做好准备。
-* 如果要将 SnapCenter 副本复制到镜像或存储，则 管理员必须已为源卷和目标卷分配 SVM 。
+* 如果要将快照复制到镜像或存储、SnapCenter管理员必须已将源卷和目标卷的SVM分配给您。
 +
 此外，您还可以在策略中指定复制，脚本和应用程序设置。如果要将策略重复用于其他资源组，这些选项可节省时间。
 
@@ -41,8 +41,8 @@ summary: 在使用 SnapCenter 备份 SAP HANA 数据库资源之前，您必须�
 * SnapLock
 +
 ** 如果选择了"将备份副本保留特定天数"选项、则SnapLock保留期限必须小于或等于上述保留天数。
-** 指定Snapshot副本锁定期限可防止删除Snapshot副本、直到保留期限到期为止。这可能会导致保留的Snapshot副本数量超过策略中指定的数量。
-** 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+** 指定Snapshot锁定期限可防止删除Snapshot、直到保留期限到期为止。这样可能会导致保留的Snapshot数量超过策略中指定的数量。
+** 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 
@@ -71,7 +71,7 @@ NOTE: 主SnapLock设置在SnapCenter备份策略中进行管理、辅SnapLock设
 
 
  a| 
-使用 Snapshot 副本技术创建备份
+使用Snapshot技术创建备份
  a| 
 选择 * 基于 Snapshot * 。
 
@@ -101,30 +101,31 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
 
 
  a| 
-保留一定数量的 Snapshot 副本
+保留一定数量的快照
  a| 
-选择 * 要保留的 Snapshot 副本总数 * ，然后指定要保留的 Snapshot 副本数量。
+选择*要保留的Snapshot副本总数*、然后指定要保留的Snapshot数量。
 
-如果 Snapshot 副本数超过指定数量，则会删除这些 Snapshot 副本，并首先删除最旧的副本。
+如果快照数量超过指定数量、则会删除快照、并首先删除最早的副本。
 
 
 NOTE: 对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，对于 ONTAP 9.3 或更早版本上的资源，最大保留值为 254 。如果将保留设置为高于底层 ONTAP 版本支持的值，则备份将失败。
 
 
-IMPORTANT: 对于基于 Snapshot 副本的备份，如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留数量设置为 1 ，则保留操作可能会失败，因为第一个 Snapshot 副本是 SnapVault 关系的参考 Snapshot 副本，直到将较新的 Snapshot 副本复制到目标。
+IMPORTANT: 对于基于 Snapshot 副本的备份，如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。
 
 
 NOTE: 对于 SAP HANA 系统复制，建议将 SAP HANA 系统的所有资源添加到一个资源组中。这样可以确保保留正确数量的备份。
 
 
-NOTE: 对于 SAP HANA 系统复制，创建的 Snapshot 副本总数将等于为资源组设置的保留空间。删除最旧的 Snapshot 副本取决于最旧的 Snapshot 副本所在的节点。例如，对于使用 SAP HANA System Replication primary 和 SAP HANA System Replication secondary 的资源组，保留设置为 7 。一次最多可以创建 7 个 Snapshot 副本，包括 SAP HANA System Replication 主副本和 SAP HANA System Replication 二级副本。
+NOTE: 对于SAP HANA系统复制、生成的Snapshot总数将等于为资源组设置的保留时间。  删除最旧Snapshot取决于最旧Snapshot所在的节点。
+例如，对于使用 SAP HANA System Replication primary 和 SAP HANA System Replication secondary 的资源组，保留设置为 7 。  一次最多可以创建7个快照、包括SAP HANA系统复制主系统和SAP HANA系统复制二级系统。
 
 
 
  a| 
-将 Snapshot 副本保留一定数量的天
+将Snapshot保留一定天数
  a| 
-选择 * 保留 Snapshot 副本 * ，然后指定删除 Snapshot 副本之前要保留这些副本的天数。
+选择*保留Snapshot副本的时间*、然后指定要在删除快照之前保留这些快照的天数。
 
 
 
@@ -147,7 +148,7 @@ SnapLock保留期限应少于100年。
  a| 
 选择此字段可在另一个卷上创建备份集的镜像副本（ SnapMirror 复制）。
 
-如果 ONTAP 中的保护关系类型为镜像和存储，并且仅选择此选项，则在主系统上创建的 Snapshot 副本不会传输到目标系统，而是会列在目标系统中。如果从目标位置选择此 Snapshot 副本以执行还原操作，则会显示二级位置不可用于选定的存储 / 镜像备份错误消息。
+如果ONTAP中的保护关系类型为"镜像和存储"、而您仅选择此选项、则在主系统上创建的快照不会传输到目标系统、而是会在目标系统中列出。如果从目标中选择了此Snapshot来执行还原操作、则会显示"Secondary Location is not available for the selected vauled/Mirrored backup (辅助位置不可用于选定存储/镜像备份)"错误消息。
 
 在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。
 
@@ -177,7 +178,7 @@ SnapLock保留期限应少于100年。
  a| 
 选择 Snapshot 标签。
 
-根据您选择的 Snapshot 副本标签， ONTAP 会应用与该标签匹配的二级 Snapshot 副本保留策略。
+根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。
 
 
 NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
@@ -192,7 +193,7 @@ NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则
 |===
 +
 
-NOTE: 您应在 ONTAP 中为二级存储配置 SnapMirror 保留策略，以避免达到二级存储上 Snapshot 副本的最大限制。
+NOTE:  您应在ONTAP中为二级存储配置SnapMirror保留策略、以避免达到二级存储上Snapshot的最大限制。
 
 . 查看摘要，然后单击 * 完成 * 。
 

@@ -33,9 +33,9 @@ summary: '如果某个资源尚未加入任何资源组，您可以从 "Resource
 
 
 
-. 在资源页面中，选中 * Snapshot 副本的自定义名称格式 * 复选框，然后输入要用于 Snapshot 副本名称的自定义名称格式。
+. 在资源页面中、选中* Snapshot副本的自定义名称格式*复选框、然后输入要用于Snapshot名称的自定义名称格式。
 +
-例如， customtext_policy_hostname 或 resource_hostname 。默认情况下， Snapshot 副本名称会附加时间戳。
+例如， customtext_policy_hostname 或 resource_hostname 。默认情况下、Snapshot名称会附加一个时间戳。
 
 . 在策略页面中，执行以下任务：
 +

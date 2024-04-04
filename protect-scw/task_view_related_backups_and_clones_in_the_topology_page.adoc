@@ -58,7 +58,7 @@ NOTE: 镜像存储类型卷上版本灵活的镜像备份的克隆将显示在�
 如果进行了启用了SnapLock的备份，则单击*Refresh*按钮将刷新从ONTAP检索到的主和二级SnapLock到期时间。每周计划还会刷新从ONTAP检索到的主和二级SnapLock到期时间。
 
 +
-如果应用程序资源分布在多个卷上、则备份的SnapLock到期时间将是为卷中的Snapshot副本设置的最长SnapLock到期时间。从ONTAP检索到最长的SnapLock到期时间。
+如果应用程序资源分布在多个卷上、则备份的SnapLock到期时间将是为卷中的Snapshot设置的最长SnapLock到期时间。从ONTAP检索到最长的SnapLock到期时间。
 
 +
 对于SnapMirror业务连续性(SM-BC)，单击*刷新*按钮可通过查询主站点和副本站点的SnapCenter来刷新ONTAP备份清单。每周计划还会对包含SM-BC关系的所有数据库执行此活动。

@@ -19,7 +19,7 @@ summary: 您可以在使用 SnapCenter 备份 Windows 文件系统之前为资�
 +
 要准备数据保护，您必须完成安装 SnapCenter ，添加主机，发现资源以及创建 Storage Virtual Machine （ SVM ）连接等任务。
 
-* 如果要将 Snapshot 副本复制到镜像或存储二级存储， SnapCenter 管理员必须已为源卷和目标卷分配 SVM 。
+* 如果要将快照复制到镜像或存储二级存储、则SnapCenter管理员必须已为源卷和目标卷分配SVM。
 * 如果要在预处理脚本和后处理脚本中运行 PowerShell 脚本，应在 web.config 文件中将 usePowershellProcessforScripts 参数的值设置为 true 。
 +
 默认值为 false 。
@@ -41,8 +41,8 @@ summary: 您可以在使用 SnapCenter 备份 Windows 文件系统之前为资�
 * SnapLock
 +
 ** 如果选择了"将备份副本保留特定天数"选项、则SnapLock保留期限必须小于或等于上述保留天数。
-** 指定Snapshot副本锁定期限可防止删除Snapshot副本、直到保留期限到期为止。这可能会导致保留的Snapshot副本数量超过策略中指定的数量。
-** 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+** 指定Snapshot锁定期限可防止删除Snapshot、直到保留期限到期为止。这样可能会导致保留的Snapshot数量超过策略中指定的数量。
+** 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 
@@ -105,7 +105,7 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
  a| 
 要保留的 Snapshot 副本总数
  a| 
-如果要在自动删除 SnapCenter 存储之前指定 Snapshot 副本的数量，请选择此选项。
+如果要在自动删除快照SnapCenter存储之前指定其数量、请选择此选项。
 
 
 
@@ -119,7 +119,7 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
  a| 
 Snapshot副本锁定期限
  a| 
-选择Snapshot副本锁定期限、然后选择天、月或年。
+选择Snapshot锁定期限、然后选择天、月或年。
 
 SnapLock保留期限应少于100年。
 
@@ -169,7 +169,7 @@ NOTE: 对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，
  a| 
 选择 Snapshot 标签。
 
-根据您选择的 Snapshot 副本标签， ONTAP 会应用与该标签匹配的二级 Snapshot 副本保留策略。
+根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。
 
 
 NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
@@ -184,7 +184,7 @@ NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则
 |===
 +
 
-NOTE: 您应在 ONTAP 中为二级存储配置 SnapMirror 保留策略，以避免达到二级存储上 Snapshot 副本的最大限制。
+NOTE: 您应在ONTAP中为二级存储配置SnapMirror保留策略、以避免达到二级存储上Snapshot的最大限制。
 
 . 在脚本页面中，输入您希望 SnapCenter 服务器在备份操作前后运行的预处理或后脚本的路径，以及 SnapCenter 在超时前等待脚本执行的时间限制。
 +

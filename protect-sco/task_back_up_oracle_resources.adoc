@@ -26,9 +26,9 @@ summary: '如果某个资源不属于任何资源组，您可以从 "Resources" 
 
 . 在资源页面中、您可以执行以下步骤：
 +
-.. 选中此复选框、然后输入要用于Snapshot副本名称的自定义名称格式。
+.. 选中此复选框、然后输入要用于Snapshot名称的自定义名称格式。
 +
-例如： `customtext_policy_hostname` 或 `resource_hostname`。默认情况下、Snapshot副本名称会附加时间戳。
+例如： `customtext_policy_hostname` 或 `resource_hostname`。默认情况下、Snapshot名称会附加一个时间戳。
 
 .. 指定不希望备份的归档日志文件的目标。
 

@@ -34,7 +34,7 @@ summary: 您可以使用 SnapCenter 还原备份的 SQL Server 数据库。数�
 
 * 还原向导页面上的大多数字段都是不言自明的。以下信息介绍了可能需要指导的字段。
 * 对于SnapMirror业务连续性(SM-BC)还原操作、您必须从主位置选择备份。
-* 对于启用了SnapLock的策略、对于ONTAP 9.12.1及更低版本、如果指定了Snapshot副本锁定期限、则在还原过程中从防篡改Snapshot副本创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于启用了SnapLock的策略、对于ONTAP 9.12.1及更低版本、如果指定了Snapshot锁定期限、则在还原过程中从防篡改Snapshot创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 .步骤

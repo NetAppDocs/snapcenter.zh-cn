@@ -16,7 +16,7 @@ summary: 您可以使用 SnapCenter 还原备份的 Exchange 数据库。
 .开始之前
 * 您必须已备份资源组，数据库或数据库可用性组（ DAG ）。
 * 当 Exchange 数据库迁移到其他位置时，还原操作对旧备份不起作用。
-* 如果要将 Snapshot 副本复制到镜像或存储， SnapCenter 管理员必须已为您分配源卷和目标卷的 SVM 。
+* 如果要将快照复制到镜像或存储、SnapCenter管理员必须已为源卷和目标卷分配SVM。
 * 在 DAG 中，如果活动数据库副本位于非 NetApp 存储上，而您希望从 NetApp 存储上的被动数据库副本备份进行还原，请将被动副本（ NetApp 存储）设置为活动副本，刷新资源并执行还原操作。
 +
 运行 `Move-ActiveMailboxDatabase` 命令将被动数据库副本设置为活动数据库副本。
@@ -44,7 +44,7 @@ summary: 您可以使用 SnapCenter 还原备份的 Exchange 数据库。
 +
 您可以使用GET API显示密钥的值。不支持设置API。
 
-* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 .步骤

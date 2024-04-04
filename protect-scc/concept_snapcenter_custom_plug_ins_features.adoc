@@ -21,9 +21,9 @@ SnapCenter 界面可在插件和环境之间实现标准化和一致性。通过
 +
 您可以计划备份操作，配置基于策略的备份保留以及执行还原操作。您还可以通过配置 SnapCenter 以发送电子邮件警报来主动监控您的环境。
 
-* * 无中断 NetApp Snapshot 副本技术 *
+* *无中断NetApp快照技术*
 +
-SnapCenter 将 NetApp Snapshot 副本技术与 SnapCenter 自定义插件结合使用来备份资源。Snapshot 副本占用的存储空间极少。
+SnapCenter将NetApp快照技术与SnapCenter自定义插件结合使用来备份资源。快照占用的存储空间最少。
 
 
 
@@ -38,11 +38,11 @@ SnapCenter 将 NetApp Snapshot 副本技术与 SnapCenter 自定义插件结合�
 +
 要创建克隆的存储系统需要 FlexClone 许可证。
 
-* 在创建备份过程中支持 ONTAP 的一致性组（ CG ） Snapshot 副本功能。
+* 在创建备份时支持ONTAP的一致性组(CG) Snapshot功能。
 * 能够在多个资源主机之间同时运行多个备份
 +
-在一次操作中，如果一个主机中的资源共享同一个卷，则会整合 Snapshot 副本。
+在单个操作中、如果单个主机中的资源共享同一个卷、则会整合Snapshot。
 
-* 可以使用外部命令创建 Snapshot 副本。
-* 能够在 Windows 环境中创建文件系统一致的 Snapshot 副本。
+* 能够使用外部命令创建Snapshot。
+* 能够在Windows环境中创建文件系统一致的快照。
 

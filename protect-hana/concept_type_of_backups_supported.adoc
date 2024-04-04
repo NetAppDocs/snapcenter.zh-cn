@@ -23,4 +23,4 @@ summary: 备份类型指定要创建的备份类型。SnapCenter 支持 SAP HANA
 
 == 基于 Snapshot 副本的备份
 
-基于 Snapshot 副本的备份利用 NetApp Snapshot 副本技术为 SAP HANA 数据库所在的卷创建联机只读副本。
+基于Snapshot副本的备份可利用NetApp Snapshot技术为SAP HANA数据库所在的卷创建联机只读副本。

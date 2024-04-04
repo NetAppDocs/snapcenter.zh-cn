@@ -17,7 +17,7 @@ summary: 在使用 SnapCenter 备份 Oracle 数据库资源之前，您必须为
 
 * 您必须已定义备份策略。
 * 您必须已通过完成安装 SnapCenter ，添加主机，发现数据库和创建存储系统连接等任务为数据保护做好准备。
-* 如果要将 Snapshot 副本复制到镜像或存储二级存储， SnapCenter 管理员必须已为源卷和目标卷分配 SVM 。
+* 如果要将快照复制到镜像或存储二级存储、则SnapCenter管理员必须已为源卷和目标卷分配SVM。
 * 如果您以非root用户身份安装了此插件、则应手动将执行权限分配给预处理和后处理目录。
 * 有关SnapMirror业务连续性(SM-BC)的前提条件和限制、请参见 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror业务连续性的对象限制"]。
 
@@ -27,10 +27,10 @@ summary: 在使用 SnapCenter 备份 Oracle 数据库资源之前，您必须为
 +
 ** 如果选择了"将备份副本保留特定天数"选项、则SnapLock保留期限必须小于或等于上述保留天数。
 +
-指定Snapshot副本锁定期限可防止删除Snapshot副本、直到保留期限到期为止。这可能会导致保留的Snapshot副本数量超过策略中指定的数量。
+指定Snapshot锁定期限可防止删除Snapshot、直到保留期限到期为止。这样可能会导致保留的Snapshot数量超过策略中指定的数量。
 
 +
-对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 +
 
@@ -140,29 +140,29 @@ image:../media/sco_backuppolicy_prunning.gif[""]
 
 
  a| 
-保留一定数量的 Snapshot 副本
+保留一定数量的快照
  a| 
-选择 * 要保留的 Snapshot 副本总数 * ，然后指定要保留的 Snapshot 副本数量。
+选择*要保留的Snapshot副本总数*、然后指定要保留的Snapshot数量。
 
-如果 Snapshot 副本数超过指定数量，则会删除这些 Snapshot 副本，并首先删除最旧的副本。
+如果快照数量超过指定数量、则会删除快照、并首先删除最早的副本。
 
 
 NOTE: 对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，对于 ONTAP 9.3 或更早版本上的资源，最大保留值为 254 。如果将保留设置为高于底层 ONTAP 版本支持的值，则备份将失败。
 
 
-IMPORTANT: 如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留数量设置为 1 ，则保留操作可能会失败，因为第一个 Snapshot 副本是 SnapVault 关系的参考 Snapshot 副本，直到将较新的 Snapshot 副本复制到目标。
+IMPORTANT: 如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。
 
 
 
  a| 
-将 Snapshot 副本保留一定数量的天
+将Snapshot保留一定天数
  a| 
-选择 * 保留 Snapshot 副本 * ，然后指定删除 Snapshot 副本之前要保留这些副本的天数。
+选择*保留Snapshot副本的时间*、然后指定要在删除快照之前保留这些快照的天数。
 
 
 
  a| 
-Snapshot副本锁定期限
+Snapshot锁定期限
  a| 
 选择Snapshot副本锁定期限、然后选择天、月或年。
 
@@ -180,7 +180,7 @@ NOTE: 只有在备份过程中选择了归档日志文件时，才能保留归�
 
 
  a| 
-创建本地 Snapshot 副本后更新 SnapMirror
+创建本地Snapshot后更新SnapMirror
  a| 
 选择此字段可在另一个卷上创建备份集的镜像副本（ SnapMirror 复制）。
 
@@ -193,7 +193,7 @@ NOTE: 只有在备份过程中选择了归档日志文件时，才能保留归�
 
 
  a| 
-创建本地 Snapshot 副本后更新 SnapVault
+创建本地快照后更新SnapVault
  a| 
 选择此选项可执行磁盘到磁盘备份复制（ SnapVault 备份）。
 
@@ -210,7 +210,7 @@ NOTE: 只有在备份过程中选择了归档日志文件时，才能保留归�
  a| 
 选择 Snapshot 标签。
 
-根据您选择的 Snapshot 副本标签， ONTAP 会应用与该标签匹配的二级 Snapshot 副本保留策略。
+根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。
 
 
 NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
@@ -225,7 +225,7 @@ NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则
 |===
 +
 
-NOTE: 您应在 ONTAP 中为二级存储配置 SnapMirror 保留策略，以避免达到二级存储上 Snapshot 副本的最大限制。
+NOTE: 您应在ONTAP中为二级存储配置SnapMirror保留策略、以避免达到二级存储上Snapshot的最大限制。
 
 . 在脚本页面中，分别输入要在备份操作之前或之后运行的预处理或后处理的路径和参数。
 +

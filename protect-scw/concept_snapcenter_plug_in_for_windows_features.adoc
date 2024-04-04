@@ -2,7 +2,7 @@
 permalink: protect-scw/concept_snapcenter_plug_in_for_windows_features.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: 适用于 Windows 的插件可与存储系统上的 NetApp Snapshot 副本技术集成。要使用适用于 Windows 的插件，请使用 SnapCenter 界面。 
+summary: 适用于Windows的插件可在存储系统上与NetApp Snapshot技术集成。要使用适用于 Windows 的插件，请使用 SnapCenter 界面。 
 ---
 = 适用于 Windows 的 SnapCenter 插件功能
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 适用于 Windows 的插件可与存储系统上的 NetApp Snapshot 副
 
 
 [role="lead"]
-适用于 Windows 的插件可与存储系统上的 NetApp Snapshot 副本技术集成。要使用适用于 Windows 的插件，请使用 SnapCenter 界面。
+适用于Windows的插件可在存储系统上与NetApp Snapshot技术集成。要使用适用于 Windows 的插件，请使用 SnapCenter 界面。
 
 适用于 Windows 的插件包括以下主要功能：
 
@@ -23,9 +23,9 @@ SnapCenter 界面为您提供了跨插件和环境的标准化和一致性。通
 +
 您可以计划例行文件系统备份，配置基于策略的备份保留以及设置还原操作。您还可以通过将 SnapCenter 配置为发送电子邮件警报来主动监控文件系统环境。
 
-* * 无中断 NetApp Snapshot 副本技术 *
+* *无中断NetApp快照技术*
 +
-适用于 Windows 的插件使用 NetApp Snapshot 副本技术。这样，您就可以在几秒钟内备份文件系统并快速还原它们，而无需使主机脱机。Snapshot 副本占用的存储空间极少。
+适用于Windows的插件使用NetApp Snapshot技术。这样，您就可以在几秒钟内备份文件系统并快速还原它们，而无需使主机脱机。快照占用的存储空间最少。
 
 
 

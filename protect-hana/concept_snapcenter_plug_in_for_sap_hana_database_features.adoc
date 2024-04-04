@@ -23,7 +23,7 @@ SnapCenter 界面可在插件和环境之间实现标准化和一致性。通过
 
 * * 无中断 NetApp Snapshot 副本技术 *
 +
-SnapCenter 将 NetApp Snapshot 副本技术与适用于 SAP HANA 数据库的插件结合使用来备份资源。
+SnapCenter将NetApp快照技术与适用于SAP HANA数据库的插件结合使用来备份资源。
 
 
 
@@ -38,12 +38,12 @@ SnapCenter 将 NetApp Snapshot 副本技术与适用于 SAP HANA 数据库的插
 +
 要创建克隆的存储系统需要 FlexClone 许可证。
 
-* 在创建备份过程中支持 ONTAP 的一致性组（ CG ） Snapshot 副本功能。
+* 在创建备份时支持ONTAP的一致性组(CG) Snapshot功能。
 * 能够在多个资源主机之间同时运行多个备份
 +
-在一次操作中，如果一个主机中的资源共享同一个卷，则会整合 Snapshot 副本。
+在单个操作中、如果单个主机中的资源共享同一个卷、则会整合Snapshot。
 
-* 可以使用外部命令创建 Snapshot 副本。
+* 能够使用外部命令创建快照。
 * 支持基于文件的备份。
 * 支持 XFS 文件系统上的 Linux LVM 。
 

@@ -20,7 +20,7 @@ summary: 您可以在使用 SnapCenter 备份 Microsoft Exchange Server 资源�
 
 * 您必须已通过完成安装 SnapCenter ，添加主机，识别资源以及创建存储系统连接等任务为数据保护做好准备。
 * 您必须已刷新（发现） Exchange Server 资源。
-* 如果要将 Snapshot 副本复制到镜像或存储， SnapCenter 管理员必须已为源卷和目标卷分配 Storage Virtual Machine （ SVM ）。
+* 如果要将快照复制到镜像或存储、SnapCenter管理员必须已将源卷和目标卷的Storage Virtual Machine (SVM)分配给您。
 * 如果要在预处理脚本和后处理脚本中运行 PowerShell 脚本，应在 `web.config` 文件中将 `usePowershellProcessforScripts` 参数的值设置为 true 。
 +
 默认值为 false 。
@@ -45,16 +45,16 @@ summary: 您可以在使用 SnapCenter 备份 Microsoft Exchange Server 资源�
 |===
 
 
-| * 最佳实践： * 最好根据要保留的完整备份和日志备份总数配置二级保留策略。在配置二级保留策略时，请注意，如果数据库和日志位于不同的卷中，则每个备份可以包含三个 Snapshot 副本，而数据库和日志位于同一个卷中，则每个备份可以包含两个 Snapshot 副本。 
+| * 最佳实践： * 最好根据要保留的完整备份和日志备份总数配置二级保留策略。配置二级保留策略时、请注意、如果数据库和日志位于不同卷中、则每个备份可以有三个Snapshot；如果数据库和日志位于同一卷中、则每个备份可以有两个Snapshot。 
 |===
 * SnapLock
 +
 ** 如果选择了"将备份副本保留特定天数"选项、则SnapLock保留期限必须小于或等于上述保留天数。
 +
-指定Snapshot副本锁定期限可防止删除Snapshot副本、直到保留期限到期为止。  这可能会导致保留的Snapshot副本数量超过策略中指定的数量。
+指定Snapshot锁定期限可防止删除Snapshot、直到保留期限到期为止。  这样可能会导致保留的Snapshot数量超过策略中指定的数量。
 
 +
-对于ONTAP 9.12.1及更低版本、从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+对于ONTAP 9.12.1及更低版本、从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 +
 
@@ -175,7 +175,7 @@ NOTE: 对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，
 
 +
 
-IMPORTANT: 如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留数量设置为 1 ，则保留操作可能会失败，因为第一个 Snapshot 副本是 SnapVault 关系的参考 Snapshot 副本，直到将较新的 Snapshot 副本复制到目标。
+IMPORTANT: 如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。
 
 +
 .. 在日志备份保留设置部分中，选择以下选项之一：
@@ -195,7 +195,7 @@ IMPORTANT: 如果计划启用 SnapVault 复制，则必须将保留计数设置�
 
 如果您不想执行最新的还原，可以将 UTM 保留值设置为 0 。这将启用时间点还原操作。
 
-* 最佳实践： * 最佳做法是，此设置必须等于完整备份保留设置部分中 Snapshot 副本总数（完整备份）的设置。这样可以确保每次完整备份都保留日志文件。
+*最佳实践：*最佳设置必须等于完整备份保留设置部分中的总Snapshot (完整备份)设置。这样可以确保每次完整备份都保留日志文件。
 
 
 
@@ -209,7 +209,7 @@ IMPORTANT: 如果计划启用 SnapVault 复制，则必须将保留计数设置�
 
 
  a| 
-Snapshot副本锁定期限
+Snapshot锁定期限
  a| 
 选择*Snapshot副本锁定期限*，然后选择天、月或年。
 
@@ -226,9 +226,9 @@ SnapLock保留期限应少于100年。
 
 
  a| 
-仅保留特定数量的 Snapshot 副本
+仅保留特定数量的快照
  a| 
-如果要指定要保留的完整备份数，请选择 * 要保留的 Snapshot 副本总数 * 选项，并指定要保留的 Snapshot 副本数（完整备份）。
+如果要指定要保留的完整备份数、请选择*要保留的Snapshot副本总数*选项、并指定要保留的Snapshot (完整备份)数。
 
 如果完整备份数超过指定数量，则会删除超过指定数量的完整备份，并首先删除最旧的副本。
 
@@ -237,12 +237,12 @@ SnapLock保留期限应少于100年。
  a| 
 将完整备份保留特定天数
  a| 
-选择 * 将 Snapshot 副本保留 * 选项，并指定保留 Snapshot 副本（完整备份）的天数。
+选择*保留Snapshot副本*选项、并指定保留Snapshot (完整备份)的天数。
 
 
 
  a| 
-Snapshot副本锁定期限
+Snapshot锁定期限
  a| 
 选择*Snapshot副本锁定期限*，然后选择天、月或年。
 
@@ -272,7 +272,7 @@ NOTE: 如果您的数据库在 DAG 配置中的主机上仅具有日志备份，
 
 
  a| 
-创建本地 Snapshot 副本后更新 SnapMirror
+创建本地Snapshot后更新SnapMirror
 
 在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。
 
@@ -285,7 +285,7 @@ NOTE: 如果您的数据库在 DAG 配置中的主机上仅具有日志备份，
 
 
  a| 
-创建本地 Snapshot 副本后更新 SnapVault
+创建本地快照后更新SnapVault
  a| 
 选择此选项可执行磁盘到磁盘备份复制。
 
@@ -296,7 +296,7 @@ NOTE: 如果您的数据库在 DAG 配置中的主机上仅具有日志备份，
  a| 
 选择 Snapshot 标签。
 
-根据您选择的 Snapshot 副本标签， ONTAP 会应用与该标签匹配的二级 Snapshot 副本保留策略。
+根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。
 
 
 NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
@@ -311,7 +311,7 @@ NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则
 |===
 +
 
-NOTE: 您应在 ONTAP 中为二级存储配置 SnapMirror 保留策略，以避免达到二级存储上 Snapshot 副本的最大限制。
+NOTE: 您应在ONTAP中为二级存储配置SnapMirror保留策略、以避免达到二级存储上Snapshot的最大限制。
 
 . 在脚本页面中，分别输入应在备份操作前后运行的预处理或后处理程序的路径和参数。
 +

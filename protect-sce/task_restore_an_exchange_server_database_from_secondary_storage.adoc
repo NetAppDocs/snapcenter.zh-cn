@@ -13,10 +13,10 @@ summary: 您可以从二级存储（镜像或存储）还原备份的 Exchange S
 [role="lead"]
 您可以从二级存储（镜像或存储）还原备份的 Exchange Server 数据库。
 
-您必须已将 Snapshot 副本从主存储复制到二级存储。
+您必须已将Snapshot从主存储复制到二级存储。
 
 .关于此任务
-* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储Snapshot副本创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 .步骤

@@ -11,7 +11,7 @@ summary: 您可以在 VMware 环境中使用适用于 Microsoft Windows 的 Snap
 
 
 [role="lead"]
-您可以在VMware环境中使用适用于Microsoft Windows的SnapCenter 插件来创建和管理LUN以及管理Snapshot副本。
+您可以在VMware环境中使用适用于Microsoft Windows的SnapCenter插件来创建和管理LUN以及管理快照。
 
 
 
