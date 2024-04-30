@@ -1,16 +1,14 @@
-= 
+---
+permalink: protect-scu/task_split_a_clone.html 
+sidebar: sidebar 
+keywords: split clone, snapcenter 
+summary: 您可以使用 SnapCenter 从父资源拆分克隆的资源。拆分的克隆将独立于父资源。 
+---
+= 拆分克隆。
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
-
---
-永久链接：prote-scU/task_split_a_clone.html
-侧栏：侧栏
-关键字：拆分克隆、SnapCenter
-摘要："您可以使用SnapCenter从父资源中拆分克隆的资源。拆分的克隆将独立于父资源。"
-——
-=拆分克隆
-:图标:字体
-:imageesdir:../media/
 
 [role="lead"]
 您可以使用 SnapCenter 从父资源拆分克隆的资源。拆分的克隆将独立于父资源。
@@ -77,5 +75,3 @@
 
 .相关信息
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["SnapCenter 克隆或验证失败，并且聚合不存在"]
-
---

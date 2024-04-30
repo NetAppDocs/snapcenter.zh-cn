@@ -8298,14 +8298,6 @@ Windows主机：</block>
   <block id="40b141d81ebc81d0277454ddd95983be" category="paragraph">按需备份后，单击*Refresh*按钮可刷新备份或克隆的详细信息。</block>
   <block id="e3eb3098d9512640ba3691ccfbed50f5" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。有关 PowerShell cmdlet 的详细信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block></block>
   <block id="f1472e722e81a79d38810332425a4e76" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。有关 PowerShell cmdlet 的信息，请使用 SnapCenter cmdlet 帮助或参见<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block>。</block>
-  <block id="5145b2adfb55517e007962efd2a08be6" category="paragraph">永久链接：prote-scU/task_split_a_clone.html
-侧栏：侧栏
-关键字：拆分克隆、SnapCenter
-摘要："您可以使用SnapCenter从父资源中拆分克隆的资源。拆分的克隆将独立于父资源。"
-——
-=拆分克隆
-:图标:字体
-:imageesdir:../media/</block>
   <block id="e9b924bbf420ab11fb241e13f75a92c1" category="summary">安装适用于Unix文件系统的插件后、系统会自动发现主机上的文件系统、并将其显示在"ResResu材料"页面中。</block>
   <block id="5f6bb3736007978d5604be7df99325f8" category="doc">发现可供备份的UNIX文件系统</block>
   <block id="c94588b5932cbd964b99829c9c53f185" category="paragraph">安装此插件后、系统会自动发现此主机上的所有文件系统、并将其显示在"Resus"页面中。您可以将这些文件系统添加到资源组中以执行数据保护操作。</block>
@@ -9074,4 +9066,7 @@ destination</block>
   <block id="bf971f3c72b83a1aac6d9fe1cb39850c" category="admonition">您不能重命名或删除二级存储上的备份。删除快照由ONTAP保留设置处理。</block>
   <block id="eb71c7e77b1cb5486117cdac9d378fb6" category="list-text">如果要指定自定义Snapshot名称、请在资源页面中选中*为Snapshot副本使用自定义名称格式*复选框、然后输入要用于Snapshot名称的自定义名称格式。</block>
   <block id="2457e427df18c87448fa7fa796d115c7" category="paragraph">使用 SnapCenter 备份 Exchange 邮箱要求您选择资源类型，例如数据库和数据库可用性组（ DAG ）。利用Snapshot技术为资源所在的卷创建联机只读副本。</block>
+  <block id="495685c9e0a33087f4a235b8fe0d5e1c" category="section-title">删除保护</block>
+  <block id="d315d492e2b430b33a4c4cd7b63eda74" category="paragraph">删除保护将删除所有备份并断开所有策略。在删除保护之前、您应确保未挂载备份、并且备份没有与任何克隆关联。</block>
+  <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">选择备份并单击*删除保护*。</block>
 </blocks>
