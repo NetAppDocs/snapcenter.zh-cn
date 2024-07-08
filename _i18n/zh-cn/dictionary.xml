@@ -1481,7 +1481,6 @@
   <block id="30dca629b8dd44dcc3eb42720281eefa" category="list-text">如果您使用的是 Oracle 数据库 11.2.0.3 或更高版本，并且使用 NID 脚本更改了辅助实例的数据库 ID ，则应安装 13366202 Oracle 修补程序。</block>
   <block id="fed30036a3caffc826b4e66f434f67ea" category="summary">在安装适用于 AIX 的 SnapCenter 插件软件包之前，应确保主机满足要求。</block>
   <block id="43574ab73a6cbc674506ff003387dcb1" category="paragraph">操作系统</block>
-  <block id="895327977020e495debf0b375c7541d8" category="paragraph">AIX 6.1 或更高版本</block>
   <block id="974c2262615af73433567515efbb80e9" category="paragraph">4 GB</block>
   <block id="bac8e3a852c936b4db89afd35d4d962a" category="paragraph">如果已将 Java 升级到最新版本，则必须确保 /var/opt/snapcenter/spl/etc/spl.properties 上的 java_home 选项设置为正确的 Java 版本和路径。</block>
   <block id="9fc7e0af2d8808b59624854d31dab1bb" category="list-text">编辑 /etc/ssh/sshd_config_ 文件以配置消息身份验证代码算法： macs HMAC-SHA2-256 和 MAC HMAC-SHA2-512 。</block>
@@ -9069,4 +9068,5 @@ destination</block>
   <block id="495685c9e0a33087f4a235b8fe0d5e1c" category="section-title">删除保护</block>
   <block id="d315d492e2b430b33a4c4cd7b63eda74" category="paragraph">删除保护将删除所有备份并断开所有策略。在删除保护之前、您应确保未挂载备份、并且备份没有与任何克隆关联。</block>
   <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">选择备份并单击*删除保护*。</block>
+  <block id="ad569cc1cca820033bb20ffe1d5bc4a5" category="paragraph">AIX 7.1或更高版本</block>
 </blocks>

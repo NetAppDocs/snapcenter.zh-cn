@@ -197,7 +197,7 @@ NOTE: 适用于 UNIX 的 SnapCenter 插件是适用于 AIX 的 SnapCenter 插件
  a| 
 操作系统
  a| 
-AIX 6.1 或更高版本
+AIX 7.1或更高版本
 
 
 
