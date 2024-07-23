@@ -1,0 +1,16 @@
+---
+permalink: protect-db2/housekeeping-of-log-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM DB2 
+summary: SnapCenter在存储系统和文件系统级别以及IBM DB2备份目录中管理日志和数据备份的内务管理。 
+---
+= SnapCenter如何管理数据备份的内务管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter在存储系统和文件系统级别管理数据备份的内务管理。
+
+主存储或二级存储上的快照及其在IBM DB2目录中对应的条目将根据保留设置被删除。

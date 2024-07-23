@@ -44,15 +44,6 @@ SnapCenter 标准版许可证是一种基于控制器的许可证，作为高级
 
 
  a| 
-基于 SnapCenter 标准容量
- a| 
-ONTAP Select 和 Cloud Volumes ONTAP 必需
-
-如果您是 Cloud Volumes ONTAP 或 ONTAP Select 客户，则需要根据 SnapCenter 管理的数据购买基于每 TB 容量的许可证。默认情况下， SnapCenter 会提供一个内置 90 天 100 TB SnapCenter 标准容量试用许可证。有关其他详细信息，请联系销售代表。
-
-
-
- a| 
 SnapMirror 或 SnapVault
  a| 
 ONTAP
@@ -99,7 +90,7 @@ NOTE: 建议（但不要求）将 SnapCenter 标准版许可证添加到二级�
 CPU
  a| 
 * 服务器主机： 4 个核心
-* 插件主机： 1 个核心
+* 插件主机：4个核心
 
 
 
@@ -108,7 +99,7 @@ CPU
 RAM
  a| 
 * 服务器主机： 8 GB
-* 插件主机： 1 GB
+* 插件主机： 4 GB
 
 
 
@@ -118,8 +109,8 @@ RAM
  a| 
 服务器主机：
 
-* 4 GB ，用于 SnapCenter 服务器软件和日志
-* 6 GB 用于 SnapCenter 存储库
+* 7 GB ，用于 SnapCenter 服务器软件和日志
+* 8 GB 用于 SnapCenter 存储库
 * 每个插件主机： 2 GB 用于插件安装和日志，只有在专用主机上安装了插件时才需要此空间。
 
 
@@ -131,8 +122,8 @@ RAM
 SnapCenter 服务器主机和插件主机上需要：
 
 * Microsoft .NET Framework 4.7.2或更高版本
-* Windows Management Framework （ WMF ） 4.0 或更高版本
-* PowerShell 4.0 或更高版本
+* ASP。 NET Core托管包(8.0.5或更高版本)
+* PowerShell 7.4.2或更高版本
 
 
 

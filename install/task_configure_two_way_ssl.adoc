@@ -1,20 +1,19 @@
 ---
 permalink: install/task_configure_two_way_ssl.html 
 sidebar: sidebar 
-keywords: security,two-way ssl,configure two-way ssl 
-summary: 您应配置双向SSL通信、以确保SnapCenter服务器与插件之间的相互通信安全。   
+keywords: security,two-way ssl,configure two-way ssl, windows host 
+summary: 您应配置双向SSL通信、以确保Windows主机上的SnapCenter服务器与插件之间的相互通信安全。 
 ---
-= 配置双向SSL通信
+= 在Windows主机上配置双向SSL通信
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您应配置双向SSL通信、以确保SnapCenter服务器与插件之间的相互通信安全。
+您应配置双向SSL通信、以确保Windows主机上的SnapCenter服务器与插件之间的相互通信安全。
 
-* 开始之前 *
-
+.开始之前
 * 您应已生成支持的最小密钥长度为3072的CA证书CSR文件。
 * CA证书应支持服务器身份验证和客户端身份验证。
 * 您应拥有一个CA证书、其中应包含私钥和指纹详细信息。
@@ -28,8 +27,7 @@ summary: 您应配置双向SSL通信、以确保SnapCenter服务器与插件之�
 
 
 
-* 步骤 *
-
+.步骤
 . 要绑定此端口、请在SnapCenter服务器主机上对SnapCenter IIS Web服务器端口8146 (默认)执行以下步骤、并使用PowerShell命令对SMCore端口8145 (默认)再次执行以下步骤。
 +
 .. 使用以下PowerShell命令删除现有SnapCenter自签名证书端口绑定。
@@ -119,12 +117,10 @@ summary: 您应配置双向SSL通信、以确保SnapCenter服务器与插件之�
 
 您应使用PowerShell命令配置SnapCenter Windows插件以实现双向SSL通信。
 
-* 开始之前 *
-
+.开始之前
 确保CA证书指纹可用。
 
-* 步骤 *
-
+.步骤
 . 要绑定端口、请在Windows插件主机上对SMCore端口8145 (默认)执行以下操作。
 +
 .. 使用以下PowerShell命令删除现有SnapCenter自签名证书端口绑定。

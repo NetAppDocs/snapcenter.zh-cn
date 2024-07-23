@@ -19,7 +19,7 @@ SnapCenter 对主存储库执行读取或写入操作，并在主存储库出现
 
 SnapCenter 提供了 _Get-SmRepositoryConfig_ 和 _Set-SmRepositoryConfig_ PowerShell cmdlet 来管理 MySQL 复制。
 
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 您必须了解与 MySQL HA 功能相关的限制：
 

@@ -25,6 +25,8 @@ summary: 任何数据保护作业都需要资源组。您还必须将一个或�
 您可以使用GET API显示密钥的值。不支持设置API。
 
 * 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 不支持将不使用SnapMirror活动同步的新数据库添加到包含使用SnapMirror活动同步的资源的现有资源组。
+* 不支持在SnapMirror活动同步的故障转移模式下向现有资源组添加新数据库。您只能在常规或故障恢复状态下向资源组添加资源。
 
 
 .步骤
@@ -125,7 +127,7 @@ NOTE: 如果某个策略包含 * 备份作业创建时间要选择的服务器�
 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 `SET-SmtpServer` 指定 SMTP 服务器详细信息。
 
 +
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者、您也可以参考 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.htmlnapCenter[] Software cmdlet Reference Guide^。
 
 . 查看摘要，然后单击 * 完成 * 。
 

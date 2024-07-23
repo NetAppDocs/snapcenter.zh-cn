@@ -88,6 +88,16 @@ SnapCenter 图形用户界面或 PowerShell cmdlet
 
 
  a| 
+VMware VM
+ a| 
+NFS和SAN上的VVOV数据存储库
+ a| 
+适用于 VMware vSphere 的 ONTAP 工具
+ a| 
+
+
+
+ a| 
 Hyper-V 虚拟机
  a| 
 通过虚拟光纤通道交换机连接的虚拟 FC （ VFC ） LUN

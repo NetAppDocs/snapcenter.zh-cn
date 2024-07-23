@@ -1,0 +1,16 @@
+---
+permalink: protect-mysql/types-of-restore-strategies-supported-for-auto-discovered-mysql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for mysql 
+summary: 您必须先定义策略，然后才能使用 SnapCenter 成功执行还原操作。对于自动发现的MySQL数据库、有两种还原策略。 
+---
+= 自动发现的MySQL支持的还原策略类型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须先定义策略，然后才能使用 SnapCenter 成功执行还原操作。
+
+完全资源还原是自动发现的MySQL数据库支持的还原策略。此操作将还原资源的所有卷、qtrees和LUN。

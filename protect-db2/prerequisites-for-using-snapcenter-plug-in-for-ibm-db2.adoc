@@ -1,0 +1,24 @@
+---
+permalink: protect-db2/prerequisites-for-using-snapcenter-plug-in-for-ibm-db2.html 
+sidebar: sidebar 
+keywords: Credentials,SnapCenter Plug-in for IBM Db2 
+summary: 在使用适用于IBM DB2的SnapCenter插件之前、SnapCenter管理员必须安装和配置SnapCenter服务器并执行必备任务。 
+---
+= 使用适用于IBM DB2的SnapCenter插件的前提条件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在使用适用于IBM DB2的SnapCenter插件之前、SnapCenter管理员必须安装和配置SnapCenter服务器并执行必备任务。
+
+* 安装和配置 SnapCenter 服务器。
+* 登录到 SnapCenter 服务器。
+* 如果适用，可通过添加存储系统连接和创建凭据来配置 SnapCenter 环境。
+* 在Linux或Windows主机上安装Java 11。
++
+必须在主机的环境路径变量中设置 Java 路径。
+
+* 如果要进行备份复制，请设置 SnapMirror 和 SnapVault 。
+

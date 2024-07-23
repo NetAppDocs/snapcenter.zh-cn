@@ -1,0 +1,82 @@
+---
+permalink: protect-scu/view_protected_unix_file_systems_in_the_topology_page.html 
+sidebar: sidebar 
+keywords: topology, unix file systems, 
+summary: 在准备备份、还原或克隆资源时、您可能会发现以图形方式显示主存储和二级存储上的所有备份、还原的文件系统以及克隆会很有用。 
+---
+= 在Topology页面中查看受保护的Unix文件系统
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在准备备份、还原或克隆资源时、您可能会发现以图形方式显示主存储和二级存储上的所有备份、还原的文件系统以及克隆会很有用。
+
+* 关于此任务 *
+
+在Topology页面中、您可以看到选定资源或资源组可用的所有备份、还原的文件系统和克隆。您可以查看这些备份、还原的文件系统和克隆的详细信息、然后选择它们来执行数据保护操作。
+
+您可以在管理副本视图中查看以下图标，以确定备份和克隆在主存储还是二级存储（镜像副本或存储副本）上可用。
+
+* image:../media/topology_primary_storage.gif["主存储图标"] 显示主存储上可用的备份和克隆的数量。
+* image:../media/topology_mirror_secondary_storage.gif["二级存储镜像图标"] 显示使用 SnapMirror 技术在二级存储上镜像的备份和克隆的数量。
+* image:../media/topology_vault_secondary_storage.gif["二级存储图标"] 显示使用 SnapVault 技术在二级存储上复制的备份和克隆的数量。
++
+显示的备份数包括从二级存储中删除的备份。例如，如果您使用策略创建了 6 个备份，仅保留 4 个备份，则显示的备份数为 6 。
+
+
+
+
+NOTE: 镜像存储类型卷上版本灵活的镜像备份的克隆将显示在拓扑视图中，但拓扑视图中的镜像备份计数不包括版本灵活的备份。
+
+如果您将二级关系设置为SnapMirror活动同步(最初发布为SnapMirror Business Continuance[SM-BC))、则可以看到以下附加图标：
+
+* image:../media/topology_replica_site_up.png["副本站点已启动"] 表示副本站点已启动。
+* image:../media/topology_replica_site_down.png["副本站点已关闭"]  表示副本站点已关闭。
+* image:../media/topology_reestablished.png["已重新建立关系"] 表示尚未重新建立二级镜像或存储关系。
+
+
+* 步骤 *
+
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面中，从 * 视图 * 下拉列表中选择资源或资源组。
+. 从资源详细信息视图或资源组详细信息视图中选择资源。
++
+如果资源受保护，则会显示选定资源的 " 拓扑 " 页面。
+
+. 查看摘要卡，查看主存储和二级存储上可用的备份和克隆数量的摘要。
++
+摘要卡部分显示备份和克隆的总数。
+
++
+单击 * 刷新 * 按钮可启动存储查询以显示准确的计数。
+
++
+如果进行了启用了SnapLock的备份，则单击*Refresh*按钮将刷新从ONTAP检索到的主和二级SnapLock到期时间。每周计划还会刷新从ONTAP检索到的主和二级SnapLock到期时间。
+
++
+如果文件系统分布在多个卷上、则备份的SnapLock到期时间将是为卷中的Snapshot设置的最长SnapLock到期时间。从ONTAP检索到最长的SnapLock到期时间。
+
++
+对于SnapMirror活动同步、单击*刷新*按钮可通过查询主站点和副本站点的SnapCenter来刷新ONTAP备份清单。每周计划还会对包含SnapMirror活动同步关系的所有数据库执行此活动。
+
++
+** 对于SnapMirror主动同步以及仅适用于ONTAP 9.14.1、应在故障转移后手动配置与新主目标的异步镜像或异步镜像存储关系。从ONTAP 9.151开始、异步镜像或异步镜像存储会自动配置到新的主目标。
+** 故障转移后、应创建一个备份、以使SnapCenter能够识别故障转移。只有在创建备份后才能单击*Refresh*。
+
+
+. 在管理副本视图中，单击主存储或二级存储中的 * 备份 * 或 * 克隆 * 以查看备份或克隆的详细信息。
++
+备份和克隆的详细信息以表格式显示。
+
+. 从表中选择备份，然后单击数据保护图标以执行还原，克隆和删除操作。
++
+
+NOTE: 您不能重命名或删除二级存储上的备份。
+
+. 如果要删除克隆，请从表中选择此克隆，然后单击 image:../media/delete_icon.gif[""]。
+
+
+.显示主存储上的备份和克隆的示例
+image:../media/topology_view_scu.png["主存储中备份和克隆的拓扑视图。"]

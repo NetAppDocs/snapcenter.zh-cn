@@ -1,0 +1,41 @@
+---
+permalink: install/register_enable_software_access.html 
+sidebar: sidebar 
+keywords: install, snapcenter software, install, register, new customer, NetApp account, enable 
+summary: 如果您没有现有的NetApp帐户、则应按照以下步骤注册以访问软件。 
+---
+= 注册以访问SnapCenter软件
+:allow-uri-read: 
+
+
+[role="lead"]
+如果您是Amazon FSx for NetApp ONTAP或Azure NetApp Files的新用户且没有现有NetApp帐户、则可以访问SnapCenter软件。
+
+.开始之前
+* 您应有权访问公司电子邮件ID。
+* 如果您使用的是Azure NetApp Files、则应具有Azure订阅ID。
+* 如果您使用的是Amazon FSx for NetApp ONTAP、则应具有FSx for ONTAP文件系统的文件系统ID。
+
+
+.关于此任务
+您的注册需要经过信息验证、可能需要长达一天时间才能确认新的NetApp支持站点(NSS)帐户并将其升级为"来宾"访问权限的"完全"访问权限。
+
+.步骤
+. 单击 https://mysupport.netapp.com/site/user/registration[] 进行注册。
+. 输入您的公司电子邮件ID、填写验证码并接受NetApp的隐私政策、然后单击*提交*。
+. 输入发送到您的电子邮件ID的OTP并单击*继续*，对注册进行身份验证。
+. 在注册完成页面上、输入以下详细信息以完成注册。
++
+.. 选择* NetApp客户/最终用户*。
+.. 在序列号字段中、输入以下内容之一：
++
+*** Azure订阅ID (如果您使用的是Azure NetApp Files)。
+*** 文件系统ID (如果您使用的是Amazon FSx for NetApp ONTAP)。
+
+
+
+
+
+
+
+NOTE: 如果您在注册期间遇到任何问题或想要了解状态、可以在上提交TT https://mysupport.netapp.com/site/help[] 。

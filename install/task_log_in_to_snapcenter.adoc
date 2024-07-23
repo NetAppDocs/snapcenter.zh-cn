@@ -16,6 +16,7 @@ SnapCenter 支持基于角色的访问控制（ Role-Based Access Control ， RB
 .开始之前
 * 您应在 Windows Server Manager 中启用 Windows 进程激活服务（ Wwas ）。
 * 如果要使用 Internet Explorer 作为浏览器登录到 SnapCenter 服务器，应确保已禁用 Internet Explorer 中的保护模式。
+* 如果SnapCenter服务器安装在Linux主机上、则应使用用于安装SnapCenter服务器的用户帐户登录。
 
 
 * 关于此任务 *
@@ -34,7 +35,7 @@ IMPORTANT: 如果您在 Web 浏览器中打开了多个选项卡，则仅关闭 
 
 对于高可用性（ High Availability ， HA ）部署，您必须使用虚拟集群 IP _\https://Virtual_Cluster_IP_or_FQDN:8146_ 访问 SnapCenter 。如果在 Internet Explorer （ IE ）中导航到 >\https://Virtual_Cluster_IP_or_FQDN:8146_ 时未看到 SnapCenter UI ，则必须在每个插件主机的 IE 中将虚拟集群 IP 地址或 FQDN 添加为受信任站点，或者必须在每个插件主机上禁用 IE 增强安全性。有关详细信息，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["无法从外部网络访问集群 IP 地址"^]。
 
-除了使用 SnapCenter 图形用户界面之外，您还可以使用 PowerShell cmdlet 创建脚本以执行配置，备份和还原操作。某些 cmdlet 可能会随每个 SnapCenter 版本而发生更改。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"^] 了解详细信息。
+除了使用 SnapCenter 图形用户界面之外，您还可以使用 PowerShell cmdlet 创建脚本以执行配置，备份和还原操作。某些 cmdlet 可能会随每个 SnapCenter 版本而发生更改。 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]具有详细信息。
 
 
 NOTE: 如果您是首次登录到 SnapCenter ，则必须使用安装过程中提供的凭据进行登录。
@@ -83,7 +84,11 @@ Username
 
 首次以 RBAC 用户身份登录到 SnapCenter 服务器后，刷新资源列表。
 
-如果您希望 SnapCenter 支持不可信的 Active Directory 域，则必须先向 SnapCenter 注册这些域，然后再为不可信域上的用户配置角色。 link:../install/task_register_untrusted_active_directory_domains.html["了解更多信息。"^]
+如果您希望 SnapCenter 支持不可信的 Active Directory 域，则必须先向 SnapCenter 注册这些域，然后再为不可信域上的用户配置角色。link:../install/task_register_untrusted_active_directory_domains.html["了解更多信息。"^](英文)
+
+如果要在Linux主机上运行的SnapCenter中添加插件主机、应从以下位置获取校验和文件：_/opt/NetApp/snapcentre/SnapManagerWeb/Repository _。
+
+从6.0版开始、在桌面上创建了SnapCenter PowerShell的快捷方式。您可以使用快捷方式直接访问SnapCenter PowerShell cmdlet。
 
 
 
@@ -92,11 +97,7 @@ Username
 SnapCenter 服务器支持将MFA用于域帐户、此帐户属于活动目录。
 
 .开始之前
-* 您应已启用MFA。
-+
-有关如何启用MFA的信息、请参见 link:../install/enable_multifactor_authentication.html["启用多因素身份验证"]
-
-
+您应已启用MFA。有关如何启用MFA的信息、请参见 link:../install/enable_multifactor_authentication.html["启用多因素身份验证"]
 
 * 关于此任务 *
 

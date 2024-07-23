@@ -25,6 +25,7 @@ summary: 您可以在使用 SnapCenter 备份 Microsoft Exchange Server 资源�
 +
 默认值为 false 。
 
+* 查看SnapMirror主动同步的特定前提条件和限制。有关信息，请参阅 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror活动同步的对象限制"]。
 
 
 .关于此任务
@@ -250,8 +251,7 @@ SnapLock保留期限应少于100年。
 
 |===
 +
-
-NOTE: 如果您的数据库在 DAG 配置中的主机上仅具有日志备份，而没有完整备份，则日志备份将按以下方式保留：
+如果您的数据库在 DAG 配置中的主机上仅具有日志备份，而没有完整备份，则日志备份将按以下方式保留：
 
 +
 *** 默认情况下， SnapCenter 会在 DAG 中的所有其他主机中查找此数据库的最旧完整备份，并删除此主机上在完整备份之前创建的所有日志备份。
@@ -273,14 +273,19 @@ NOTE: 如果您的数据库在 DAG 配置中的主机上仅具有日志备份，
 
  a| 
 创建本地Snapshot后更新SnapMirror
+ a| 
+选择此选项可将备份集的镜像副本保留在另一个卷（ SnapMirror ）上。
 
 在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。
+
+对于SnapMirror活动同步、应启用此选项。
+
+
+IMPORTANT: 如果为Exchange ONTAP卷设置了SnapMirror活动同步、则无法使用仅主策略。SnapCenter不允许这样做。您应启用"镜像"选项。
 
 单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
 
 请参见 link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["在 Topology 页面中查看 Exchange 备份"]。
- a| 
-选择此选项可将备份集的镜像副本保留在另一个卷（ SnapMirror ）上。
 
 
 

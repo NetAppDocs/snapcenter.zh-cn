@@ -14,7 +14,7 @@ summary: 在安装 SnapCenter 服务器之前，您应熟悉空间和规模估�
 在安装 SnapCenter 服务器之前，您应熟悉空间和规模估算要求。您还应应用可用的系统和安全更新。
 
 |===
-| 项目 | 要求 
+| 项目 | Windows主机要求 | Linux 主机要求 
 
 
  a| 
@@ -26,11 +26,20 @@ Microsoft Windows
 
 有关受支持版本的最新信息，请参见
 https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+ a| 
+* Red Hat Enterprise Linux (RHEL) 8和9
+* SUSE Linux Enterprise Server (SLES) 15.
+
+
+有关受支持版本的最新信息，请参见
+https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 
  a| 
 最小 CPU 计数
+ a| 
+4 个核心
  a| 
 4 个核心
 
@@ -43,26 +52,32 @@ https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src
 
 
 NOTE: MySQL Server 缓冲区池使用的 RAM 占总 RAM 的 20% 。
+ a| 
+8 GB
 
 
 
  a| 
 SnapCenter 服务器软件和日志的最小硬盘驱动器空间
  a| 
-4 GB
+7 GB
 
 
-NOTE: 如果 SnapCenter 存储库位于安装 SnapCenter 服务器的同一驱动器中，则建议使用 10 GB 。
+NOTE: 如果 SnapCenter 存储库位于安装 SnapCenter 服务器的同一驱动器中，则建议使用 15 GB 。
+ a| 
+15 GB
 
 
 
  a| 
 SnapCenter 存储库的最小硬盘空间
  a| 
-6 GB
+8 GB
 
 
-NOTE: 注意：如果 SnapCenter 服务器位于安装 SnapCenter 存储库的同一驱动器中，则建议具有 10 GB 。
+NOTE: 注意：如果 SnapCenter 服务器位于安装 SnapCenter 存储库的同一驱动器中，则建议具有 15 GB 。
+ a| 
+不适用
 
 
 
@@ -70,10 +85,19 @@ NOTE: 注意：如果 SnapCenter 服务器位于安装 SnapCenter 存储库的�
 所需的软件包
  a| 
 * Microsoft .NET Framework 4.7.2或更高版本
-* Windows Management Framework （ WMF ） 4.0 或更高版本
-* PowerShell 4.0 或更高版本
+* ASP。 NET Core托管包(8.0.5或更高版本)
+* PowerShell 7.4.2或更高版本
 
 
 有关.NET专用的故障排除信息、请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["对于没有Internet连接的原有系统、SnapCenter 升级或安装失败"^]。
+ a| 
+* ASP。 NET Core Runtime 8.0.5或更高版本
+* PowerShell 7.4.2或更高版本
+* NGINX是一个可用作反向代理的Web服务器
+* PAM-DEVEL
++
+PAM (可插拔鉴定模块)是一个系统安全工具，它允许系统管理员设置鉴定策略，而不必重新编译执行鉴定的程序。
+
+
 
 |===

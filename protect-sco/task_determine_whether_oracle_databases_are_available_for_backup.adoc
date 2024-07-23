@@ -13,8 +13,7 @@ summary: 资源是指主机上由 SnapCenter 管理的 Oracle 数据库。发现
 [role="lead"]
 资源是指主机上由 SnapCenter 管理的 Oracle 数据库。发现可用数据库后，您可以将这些数据库添加到资源组以执行数据保护操作。
 
-* 您需要的内容 *
-
+.开始之前
 * 您必须已完成安装 SnapCenter 服务器，添加主机，创建存储系统连接和添加凭据等任务。
 * 如果数据库驻留在虚拟机磁盘（ VMDK ）或原始设备映射（ RDM ）上，则必须部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件。
 +
@@ -30,8 +29,7 @@ summary: 资源是指主机上由 SnapCenter 管理的 Oracle 数据库。发现
 
 您可以阻止SnapCenter 发现在oratab文件中添加的非数据库条目。
 
-* 步骤 *
-
+.步骤
 . 安装适用于Oracle的插件后、root用户应在目录/var/opt/snapcenter/SCC/etc/_下创建* sc_oratab.config*文件。
 +
 向Oracle二进制文件所有者和组授予写入权限、以便将来可以保留该文件。
@@ -76,8 +74,7 @@ IMPORTANT: 在升级SnapCenter 插件之前、始终建议对SC_oratab.config文
 
 如果已删除主机上的 Oracle 数据库， SnapCenter 服务器将无法识别并列出已删除的数据库。您应手动刷新资源以更新 SnapCenter 资源列表。
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
 . 在资源页面中，从 * 视图 * 列表中选择 * 数据库 * 。
 +

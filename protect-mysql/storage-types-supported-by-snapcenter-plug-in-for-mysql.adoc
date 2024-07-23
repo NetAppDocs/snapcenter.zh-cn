@@ -1,0 +1,39 @@
+---
+permalink: protect-mysql/storage-types-supported-by-snapcenter-plug-in-for-mysql.html 
+sidebar: sidebar 
+keywords: storage types, 
+summary: SnapCenter 在物理机和虚拟机（ VM ）上支持多种存储类型。在安装适用于MySQL的SnapCenter插件之前、您必须验证是否支持您的存储类型。 
+---
+= 适用于MySQL的SnapCenter插件支持的存储类型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 在物理机和虚拟机（ VM ）上支持多种存储类型。在安装适用于MySQL的SnapCenter插件之前、您必须验证是否支持您的存储类型。
+
+|===
+| 计算机 | Storage type 
+
+
+ a| 
+物理和虚拟服务器
+ a| 
+FC 连接的 LUN
+
+
+
+ a| 
+物理服务器
+ a| 
+iSCSI 连接的 LUN
+
+
+
+ a| 
+物理和虚拟服务器
+ a| 
+NFS-connected volumes
+
+|===

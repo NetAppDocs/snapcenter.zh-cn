@@ -45,6 +45,7 @@ summary: 您可以使用 SnapCenter 还原备份的 Exchange 数据库。
 您可以使用GET API显示密钥的值。不支持设置API。
 
 * 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于SnapMirror活动同步还原操作、您必须从主位置选择备份。
 
 
 .步骤

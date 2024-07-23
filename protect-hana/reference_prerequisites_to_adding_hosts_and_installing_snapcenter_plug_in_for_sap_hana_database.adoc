@@ -13,7 +13,7 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 [role="lead"]
 在添加主机并安装插件软件包之前，您必须满足所有要求。适用于 SAP HANA 数据库的 SnapCenter 插件可在 Windows 和 Linux 环境中使用。
 
-* 您必须已在主机上安装 Java 1.8 64 位。
+* 您必须已在主机上安装Java 11。
 +
 
 NOTE: 不支持IBM Java。
@@ -33,7 +33,7 @@ NOTE: 不支持IBM Java。
 * 您必须具有具有本地管理员权限的域用户，并在远程主机上具有本地登录权限。
 * 在 Windows 主机上安装适用于 SAP HANA 数据库的插件时，适用于 Microsoft Windows 的 SnapCenter 插件会自动安装。
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
-* 您必须已在 Windows 主机上安装 Java 1.8 64 位。
+* 您必须已在Windows主机上安装Java 11。
 +
 http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
 
@@ -47,7 +47,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src
 == Linux 主机
 
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
-* 您必须已在 Linux 主机上安装 Java 1.8 64 位。
+* 您必须已在Linux主机上安装Java 11。
 +
 http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
 

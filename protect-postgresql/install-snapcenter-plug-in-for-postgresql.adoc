@@ -1,0 +1,16 @@
+---
+permalink: protect-postgresql/install-snapcenter-plug-in-for-postgresql.html 
+sidebar: sidebar 
+keywords: installing 
+summary: 如果要保护PostgreSQL、应安装并设置适用于PostgreSQL的SnapCenter插件。 
+---
+= 适用于PostgreSQL的SnapCenter插件的安装工作流
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要保护PostgreSQL集群、应安装并设置适用于PostgreSQL的SnapCenter插件。
+
+image::../media/sap_hana_install_configure_workflow.gif[安装和配置工作流]

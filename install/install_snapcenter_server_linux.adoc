@@ -1,0 +1,162 @@
+---
+permalink: install/install_snapcenter_server_linux.html 
+sidebar: sidebar 
+keywords: install, snapcenter software, install, linux host 
+summary: 您可以在Linux主机上安装SnapCenter服务器。 
+---
+= 在Linux主机上安装SnapCenter服务器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以运行 SnapCenter 服务器安装程序可执行文件来安装 SnapCenter 服务器。
+
+.开始之前
+* 如果您要使用没有足够权限安装SnapCenter的非root用户安装SnapCenter服务器、请从NetApp支持站点获取sudoers校验和文件。您应根据Linux版本使用适当的校验和文件。
+* 在安装期间。 NET运行时，如果安装程序无法解析_libicu_库的依赖关系，则运行以下命令来安装_libicu_： `yum install -y libicu`
+* 如果由于_PERL_不可用而导致SnapCenter服务器安装失败、请运行以下命令来安装_PERL_： `yum install -y perl`
+* 如果sudo软件包在SUSE Linux中不可用、请安装sudo软件包以避免身份验证失败。
+* 对于SUSE Linux，请配置主机名以避免安装失败。
+* 运行命令以检查安全Linux状态 `sestatus`。如果_SELinux statu_为"enenabled "、而_current mode_为"enforcing"、请执行以下操作：
++
+** 运行命令： `sudo semanage port -a -t http_port_t -p tcp <WEBAPP_EXTERNAL_PORT_>`
++
+_webapp_External port_的默认值为8146
+
+** 如果防火墙阻止该端口、请运行 `sudo firewall-cmd --add-port <WEBAPP_EXTERNAL_PORT_>/tcp`
++
+_webapp_External port_的默认值为8146
+
+** 从具有读取和写入权限的目录运行以下命令：
++
+*** `sudo ausearch -c 'nginx' --raw | audit2allow -M my-nginx`
++
+如果此命令返回"无操作"、请在安装SnapCenter服务器后重新运行此命令。
+
+*** 如果此命令创建_my-nginx.pp_、请运行此命令以使此策略包处于活动状态： `sudo semodule -i my-nginx.pp`
+
+
+** 用于MySQL PID目录的路径是_/var/opt / myqld_。运行以下命令以设置MySQL安装的权限。
++
+*** `mkdir /var/opt/mysqld`
+*** `sudo semanage fcontext -a -t mysqld_var_run_t "/var/opt/mysqld(/.*)?"`
+*** `sudo restorecon -Rv /var/opt/mysqld`
+
+
+** 用于MySQL数据目录的路径为：//install_DIR/NetApp/snapcCenter/SnapManagerWeb/Repository /MySQL/_。运行以下命令以设置MySQL数据目录的权限。
++
+*** `mkdir -p /INSTALL_DIR/NetApp/snapcenter/SnapManagerWeb/Repository/MySQL`
+*** `sudo semanage fcontext -a -t mysqld_db_t "/INSTALL_DIR/NetApp/snapcenter/SnapManagerWeb/Repository/MySQL(/.*)?"`
+*** `sudo restorecon -Rv /INSTALL_DIR/NetApp/snapcenter/SnapManagerWeb/Repository/MySQL`
+
+
+
+
+
+
+.关于此任务
+* 如果SnapCenter服务器安装在Linux主机上、则会安装第三方服务、例如MySQL、RabbitMq、Errlang。您不应将其卸载。
+* 安装在Linux主机上的SnapCenter服务器不支持：
++
+** 高可用性
+** Windows 插件
+** Active Directory (仅支持本地用户、包括具有cred的root用户和非root用户)
+** 用于登录到SnapCenter的基于密钥的身份验证
+
+
+
+
+.步骤
+. 将以下内容从下载 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp 支持站点"^] 到_/home directory_。
++
+** SnapCenter服务器安装包-*snapcentr-linux-server-(el8/el9/sles15).bin*
+** 公共密钥文件-*snapcentre_public_key.pub*
+** 相应的签名文件-*snapcentre-linux-server-(el8/el9/sles15).bin.sig*
+
+
+. 验证签名文件。
+`$openssl dgst -sha256 -verify snapcenter_public_key.pub -signature <path to signature file> <path to bin file>`
+. 对于非root用户安装、请添加在*snapcentr_server_校 验和_(el8/el9/sles15).txt *中指定的visUDO内容、该内容随.bin安装程序一起提供。
+. 为.bin安装程序分配执行权限。
+`chmod +x snapcenter-linux-server-(el8/el9/sles15).bin`
+. 执行其中一项操作以安装SnapCenter服务器。
++
+|===
+| 要执行的操作 | 执行此操作 ... 
+
+
+ a| 
+交互式安装
+ a| 
+`./snapcenter-linux-server-(el8/el9/sles15).bin`
+
+系统将提示您输入以下详细信息：
+
+** 用于在Linux主机外部访问SnapCenter服务器的Web应用程序外部端口。默认值为8146。
+** 要安装SnapCenter服务器的SnapCenter服务器用户。
+** 要安装软件包的安装目录。
+
+
+
+
+ a| 
+非交互式安装
+ a| 
+`sudo ./snapcenter-linux-server-(el8/el9/sles15).bin -i silent -DWEBAPP_EXTERNAL_PORT=<port> -DWEBAPP_INTERNAL_PORT=<port> -DSMCORE_PORT=<port> -DSCHEDULER_PORT=<port>  -DSNAPCENTER_SERVER_USER=<user> -DUSER_INSTALL_DIR=<dir> -DINSTALL_LOG_NAME=<filename>`
+
+示例：sudo ./DSUAN snapcenter_linux_server.bin -i SILET -DWEBAPP_External、port=8146 -DSNAPCENter_SERVER_USER=root -DUSER_INSTALL_DIR=/opt -DINSLL_LOG_NAME=InstallerLog.log
+
+日志将存储在_/var/opt/snapcentre/logs_。
+
+要为安装SnapCenter服务器传递的参数：
+
+** DWEBAPP_External端口：用于在Linux主机外部访问SnapCenter服务器的Web应用程序外部端口。默认值为8146。
+** DWEBAPP_INTERNAL_PORT：用于在Linux主机中访问SnapCenter服务器的Web应用程序内部端口。默认值为8147。
+** DSMCORE_PORT：运行smcore服务的SMCore端口。默认值为8145。
+** DSCHEDULER_PORT：运行计划程序服务的计划程序端口。默认值为8154。
+** DSNAPCENer_SERVER_USER：要安装SnapCenter服务器的SnapCenter服务器用户。对于_DSNAPCENER_SERVER_USER_，默认为运行安装程序的用户。
+** duser_install_DIR：要安装软件包的安装目录。对于_duser_install_DIR_、默认安装目录为_/opt_。
+** DINSTORL_LOG_NAME：用于存储安装日志的日志文件名。这是一个可选参数、如果指定、则控制台上不会显示任何日志。 如果不指定此参数、则日志将显示在控制台上、并存储在默认日志文件中。
+** DSELINUX：如果_SELinux STATUS _为"enenabled "、_current mode_为"enforcing"、并且您已执行Before You开始部分中提到的命令、则应指定此参数并将值分配为1。默认值为0。
+** DUPGRADE：默认值为0。将此参数及其值指定为除0以外的任何整数以升级SnapCenter服务器。
+
+
+|===
+
+
+.下一步是什么？
+* 如果_SELinux statu_为"enenabled (启用)"、而_current mode_为"enforcing"(强制执行)、则*nginx*服务将无法启动。您应运行以下命令：
++
+.. 转到主目录。
+.. 运行命令： `jorunalctl -x|grep nginx`。
+.. 如果不允许Web应用程序内部端口(8147)侦听、请运行以下命令：
++
+*** `ausearch -c 'nginx' --raw | audit2allow -M my-nginx`
+*** `semodule -i my-nginx.pp`
+
+
+.. 运行 `setsebool -P httpd_can_network_connect on`
+
+
+
+
+
+
+== 注册产品以启用支持
+
+如果您是NetApp的新用户、并且没有现有的NetApp帐户、则应注册产品以启用支持。
+
+.步骤
+. 安装SnapCenter后，导航到*help >关于*。
+. 在_About SnapCenter _对话框中、记下SnapCenter实例、该实例是一个以871开头的20位数字。
+. 单击。 https://register.netapp.com[]
+. 单击 * 我不是 NetApp 注册客户 * 。
+. 指定您的详细信息以自行注册。
+. 将NetApp Reference SN字段留空。
+. 从“SnapCenter产品线”下拉列表中选择*Product*。
+. 选择计费提供商。
+. 输入20位数的SnapCenter实例ID。
+. 单击 * 提交 * 。
+

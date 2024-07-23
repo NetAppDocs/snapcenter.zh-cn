@@ -1,0 +1,73 @@
+---
+permalink: install/configure_ca_certificate_linux_host.html 
+sidebar: sidebar 
+keywords: SnapCenter, configure, CA certificate, linux, linux host 
+summary: 您应在Linux主机上使用SnapCenter服务器配置CA证书。 
+---
+= 为Linux主机配置CA证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Linux上安装SnapCenter服务器后、安装程序将创建自签名证书。如果要使用CA证书、则应为Nginx反向代理、审核日志记录和SnapCenter服务配置证书。
+
+
+
+== 配置NGINX证书
+
+.步骤
+. 导航到_/etc/ginx/conf.d_： `cd /etc/nginx/conf.d`
+. 使用vi或任何文本编辑器打开*snapcentre.conf*。
+. 导航到配置文件中的服务器部分。
+. 修改_ssl_certification__和_ssl_certification_key_的路径以指向CA证书。
+. 保存并关闭文件。
+. 重新加载Nginx： `$nginx -s reload`
+
+
+
+
+== 配置审核日志证书
+
+.步骤
+. 使用vi或任何文本编辑器打开_INSTALL_DIR/NetApp/snapcCenter/SnapManagerWeb/SnapManager.Web.UI.dll.config_。
++
+_INSTALL_DIR_的默认值是__/opt/_。
+
+. 编辑*UDILOG_CERTICATE_PATE*和*UDILOG_CERTICATE_Password*密钥，以分别包含CA证书路径和密码。
++
+审核日志证书仅支持_.pfx_格式。
+
+. 保存并关闭文件。
+. 重新启动*snapmanagerweb*服务： `$ systemctl restart snapmanagerweb`
+
+
+
+
+== 配置SnapCenter服务证书
+
+.步骤
+. 使用vi或任何文本编辑器打开以下配置文件。
++
+** _INSTALL_DIR/NetApp/snapcCenter/SnapManagerWeb/SnapManager.Web.UI.dll.config_
+** _INSTALL_DIR/NetApp/snapcCenter/SMCore/SMCore.ServiceHost.dll.config_
+** _INSTALL_DIR/NetApp/snapcCenter/Scheduler/Scheduler.API.dll.config_
++
+_INSTALL_DIR_的默认值是__/opt/_。
+
+
+
+. 编辑*service_certification_path*和*service_certification_password*密钥，以分别包含CA证书路径和密码。
++
+SnapCenter服务证书仅支持_.pfx_格式。
+
+. 保存并关闭文件。
+. 重新启动所有服务。
++
+** `$ systemctl restart snapmanagerweb`
+** `$ systemctl restart smcore`
+** `$ systemctl restart scheduler`
+
+
+

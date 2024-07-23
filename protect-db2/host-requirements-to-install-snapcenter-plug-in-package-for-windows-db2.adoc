@@ -1,0 +1,58 @@
+---
+permalink: protect-db2/host-requirements-to-install-snapcenter-plug-in-package-for-windows-db2.html 
+sidebar: sidebar 
+keywords: IBM Db2 
+summary: 在安装适用于 Windows 的 SnapCenter 插件软件包之前，您应熟悉一些基本的主机系统空间要求和规模估算要求。 
+---
+= 安装适用于 Windows 的 SnapCenter 插件软件包的主机要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安装适用于 Windows 的 SnapCenter 插件软件包之前，您应熟悉一些基本的主机系统空间要求和规模估算要求。
+
+|===
+| 项目 | 要求 
+
+
+ a| 
+操作系统
+ a| 
+Microsoft Windows
+
+有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=117007;&solution=1258&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+
+
+
+ a| 
+主机上 SnapCenter 插件的最小 RAM
+ a| 
+1 GB
+
+
+
+ a| 
+主机上 SnapCenter 插件的最小安装和日志空间
+ a| 
+5 GB
+
+
+NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消耗。所需的日志空间因要保护的实体数量和数据保护操作的频率而异。如果没有足够的磁盘空间，则不会为最近运行的操作创建日志。
+
+
+
+ a| 
+所需的软件包
+ a| 
+* (英文)。 NET核心8.0.5
+* PowerShell核心7.4.2
+* Java 11 Oracle Java和OpenJDK
+
+
+有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=117007;&solution=1258&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+
+有关.NET专用的故障排除信息、请参见 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["对于没有Internet连接的原有系统、SnapCenter 升级或安装失败。"]
+
+|===

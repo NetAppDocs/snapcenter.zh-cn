@@ -1,0 +1,33 @@
+---
+permalink: protect-mysql/backup-naming-conventions-for-plugin-for-mysql.html 
+sidebar: sidebar 
+keywords: Backup naming conventions 
+summary: 您可以使用默认快照命名约定、也可以使用自定义命名约定。默认备份命名约定会为快照名称添加一个时间戳、以帮助您确定副本的创建时间。 
+---
+= 适用于MySQL数据库的插件的备份命名约定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用默认的Snapshot命名约定、也可以使用自定义的命名约定。默认备份命名约定会为Snapshot名称添加一个时间戳、以帮助您确定副本的创建时间。
+
+Snapshot使用以下默认命名约定：
+
+`resourcegroupname_hostname_timestamp`
+
+您应按逻辑方式命名备份资源组，如以下示例所示：
+
+[listing]
+----
+dts1_mach1x88_03-12-2015_23.17.26
+----
+在此示例中，语法元素具有以下含义：
+
+* _dts1_ 是资源组名称。
+* _mach1X88_ 是主机名。
+* _03-12-2015_23.17.26_ 是日期和时间戳。
+
+
+或者，您也可以在保护资源或资源组时通过选择*Use custom name format for Snapshot copy*来指定Snapshot名称格式。例如， customtext_resourcegroup_policy_hostname 或 resourcegroup_hostname 。默认情况下、时间戳后缀会添加到Snapshot名称中。

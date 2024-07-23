@@ -1,0 +1,14 @@
+---
+permalink: protect-postgresql/auto-discovery-of-resources-on-linux-host.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for PostgreSQL 
+summary: 资源是指Linux主机上由SnapCenter管理的PostgreSQL集群和实例。安装适用于PostgreSQL的SnapCenter插件后、系统会自动发现该Linux主机上的PostgreSQL集群、并将其显示在资源页面中。 
+---
+= 自动发现 Linux 主机上的资源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+资源是指Linux主机上由SnapCenter管理的PostgreSQL集群和实例。安装适用于PostgreSQL的SnapCenter插件后、系统会自动发现该Linux主机上所有实例中的PostgreSQL集群、并将其显示在资源页面中。

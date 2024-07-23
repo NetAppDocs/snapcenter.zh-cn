@@ -1,10 +1,10 @@
 ---
 permalink: upgrade/task_upgrade_snapcenter.html 
 sidebar: sidebar 
-keywords: upgrade, upgrade snapcenter server 
+keywords: upgrade, upgrade snapcenter server, windows 
 summary: 您可以使用 SnapCenter 服务器安装程序可执行文件升级 SnapCenter 服务器。 
 ---
-= 升级 SnapCenter 服务器
+= 升级Windows主机上的SnapCenter服务器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -77,7 +77,7 @@ NOTE: SnapCenter 将继续使用在安装早期版本的 SnapCenter 服务器期
 
 
 .完成后
-* 如果此插件是使用 sudo 用户安装的，则应复制 _C ： \ProgramData\NetApp\SnapCenter\Package Repository\ORACLE_checksum.txt _ 处提供的 sha224 密钥以更新 _/etc/sudoers_ 文件。
+* 如果此插件是使用sudo用户安装的、则应复制_C：\ProgramData\NetApp\SnapCenter\Package Repository \SC_UNIX)中提供的Sha224密钥以更新_/etc/sudoers_文件。
 * 您应重新发现主机上的资源。
 +
 如果主机的状态显示为 stopped ，您可以等待一段时间并执行全新发现。您还可以将 * HostRefreshInterval* 参数的值（默认值为 3600 秒）更改为 10 分钟以上的任何值。

@@ -1,0 +1,47 @@
+---
+permalink: protect-mysql/discover-the-databases-automatically.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 资源是指Linux主机上由SnapCenter管理的MySQL数据库。发现可用的MySQL数据库后、您可以将这些资源添加到资源组中以执行数据保护操作。 
+---
+= 自动发现数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+资源是指Linux主机上由SnapCenter管理的MySQL数据库。发现可用的MySQL数据库后、您可以将资源添加到资源组中以执行数据保护操作。
+
+.开始之前
+* 您必须已完成安装SnapCenter服务器、添加主机和设置存储系统连接等任务。
+* 适用于MySQL的SnapCenter插件不支持自动发现驻留在RDM/VMDK虚拟环境中的资源。您必须在手动添加数据库时为虚拟环境提供存储信息。
+
+
+.关于此任务
+* 安装此插件后、系统会自动发现该Linux主机上的所有数据库、并将其显示在"Resues"页面上。
+* 仅自动发现数据库。
+
+
+无法修改或删除自动发现的资源。
+
+.步骤
+. 在左侧导航窗格中，单击*Resoles*，然后从列表中选择适用于MySQL的插件。
+. 在资源页面中，从视图列表中选择资源类型。
+. （可选）单击 *image:../media/filter_icon.png["筛选器图标"]* ，然后选择主机名。
++
+然后，您可以单击 *image:../media/filter_icon.png["筛选器图标"]* 以关闭筛选器窗格。
+
+. 单击 * 刷新资源 * 以发现主机上可用的资源。
++
+此时将显示资源以及资源类型，主机名，关联的资源组，备份类型，策略和整体状态等信息。
+
++
+** 如果数据库位于 NetApp 存储上且未受保护，则整体状态列中将显示未受保护。
+** 如果数据库位于 NetApp 存储系统上且受保护，并且未执行备份操作，则整体状态列中将显示备份未运行。否则，此状态将根据上次备份状态更改为备份失败或备份成功。
+
+
+
+
+
+IMPORTANT: 如果在SnapCenter外部重命名实例、则必须刷新资源。

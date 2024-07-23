@@ -46,9 +46,9 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
  a| 
 所需的软件包
  a| 
-* Microsoft .NET Framework 4.7.2或更高版本
-* Windows Management Framework （ WMF ） 4.0 或更高版本
-* PowerShell 4.0 或更高版本
+* (英文)。 NET核心8.0.5
+* PowerShell核心7.4.2
+* Java 11 Oracle Java和OpenJDK
 
 
 有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=117007;&solution=1258&isHWU&src=IMT["NetApp 互操作性表工具"^]。

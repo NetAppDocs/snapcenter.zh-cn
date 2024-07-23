@@ -1,0 +1,30 @@
+---
+permalink: protect-db2/delete-or-split-ibm-db2-clones-after-upgrading-snapcenter.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 Database 
+summary: '升级到 SnapCenter 4.3 后，您将无法再看到克隆。您可以从创建克隆的资源的 " 拓扑 " 页面中删除克隆或拆分克隆。' 
+---
+= 升级SnapCenter后、删除或拆分IBM DB2数据库克隆
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+升级到 SnapCenter 4.3 后，您将无法再看到克隆。您可以从创建克隆的资源的 " 拓扑 " 页面中删除克隆或拆分克隆。
+
+.关于此任务
+如果要查找隐藏克隆的存储占用空间，请运行以下命令： `Get-SmClone -ListStorageootprint`
+
+.步骤
+. 使用 remove-smbackup cmdlet 删除克隆资源的备份。
+. 使用 remove-smresourcegroup cmdlet 删除克隆资源的资源组。
+. 使用 remove-smprotectresource cmdlet 删除克隆资源的保护。
+. 从资源页面中选择父资源。
++
+此时将显示资源拓扑页面。
+
+. 从管理副本视图中，从主存储系统或二级（镜像或复制的）存储系统中选择克隆。
+. 选择克隆，然后单击 image:../media/delete_icon.gif[""] 要删除克隆，请单击 image:../media/split_cone.gif[""] 拆分克隆。
+. 单击 * 确定 * 。
+

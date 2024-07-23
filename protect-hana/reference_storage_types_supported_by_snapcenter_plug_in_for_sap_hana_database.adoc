@@ -18,13 +18,6 @@ SnapCenter 在物理机和虚拟机（ VM ）上支持多种存储类型。在�
 
 
  a| 
-物理和虚拟服务器
- a| 
-FC 连接的 LUN
-
-
-
- a| 
 物理服务器
  a| 
 iSCSI 连接的 LUN
@@ -34,6 +27,17 @@ iSCSI 连接的 LUN
  a| 
 物理和虚拟服务器
  a| 
-NFS-connected volumes
+* FC 连接的 LUN
+* NFS-connected volumes
+
+
+
+
+ a| 
+VMware ESXi
+ a| 
+NFS和SAN上的VVOV数据存储库
+
+只能使用适用于VMware vSphere的ONTAP工具配置VVOV数据存储库。
 
 |===

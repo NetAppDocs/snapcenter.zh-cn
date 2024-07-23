@@ -12,7 +12,7 @@ entries:
     url: "/protect-scw/concept_snapcenter_plug_in_for_windows_features.html"
   - title: SnapCenter 如何备份 Windows 文件系统
     url: "/protect-scw/concept_how_snapcenter_backs_up_windows_file_systems.html"
-  - title: 适用于 Microsoft Windows 的 SnapCenter 插件支持的存储类型
+  - title: 适用于Microsoft Windows的SnapCenter插件支持的存储类型
     url: "/protect-scw/reference_storage_types_supported_by_snapcenter_plug_ins_for_microsoft_windows.html"
   - title: Windows 插件所需的最低 ONTAP 权限
     url: "/protect-scw/reference_minimum_ontap_privileges_required_for_windows_plug_in.html"

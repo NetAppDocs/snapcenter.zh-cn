@@ -34,6 +34,8 @@ entries:
     url: "/protect-scu/task_back_up_unix_file_systems_resource_groups.html"
   - title: 监控备份进度
     url: "/protect-scu/task_monitor_unix_file_systems_backup_operations.html"
+  - title: 在Topology页面中查看受保护的Unix文件系统
+    url: "/protect-scu/view_protected_unix_file_systems_in_the_topology_page.html"
 - title: 还原和恢复Unix文件系统
   entries:
   - title: 还原和恢复Unix文件系统

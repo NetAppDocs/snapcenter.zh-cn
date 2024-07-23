@@ -1,0 +1,187 @@
+---
+permalink: protect-nsp/add_hosts_and_install_plug_in_packages_on_remote_hosts.html 
+sidebar: sidebar 
+keywords: add hosts 
+summary: 您必须使用 SnapCenterAdd Host 页面添加主机，然后安装插件软件包。这些插件会自动安装在远程主机上。您可以为单个主机或集群添加主机并安装插件软件包。 
+---
+= 添加主机并在远程主机上安装插件软件包
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须使用 SnapCenterAdd Host 页面添加主机，然后安装插件软件包。这些插件会自动安装在远程主机上。您可以为单个主机或集群添加主机并安装插件软件包。
+
+.开始之前
+* 您应该是分配给具有插件安装和卸载权限的角色的用户、例如SnapCenter 管理员角色。
+* 您应确保消息队列服务正在运行。
+* 如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。
++
+link:configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Server 2016 或更高版本上为自定义应用程序配置组托管服务帐户"]
+
+
+
+.关于此任务
+您不能将 SnapCenter 服务器作为插件主机添加到另一个 SnapCenter 服务器。
+
+如果在集群（ WSFC ）上安装插件，则这些插件将安装在集群的所有节点上。
+
+.步骤
+. 在左侧导航窗格中，选择 * 主机 * 。
+. 验证顶部是否已选中 * 受管主机 * 选项卡。
+. 选择 * 添加 * 。
+. 在主机页面中，执行以下操作：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+主机类型
+ a| 
+选择主机类型：
+
+** Windows
+** Linux
+
+
+
+NOTE: NetApp支持的插件可在Windows和Linux环境中使用。
+
+
+
+ a| 
+主机名
+ a| 
+输入主机的完全限定域名（ FQDN ）或 IP 地址。
+
+SnapCenter 取决于 DNS 的正确配置。因此，最佳做法是输入 FQDN 。
+
+对于 Windows 环境，只有在将 IP 地址解析为 FQDN 时，不可信域主机才支持此 IP 地址。
+
+您可以输入独立主机的 IP 地址或 FQDN 。
+
+如果要使用 SnapCenter 添加主机，并且此主机属于子域，则必须提供 FQDN 。
+
+
+
+ a| 
+凭据
+ a| 
+选择您创建的凭据名称或创建新凭据。
+
+这些凭据必须对远程主机具有管理权限。有关详细信息，请参见有关创建凭据的信息。
+
+您可以通过将光标置于指定的凭据名称上方来查看有关凭据的详细信息。
+
+
+NOTE: 凭据身份验证模式由您在添加主机向导中指定的主机类型决定。
+
+|===
+. 在 * 选择要安装的插件 * 部分中，选择要安装的插件。
++
+您可以从列表中安装以下插件：
+
++
+** MongoDB
+** ORASCPM (显示为Oracle应用程序)
+** SAP ASE
+** ORASCPM
+** SAP MaxDB
+** 存储
+
+
+. (可选)选择*更多选项*以安装其他插件。
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+Port
+ a| 
+保留默认端口号或指定端口号。
+
+默认端口号为 8145 。如果 SnapCenter 服务器安装在自定义端口上，则该端口号将显示为默认端口。
+
+
+NOTE: 如果您手动安装了插件并指定了自定义端口，则必须指定相同的端口。否则，操作将失败。
+
+
+
+ a| 
+安装路径
+ a| 
+自定义插件可以安装在 Windows 系统或 Linux 系统上。
+
+** 对于适用于 Windows 的 SnapCenter 插件软件包，默认路径为 C ： \Program Files\NetApp\SnapCenter 。
++
+您也可以自定义路径。
+
+** 对于适用于Linux的SnapCenter插件软件包、默认路径为 `/opt/NetApp/snapcenter`。
++
+您也可以自定义路径。
+
+** 对于 SnapCenter 自定义插件：
++
+... 在“Custom Plug-ins”(自定义插件)部分，选择*Browse*(浏览*)，然后选择压缩的自定义插件文件夹。
++
+压缩文件夹包含自定义插件代码和描述符 .xml 文件。
+
++
+对于存储插件、导航到 `_C:\ProgramData\NetApp\SnapCenter\Package Repository_` 并选择 `Storage.zip` 文件夹。
+
+... 选择*上传*。
++
+上传软件包之前，会验证压缩后的自定义插件文件夹中的描述符 .xml 文件。
+
++
+此时将列出上传到 SnapCenter 服务器的自定义插件。
+
+
+
+
+
+
+
+ a| 
+跳过安装前检查
+ a| 
+如果您已手动安装插件，并且不想验证主机是否满足安装插件的要求，请选中此复选框。
+
+
+
+ a| 
+使用组托管服务帐户（ GMSA ）运行插件服务
+ a| 
+对于 Windows 主机，如果要使用组托管服务帐户（ GMSA ）运行插件服务，请选中此复选框。
+
+
+IMPORTANT: 按以下格式提供 GMSA 名称： domainname\accountName$ 。
+
+
+NOTE: GMSA 仅用作适用于 Windows 的 SnapCenter 插件服务的登录服务帐户。
+
+|===
+. 选择 * 提交 * 。
++
+如果未选中 * 跳过预检查 * 复选框，则主机将通过验证以验证主机是否满足安装插件的要求。磁盘空间， RAM ， PowerShell 版本， .NET 版本，位置（对于 Windows 插件）和 Java 版本（对于 Linux 插件）均已根据最低要求进行验证。如果不满足最低要求，则会显示相应的错误或警告消息。
+
++
+如果此错误与磁盘空间或 RAM 相关，您可以更新位于 C ： \Program Files\NetApp\SnapCenter WebApp 的 web.config 文件以修改默认值。如果此错误与其他参数相关，则必须修复问题描述。
+
++
+
+NOTE: 在 HA 设置中，如果要更新 web.config 文件，则必须同时更新两个节点上的文件。
+
+. 如果主机类型为Linux，请验证指纹，然后选择*确认并提交*。
++
+
+NOTE: 即使先前已将同一主机添加到 SnapCenter 并确认了指纹，也必须进行指纹验证。
+
+. 监控安装进度。
++
+安装专用的日志文件位于 `/custom_location/snapcenter/` 日志。
+
+

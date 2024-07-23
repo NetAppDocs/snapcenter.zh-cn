@@ -47,6 +47,7 @@ NOTE: 您应对每个权限重复此命令。
 * `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster show" -access all`
 * `security login role create -vserver Cluster_name -role Role_Name -cmddirname "event generate-autosupport-log" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "job history show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "job show" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "job stop" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "LUN" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "lun create" -access all`
@@ -107,6 +108,7 @@ NOTE: 您应对每个权限重复此命令。
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume file clone create" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume file show-disk-usage" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot modify-snaplock-expiry-time" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume offline" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume online" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume qtree create" -access all`
@@ -123,6 +125,7 @@ NOTE: 您应对每个权限重复此命令。
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume snapshot restore" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume snapshot restore-file" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume snapshot show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot show-delta" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "volume unmount " -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "Vserver" -access all`
 * `ssecurity login role create -vserver Cluster_name -role role_name -cmddirname "Vserver cifs create" -access all`

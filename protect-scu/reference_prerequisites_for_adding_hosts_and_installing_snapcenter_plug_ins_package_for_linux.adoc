@@ -19,7 +19,7 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 非root用户可以安装适用于Unix文件系统的SnapCenter插件。但是，您应该为非 root 用户配置 sudo 权限，以便安装和启动插件过程。安装此插件后、这些进程将以有效的非root用户身份运行。
 
 * 为安装用户创建身份验证模式为Linux的凭据。
-* 您必须已在Linux主机上安装Java 1.8.x或Java 11 (64位)。
+* 您必须已在Linux主机上安装Java 11。
 +
 
 NOTE: 确保在Linux主机上仅安装了经过认证的Java 11版本。
@@ -70,9 +70,7 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
  a| 
 所需的软件包
  a| 
-* Java 1.8.x (64位) Oracle Java和OpenJDK
-* Java 11 (64位) Oracle Java和OpenJDK
-
+Java 11 Oracle Java和OpenJDK
 
 
 NOTE: 确保在Linux主机上仅安装了经过认证的Java 11版本。

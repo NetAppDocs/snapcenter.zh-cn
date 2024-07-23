@@ -1,0 +1,22 @@
+---
+permalink: protect-postgresql/snapcenter-plug-in-for-postgresql-overview.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for PostgreSQL 
+summary: 适用于PostgreSQL的SnapCenter插件是NetApp SnapCenter软件的主机端组件、支持对PostgreSQL集群进行应用程序感知型数据保护管理。适用于PostgreSQL集群的插件可在SnapCenter环境中自动备份、还原和克隆PostgreSQL集群。 
+---
+= 适用于PostgreSQL的SnapCenter插件概述
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+适用于PostgreSQL集群的SnapCenter插件是NetApp SnapCenter软件的主机端组件、用于对PostgreSQL集群进行应用程序感知型数据保护管理。适用于PostgreSQL集群的插件可在SnapCenter环境中自动备份、还原和克隆PostgreSQL集群。
+
+SnapCenter支持单集群和多集群PostgreSQL设置。您可以在Linux和Windows环境中使用适用于PostgreSQL集群的插件。在Windows环境中、支持使用PostgreSQL作为手动资源。
+
+安装适用于PostgreSQL集群的插件后、您可以使用采用NetApp SnapMirror技术的SnapCenter在另一个卷上创建备份集的镜像副本。您还可以使用采用 NetApp SnapVault 技术的插件执行磁盘到磁盘备份复制，以满足标准要求。
+
+适用于PostgreSQL的SnapCenter插件支持基于ONTAP和Azure NetApp文件存储布局的NFS和SAN。
+
+支持VMDK或虚拟存储布局。

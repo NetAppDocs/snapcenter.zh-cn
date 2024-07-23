@@ -14,12 +14,18 @@ summary: 您必须使用 SnapCenterAdd Host 页面添加主机并安装插件软
 您必须使用 SnapCenter * 添加主机 * 页面添加主机并安装插件软件包。这些插件会自动安装在远程主机上。
 
 .开始之前
+* 如果SnapCenter服务器主机的操作系统为Windows 2019、而插件主机的操作系统为Windows 2022、则应执行以下操作：
++
+** 升级到Windows Server 2019 (操作系统内部版本17763.5936)或更高版本
+** 升级到Windows Server 2022 (操作系统内部版本20348.2402)或更高版本
+
+
 * 您必须是分配给具有插件安装和卸载权限的角色的用户，例如 SnapCenter 管理员角色。
 * 在 Windows 主机上安装插件时，如果指定的凭据不是内置的，则应在主机上禁用 UAC 。
 * 您应确保消息队列服务处于运行状态。
 * 如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。
 +
-link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Server 2012 或更高版本上为 SQL 配置组托管服务帐户"^]
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Server 2016 或更高版本上为 SQL 配置组托管服务帐户"^]
 
 
 

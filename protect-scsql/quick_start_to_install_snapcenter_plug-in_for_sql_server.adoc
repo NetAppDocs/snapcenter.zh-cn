@@ -49,15 +49,6 @@ SnapCenter 标准版许可证是一种基于控制器的许可证，作为高级
 
 
  a| 
-基于 SnapCenter 标准容量
- a| 
-ONTAP Select 和 Cloud Volumes ONTAP 必需
-
-如果您是 Cloud Volumes ONTAP 或 ONTAP Select 客户，则需要根据 SnapCenter 管理的数据购买基于每 TB 容量的许可证。默认情况下， SnapCenter 会提供一个内置 90 天 100 TB SnapCenter 标准容量试用许可证。有关其他详细信息，请联系销售代表。
-
-
-
- a| 
 SnapMirror 或 SnapVault
  a| 
 ONTAP
@@ -113,7 +104,7 @@ CPU
 RAM
  a| 
 * 服务器主机： 8 GB
-* 插件主机： 1 GB
+* 插件主机： 4 GB
 
 
 
@@ -123,10 +114,13 @@ RAM
  a| 
 服务器主机：
 
-* 4 GB ，用于 SnapCenter 服务器软件和日志
-* 6 GB 用于 SnapCenter 存储库
+* 7 GB ，用于 SnapCenter 服务器软件和日志
+* 8 GB 用于 SnapCenter 存储库
 * 每个插件主机： 2 GB 用于插件安装和日志，只有在专用主机上安装了插件时才需要此空间。
 
+
+
+NOTE: 如果SnapCenter服务器与SnapCenter存储库安装在同一主机中、则建议使用15 GB空间。
 
 
 
@@ -136,8 +130,8 @@ RAM
 SnapCenter 服务器主机和插件主机上需要：
 
 * Microsoft .NET Framework 4.7.2或更高版本
-* Windows Management Framework （ WMF ） 4.0 或更高版本
-* PowerShell 4.0 或更高版本
+* ASP。 NET Core托管包(8.0.5或更高版本)
+* PowerShell 7.4.2或更高版本
 
 
 
@@ -262,22 +256,7 @@ NOTE: 自定义安装路径不支持特殊字符 "%" 。如果在路径中包含
 
 
 
-=== 第4步：添加基于SnapCenter 容量的许可证
-
-. 在 SnapCenter 图形用户界面左窗格中，单击 * 设置 > 软件 * ，然后在许可证部分中单击 * 。
-. 选择以下两种获取许可证的方法之一：
-+
-** 输入 NetApp 支持站点登录凭据以导入许可证。
-** 浏览到 NetApp 许可证文件的位置，然后单击 * 打开 * 。
-
-
-. 在向导的 Notifications 页面中，使用默认容量阈值 90% 。
-. 单击 * 完成 * 。
-
-
-
-
-=== 第5步：设置存储系统连接
+=== 第4步：设置存储系统连接
 
 . 在左窗格中，单击 * 存储系统 > 新建 * 。
 . 在添加存储系统页面中，执行以下操作：

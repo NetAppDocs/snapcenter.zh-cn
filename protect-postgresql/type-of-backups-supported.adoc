@@ -1,0 +1,20 @@
+---
+permalink: protect-postgresql/type-of-backups-supported.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for postgresql 
+summary: 备份类型指定要创建的备份类型。SnapCenter支持对PostgreSQL集群使用基于Snapshot副本的备份类型。 
+---
+= 支持的备份类型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+备份类型指定要创建的备份类型。SnapCenter支持对PostgreSQL集群使用基于Snapshot副本的备份类型。
+
+
+
+== 基于 Snapshot 副本的备份
+
+基于Snapshot副本的备份可利用NetApp Snapshot技术为PostgreSQL集群所在的卷创建联机只读副本。

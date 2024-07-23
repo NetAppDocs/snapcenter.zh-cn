@@ -1,0 +1,47 @@
+---
+permalink: protect-postgresql/discover-the-clusters-automatically.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 资源是Linux主机上由SnapCenter管理的PostgreSQL集群。发现可用的PostgreSQL集群后、您可以将这些资源添加到资源组中以执行数据保护操作。 
+---
+= 自动发现集群
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+资源是Linux主机上由SnapCenter管理的PostgreSQL集群。发现可用的PostgreSQL集群后、您可以将资源添加到资源组中以执行数据保护操作。
+
+.开始之前
+* 您必须已完成安装SnapCenter服务器、添加主机和设置存储系统连接等任务。
+* 适用于PostgreSQL的SnapCenter插件不支持自动发现驻留在RMM/VMDK虚拟环境中的资源。
+
+
+.关于此任务
+* 安装此插件后、系统会自动发现此Linux主机上的所有集群、并将其显示在"Resus"页面上。
+* 仅会自动发现集群。
+
+
+无法修改或删除自动发现的资源。
+
+.步骤
+. 在左侧导航窗格中，单击*Resoles*，然后从列表中选择适用于PostgreSQL的插件。
+. 在资源页面中，从视图列表中选择资源类型。
+. （可选）单击 *image:../media/filter_icon.png["筛选器图标"]* ，然后选择主机名。
++
+然后，您可以单击 *image:../media/filter_icon.png["筛选器图标"]* 以关闭筛选器窗格。
+
+. 单击 * 刷新资源 * 以发现主机上可用的资源。
++
+此时将显示资源以及资源类型，主机名，关联的资源组，备份类型，策略和整体状态等信息。
+
++
+** 如果集群位于NetApp存储上且未受保护、则整体状态列将显示未受保护。
+** 如果集群位于NetApp存储系统上且受保护、并且未执行任何备份操作、则整体状态列中将显示备份未运行。否则，此状态将根据上次备份状态更改为备份失败或备份成功。
+
+
+
+
+
+IMPORTANT: 如果在SnapCenter外部重命名集群、则必须刷新资源。

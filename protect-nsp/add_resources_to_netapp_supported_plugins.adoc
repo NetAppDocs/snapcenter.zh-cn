@@ -1,0 +1,202 @@
+---
+permalink: protect-nsp/add_resources_to_netapp_supported_plugins.html 
+sidebar: sidebar 
+keywords: NetApp supported plug-in, resources, snapcenter 
+summary: 您必须添加要备份或克隆的资源。根据您的环境，资源可能是要备份或克隆的数据库实例或集合。 
+---
+= 向NetApp支持的插件添加资源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须添加要备份或克隆的资源。根据您的环境，资源可能是要备份或克隆的数据库实例或集合。
+
+.开始之前
+* 您必须已完成安装 SnapCenter 服务器，添加主机，创建存储系统连接和添加凭据等任务。
+* 您必须具有 link:develop_a_plug_in_for_your_application.html["已为您的应用程序创建自定义插件"]。
+* 您必须已将插件上传到 SnapCenter 服务器。
+
+
+.步骤
+. 在左侧导航窗格中，选择*Resoles*，然后从列表中选择相应的插件。
+. 在“资源”页面中，选择*Add ResResource *。
+. 在提供资源详细信息页面中，执行以下操作：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+Name
+ a| 
+输入资源的名称。
+
+
+
+ a| 
+主机名
+ a| 
+选择主机。
+
+
+
+ a| 
+Type
+ a| 
+选择类型。type 是用户根据插件问题描述文件定义的。例如，数据库和实例。
+
+如果选定类型为父类型，请输入父类型的详细信息。例如，如果类型为 " 数据库 " ，而父级为 " 实例 " ，请输入此实例的详细信息。
+
+
+
+ a| 
+凭据名称
+ a| 
+选择 Credential 或创建新凭据。
+
+
+
+ a| 
+挂载路径
+ a| 
+输入挂载资源的挂载路径。这仅适用于 Windows 主机。
+
+|===
+. 在提供存储占用空间页面中，选择一个存储系统并选择一个或多个卷、LUN和qtrees，然后选择*Save*。
++
+可选：选择 image:../media/add_policy_from_resourcegroup.gif["加号图标"] 图标，用于从其他存储系统添加更多卷， LUN 和 qtree 。
+
++
+
+NOTE: NetApp支持的插件不支持自动发现资源。物理和虚拟环境的存储详细信息也不会自动发现。您必须在创建资源时提供物理和虚拟环境的存储信息。
+
++
+image::../media/storage_footprint.gif[存储占用空间]
+
+. 在资源设置页面中，为资源提供自定义密钥值对。
++
+
+NOTE: 确保自定义键名是大写。
+
++
+image::../media/resource_settings.gif[资源设置]
+
++
+有关相应插件参数、请参见 link:add_resources_to_netapp_supported_plugins.html#parameters-to-configure-the-resource["用于配置资源的参数"]
+
+. 查看摘要，然后选择*完成*。
+
+
+.结果
+此时将显示资源以及类型，主机或集群名称，关联的资源组和策略以及整体状态等信息。
+
+
+IMPORTANT: 如果在 SnapCenter 外部重命名了数据库，则必须刷新资源。
+
+.完成后
+如果要为其他用户提供对资产的访问权限， SnapCenter 管理员必须为这些用户分配资产。这样，用户就可以执行对分配给他们的资产具有权限的操作。
+
+添加资源后，您可以修改资源详细信息。如果NetApp支持的插件资源具有关联的备份、则无法修改以下字段：资源名称、资源类型和主机名。
+
+
+
+== 用于配置资源的参数
+
+如果要手动添加插件、则可以使用以下参数在资源设置页面中配置资源。
+
+
+
+=== 适用于MongoDB的插件
+
+资源设置：
+
+* MongoDB_APP_SERVER=(对于共享集群的资源类型)或MongoDB_复制Set_SERVER=(对于复制集的资源类型)
+* oplog_path=(如果是从MongoDB.propertiesfile提供的、则为可选参数)
+* MongoDB_authentication类型=(LDAP身份验证为纯、其他身份验证为无)
+
+
+您必须提供需要在MongoDB.properties文件中提供的以下参数：
+
+* disable启动停止服务=
++
+** n (如果启动/停止服务由插件执行)。
+** y (如果用户执行start/**stop服务)。
+** 可选参数作为默认值设置为N
+
+
+* oplog_path_=(如果已在SnapCenter中作为自定义键值对提供、则为可选参数)。
+
+
+
+
+=== 适用于MaxDB的插件
+
+资源设置：
+
+* XUSER_enable (Y|N)启用或禁用MaxDB的xuser，以便数据库用户不需要密码。
+* Handle_LOGWRITER (Y|N)执行暂停日志写入程序(N)或恢复日志写入程序(Y)操作。
+* DBMCLICMD (path_to-dbmcli_cmd)指定MaxDB dbmcli命令的路径。如果未设置、则使用搜索路径上的dbmcli。
+
+
+
+NOTE: 对于Windows环境、路径必须使用双引号("...")。
+
+* SQLCLICMD (path-to-sqlcli_cmd)指定MaxDB sqlcli命令的路径。如果未设置路径、则在搜索路径上使用sqlcli。
+* MaxDB_UPDATE_HIST_LOG (Y|N)指示MaxDB备份程序是否应更新MaxDB历史记录日志。
+* MaxDB_check_快 照DIR：示例：SID1：目录[,directory...]；[SID2：目录[,directory...] 检查Snap Creator Snapshot副本操作是否成功、并确保已创建快照。
++
+仅限此适用场景 NFS 。此目录必须指向包含 .snapshot 目录的位置。多个目录可以包含在一个逗号分隔列表中。
+
++
+在 MaxDB 7.8 及更高版本中，数据库备份请求在备份历史记录中标记为失败。
+
+* maxDB_backup_temples：为每个数据库指定一个备份模板。
++
+模板必须存在、并且是外部类型的备份模板。要为MaxDB 7.8及更高版本启用快照集成、您必须具有MaxDB后台服务器功能、并且已配置外部类型的MaxDB备份模板。
+
+* MaxDB_BG_SERVER_PREfix：指定后台服务器名称的前缀。
++
+如果设置了 MaxDB_backup_templates 参数，则还必须设置 MaxDB_BG_SERVER_PREFIXP参数 。如果未设置前缀、则会使用默认值na_bg_。
+
+
+
+
+
+=== 适用于Sybase ASE的插件
+
+资源设置：
+
+* Sybase_Server (data_server-name)指定Sybase数据服务器名称(isql命令上的-S选项)。例如、p_test。
+* 如果使用"all"结构、Sybase_database排除(db_name)允许排除数据库。
++
+您可以使用分号分隔列表指定多个数据库。例如：pubs2；test_db1。
+
+* Sybase_user：user_name指定可以运行isql命令的操作系统用户。
++
+对于UNIX为必需项。如果运行Snap Creator Agent start和stop命令的用户(通常为root用户)与运行isql命令的用户不同、则需要此参数。
+
+* Sybase_tran_dump db_name：directory_path用于在创建快照后执行Sybase事务转储。例如、pubs2：/sybaseDumps/ pubs2
++
+您必须指定需要事务转储的每个数据库。
+
+* Sybase_tran_dump_comppress (Y|N )启用或禁用本机Sybase事务转储压缩。
+* Sybase_ISQL_CMD (例如/opt/Sybase/OCS-15_0/bin/isql)定义了isql命令的路径。
+* Sybase_ex懦_tempdb (Y|N)允许您自动排除用户创建的临时数据库。
+
+
+
+
+=== 适用于Oracle应用程序的插件(ORASCPM)
+
+资源设置：
+
+* sqlplus CMD指定sqlplus的路径。
+* oracle_database列出要备份的Oracle数据库和对应的用户(database：user)。
+* CNTL_FIRE_BACKUP DIR指定控制文件备份的目录。
+* ORA_TemMP用于指定临时文件的目录。
+* oracle_home指定Oracle软件的安装目录。
+* archive_log_only用于指定是否备份归档日志。
+* oracle_backup_mode指定是执行联机备份还是脱机备份。
+

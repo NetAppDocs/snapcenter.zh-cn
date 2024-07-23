@@ -1,0 +1,22 @@
+---
+permalink: protect-db2/define-a-restore-and-recovery-strategy-for-ibm-db2-resources.html 
+sidebar: sidebar 
+keywords: restore and recovery strategy, IBM Db2 resources, snapcenter 
+summary: 您必须在还原和恢复数据库之前定义策略，以便成功执行还原和恢复操作。 
+---
+= 为IBM DB2资源定义恢复和恢复策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须在还原和恢复数据库之前定义策略，以便成功执行还原和恢复操作。
+
+
+NOTE: 仅支持手动恢复数据库。
+
+.步骤
+. 确定手动添加的IBM DB2资源支持的恢复策略
+. 确定自动发现的IBM DB2数据库支持的恢复策略
+

@@ -1,0 +1,30 @@
+---
+permalink: protect-mysql/types-of-restore-performed-for-auto-discovered-mysql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for mysql 
+summary: '对于自动发现的SnapRestore数据库、SnapCenter支持基于卷的MySQL \(VBSR\)、单文件SnapRestore以及连接和副本还原类型。' 
+---
+= 自动发现的MySQL的还原操作类型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+适用于MySQL的SnapCenter插件支持单文件SnapRestore以及自动发现的MySQL数据库的连接和副本还原类型。
+
+
+
+== 在以下情况下，在 NFS 环境中执行单个文件 SnapRestore ：
+
+* 如果仅选择了*完整资源*选项
+* 如果选择的备份来自 SnapMirror 或 SnapVault 二级位置，则会选择 * 完整资源 * 选项
+
+
+
+
+== 在以下情况下，在 SAN 环境中执行单个文件 SnapRestore ：
+
+* 如果仅选择了*完整资源*选项
+* 从 SnapMirror 或 SnapVault 二级位置选择备份后，将选择 * 完整资源 * 选项
+

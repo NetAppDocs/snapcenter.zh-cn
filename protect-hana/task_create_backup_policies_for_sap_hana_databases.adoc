@@ -23,6 +23,7 @@ summary: 在使用 SnapCenter 备份 SAP HANA 数据库资源之前，您必须�
 +
 此外，您还可以在策略中指定复制，脚本和应用程序设置。如果要将策略重复用于其他资源组，这些选项可节省时间。
 
+* 查看SnapMirror主动同步的特定前提条件和限制。有关信息，请参阅 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror活动同步的对象限制"]。
 
 
 .关于此任务
@@ -147,6 +148,8 @@ SnapLock保留期限应少于100年。
 * 创建本地 Snapshot 副本后更新 SnapMirror *
  a| 
 选择此字段可在另一个卷上创建备份集的镜像副本（ SnapMirror 复制）。
+
+对于SnapMirror活动同步、应启用此选项。
 
 如果ONTAP中的保护关系类型为"镜像和存储"、而您仅选择此选项、则在主系统上创建的快照不会传输到目标系统、而是会在目标系统中列出。如果从目标中选择了此Snapshot来执行还原操作、则会显示"Secondary Location is not available for the selected vauled/Mirrored backup (辅助位置不可用于选定存储/镜像备份)"错误消息。
 

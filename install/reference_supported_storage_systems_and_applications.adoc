@@ -13,10 +13,13 @@ summary: 您应了解支持的存储系统，应用程序和数据库。
 [role="lead"]
 您应了解支持的存储系统，应用程序和数据库。
 
-* SnapCenter 支持 ONTAP 8.3.0 及更高版本来保护数据。
+* SnapCenter 支持 ONTAP 9.12.1 及更高版本来保护数据。
 * SnapCenter 支持适用于 NetApp ONTAP 的 Amazon FSx ，以保护您的数据免受 SnapCenter 软件 4.5 P1 修补版本的影响。
 +
 如果您使用的是适用于 NetApp ONTAP 的 Amazon FSx ，请确保 SnapCenter 服务器主机插件升级到 4.5 P1 或更高版本以执行数据保护操作。
+
++
+支持基于传输控制协议(TCP)的非易失性内存快速(NVMe)。
 
 +
 有关适用于 NetApp ONTAP 的 Amazon FSX 的信息，请参见 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX for NetApp ONTAP 文档"^]。

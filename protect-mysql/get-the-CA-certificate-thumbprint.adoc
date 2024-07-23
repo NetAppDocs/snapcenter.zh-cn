@@ -1,0 +1,38 @@
+---
+permalink: protect-mysql/get-the-CA-certificate-thumbprint.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 获取 CA 证书指纹。 
+---
+= 获取 CA 证书指纹
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+证书指纹是用于标识证书的十六进制字符串。指纹是使用指纹算法根据证书内容计算得出的。
+
+.步骤
+. 在 GUI 上执行以下操作：
++
+.. 双击证书。
+.. 在证书对话框中，单击 * 详细信息 * 选项卡。
+.. 滚动字段列表，然后单击 * 缩略图 * 。
+.. 从框中复制十六进制字符。
+.. 删除十六进制数之间的空格。
++
+例如，如果指纹为 "A9 09 50 2D D8 2a E4 14 33 E6 F8 38 86 b0 0d 42 77 A3 2a 7b" ，则在删除空格后，指纹将为 "a909502dd82ae41433e6f83886b00d4277a32a7b" 。
+
+
+
+. 从 PowerShell 执行以下操作：
++
+.. 运行以下命令以列出已安装证书的指纹，并按主题名称标识最近安装的证书。
++
+_Get-子 项 -Path Cert ： \LOCALLMACHINE\My_
+
+.. 复制指纹。
+
+
+

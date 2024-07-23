@@ -64,6 +64,7 @@
 ** 创建卷快照
 ** 卷快照删除
 ** 卷快照修改
+** volume snapshot modify-snapLock-expiry-time
 ** 卷快照重命名
 ** 卷快照还原
 ** 卷快照还原文件

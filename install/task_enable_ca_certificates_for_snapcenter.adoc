@@ -18,7 +18,7 @@ summary: 您应配置 CA 证书并为 SnapCenter 服务器启用 CA 证书验证
 * 您可以使用 Get-SmCertificateSettings cmdlet 显示 SnapCenter 服务器的证书状态。
 
 
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 * 步骤 *
 

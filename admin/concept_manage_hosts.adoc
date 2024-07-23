@@ -14,11 +14,17 @@ summary: 您可以添加主机并安装 SnapCenter 插件软件包，添加验�
 您可以添加主机并安装 SnapCenter 插件软件包，添加验证服务器，删除主机，迁移备份作业以及更新主机以升级插件软件包或添加新插件软件包。根据您正在使用的插件，您还可以配置磁盘，管理 SMB 共享，管理启动程序组（ igroup ），管理 iSCSI 会话以及迁移数据。
 
 |===
-| 您可以执行以下任务 ... | 适用于 Microsoft Exchange Server | 适用于 Microsoft SQL Server | 对于 Microsoft Windows | 适用于 Oracle 数据库 | 适用于 SAP HANA 数据库 | 自定义插件 
+| 您可以执行以下任务 ... | 适用于 Microsoft Exchange Server | 适用于 Microsoft SQL Server | 对于 Microsoft Windows | 适用于 Oracle 数据库 | 适用于 SAP HANA 数据库 | 适用于NetApp支持的插件 | 对于DB2 | 适用于PostgreSQL | 适用于MySQL 
 
 
  a| 
 添加主机并安装插件软件包
+ a| 
+是的。
+ a| 
+是的。
+ a| 
+是的。
  a| 
 是的。
  a| 
@@ -48,11 +54,23 @@ summary: 您可以添加主机并安装 SnapCenter 插件软件包，添加验�
 否
  a| 
 否
+ a| 
+否
+ a| 
+否
+ a| 
+否
 
 
 
  a| 
 暂停计划并将主机置于维护模式
+ a| 
+是的。
+ a| 
+是的。
+ a| 
+是的。
  a| 
 是的。
  a| 
@@ -82,11 +100,23 @@ summary: 您可以添加主机并安装 SnapCenter 插件软件包，添加验�
 是的。
  a| 
 是的。
+ a| 
+是的。
+ a| 
+是的。
+ a| 
+是的。
 
 
 
  a| 
 从 SnapCenter 中删除主机
+ a| 
+是的。
+ a| 
+是的。
+ a| 
+是的。
  a| 
 是的。
  a| 
@@ -116,6 +146,12 @@ summary: 您可以添加主机并安装 SnapCenter 插件软件包，添加验�
 是的。
  a| 
 是的。
+ a| 
+是的。
+ a| 
+是的。
+ a| 
+是的。
 
 
 
@@ -127,6 +163,12 @@ summary: 您可以添加主机并安装 SnapCenter 插件软件包，添加验�
 否
  a| 
 是的。
+ a| 
+否
+ a| 
+否
+ a| 
+否
  a| 
 否
  a| 
@@ -150,6 +192,12 @@ summary: 您可以添加主机并安装 SnapCenter 插件软件包，添加验�
 否
  a| 
 否
+ a| 
+否
+ a| 
+否
+ a| 
+否
 
 
 
@@ -161,6 +209,12 @@ summary: 您可以添加主机并安装 SnapCenter 插件软件包，添加验�
 否
  a| 
 是的。
+ a| 
+否
+ a| 
+否
+ a| 
+否
  a| 
 否
  a| 
@@ -183,6 +237,13 @@ summary: 您可以添加主机并安装 SnapCenter 插件软件包，添加验�
  a| 
 否
  a| 
+否
+ a| 
+否
+ a| 
+否
+ a| 
+否
 
 |===
 

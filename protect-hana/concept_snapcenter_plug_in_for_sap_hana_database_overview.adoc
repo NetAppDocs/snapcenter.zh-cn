@@ -16,3 +16,5 @@ summary: 适用于 SAP HANA 数据库的 SnapCenter 插件是 NetApp SnapCenter 
 SnapCenter 支持单个容器和多租户数据库容器（ MDC ）。您可以在 Windows 和 Linux 环境中使用适用于 SAP HANA 数据库的插件。未安装在 HANA 数据库主机上的插件称为集中式主机插件。集中式主机插件可以管理不同主机之间的多个 HANA 数据库。
 
 安装适用于 SAP HANA 数据库的插件后，您可以使用采用 NetApp SnapMirror 技术的 SnapCenter 在另一个卷上创建备份集的镜像副本。您还可以使用采用 NetApp SnapVault 技术的插件执行磁盘到磁盘备份复制，以满足标准要求。
+
+适用于SAP HANA数据库的插件支持SnapMirror活动同步(最初作为SnapMirror Business Continuing [SM-BC)发布)、即使在站点完全瘫痪时、业务服务也能继续运行、从而支持应用程序使用二级副本透明地进行故障转移。使用SnapMirror活动同步触发故障转移无需手动干预或额外编写脚本。

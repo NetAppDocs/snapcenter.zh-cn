@@ -1,0 +1,14 @@
+---
+permalink: protect-db2/number-of-backup-jobs-needed-for-ibm-db2.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: 决定所需备份作业数量的因素包括资源大小，已用卷数，资源更改率以及您的服务级别协议 \ （ SLA\ ）。 
+---
+= IBM DB2所需的备份作业数
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+决定所需备份作业数量的因素包括资源大小，已用卷数，资源更改率以及您的服务级别协议（ Service Level Agreement ， SLA ）。

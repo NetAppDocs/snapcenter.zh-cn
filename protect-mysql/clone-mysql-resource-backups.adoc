@@ -1,0 +1,31 @@
+---
+permalink: protect-mysql/clone-mysql-resource-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: 克隆工作流包括执行克隆操作和监控操作。 
+---
+= 克隆工作流
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+克隆工作流包括执行克隆操作和监控操作。
+
+.关于此任务
+* 您可以在源MySQL服务器上进行克隆。
+* 克隆资源备份的原因如下：
++
+** 测试在应用程序开发周期中必须使用当前资源结构和内容实施的功能
+** 用于填充数据仓库时的数据提取和操作工具
+** 恢复错误删除或更改的数据
+
+
+
+
+以下工作流显示了必须执行克隆操作的顺序：
+
+image::../media/sco_scc_wfs_clone_workflow.png[克隆工作流]
+
+您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。SnapCenter cmdlet 帮助和 cmdlet 参考信息包含有关 PowerShell cmdlet 的详细信息。

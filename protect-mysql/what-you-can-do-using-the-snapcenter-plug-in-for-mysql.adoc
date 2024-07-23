@@ -1,0 +1,23 @@
+---
+permalink: protect-mysql/what-you-can-do-using-the-snapcenter-plug-in-for-mysql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for mysql 
+summary: 在您的环境中安装适用于MySQL的插件时、您可以使用SnapCenter备份、还原和克隆MySQL及其资源。您还可以执行支持这些操作的任务。 
+---
+= 使用适用于MySQL的SnapCenter插件可以执行的操作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在您的环境中安装适用于MySQL数据库的插件时、您可以使用SnapCenter备份、还原和克隆MySQL实例。您还可以执行支持这些操作的任务。
+
+* 添加实例。
+* 创建备份
+* 从备份还原
+* 克隆备份。
+* 计划备份操作。
+* 监控备份，还原和克隆操作。
+* 查看备份，还原和克隆操作的报告。
+

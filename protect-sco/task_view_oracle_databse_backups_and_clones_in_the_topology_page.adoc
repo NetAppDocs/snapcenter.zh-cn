@@ -30,7 +30,7 @@ summary: 在准备备份或克隆资源时，您可能会发现以图形方式�
 
 NOTE: 镜像存储类型卷上版本灵活的镜像备份的克隆将显示在拓扑视图中，但拓扑视图中的镜像备份计数不包括版本灵活的备份。
 
-如果您将二级关系设置为SnapMirror业务连续性(SM-BC)、则可以看到以下附加图标：
+如果您将二级关系设置为SnapMirror活动同步(最初发布为SnapMirror Business Continuance[SM-BC))、则可以看到以下附加图标：
 
 * image:../media/topology_replica_site_up.png["副本站点已启动"] 表示副本站点已启动。
 * image:../media/topology_replica_site_down.png["副本站点已关闭"]  表示副本站点已关闭。
@@ -59,10 +59,10 @@ NOTE: 镜像存储类型卷上版本灵活的镜像备份的克隆将显示在�
 如果应用程序资源分布在多个卷上、则备份的SnapLock到期时间将是为卷中的Snapshot设置的最长SnapLock到期时间。从ONTAP检索到最长的SnapLock到期时间。
 
 +
-对于SnapMirror业务连续性(SM-BC)，单击*刷新*按钮可通过查询主站点和副本站点的SnapCenter来刷新ONTAP备份清单。每周计划还会对包含SM-BC关系的所有数据库执行此活动。
+对于SnapMirror活动同步、单击*刷新*按钮可通过查询主站点和副本站点的SnapCenter来刷新ONTAP备份清单。每周计划还会对包含SnapMirror活动同步关系的所有数据库执行此活动。
 
 +
-** 对于SM-BC、应在故障转移后手动配置与新主目标的异步镜像、存储或镜像存储关系。
+** 对于SnapMirror主动同步以及仅适用于ONTAP 9.14.1、应在故障转移后手动配置与新主目标的异步镜像或异步镜像存储关系。从ONTAP 9.151开始、异步镜像或异步镜像存储会自动配置到新的主目标。
 ** 故障转移后、应创建一个备份、以使SnapCenter能够识别故障转移。只有在创建备份后才能单击*Refresh*。
 
 
@@ -87,4 +87,4 @@ NOTE: 您不能重命名或删除二级存储上的备份。
 
 有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。
 
-或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896["《 SnapCenter 软件命令参考指南》"^] 或 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["《 SnapCenter 软件命令参考指南》"^] 或 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。

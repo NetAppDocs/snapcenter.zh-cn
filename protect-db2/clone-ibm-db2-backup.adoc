@@ -1,0 +1,135 @@
+---
+permalink: protect-db2/clone-ibm-db2-backup.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2,run as 
+summary: 您可以使用 SnapCenter 克隆备份。您可以从主备份或二级备份克隆。 
+---
+= 克隆IBM DB2备份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SnapCenter 克隆备份。您可以从主备份或二级备份克隆。
+
+.开始之前
+* 您应已备份资源或资源组。
+* 您应确保托管卷的聚合应位于 Storage Virtual Machine （ SVM ）的已分配聚合列表中。
+* 对于克隆前或克隆后命令、您应通过以下路径检查这些命令是否位于插件主机上的命令列表中：
++
+对于Windows：_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creper\ETC\ALLOWED_commands.config_
+
++
+对于Linux：_/opt/NetApp/snapcentre/SCC/ETC/ALLOED_commands.config_
+
+
+
+
+NOTE: 如果命令列表中不存在这些命令、则操作将失败。
+
+.关于此任务
+* 有关克隆拆分操作限制的信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 ONTAP 9 逻辑存储管理指南》"^]。
+* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+
+
+.步骤
+. 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
+. 在资源页面中，根据资源类型从 * 视图 * 下拉列表中筛选资源。
++
+此时将显示资源以及类型，主机，关联的资源组和策略以及状态等信息。
+
+. 选择资源或资源组。
++
+如果选择资源组，则必须选择一个资源。
+
++
+此时将显示资源或资源组拓扑页面。
+
+. 在管理副本视图中，从主存储系统或二级（镜像或存储）存储系统中选择 * 备份 * 。
+. 从表中选择数据备份，然后单击 image:../media/clone_icon.gif["克隆图标"]。
+. 在位置页面中，执行以下操作：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+克隆服务器
+ a| 
+选择应在其中创建克隆的主机。
+
+
+
+ a| 
+目标克隆实例
+ a| 
+输入要从现有备份克隆的目标DB2克隆实例ID。
+
+这仅适用于ANF存储类型资源。
+
+
+
+ a| 
+目标克隆名称
+ a| 
+输入克隆的名称。
+
+这仅适用于DB2数据库资源。
+
+
+
+ a| 
+NFS 导出 IP 地址
+ a| 
+输入要导出克隆卷的 IP 地址或主机名。
+
+这仅适用于NFS存储类型的资源。
+
+
+
+ a| 
+容量池最大值 吞吐量(MiB/秒)
+ a| 
+输入容量池的最大吞吐量。
+
+|===
+. 在脚本页面中，执行以下步骤：
++
+
+NOTE: 这些脚本将在插件主机上运行。
+
++
+.. 输入克隆前或克隆后分别应在克隆操作之前或之后运行的命令。
++
+*** 预克隆命令：删除同名的现有数据库
+*** 克隆后命令：验证数据库或启动数据库。
+
+
+.. 输入 mount 命令将文件系统挂载到主机。
++
+Linux 计算机上卷或 qtree 的 mount 命令：
+
++
+NFS 示例：
+
++
+ mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
++
+
+NOTE: 对于用于静宿、快照和取消静宿操作的PRE和POST命令、您应从Linux的/opt/snapcenter/snapenter/scC/ALLOED_commands.config_路径和Windows的_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creer\ETC\ALLOED_commands.config_检查这些命令是否位于插件主机上可用的命令列表中。
+
+
+
+. 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
++
+您还必须指定发件人和收件人电子邮件地址以及电子邮件主题。
+
+. 查看摘要，然后单击 * 完成 * 。
+. 单击 * 监控 * > * 作业 * 以监控操作进度。
+
+
+.完成后
+克隆自动发现的DB2资源后、克隆的资源将标记为手动资源。单击*Refresh Resources*以恢复克隆的DB2资源。删除克隆后、存储和主机也会被清理。
+
+如果在执行克隆操作后未刷新资源并尝试删除克隆、则不会清理存储和主机。您必须在fstab中手动删除这些条目。

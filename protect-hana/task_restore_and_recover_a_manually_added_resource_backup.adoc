@@ -33,6 +33,7 @@ NOTE: 如果命令列表中不存在这些命令、则操作将失败。
 * 无法从 SnapCenter 还原基于文件的备份副本。
 * 升级到 SnapCenter 4.3 后，可以还原在 SnapCenter 4.2 中创建的备份，但无法恢复。您必须使用 SnapCenter 外部的 HANA Studio 或 HANA 恢复脚本恢复在 SnapCenter 4.2 中创建的备份。
 * 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于SnapMirror活动同步还原操作、您必须从主位置选择备份。
 
 
 .步骤

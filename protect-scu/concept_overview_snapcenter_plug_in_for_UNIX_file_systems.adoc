@@ -34,6 +34,9 @@ summary: 适用于Unix文件系统的插件支持备份、还原和克隆Unix文
  a| 
 * 物理服务器
 * 虚拟服务器
++
+NFS和SAN上的VVOV数据存储库。 只能使用适用于VMware vSphere的ONTAP工具配置VVOV数据存储库。
+
 
 
 
@@ -90,6 +93,5 @@ summary: 适用于Unix文件系统的插件支持备份、还原和克隆Unix文
 
 * 不支持混合使用分布在NFS和VMFS数据存储库中的VMDK中的文件系统。
 * 不支持NVMe。
-* 不支持SnapMirror业务连续性(SM-BC)。
 * 不支持配置。
 

@@ -59,9 +59,20 @@ SnapCenter SMCore 通信端口
 
 
  a| 
+计划程序服务端口
+ a| 
+8154 (HTTPS)、
+
+此端口用于集中编排SnapCenter服务器主机中所有受管插件的SnapCenter计划程序工作流。
+
+要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安装向导安装SnapCenter服务器。"]
+
+
+
+ a| 
 MySQL 端口
  a| 
-3306 （ HTTPS ），双向
+3306 (HTTPS)、双向、可自定义
 
 此端口用于在 SnapCenter 和 MySQL 存储库数据库之间进行通信。
 
@@ -118,7 +129,18 @@ Linux 或 AIX 插件主机
 
 
  a| 
-适用于 SnapCenter 的自定义插件
+适用于Exchange数据库的SnapCenter插件
+ a| 
+909 ，可自定义
+
+默认的NET。 适用于Windows的插件使用TCP端口连接到Exchange VSS回调。
+
+要自定义端口，请参见 link:../protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html["添加主机并安装适用于 Exchange 的插件"]。
+
+
+
+ a| 
+NetApp支持的SnapCenter插件
  a| 
 9090 （ HTTPS ），已修复
 

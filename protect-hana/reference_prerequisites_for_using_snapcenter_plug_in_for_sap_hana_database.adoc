@@ -16,7 +16,7 @@ summary: 在使用适用于 SAP HANA 数据库的 SnapCenter 插件之前， Sna
 * 安装和配置 SnapCenter 服务器。
 * 登录到 SnapCenter 服务器。
 * 如果适用，可通过添加存储系统连接和创建凭据来配置 SnapCenter 环境。
-* 在 Linux 或 Windows 主机上安装 Java 1.7 或 Java 1.8 。
+* 在Linux或Windows主机上安装Java 11。
 +
 必须在主机的环境路径变量中设置 Java 路径。
 

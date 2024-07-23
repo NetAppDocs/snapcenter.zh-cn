@@ -42,4 +42,12 @@ SnapCenter 界面为您提供了跨插件和环境的标准化和一致性。通
 * 支持备份文件系统和虚拟机磁盘（ VMDK ）
 * 支持物理和虚拟化基础架构
 * 支持 iSCSI ，光纤通道， FCoE ，原始设备映射（ RDM ），非对称 LUN 映射（ ALM ），基于 NFS 和 VMFS 的 VMDK 以及虚拟 FC
+* 在Windows Server 2022上支持非易失性内存标准(NVMe)
++
+** 在基于TCP/IP的NVMe上创建的VMDK布局上的备份、还原、克隆和验证工作流。
+** 从ESX 8.0 Update 2开始支持NVMe固件版本1.3、并且需要虚拟硬件版本21。
+** 在基于TCP/IP的NVMe上、基于VMDK的应用程序不支持Windows Server故障转移集群(WSFC)。
+
+
+* 支持SnapMirror主动同步(最初作为SnapMirror Business Continuing [SM-BC]发布)、即使在站点完全瘫痪的情况下、业务服务也能继续运行、支持应用程序使用二级副本透明地进行故障转移。使用SnapMirror活动同步触发故障转移无需手动干预或额外编写脚本。
 

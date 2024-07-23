@@ -223,7 +223,7 @@ image::../media/nss_controller_license_select.gif[选择条件和序列号输入
 如果您使用的是基于控制器的 SnapCenter 标准许可证，并且需要删除基于容量的试用许可证（序列号以 "`50` " 结尾），则应使用 MySQL 命令手动删除此试用许可证。无法使用 SnapCenter 图形用户界面删除试用许可证。
 
 
-NOTE: 只有在使用基于 SnapCenter 标准控制器的许可证时，才需要手动删除试用许可证。如果您购买了基于 SnapCenter 标准容量的许可证并将其添加到 SnapCenter 图形用户界面中，则试用许可证将自动被覆盖。
+NOTE: 只有在使用基于 SnapCenter 标准控制器的许可证时，才需要手动删除试用许可证。
 
 .步骤
 . 在 SnapCenter 服务器上，打开 PowerShell 窗口以重置 MySQL 密码。
@@ -231,7 +231,7 @@ NOTE: 只有在使用基于 SnapCenter 标准控制器的许可证时，才需�
 .. 运行 Open-SmConnection cmdlet ，为 SnapCenterAdmin 帐户启动与 SnapCenter 服务器的连接会话。
 .. 运行 Set-SmRepositoryPassword 以重置 MySQL 密码。
 +
-有关 cmdlet 的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关cmdlet的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 
 

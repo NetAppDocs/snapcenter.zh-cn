@@ -31,6 +31,8 @@ SnapCenter 不支持为 Linux 和 AIX 配置存储。
 * FC 连接的 LUN
 * iSCSI 连接的 LUN
 * NFS-connected volumes
+* NVMe-FC
+* NVMe-TCP
 
 
 
@@ -43,8 +45,17 @@ VMware ESXi
 您可以编辑位于 /opt/netapp/snapcenter/spl/plugins/SCU/scscore/modules/SCU/Config_ 的 * LinuxConfig.pm* 文件，将 * scsi_hosts_optimed_rescan * 参数的值设置为 1 ，以便仅将 HBA_DRIVER_NAMES 中列出的 HBA 设置为 1 。
 
 * iSCSI 启动程序直接连接到子系统的 iSCSI LUN
-* VMFS 或 NFS 数据存储库上的 VMDK
+* NFS数据存储库上的VMDK
+* VMFS上通过NVMe-TCP创建的VMDK
++
+
+NOTE: ESX 8.0U2支持RAC、并支持共享VMDK
+
 * 直接连接到子系统的 NFS 卷
+* NFS和SAN上的VVOV数据存储库
++
+只能使用适用于VMware vSphere的ONTAP工具配置VVOV数据存储库。
+
 
 
 |===

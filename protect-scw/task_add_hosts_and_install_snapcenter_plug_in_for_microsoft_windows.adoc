@@ -14,13 +14,19 @@ summary: 您可以使用 SnapCenter 添加主机页面添加 Windows 主机。�
 您可以使用 SnapCenter 添加主机页面添加 Windows 主机。适用于 Microsoft Windows 的 SnapCenter 插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。
 
 .开始之前
+* 如果SnapCenter服务器主机的操作系统为Windows 2019、而插件主机的操作系统为Windows 2022、则应执行以下操作：
++
+** 升级到Windows Server 2019 (操作系统内部版本17763.5936)或更高版本
+** 升级到Windows Server 2022 (操作系统内部版本20348.2402)或更高版本
+
+
 * 您必须是分配给具有插件安装和卸载权限的角色的用户，例如 SnapCenter 管理员角色。
 * 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
 * 应将 SnapCenter 用户添加到 Windows 服务器的 "`以服务身份登录` " 角色中。
 * 您应确保消息队列服务处于运行状态。
 * 如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。
 +
-link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Server 2012 或更高版本上为 Windows 文件系统配置组托管服务帐户"]
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Server 2016 或更高版本上为 Windows 文件系统配置组托管服务帐户"]
 
 
 

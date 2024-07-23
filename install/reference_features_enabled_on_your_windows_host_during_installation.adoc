@@ -63,7 +63,7 @@ Web 服务器
 +
 ** .NET 可扩展性 4.5
 ** 应用程序初始化
-** ASP.NET 4.7.2
+** ASP。 NET Core托管包(8.0.5或更高版本)
 ** 服务器端包括
 ** WebSocket 协议
 
@@ -87,15 +87,14 @@ IIS 管理脚本和工具
 
 
  a| 
-+.NET Framework 4.7.2功能+
++.NET Framework 8.0.5功能+
  a| 
-* .NET Framework 4.7.2
-* ASP.NET 4.7.2
+* .NET Framework 8.0.5
+* ASP.NET 8.0.5
 * Windows Communication Foundation （ WCF ） HTTP 激活 45
 +
 ** TCP 激活
 ** HTTP 激活
-** 消息队列（ MSMQ ）激活
 
 
 
@@ -112,7 +111,7 @@ IIS 管理脚本和工具
 
 NOTE: 确保没有其他应用程序使用 SnapCenter 创建和管理的 MSMQ 服务。
 
-* MSMQ 服务器
+* Rabbitmq
 
 
 

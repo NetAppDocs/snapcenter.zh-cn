@@ -1,0 +1,23 @@
+---
+permalink: protect-postgresql/define-a-restore-and-recovery-strategy-for-postgresql-resources.html 
+sidebar: sidebar 
+keywords: restore and recovery strategy, postgresql resources, snapcenter 
+summary: 在还原和恢复集群之前、您必须定义一个策略、以便成功执行还原和恢复操作。 
+---
+= 为PostgreSQL资源定义还原和恢复策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在还原和恢复集群之前、您必须定义一个策略、以便成功执行还原和恢复操作。
+
+
+NOTE: 仅支持手动恢复集群。
+
+.步骤
+. 确定手动添加的PostgreSQL资源支持的还原策略
+. 确定自动发现的PostgreSQL集群支持的还原策略
+. 确定要执行的恢复操作的类型。
+

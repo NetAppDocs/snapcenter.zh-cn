@@ -16,6 +16,7 @@ summary: 为要备份的Unix文件系统创建一个备份策略。
 .开始之前
 * 您必须已完成安装SnapCenter、添加主机、发现文件系统和创建存储系统连接等任务、为数据保护做好准备。
 * 如果要将快照复制到镜像或存储二级存储、则SnapCenter管理员必须已为源卷和目标卷分配SVM。
+* 查看SnapMirror主动同步的特定前提条件和限制。有关信息，请参阅 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror活动同步的对象限制"]。
 
 
 .步骤
@@ -68,6 +69,8 @@ NOTE: 只有在备份过程中选择了归档日志文件时，才能保留归�
 创建本地 Snapshot 副本后更新 SnapMirror
  a| 
 选择此字段可在另一个卷上创建备份集的镜像副本（ SnapMirror 复制）。
+
+对于SnapMirror活动同步、应启用此选项。
 
 
 

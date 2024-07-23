@@ -21,7 +21,7 @@ summary: SnapCenter 采用严格的安全性和身份验证功能，可确保数
 
 .关于此任务
 * 如果在同一AD FS中配置了其他应用程序、则SnapCenter 支持基于SSO的登录。在某些AD FS配置中、出于安全原因、SnapCenter 可能需要用户身份验证、具体取决于AD FS会话持久性。
-* 有关可与cmdlet结合使用的参数及其说明的信息、可以通过运行来获取 `Get-Help command_name`。或者、您也可以查看 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+* 有关可与cmdlet结合使用的参数及其说明的信息，可通过运行来获取 `Get-Help command_name`。或者，您也可以参见 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 
 .开始之前

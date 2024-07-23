@@ -24,6 +24,10 @@ summary: 您应在 Windows 主机上使用 SnapCenter 站点配置 CA 证书。
 . 单击 * 编辑 * 。
 . 从 SSL 证书下拉列表中，选择最近导入的 SSL 证书。
 . 单击 * 确定 * 。
++
+
+NOTE: 已为SnapCenter计划程序站点(默认端口：8154、HTTPS)配置自签名证书。此端口正在SnapCenter服务器主机中进行通信、不强制配置CA证书。但是、如果您的环境要求您使用CA证书、请使用SnapCenter计划程序站点重复步骤5到9。
+
 
 
 

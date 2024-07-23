@@ -1,0 +1,32 @@
+---
+permalink: protect-nsp/netapp_supported_plugins_overview.html 
+sidebar: sidebar 
+keywords: NetApp supported plug-ins 
+summary: 您可以为所使用的应用程序开发NetApp支持的插件、然后使用SnapCenter备份、还原或克隆这些应用程序。与其他SnapCenter插件一样、NetApp支持的插件也充当NetApp SnapCenter软件的主机端组件、从而实现应用程序感知型数据保护和资源管理。 
+---
+= NetApp支持的插件概述
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用NetApp支持的插件、也可以为所使用的应用程序开发自定义插件、然后使用SnapCenter备份、还原或克隆这些应用程序。NetApp支持的插件可充当NetApp SnapCenter软件的主机端组件、从而实现应用程序感知型数据保护和资源管理。
+
+安装NetApp支持的插件后、您可以使用采用NetApp SnapMirror技术的SnapCenter在另一个卷上创建备份集的镜像副本、并使用NetApp SnapVault技术执行磁盘到磁盘备份复制。NetApp支持的插件可在Windows和Linux环境中使用。
+
+
+NOTE: SnapCenterCLI不支持NetApp支持的插件命令。
+
+NetApp 提供了存储插件，可使用 SnapCenter 中内置的自定义插件框架对 ONTAP 存储上的数据卷执行数据保护操作。
+
+您可以从添加主机页面安装NetApp支持的插件和自定义插件以及存储插件。
+
+link:add_hosts_and_install_plug_in_packages_on_remote_hosts.html["添加主机并在远程主机上安装插件软件包。"^]
+
+NetApp还提供MongoDB、MySQL、PostgreSQL、存储、MaxDB、 Sybase ASE、ORASCPM、MongoDB和DPGlue插件。
+
+
+NOTE: SnapCenter 支持策略将涵盖对 SnapCenter 自定义插件框架，核心引擎和关联 API 的支持。支持范围不包括插件源代码以及基于自定义插件框架构建的关联脚本。
+
+您可以参考指南创建自己的自定义插件 link:develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"^] 。

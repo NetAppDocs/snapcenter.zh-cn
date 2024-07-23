@@ -1,17 +1,17 @@
 ---
 permalink: install/task_enable_two_way_ssl.html 
 sidebar: sidebar 
-keywords: security,disable two-way SSL,enable two-way SSL 
-summary: 您可以使用PowerShell命令启用双向SSL通信、以确保SnapCenter服务器与插件之间的相互通信安全。 
+keywords: security,disable two-way SSL,enable two-way SSL, windows host 
+summary: 您可以使用PowerShell命令启用双向SSL通信、以确保Windows主机上的SnapCenter服务器与插件之间的相互通信安全。 
 ---
-= 启用双向SSL通信
+= 在Windows主机上启用双向SSL通信
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以使用PowerShell命令启用双向SSL通信、以确保SnapCenter服务器与插件之间的相互通信安全。
+您可以使用PowerShell命令启用双向SSL通信、以确保Windows主机上的SnapCenter服务器与插件之间的相互通信安全。
 
 * 开始之前 *
 

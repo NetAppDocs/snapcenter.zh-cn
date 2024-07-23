@@ -13,6 +13,13 @@ summary: 您可以使用 SnapCenter 从一个或多个备份还原和恢复数�
 [role="lead"]
 您可以使用 SnapCenter 还原备份的 SQL Server 数据库。数据库还原是一个多阶段过程、它会将所有数据和日志页面从指定的SQL Server备份复制到指定的数据库。
 
+.关于此任务
+您应确保为要还原的目标实例配置了一个Active Directory用户、该用户属于SMB ADActive Directory域、并有权相应地设置文件权限。您应在SnapCenter中实例级别配置凭据。
+
+SMB配置不支持目标实例的SQL身份验证。应在SnapCenter中为目标实例配置Active Directory用户具有所需权限。
+
+如果SnapCenter插件服务帐户不是Active Directory用户、则在执行还原到备用主机时、需要具有源卷完全控制权的用户、才能模拟该用户并执行所需的操作。
+
 .步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
 . 在“资源”页中，从“视图”列表中选择*Database或*Resource Group*。

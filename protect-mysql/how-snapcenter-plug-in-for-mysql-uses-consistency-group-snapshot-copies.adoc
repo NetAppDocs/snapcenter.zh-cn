@@ -1,0 +1,16 @@
+---
+permalink: protect-mysql/how-snapcenter-plug-in-for-mysql-uses-consistency-group-snapshot-copies.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: 您可以使用此插件为资源组创建一致性组快照。一致性组是一个容器，可以容纳多个卷，以便将其作为一个实体进行管理。一致性组是指同时为多个卷创建快照、从而为一组卷提供一致的副本。 
+---
+= 适用于MySQL的SnapCenter插件如何使用一致性组快照
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用此插件为资源组创建一致性组快照。一致性组是一个容器，可以容纳多个卷，以便将其作为一个实体进行管理。一致性组是指同时为多个卷创建快照、从而为一组卷提供一致的副本。
+
+您还可以指定存储控制器一致对快照进行分组的等待时间。可用的等待时间选项包括 * 紧急 * ， * 中等 * 和 * 宽松 * 。您还可以在一致的组快照操作期间启用或禁用任意位置写入文件布局(WAFL)同步。WAFL同步可提高一致性组快照的性能。

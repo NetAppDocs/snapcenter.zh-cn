@@ -23,7 +23,7 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 适用于 AIX 的 SnapCenter 插件软件包会自动解析文件级符号链接，而不是目录级符号链接以获取 java_home 绝对路径。
 
 * 为安装用户创建身份验证模式为 Linux 或 AIX 的凭据。
-* 您必须已在Linux或AIX主机上安装Java 1.8.x或64位Java 11。
+* 必须已在Linux或AIX主机上安装Java 11。
 +
 
 NOTE: 确保在Linux主机上仅安装了经过认证的Java 11版本。
@@ -94,9 +94,7 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
  a| 
 所需的软件包
  a| 
-* Java 1.8.x (64位) Oracle Java和OpenJDK
-* Java 11 (64位) Oracle Java和OpenJDK
-
+Java 11 Oracle Java和OpenJDK
 
 
 NOTE: 确保在Linux主机上仅安装了经过认证的Java 11版本。
@@ -115,6 +113,7 @@ NOTE: 确保在Linux主机上仅安装了经过认证的Java 11版本。
 * 您需要的内容 *
 
 * sudo 1.8.7或更高版本。
+* 对于非root用户、请确保非root用户的名称和用户组的名称应相同。
 * 编辑 /etc/ssh/sshd_config_ 文件以配置消息身份验证代码算法： macs HMAC-SHA2-256 和 MAC HMAC-SHA2-512 。
 +
 更新配置文件后重新启动 sshd 服务。
@@ -174,9 +173,11 @@ NOTE: 如果您正在设置RAC以及其他允许的命令、则应将以下命�
 
 _linux_user_是 您创建的非root用户的名称。
 
-您可以从* ORACLE_checksum.txt *文件中获取_checksum_value_、该文件位于_C：\ProgramData\NetApp\SnapCenter\Package Repository _。
+您可以从*SC_UNIX)插件校验和.txt文件获取_校 验和值_，该文件位于：
 
-如果指定了自定义位置，则此位置将为 _custom_path\NetApp\SnapCenter\Package Repository_ 。
+* _C：\ProgramData\NetApp\SnapCenter\Package Repository \SC_UNIS_plugins_校 验和.TXT_(如果SnapCenter服务器安装在Windows主机上)。
+* _/opt/NetApp/snapcentre/SnapManagerWeb/Repository /SC_UNIX)插件_Checksum．txt _(如果SnapCenter服务器安装在Linux主机上)。
+
 
 
 IMPORTANT: 此示例只能用作创建自己数据的参考。
@@ -221,9 +222,7 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
  a| 
 所需的软件包
  a| 
-* Java 1.8.x (64位) IBM Java
-* Java 11 (64位) IBM Java
-
+Java 11 IBM Java
 
 如果已将 Java 升级到最新版本，则必须确保 /var/opt/snapcenter/spl/etc/spl.properties 上的 java_home 选项设置为正确的 Java 版本和路径。
 
@@ -298,9 +297,11 @@ NOTE: 如果您正在设置RAC以及其他允许的命令、则应将以下命�
 
 _aix_user_是 您创建的非 root 用户的名称。
 
-您可以从* ORACLE_checksum.txt *文件中获取_checksum_value_、该文件位于_C：\ProgramData\NetApp\SnapCenter\Package Repository _。
+您可以从*SC_UNIX)插件校验和.txt文件获取_校 验和值_，该文件位于：
 
-如果指定了自定义位置，则此位置将为 _custom_path\NetApp\SnapCenter\Package Repository_ 。
+* _C：\ProgramData\NetApp\SnapCenter\Package Repository \SC_UNIS_plugins_校 验和.TXT_(如果SnapCenter服务器安装在Windows主机上)。
+* _/opt/NetApp/snapcentre/SnapManagerWeb/Repository /SC_UNIX)插件_Checksum．txt _(如果SnapCenter服务器安装在Linux主机上)。
+
 
 
 IMPORTANT: 此示例只能用作创建自己数据的参考。

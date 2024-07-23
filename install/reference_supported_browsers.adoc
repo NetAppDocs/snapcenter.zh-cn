@@ -13,10 +13,7 @@ summary: SnapCenter 软件可在多个浏览器上使用。
 [role="lead"]
 SnapCenter 软件可在多个浏览器上使用。
 
-* Chrome
-+
-如果您使用的是 v66 ，则可能无法启动 SnapCenter 图形用户界面。
-
+* Chrome 125及更高版本
 * Internet Explorer
 +
 如果您使用的是 IE 10 或更早版本，则无法正确加载 SnapCenter UI 。您应升级到 IE 11 。

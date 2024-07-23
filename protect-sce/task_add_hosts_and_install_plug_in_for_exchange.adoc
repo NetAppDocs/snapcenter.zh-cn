@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html 
 sidebar: sidebar 
-keywords: SnapCenter Plug-in for Microsoft Exchange Server 
+keywords: SnapCenter Plug-in for Microsoft Exchange Server, NET TCP 
 summary: 您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用于 Exchange 的插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。 
 ---
 = 添加主机并安装适用于 Exchange 的插件
@@ -14,10 +14,16 @@ summary: 您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用
 您可以使用 SnapCenter 添加主机页面添加 Windows 主机。适用于 Exchange 的插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。
 
 .开始之前
+* 如果SnapCenter服务器主机的操作系统为Windows 2019、而插件主机的操作系统为Windows 2022、则应执行以下操作：
++
+** 升级到Windows Server 2019 (操作系统内部版本17763.5936)或更高版本
+** 升级到Windows Server 2022 (操作系统内部版本20348.2402)或更高版本
+
+
 * 您必须是分配给具有插件安装和卸载权限的角色的用户，例如 SnapCenter 管理员
 * 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
 * 消息队列服务必须正在运行。
-* 如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。有关信息，请参见link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Server 2012 或更高版本上为 Microsoft Exchange Server 配置组托管服务帐户"^]。
+* 如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。有关信息，请参见 link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Server 2016 或更高版本上为 Microsoft Exchange Server 配置组托管服务帐户"^]。
 
 
 .关于此任务
@@ -184,4 +190,28 @@ NOTE: GMSA 仅用作适用于 Windows 的 SnapCenter 插件服务的登录服务
 NOTE: 在 HA 设置中，如果要更新 web.config 文件，则必须同时更新两个节点上的文件。
 
 . 监控安装进度。
+
+
+
+
+== 为NET TCP通信配置自定义端口
+
+默认情况下、从SnapCenter 6.0版开始、适用于Windows的SnapCenter插件使用端口909进行NET TCP通信。如果端口909正在使用中、您可以为NET TCP通信配置另一个端口。
+
+.步骤
+. 将_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\vss提供 程序\nvsprv.exe.config_中的_NetTCPPort_项的值修改为所需的端口号。
+`<add key="NetTCPPort" value="new_port_number" />`
+. 将_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\SnapDriveService.dll.config_中的_NetTCPPort_项的值修改为所需的端口号。
+`<add key="NetTCPPort" value="new_port_number" />`
+. 运行以下命令、取消注册_VSS Data ONTAP硬件提供程序_服务：
+`"C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\navssprv.exe" -r service -u`
++
+确认服务未显示在_services.msc_的服务列表中。
+
+. 运行以下命令、注册_VSS Data ONTAP硬件提供程序_服务：
+`"C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\vssproviders\navssprv.exe" -r service -a ".\LocalSystem"``
++
+验证服务现在是否显示在_services.msc_的服务列表中。
+
+. 重新启动_Plug-in for Windows_服务。
 

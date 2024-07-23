@@ -2,11 +2,11 @@
 :allow-uri-read: 
 
 
-通过 Windows Server 2012 或更高版本，您可以创建组托管服务帐户（ GMSA ），以便从受管域帐户自动管理服务帐户密码。
+通过 Windows Server 2016 或更高版本，您可以创建组托管服务帐户（ GMSA ），以便从受管域帐户自动管理服务帐户密码。
 
 .开始之前
-* 您应具有 Windows Server 2012 或更高版本的域控制器。
-* 您应该拥有一个 Windows Server 2012 或更高版本的主机，该主机是域的成员。
+* 您应具有 Windows Server 2016 或更高版本的域控制器。
+* 您应该拥有一个 Windows Server 2016 或更高版本的主机，该主机是域的成员。
 
 
 .步骤

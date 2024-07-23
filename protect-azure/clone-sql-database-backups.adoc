@@ -13,6 +13,13 @@ summary: 您可以使用 SnapCenter 克隆备份。
 [role="lead"]
 您可以使用 SnapCenter 克隆 SQL Server 数据库备份。如果要访问或还原旧版本的数据，可以按需克隆数据库备份。
 
+.关于此任务
+您应确保为克隆的目标实例配置了一个Active Directory用户、该用户属于SMB ADActive Directory域、并有权相应地设置文件权限。您应在SnapCenter中实例级别配置凭据。
+
+SMB配置不支持目标实例的SQL身份验证。应在SnapCenter中为目标实例配置Active Directory用户具有所需权限。
+
+如果SnapCenter插件服务帐户不是Active Directory用户、则在执行克隆时、需要具有源卷完全控制权的用户、才能模拟该用户并执行所需的操作。
+
 .步骤
 . 在左侧导航窗格中，选择*Resoles*，然后从列表中选择相应的插件。
 . 在资源页面中，从 * 视图 * 列表中选择 * 数据库 * 或 * 资源组 * 。

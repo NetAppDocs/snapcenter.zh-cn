@@ -14,7 +14,9 @@ summary: 在Azure虚拟机上下载并安装SnapCenter。
 您可以从NetApp 支持站点 下载SnapCenter软件、然后在Azure虚拟机上安装该软件。
 
 .开始之前
-确保Azure Windows虚拟机满足SnapCenter服务器安装要求。有关信息，请参见 link:../install/reference_domain_and_workgroup_requirements.html["准备安装 SnapCenter 服务器"]。
+* 确保Azure Windows虚拟机满足SnapCenter服务器安装要求。有关信息，请参见 link:../install/reference_domain_and_workgroup_requirements.html["准备安装 SnapCenter 服务器"]。
+* 如果您是Azure NetApp Files的新用户且没有现有NetApp帐户、请确保您已注册、以便可以访问SnapCenter软件。
+
 
 .步骤
 . 从下载 SnapCenter 服务器安装包 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp 支持站点"]。
@@ -41,4 +43,23 @@ NOTE: 如果单击 * 取消 * 按钮，则正在执行的步骤将完成，然�
 +
 但是，如果在执行 SnapCenter 服务器站点重新启动或等待 SnapCenter 服务器启动操作时单击 * 取消 * ，则安装将继续进行，而不会取消此操作。
 
+
+
+
+
+== 注册产品以启用支持
+
+如果您是NetApp的新用户、并且没有现有的NetApp帐户、则应注册产品以启用支持。
+
+.步骤
+. 安装SnapCenter后，导航到*help >关于*。
+. 在_About SnapCenter _对话框中、记下SnapCenter实例、该实例是一个以871开头的20位数字。
+. 单击。 https://register.netapp.com[]
+. 单击 * 我不是 NetApp 注册客户 * 。
+. 指定您的详细信息以自行注册。
+. 将NetApp Reference SN字段留空。
+. 从“SnapCenter产品线”下拉列表中选择*Product*。
+. 选择计费提供商。
+. 输入20位数的SnapCenter实例ID。
+. 单击 * 提交 * 。
 

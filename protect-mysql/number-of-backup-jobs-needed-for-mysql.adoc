@@ -1,0 +1,14 @@
+---
+permalink: protect-mysql/number-of-backup-jobs-needed-for-mysql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: 决定所需备份作业数量的因素包括资源大小，已用卷数，资源更改率以及您的服务级别协议 \ （ SLA\ ）。 
+---
+= MySQL所需的备份作业数
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+决定所需备份作业数量的因素包括资源大小，已用卷数，资源更改率以及您的服务级别协议（ Service Level Agreement ， SLA ）。

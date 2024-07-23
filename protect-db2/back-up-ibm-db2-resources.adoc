@@ -1,0 +1,20 @@
+---
+permalink: protect-db2/back-up-ibm-db2-resources.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: 您可以为资源（数据库）或资源组创建备份。备份工作流包括规划，确定要备份的数据库，管理备份策略，创建资源组和附加策略，创建备份以及监控操作。 
+---
+= 备份IBM DB2资源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以为资源（数据库）或资源组创建备份。备份工作流包括规划，确定要备份的数据库，管理备份策略，创建资源组和附加策略，创建备份以及监控操作。
+
+以下工作流显示了必须执行备份操作的顺序：
+
+image::../media/db2_backup_workflow.png[DB2备份工作流]
+
+您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。SnapCenter cmdlet 帮助和 cmdlet 参考信息包含有关 PowerShell cmdlet 的详细信息。https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^](英文)

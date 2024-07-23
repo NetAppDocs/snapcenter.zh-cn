@@ -1,0 +1,152 @@
+---
+section: protect-postgresql
+title: 保护PostgreSQL
+entries:
+- title: 适用于PostgreSQL的SnapCenter插件
+  entries:
+  - title: 适用于PostgreSQL的SnapCenter插件概述
+    url: "/protect-postgresql/snapcenter-plug-in-for-postgresql-overview.html"
+  - title: 使用适用于PostgreSQL的SnapCenter插件可以执行什么操作
+    url: "/protect-postgresql/what-you-can-do-using-the-snapcenter-plug-in-for-postgresql.html"
+  - title: 适用于PostgreSQL的SnapCenter插件功能
+    url: "/protect-postgresql/snapcenter-plug-in-for-postgresql-features.html"
+  - title: 适用于PostgreSQL的SnapCenter插件支持的存储类型
+    url: "/protect-postgresql/storage-types-supported-by-snapcenter-plug-in-for-postgresql.html"
+  - title: 所需的最小 ONTAP 权限
+    url: "/protect-postgresql/minimum-privileges-required-for-postgresql.html"
+  - title: 准备用于 SnapMirror 和 SnapVault 复制的存储系统
+    url: "/protect-postgresql/prepare-storage-systems-for-snapmirror-and-snapvault-replication-for-plugin-for-postgresql.html"
+  - title: PostgreSQL的备份策略
+    entries:
+    - title: 为PostgreSQL定义备份策略
+      url: "/protect-postgresql/define-a-backup-strategy-for-postgresql.html"
+    - title: 自动发现 Linux 主机上的资源
+      url: "/protect-postgresql/auto-discovery-of-resources-on-linux-host.html"
+    - title: 支持的备份类型
+      url: "/protect-postgresql/type-of-backups-supported.html"
+    - title: 适用于PostgreSQL的SnapCenter插件如何使用一致性组Snapshot副本
+      url: "/protect-postgresql/how-snapcenter-plug-in-for-postgresql-uses-consistency-group-snapshot-copies.html"
+    - title: SnapCenter如何管理日志备份的内务管理
+      url: "/protect-postgresql/housekeeping-of-log-backups.html"
+    - title: 确定PostgreSQL备份计划的注意事项
+      url: "/protect-postgresql/considerations-for-determining-backup-schedules-for-postgresql.html"
+    - title: PostgreSQL所需的备份作业数
+      url: "/protect-postgresql/number-of-backup-jobs-needed-for-postgresql.html"
+    - title: 备份命名约定
+      url: "/protect-postgresql/backup-naming-conventions-for-plugin-for-postgresql.html"
+  - title: PostgreSQL的还原和恢复策略
+    entries:
+    - title: 为PostgreSQL资源定义还原和恢复策略
+      url: "/protect-postgresql/define-a-restore-and-recovery-strategy-for-postgresql-resources.html"
+    - title: 手动添加的PostgreSQL资源支持的还原策略类型
+      url: "/protect-postgresql/types-of-restore-strategies-supported-for-manually-added-postgresql.html"
+    - title: 自动发现的PostgreSQL支持的还原策略类型
+      url: "/protect-postgresql/types-of-restore-strategies-supported-for-auto-discovered-postgresql.html"
+    - title: 自动发现的PostgreSQL的还原操作类型
+      url: "/protect-postgresql/types-of-restore-performed-for-auto-discovered-postgresql.html"
+    - title: PostgreSQL支持的恢复操作类型
+      url: "/protect-postgresql/types_of_recovery_operations_supported_for_postgresql.html"
+- title: 准备安装适用于PostgreSQL的SnapCenter插件
+  entries:
+  - title: 适用于PostgreSQL的SnapCenter插件的安装工作流
+    url: "/protect-postgresql/install-snapcenter-plug-in-for-postgresql.html"
+  - title: 添加主机和安装适用于PostgreSQL的SnapCenter插件的前提条件
+    url: "/protect-postgresql/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-postgresql.html"
+  - title: 安装适用于 Windows 的 SnapCenter 插件软件包的主机要求
+    url: "/protect-postgresql/host-requirements-to-install-snapcenter-plug-in-package-for-windows-postgresql.html"
+  - title: 安装适用于 Linux 的 SnapCenter 插件软件包的主机要求
+    url: "/protect-postgresql/host-requirements-to-install-snapcenter-plug-in-package-for-linux.html"
+  - title: 为适用于PostgreSQL的SnapCenter插件设置凭据
+    url: "/protect-postgresql/set-up-credentials-for-snapcenter-plug-in-for-postgresql.html"
+  - title: 在 Windows Server 2016 或更高版本上配置 GMSA
+    url: "/protect-postgresql/configure-gMSA-on-windows-server-2012-or-later.html"
+  - title: 安装适用于PostgreSQL的SnapCenter插件
+    entries:
+    - title: 添加主机并在远程主机上安装插件软件包
+      url: "/protect-postgresql/add-hosts-and-install-plug-in-packages-on-remote-hosts-postgresql.html"
+    - title: 使用 cmdlet 在多个远程主机上安装适用于 Linux 或 Windows 的 SnapCenter 插件软件包
+      url: "/protect-postgresql/install-snapcenter-plug-in-packages-for-linux-or-windows-on-multiple-remote-hosts-using-cmdlets-postgresql.html"
+    - title: 使用命令行界面在Linux主机上安装适用于PostgreSQL的SnapCenter插件
+      url: "/protect-postgresql/install-the-snapcenter-plug-in-for-postgresql-on-linux-hosts-using-the-command-line-interface.html"
+    - title: 监控 SnapCenter 插件软件包安装状态
+      url: "/protect-postgresql/monitor-the-status-of-installing-plugin-for-postgresql.html"
+  - title: 配置 CA 证书
+    entries:
+    - title: 生成 CA 证书 CSR 文件
+      url: "/protect-postgresql/generate-CA-certificate-CSR-file.html"
+    - title: 导入 CA 证书
+      url: "/protect-postgresql/import-CA-certificates.html"
+    - title: 获取 CA 证书指纹
+      url: "/protect-postgresql/get-the-CA-certificate-thumbprint.html"
+    - title: 使用 Windows 主机插件服务配置 CA 证书
+      url: "/protect-postgresql/configure-CA-certificate-with-Windows-host-plug-in-services.html"
+    - title: 在Linux主机上为SnapCenter PostgreSQL插件服务配置CA证书
+      url: "/protect-postgresql/configure-CA-certificate-for-postgresql-on-Linux-host.html"
+    - title: 在Windows主机上为SnapCenter PostgreSQL插件服务配置CA证书
+      url: "/protect-postgresql/configure-CA-certificate-for-postgresql-on-windows-host.html"
+    - title: 为插件启用 CA 证书
+      url: "/protect-postgresql/enable-ca-certificates-for-plug-ins.html"
+- title: 准备数据保护
+  entries:
+  - title: 使用适用于PostgreSQL的SnapCenter插件的前提条件
+    url: "/protect-postgresql/prerequisites-for-using-snapcenter-plug-in-for-postgresql.html"
+  - title: 如何使用资源、资源组和策略来保护PostgreSQL
+    url: "/protect-postgresql/how-resources-resource-groups-and-policies-are-used-for-protecting-postgresql.html"
+- title: 备份PostgreSQL资源
+  entries:
+  - title: 备份工作流
+    url: "/protect-postgresql/back-up-postgresql-resources.html"
+  - title: 自动发现集群
+    url: "/protect-postgresql/discover-the-clusters-automatically.html"
+  - title: 手动将资源添加到插件主机
+    url: "/protect-postgresql/add-resources-manually-to-the-plug-in-host.html"
+  - title: 为PostgreSQL创建备份策略
+    url: "/protect-postgresql/create-backup-policies-for-postgresql.html"
+  - title: 创建资源组并附加策略
+    url: "/protect-postgresql/create-resource-groups-and-attach-policies.html"
+  - title: 备份PostgreSQL
+    url: "/protect-postgresql/back-up-postgresql.html"
+  - title: 备份资源组
+    url: "/protect-postgresql/back-up-resource-groups-postgresql.html"
+  - title: 使用适用于PostgreSQL的PowerShell cmdlet创建存储系统连接和凭据
+    url: "/protect-postgresql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-postgresql.html"
+  - title: 使用PowerShell cmdlet备份集群
+    url: "/protect-postgresql/back-up-clusters-using-powershell-cmdlets-postgresql.html"
+  - title: 监控备份操作
+    entries:
+    - title: 在 SnapCenter Jobs 页面中监控备份操作
+      url: "/protect-postgresql/monitor-postgresql-backup-operations.html"
+    - title: 监控活动窗格中的操作
+      url: "/protect-postgresql/monitor-dataprotection-operations-on-postgresql-in-the-activity-pane.html"
+  - title: 取消备份操作
+    url: "/protect-postgresql/cancel-backup-operations-for-postgresql.html"
+  - title: 在Topology页面中查看PostgreSQL集群备份和克隆
+    url: "/protect-postgresql/view-postgresql-cluster-backups-and-clones-in-the-topology-page.html"
+- title: 还原PostgreSQL
+  entries:
+  - title: 还原工作流
+    url: "/protect-postgresql/restore-postgresql.html"
+  - title: 还原和恢复手动添加的资源备份
+    url: "/protect-postgresql/restore-and-recover-a-manually-added-resource-backup.html"
+  - title: 还原和恢复自动发现的集群备份
+    url: "/protect-postgresql/restore-and-recover-an-auto-discovered-cluster-backup.html"
+  - title: 使用PowerShell cmdlet还原PostgreSQL
+    url: "/protect-postgresql/restore-postgresql-using-powershell-cmdlets.html"
+  - title: 使用 PowerShell cmdlet 还原资源
+    url: "/protect-postgresql/restore-and-recover-resources-using-powershell-cmdlets-postgresql.html"
+  - title: 监控还原操作
+    url: "/protect-postgresql/monitor-postgresql-restore-operations.html"
+- title: 克隆PostgreSQL资源备份
+  entries:
+  - title: 克隆工作流
+    url: "/protect-postgresql/clone-postgresql-resource-backups.html"
+  - title: 克隆PostgreSQL集群备份
+    url: "/protect-postgresql/clone-postgresql-backup.html"
+  - title: 使用PowerShell cmdlet克隆PostgreSQL集群备份
+    url: "/protect-postgresql/clone-postgresql-backups-using-powershell-cmdlets.html"
+  - title: 监控 SnapCenter 中的克隆操作
+    url: "/protect-postgresql/monitor-postgresql-clone-operations.html"
+  - title: 拆分克隆。
+    url: "/protect-postgresql/split-a-clone-for-postgresql.html"
+  - title: 升级SnapCenter后、删除或拆分PostgreSQL集群克隆
+    url: "/protect-postgresql/delete-or-split-postgresql-clones-after-upgrading-snapcenter.html"

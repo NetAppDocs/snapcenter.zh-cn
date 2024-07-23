@@ -24,7 +24,7 @@ summary: 您可以在使用 SnapCenter 备份 Windows 文件系统之前为资�
 +
 默认值为 false 。
 
-* 有关SnapMirror业务连续性(SM-BC)的详细信息、请参见 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror业务连续性的对象限制"]。
+* 查看SnapMirror主动同步的特定前提条件和限制。有关信息，请参阅 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror活动同步的对象限制"]。
 
 
 .关于此任务
@@ -143,7 +143,7 @@ NOTE: 对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，
  a| 
 选择此选项可在另一个卷（ SnapMirror ）上创建备份集的镜像副本。
 
-应为SnapMirror业务连续性(SM-BC)启用此选项。
+应为SnapSnapMirror活动同步启用此选项。
 
 在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
 

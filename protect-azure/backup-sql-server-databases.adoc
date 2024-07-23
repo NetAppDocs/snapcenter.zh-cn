@@ -13,6 +13,9 @@ summary: '从"Resourcs"页面备份资源。'
 [role="lead"]
 如果某个资源尚未加入任何资源组，您可以从 "Resources" 页面备份该资源。
 
+.开始之前
+如果Azure Windows故障转移集群未分配集群IP或无法从SnapCenter访问、则应创建负载平衡器。应配置负载平衡器的IP并可从SnapCenter服务器访问。
+
 .步骤
 . 在左侧导航窗格中，选择*Resoles*，然后从列表中选择相应的插件。
 . 在“资源”页中，从“视图”下拉列表中选择*Database *、*Instance*或*Availability Group*。
