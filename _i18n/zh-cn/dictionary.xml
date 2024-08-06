@@ -6094,7 +6094,6 @@
   <block id="26e6565b87611c0e2e61e424bbf253a8" category="list-text">您应具有有效的 NetApp 支持站点登录凭据。</block>
   <block id="f011a01ebc3350e546311efaf71140bc" category="doc">添加基于 SnapCenter 标准控制器的许可证</block>
   <block id="6aa5717c99b34de9980debfbe3c6fa76" category="admonition">如果您的控制器上已安装 SnapManagerSuite 许可证，则系统会自动提供基于 SnapCenter 标准控制器的许可证授权。SnapManagerSuite 许可证和基于 SnapCenter 标准控制器的许可证这两个名称可以互换使用，但它们表示的是同一个许可证。</block>
-  <block id="a909f2df296012a51dc7da77f9e20dc6" category="list-text">不适用表示 SnapManager 套件许可证不适用，因为存储控制器位于 Cloud Volumes ONTAP ， ONTAP Select 或二级存储平台上。</block>
   <block id="e7590fb47d0f1f083a0a8a323aa643a0" category="admonition">基于 SnapCenter 标准控制器的许可证在控制器上显示为 SnapManagerSuite 许可证。</block>
   <block id="253fa4a7008b4934e4b20001065ef254" category="list-text">您应具有控制器序列号。</block>
   <block id="9a935baf19dae6c50cae12b831745abd" category="list-text">您应具有 SnapCenter 标准版或 SnapManagerSuite 许可证。</block>
@@ -8790,7 +8789,6 @@ destination</block>
   <block id="15d048e327e80031abf5c8b2302df43b" category="paragraph">SnapCenter 支持使用 MySQL Server 8.0.37 或更高版本作为 SnapCenter 存储库数据库。如果您使用的是早期版本的 MySQL 服务器和早期版本的 SnapCenter ，则在 SnapCenter 升级期间， MySQL 服务器将升级到 8.0.37 或更高版本。</block>
   <block id="1dc4cb439c92e9e74deaa08a6206fd89" category="admonition">SnapCenter还支持AWS El生 性负载平衡(ELB)和Azure负载平衡。</block>
   <block id="e9782ad9d0230912b51a2e508d0dd653" category="paragraph">有关详细信息，请参见<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
-  <block id="953ceaee3fd51554dfa1935fc3bed9c7" category="admonition">SnapCenter 高级版和 SnapCenter NAS 文件服务许可证已弃用，不再可用。Amazon FSx for NetApp ONTAP和Cloud Volumes ONTAP不再需要基于容量的许可证。</block>
   <block id="c11dc4986aae3f449b65e2cc978cb5da" category="paragraph">您应安装一个或多个 SnapCenter 许可证。有关如何添加许可证的信息，请参见 <block ref="978050eb868e07441781781da059ebc5" category="inline-link-macro-rx"></block>。</block>
   <block id="b69cd8afc7ba47f5300e7eb1864b6e2f" category="admonition">只有在使用基于 SnapCenter 标准控制器的许可证时，才需要手动删除试用许可证。</block>
   <block id="de07b96d6e0726ed58c0b7506fed6a37" category="paragraph">有关cmdlet的信息，请参见<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
@@ -8953,7 +8951,6 @@ destination</block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="list-title">下一步是什么？</block>
   <block id="eafc328b587e3beef3dbe108a3dedcf8" category="list-text">如果_SELinux statu_为"enenabled (启用)"、而_current mode_为"enforcing"(强制执行)、则*nginx*服务将无法启动。您应运行以下命令：</block>
   <block id="9c7abc376e895129105e281972c9f24c" category="list-text">转到主目录。</block>
-  <block id="fffce54e1b9446cd2fa32f9d3350c088" category="list-text">运行命令：<block ref="4a8e78821c4854328b05bdd52e9bee4b" prefix=" " category="inline-code"></block>。</block>
   <block id="dbc1e96eaa4b3649ea27aa8dc172aef0" category="list-text">如果不允许Web应用程序内部端口(8147)侦听、请运行以下命令：</block>
   <block id="d8febff31d9105c404a858b1d61e0262" category="list-text"><block ref="d59b1175be1c68f2945ba0ad1856a015" prefix="" category="inline-code"></block></block>
   <block id="f1c7a9d24546d515c477f616b931f8fe" category="list-text"><block ref="d772e354c2fa82d230ec267576cbcac4" prefix="" category="inline-code"></block></block>
@@ -9875,4 +9872,8 @@ destination</block>
   <block id="57318c547ffe570761f4a3f4b7899d67" category="sidebar">使用PowerShell cmdlet还原PostgreSQL</block>
   <block id="480aaec5aa69b781016a62284565640a" category="sidebar">克隆PostgreSQL资源备份</block>
   <block id="680c5ccf46f4a728694c590785dc9cda" category="sidebar">克隆PostgreSQL集群备份</block>
+  <block id="881cbdbe2345b7472ef428b8c524734a" category="admonition">SnapCenter 高级版和 SnapCenter NAS 文件服务许可证已弃用，不再可用。Amazon FSx for NetApp ONTAP和Cloud Volumes ONTAP不再需要基于容量的许可证。Azure NetApp Files不需要标准许可证和基于容量的许可证。</block>
+  <block id="eba5bfa2c0dc8d9f24998cf70fa891a6" category="list-text">不适用表示SnapManager套件许可证不适用、因为存储控制器位于Amazon FSx for NetApp ONTAP、Cloud Volumes ONTAP、ONTAP Select或二级存储平台上。</block>
+  <block id="4e07c38c016a099592ed905ac7e037f7" category="list-text">运行命令：<block ref="1031a5113d1c9ac03f4fa3db4c69d3a4" prefix=" " category="inline-code"></block>。</block>
+  <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Azure NetApp Files不需要标准许可证和基于容量的许可证。</block>
 </blocks>

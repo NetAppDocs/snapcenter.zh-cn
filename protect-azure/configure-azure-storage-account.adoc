@@ -15,6 +15,9 @@ summary: 在SnapCenter中配置Azure存储帐户。
 
 Azure存储帐户包含有关订阅ID、Azure凭据和Azure NetApp帐户的详细信息。
 
+
+NOTE: Azure NetApp Files不需要标准许可证和基于容量的许可证。
+
 .步骤
 . 在左侧导航窗格中，单击 * 存储系统 * 。
 . 在存储系统页面中，选择*New*并单击Azure NetApp Files。

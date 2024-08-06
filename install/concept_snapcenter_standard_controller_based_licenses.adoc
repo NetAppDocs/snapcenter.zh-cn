@@ -54,7 +54,7 @@ NOTE: 如果您的控制器上已安装 SnapManagerSuite 许可证，则系统�
 +
 ** image:../media/controller_licensed_icon.gif["一个检查图标"] 表示SnapManager套件许可证安装在FAS、AFF或ASA主存储系统上。
 ** image:../media/controller_not_licensed_icon.gif["取消图标"] 表示FAS、AFF或ASA主存储系统上未安装SnapManager套件许可证。
-** 不适用表示 SnapManager 套件许可证不适用，因为存储控制器位于 Cloud Volumes ONTAP ， ONTAP Select 或二级存储平台上。
+** 不适用表示SnapManager套件许可证不适用、因为存储控制器位于Amazon FSx for NetApp ONTAP、Cloud Volumes ONTAP、ONTAP Select或二级存储平台上。
 
 
 

@@ -130,7 +130,7 @@ _webapp_External port_的默认值为8146
 * 如果_SELinux statu_为"enenabled (启用)"、而_current mode_为"enforcing"(强制执行)、则*nginx*服务将无法启动。您应运行以下命令：
 +
 .. 转到主目录。
-.. 运行命令： `jorunalctl -x|grep nginx`。
+.. 运行命令： `journalctl -x|grep nginx`。
 .. 如果不允许Web应用程序内部端口(8147)侦听、请运行以下命令：
 +
 *** `ausearch -c 'nginx' --raw | audit2allow -M my-nginx`
