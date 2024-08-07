@@ -176,7 +176,7 @@ NOTE: 不会为非 Data Guard 数据库备份重做日志文件。对于非 Data
 
 NOTE: 您应先验证挂载路径的路径和内容、然后再将其列为外部日志位置。
 
-** http://www.netapp.com/us/media/tr-4591.pdf["NetApp 技术报告 4591 ：《数据库数据保护备份，恢复，复制和灾难恢复》"^]
+** https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-dp-overview.html["借助ONTAP实现Oracle数据保护"^]
 ** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["操作失败，并显示 ORA-00308 错误"^]
 
 
