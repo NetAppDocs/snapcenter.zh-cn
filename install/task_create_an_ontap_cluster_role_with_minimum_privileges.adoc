@@ -39,6 +39,9 @@ NOTE: 您应对每个权限重复此命令。
 
 您应运行多个 ONTAP 命令行界面命令来创建集群角色和分配权限。
 
+
+NOTE: 从SnapCenter 5.0开始、只有REST API才支持集群管理员用户。如果要使用非集群管理员创建角色、应使用ZAPI。
+
 * `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "metrocluster show" -access readonly`
 * `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "cluster identity modify" -access all`
 * `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster identity show" -access all`

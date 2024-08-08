@@ -39,6 +39,9 @@ NOTE: 您应对每个权限重复此命令。
 
 您应运行多个 ONTAP 命令行界面命令来创建 SVM 角色并分配权限。
 
+
+NOTE: 从5.0开始、只有REST API才支持Vserver管理员用户。如果要使用非Vserver admin创建角色、应使用ZAPI。
+
 * `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "snapmirror list-destinations" -access all`
 * `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "event generate-autosupport-log" -access all`
 * `ssecurity login role create -vserver svm_name -role svm_role_name -cmddirname "job history show"-access all`
