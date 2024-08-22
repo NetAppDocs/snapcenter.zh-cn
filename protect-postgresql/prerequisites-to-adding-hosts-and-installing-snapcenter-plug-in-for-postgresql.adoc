@@ -35,7 +35,7 @@ NOTE: 不支持IBM Java。
 http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=121069;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
 
 
 
@@ -49,7 +49,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src
 http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=121069;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
 
 * 对于在Linux主机上运行的PostgreSQL集群、在安装适用于PostgreSQL的插件时、系统会自动安装适用于UNIX的SnapCenter插件。
 * 您应将*bash*用作插件安装的默认shell。
