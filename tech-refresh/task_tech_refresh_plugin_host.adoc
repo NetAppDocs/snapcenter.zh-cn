@@ -91,7 +91,7 @@ NOTE: 默认情况下、Windows会自动分配下一个可用驱动器。
 
 . 将新主机添加到SnapCenter。
 . 验证是否已发现所有资源。
-. 运行主机刷新API： `/5.0/techrefresh/host` 或cmdlet：_Invoke - SmTechRefreshHost_。
+. 运行主机刷新API： `/<snapcenter_version>/techrefresh/host` 或cmdlet：_Invoke - SmTechRefreshHost_。
 +
 
 NOTE: 默认情况下、演练处于启用状态、并确定要重新链接的匹配资源。您可以通过运行API："/Jobs/｛jobid｝"或cmdlet _GET和SmJobSumaryReport_来验证资源。

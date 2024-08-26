@@ -20,7 +20,7 @@ summary: 在新主机上安装相同版本的SnapCenter服务器、然后运行A
 
 
 . 以SnapCenter管理员用户身份登录。
-. 使用API在旧主机上为SnapCenter服务器创建备份： `/5.0/server/backup` 或cmdlet：_New-SmServerBackup_。
+. 使用API：或cmdlet _New-SmServerBackup_在旧主机上创建SnapCenter服务器的备份 `/<snapcenter_version>/server/backup` 。
 +
 
 NOTE: 在创建备份之前、请暂停所有计划的作业、并确保没有正在运行的作业。
@@ -30,9 +30,9 @@ NOTE: 在创建备份之前、请暂停所有计划的作业、并确保没有�
 IMPORTANT: 如果要在新域上运行的SnapCenter服务器上还原备份、则在创建备份之前、应在旧SnapCenter主机中添加新域用户并分配SnapCenter管理员角色。
 
 . 将备份从旧主机复制到新主机。
-. 使用API在新主机上还原SnapCenter服务器的备份： `/5.0/server/restore` 或cmdlet：_Restore-SmServerBackup_。
+. 使用API：或cmdlet _Restore-SmServerBackup_还原新主机上SnapCenter服务器的备份 `/<snapcenter_version>/server/restore` 。
 +
-默认情况下、还原操作将更新所有主机中的新SnapCenter服务器URL。如果要跳过更新，请使用--SkipSMSURLInHosts_属性，并通过使用API之一运行来单独更新服务器URL： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+默认情况下、还原操作将更新所有主机中的新SnapCenter服务器URL。如果要跳过更新、请使用--SkipSMSURLInHosts_属性、并通过使用API：或cmdlet：_Set-SmServerConfig_分别更新服务器URL `/<snapcenter_version>/server/configureurl` 。
 
 +
 
@@ -49,7 +49,7 @@ NOTE: 服务器_/etc/host_条目将不会还原。您可以从旧服务器手动
 
 NOTE: 如果已手动更新旧SnapCenter主机中的web.config文件、则更新不会复制到新主机。您应在新主机的web.config文件中手动进行相同的更改。
 
-. 如果您跳过更新SnapCenter服务器URL、或者任何主机在还原过程中发生故障、请使用API更新由SnapCenter管理的所有主机或指定主机中的新服务器名称： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+. 如果您跳过了更新SnapCenter服务器URL的操作、或者任何主机在还原过程中出现故障、请使用API：或cmdlet：_Set-SmServerConfig_更新由SnapCenter管理的所有主机或指定主机中的新服务器名称 `/<snapcenter_version>/server/configureurl` 。
 . 从新的SnapCenter服务器激活所有主机上的已计划作业。
 
 
@@ -62,7 +62,7 @@ NOTE: 如果已手动更新旧SnapCenter主机中的web.config文件、则更新
 有关如何将节点添加到F5集群的信息、请参见 https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["使用 F5 配置 SnapCenter 服务器以实现高可用性"]。
 
 
-NOTE: 如果F5集群的URL发生更改、则可以使用API在所有主机中更新此URL： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+NOTE: 如果F5集群的URL发生更改、则可以使用API：或cmdlet：_set-SmServerConfig_在所有主机中更新此URL `/<snapcenter_version>/server/configureurl` 。
 
 
 
@@ -74,7 +74,7 @@ NOTE: 如果F5集群的URL发生更改、则可以使用API在所有主机中更
 
 == 回滚到旧的SnapCenter服务器主机
 
-如果出现任何问题、您可以通过使用API更新所有主机中的SnapCenter服务器URL来恢复旧的SnapCenter服务器主机： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+如果出现任何问题、您可以通过使用API：或cmdlet：_Set-SmServerConfig_更新所有主机中的SnapCenter服务器URL来恢复旧的SnapCenter服务器主机 `/<snapcenter_version>/server/configureurl` 。
 
 
 
@@ -98,9 +98,9 @@ NOTE: 如果F5集群的URL发生更改、则可以使用API在所有主机中更
 
 . 将旧的SnapCenter服务器备份复制到新主机。
 . 以SnapCenter管理员用户身份登录。
-. 使用API在新主机上还原SnapCenter服务器的备份： `/5.0/server/restore` 或cmdlet：_Restore-SmServerBackup_。
+. 使用API：或cmdlet _Restore-SmServerBackup_还原新主机上SnapCenter服务器的备份 `/<snapcenter_version>/server/restore` 。
 +
-默认情况下、还原操作将更新所有主机中的新SnapCenter服务器URL。如果要跳过更新，请使用--SkipSMSURLInHosts_属性，并使用API单独更新服务器URL： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+默认情况下、还原操作将更新所有主机中的新SnapCenter服务器URL。如果要跳过更新、请使用--SkipSMSURLInHosts_属性、并使用API：或cmdlet：_Set-SmServerConfig_单独更新服务器URL `/<snapcenter_version>/server/configureurl` 。
 
 +
 
@@ -110,7 +110,7 @@ NOTE: 如果插件主机无法解析服务器主机名、请登录到每个插�
 
 NOTE: 服务器_/etc/host_条目将不会还原。您可以从旧服务器手动还原它。
 
-. 如果您跳过了更新URL的操作、或者任何主机在还原过程中出现故障、请使用API更新由SnapCenter管理的所有主机或指定主机中的新服务器名称： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+. 如果您跳过了更新URL的操作、或者任何主机在还原过程中出现故障、请使用API：或cmdlet：_Set-SmServerConfig_更新由SnapCenter管理的所有主机或指定主机中的新服务器名称 `/<snapcenter_version>/server/configureurl` 。
 
 
 
@@ -131,9 +131,9 @@ NOTE: 服务器_/etc/host_条目将不会还原。您可以从旧服务器手动
 
 . 将旧的SnapCenter服务器备份复制到新主机。
 . 以SnapCenter管理员用户身份登录。
-. 使用API在新主机上还原SnapCenter服务器的备份： `/5.0/server/restore` 或cmdlet：_Restore-SmServerBackup_。
+. 使用API：或cmdlet _Restore-SmServerBackup_还原新主机上SnapCenter服务器的备份 `/<snapcenter_version>/server/restore` 。
 +
-默认情况下、还原操作将更新所有主机中的新SnapCenter服务器URL。如果要跳过更新，请使用--SkipSMSURLInHosts_属性，并使用API单独更新服务器URL： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+默认情况下、还原操作将更新所有主机中的新SnapCenter服务器URL。如果要跳过更新、请使用--SkipSMSURLInHosts_属性、并使用API：或cmdlet：_Set-SmServerConfig_单独更新服务器URL `/<snapcenter_version>/server/configureurl` 。
 
 +
 
@@ -143,7 +143,7 @@ NOTE: 如果插件主机无法解析服务器主机名、请登录到每个插�
 
 NOTE: 服务器_/etc/host_条目将不会还原。您可以从旧服务器手动还原它。
 
-. 如果您跳过了更新URL的操作、或者任何主机在还原过程中出现故障、请使用API更新由SnapCenter管理的所有主机或指定主机中的新服务器名称： `/5.0/server/configureurl` 或cmdlet：_Set-SmServerConfig_。
+. 如果您跳过了更新URL的操作、或者任何主机在还原过程中出现故障、请使用API：或cmdlet：_Set-SmServerConfig_更新由SnapCenter管理的所有主机或指定主机中的新服务器名称 `/<snapcenter_version>/server/configureurl` 。
 . 将独立主机转换为F5集群。
 +
 有关如何配置F5的信息、请参见 https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["使用 F5 配置 SnapCenter 服务器以实现高可用性"]。

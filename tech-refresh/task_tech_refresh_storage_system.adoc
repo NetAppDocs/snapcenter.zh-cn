@@ -77,7 +77,7 @@ summary: 通过将数据从旧存储移至新存储、将新存储挂载到相�
 
 NOTE: 只要将新LUN连接到主机、它就会具有新的序列号。在发现Windows文件系统期间、SnapCenter会将每个唯一序列号视为新资源。在存储技术更新期间、如果新存储中的LUN使用相同的驱动器号或路径连接到主机、 在SnapCenter中发现Windows文件系统会将现有资源标记为已删除、即使它是使用相同的驱动器号或路径挂载的、也会将新LUN显示为新资源。由于该资源已标记为已删除、因此不会考虑在SnapCenter中对其进行存储技术更新、并且旧资源的所有备份都将丢失。发生存储刷新时、对于Windows文件系统资源、不应在执行存储刷新API或cmdlet之前执行资源发现。
 
-. 运行存储刷新API之一： `/5.0/techrefresh/primarystorage` 或cmdlet：_Invoe-SmTechRefreshPrimaryStorage_。
+. 运行存储刷新API：或cmdlet： `/<snapcenter_version>/techrefresh/primarystorage` _Invoe-SmTechRefreshPrimaryStorage_。
 +
 
 NOTE: 如果为资源配置了已启用复制的策略、则在存储刷新后的最新备份应包含二级存储的详细信息。
@@ -87,11 +87,11 @@ NOTE: 如果为资源配置了已启用复制的策略、则在存储刷新后�
 .. 如果您使用的是SQL可用性组(AG)设置、则备份将在节点级别进行维护。您应提供节点名称作为存储技术更新的输入。
 .. 如果您使用的是Oracle Real Application Clusters (RAC)设置、则可以在任何节点上执行存储技术刷新。
 +
-默认情况下，_IsDryRun_属性设置为True。它将标识要为其刷新存储的资源。您可以通过运行API："5.0/Jobs/｛jobid｝"或cmdlet _GET _SmJobSumaryReport_来查看资源和更改的存储详细信息。
+默认情况下，_IsDryRun_属性设置为True。它将标识要为其刷新存储的资源。您可以通过运行API："<SmJob_version>/Jobs/｛jobid｝"或cmdlet _GET SnapCenter SumaryReport_来查看资源和已更改的存储详细信息。
 
 
 
-. 验证存储详细信息后、将_IsDryRun_属性设置为False并运行存储刷新API： `/5.0/techrefresh/primarystorage` 或cmdlet：_Invoe-SmTechRefreshPrimaryStorage_。
+. 验证存储详细信息后、将_IsDryRun_属性设置为False、然后运行存储刷新API：或cmdlet： `/<snapcenter_version>/techrefresh/primarystorage` _Invoke -SmTechRefreshPrimaryStorage_。
 +
 此操作将更新旧备份中的存储详细信息。
 
@@ -102,7 +102,7 @@ NOTE: 如果为资源配置了已启用复制的策略、则在存储刷新后�
 
 NOTE: 无法在ONTAP中迁移克隆层次结构。如果要迁移的存储在SnapCenter中具有任何克隆元数据、则克隆的资源将标记为独立资源。克隆元数据的克隆将以递归方式删除。
 
-. (可选)如果未将所有快照从旧主存储移至新主存储、请运行以下API： `/5.0/hosts/primarybackupsexistencecheck` 或cmdlet _Invoe-SmPrimaryBackupsExistenceCheck_。
+. (可选)如果未将所有快照从旧主存储移至新主存储、请运行以下API： `/<snapcenter_version>/hosts/primarybackupsexistencecheck` 或cmdlet _Invoke -SmPrimary BackupsExistenceCheck_。
 +
 此操作将对新主存储执行快照存在性检查、并将相应备份标记为不可用于SnapCenter中的任何操作。
 
@@ -138,7 +138,7 @@ SnapCenter需要使用新备份来确定最新的存储占用空间、此备份�
 
 IMPORTANT: 您应等待此操作完成。如果在完成前继续执行下一步、SnapCenter将完全丢失旧的二级快照元数据。
 
-. 成功为主机中的所有资源创建备份后、请运行二级存储刷新API： `/5.0/techrefresh/secondarystorage` 或cmdlet：_Invoe-SmTechRefreshSecondaryStorage_。
+. 成功为主机中的所有资源创建备份后、请运行二级存储刷新API：或cmdlet： `/<snapcenter_version>/techrefresh/secondarystorage` _Invoke－SmTechRefreshSecondaryStorage_。
 +
 此操作将更新给定主机中较早备份的二级存储详细信息。
 

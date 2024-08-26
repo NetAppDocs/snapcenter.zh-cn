@@ -8174,7 +8174,6 @@ Windows主机：</block>
   <block id="6c03857b78b3ff4a2451717b9e9827af" category="list-text"><block ref="6c03857b78b3ff4a2451717b9e9827af" category="inline-link-rx"></block></block>
   <block id="24cc9a88d9606665061c39212e66c652" category="list-text">将新主机添加到SnapCenter。</block>
   <block id="2e14e69362b4369a7145c71a12b474ac" category="list-text">验证是否已发现所有资源。</block>
-  <block id="e5895c534b891da856c34727ca198d1a" category="list-text">运行主机刷新API：<block ref="81cfca4b27f756310803add092790c10" prefix=" " category="inline-code"></block> 或cmdlet：_Invoke - SmTechRefreshHost_。</block>
   <block id="e99761d4e8fe46eed81bf6ce40a1f791" category="admonition">默认情况下、演练处于启用状态、并确定要重新链接的匹配资源。您可以通过运行API："/Jobs/｛jobid｝"或cmdlet _GET和SmJobSumaryReport_来验证资源。</block>
   <block id="fdaf38234b737e7c032ee2cecc41f45b" category="paragraph">如果已从多个主机迁移资源、则应对所有主机运行API或cmdlet。如果新主机中的驱动器或挂载路径与旧主机不同、则以下还原操作将失败：</block>
   <block id="865482b788ba7410d72bd211cc0f90c4" category="list-text">SQL原位还原将失败。但是、也可以利用RTAN功能。</block>
@@ -8193,34 +8192,26 @@ Windows主机：</block>
   <block id="637cb85078093dc0eac11d78013e5ea6" category="inline-link">启用多因素身份验证</block>
   <block id="2ef948491bb37a9da368eb98dbf46d25" category="list-text">(可选)配置多因素身份验证。有关详细信息，请参见<block ref="9188167510b580cfc3915a3c97779cfb" category="inline-link-rx"></block>。</block>
   <block id="73fcd074a38b94057f4ed6c44ccc4a72" category="list-text">以SnapCenter管理员用户身份登录。</block>
-  <block id="8e04153a44d15f2649eed597a45a1490" category="list-text">使用API在旧主机上为SnapCenter服务器创建备份：<block ref="167559e525a32a9584dce30028ce2eb5" prefix=" " category="inline-code"></block> 或cmdlet：_New-SmServerBackup_。</block>
   <block id="932aed11c7ac09d2c9b5fe47c68cf667" category="admonition">在创建备份之前、请暂停所有计划的作业、并确保没有正在运行的作业。</block>
   <block id="cd2afb5401e9315a58e0aa4a9bb6e12d" category="admonition">如果要在新域上运行的SnapCenter服务器上还原备份、则在创建备份之前、应在旧SnapCenter主机中添加新域用户并分配SnapCenter管理员角色。</block>
   <block id="a6c47e59c26648cb0d8ab865312f19cf" category="list-text">将备份从旧主机复制到新主机。</block>
-  <block id="21a80b35ea03c7240d13f42451d61fdb" category="list-text">使用API在新主机上还原SnapCenter服务器的备份：<block ref="9413602b99de6842bc71ebb5b785b9e7" prefix=" " category="inline-code"></block> 或cmdlet：_Restore-SmServerBackup_。</block>
-  <block id="83bca398f39af69acd2028a97e259162" category="paragraph">默认情况下、还原操作将更新所有主机中的新SnapCenter服务器URL。如果要跳过更新，请使用--SkipSMSURLInHosts_属性，并通过使用API之一运行来单独更新服务器URL：<block ref="e971ee31daa1b9fb67358eb67ac3e4ef" prefix=" " category="inline-code"></block> 或cmdlet：_Set-SmServerConfig_。</block>
   <block id="75893b63c45ff1f656ee2dcb708ba603" category="admonition">如果插件主机无法解析服务器主机名、请登录到每个插件主机、并以&lt;New IP&gt; SC_SERVER_NAME格式为新IP添加_ETC/HOST_条目。</block>
   <block id="8142c17d2e259174dc68c6970743b3e0" category="admonition">服务器_/etc/host_条目将不会还原。您可以从旧服务器手动还原它。</block>
   <block id="d3050839b85b878b37ec26575a2393e6" category="paragraph">如果在新域上运行的SnpCenter服务器上还原了备份、并且要继续使用旧域用户、则应在新的SnapCenter服务器中注册旧域。</block>
   <block id="3cb008d45317bdc58a3f417a317573e6" category="admonition">如果已手动更新旧SnapCenter主机中的web.config文件、则更新不会复制到新主机。您应在新主机的web.config文件中手动进行相同的更改。</block>
-  <block id="b9e30f124abf9d96dd55b4c223b8f628" category="list-text">如果您跳过更新SnapCenter服务器URL、或者任何主机在还原过程中发生故障、请使用API更新由SnapCenter管理的所有主机或指定主机中的新服务器名称：<block ref="e971ee31daa1b9fb67358eb67ac3e4ef" prefix=" " category="inline-code"></block> 或cmdlet：_Set-SmServerConfig_。</block>
   <block id="5a040d5194ec2af1001bd5d0cb6b80e1" category="list-text">从新的SnapCenter服务器激活所有主机上的已计划作业。</block>
   <block id="9399a783da7a09f3a58595bfdcce7cb9" category="section-title">F5集群中节点的技术更新</block>
   <block id="d4bd088e50b59b47b581ecebb8f0d093" category="paragraph">您可以通过删除F5集群中的任何节点并添加新节点来对该节点进行技术更新。如果需要刷新的节点处于活动状态、请将集群中的另一个节点设置为活动状态、然后删除该节点。</block>
   <block id="4c522a0a960905af1b1898134f7907a9" category="paragraph">有关如何将节点添加到F5集群的信息、请参见<block ref="f63d5110d37e6e50dc290770e72a5d43" category="inline-link-rx"></block>。</block>
-  <block id="5e9ebe793a30d30e5539c7511e5c6e16" category="admonition">如果F5集群的URL发生更改、则可以使用API在所有主机中更新此URL：<block ref="e971ee31daa1b9fb67358eb67ac3e4ef" prefix=" " category="inline-code"></block> 或cmdlet：_Set-SmServerConfig_。</block>
   <block id="28f25f96241cdf504bcd5de90ca513f0" category="section-title">停用旧SnapCenter服务器主机</block>
   <block id="4cfacc6c9a788b0680d720aad04b68de" category="paragraph">您可以在验证新SnapCenter服务器是否已启动且正在运行、并且所有插件主机均可与新SnapCenter服务器主机通信之后删除旧的SnapCenter服务器主机。</block>
   <block id="fa4325aa558a34f832e4e3caa0a88a3d" category="section-title">回滚到旧的SnapCenter服务器主机</block>
-  <block id="0f65df5a69f80fe4d53cc70d0582ac4a" category="paragraph">如果出现任何问题、您可以通过使用API更新所有主机中的SnapCenter服务器URL来恢复旧的SnapCenter服务器主机：<block ref="e971ee31daa1b9fb67358eb67ac3e4ef" prefix=" " category="inline-code"></block> 或cmdlet：_Set-SmServerConfig_。</block>
   <block id="645a84975202e30700b572b49a5ee29d" category="section-title">灾难恢复</block>
   <block id="e840a7811f820d020b557a3452d192cd" category="section-title">对独立SnapCenter主机进行灾难恢复</block>
   <block id="ead4a4a1f10513b6585301aa586f6555" category="paragraph">您可以通过将服务器备份还原到新主机来执行灾难恢复。</block>
   <block id="3652ad6e60746a83a1ccdd7c49e1114d" category="paragraph">确保您已备份旧SnapCenter服务器。</block>
   <block id="c7f7045ef4e37ae48744f3acccc57437" category="list-text">配置CA证书并启用双向SSL。有关详细信息，请参见<block ref="cf5f212364284bfbada6b95aa5119cc7" category="inline-link-rx"></block> 和<block ref="5cedcc7f04f2db49c5515979f7e2a157" category="inline-link-rx"></block>。</block>
   <block id="f3c8f6ef0e856eaaec4b17272aa0fefa" category="list-text">将旧的SnapCenter服务器备份复制到新主机。</block>
-  <block id="0763426685b28b52e4bf650bd30e058e" category="paragraph">默认情况下、还原操作将更新所有主机中的新SnapCenter服务器URL。如果要跳过更新，请使用--SkipSMSURLInHosts_属性，并使用API单独更新服务器URL：<block ref="e971ee31daa1b9fb67358eb67ac3e4ef" prefix=" " category="inline-code"></block> 或cmdlet：_Set-SmServerConfig_。</block>
-  <block id="8898b1441a85b04d66b54e88b20c098b" category="list-text">如果您跳过了更新URL的操作、或者任何主机在还原过程中出现故障、请使用API更新由SnapCenter管理的所有主机或指定主机中的新服务器名称：<block ref="e971ee31daa1b9fb67358eb67ac3e4ef" prefix=" " category="inline-code"></block> 或cmdlet：_Set-SmServerConfig_。</block>
   <block id="206c780d8f39c3cbe7871518b8955c87" category="section-title">对SnapCenter F5集群进行灾难恢复</block>
   <block id="99b619aa61c4a7bc51249d3daa98a9b6" category="paragraph">您可以通过将服务器备份还原到新主机、然后将独立主机转换为集群来执行灾难恢复。</block>
   <block id="1437d535957fc4f2f5ede150a9b16e03" category="list-text">将独立主机转换为F5集群。</block>
@@ -8254,24 +8245,19 @@ Windows主机：</block>
   <block id="a9e8d03a8c0a283037618f787942802f" category="list-text">将主机置于生产模式。</block>
   <block id="cebf7f0afc954a04ff2b679b949f2fdb" category="list-text">在SnapCenter中、为要迁移其存储的资源创建备份。SnapCenter需要使用新备份来确定最新的存储占用空间、此备份将用于更新现有旧备份的元数据。</block>
   <block id="7b621988ba507f6eda02af30b5759f19" category="admonition">只要将新LUN连接到主机、它就会具有新的序列号。在发现Windows文件系统期间、SnapCenter会将每个唯一序列号视为新资源。在存储技术更新期间、如果新存储中的LUN使用相同的驱动器号或路径连接到主机、 在SnapCenter中发现Windows文件系统会将现有资源标记为已删除、即使它是使用相同的驱动器号或路径挂载的、也会将新LUN显示为新资源。由于该资源已标记为已删除、因此不会考虑在SnapCenter中对其进行存储技术更新、并且旧资源的所有备份都将丢失。发生存储刷新时、对于Windows文件系统资源、不应在执行存储刷新API或cmdlet之前执行资源发现。</block>
-  <block id="61af4be774cf543288e094cd65f66f9d" category="list-text">运行存储刷新API之一：<block ref="8aa2b55d53215c8ada503a5e391eecee" prefix=" " category="inline-code"></block> 或cmdlet：_Invoe-SmTechRefreshPrimaryStorage_。</block>
   <block id="7efc97e31c96919069d3de5aad26d52c" category="admonition">如果为资源配置了已启用复制的策略、则在存储刷新后的最新备份应包含二级存储的详细信息。</block>
   <block id="445383de89543cc5cefd65e468d97967" category="list-text">如果您使用的是SQL故障转移集群实例(FCI)设置、则备份将在集群级别进行维护。您应提供集群名称作为存储技术更新的输入。</block>
   <block id="cfd4b26f26836517a989f96ea9c2dc5e" category="list-text">如果您使用的是SQL可用性组(AG)设置、则备份将在节点级别进行维护。您应提供节点名称作为存储技术更新的输入。</block>
   <block id="cc458a33f832f50b23bcd1380effa08f" category="list-text">如果您使用的是Oracle Real Application Clusters (RAC)设置、则可以在任何节点上执行存储技术刷新。</block>
-  <block id="91e15f334388fed7f0f1f188db940bcc" category="paragraph">默认情况下，_IsDryRun_属性设置为True。它将标识要为其刷新存储的资源。您可以通过运行API："5.0/Jobs/｛jobid｝"或cmdlet _GET _SmJobSumaryReport_来查看资源和更改的存储详细信息。</block>
-  <block id="bb1d51bc9c891084ec74c829c9ed74f6" category="list-text">验证存储详细信息后、将_IsDryRun_属性设置为False并运行存储刷新API：<block ref="8aa2b55d53215c8ada503a5e391eecee" prefix=" " category="inline-code"></block> 或cmdlet：_Invoe-SmTechRefreshPrimaryStorage_。</block>
   <block id="0e74b14142ad76ad7f0d5d5c075a40d6" category="paragraph">此操作将更新旧备份中的存储详细信息。</block>
   <block id="c876de2821e8feb56cd9f1d2e77e52ca" category="paragraph">您可以在同一主机上多次运行API或cmdlet、只有在刷新存储后、它才会更新旧备份中的存储详细信息。</block>
   <block id="d04c9bc8adc1e2522f0d4f02b9e07c51" category="admonition">无法在ONTAP中迁移克隆层次结构。如果要迁移的存储在SnapCenter中具有任何克隆元数据、则克隆的资源将标记为独立资源。克隆元数据的克隆将以递归方式删除。</block>
-  <block id="1412ff8e3ddd4966afe8e811f9893c17" category="list-text">(可选)如果未将所有快照从旧主存储移至新主存储、请运行以下API：<block ref="2e3d92814ab937b9ea982f5c70df6b8c" prefix=" " category="inline-code"></block> 或cmdlet _Invoe-SmPrimaryBackupsExistenceCheck_。</block>
   <block id="e77fa080fb93b274c5fd8afe7128856d" category="paragraph">此操作将对新主存储执行快照存在性检查、并将相应备份标记为不可用于SnapCenter中的任何操作。</block>
   <block id="058c5f6f3bedef0d4efe7447e8ec24a0" category="section-title">更新二级存储的备份</block>
   <block id="989761acccddfabb5694c3a77fa69ccf" category="list-text">在主存储和新二级存储之间建立SnapMirror关系、并确保关系状态良好。</block>
   <block id="af9f7a112bf1099b70f681225bdfc61d" category="list-text">在SnapCenter中、为要迁移其存储的资源创建备份。</block>
   <block id="35d0d7c4234c896b59954276eefc785c" category="paragraph">SnapCenter需要使用新备份来确定最新的存储占用空间、此备份将用于更新现有旧备份的元数据。</block>
   <block id="0e931ce92d17a7c4b4bfa6da256a2117" category="admonition">您应等待此操作完成。如果在完成前继续执行下一步、SnapCenter将完全丢失旧的二级快照元数据。</block>
-  <block id="289dea5f2adc051adbcd3a7239eb588c" category="list-text">成功为主机中的所有资源创建备份后、请运行二级存储刷新API：<block ref="445e0cbeef497c2ffbb139cf4d9d85d7" prefix=" " category="inline-code"></block> 或cmdlet：_Invoe-SmTechRefreshSecondaryStorage_。</block>
   <block id="0f1a31157bf41fa9a14b8dd716c66a9a" category="paragraph">此操作将更新给定主机中较早备份的二级存储详细信息。</block>
   <block id="abf0d07668e8864165ccc1b3eeb85231" category="paragraph">如果要在资源级别运行此命令，请对每个资源单击*Refresh*以更新二级存储元数据。</block>
   <block id="0b20923697baecb6d37c37f407efdbb1" category="list-text">成功更新旧备份后、您可以断开与主存储的旧二级存储关系。</block>
@@ -9884,4 +9870,18 @@ destination</block>
   <block id="266df807c209259b6527f0402eec5ecc" category="paragraph">有关ONTAP和应用程序插件的最低要求、请参见<block ref="da65d29edc3443bf674cd57705cb58f7" category="inline-link-rx"></block>[互操作性表工具^]。</block>
   <block id="0d9aba31602daa8aa7c78b179f23a57a" category="paragraph">请参见<block ref="5ef8c586cada32cf8eb7b081f126f3ff" category="inline-link-rx"></block></block>
   <block id="f4c1fea93a54108320484de7aa75a48a" category="paragraph">有关受支持版本的最新信息、请参见<block ref="a174ad87a36b51cae5fdf2582f4fe3d8" category="inline-link-rx"></block>[ NetApp互操作性表工具^]。</block>
+  <block id="f726f8fd5eef7b55d41228aa71d0a7e9" category="list-text">运行主机刷新API：<block ref="b37cd34fbbf7b073a1b5c2fd52ee92dd" prefix=" " category="inline-code"></block> 或cmdlet：_Invoke - SmTechRefreshHost_。</block>
+  <block id="875d7a3460c60f3568be1f2abe89a635" category="list-text">使用API：或cmdlet _New-SmServerBackup_在旧主机上创建SnapCenter服务器的备份<block ref="88422de128aef85dbcc043bb5e99d727" prefix=" " category="inline-code"></block> 。</block>
+  <block id="717c72270ce876f743856a621389e967" category="list-text">使用API：或cmdlet _Restore-SmServerBackup_还原新主机上SnapCenter服务器的备份<block ref="4c4a6e8508df6259fb36bbdfd36c0086" prefix=" " category="inline-code"></block> 。</block>
+  <block id="b5bccab3d839dec6954d2ee98465f797" category="paragraph">默认情况下、还原操作将更新所有主机中的新SnapCenter服务器URL。如果要跳过更新、请使用--SkipSMSURLInHosts_属性、并通过使用API：或cmdlet：_Set-SmServerConfig_分别更新服务器URL<block ref="a0debc001fcb5862414cffc14f778700" prefix=" " category="inline-code"></block> 。</block>
+  <block id="cce21874db99bf2ff8009d7bba6a563e" category="list-text">如果您跳过了更新SnapCenter服务器URL的操作、或者任何主机在还原过程中出现故障、请使用API：或cmdlet：_Set-SmServerConfig_更新由SnapCenter管理的所有主机或指定主机中的新服务器名称<block ref="a0debc001fcb5862414cffc14f778700" prefix=" " category="inline-code"></block> 。</block>
+  <block id="cb9240a42017d8a2bfb2ccb6b34e9748" category="admonition">如果F5集群的URL发生更改、则可以使用API：或cmdlet：_set-SmServerConfig_在所有主机中更新此URL<block ref="a0debc001fcb5862414cffc14f778700" prefix=" " category="inline-code"></block> 。</block>
+  <block id="b62e8825f8eb26f88145e7459278b951" category="paragraph">如果出现任何问题、您可以通过使用API：或cmdlet：_Set-SmServerConfig_更新所有主机中的SnapCenter服务器URL来恢复旧的SnapCenter服务器主机<block ref="a0debc001fcb5862414cffc14f778700" prefix=" " category="inline-code"></block> 。</block>
+  <block id="7927668963a4b91c5f671a07cc05f694" category="paragraph">默认情况下、还原操作将更新所有主机中的新SnapCenter服务器URL。如果要跳过更新、请使用--SkipSMSURLInHosts_属性、并使用API：或cmdlet：_Set-SmServerConfig_单独更新服务器URL<block ref="a0debc001fcb5862414cffc14f778700" prefix=" " category="inline-code"></block> 。</block>
+  <block id="23d1c4d4d0b1c7dc3a95606b2c934617" category="list-text">如果您跳过了更新URL的操作、或者任何主机在还原过程中出现故障、请使用API：或cmdlet：_Set-SmServerConfig_更新由SnapCenter管理的所有主机或指定主机中的新服务器名称<block ref="a0debc001fcb5862414cffc14f778700" prefix=" " category="inline-code"></block> 。</block>
+  <block id="cc5ce545a551c1edbafb6c9e650a64c4" category="list-text">运行存储刷新API：或cmdlet：<block ref="84d2bad3561662612c0f19102d8af171" prefix=" " category="inline-code"></block> _Invoe-SmTechRefreshPrimaryStorage_。</block>
+  <block id="d741bee0a9e155f971a26c89ef6a540e" category="paragraph">默认情况下，_IsDryRun_属性设置为True。它将标识要为其刷新存储的资源。您可以通过运行API："&lt;SmJob_version&gt;/Jobs/｛jobid｝"或cmdlet _GET SnapCenter SumaryReport_来查看资源和已更改的存储详细信息。</block>
+  <block id="cc0cce77e1e28838ab6e9078eb7da114" category="list-text">验证存储详细信息后、将_IsDryRun_属性设置为False、然后运行存储刷新API：或cmdlet：<block ref="84d2bad3561662612c0f19102d8af171" prefix=" " category="inline-code"></block> _Invoke -SmTechRefreshPrimaryStorage_。</block>
+  <block id="c81b0a7466aafc83de0beda501358cdd" category="list-text">(可选)如果未将所有快照从旧主存储移至新主存储、请运行以下API：<block ref="6e088a1a2676abbb3b6434c32a05fa0c" prefix=" " category="inline-code"></block> 或cmdlet _Invoke -SmPrimary BackupsExistenceCheck_。</block>
+  <block id="da838fd656a52206a5571426cdea502d" category="list-text">成功为主机中的所有资源创建备份后、请运行二级存储刷新API：或cmdlet：<block ref="519c39228e07d21e137e72515657a3cf" prefix=" " category="inline-code"></block> _Invoke－SmTechRefreshSecondaryStorage_。</block>
 </blocks>
