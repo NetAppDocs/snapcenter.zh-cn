@@ -546,7 +546,6 @@
   <block id="539ba05c387c505e5829bcee612dec7c" category="paragraph">SnapCenter 图形用户界面或 PowerShell cmdlet</block>
   <block id="0b0c2887a236e9135995566b39c6a69e" category="paragraph">驻留在 Storage Virtual Machine （ SVM ）上的 SMB3 （ CIFS ）共享</block>
   <block id="ac8951fb8900c75e1b47b9440e783d24" category="paragraph">仅支持配置。</block>
-  <block id="23fb16c1c9b83befc8a21b31b0a433d2" category="paragraph">您不能使用 SnapCenter 备份使用 SMB 协议的任何数据或共享。</block>
   <block id="86cbd38e0939fb9a14eea3387d05d7b4" category="paragraph">VMware VM</block>
   <block id="a200c15748125d289ffe86820ffcd19f" category="paragraph">通过 FC 或 iSCSI HBA 连接的 RDM LUN</block>
   <block id="a5e23c97dd15d671c82b090f4480878c" category="paragraph">PowerShell cmdlet</block>
@@ -3256,9 +3255,6 @@
   <block id="42c3a197506df634d37106aa12e94817" category="paragraph">以下示例显示了在 my.ini 文件的 [client] 部分中更新的路径。</block>
   <block id="7bbf719310f30342c522d3414da61277" category="list-text">停止 Internet 信息服务器（ Internet Information Server ， IIS ）中的 SnapCenter 服务器 Web 应用程序。</block>
   <block id="b93c543a0f96a9413f8f7281e2b85709" category="list-text">重新启动 MySQL 服务。</block>
-  <block id="20990864d085d9bb1f322b2df271bdec" category="list-text">更新 web.config 文件中 MySQLProtocol 密钥的值。</block>
-  <block id="4828d55a2fe6e484512c9947b0fd06ef" category="paragraph">以下示例显示了在 web.config 文件中更新的 MySQLProtocol 密钥的值。</block>
-  <block id="67882348f76a80bca6ec205f6d47a382" category="list-text">使用 my.ini 文件的 [client] 部分中提供的路径更新 web.config 文件。</block>
   <block id="6217c9a70228dfb942cee33273650127" category="list-text">在 IIS 中启动 SnapCenter 服务器 Web 应用程序。</block>
   <block id="7f2254a19dcb8d48356527ff8514efab" category="section-title">为 HA 配置配置安全 MySQL 连接</block>
   <block id="887dc7045f93986f64fbe50a55983beb" category="paragraph">如果要确保 SnapCenter 服务器与 MySQL 服务器之间的通信安全，您可以为高可用性（ HA ）节点生成安全套接字层（ SSL ）证书和密钥文件。您必须在 MySQL 服务器和 HA 节点上配置证书和密钥文件。</block>
@@ -3278,9 +3274,6 @@
   <block id="89093a295da7b5b9812cf7cccb724876" category="paragraph">建议使用服务器 FQDN 作为服务器证书的公用名。</block>
   <block id="4f3f310802411b7b71c042c2d0a84b55" category="list-text">在两个 HA 节点上停止 Internet 信息服务器（ Internet Information Server ， IIS ）中的 SnapCenter 服务器 Web 应用程序。</block>
   <block id="ceac3af00f29021cbec639a39d8bf71f" category="list-text">在两个 HA 节点上重新启动 MySQL 服务。</block>
-  <block id="dc4e66eba3a59e87b1bbedb41d37736c" category="list-text">更新两个 HA 节点的 web.config 文件中 MySQLProtocol 密钥的值。</block>
-  <block id="bc8fe1879d43dbf3a3bb5cbbeedf0de0" category="paragraph">以下示例显示了在 web.config 文件中更新的 MySQLProtocol 密钥的值。</block>
-  <block id="7e5a31df8ef045a4de9b8f57aa6c423f" category="list-text">使用您在 my.ini 文件的 [client] 部分中为两个 HA 节点指定的路径更新 web.config 文件。</block>
   <block id="ca74309e5786b1bad64702fbd15c6437" category="paragraph">以下示例显示了在 my.ini 文件的 [client] 部分中更新的路径。</block>
   <block id="3c3e0111222e44f64ad4670abe8d6923" category="list-text">在两个 HA 节点上的 IIS 中启动 SnapCenter 服务器 Web 应用程序。</block>
   <block id="38c6db21335904565d9a647706a7ba00" category="list-text">在其中一个 HA 节点上使用 Set-SmRepositoryConfig -RebuildSlave -Force PowerShell cmdlet 和 -Force 选项，以便在两个 HA 节点上建立安全的 MySQL 复制。</block>
@@ -9845,7 +9838,6 @@ destination</block>
   <block id="26d0f7d5ea2b87e82f98d6e622ecf6a0" category="admonition">从5.0开始、只有REST API才支持Vserver管理员用户。如果要使用非Vserver admin创建角色、应使用ZAPI。</block>
   <block id="3955db71dd681bf23ceee85c567a0129" category="admonition">从SnapCenter 5.0开始、只有REST API才支持集群管理员用户。如果要使用非集群管理员创建角色、应使用ZAPI。</block>
   <block id="3fd57bbce38ee807b2553fd56f562c3a" category="paragraph">有关受支持版本的最新信息，请参见<block ref="734369dbdcbe00444fc7be843d617a6c" category="inline-link-rx"></block>。</block>
-  <block id="785127eaa67d3c056c9086f5c305587c" category="paragraph">Windows Server 支持 SnapCenter 配置和数据保护。有关受支持版本的最新信息、请参见<block ref="e3393440e41cc60e26745e63c4eef2dd" category="inline-link-rx"></block>[ NetApp互操作性表工具^]。</block>
   <block id="e688fd8ff964975e518ba6e9fff48630" category="paragraph">有关受支持版本的最新信息，请参见<block ref="64fc8efacd4fa13b8c1907c1db527b3d" category="inline-link-rx"></block>。</block>
   <block id="580a1e1b3bc67640f27785bacfdba10c" category="paragraph">有关受支持版本的最新信息，请参见 <block ref="fd691abce396db29ca9081f79eea36a4" category="inline-link-rx"></block>。</block>
   <block id="f773b518874c315e0079bcc43b41dafb" category="paragraph">有关受支持版本的最新信息，请参见 <block ref="7e664c06fb213184870ee71fe5278749" category="inline-link-rx"></block>。</block>
@@ -9884,4 +9876,11 @@ destination</block>
   <block id="cc0cce77e1e28838ab6e9078eb7da114" category="list-text">验证存储详细信息后、将_IsDryRun_属性设置为False、然后运行存储刷新API：或cmdlet：<block ref="84d2bad3561662612c0f19102d8af171" prefix=" " category="inline-code"></block> _Invoke -SmTechRefreshPrimaryStorage_。</block>
   <block id="c81b0a7466aafc83de0beda501358cdd" category="list-text">(可选)如果未将所有快照从旧主存储移至新主存储、请运行以下API：<block ref="6e088a1a2676abbb3b6434c32a05fa0c" prefix=" " category="inline-code"></block> 或cmdlet _Invoke -SmPrimary BackupsExistenceCheck_。</block>
   <block id="da838fd656a52206a5571426cdea502d" category="list-text">成功为主机中的所有资源创建备份后、请运行二级存储刷新API：或cmdlet：<block ref="519c39228e07d21e137e72515657a3cf" prefix=" " category="inline-code"></block> _Invoke－SmTechRefreshSecondaryStorage_。</block>
+  <block id="4f76be6e3e78147f069df76d367c9608" category="paragraph">Windows Server 支持 SnapCenter 配置和数据保护。有关受支持版本的最新信息，请参见 <block ref="1b8aeeaa3467913188c00052ded68716" category="inline-link-rx"></block>。</block>
+  <block id="e41c493e675bae82cb792b14a41ea23d" category="list-text">更新MySQLProtocol项在SnapManager．Web.UI.dll.config文件中的值。</block>
+  <block id="195748e3bf5f1bb6db5e627914555154" category="paragraph">以下示例显示了在MySQLProtocol .Web.UI.dll.config文件中更新的SnapManager项的值。</block>
+  <block id="fc8660e632799d14ef937c4ca79726ab" category="list-text">使用my.ini文件的[client]部分中提供的路径更新SnapManager．Web.UI.dll.config文件。</block>
+  <block id="0512eab1623a615d3740da31907b5d7c" category="list-text">更新两个HA节点的MySQLProtocol项在SnapManager．Web.UI.dll.config文件中的值。</block>
+  <block id="e20a4407f4a132523f0ff53a11de8ea9" category="paragraph">以下示例显示了在MySQLProtocol .Web.UI.dll.config文件中更新的SnapManager密钥值。</block>
+  <block id="282f609628cc0aa1febc1031254fda4e" category="list-text">使用您在my.ini文件的[client]部分为两个HA节点指定的路径更新SnapManager．Web.UI.dll.config文件。</block>
 </blocks>

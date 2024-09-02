@@ -4,7 +4,7 @@
 
 SnapCenter 在物理机和虚拟机上均支持多种存储类型。在为主机安装软件包之前，您必须验证是否支持您的存储类型。
 
-Windows Server 支持 SnapCenter 配置和数据保护。有关受支持版本的最新信息、请参见https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT[][ NetApp互操作性表工具^]。
+Windows Server 支持 SnapCenter 配置和数据保护。有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 |===
 | 计算机 | Storage type | 使用配置 | 支持说明 
@@ -38,8 +38,6 @@ SnapCenter 图形用户界面或 PowerShell cmdlet
 SnapCenter 图形用户界面或 PowerShell cmdlet
  a| 
 仅支持配置。
-
-您不能使用 SnapCenter 备份使用 SMB 协议的任何数据或共享。
 
 
 
@@ -81,8 +79,6 @@ VMware VM
 SnapCenter 图形用户界面或 PowerShell cmdlet
  a| 
 仅支持配置。
-
-您不能使用 SnapCenter 备份使用 SMB 协议的任何数据或共享。
 
 
 
@@ -130,8 +126,6 @@ Hyper-V 虚拟机
 SnapCenter 图形用户界面或 PowerShell cmdlet
  a| 
 仅支持配置。
-
-您不能使用 SnapCenter 备份使用 SMB 协议的任何数据或共享。
 
 
 NOTE: 不支持 Hyper-V 直通磁盘以及在 NetApp 存储上配置的 VHD （ x ）上备份数据库。
