@@ -61,11 +61,20 @@ SnapCenter SMCore 通信端口
  a| 
 计划程序服务端口
  a| 
-8154 (HTTPS)、
+8154 (HTTPS)
 
 此端口用于集中编排SnapCenter服务器主机中所有受管插件的SnapCenter计划程序工作流。
 
 要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安装向导安装SnapCenter服务器。"]
+
+
+
+ a| 
+Rabbitmq端口
+ a| 
+5472 (TCP)
+
+这是Rabbitmq侦听的默认端口、用于在计划程序服务和SnapCenter之间进行发布者-订阅者模型通信。
 
 
 

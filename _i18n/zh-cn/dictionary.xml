@@ -3071,11 +3071,6 @@
   <block id="d8348d0bfeb3374f54049d8825a97310" category="paragraph">有关详细信息，请参见<block ref="0bda2cd349437bc7a5675533156ebe46" category="inline-link-rx"></block>。</block>
   <block id="14c90652b0a2e523d6e8630706107e75" category="summary">SnapCenter 软件可在多个浏览器上使用。</block>
   <block id="6d84e3718084e0db779da4ff8791a2f2" category="doc">支持的浏览器</block>
-  <block id="ebe4f447bd3316e4f81ab2a6d2f26810" category="list-text">Internet Explorer</block>
-  <block id="8b45fc0c82a493bebd2ae705881299e0" category="list-text">仅支持默认级别的安全性。</block>
-  <block id="8c39fdaac8e8c7ec5824fd1acda14c9a" category="paragraph">更改 Internet Explorer 安全设置会导致出现严重的浏览器显示问题。</block>
-  <block id="c5c74f2a0046f37ca93f6d8e3c775364" category="list-text">必须禁用 Internet Explorer 兼容性视图。</block>
-  <block id="a5c41f715c1b8a880253846c025624e9" category="list-text">Microsoft Edge</block>
   <block id="c939b5dd7dddc4f1908d7f58a2ab351d" category="summary">SnapCenter 需要多个许可证才能启用数据保护操作。您安装的 SnapCenter 许可证类型取决于您的存储环境和要使用的功能。</block>
   <block id="54e6e66bc0a69ef86d9bb0b63900793e" category="admonition">SnapCenter 也作为数据保护包的一部分提供。如果您购买的是 A400 或更高版本，则应购买数据保护包。</block>
   <block id="82ef718f4ebe0c276814ee3d51e33361" category="paragraph">SnapRestore</block>
@@ -6324,7 +6319,6 @@
   <block id="032615c5bcc68f759618748b90e724e4" category="paragraph">您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储或适用于 NetApp ONTAP 的 Amazon FSX ，以执行数据保护和配置操作。</block>
   <block id="74ae0888147d892b12bb807a0b81b3af" category="paragraph">如果已添加 FSX SVM ，此处将列出 FSX SVM 。</block>
   <block id="6f9f8c6ff90de911912e63ac72e07121" category="paragraph">如果您已使用 fsxadmin 添加 FSX 集群，此处将列出 FSX 集群。</block>
-  <block id="74e84f9442fdb7717385ee092400869a" category="paragraph">如果您使用的是 IE 10 或更早版本，则无法正确加载 SnapCenter UI 。您应升级到 IE 11 。</block>
   <block id="cddfaa01c32e2362546c78364751248b" category="admonition">适用于 UNIX 的 SnapCenter 插件是适用于 AIX 的 SnapCenter 插件软件包的一部分，不支持并发卷组。</block>
   <block id="6ae61d1454f759ea3eb40a95ec0ab1b7" category="admonition">SnapCenter 不支持 * 同步镜像 * 复制。</block>
   <block id="08762ef2fe73d944789541451485f737" category="paragraph">* 存储插件 *</block>
@@ -7459,7 +7453,6 @@
   <block id="46d55a8aefdec15a8ce44087c8123826" category="inline-link">操作失败、并显示错误Unable to discover the device for LUN</block>
   <block id="24642a08e354f43168ca4f1178850f84" category="list-text">您应确保LUN未使用由混合协议iSCSI和FC组成的iGroup映射到AIX主机。有关详细信息，请参见<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>。</block>
   <block id="4fb437564892944d73f87c822342e2bb" category="cell">4.8</block>
-  <block id="028a3c414b2f36abce9baa1df750ef89" category="admonition">CA证书RSA密钥长度应至少为3072位。</block>
   <block id="36fecb1daf18c8eeaacbcc8cdc70f4a6" category="paragraph">ONTAP主存储系统和二级存储系统可以是ONTAP FAS、AFF、全SAN阵列(ASA)、Select或Cloud ONTAP。</block>
   <block id="d21fbb2a5ce79a2a4ef0780b73023b2e" category="paragraph">VM主机上的物理挂载和NFS直接挂载(不支持VMDK和RDM LUN。)</block>
   <block id="f2688d5a483bee7fcbd80a4e666fc088" category="inline-link">Host Utilities文档</block>
@@ -8924,7 +8917,6 @@ destination</block>
   <block id="cf46417d06a0356fc053eba2626759a2" category="list-text">选择计费提供商。</block>
   <block id="98d7dda5167a79acadd993f0ad819512" category="list-text">输入20位数的SnapCenter实例ID。</block>
   <block id="a22e3c4898555ed30acf91192f3c301a" category="paragraph">计划程序服务端口</block>
-  <block id="f494773247b901f17fbe90691d43594a" category="paragraph">8154 (HTTPS)、</block>
   <block id="0703d446ecd330b75f76dab17472df37" category="paragraph">此端口用于集中编排SnapCenter服务器主机中所有受管插件的SnapCenter计划程序工作流。</block>
   <block id="e029a63ec5a2d5331a40bbf8a483cc16" category="paragraph">3306 (HTTPS)、双向、可自定义</block>
   <block id="10dbf6dc6b3b30fd58efded1253516d8" category="paragraph">适用于Exchange数据库的SnapCenter插件</block>
@@ -9883,4 +9875,10 @@ destination</block>
   <block id="0512eab1623a615d3740da31907b5d7c" category="list-text">更新两个HA节点的MySQLProtocol项在SnapManager．Web.UI.dll.config文件中的值。</block>
   <block id="e20a4407f4a132523f0ff53a11de8ea9" category="paragraph">以下示例显示了在MySQLProtocol .Web.UI.dll.config文件中更新的SnapManager密钥值。</block>
   <block id="282f609628cc0aa1febc1031254fda4e" category="list-text">使用您在my.ini文件的[client]部分为两个HA节点指定的路径更新SnapManager．Web.UI.dll.config文件。</block>
+  <block id="be9f9eca92a7b91f5cf9f485b92f2f33" category="admonition">CA证书RSA密钥长度必须至少为3072位。</block>
+  <block id="76f30afe00c2fd9de2c57b507789aa7c" category="paragraph">8154 (HTTPS)</block>
+  <block id="064270f4c1b637c782011391ccc057cb" category="paragraph">Rabbitmq端口</block>
+  <block id="310b8da14055c2cf4702264e02854d3d" category="paragraph">5472 (TCP)</block>
+  <block id="c55a170d16570920e099a9e43d38db67" category="paragraph">这是Rabbitmq侦听的默认端口、用于在计划程序服务和SnapCenter之间进行发布者-订阅者模型通信。</block>
+  <block id="f5a551e6a3161ca6d9ee33d926d734d5" category="list-text">Microsoft Edge 110.0.1857.17及更高版本</block>
 </blocks>
