@@ -48,6 +48,10 @@ summary: 您可以使用 SnapCenter 还原备份的 Exchange 数据库。
 * 对于SnapMirror活动同步还原操作、您必须从主位置选择备份。
 
 
+[role="tabbed-block"]
+====
+.SnapCenter UI
+--
 .步骤
 . 在左侧导航窗格中，单击资源页面左上角的 * 资源 * 。
 . 从下拉列表中选择 Exchange Server 插件。
@@ -132,3 +136,68 @@ NOTE: 预处理脚本或后处理脚本路径不应包含驱动器或共享。�
 从备份还原活动数据库时，如果副本与活动数据库之间存在滞后，被动数据库可能会进入暂停或失败状态。
 
 当活动数据库的日志链分叉并开始一个新分支以中断复制时，可能会发生状态更改。Exchange Server 会尝试修复副本，但如果无法修复，则应在还原后创建新备份，然后重新对副本执行转义。
+
+--
+.PowerShell cmdlet
+--
+.步骤
+. 使用 `Open-SmConnection` cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
+----
+. 使用 `Get-SmBackup` cmdlet 检索有关要还原的一个或多个备份的信息。
++
+此示例显示有关所有可用备份的信息：
+
++
+[listing]
+----
+PS C:\> Get-SmBackup
+
+BackupId                      BackupName                    BackupTime                    BackupType
+--------                      ----------                    ----------                    ----------
+341                           ResourceGroup_36304978_UTM... 12/8/2017 4:13:24 PM          Full Backup
+342                           ResourceGroup_36304978_UTM... 12/8/2017 4:16:23 PM          Full Backup
+355                           ResourceGroup_06140588_UTM... 12/8/2017 6:32:36 PM          Log Backup
+356                           ResourceGroup_06140588_UTM... 12/8/2017 6:36:20 PM          Full Backup
+----
+. 使用 `Restore-SmBackup` cmdlet 从备份中还原数据。
++
+此示例将还原一个最新的备份：
+
++
+[listing]
+----
+C:\PS> Restore-SmBackup -PluginCode SCE -AppObjectId 'sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2' -BackupId 341 -IsRecoverMount:$true
+----
++
+以下示例将还原时间点备份：
+
++
+[listing]
+----
+C:\ PS> Restore-SmBackup -PluginCode SCE -AppObjectId 'sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2' -BackupId 341 -IsRecoverMount:$true -LogRestoreType ByTransactionLogs -LogCount 2
+----
++
+此示例将二级存储上的备份还原到主案例：
+
++
+[listing]
+----
+C:\ PS> Restore-SmBackup -PluginCode 'SCE' -AppObjectId 'DB2' -BackupId 81 -IsRecoverMount:$true -Confirm:$false
+-archive @{Primary="paw_vs:vol1";Secondary="paw_vs:vol1_mirror"} -logrestoretype All
+----
++
+使用 ` -archive` 参数可以指定要用于还原的主卷和二级卷。
+
++
+使用 ` -IsRecoverMount ： $true` 参数，您可以在还原后挂载数据库。
+
+
+
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+--
+====

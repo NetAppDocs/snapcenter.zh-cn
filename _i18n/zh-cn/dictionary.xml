@@ -214,8 +214,6 @@
   <block id="b8ceb1eaf0d60af03679989562024d6b" category="paragraph">创建克隆后，您不应对其进行重命名。</block>
   <block id="fad3dbbe9841f42de249b688f1d47a80" category="paragraph">* 查找更多信息 *</block>
   <block id="8a2bd81e968aaadb6ec10a1b58f541cc" category="inline-link-macro">备份 SQL Server 数据库，实例或可用性组</block>
-  <block id="38c78702a48e457f5ef291281168432e" category="paragraph"><block ref="38c78702a48e457f5ef291281168432e" category="inline-link-macro-rx"></block></block>
-  <block id="8c922e6a0134954b667b072d00b58ce3" category="inline-link-macro">使用 PowerShell cmdlet 克隆备份</block>
   <block id="68f8e37f5b3d7c3c6c34a481b33a736f" category="inline-link">使用默认 tcp_timeout 值时，克隆操作可能会失败或需要较长时间才能完成</block>
   <block id="f7e7f0dd9d36aec3d609775de2dbbd0b" category="paragraph"><block ref="f7e7f0dd9d36aec3d609775de2dbbd0b" category="inline-link-rx"></block></block>
   <block id="1e9ab426973a56020f8d1db85cb07f06" category="inline-link">故障转移集群实例数据库克隆失败</block>
@@ -468,9 +466,6 @@
   <block id="a9c04949b14fd7574e1168207d5adc46" category="paragraph">备份频率（执行备份的频率）（对于某些插件称为 _schedule type_ ）是策略配置的一部分。您可以选择每小时，每天，每周或每月作为策略的备份频率。如果不选择其中任何频率，则创建的策略是一个按需策略。您可以单击 * 设置 * &gt; * 策略 * 来访问策略。</block>
   <block id="1ac86f6dd27abfcb13588ec9dff9ba2a" category="list-text">备份计划</block>
   <block id="d25ed0a2e5a416476005adbae8f92042" category="paragraph">备份计划（恰好在执行备份的时间）是资源组配置的一部分。例如，如果您的资源组配置了每周备份的策略，则可以将该计划配置为每星期四晚上 10 ： 00 进行备份。您可以通过单击 * 资源 * &gt; * 资源组 * 来访问资源组计划。</block>
-  <block id="d2323db6aa3f6333b1375db7f025bd4e" category="summary">您可以使用 PowerShell cmdlet 备份 SQL Server 数据库或 Windows 文件系统。其中包括备份 SQL Server 数据库或 Windows 文件系统，包括与 SnapCenter 服务器建立连接，发现 SQL Server 数据库实例或 Windows 文件系统，添加策略，创建备份资源组，备份和验证备份。</block>
-  <block id="38d7f66964588305ed5bee44db007183" category="list-text">您必须已添加存储系统连接并创建凭据。</block>
-  <block id="7d88eb773274afe1c014d0593b26bb0a" category="list-text">您必须已添加主机和发现的资源。</block>
   <block id="d5b8eb2056e11e71857a777fd502266b" category="paragraph">此时将显示用户名和密码提示符。</block>
   <block id="658e1796a21da94df433ae106024123b" category="list-text">使用 Add-SmPolicy cmdlet 创建备份策略。</block>
   <block id="3e78fcd28fc74d7aa4a8ac3b657caa4e" category="paragraph">此示例将创建一个 SQL 备份类型为 FullBackup 的新备份策略：</block>
@@ -3541,7 +3536,6 @@
   <block id="c82d11661e23f7e1c1c9dba5537554ed" category="list-text">使用 Install-SmHostPackage cmdlet 和所需参数在多个主机上安装此插件。</block>
   <block id="9e28cd7963a581ccc44be9795e68b347" category="paragraph">如果您已手动安装插件，并且不想验证主机是否满足安装插件的要求，则可以使用 -skipprecheck 选项。</block>
   <block id="bf2fb73b7932cdadf3476adc215ac4c1" category="summary">备份数据库包括与 SnapCenter 服务器建立连接，添加资源，添加策略，创建备份资源组和备份。</block>
-  <block id="0db7de34dbf5c1c143a3f3c98858115e" category="doc">使用 PowerShell cmdlet 备份数据库</block>
   <block id="78bce70d2497c3d80a1f0dabc6500d76" category="list-text">使用 Add-SmResources cmdlet 添加资源。</block>
   <block id="4ff3483d2f2e6b961be08deacbb372c4" category="paragraph">此示例显示了如何添加 SingleContainer 类型的 SAP HANA 数据库：</block>
   <block id="b708e8e9f86c4cd6cb76c67f9b00bf53" category="paragraph">此示例显示了如何添加 MultipleContainers 类型的 SAP HANA 数据库：</block>
@@ -3734,16 +3728,10 @@
   <block id="bf66d767375071f33bf2189c36a4c30d" category="paragraph">备份频率也称为某些插件的计划类型，属于策略配置的一部分。例如，您可以将备份频率配置为每小时，每天，每周或每月。</block>
   <block id="e4a66fdeb97530f93b6abd40f37cabf6" category="list-text">备份计划（恰好是执行备份的时间）</block>
   <block id="99cfce1788abdce92fe7f446ec8d1da4" category="paragraph">备份计划是资源或资源组配置的一部分。例如，如果您的资源组配置了每周备份的策略，则可以将该计划配置为每星期四晚上 10 ： 00 进行备份</block>
-  <block id="62bd1df1f8e068497569c97f3e404a98" category="summary">还原 SAP HANA 数据库备份包括启动与 SnapCenter 服务器的连接会话，列出备份和检索备份信息以及还原备份。</block>
-  <block id="0f69ffe8d82c94ffce3da6b597e697b5" category="doc">使用 PowerShell cmdlet 还原 SAP HANA 数据库</block>
   <block id="0be208f27c2aea320f1d6d221e131551" category="list-text">使用 Get-SmBackup 和 Get-SmBackupReport cmdlet 确定要还原的备份。</block>
   <block id="2004c840a5bc74f37ca5c26f2dfd5e0e" category="paragraph">此示例显示有两个可用于还原的备份：</block>
-  <block id="9cb2e8b30975ae43fe6a8ea67898a952" category="list-text">在 HANA Studio 中启动恢复过程。</block>
-  <block id="a53d0252472f1610734654e51124858b" category="paragraph">数据库已关闭。</block>
-  <block id="57a70f4a4a92a47a28f2f41b69a06ef8" category="admonition">AppObjectId 为 "Host\Plugy\UID" ，其中 UID = SID 表示单个容器类型的资源， UID = MDC\SID 表示多个容器资源。您可以从 Get-smResources cmdlet 获取 ResourceID 。</block>
   <block id="2aa8b416a2f876e9cf8c5050ccf69e30" category="paragraph">此示例显示了如何从主存储还原数据库：</block>
   <block id="08fb7677c629e186e2ce0a37ba408715" category="paragraph">此示例显示了如何从二级存储还原数据库：</block>
-  <block id="1dbedac9aa8fb16b0d7e3f4c912759fc" category="paragraph">这些备份将在 HANA Studio 中提供以供恢复。</block>
   <block id="a02dc7342a190de6a5009f0c2e71d869" category="summary">您必须配置 HDB 用户存储密钥和 HDBSQL 操作系统用户，才能在 SAP HANA 数据库上执行数据保护操作。</block>
   <block id="ad94dd38dcf67be4d6b2440b1c9bfa8f" category="list-text">如果 SAP HANA 数据库未配置 HDB 安全用户存储密钥和 HDB SQL OS 用户，则仅会为自动发现的资源显示一个红色挂锁图标。如果在后续发现操作期间发现配置的 HDB 安全用户存储密钥不正确或无法访问数据库本身，则红色挂锁图标将重新出现。</block>
   <block id="19231ec7746e87de717dc81f2ffc3364" category="list-text">您必须配置 HDB 安全用户存储密钥和 HDB SQL OS 用户，以便能够保护数据库或将其添加到资源组中以执行数据保护操作。</block>
@@ -3896,7 +3884,6 @@
   <block id="3771dc2b098cf3d12c113b1fc9573f1e" category="doc">适用于 SAP HANA 数据库的 SnapCenter 插件概述</block>
   <block id="98a7c2294306ddb514e683daa919fd16" category="paragraph">SnapCenter 支持单个容器和多租户数据库容器（ MDC ）。您可以在 Windows 和 Linux 环境中使用适用于 SAP HANA 数据库的插件。未安装在 HANA 数据库主机上的插件称为集中式主机插件。集中式主机插件可以管理不同主机之间的多个 HANA 数据库。</block>
   <block id="5897e96cd2d6eeae5ae099c0709f3831" category="paragraph">安装适用于 SAP HANA 数据库的插件后，您可以使用采用 NetApp SnapMirror 技术的 SnapCenter 在另一个卷上创建备份集的镜像副本。您还可以使用采用 NetApp SnapVault 技术的插件执行磁盘到磁盘备份复制，以满足标准要求。</block>
-  <block id="75a7c9b2e73f5c1cc5286ea02330c1bd" category="doc">使用 PowerShell cmdlet 克隆 SAP HANA 数据库备份</block>
   <block id="7efd97c2a4471de87de7e99332374e4a" category="list-text">使用 Get-SmBackup cmdlet 检索备份以执行克隆操作。</block>
   <block id="f03d64352eff2c5a90a8790e99accb55" category="paragraph">此示例显示有两个可用于克隆的备份：</block>
   <block id="d7272ca580c1be43c009610e69bf10d3" category="list-text">从现有备份启动克隆操作，并指定导出克隆卷所使用的 NFS 导出 IP 地址。</block>
@@ -4114,8 +4101,6 @@
   <block id="c41e777bd921bd5fc9079273c0ed35db" category="doc">适用于 Microsoft Exchange Server 的 SnapCenter 插件概述</block>
   <block id="e126a0dff251b10008436e2bf2a5dd06" category="paragraph">适用于 Microsoft Exchange Server 的 SnapCenter 插件是 NetApp SnapCenter 软件的主机端组件，可用于对 Exchange 数据库进行应用程序感知型数据保护管理。适用于 Exchange 的插件可自动备份和还原 SnapCenter 环境中的 Exchange 数据库。</block>
   <block id="94bf62b5661b3bf71e7b277fd3572bb1" category="paragraph">安装适用于 Exchange 的插件后，您可以使用采用 NetApp SnapMirror 技术的 SnapCenter 在另一个卷上创建备份集的镜像副本，并使用 NetApp SnapVault 技术执行磁盘到磁盘备份复制，以满足标准合规性或归档要求。</block>
-  <block id="b2589f75fce91547cb20c051fa1935d2" category="summary">还原 Exchange 数据库包括启动与 SnapCenter 服务器的连接会话，列出备份和检索备份信息以及还原备份。</block>
-  <block id="97e9982b58636ac0e13e42585b460313" category="doc">使用 PowerShell cmdlet 还原 Exchange 资源</block>
   <block id="e8b2bea378ae2d61944327f562235bbe" category="list-text">使用 `Open-SmConnection` cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。</block>
   <block id="53d7030c30fb81234ffed5a3972eb621" category="list-text">使用 `Get-SmBackup` cmdlet 检索有关要还原的一个或多个备份的信息。</block>
   <block id="a65b207e84f627a2af00b6dd102bd0e3" category="list-text">使用 `Restore-SmBackup` cmdlet 从备份中还原数据。</block>
@@ -4215,9 +4200,6 @@
   <block id="46d19c77ea243f8418add711d447fe6c" category="paragraph">主机可以是独立主机或 DAG 。如果指定 DAG ，则需要使用 _-isDAG_ 参数。</block>
   <block id="22a2075c03f5ded233e65d35fd11ae8f" category="list-text">使用 _Install-SmHostPackage_ cmdlet 和所需参数安装适用于 Exchange 的插件。</block>
   <block id="7f6f1b702f3b78f61ed6261e3b8c8544" category="paragraph">此命令将在指定主机上安装适用于 Exchange 的插件，然后向 SnapCenter 注册此插件。</block>
-  <block id="47dfd37b6d44f98f65b2e75ff64e7f3a" category="summary">备份 Exchange Server 数据库包括与 SnapCenter 服务器建立连接，发现 Exchange Server 数据库，添加策略，创建备份资源组，备份和查看备份状态。</block>
-  <block id="6c40f1cde52cc35bedb76a6ac167d83e" category="doc">使用 PowerShell cmdlet 备份 Exchange 资源</block>
-  <block id="177c6d04e35e22fd728d0f8aa88c6c74" category="admonition">适用于 Exchange 的插件不支持克隆操作；因此，适用于 Exchange 的插件不支持 Add-SmPolicy cmdlet 的 CloneType 参数</block>
   <block id="584657e4b5bddce78001faf5776544cc" category="paragraph">此示例将创建一个具有完整备份和日志备份 Exchange 备份类型的新备份策略：</block>
   <block id="208c499842b5bd5ba293e47da51ebd68" category="paragraph">此示例将创建一个新的备份策略，此策略采用每小时完整备份和日志备份 Exchange 备份类型：</block>
   <block id="206edf297460ddfa7679c1e47ace5ca1" category="paragraph">此示例将创建一个新的备份策略，以便仅备份 Exchange 日志：</block>
@@ -5214,7 +5196,6 @@
   <block id="e8afddd41cf3a716324442f7a4538460" category="list-text">列出可使用 Get-SmBackup 或 Get-SmResourceGroup cmdlet 克隆的备份。</block>
   <block id="b92d70c39b6e5b77f828b04b1f8cf2e7" category="paragraph">此示例显示有关指定资源组的信息：</block>
   <block id="490bfe5ade57157a35bf58b686acb1cf" category="list-text">使用 New-SmClone cmdlet 从克隆资源组或现有备份启动克隆操作。</block>
-  <block id="517a125fd46ee1a60309a280447487c0" category="summary">备份资源包括与 SnapCenter 服务器建立连接，添加资源，添加策略，创建备份资源组和备份。</block>
   <block id="d278818a36e5f43a96b7082ec24a25e0" category="paragraph">此示例添加了以下资源：</block>
   <block id="d51b1b50a87024de88cbdf1b6d828c21" category="paragraph">此示例将创建一个新的备份策略：</block>
   <block id="6aba9ab9639862100a3f951f105883b5" category="summary">在创建备份作业之前定义备份策略可确保您拥有成功还原或克隆资源所需的备份。您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO\ ）在很大程度上决定了您的备份策略。</block>
@@ -6799,7 +6780,6 @@
   <block id="378c4677444d1c0a4a5f7af5b98179fa" category="paragraph"><block ref="18c30fe5285c9c31acdd1bd6d51af1bd" category="inline-link-macro-rx"></block>。</block>
   <block id="ae75553103cbeaaaa3b0e4002805ae6f" category="paragraph"><block ref="ae75553103cbeaaaa3b0e4002805ae6f" category="inline-link-macro-rx"></block></block>
   <block id="b7ee450a891722e2248bf6edbef84f21" category="paragraph"><block ref="b7ee450a891722e2248bf6edbef84f21" category="inline-link-macro-rx"></block></block>
-  <block id="f9db2c2c51ac713541e90ff79219156d" category="paragraph"><block ref="f9db2c2c51ac713541e90ff79219156d" category="inline-link-macro-rx"></block></block>
   <block id="ace671fcc1d4c5939c3ed0ebf95d2b2c" category="paragraph">Windows支持以下类型的脚本：</block>
   <block id="29233ecbd2b929a26387627ae9f90bbf" category="paragraph">UNIX支持以下类型的脚本：</block>
   <block id="11ab50b04d8cca57ff15c12c97d5679c" category="list-text">Python脚本</block>
@@ -9026,7 +9006,6 @@ destination</block>
   <block id="73bb0c3e029e657eee721094d9dfd4a4" category="doc">备份IBM DB2资源</block>
   <block id="9bb1086732d729daa5079011da1d7f58" category="image-alt">DB2备份工作流</block>
   <block id="f6ca7431c38f4f9103a7165ce76ebf07" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。SnapCenter cmdlet 帮助和 cmdlet 参考信息包含有关 PowerShell cmdlet 的详细信息。<block ref="5c7d1c91ee3f41bdd6f718a502a5613f" category="inline-link-rx"></block>(英文)</block>
-  <block id="524291bce284c7a322c8064a7d402ef7" category="doc">备份IBM DB2</block>
   <block id="5698d6a1b70b87c193bb309260fbe3c4" category="paragraph">对于Windows：_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creper\ETC\ALLOWED_commands.config_</block>
   <block id="a9a2e6333525f32619cc146e3da2e140" category="paragraph">对于Linux：/var/opt/snapcentre/scC/ALLOED_commands.config_</block>
   <block id="f4ec0d473fd093ff1515ec698ec93238" category="summary">您可以使用默认快照命名约定、也可以使用自定义命名约定。默认备份命名约定会为快照名称添加一个时间戳、以帮助您确定副本的创建时间。</block>
@@ -9046,10 +9025,7 @@ destination</block>
   <block id="a3abd792e75175dc6360666ec9533a2c" category="admonition">对于用于静宿、快照和取消静宿操作的PRE和POST命令、您应从Linux的/opt/snapcenter/snapenter/scC/ALLOED_commands.config_路径和Windows的_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creer\ETC\ALLOED_commands.config_检查这些命令是否位于插件主机上可用的命令列表中。</block>
   <block id="bec1318185bcb08bbbdb149f6e72458c" category="paragraph">克隆自动发现的DB2资源后、克隆的资源将标记为手动资源。单击*Refresh Resources*以恢复克隆的DB2资源。删除克隆后、存储和主机也会被清理。</block>
   <block id="8da40f6fe3107c9433a48199413eafc1" category="paragraph">如果在执行克隆操作后未刷新资源并尝试删除克隆、则不会清理存储和主机。您必须在fstab中手动删除这些条目。</block>
-  <block id="0dba3293d94fffec6acecd31b797abb1" category="doc">使用PowerShell cmdlet克隆IBM DB2数据库备份</block>
   <block id="7b5f6d9e0f208631c0910d81fcd84413" category="paragraph">此示例显示要克隆的备份的NFSExportIP地址为10.32.212.14：</block>
-  <block id="e1d21c0573d8edccd1611eecec1c4497" category="paragraph">对于DB2数据库：</block>
-  <block id="3bf2ba8333d028c6261fc6dc40aa02ef" category="paragraph">对于DB2实例：</block>
   <block id="a22f4a66e3c8c5cfcb28db540b3b53cd" category="list-text">您可以在源IBM DB2服务器上进行克隆。</block>
   <block id="62efa2c3113bfa21f93723855cb62c9a" category="doc">在Linux主机上为SnapCenter IBM DB2插件服务配置CA证书</block>
   <block id="a601121a2919d3d268279f81d4b8569b" category="doc">在Windows主机上为SnapCenter IBM DB2插件服务配置CA证书</block>
@@ -9168,8 +9144,6 @@ destination</block>
   <block id="c90dd548c691ca9f32913357e116af19" category="paragraph">对于自动发现的资源、不需要使用挂载命令。</block>
   <block id="df85b9b2d7736db0ac0fccefcb84c8f0" category="admonition">对于用于静宿、快照和取消静宿操作的PRE和POST命令、您应从Linux的/opt/snapcenter/snapenter/scC/ALLOED_commands.config_路径和Windows的_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creer\ETC\ALLOED_commands.config_检查这些命令是否位于插件主机上可用的命令列表中。</block>
   <block id="63da44e9da033b590dde9b4ad197a492" category="paragraph">只有当"回滚"状态为"待定数据库"时、才能进行恢复。此状态适用于启用了归档日志记录的DB2数据库。</block>
-  <block id="53b75feee407d1834b322c10e85f7623" category="summary">还原IBM DB2备份包括启动与SnapCenter服务器的连接会话、列出备份并检索备份信息以及还原备份。</block>
-  <block id="d1ef025ad5eecf5742761547510f17ec" category="doc">使用PowerShell cmdlet还原IBM DB2数据库</block>
   <block id="a1d5af660c5e2d1e4fad83bdc58b7ce2" category="admonition">AppObjectId为"Host\Plugin\UID"、其中UID =&lt;instance_name&gt;表示手动发现的实例资源、UID =&lt;databse_name&gt;表示&lt;instance_name&gt;数据库资源。您可以从 Get-smResources cmdlet 获取 ResourceID 。</block>
   <block id="6bd0747e41f5cc71876f961107d5cde4" category="paragraph"><block ref="5c7d1c91ee3f41bdd6f718a502a5613f" category="inline-link-rx"></block>(英文)</block>
   <block id="ba315e9de1111ac853f33529fa2cd3d3" category="doc">还原手动添加的资源备份</block>
@@ -9253,7 +9227,6 @@ destination</block>
   <block id="e705a7920e05c9bb81e85e88f3bc517e" category="admonition">如果命令列表中不存在这些命令、则操作将失败。*对于MySQL 5.7版本、应在MySQL中设置ignore_MYSQLX/port = true (默认为false)。 属性文件。</block>
   <block id="1aa42ebe2562e36443837ba3783d56be" category="list-text">您无法保护克隆的MySQL实例。</block>
   <block id="5ca99b958cb1bd3ef353a484ef374b7c" category="paragraph">提供要启动克隆的MySQL实例的端口。</block>
-  <block id="7bf249a0d2f6ca34f234e49a7c6ae839" category="doc">使用PowerShell cmdlet克隆MySQL数据库备份</block>
   <block id="617874f47ab7905a23ed519cf3fea6ae" category="list-text">您可以在源MySQL服务器上进行克隆。</block>
   <block id="0dfabcb39ba57463ff60fac9a6ef98b9" category="doc">在Linux主机上为SnapCenter MySQL插件服务配置CA证书</block>
   <block id="fcf09390b67d36433a1b5d8a3baa2685" category="doc">在Windows主机上为SnapCenter MySQL插件服务配置CA证书</block>
@@ -9323,9 +9296,6 @@ destination</block>
   <block id="cb883508bba7de6fa1086f8be627f59b" category="list-text">不支持时间点和分钟级自动恢复。</block>
   <block id="9fde62e7bc35c3b39dc1d0d05b5d4c30" category="list-text">在“恢复范围”页中，选择*Complete Resource*以恢复MySQL数据库的已配置数据卷。</block>
   <block id="3aac36b8956b530dee664d07e15ff001" category="admonition">对于用于静宿、快照和取消静宿操作的PRE和POST命令、您应从Linux的_/opt/snapcentre/snapenter/scC/ALLOED_commands.config_路径检查这些命令是否位于插件主机上可用的命令列表中。</block>
-  <block id="cd590f35a0b386a7dbd4ed93e94a2563" category="summary">还原MySQL备份包括启动与SnapCenter服务器的连接会话、列出备份并检索备份信息以及还原备份。</block>
-  <block id="68a34ea2d1e4c6a908fbd0f2e0dfd502" category="doc">使用PowerShell cmdlet还原MySQL数据库</block>
-  <block id="5e9e173d2acff941dc42dd384b711936" category="admonition">AppObjectId为"Host\Plugin\UID"、其中UID =&lt;instance_name&gt;表示手动发现的实例资源、UID =&lt;databse_name&gt;表示&lt;instance_name&gt;数据库资源。您可以从get-SmResources cmdlet获取ResourceID。</block>
   <block id="26f012751d0422897cf8be8bfbe0e184" category="doc">为适用于MySQL的SnapCenter插件设置凭据</block>
   <block id="957af8278f8063c6cf7bcf3ea7d98baa" category="summary">SnapCenter 可与插件应用程序以及存储系统上的 NetApp 技术集成。要使用适用于MySQL数据库的插件、请使用SnapCenter图形用户界面。</block>
   <block id="0ce8bb1c11c9d867461ad1c0b83e04c0" category="doc">适用于MySQL的SnapCenter插件功能</block>
@@ -9427,7 +9397,6 @@ destination</block>
   <block id="58ec0509621b150bb63b0fd69f20665f" category="doc">备份NetApp支持的插件资源的资源组</block>
   <block id="82f84190c005819dad7f504f11cda76c" category="doc">NetApp支持的插件资源的备份计划</block>
   <block id="219faad869c51c259c3baeb888e7715b" category="doc">取消NetApp支持的插件的备份操作</block>
-  <block id="dbde28811975e59f9d793cdbedffa379" category="paragraph">有关PowerShell cmdlet的信息，请使用SnapCenter cmdlet帮助或参阅<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="439bf0bb77d088155289bdb25e45edeb" category="list-text">默认克隆操作仅克隆存储对象。只有当NetApp支持的插件提供克隆功能时、才能在应用程序级别执行克隆操作。</block>
   <block id="16ee2093a7a4ef5d61a3e32fb3cdb6aa" category="doc">克隆NetApp支持的插件资源备份</block>
   <block id="d6f2d27570c2ded83dc0df5937822b5e" category="paragraph">您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。有关PowerShell cmdlet的详细信息、请使用SnapCenter cmdlet帮助或参阅<block ref="bc27467ef171f28886fa3a802d3980c6" category="inline-link-rx"></block> 《软件cmdlet参考指南》^。</block>
@@ -9521,8 +9490,6 @@ destination</block>
   <block id="8c6a5ec4378c1fb0539384c188e10773" category="list-text">在*值*字段中指定端口号。</block>
   <block id="8df8e33d8de2d6167669d469ccf7bacd" category="summary">资源是指Linux主机上由SnapCenter管理的PostgreSQL集群和实例。安装适用于PostgreSQL的SnapCenter插件后、系统会自动发现该Linux主机上的PostgreSQL集群、并将其显示在资源页面中。</block>
   <block id="b7010b9dd54942efc350213b545f8fcc" category="paragraph">资源是指Linux主机上由SnapCenter管理的PostgreSQL集群和实例。安装适用于PostgreSQL的SnapCenter插件后、系统会自动发现该Linux主机上所有实例中的PostgreSQL集群、并将其显示在资源页面中。</block>
-  <block id="0d78e7f1a288dafc16b38b2db161bd37" category="summary">备份集群包括与SnapCenter服务器建立连接、添加资源、添加策略、创建备份资源组以及备份。</block>
-  <block id="b1cbcfa72bf25e7c520985ac50c60f65" category="doc">使用PowerShell cmdlet备份集群</block>
   <block id="82cdab2339b9d151736b53885e0ce102" category="paragraph">以下示例显示了如何添加PostgreSQL实例：</block>
   <block id="76c214e24b03aa4168d09074b6e14e3f" category="summary">您可以为资源\(集群\)或资源组创建备份。备份工作流包括规划、确定要备份的集群、管理备份策略、创建资源组和附加策略、创建备份以及监控操作。</block>
   <block id="530895ccaf7ffc619f25f8f9d8ec3597" category="doc">备份PostgreSQL资源</block>
@@ -9537,7 +9504,6 @@ destination</block>
   <block id="3aec6404efc9e4c86b1c1e63225bc69f" category="paragraph">输入要从现有备份克隆的目标PostgreSQL目标端口。</block>
   <block id="ddeb42879d827df35406b952ceec75ef" category="list-text">克隆前命令：删除同名现有集群</block>
   <block id="ac6903fb60d8773c9c64b4d5c2ae07ca" category="list-text">POST CLONE命令：验证集群或启动集群。</block>
-  <block id="c5f5244e6930e3be5fb9358a7fb198ec" category="doc">使用PowerShell cmdlet克隆PostgreSQL集群备份</block>
   <block id="a46c7c9051556410e34daf87555e4af7" category="paragraph">对于PostgreSQL集群：</block>
   <block id="16304fb8cc6cc60af53bde0bb5ac66b7" category="list-text">您可以在源PostgreSQL服务器上进行克隆。</block>
   <block id="15ae17a7cd3cc273763752dd6144c354" category="doc">在Linux主机上为SnapCenter PostgreSQL插件服务配置CA证书</block>
@@ -9616,11 +9582,6 @@ destination</block>
   <block id="c9ef32d5d952753021dc5a9a5f8a1fc1" category="paragraph">如果用户要恢复到凌晨5点。 然后、用户必须将浏览器时区设置为PostgreSQL Linux主机时区、即GMT-07：00、并将日期和时间指定为早上5：00</block>
   <block id="08a801b87570777fd2e3960aa5df1bb1" category="admonition">您无法恢复手动添加的PostgreSQL资源。</block>
   <block id="43434635d53a7654c99b7e0b2592780f" category="admonition">适用于PostgreSQL的SnapCenter插件会在//PostgreSQL /PostgreSQL &lt;OS_temp_folder&gt;_SC_recrecovery &lt;Restore_JobId&gt;/_文件夹中创建backup_label"和表空间映射、以帮助手动恢复。</block>
-  <block id="77d20f777995de612db657a54e3dd05e" category="summary">还原PostgreSQL备份包括启动与SnapCenter服务器的连接会话、列出备份并检索备份信息以及还原备份。</block>
-  <block id="327dedb40ce8a6597f0c43633fac8ff6" category="doc">使用PowerShell cmdlet还原PostgreSQL集群</block>
-  <block id="9211fb254b9418c89e77590ae03a0ae8" category="admonition">AppObjectId为"Host\Plugin\UID"、其中UID =&lt;instance_name&gt;表示手动发现的实例资源、UID = PostgreSQL &lt;databse_name&gt;表示&lt;instance_name&gt;集群资源。您可以从 Get-smResources cmdlet 获取 ResourceID 。</block>
-  <block id="b5c3bf7715665388a63229be96401c77" category="paragraph">此示例显示了如何从主存储还原集群：</block>
-  <block id="68457f3725741703167e8a741dfb53a5" category="paragraph">此示例显示了如何从二级存储还原集群：</block>
   <block id="e9ed9fe137a73fd8f4de1dd2a91bb6b4" category="summary">SnapCenter 使用凭据对 SnapCenter 操作的用户进行身份验证。您应创建用于安装SnapCenter插件的凭据、以及用于对集群或Windows文件系统执行数据保护操作的其他凭据。</block>
   <block id="e98661df3aff27229a7058376533924a" category="doc">为适用于PostgreSQL的SnapCenter插件设置凭据</block>
   <block id="4a22036d291fcb70270b7a277bb6609d" category="summary">SnapCenter 可与插件应用程序以及存储系统上的 NetApp 技术集成。要使用适用于PostgreSQL集群的插件、请使用SnapCenter图形用户界面。</block>
@@ -9777,7 +9738,6 @@ destination</block>
   <block id="d2a6c0fe906c34dcc3199d46b0f064eb" category="sidebar">在Topology页面中查看IBM DB2数据库备份和克隆</block>
   <block id="1f70c9e1700c704dfec3fabce3ea1e61" category="sidebar">恢复IBM DB2</block>
   <block id="3f1b13e4c36844e70f5e441d547e538a" category="sidebar">还原自动发现的数据库备份</block>
-  <block id="6430c6d3f6715feb3c81d928f75f4ef5" category="sidebar">使用PowerShell cmdlet还原IBM DB2</block>
   <block id="1c72949dbb5a015cff1821967cce106f" category="sidebar">克隆IBM DB2资源备份</block>
   <block id="b0b60126f154fbea1109285d09dabe64" category="sidebar">克隆IBM DB2数据库备份</block>
   <block id="018574050002dfdb703111e592ace12f" category="sidebar">保护MySQL</block>
@@ -9790,7 +9750,6 @@ destination</block>
   <block id="0d1aafd347801e1c28235ed9f606913b" category="sidebar">安装适用于MySQL的SnapCenter插件</block>
   <block id="f8ec35321e854dc696eede14c98e61f0" category="sidebar">在Topology页面中查看MySQL数据库备份和克隆</block>
   <block id="74f11b6391f86775587d7212c298b439" category="sidebar">还原MySQL</block>
-  <block id="2fd821a84f4f2d04dfd883d9e831b487" category="sidebar">使用PowerShell cmdlet还原MySQL</block>
   <block id="66d8fc5dc91943dfb2a42f390879dbaa" category="sidebar">克隆MySQL资源备份</block>
   <block id="e21d8a65aeaef70217d9755dfc6ca944" category="sidebar">克隆MySQL数据库备份</block>
   <block id="b0aa9b023351939602d9d1e28823f0e3" category="sidebar">保护NetApp支持的插件</block>
@@ -9818,7 +9777,6 @@ destination</block>
   <block id="a60af869a07d535dff66727f74a69b19" category="sidebar">安装适用于PostgreSQL的SnapCenter插件</block>
   <block id="146ebe956310ab6aebfd83b175d2bae4" category="sidebar">在Topology页面中查看PostgreSQL集群备份和克隆</block>
   <block id="d9b22e5cf88b9d4e6e8fe02a7489ea16" category="sidebar">还原PostgreSQL</block>
-  <block id="57318c547ffe570761f4a3f4b7899d67" category="sidebar">使用PowerShell cmdlet还原PostgreSQL</block>
   <block id="480aaec5aa69b781016a62284565640a" category="sidebar">克隆PostgreSQL资源备份</block>
   <block id="680c5ccf46f4a728694c590785dc9cda" category="sidebar">克隆PostgreSQL集群备份</block>
   <block id="881cbdbe2345b7472ef428b8c524734a" category="admonition">SnapCenter 高级版和 SnapCenter NAS 文件服务许可证已弃用，不再可用。Amazon FSx for NetApp ONTAP和Cloud Volumes ONTAP不再需要基于容量的许可证。Azure NetApp Files不需要标准许可证和基于容量的许可证。</block>
@@ -9881,4 +9839,7 @@ destination</block>
   <block id="310b8da14055c2cf4702264e02854d3d" category="paragraph">5472 (TCP)</block>
   <block id="c55a170d16570920e099a9e43d38db67" category="paragraph">这是Rabbitmq侦听的默认端口、用于在计划程序服务和SnapCenter之间进行发布者-订阅者模型通信。</block>
   <block id="f5a551e6a3161ca6d9ee33d926d734d5" category="list-text">Microsoft Edge 110.0.1857.17及更高版本</block>
+  <block id="3d64c1dca7f60c2f025bc4b68e25eaec" category="doc">备份DB2数据库</block>
+  <block id="fc25be62e75052437e6fa7b8d1571f48" category="open-title">SnapCenter UI</block>
+  <block id="41269337bd4507838c6bb1bd7b2141c3" category="sidebar">备份DB2数据库</block>
 </blocks>

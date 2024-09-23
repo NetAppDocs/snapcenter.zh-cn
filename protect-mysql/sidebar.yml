@@ -106,8 +106,6 @@ entries:
     url: "/protect-mysql/back-up-resource-groups-mysql.html"
   - title: 使用适用于MySQL的PowerShell cmdlet创建存储系统连接和凭据
     url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
-  - title: 使用 PowerShell cmdlet 备份数据库
-    url: "/protect-mysql/back-up-databases-using-powershell-cmdlets-mysql.html"
   - title: 监控备份操作
     entries:
     - title: 在 SnapCenter Jobs 页面中监控备份操作
@@ -126,8 +124,6 @@ entries:
     url: "/protect-mysql/restore-and-recover-a-manually-added-resource-backup.html"
   - title: 还原和恢复自动发现的数据库备份
     url: "/protect-mysql/restore-and-recover-an-auto-discovered-database-backup.html"
-  - title: 使用PowerShell cmdlet还原MySQL
-    url: "/protect-mysql/restore-mysql-using-powershell-cmdlets.html"
   - title: 使用 PowerShell cmdlet 还原资源
     url: "/protect-mysql/restore-and-recover-resources-using-powershell-cmdlets-mysql.html"
   - title: 监控还原操作
@@ -138,8 +134,6 @@ entries:
     url: "/protect-mysql/clone-mysql-resource-backups.html"
   - title: 克隆MySQL数据库备份
     url: "/protect-mysql/clone-mysql-backup.html"
-  - title: 使用PowerShell cmdlet克隆MySQL数据库备份
-    url: "/protect-mysql/clone-mysql-backups-using-powershell-cmdlets.html"
   - title: 监控 SnapCenter 中的克隆操作
     url: "/protect-mysql/monitor-mysql-clone-operations.html"
   - title: 拆分克隆。

@@ -33,6 +33,10 @@ NOTE: 如果命令列表中不存在这些命令、则操作将失败。
 * 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
+[role="tabbed-block"]
+====
+.SnapCenter UI
+--
 .步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
 . 在资源页面中，根据资源类型从 * 视图 * 下拉列表中筛选资源。
@@ -89,3 +93,100 @@ NOTE: 对于用于静宿、快照和取消静宿操作的PRE和POST命令、您�
 . 查看摘要，然后单击 * 完成 * 。
 . 单击 * 监控 * > * 作业 * 以监控操作进度。
 
+
+--
+.PowerShell cmdlet
+--
+.步骤
+. 使用 Open-SmConnection cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
++
+[listing]
+----
+PS C:\> Open-Smconnection
+----
+. 使用 Get-SmBackup 和 Get-SmBackupReport cmdlet 检索有关要还原的一个或多个备份的信息。
++
+此示例显示有关所有可用备份的信息：
+
++
+[listing]
+----
+PS C:\> Get-SmBackup
+
+BackupId                      BackupName                    BackupTime                    BackupType
+--------                      ----------                    ----------                    ----------
+  1               Payroll Dataset_vise-f6_08... 8/4/2015    11:02:32 AM                 Full Backup
+  2               Payroll Dataset_vise-f6_08... 8/4/2015    11:23:17 AM
+----
++
+此示例显示了有关 2015 年 1 月 29 日至 2015 年 2 月 3 日备份的详细信息：
+
++
+[listing]
+----
+PS C:\> Get-SmBackupReport -FromDateTime "1/29/2015" -ToDateTime "2/3/2015"
+
+   SmBackupId           : 113
+   SmJobId              : 2032
+   StartDateTime        : 2/2/2015 6:57:03 AM
+   EndDateTime          : 2/2/2015 6:57:11 AM
+   Duration             : 00:00:07.3060000
+   CreatedDateTime      : 2/2/2015 6:57:23 AM
+   Status               : Completed
+   ProtectionGroupName  : Clone
+   SmProtectionGroupId  : 34
+   PolicyName           : Vault
+   SmPolicyId           : 18
+   BackupName           : Clone_SCSPR0019366001_02-02-2015_06.57.08
+   VerificationStatus   : NotVerified
+
+   SmBackupId           : 114
+   SmJobId              : 2183
+   StartDateTime        : 2/2/2015 1:02:41 PM
+   EndDateTime          : 2/2/2015 1:02:38 PM
+   Duration             : -00:00:03.2300000
+   CreatedDateTime      : 2/2/2015 1:02:53 PM
+   Status               : Completed
+   ProtectionGroupName  : Clone
+   SmProtectionGroupId  : 34
+   PolicyName           : Vault
+   SmPolicyId           : 18
+   BackupName           : Clone_SCSPR0019366001_02-02-2015_13.02.45
+   VerificationStatus   : NotVerified
+----
+. 使用 Restore-SmBackup cmdlet 从备份中还原数据。
++
+[listing]
+----
+Restore-SmBackup -PluginCode 'DummyPlugin' -AppObjectId 'scc54.sccore.test.com\DummyPlugin\NTP\DB1' -BackupId 269 -Confirm:$false
+output:
+Name                : Restore 'scc54.sccore.test.com\DummyPlugin\NTP\DB1'
+Id                  : 2368
+StartTime           : 10/4/2016 11:22:02 PM
+EndTime             :
+IsCancellable       : False
+IsRestartable       : False
+IsCompleted         : False
+IsVisible           : True
+IsScheduled         : False
+PercentageCompleted : 0
+Description         :
+Status              : Queued
+Owner               :
+Error               :
+Priority            : None
+Tasks               : {}
+ParentJobID         : 0
+EventId             : 0
+JobTypeId           :
+ApisJobKey          :
+ObjectId            : 0
+PluginCode          : NONE
+PluginName          :
+----
+
+
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+--
+====

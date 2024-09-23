@@ -26,6 +26,10 @@ summary: '如果数据库不属于任何资源组，您可以从 " 资源 " 页�
 |===
 
 
+[role="tabbed-block"]
+====
+.SnapCenter UI
+--
 .步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择 * Microsoft Exchange Server 插件 * 。
 . 在资源页面中，从 * 查看 * 列表中选择 * 数据库 * 或 * 数据库可用性组 * 。
@@ -115,3 +119,105 @@ NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 se
 
 
 
+
+--
+.PowerShell cmdlet
+--
+.步骤
+. 使用 Open-SmConnection cmdlet 为指定用户启动与 SnapCenter 服务器的连接会话。
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
+----
++
+此时将显示用户名和密码提示符。
+
+. 使用 Add-SmPolicy cmdlet 创建备份策略。
++
+此示例将创建一个具有完整备份和日志备份 Exchange 备份类型的新备份策略：
+
++
+[listing]
+----
+C:\PS> Add-SmPolicy -PolicyName SCE_w2k12_Full_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType FullBackupAndLogBackup -BackupActiveCopies
+----
++
+此示例将创建一个新的备份策略，此策略采用每小时完整备份和日志备份 Exchange 备份类型：
+
++
+[listing]
+----
+C:\PS> Add-SmPolicy -PolicyName SCE_w2k12_Hourly_Full_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType FullBackupAndLogBackup -BackupActiveCopies -ScheduleType Hourly -RetentionSettings @{'BackupType'='DATA';'ScheduleType'='Hourly';'RetentionCount'='10'}
+----
++
+此示例将创建一个新的备份策略，以便仅备份 Exchange 日志：
+
++
+[listing]
+----
+Add-SmPolicy -PolicyName SCE_w2k12_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType LogBackup -BackupActiveCopies
+----
+. 使用 Get-SmResources cmdlet 发现主机资源。
++
+此示例将在指定主机上发现 Microsoft Exchange Server 插件的资源：
+
++
+[listing]
+----
+C:\PS> Get-SmResources -HostName vise-f6.sddev.mycompany.com -PluginCode SCE
+----
+. 使用 Add-SmResourceGroup cmdlet 向 SnapCenter 添加新资源组。
++
+此示例将使用指定的策略和资源创建一个新的 Exchange Server 数据库备份资源组：
+
++
+[listing]
+----
+C:\PS> Add-SmResourceGroup -ResourceGroupName SCE_w2k12_bkp_RG -Description 'Backup ResourceGroup with Full and Log backup policy' -PluginCode SCE -Policies SCE_w2k12_Full_bkp_Policy,SCE_w2k12_Full_Log_bkp_Policy,SCE_w2k12_Log_bkp_Policy -Resources @{'Host'='sce-w2k12-exch';'Type'='Exchange Database';'Names'='sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_1,sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2'}
+----
++
+此示例将使用指定的策略和资源创建一个新的 Exchange 数据库可用性组（ DAG ）备份资源组：
+
++
+[listing]
+----
+Add-SmResourceGroup -ResourceGroupName SCE_w2k12_bkp_RG -Description 'Backup ResourceGroup with Full and Log backup policy' -PluginCode SCE -Policies SCE_w2k12_Full_bkp_Policy,SCE_w2k12_Full_Log_bkp_Policy,SCE_w2k12_Log_bkp_Policy -Resources @{"Host"="DAGSCE0102";"Type"="Database Availability Group";"Names"="DAGSCE0102"}
+----
+. 使用 New-SmBackup cmdlet 启动新的备份作业。
++
+[listing]
+----
+C:\PS> New-SmBackup -ResourceGroupName SCE_w2k12_bkp_RG -Policy SCE_w2k12_Full_Log_bkp_Policy
+----
++
+此示例将创建一个新的二级存储备份：
+
++
+[listing]
+----
+New-SMBackup -DatasetName ResourceGroup1 -Policy Secondary_Backup_Policy4
+----
+. 使用 Get-SmBackupReport cmdlet 查看备份作业的状态。
++
+此示例显示了在指定日期运行的所有作业的作业摘要报告：
+
++
+[listing]
+----
+C:\PS> Get-SmJobSummaryReport -Date ?1/27/2018?
+----
++
+此示例显示特定作业 ID 的作业摘要报告：
+
++
+[listing]
+----
+C:\PS> Get-SmJobSummaryReport -JobId 168
+----
+
+
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者、请参见 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.htmlnapCenter[] 软件cmdlet参考指南^。
+
+--
+====

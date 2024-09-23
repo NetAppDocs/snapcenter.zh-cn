@@ -72,8 +72,6 @@ entries:
     url: "/protect-sce/task_back_up_exchange_resources_groups.html"
   - title: 使用适用于 Exchange Server 的 PowerShell cmdlet 创建存储系统连接和凭据
     url: "/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html"
-  - title: 使用 PowerShell cmdlet 备份 Exchange 资源
-    url: "/protect-sce/task_back_up_exchange_resources_using_powershell_cmdlets.html"
   - title: 监控备份操作
     url: "/protect-sce/task_monitor_backup_operations.html"
   - title: 取消 Exchange 数据库的备份操作
@@ -94,8 +92,6 @@ entries:
     url: "/protect-sce/reference_granular_recovery_of_mails_and_mailbox.html"
   - title: 从二级存储还原 Exchange Server 数据库
     url: "/protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html"
-  - title: 使用 PowerShell cmdlet 还原 Exchange 资源
-    url: "/protect-sce/task_restore_exchange_resources_using_powershell_cmdlets.html"
   - title: 重新传输被动 Exchange 节点副本
     url: "/protect-sce/task_reseed_a_passive_exchange_node_replica.html"
   - title: 使用适用于 Exchange 数据库的 PowerShell cmdlet 重新获取副本

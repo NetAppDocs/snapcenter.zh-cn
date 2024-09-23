@@ -110,8 +110,6 @@ entries:
     url: "/protect-postgresql/back-up-resource-groups-postgresql.html"
   - title: 使用适用于PostgreSQL的PowerShell cmdlet创建存储系统连接和凭据
     url: "/protect-postgresql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-postgresql.html"
-  - title: 使用PowerShell cmdlet备份集群
-    url: "/protect-postgresql/back-up-clusters-using-powershell-cmdlets-postgresql.html"
   - title: 监控备份操作
     entries:
     - title: 在 SnapCenter Jobs 页面中监控备份操作
@@ -130,8 +128,6 @@ entries:
     url: "/protect-postgresql/restore-and-recover-a-manually-added-resource-backup.html"
   - title: 还原和恢复自动发现的集群备份
     url: "/protect-postgresql/restore-and-recover-an-auto-discovered-cluster-backup.html"
-  - title: 使用PowerShell cmdlet还原PostgreSQL
-    url: "/protect-postgresql/restore-postgresql-using-powershell-cmdlets.html"
   - title: 使用 PowerShell cmdlet 还原资源
     url: "/protect-postgresql/restore-and-recover-resources-using-powershell-cmdlets-postgresql.html"
   - title: 监控还原操作
@@ -142,8 +138,6 @@ entries:
     url: "/protect-postgresql/clone-postgresql-resource-backups.html"
   - title: 克隆PostgreSQL集群备份
     url: "/protect-postgresql/clone-postgresql-backup.html"
-  - title: 使用PowerShell cmdlet克隆PostgreSQL集群备份
-    url: "/protect-postgresql/clone-postgresql-backups-using-powershell-cmdlets.html"
   - title: 监控 SnapCenter 中的克隆操作
     url: "/protect-postgresql/monitor-postgresql-clone-operations.html"
   - title: 拆分克隆。

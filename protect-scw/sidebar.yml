@@ -66,8 +66,6 @@ entries:
     url: "/protect-scw/task_back_up_resource_groups_for_windows_file_systems.html"
   - title: 使用 PowerShell cmdlet 创建存储系统连接和凭据
     url: "/protect-scw/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_windows.html"
-  - title: 使用 PowerShell cmdlet 备份资源
-    url: "/protect-scw/task_back_up_resources_using_powershell_cmdlets_for_windows.html"
   - title: 监控备份操作
     url: "/protect-scw/task_monitor_backup_operations.html"
   - title: 取消备份操作
@@ -82,7 +80,7 @@ entries:
   entries:
   - title: 还原 Windows 文件系统备份
     url: "/protect-scw/task_restore_windows_file_system_backups.html"
-  - title: 使用 PowerShell cmdlet 还原和恢复资源
+  - title: 使用 PowerShell cmdlet 还原资源
     url: "/protect-scw/task_restore_and_recover_resources_using_powershell_cmdlets_for_windows.html"
   - title: 监控还原操作
     url: "/protect-scw/task_monitor_restore_operations.html"
@@ -92,8 +90,6 @@ entries:
   entries:
   - title: 从 Windows 文件系统备份克隆
     url: "/protect-scw/task_clone_from_a_windows_file_system_backup.html"
-  - title: 使用 PowerShell cmdlet 克隆备份
-    url: "/protect-scw/task_clone_backups_using_powershell_cmdlets_for_windows.html"
   - title: 监控克隆操作
     url: "/protect-scw/task_monitor_clone_operations.html"
   - title: 取消克隆操作

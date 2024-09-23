@@ -118,8 +118,6 @@ entries:
     url: "/protect-hana/task_back_up_resource_groups_sap_hana.html"
   - title: 使用适用于 SAP HANA 数据库的 PowerShell cmdlet 创建存储系统连接和凭据
     url: "/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html"
-  - title: 使用 PowerShell cmdlet 备份数据库
-    url: "/protect-hana/task_back_up_databases_using_powershell_cmdlets_sap_hana.html"
   - title: 监控备份操作
     entries:
     - title: 在 SnapCenter Jobs 页面中监控备份操作
@@ -138,8 +136,6 @@ entries:
     url: "/protect-hana/task_restore_and_recover_a_manually_added_resource_backup.html"
   - title: 还原和恢复自动发现的数据库备份
     url: "/protect-hana/task_restore_and_recover_an_auto_discovered_database_backup.html"
-  - title: 使用 PowerShell cmdlet 还原 SAP HANA 数据库
-    url: "/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.html"
   - title: 使用 PowerShell cmdlet 还原资源
     url: "/protect-hana/task_restore_and_recover_resources_using_powershell_cmdlets_hana.html"
   - title: 监控还原操作
@@ -150,8 +146,6 @@ entries:
     url: "/protect-hana/task_clone_sap_hana_resource_backups.html"
   - title: 克隆 SAP HANA 数据库备份
     url: "/protect-hana/task_clone_a_sap_hana_database_backup.html"
-  - title: 使用 PowerShell cmdlet 克隆 SAP HANA 数据库备份
-    url: "/protect-hana/task_clone_sap_hana_database_backups_using_powershell_cmdlets.html"
   - title: 监控 SnapCenter 中的克隆操作
     url: "/protect-hana/task_monitor_hana_database_clone_operations.html"
   - title: 拆分克隆。

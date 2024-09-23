@@ -140,8 +140,6 @@ entries:
       url: "/protect-scsql/task_monitor_dataprotection_operations_on_sql_resources_in_the_activity_pane.html"
   - title: 使用 PowerShell cmdlet 创建存储系统连接和凭据
     url: "/protect-scsql/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_sql.html"
-  - title: 使用 PowerShell cmdlet 备份资源
-    url: "/protect-scsql/task_back_up_resources_using_powershell_cmdlets_for_sql.html"
   - title: 取消适用于 Microsoft SQL Server 的 SnapCenter 插件备份操作
     url: "/protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html"
   - title: 在拓扑页面中查看 SQL Server 备份和克隆
@@ -160,10 +158,10 @@ entries:
     url: "/protect-scsql/task_restore_sql_server_database_backups.html"
   - title: 从二级存储还原 SQL Server 数据库
     url: "/protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html"
+  - title: 使用 PowerShell cmdlet 还原资源
+    url: "/protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html"
   - title: 转义可用性组数据库
     url: "/protect-scsql/task_reseed_availability_group_databases.html"
-  - title: 使用 PowerShell cmdlet 还原和恢复资源
-    url: "/protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html"
   - title: 监控还原操作
     url: "/protect-scsql/task_monitor_sql_resources_restore_operations.html"
   - title: 取消还原操作
@@ -174,8 +172,6 @@ entries:
     url: "/protect-scsql/reference_clone_sql_server_database_resources.html"
   - title: 从 SQL Server 数据库备份克隆
     url: "/protect-scsql/task_clone_from_a_sql_server_database_backup.html"
-  - title: 使用 PowerShell cmdlet 克隆备份
-    url: "/protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html"
   - title: 执行克隆生命周期
     url: "/protect-scsql/task_perform_clone_lifecycle_management.html"
   - title: 监控 SnapCenter 中的克隆操作
