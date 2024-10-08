@@ -102,18 +102,14 @@ entries:
     url: "/protect-db2/create-backup-policies-for-ibm-db2.html"
   - title: 创建资源组并附加策略
     url: "/protect-db2/create-resource-groups-and-attach-policies.html"
+  - title: 使用适用于IBM DB2的PowerShell cmdlet创建存储系统连接和凭据
+    url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
   - title: 备份DB2数据库
     url: "/protect-db2/back-up-db2-databases.html"
   - title: 备份资源组
     url: "/protect-db2/back-up-resource-groups-ibm-db2.html"
-  - title: 使用适用于IBM DB2的PowerShell cmdlet创建存储系统连接和凭据
-    url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
-  - title: 监控备份操作
-    entries:
-    - title: 在 SnapCenter Jobs 页面中监控备份操作
-      url: "/protect-db2/monitor-db2-backup-operations.html"
-    - title: 监控活动窗格中的操作
-      url: "/protect-db2/monitor-dataprotection-operations-on-db2-in-the-activity-pane.html"
+  - title: 在 SnapCenter Jobs 页面中监控备份操作
+    url: "/protect-db2/monitor-db2-backup-operations.html"
   - title: 取消备份操作
     url: "/protect-db2/cancel-backup-operations-for-ibm-db2.html"
   - title: 在Topology页面中查看IBM DB2数据库备份和克隆

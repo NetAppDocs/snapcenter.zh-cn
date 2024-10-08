@@ -94,12 +94,12 @@ entries:
     url: "/protect-nsp/create_policies_for_netapp_supported_plugins_resources.html"
   - title: 创建资源组并附加策略
     url: "/protect-nsp/create_resource_groups_and_attach_policies.html"
+  - title: 使用 PowerShell cmdlet 创建存储系统连接和凭据
+    url: "/protect-nsp/create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets.html"
   - title: 备份各个NetApp支持的插件资源
     url: "/protect-nsp/back_up_individual_netapp_supported_plugins_resources.html"
   - title: 备份NetApp支持的插件资源的资源组
     url: "/protect-nsp/back_up_resource_groups_of_netapp_supported_plugins_resources.html"
-  - title: 使用 PowerShell cmdlet 创建存储系统连接和凭据
-    url: "/protect-nsp/create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets.html"
   - title: 监控备份操作
     url: "/protect-nsp/monitor_resources_backup_operations.html"
   - title: 取消备份操作

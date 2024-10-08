@@ -112,18 +112,14 @@ entries:
     url: "/protect-hana/task_create_backup_policies_for_sap_hana_databases.html"
   - title: 创建资源组并附加策略
     url: "/protect-hana/task_create_resource_groups_and_attach_policies.html"
+  - title: 使用适用于 SAP HANA 数据库的 PowerShell cmdlet 创建存储系统连接和凭据
+    url: "/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html"
   - title: 备份 SAP HANA 数据库
     url: "/protect-hana/task_back_up_sap_hana_databases.html"
   - title: 备份资源组
     url: "/protect-hana/task_back_up_resource_groups_sap_hana.html"
-  - title: 使用适用于 SAP HANA 数据库的 PowerShell cmdlet 创建存储系统连接和凭据
-    url: "/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html"
-  - title: 监控备份操作
-    entries:
-    - title: 在 SnapCenter Jobs 页面中监控备份操作
-      url: "/protect-hana/task_monitor_hana_databases_backup_operations.html"
-    - title: 监控活动窗格中的操作
-      url: "/protect-hana/task_monitor_dataprotection_operations_on_hana_databases_in_the_activity_pane.html"
+  - title: 在 SnapCenter Jobs 页面中监控备份操作
+    url: "/protect-hana/task_monitor_hana_databases_backup_operations.html"
   - title: 取消备份操作
     url: "/protect-hana/task_cancel_backup_operations_for_sap_hana.html"
   - title: 在拓扑页面中查看 SAP HANA 数据库备份和克隆

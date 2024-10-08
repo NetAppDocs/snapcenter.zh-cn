@@ -104,18 +104,14 @@ entries:
     url: "/protect-postgresql/create-backup-policies-for-postgresql.html"
   - title: 创建资源组并附加策略
     url: "/protect-postgresql/create-resource-groups-and-attach-policies.html"
+  - title: 使用适用于PostgreSQL的PowerShell cmdlet创建存储系统连接和凭据
+    url: "/protect-postgresql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-postgresql.html"
   - title: 备份PostgreSQL
     url: "/protect-postgresql/back-up-postgresql.html"
   - title: 备份资源组
     url: "/protect-postgresql/back-up-resource-groups-postgresql.html"
-  - title: 使用适用于PostgreSQL的PowerShell cmdlet创建存储系统连接和凭据
-    url: "/protect-postgresql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-postgresql.html"
-  - title: 监控备份操作
-    entries:
-    - title: 在 SnapCenter Jobs 页面中监控备份操作
-      url: "/protect-postgresql/monitor-postgresql-backup-operations.html"
-    - title: 监控活动窗格中的操作
-      url: "/protect-postgresql/monitor-dataprotection-operations-on-postgresql-in-the-activity-pane.html"
+  - title: 在 SnapCenter Jobs 页面中监控备份操作
+    url: "/protect-postgresql/monitor-postgresql-backup-operations.html"
   - title: 取消备份操作
     url: "/protect-postgresql/cancel-backup-operations-for-postgresql.html"
   - title: 在Topology页面中查看PostgreSQL集群备份和克隆

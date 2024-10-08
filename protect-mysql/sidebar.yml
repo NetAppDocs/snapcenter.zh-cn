@@ -100,18 +100,14 @@ entries:
     url: "/protect-mysql/create-backup-policies-for-mysql.html"
   - title: 创建资源组并附加策略
     url: "/protect-mysql/create-resource-groups-and-attach-policies.html"
+  - title: 使用适用于MySQL的PowerShell cmdlet创建存储系统连接和凭据
+    url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
   - title: 备份MySQL
     url: "/protect-mysql/back-up-mysql.html"
   - title: 备份资源组
     url: "/protect-mysql/back-up-resource-groups-mysql.html"
-  - title: 使用适用于MySQL的PowerShell cmdlet创建存储系统连接和凭据
-    url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
-  - title: 监控备份操作
-    entries:
-    - title: 在 SnapCenter Jobs 页面中监控备份操作
-      url: "/protect-mysql/monitor-mysql-backup-operations.html"
-    - title: 监控活动窗格中的操作
-      url: "/protect-mysql/monitor-dataprotection-operations-on-mysql-in-the-activity-pane.html"
+  - title: 在 SnapCenter Jobs 页面中监控备份操作
+    url: "/protect-mysql/monitor-mysql-backup-operations.html"
   - title: 取消备份操作
     url: "/protect-mysql/cancel-backup-operations-for-mysql.html"
   - title: 在Topology页面中查看MySQL数据库备份和克隆
