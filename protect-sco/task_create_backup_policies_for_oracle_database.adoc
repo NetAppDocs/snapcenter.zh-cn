@@ -127,7 +127,7 @@ NOTE: 要成功执行删除操作，您必须确保 RAC 环境中的所有节点
 
 |===
 +
-image:../media/sco_backuppolicy_prunning.gif[""]
+image:../media/sco_backuppolicy_prunning.gif["备份策略"]
 
 
 
@@ -201,7 +201,7 @@ NOTE: 只有在备份过程中选择了归档日志文件时，才能保留归�
 
 有关SnapLock存储的详细信息、请参见 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["将Snapshot副本提交到存储目标上的WORM"]
 
-请参见 link:..protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html["在 Topology 页面中查看 Oracle 数据库备份和克隆"]。
+请参阅。 link:../protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html["在 Topology 页面中查看 Oracle 数据库备份和克隆"]
 
 
 

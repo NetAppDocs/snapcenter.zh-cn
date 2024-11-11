@@ -33,4 +33,4 @@ summary: 在使用 SnapCenter 之前，了解与要执行的备份，克隆和�
 
 下图显示了数据库的资源，资源组和策略之间的关系：
 
-image::../media/sco_resourcegroup_policy.gif[SCO 资源组策略]
+image::../media/sco_resourcegroup_policy.gif[资源组策略]

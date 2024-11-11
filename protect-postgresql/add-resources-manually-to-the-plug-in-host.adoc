@@ -86,7 +86,7 @@ link:https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_a
 .完成后
 * 添加集群后、您可以修改PostgreSQL集群详细信息。
 * 在SnapCenter 6.0中、从SnapCenter 5.0迁移的资源(表空间和集群)将标记为PostgreSQL集群类型。
-* 修改从SnapCenter 5.0或更低版本迁移的手动添加的资源时，请在“资源设置”页中对自定义密钥值对执行以下操作：
+* 修改从SnapCenter 5.0或更早版本迁移的手动添加的资源时，在自定义密钥值对的*Resource Settings*页中执行以下操作：
 +
 ** 在*名称*字段中指定术语"端口"。
 ** 在*值*字段中指定端口号。

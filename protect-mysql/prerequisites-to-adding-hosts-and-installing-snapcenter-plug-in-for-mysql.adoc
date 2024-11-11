@@ -60,39 +60,23 @@ https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src
 
 == 补充命令
 
-要对适用于MySQL的SnapCenter插件运行补充命令、必须将其包含在文件中 `allowed_commands.config` 。
+要对适用于MySQL的SnapCenter插件运行补充命令、必须将其包含在_ALLOED_commands.config_文件中。
 
-`allowed_commands.config` 文件位于适用于MySQL的SnapCenter插件目录的"ETc"子目录中。
+* Windows主机上的默认位置：_C：\Program NetApp SnapCenter SnapCenter Plug-in Creper\ETC\Allowed_commands.config_
+* Linux主机上的默认位置：/opt/linux/linux/SCC//etc/Allowed_commands.config_ NetApp SnapCenter
 
-.Windows 主机
-默认值： `C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
 
-自定义路径： `<Custom_Directory>\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
+要在插件主机上使用补充命令、请在编辑器中打开_ALLOED_commands.config_文件。在单独的行中输入每个命令、这些命令不区分大小写。请确保指定完全限定路径名、如果路径名包含空格、请将其用引号(")括起来。
 
-.Linux 主机
-默认值： `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
-
-自定义路径： `<Custom_Directory>allowed_commands.config`
-
-要在此插件主机上使用补充命令、请打开 `allowed_commands.config` 文件。在单独的行中输入每个命令。不区分大小写。
 例如：
 
-命令：mount
+命令：mount命令：umount命令："c：\Program Files\SnapCread\SnapCread"commands\sdcli.exe" NetApp命令：myscript.bat
 
-命令：umount
-
-请确保指定完全限定路径名。如果路径名包含空格、请将其用引号(")括起来。
-例如：
-
-命令："C：\Program Files\NetApp\SnapCreator commands\sdcli.exe"
-
-命令：myscript.bat
-
-如果 `allowed_commands.config` 文件不存在、命令或脚本执行将被阻止、并且工作流将失败并显示以下错误：
+如果_ALLOED_commands.config_文件不存在、则命令或脚本执行将被阻止、并且工作流将失败并显示以下错误：
 
 "[/mnt/mount -a]不允许执行。通过在插件主机上的文件%s中添加命令进行授权。"
 
-如果命令或脚本不在中 `allowed_commands.config`，命令或脚本执行将被阻止，并且工作流将失败，并显示以下错误：
+如果_ALLOED_commands.config_中不存在命令或脚本、则命令或脚本执行将被阻止、并且工作流将失败并显示以下错误：
 
 "[/mnt/mount -a]不允许执行。通过在插件主机上的文件%s中添加命令进行授权。"
 
@@ -108,6 +92,7 @@ NOTE: 不应使用通配符条目(*)来允许所有命令。
 * 您需要的内容 *
 
 * sudo 1.8.7或更高版本。
+* 如果umask为0027、请确保Java文件夹和其中的所有文件都具有555的权限。否则、插件安装可能会失败。
 * 对于非root用户、请确保非root用户的名称和用户组的名称应相同。
 * 编辑 /etc/ssh/sshd_config_ 文件以配置消息身份验证代码算法： macs HMAC-SHA2-256 和 MAC HMAC-SHA2-512 。
 +

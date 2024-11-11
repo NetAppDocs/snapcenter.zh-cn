@@ -30,10 +30,9 @@ link:task_back_up_resource_groups_sap_hana.html["备份资源组"]
 
 * 对于用于qui陈述、Snapshot和unqui陈述 操作的前后命令、您应通过以下路径检查这些命令是否位于插件主机上可用的命令列表中：
 +
-对于Windows：_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands_list.txt
+** Windows主机上的默认位置：_C：\Program NetApp SnapCenter SnapCenter Plug-in Creper\ETC\Allowed_commands.config_
+** Linux主机上的默认位置：/opt/linux/linux/SCC//etc/Allowed_commands.config_ NetApp SnapCenter
 
-+
-对于Linux：/var/opt/snapcenter/scC/allowed_commands_list.txt
 
 
 
@@ -48,7 +47,7 @@ NOTE: 如果命令列表中不存在这些命令、则操作将失败。
 . 在左侧导航窗格中，选择*Resoles*，然后从列表中选择相应的插件。
 . 在资源页面中，根据资源类型从 * 视图 * 下拉列表中筛选资源。
 +
-选择*image:../media/filter_icon.png[""]* ，然后选择主机名和资源类型以筛选资源。然后、您可以选择 image:../media/filter_icon.png[""] 以关闭筛选器窗格。
+选择image:../media/filter_icon.png["筛选器图标"]，然后选择主机名和资源类型以筛选资源。然后、您可以选择 image:../media/filter_icon.png["筛选器图标"] 关闭筛选器窗格。
 
 . 选择要备份的资源。
 . 在资源页面中，选择*对Snapshot副本使用自定义名称格式*，然后输入要用于Snapshot名称的自定义名称格式。
@@ -111,7 +110,7 @@ SnapCenter以使用适用于Windows的插件将文件系统置于一致状态、
 
 |===
 +
-image:../media/application_settings.gif[""]
+image:../media/application_settings.gif["应用程序设置"]
 
 
 

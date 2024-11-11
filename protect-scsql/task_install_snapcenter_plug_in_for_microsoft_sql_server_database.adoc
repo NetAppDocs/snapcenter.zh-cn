@@ -13,4 +13,4 @@ summary: 如果要保护 SQL Server 数据库，应安装和设置适用于 Micr
 [role="lead"]
 如果要保护 SQL Server 数据库，应安装和设置适用于 Microsoft SQL Server 的 SnapCenter 插件。
 
-image::../media/scsql_install_configure_workflow.gif[scsql 安装配置工作流]
+image::../media/scsql_install_configure_workflow.png[SQL工作流]

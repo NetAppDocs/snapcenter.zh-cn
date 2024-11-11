@@ -25,19 +25,6 @@ image::../media/upgrade_workflow.png[升级工作流]
 | 如果您使用的是SnapCenter 服务器版本... | 您可以直接将SnapCenter 服务器升级到... | 支持的插件版本 
 
 
-.2+| 4.8 | 4.9.  a| 
-* 4.8
-* 4.9.
-
-
-
-
-| 5.0  a| 
-* 5.0
-
-
-
-
 .2+| 4.9. | 5.0  a| 
 * 4.9.
 * 5.0
@@ -51,16 +38,29 @@ image::../media/upgrade_workflow.png[升级工作流]
 
 
 
-| 5.0  a| 
+.2+| 5.0  a| 
 6.0
  a| 
 * 5.0
 * 6.0
 
 
+
+
+| 6.0.1  a| 
+* 6.0.1
+
+
+
+
+| 6.0 | 6.0.1  a| 
+* 6.0
+* 6.0.1
+
+
 |===
 
-IMPORTANT: 例如、如果您使用的是SnapCenter 4.8版、并希望升级到6.0、则应先升级到4.9、然后再滚动升级到6.0。
+IMPORTANT: 例如、如果您使用的是SnapCenter 4.9版、并希望升级到6.0.0、则应先升级到5.0、然后再滚动升级到6.0。
 
 
 NOTE: 有关升级适用于 VMware vSphere 的 SnapCenter 插件的信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["升级适用于 VMware vSphere 的 SnapCenter 插件"^]。

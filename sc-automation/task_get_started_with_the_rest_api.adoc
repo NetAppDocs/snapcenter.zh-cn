@@ -7,7 +7,7 @@ summary: 在实时设置中对更复杂的工作流过程使用 API 之前，访
 = 开始使用 REST API
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

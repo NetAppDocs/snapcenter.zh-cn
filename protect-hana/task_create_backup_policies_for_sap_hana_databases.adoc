@@ -157,7 +157,7 @@ SnapLock保留期限应少于100年。
 
 单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
 
-请参见 link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["在拓扑页面中查看 SAP HANA 数据库备份和克隆"]。
+请参阅。 link:../protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["在拓扑页面中查看 SAP HANA 数据库备份和克隆"]
 
 
 
@@ -172,7 +172,7 @@ SnapLock保留期限应少于100年。
 
 有关SnapLock存储的详细信息、请参见 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["将Snapshot副本提交到存储目标上的WORM"]
 
-请参见 link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["在拓扑页面中查看 SAP HANA 数据库备份和克隆"]。
+请参阅。 link:task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["在拓扑页面中查看 SAP HANA 数据库备份和克隆"]
 
 
 

@@ -7,7 +7,7 @@ summary: 虽然 REST 建立了一组通用的技术和最佳实践，但每个 A
 = 基本操作特征
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

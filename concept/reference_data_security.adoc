@@ -46,7 +46,7 @@ SnapCenter 服务器安装程序可在安装期间启用集中式 SSL 证书支�
 
 您应在安装 SnapCenter 服务器和相应插件后部署 CA 证书。有关详细信息，请参见 link:../install/reference_generate_CA_certificate_CSR_file.html["生成 CA 证书 CSR 文件"]。
 
-您还可以为适用于 VMware vSphere 的 SnapCenter 插件部署 CA 证书。有关详细信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#create-and-import-certificates["创建和导入证书"^]。
+您还可以为适用于 VMware vSphere 的 SnapCenter 插件部署 CA 证书。有关详细信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_create_and_import_certificates.html["创建和导入证书"^]。
 
 
 

@@ -51,7 +51,7 @@ summary: 您可以取消正在运行，已排队或无响应的备份操作。
  a| 
 活动窗格
  a| 
-. 启动备份作业后，单击 image:../media/activity_pane_icon.gif[""] 在活动窗格上查看五个最新操作。
+. 启动备份作业后、单击 image:../media/activity_pane_icon.gif["活动窗格图标"] "Active"(活动)窗格以查看五个最新操作。
 . 选择操作。
 . 在作业详细信息页面中，单击 * 取消作业 * 。
 

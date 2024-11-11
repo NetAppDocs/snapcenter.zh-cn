@@ -50,7 +50,7 @@ NOTE: 如果您在 SQL Server 标准版上具有可用性组配置，则 SnapCen
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
 . 在资源页面的 * 视图 * 下拉列表中选择 * 数据库 * ， * 实例 * 或 * 可用性组 * 。
 +
-单击 image:../media/filter_icon.png[""] 并选择主机名和 SQL Server 实例以筛选资源。然后，您可以单击 image:../media/filter_icon.png[""] 以关闭筛选器窗格。
+单击 image:../media/filter_icon.png["筛选器图标"] 并选择主机名和SQL Server实例以筛选资源。然后、您可以单击 image:../media/filter_icon.png["筛选器图标"] 以关闭筛选器窗格。
 
 . 单击 * 刷新资源 * 。
 +

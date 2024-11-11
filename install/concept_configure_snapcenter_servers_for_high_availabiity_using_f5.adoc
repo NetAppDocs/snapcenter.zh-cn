@@ -1,27 +1,29 @@
 ---
 permalink: install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html 
 sidebar: sidebar 
-keywords: F5,load balancer 
-summary: 要在 SnapCenter 中支持高可用性 \ （ HA\ ），您可以安装 F5 负载平衡器。F5 允许 SnapCenter 服务器在最多两个位于同一位置的主机中支持主动 - 被动配置。要在 SnapCenter 中使用 F5 负载平衡器，您应配置 SnapCenter 服务器并配置 F5 负载平衡器。 
+keywords: F5, netwoek load balancer, NLB, high availability, elastic load balancing, ELB, Azure load balancing, Amazon Web Services, AWS 
+summary: 使用F5、网络负载平衡或Amazon Web Services在SnapCenter中配置高可用性 
 ---
-= 使用 F5 配置 SnapCenter 服务器以实现高可用性
+= 配置SnapCenter服务器以实现高可用性
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要在 SnapCenter 中支持高可用性（ HA ），您可以安装 F5 负载平衡器。F5 允许 SnapCenter 服务器在最多两个位于同一位置的主机中支持主动 - 被动配置。要在 SnapCenter 中使用 F5 负载平衡器，您应配置 SnapCenter 服务器并配置 F5 负载平衡器。
+要在Windows或Linux上运行的SnapCenter中支持高可用性(HA)、您可以安装F5负载平衡器。F5 允许 SnapCenter 服务器在最多两个位于同一位置的主机中支持主动 - 被动配置。要在 SnapCenter 中使用 F5 负载平衡器，您应配置 SnapCenter 服务器并配置 F5 负载平衡器。
 
+您还可以配置Microsoft网络负载平衡(NLB)以设置SnapCenter高可用性。您应在SnapCenter安装之外手动配置NLB以实现高可用性。
 
-NOTE: SnapCenter还支持AWS El生 性负载平衡(ELB)和Azure负载平衡。
+对于云环境、您可以使用Amazon Web Services (AWS) Elapic Load Belligence (ELB)和Azure负载平衡器配置高可用性。
 
+[role="tabbed-block"]
+====
+.使用 F5 配置高可用性
+--
+此工作流图列出了使用 F5 负载平衡器配置 SnapCenter 服务器以实现高可用性的步骤。有关详细说明，请参阅 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["如何使用 F5 负载平衡器配置 SnapCenter 服务器以实现高可用性"^]。
 
-IMPORTANT: 如果您已从 SnapCenter 4.2.x 升级，并且先前使用的是网络负载平衡（ NLB ），则可以继续使用该配置或切换到 F5 。
-
-此工作流图列出了使用 F5 负载平衡器配置 SnapCenter 服务器以实现高可用性的步骤。有关详细说明，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["如何使用 F5 负载平衡器配置 SnapCenter 服务器以实现高可用性"^]。
-
-image::../media/sc-F5-configure-workflow.png[SC F5 配置工作流]
+image::../media/sc-F5-configure-workflow.png[使用F5进行HA配置]
 
 您必须是 SnapCenter 服务器上本地管理员组的成员（除了分配给 SnapCenterAdmin 角色之外），才能使用以下 cmdlet 添加和删除 F5 集群：
 
@@ -29,17 +31,110 @@ image::../media/sc-F5-configure-workflow.png[SC F5 配置工作流]
 * Add-SmServer
 * Remove-SmServerCluster
 +
-有关详细信息，请参见 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 
 
-
-
-== 其他 F5 配置信息
+追加信息
 
 * 安装并配置 SnapCenter 以实现高可用性后，编辑 SnapCenter 桌面快捷方式以指向 F5 集群 IP 。
 * 如果 SnapCenter 服务器之间发生故障转移，并且还存在现有 SnapCenter 会话，则必须关闭浏览器并重新登录到 SnapCenter 。
-* 在负载平衡器设置（ NLB 或 F5 ）中，如果您添加的节点已由 NLB 或 F5 节点部分解决，并且 SnapCenter 节点无法访问此节点，则 SnapCenter 主页会频繁在主机关闭和运行状态之间切换。要解决此问题描述，您应确保两个 SnapCenter 节点都能够解析 NLB 或 F5 节点中的主机。
-* 应在所有节点上执行用于MFA设置的SnapCenter 命令。应使用F5集群详细信息在Active Directory联合身份验证服务(AD FS)服务器中完成依赖方配置。启用MFA后、将阻止节点级别的SnapCenter UI访问。
-* 在故障转移期间、审核日志设置不会反映在第二个节点上。因此、当F5被动节点变为活动状态时、您应在该节点上手动重复审核日志设置。
+* 在负载平衡器设置(NLB或F5)中、如果添加的主机已被NLB或F5主机部分解析、并且SnapCenter主机无法与此主机建立连接、则SnapCenter主机页面会频繁地在主机关闭和运行状态之间切换。要解决此问题、应确保两台SnapCenter主机都能够解析北草坪会议大楼或F5主机中的主机。
+* 应在所有主机上对MFA设置执行SnapCenter命令。应使用F5集群详细信息在Active Directory联合身份验证服务(AD FS)服务器中完成依赖方配置。启用MFA后、主机级别的SnapCenter UI访问将被阻止。
+* 在故障转移期间、审核日志设置不会反映在第二台主机上。因此、当F5被动主机变为活动状态时、您应手动重复审核日志设置。
 
+
+--
+.使用网络负载平衡(NLB)配置高可用性
+--
+您可以配置 Microsoft 网络负载平衡（ NLB ）以设置 SnapCenter 高可用性。您应在SnapCenter安装之外手动配置NLB以实现高可用性。
+
+有关如何使用SnapCenter配置网络负载平衡(NLB)的信息，请参阅 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_NLB_and_ARR_with_SnapCenter["如何使用 SnapCenter 配置 NLB"^]。
+
+--
+.使用AWS El生 性负载平衡(ELB)配置高可用性
+--
+您可以通过在单独的可用性区域(AZs)中设置两个SnapCenter服务器并将其配置为自动故障转移来在Amazon Web Services (AWS)中配置高可用性SnapCenter环境。该架构包括虚拟专用IP地址、路由表以及活动和备用MySQL数据库之间的同步。
+
+.步骤
+. 在AWS中配置虚拟专用覆盖IP。有关信息，请参见 https://docs.aws.amazon.com/vpc/latest/userguide/replace-local-route-target.html["配置虚拟专用覆盖IP"^]。
+. 准备Windows主机
++
+.. 强制IPv4的优先级高于IPv6：
++
+*** 位置：HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters
+*** 密钥：DisableComponents
+*** 键入：REG_DWORD
+*** 值：0x20
+
+
+.. 确保完全限定域名可以通过DNS或通过本地主机配置解析为IPv4地址。
+.. 确保未配置系统代理。
+.. 确保在使用不带Active Directory的设置时、两个Windows Server上的管理员密码相同、并且这些服务器不在一个域中。
+.. 在两个Windows Server上添加虚拟IP。
+
+
+. 创建SnapCenter集群。
++
+.. 启动PowerShell并连接到SnapCenter。
+`Open-SmConnection`
+.. 创建集群。
+`Add-SmServerCluster -ClusterName <cluster_name> -ClusterIP <cluster_ip> -PrimarySCServerIP <primary_ip> -Verbose -Credential administrator`
+.. 添加二级服务器。
+`Add-SmServer -ServerName <server_name> -ServerIP <server_ip> -CleanUpSecondaryServer -Verbose -Credential administrator`
+.. 获取高可用性详细信息。
+`Get-SmServerConfig`
+
+
+. 创建Lamda函数、以便在虚拟专用IP端点不可用时调整路由表、该端点由AWS CloudWatch监控。有关信息，请参见 https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html#getting-started-create-function["创建Lamba函数"^]。
+. 在CloudWatch中创建监控器以监控SnapCenter端点的可用性。警报配置为在端点不可访问时触发Lambdis功能。Lamb由 函数调整路由表以将流量重定向到活动SnapCenter服务器。有关信息，请参见 https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Create.html["创建合成油罐"^]。
+. 使用Step函数实施工作流、以替代CloudWatch监控、从而缩短故障转移时间。此工作流包括用于测试SnapCenter URL的Lamba探测器函数、用于存储故障计数的DynamoDB表以及Step函数本身。
++
+.. 使用lamba函数探测SnapCenter URL。有关信息，请参见 https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html["创建Lamb编制 函数"^]。
+.. 创建用于存储两次Step函数迭代之间的失败计数的DynamoDB表。有关信息，请参见 https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStartedDynamoDB.html["开始使用DynamoDB表"^]。
+.. 创建步骤功能。有关信息，请参见 https://docs.aws.amazon.com/step-functions/["步骤功能文档"^]。
+.. 测试单个步骤。
+.. 测试完整功能。
+.. 创建IAM角色并调整允许执行Lamb编制 功能的权限。
+.. 创建计划以触发步骤功能。有关信息，请参见 https://docs.aws.amazon.com/step-functions/latest/dg/using-eventbridge-scheduler.html["使用Amazon EventBridge Scheduler启动步骤功能"^]。
+
+
+
+
+--
+.使用Azure负载平衡器配置高可用性
+--
+您可以使用Azure负载平衡器配置高可用性SnapCenter环境。
+
+.步骤
+. 使用Azure门户在扩展集中创建虚拟机。通过Azure虚拟机扩展集、您可以创建和管理一组负载平衡虚拟机。虚拟机实例的数量可以根据需求或定义的计划自动增加或减少。有关信息，请参见 https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/flexible-virtual-machine-scale-sets-portal["使用Azure门户在扩展集中创建虚拟机"^]。
+. 配置虚拟机后、登录到虚拟机集中的每个虚拟机、并在两个节点上安装SnapCenter服务器。
+. 在主机1中创建集群。
+`Add-SmServerCluster -ClusterName <cluster_name> -ClusterIP <specify the load balancer front end virtual ip> -PrimarySCServerIP <ip address> -Verbose -Credential <credentials>`
+. 添加二级服务器。
+`Add-SmServer -ServerName <name of node2> -ServerIP <ip address of node2> -Verbose -Credential <credentials>`
+. 获取高可用性详细信息。
+`Get-SmServerConfig`
+. 如果需要、请重建二级主机。
+`Set-SmRepositoryConfig -RebuildSlave -Verbose`
+. 故障转移到第二台主机。
+`Set-SmRepositoryConfig ActiveMaster <name of node2> -Verbose`
+
+
+--
+===从NLB切换到F5以获得高可用性
+
+您可以将 SnapCenter HA 配置从网络负载平衡（ NLB ）更改为使用 F5 负载平衡器。
+
+* 步骤 *
+
+. 使用 F5 配置 SnapCenter 服务器以实现高可用性。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["了解更多信息。"^]。
+. 在 SnapCenter 服务器主机上，启动 PowerShell 。
+. 使用 Open-SmConnection cmdlet 启动会话，然后输入凭据。
+. 使用 Update-SmServerCluster cmdlet 更新 SnapCenter 服务器以指向 F5 集群 IP 地址。
++
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+
+
+
+====

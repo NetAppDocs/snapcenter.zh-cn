@@ -13,7 +13,7 @@ summary: 通过单邮箱恢复（ SMBR ）软件，您可以还原和恢复邮�
 [role="lead"]
 通过单邮箱恢复（ SMBR ）软件，您可以还原和恢复邮件或邮箱，而不是整个 Exchange 数据库。
 
-仅为恢复单封邮件而还原完整数据库将占用大量时间和资源。SMBR 可通过创建 Snapshot 的克隆副本，然后使用 Microsoft API 在 SMBR 中挂载邮箱来帮助快速恢复邮件。有关如何使用 SMBR 的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2871407["《 SMBR 管理指南》"^]。
+仅为恢复单封邮件而还原完整数据库将占用大量时间和资源。SMBR 可通过创建 Snapshot 的克隆副本，然后使用 Microsoft API 在 SMBR 中挂载邮箱来帮助快速恢复邮件。有关如何使用SMBR的信息，请参见 https://docs.netapp.com/p/snap/smbr/8.3/Administrative-Server-Administration-Guide.pdf["《 SMBR 管理指南》"^]。
 
 对于SMBR上的追加信息、请参阅以下内容：
 

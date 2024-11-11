@@ -48,7 +48,7 @@ link:task_configure_CA_client_certificate_for_LDAPS.html["为 LDAPS 配置 CA �
 . 在左侧导航窗格中，单击 * 设置 * 。
 . 在设置页面中，单击 * 全局设置 * 。
 . 在全局设置页面中，单击 * 域设置 * 。
-. 单击 image:../media/add_policy_from_resourcegroup.gif[""] 注册新域。
+. 单击 image:../media/add_policy_from_resourcegroup.gif["添加策略"] 以注册新域。
 . 在注册新域页面中，选择 * LDAP * 或 * LDAPS* 。
 +
 .. 如果选择 * LDAP * ，请指定为 LDAP 注册不可信域所需的信息：

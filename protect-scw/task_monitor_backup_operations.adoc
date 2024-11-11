@@ -29,7 +29,7 @@ summary: 您可以使用 SnapCenterJobs 页面监控不同备份操作的进度�
 . 在监控页面中，单击 * 作业 * 。
 . 在作业页面中，执行以下步骤：
 +
-.. 单击 image:../media/filter_icon.png[""] 对列表进行筛选，以便仅列出备份操作。
+.. 单击 image:../media/filter_icon.png["筛选器图标"] 以筛选列表、以便仅列出备份操作。
 .. 指定开始日期和结束日期。
 .. 从 * 类型 * 下拉列表中，选择 * 备份 * 。
 .. 从 * 状态 * 下拉列表中，选择备份状态。
@@ -57,7 +57,7 @@ NOTE: 尽管备份作业状态显示image:../media/success_icon.gif["已完成�
 
 .步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
-. 单击 image:../media/activity_pane_icon.gif[""] 在活动窗格上查看五个最新操作。
+. 单击 image:../media/activity_pane_icon.gif["活动窗格"] "Active"(活动)窗格以查看五个最新操作。
 +
 单击其中一个操作时，*作业详细信息*页中将列出操作详细信息。
 

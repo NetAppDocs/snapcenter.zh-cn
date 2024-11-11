@@ -57,7 +57,7 @@ summary: 您可以使用SnapCenter通过文件系统备份克隆Unix文件系统
 .. 输入克隆前或克隆后分别应在克隆操作之前或之后运行的命令。
 +
 
-NOTE: 您应通过_/opt/NetApp/snapcentre/SCC/ALLOED_commands.config_路径检查插件主机上可用的命令列表中是否存在这些命令。
+NOTE: 您应通过以下路径检查插件主机上的命令列表中是否存在这些命令：_/opt/NetApp/snapcentre/SCC//etc/ALLOED_commands.config_。
 
 
 

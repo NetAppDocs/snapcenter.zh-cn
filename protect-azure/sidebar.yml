@@ -2,6 +2,8 @@
 section: protect-azure
 title: 保护在Azure NetApp Files上运行的应用程序
 entries:
+- title: 保护在Azure NetApp Files上运行的应用程序
+  url: "/protect-azure/protect-applications-azure-netapp-files.html"
 - title: 安装SnapCenter并创建凭据
   entries:
   - title: 在Azure虚拟机上安装SnapCenter

@@ -26,7 +26,7 @@ summary: 您必须使用 SnapCenter 添加主机页面添加主机，然后安�
 * 管理文档包含有关管理主机的信息。
 * 如果您使用的是组托管服务帐户（ GMSA ），则应使用管理权限配置 GMSA 。
 +
-link:../protect-db2/task_configure_gMSA_on_windows_server_2012_or_later.html["在Windows Server 2016或更高版本上为IBM DB2配置组托管服务帐户"^]
+link:../protect-db2/configure-gMSA-on-windows-server-2012-or-later.html["在Windows Server 2016或更高版本上为IBM DB2配置组托管服务帐户"^]
 
 
 

@@ -13,6 +13,10 @@ summary: 适用于IBM DB2的SnapCenter插件是NetApp SnapCenter软件的主机�
 [role="lead"]
 适用于IBM DB2数据库的SnapCenter插件是NetApp SnapCenter软件的主机端组件、用于对IBM DB2数据库进行应用程序感知型数据保护管理。适用于IBM DB2数据库的插件可自动备份、还原和克隆SnapCenter环境中的IBM DB2数据库。
 
+* SnapCenter 6.0支持IBM DB2 10.5及更高版本。
+* 6.0.1 6.0.1支持IBM DB2 9.7.x及更高版本。此外、从SnapCenter 6.0.0开始、支持AIX上的IBM DB2。
+
+
 SnapCenter支持单实例和多实例DB2设置。您可以在Linux和Windows环境中使用适用于IBM DB2数据库的插件。在Windows环境中、DB2将作为手动资源受支持。
 
 安装适用于IBM DB2数据库的插件后、您可以使用采用NetApp SnapMirror技术的SnapCenter在另一个卷上创建备份集的镜像副本。您还可以使用采用 NetApp SnapVault 技术的插件执行磁盘到磁盘备份复制，以满足标准要求。

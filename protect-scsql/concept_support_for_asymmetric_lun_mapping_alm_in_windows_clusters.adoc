@@ -21,7 +21,7 @@ ALM 配置是指一个 Windows 服务器故障转移集群，其中包含主数�
 * 用于灾难恢复的本地高可用性（ HA ）和可用性组（ AG ）的 FCI ，在灾难恢复站点上使用一个独立实例
 
 
-image::../media/asymmetric_lun_mapping_diagram.gif[非对称 LUN 映射图]
+image::../media/asymmetric_lun_mapping_diagram.gif[LUN映射]
 
 主数据中心中的存储在主数据中心中的 FCI 节点之间共享。灾难恢复数据中心中的存储在灾难恢复数据中心中的 FCI 节点之间共享。
 

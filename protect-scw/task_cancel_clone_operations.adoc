@@ -41,7 +41,7 @@ summary: 您可以取消已排队的克隆作业。
  a| 
 活动窗格
  a| 
-. 启动克隆操作后，单击 image:../media/activity_pane_icon.gif[""] 在活动窗格上查看五个最新操作。
+. 启动克隆操作后、单击 image:../media/activity_pane_icon.gif["活动窗格上的图标"] "Active"(活动)窗格以查看五个最新操作。
 . 选择操作。
 . 在*作业详细信息*页面中，单击*取消作业*。
 

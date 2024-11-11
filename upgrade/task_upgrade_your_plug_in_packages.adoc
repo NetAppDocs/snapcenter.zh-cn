@@ -13,7 +13,7 @@ summary: 此插件软件包会在 SnapCenter 升级过程中分发。
 [role="lead"]
 此插件软件包会在 SnapCenter 升级过程中分发。
 
-升级操作步骤会将您的 Windows ， Linux 或 AIX 主机置于 " `m维护` " 模式，从而阻止该主机运行任何计划的作业。
+您不必手动将要升级的每个插件主机置于维护模式、因为升级过程会将Windows、Linux或AIX插件主机置于维护模式。在升级期间、维护模式会阻止在插件主机上执行任何计划的作业。
 
 .开始之前
 * 如果您是能够访问 Linux 计算机的非 root 用户，则在执行升级操作之前，应使用最新的校验和值更新 /etc/sudoers_ 文件。
@@ -28,7 +28,6 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
 
 
 .关于此任务
-* 升级操作步骤会将您的 Windows ， Linux 或 AIX 主机置于 " `m维护` " 模式，从而阻止该主机运行任何计划的作业。
 * 对于适用于Microsoft SQL Server的SnapCenter 插件、适用于Microsoft Exchange Server的SnapCenter 插件和适用于Microsoft Windows的SnapCenter 插件、建议将服务器和插件主机升级到最新版本、以便scripts_path可以运行。
 +
 对于在策略中启用了预处理和后处理脚本的现有备份和验证计划、备份操作将在升级后继续运行。
@@ -42,14 +41,14 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
 . 在左侧导航窗格中，单击 * 主机 * > * 受管主机 * 。
 . 通过执行以下任务之一升级主机：
 +
-** 如果其中一个主机的整体状态列显示 "`Upgrade Available` " ，请单击主机名并执行以下操作：
+** 如果其中一个插件主机的整体状态列显示Upgrade Available、请单击插件主机名并执行以下操作：
 +
 ... 单击 * 更多选项 * 。
-... 如果您不想验证主机是否满足升级插件的要求，请选择 * 跳过预检 * 。
+... 如果不想验证插件主机是否满足升级插件的要求，请选择*Skip preChecks*。
 ... 单击 * 升级 * 。
 
 
-** 如果要升级多个主机，请选择所有主机，然后单击 image:../media/more_icon.gif[""]，然后单击 * 升级 * > * 确定 * 。
+** 如果要升级多个插件主机，请选择所有主机，单击image:../media/more_icon.gif[""]，然后单击*Upgrade*>*OK*。
 +
 所有相关服务都会在插件升级期间重新启动。
 
@@ -58,7 +57,7 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
 NOTE: 此时将选择软件包中的所有插件，但只会升级随早期版本的 SnapCenter 安装的插件，而不会安装其余插件。您必须使用 * 添加插件 * 选项安装任何新插件。
 
 +
-如果未选中 * 跳过预检 * 复选框，则会验证主机是否满足安装插件的要求。如果不满足最低要求，则会显示相应的错误或警告消息。修复问题描述后，单击 * 升级 * 。
+如果未选中*跳过预检*复选框，则会验证插件主机是否符合安装插件的要求。如果不满足最低要求，则会显示相应的错误或警告消息。修复问题描述后，单击 * 升级 * 。
 
 +
 

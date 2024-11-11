@@ -19,7 +19,7 @@ summary: 您可以使用PowerShell命令启用SSL通信、以确保Linux主机�
 .. 登录到SnapCenter图形用户界面。
 .. 单击*Settings*>*Global Settings*并选择*Enable certificATE validation on SnapCenter Server*。
 .. 单击*主机*>*受管主机*并选择要启用单向SSL的插件主机。
-.. 单击 image:../media/more_icon.gif[""] 图标，然后单击*启用证书验证*。
+.. 单击image:../media/more_icon.gif["更多图标"]，然后单击*启用证书验证*。
 
 
 . 从SnapCenter服务器Linux主机启用双向SSL通信。

@@ -33,6 +33,37 @@ NOTE: 您只能监控已创建且与您相关的作业，除非您获得 SnapCen
 
 
 
+=== 管理计划的备份作业
+
+从6.0.1 6.0.1版开始，引入了一个新参数*JobConcurrencyThreshold"，用于为可在任意给定时间运行的计划作业数设置阈值。这样、您可以根据系统硬件配置控制要运行的备份数量。
+
+分配给*JobConcurrencyThreshold"的默认值为0，并且已禁用。如果在计划的备份窗口期间观察到性能下降、则可以通过分配值来启用。
+
+
+NOTE: 如果启用*JobConcurrencyThreshold"来管理并发作业，SnapCenter将不允许您控制备份的顺序，并且可能不会在计划中指定的时间触发备份。
+
+.步骤
+. 设置_C：\Program Files\WebApp\Web.Web.UI.dll.config_中_JobConcurrencyThreshold"参数的值NetApp SnapCenter SnapManager。
+. 通过单击"iIIS ">"应用程序池">" SnapCenter ">"重新启动"回收SnapCenter应用程序池。
+. 通过单击"iIIS >站点> SnapCenter >重新启动"来重新启动SnapCenter万维网服务。
+
+
+
+
+=== 管理陈旧作业
+
+陈旧作业是由于SnapCenter中断或作业更新不正确而创建的。从6.0.1 6.0.1版开始、我们引入了一个预定义的计划、用于清理这些滞留72小时以上的陈旧作业。您可以通过编辑可配置的参数*CleanUpStaleJobsIntervalHours*来更改计划频率。
+
+您可以通过从*监控*>*计划*>* SnapCenter _StleJobCleanUp*运行计划来触发按需清理。
+
+.步骤
+. 设置_C：\Program Files\WebApp\Web.Web.UI.dll.config_中_CleanUpStalJobsIntervalHours_参数的值NetApp SnapCenter SnapManager。
+. 通过单击"iIIS ">"应用程序池">" SnapCenter ">"重新启动"回收SnapCenter应用程序池。
+. 通过单击"iIIS >站点> SnapCenter >重新启动"来重新启动SnapCenter万维网服务。
+
+
+
+
 == 监控计划
 
 您可能需要查看当前计划，以确定操作何时启动，上次运行时间以及下次运行时间。您还可以确定运行操作的主机以及操作的资源组和策略信息。

@@ -20,10 +20,9 @@ summary: 您可以使用 SnapCenter 克隆备份。您可以从主备份或二�
 * 目标克隆服务器应具有在目标克隆 SID 字段中提供的相同 SAP HANA 实例 SID 。
 * 对于克隆前或克隆后命令、您应通过以下路径检查这些命令是否位于插件主机上的命令列表中：
 +
-对于Windows：_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands_list.txt
+** 对于Windows：_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creper\ETC\ALLOWED_commands.config_
+** 对于Linux：_/opt/NetApp/snapcentre/SCC/ETC/ALLOED_commands.config_
 
-+
-对于Linux：/var/opt/snapcenter/scC/allowed_commands_list.txt
 
 
 
@@ -32,7 +31,7 @@ NOTE: 如果命令列表中不存在这些命令、则操作将失败。
 
 .关于此任务
 * 有关克隆拆分操作限制的信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 ONTAP 9 逻辑存储管理指南》"^]。
-* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于存储.12.1及更早版本、在还原过程中从SnapLock ONTAP 9快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 [role="tabbed-block"]
@@ -118,13 +117,7 @@ NOTE: 这些脚本将在插件主机上运行。
 Linux 计算机上卷或 qtree 的 mount 命令：
 
 +
-NFS 示例：
-
-+
- mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
-+
-
-NOTE: 对于用于静宿、快照和取消静宿操作的前处理命令和后处理命令、您应从Linux的/opt/snapcenter/snapenter/scC/ALLOWED_commands.config_路径和Windows的_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creer\ETC\ALLOWED_commands_list.txt检查这些命令是否位于插件主机上的命令列表中。
+NFS示例： `mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt`
 
 
 

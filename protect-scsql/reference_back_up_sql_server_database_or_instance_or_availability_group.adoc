@@ -45,6 +45,4 @@ SnapCenter创建快照时、整个存储系统卷都会捕获到该快照中。�
 
 * 查找更多信息 *
 
-link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["使用 PowerShell cmdlet 备份资源"]
-
 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["暂停或分组资源操作失败"]

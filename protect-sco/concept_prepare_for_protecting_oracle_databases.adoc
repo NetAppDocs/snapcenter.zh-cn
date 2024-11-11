@@ -41,7 +41,6 @@ NOTE: SnapCenter 不支持在不同集群上使用相同名称的多个 SVM 。�
 * 如果在 SAN 环境中使用 Oracle 数据库，请确保按照以下指南中所述的建议配置 SAN 环境：
 +
 ** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547957["Linux Unified Host Utilities 的建议主机设置"^]
-** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547958["将 Linux 主机与 ONTAP 存储结合使用"^]
 ** https://library.netapp.com/ecm/ecm_download_file/ECMP1119218["受 AIX Host Utilities 影响的主机设置"^]
 
 

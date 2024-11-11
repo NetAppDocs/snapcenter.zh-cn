@@ -22,7 +22,7 @@ summary: 资源组是一个容器、您可以在其中添加要备份和保护�
 下图显示了数据库的资源，资源组和策略之间的关系：
 
 +
-image::../media/sco_resourcegroup_policy.gif[SCO 资源组策略]
+image::../media/sco_resourcegroup_policy.gif[资源组策略]
 
 * 对于启用了SnapLock的策略、对于ONTAP 9.12.1及更低版本、如果指定了Snapshot锁定期限、则在还原过程中从防篡改Snapshot创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 * 不支持将不使用SnapMirror活动同步的新文件系统添加到包含使用SnapMirror活动同步的资源的现有资源组。

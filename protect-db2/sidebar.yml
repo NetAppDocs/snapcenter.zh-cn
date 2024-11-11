@@ -48,7 +48,7 @@ entries:
   entries:
   - title: 适用于IBM DB2的SnapCenter插件的安装工作流
     url: "/protect-db2/install-snapcenter-plug-in-for-ibm-db2.html"
-  - title: 添加主机和安装适用于IBM DB2的SnapCenter插件的前提条件
+  - title: 添加主机和安装适用于Windows、Linux或AIX的插件软件包的前提条件
     url: "/protect-db2/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-ibm-db2.html"
   - title: 安装适用于 Windows 的 SnapCenter 插件软件包的主机要求
     url: "/protect-db2/host-requirements-to-install-snapcenter-plug-in-package-for-windows-db2.html"

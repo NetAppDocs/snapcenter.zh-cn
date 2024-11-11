@@ -18,7 +18,7 @@ summary: 要为 SnapCenter 用户配置基于角色的访问控制，您可以�
 * 您必须已在操作系统或数据库的 Active Directory 中创建用户或组帐户。您不能使用 SnapCenter 创建这些帐户。
 +
 
-NOTE: 从 SnapCenter 4.5 开始，您只能在用户名和组名称中包含以下特殊字符：空格（），连字符（ - ），下划线（ _ ）和冒号（：）。如果要使用在早期版本的 SnapCenter 中创建的角色以及这些特殊字符，您可以通过在安装 SnapCenter WebApp 的 web.config 文件中将 "DisableSQLInjectionValidation " 参数的值更改为 true 来禁用角色名称验证。修改此值后，您无需重新启动此服务。
+NOTE: 用户名和组名称只能包含以下特殊字符：空格()、连字符(-)、下划线(_)和冒号(:)。
 
 * SnapCenter 包括多个预定义角色。
 +

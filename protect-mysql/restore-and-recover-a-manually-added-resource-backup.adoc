@@ -18,19 +18,17 @@ summary: 您可以使用 SnapCenter 从一个或多个备份还原和恢复数�
 * 您必须已取消要还原的资源或资源组当前正在进行的任何备份操作。
 * 对于还原前、还原后、挂载和卸载命令、您应通过以下路径检查这些命令是否位于插件主机上的命令列表中：
 +
-对于Windows：_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creper\ETC\ALLOWED_commands.config_
+** Windows主机上的默认位置：_C：\Program NetApp SnapCenter SnapCenter Plug-in Creper\ETC\Allowed_commands.config_
+** Linux主机上的默认位置：/opt/linux/linux/SCC//etc/Allowed_commands.config_ NetApp SnapCenter
 
-+
-对于Linux：/var/opt/snapcentre/scC/ALLOED_commands.config_
 
-+
+
+
 
 NOTE: 如果命令列表中不存在这些命令、则操作将失败。
 
-
-
 .关于此任务
-* 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
+* 对于存储.12.1及更早版本、在还原过程中从SnapLock ONTAP 9快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
 [role="tabbed-block"]
@@ -81,10 +79,6 @@ NOTE: 如果选择 * 全部 * ，则卷， qtree 或 LUN 上的所有文件都�
 . 在操作后页面中，输入要在执行还原作业后运行的 mount 和 post restore 命令。
 +
 自动发现的资源不能使用挂载命令。
-
-+
-
-NOTE: 对于用于静宿、快照和取消静宿操作的PRE和POST命令、您应从Linux的/opt/snapcenter/snapenter/scC/ALLOED_commands.config_路径和Windows的_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creer\ETC\ALLOED_commands.config_检查这些命令是否位于插件主机上可用的命令列表中。
 
 . 在通知页面的 * 电子邮件首选项 * 下拉列表中，选择要发送电子邮件的场景。
 +

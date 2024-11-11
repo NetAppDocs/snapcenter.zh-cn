@@ -16,12 +16,12 @@ summary: 您可以使用 SnapCenter 克隆备份。您可以从主备份或二�
 .开始之前
 * 您应已备份资源或资源组。
 * 您应确保托管卷的聚合应位于 Storage Virtual Machine （ SVM ）的已分配聚合列表中。
+* 在备用主机上为DB2创建克隆时、必须为克隆挂载路径创建n-1目录结构、该目录结构与另一主机上的原始挂载路径相同。挂载路径应具有_755_执行权限。
 * 对于克隆前或克隆后命令、您应通过以下路径检查这些命令是否位于插件主机上的命令列表中：
 +
-对于Windows：_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creper\ETC\ALLOWED_commands.config_
+** Windows主机上的默认位置：_C：\Program NetApp SnapCenter SnapCenter Plug-in Creper\ETC\Allowed_commands.config_
+** Linux主机上的默认位置：/opt/linux/linux/SCC//etc/Allowed_commands.config_ NetApp SnapCenter
 
-+
-对于Linux：_/opt/NetApp/snapcentre/SCC/ETC/ALLOED_commands.config_
 
 
 
@@ -115,13 +115,7 @@ NOTE: 这些脚本将在插件主机上运行。
 Linux 计算机上卷或 qtree 的 mount 命令：
 
 +
-NFS 示例：
-
-+
- mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
-+
-
-NOTE: 对于用于静宿、快照和取消静宿操作的PRE和POST命令、您应从Linux的/opt/snapcenter/snapenter/scC/ALLOED_commands.config_路径和Windows的_C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creer\ETC\ALLOED_commands.config_检查这些命令是否位于插件主机上可用的命令列表中。
+NFS示例： `mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt`
 
 
 

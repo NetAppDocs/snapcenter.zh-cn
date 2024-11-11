@@ -8,7 +8,7 @@
 
 .步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
-. 单击 image:../media/activity_pane_icon.gif[""] 在活动窗格上查看五个最新操作。
+. 单击 image:../media/activity_pane_icon.gif["活动窗格"] "Active"(活动)窗格以查看五个最新操作。
 +
 单击其中一个操作时，*作业详细信息*页中将列出操作详细信息。
 

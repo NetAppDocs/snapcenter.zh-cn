@@ -13,4 +13,4 @@ summary: 如果要保护非数据库文件的 Windows 文件，则必须安装�
 [role="lead"]
 如果要保护非数据库文件的 Windows 文件，则必须安装和设置适用于 Microsoft Windows 的 SnapCenter 插件。
 
-image::../media/scw_workflow_for_installing.gif[用于安装的 SCW 工作流]
+image::../media/scw_workflow_for_installing.png[安装工作流]

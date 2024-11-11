@@ -64,7 +64,7 @@ NOTE: 为了确保一致性， SnapCenter 文档将角色称为使用特权。On
 NOTE: 您必须对每个权限重复此命令。请记住，必须先列出所有访问命令，然后再列出只读命令。
 
 +
-有关权限列表的信息，请参见 link:../install/task_create_an_ontap_cluster_role_with_minimum_privileges.html#ontap-cli-commands-for-creating-roles-and-assigning-permissions["用于创建角色和分配权限的 ONTAP 命令行界面命令"^]。
+有关权限列表的信息，请参见 link:task_create_an_ontap_cluster_role_with_minimum_privileges.html#ontap-cli-commands-for-creating-cluster-roles-and-assigning-permissions["用于创建角色和分配权限的 ONTAP 命令行界面命令"^]。
 
 
 

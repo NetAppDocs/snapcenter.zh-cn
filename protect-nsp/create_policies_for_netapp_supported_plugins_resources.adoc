@@ -119,7 +119,7 @@ SnapLock保留期限应少于100年。
 
 单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
 
-请参阅。 link:protect-nsp/view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["在"Topology-"页面中查看NetApp支持的插件资源相关备份和克隆"]
+请参阅。 link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["在"Topology-"页面中查看NetApp支持的插件资源相关备份和克隆"]
 
 
 
@@ -135,7 +135,7 @@ SnapLock保留期限应少于100年。
 有关SnapLock存储的详细信息、请参见将快照提交到存储上的WORM
 destination
 
-请参阅。 link:protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["在"Topology-"页面中查看NetApp支持的插件资源相关备份和克隆"]
+link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["在"Topology-"页面中查看NetApp支持的插件资源相关备份和克隆"](英文)
 
 
 

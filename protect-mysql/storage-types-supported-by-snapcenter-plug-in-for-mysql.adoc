@@ -18,22 +18,30 @@ SnapCenter 在物理机和虚拟机（ VM ）上支持多种存储类型。在�
 
 
  a| 
-物理和虚拟服务器
- a| 
-FC 连接的 LUN
-
-
-
- a| 
 物理服务器
  a| 
-iSCSI 连接的 LUN
+* FC 连接的 LUN
+* iSCSI 连接的 LUN
+* NFS-connected volumes
+
 
 
 
  a| 
-物理和虚拟服务器
+VMware ESXi
  a| 
-NFS-connected volumes
+* 通过 FC 或 iSCSI ESXi 连接的 RDM LUN 主机总线适配器（ HBA ）的 HBA 扫描可能需要很长时间才能完成，因为 SnapCenter 会扫描主机中的所有主机总线适配器。
++
+您可以编辑位于 /opt/netapp/snapcenter/spl/plugins/SCU/scscore/modules/SCU/Config_ 的 * LinuxConfig.pm* 文件，将 * scsi_hosts_optimed_rescan * 参数的值设置为 1 ，以便仅将 HBA_DRIVER_NAMES 中列出的 HBA 设置为 1 。
+
+* iSCSI 启动程序直接连接到子系统的 iSCSI LUN
+* NFS数据存储库上的VMDK
+* 已在VMFS上创建VMDK
+* 直接连接到子系统的 NFS 卷
+* NFS和SAN上的VVOV数据存储库
++
+只能使用适用于VMware vSphere的ONTAP工具配置VVOV数据存储库。
+
+
 
 |===

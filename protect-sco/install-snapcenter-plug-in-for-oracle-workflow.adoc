@@ -13,4 +13,4 @@ summary: 如果要保护 Oracle 数据库，应安装和设置适用于 Oracle �
 [role="lead"]
 如果要保护 Oracle 数据库，应安装和设置适用于 Oracle 数据库的 SnapCenter 插件。
 
-image::../media/sco_install_configure_workflow.png[SCO 安装配置工作流]
+image::../media/sco_install_configure_workflow.png[Oracle插件安装工作流]

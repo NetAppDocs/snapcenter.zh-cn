@@ -1,0 +1,28 @@
+---
+permalink: protect-azure/protect-applications-azure-netapp-files.html 
+sidebar: sidebar 
+keywords: azure netapp files, ANF, back up, restore, clone, ANF backup, Azure Blob storage 
+summary: 您可以备份、还原和克隆Azure NetApp Files上运行的应用程序。 
+---
+= 保护在Azure NetApp Files上运行的应用程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter支持保护驻留在Azure NetApp Files上的应用程序、例如Oracle、SQL和SAP HANA。从6.0.1版本开始、SnapCenter支持Azure NetApp Files备份功能、该功能可通过为长期恢复、归档和合规性提供完全托管的备份解决方案来扩展Azure NetApp Files的数据保护功能。
+
+Azure NetApp Files是一款高级存储解决方案、长期备份保留成本高昂。为了优化成本、您可以将备份从Azure NetApp Files存储移动到Azure对象存储。从SnapCenter 6.0.0开始、您可以将驻留在Azure NetApp Files上的应用程序备份和克隆到Azure Blb存储(对象存储)。您可以维护两个数据副本、一个是Azure NetApp Files存储上的卷Snapshot副本、用于短期恢复、另一个是Azure Blb存储上的副本、用于长期恢复。
+
+启用具有Azure NetApp Files备份的策略并将其与资源关联后、SnapCenter将负责创建卷快照并将其备份到Azure Blb存储。SnapCenter将创建备份存储并为卷启用备份。如果已为卷启用备份、则SnapCenter将利用现有存储。
+
+
+
+== 限制
+
+* FAS或AFF ONTAP以及FSxN存储系统不支持对象存储功能。
+* 不支持Oracle和SAP HANA挂载和目录工作流。
+* 不支持从对象存储执行备份验证、REST API支持、从对象存储执行克隆生命周期管理以及为对象存储备份执行报告功能。
+* 不支持从Azure Blb Storage上的备份还原到Azure NetApp Files。您也可以使用克隆选项。
+

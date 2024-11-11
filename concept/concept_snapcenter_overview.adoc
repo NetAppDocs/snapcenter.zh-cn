@@ -56,7 +56,7 @@ SnapCenter 包括以下主要功能：
 通过提供一个用于创建用户定义的 SnapCenter 插件的框架，其他标准或自定义应用程序和数据库也支持数据保护。这样就可以通过同一个单一管理平台为其他应用程序和数据库提供数据保护。通过利用此框架、NetApp发布了SnapCenter适用于MongoDB、MySQL、PostgreSQL、存储、MaxDB、 Sybase ASE、ORASCPM、MongoDB和DPGlue。除此之外、您还可以使用开发人员指南创建自己的插件。
 
 +
-link:concept_develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"]
+link:../protect-nsp/develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"]
 
 * 基于策略的备份
 +

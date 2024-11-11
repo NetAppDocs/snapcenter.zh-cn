@@ -27,9 +27,8 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
 
 
 .关于此任务
-* 在升级期间，主机将自动置于维护模式，以防止主机运行任何计划的作业。升级后，主机将自动退出维护模式。
 * 升级期间，系统会执行 SQL 脚本以更新 NSM 数据库中的 Exchange 数据，从而将 DAG 和主机短名称转换为 FQDN 。只有在将 SnapCenter 服务器与 Exchange 插件结合使用时，此选项才适用。
-* 在启动升级操作之前，如果已手动将主机置于维护模式，则在升级后，您需要通过单击 * 主机 * > * 激活计划 * 手动将主机置于维护模式。
+* 在启动升级操作之前，如果已手动将服务器主机置于维护模式，则在升级后，您需要通过单击*hosts*>*Activate Schedule *手动将服务器主机退出维护模式。
 * 对于适用于Microsoft SQL Server的SnapCenter 插件、适用于Microsoft Exchange Server的SnapCenter 插件和适用于Microsoft Windows的SnapCenter 插件、建议将服务器和插件主机都升级到4.7版、以便scripts_path能够运行。
 +
 对于在策略中启用了预处理和后处理脚本的现有备份和验证计划、备份操作将在升级后继续运行。
@@ -78,10 +77,10 @@ NOTE: SnapCenter 将继续使用在安装早期版本的 SnapCenter 服务器期
 
 .完成后
 * 如果此插件是使用sudo用户安装的、则应复制_C：\ProgramData\NetApp\SnapCenter\Package Repository \SC_UNIX)中提供的Sha224密钥以更新_/etc/sudoers_文件。
-* 您应重新发现主机上的资源。
+* 您应在服务器主机上执行全新资源发现。
 +
-如果主机的状态显示为 stopped ，您可以等待一段时间并执行全新发现。您还可以将 * HostRefreshInterval* 参数的值（默认值为 3600 秒）更改为 10 分钟以上的任何值。
+如果服务器主机的状态显示为已停止、您可以等待一段时间、然后执行全新发现。您还可以将 * HostRefreshInterval* 参数的值（默认值为 3600 秒）更改为 10 分钟以上的任何值。
 
 * 如果升级失败，您应清理失败的安装，重新安装早期版本的 SnapCenter ，然后将 NSM 数据库还原到其先前状态。
-* 升级 SnapCenter 服务器主机后，您还必须先升级插件，然后再添加任何存储系统。
+* 升级服务器主机后、您还必须先升级插件、然后再添加任何存储系统。
 

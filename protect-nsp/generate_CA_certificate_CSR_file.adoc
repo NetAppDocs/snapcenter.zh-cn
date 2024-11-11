@@ -6,6 +6,8 @@ summary: 您可以生成证书签名请求（ CSR ）并导入证书。
 ---
 = 生成 CA 证书 CSR 文件
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
 
 [role="lead"]

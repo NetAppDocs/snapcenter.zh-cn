@@ -88,7 +88,7 @@ Tags
 
 |===
 +
-image:../media/application_settings.gif[""]
+image:../media/application_settings.gif["应用程序设置"]
 
 .. 单击*Scripts*箭头并输入用于quiese, Snapshot和unquiese"操作的前处理命令和后处理命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。
 .. 单击 * 自定义配置 * 箭头，然后输入使用此资源执行所有数据保护操作所需的自定义密钥值对。

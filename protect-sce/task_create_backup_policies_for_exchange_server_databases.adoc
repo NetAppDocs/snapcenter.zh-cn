@@ -285,7 +285,7 @@ IMPORTANT: 如果为Exchange ONTAP卷设置了SnapMirror活动同步、则无法
 
 单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
 
-请参见 link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["在 Topology 页面中查看 Exchange 备份"]。
+请参阅。 link:../protect-sce/task_view_exchange_backups_in_the_topology_page.html["在 Topology 页面中查看 Exchange 备份"]
 
 
 

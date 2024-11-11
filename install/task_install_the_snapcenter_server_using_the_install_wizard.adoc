@@ -13,7 +13,7 @@ summary: 您可以运行 SnapCenter 服务器安装程序可执行文件来安�
 [role="lead"]
 您可以运行 SnapCenter 服务器安装程序可执行文件来安装 SnapCenter 服务器。
 
-您可以选择使用 PowerShell cmdlet 执行多个安装和配置过程。
+您可以选择使用 PowerShell cmdlet 执行多个安装和配置过程。您应使用7.4.2或更高版本。
 
 
 NOTE: 不支持使用命令行静默安装 SnapCenter 服务器。

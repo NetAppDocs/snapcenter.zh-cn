@@ -47,4 +47,4 @@ image::../media/datasets_and_policies.gif[数据集和策略图]
 
 下图说明了 Windows 文件系统中资源，资源组和策略之间的关系：
 
-image::../media/resources_and_policies_for_wfs.gif[wfs 的资源和策略]
+image::../media/resources_and_policies_for_wfs.gif[资源和策略]

@@ -106,7 +106,7 @@ NOTE: 您应在ONTAP中为二级存储配置SnapMirror保留策略、以避免�
 . 在脚本页面中，分别输入要在备份操作之前或之后运行的预处理或后处理的路径和参数。
 +
 
-NOTE: 您应通过以下路径检查插件主机上的命令列表中是否存在这些命令：_/opt/NetApp/snapcentre/SCC//etc/ALLOED_commands.config_。
+NOTE: 您应通过_/opt/ALLOED_commands.config_ NetApp路径检查插件主机上可用的命令列表中是否存在这些命令SnapCenter。
 
 +
 您还可以指定脚本超时值。默认值为 60 秒。

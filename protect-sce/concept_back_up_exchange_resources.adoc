@@ -17,4 +17,4 @@ summary: 在环境中安装适用于 Microsoft Exchange Server 的 SnapCenter �
 
 以下工作流显示了必须执行备份操作的顺序：
 
-image:../media/sce_backup_workflow.gif[""]
+image:../media/sce_backup_workflow.gif["Exchange数据库备份工作流"]

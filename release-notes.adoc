@@ -7,10 +7,10 @@ summary: 提供有关此版本的 SnapCenter 服务器和 SnapCenter 插件软�
 = 发行说明
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]
 提供有关此版本的 SnapCenter 服务器和 SnapCenter 插件软件包的重要信息，包括已修复的问题，已知问题，注意事项和限制。
 
-有关详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468["SnapCenter软件6.0发行说明"^]。
+有关详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468["《SnapCenter软件6.0 6.0.1发行说明》"^]。

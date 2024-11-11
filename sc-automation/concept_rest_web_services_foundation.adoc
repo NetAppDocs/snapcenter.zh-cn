@@ -7,7 +7,7 @@ summary: REST 是一种用于创建分布式 Web 应用程序的模式。在设�
 = REST Web 服务基础
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

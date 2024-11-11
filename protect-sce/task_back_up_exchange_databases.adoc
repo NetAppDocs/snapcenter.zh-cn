@@ -34,7 +34,7 @@ summary: '如果数据库不属于任何资源组，您可以从 " 资源 " 页�
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择 * Microsoft Exchange Server 插件 * 。
 . 在资源页面中，从 * 查看 * 列表中选择 * 数据库 * 或 * 数据库可用性组 * 。
 +
-在资源页面中， image:../media/not_supported_icon.png[""] 图标表示数据库位于非 NetApp 存储上。
+在资源页面中、此 image:../media/not_supported_icon.png["不支持的存储"] 图标表示数据库位于非NetApp存储上。
 
 +
 
@@ -217,7 +217,7 @@ C:\PS> Get-SmJobSummaryReport -JobId 168
 ----
 
 
-有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者、请参见 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.htmlnapCenter[] 软件cmdlet参考指南^。
+有关可与 cmdlet 结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，请参见 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 --
 ====
