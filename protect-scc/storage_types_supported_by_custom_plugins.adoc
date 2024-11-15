@@ -1,0 +1,48 @@
+---
+permalink: protect-scc/storage_types_supported_by_custom_plugins.html 
+sidebar: sidebar 
+keywords: SnapCenter Custom Plug-ins 
+summary: SnapCenter 在物理机和虚拟机上均支持多种存储类型。在安装 SnapCenter 自定义插件之前，您必须验证是否支持您的存储类型。 
+---
+= SnapCenter 自定义插件支持的存储类型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 在物理机和虚拟机上均支持多种存储类型。在安装 SnapCenter 自定义插件之前，您必须验证是否支持您的存储类型。
+
+|===
+| 计算机 | Storage type 
+
+
+ a| 
+VM主机上的物理挂载和NFS直接挂载(不支持VMDK和RDM LUN。)
+ a| 
+FC 连接的 LUN
+
+
+
+ a| 
+VM主机上的物理挂载和NFS直接挂载(不支持VMDK和RDM LUN。)
+ a| 
+iSCSI 连接的 LUN
+
+
+
+ a| 
+VM主机上的物理挂载和NFS直接挂载(不支持VMDK和RDM LUN。)
+ a| 
+NFS-connected volumes
+
+
+
+ a| 
+VMware ESXi
+ a| 
+NFS和SAN上的VVOV数据存储库
+
+只能使用适用于VMware vSphere的ONTAP工具配置VVOV数据存储库。
+
+|===

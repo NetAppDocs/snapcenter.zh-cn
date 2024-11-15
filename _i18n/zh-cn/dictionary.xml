@@ -5111,7 +5111,6 @@
   <block id="7061d84c0775cd4c5a9723443dead908" category="paragraph">选择您创建的凭据名称或创建新凭据。</block>
   <block id="cb32a8172dc28a8a002094aac2e58756" category="paragraph">这些凭据必须对远程主机具有管理权限。有关详细信息，请参见有关创建凭据的信息。</block>
   <block id="25f06c6f9512ed4db8b25ec97fe6f874" category="paragraph">保留默认端口号或指定端口号。</block>
-  <block id="3032ffc63deef50a539e9e2dc62d92c1" category="paragraph">自定义插件可以安装在 Windows 系统或 Linux 系统上。</block>
   <block id="379d6944e6fc810a2d3e6719a4897b18" category="list-text">对于适用于 Windows 的 SnapCenter 插件软件包，默认路径为 C ： \Program Files\NetApp\SnapCenter 。</block>
   <block id="d71af843d2746ce96eb5d7b9a854feec" category="paragraph">您也可以自定义路径。</block>
   <block id="dbd5f1a081ee2b60f9256f0d615c8572" category="list-text">对于 SnapCenter 自定义插件：</block>
@@ -6192,8 +6191,6 @@
   <block id="74ae0888147d892b12bb807a0b81b3af" category="paragraph">如果已添加 FSX SVM ，此处将列出 FSX SVM 。</block>
   <block id="6f9f8c6ff90de911912e63ac72e07121" category="paragraph">如果您已使用 fsxadmin 添加 FSX 集群，此处将列出 FSX 集群。</block>
   <block id="cddfaa01c32e2362546c78364751248b" category="admonition">适用于 UNIX 的 SnapCenter 插件是适用于 AIX 的 SnapCenter 插件软件包的一部分，不支持并发卷组。</block>
-  <block id="08762ef2fe73d944789541451485f737" category="paragraph">* 存储插件 *</block>
-  <block id="22f14629dccbccb3ea736a953a3743c7" category="paragraph">您可以使用存储插件执行数据保护操作。</block>
   <block id="c2230088d27abaa2d470e15431fe93b5" category="list-text">使用内置的脚本编写前后框架备份自定义应用程序</block>
   <block id="b7ef57ec0d80db01d4596e446c5f7c1f" category="paragraph">您可以备份 ONTAP 卷， LUN 或 qtree 。</block>
   <block id="0930cbd774389ffda4b953dfada42944" category="list-text">恢复完整的 ONTAP 卷， LUN 或文件。</block>
@@ -8497,8 +8494,6 @@ destination</block>
   <block id="d63a7945f954d7f0cb122f664ce1a434" category="cell">对于DB2</block>
   <block id="32b2fa1d8696fe76a40e6bfcf9eb68ca" category="cell">适用于PostgreSQL</block>
   <block id="ace42b2fef2ae1fe557e5b65063ba5a0" category="cell">适用于MySQL</block>
-  <block id="7e696b73307c35d33f22e93f357502ae" category="paragraph">支持对Microsoft Exchange Server、Microsoft SQL Server、Linux或AIX上的Oracle数据库、SAP HANA数据库、IBM DB2以及ONTAP系统上运行的Windows主机文件系统进行数据保护。</block>
-  <block id="105319d494017b38d930283a957371b2" category="paragraph">通过提供一个用于创建用户定义的 SnapCenter 插件的框架，其他标准或自定义应用程序和数据库也支持数据保护。这样就可以通过同一个单一管理平台为其他应用程序和数据库提供数据保护。通过利用此框架、NetApp发布了SnapCenter适用于MongoDB、MySQL、PostgreSQL、存储、MaxDB、 Sybase ASE、ORASCPM、MongoDB和DPGlue。除此之外、您还可以使用开发人员指南创建自己的插件。</block>
   <block id="c4c043cf140b5a7134a11a4a9825d3a1" category="paragraph">有关Windows cmdlet的详细信息，请参阅<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="6626df1bb0990520c9816604ec788dbd" category="paragraph">有关UNIX命令的详细信息，请参见<block ref="1be7dd030b7b4d460912ef60d82c1252" category="inline-link-rx"></block>。</block>
   <block id="09e67fdf7831d393b41ce0d8f15d404a" category="list-text">SnapMirror主动同步(最初作为SnapMirror业务连续性[SM-BC)发布)</block>
@@ -8514,7 +8509,6 @@ destination</block>
   <block id="03720547c7eaf5a2184cb04e804c96dc" category="list-text">适用于IBM DB2的SnapCenter插件</block>
   <block id="3245d8514a844d08673af1fb25bec2f4" category="list-text">适用于PostgreSQL的SnapCenter插件</block>
   <block id="aa96d0986aa898ff8efdb0e691f15a6c" category="list-text">适用于MySQL的SnapCenter插件</block>
-  <block id="411354ef95b9378a1c795d3ab431dc1b" category="list-text">SnapCenter NetApp支持的插件</block>
   <block id="a46edffb8a36d10263fe5881dfb121f5" category="paragraph">SnapCenter服务器支持Microsoft Windows和Linux (RHEL 8.x、RHEL 9.x、SLES 15 SP5)</block>
   <block id="94b7d8402eae2cedafc0012930db7112" category="paragraph">如果您使用的是适用于Linux的SnapCenter插件软件包或适用于AIX的SnapCenter插件软件包、则会使用Quartz计划程序集中执行计划。</block>
   <block id="e9f0ead185217526014d410774e0c02d" category="paragraph">您应运行以下命令、以了解在Linux主机上运行的SnapCenter组件的状态：</block>
@@ -8532,8 +8526,6 @@ destination</block>
   <block id="1ade112f397a6c37ee3b78569cf208fe" category="paragraph">在SnapCenter环境中自动执行SAP HANA数据库的应用程序感知型备份、还原和克隆。</block>
   <block id="b0e07179f36c91a15e47f4d7a80a4360" category="section-title">NetApp支持的插件功能</block>
   <block id="649904e9a32ebd4b1593438f64d1745b" category="list-text">支持使用其他插件来管理其他SnapCenter插件不支持的应用程序或数据库。NetApp支持的插件不会在SnapCenter安装中提供。</block>
-  <block id="c4c8512c2acfb63d2aa9d918f8686ea0" category="paragraph">NetApp支持创建和使用受支持的插件；但是、NetApp不支持您创建的插件。</block>
-  <block id="cbff97d11cc046bce11fc74b670383ea" category="paragraph">有关详细信息、请参见 <block ref="5b4d4e6767fabff6697c56232130561b" category="inline-link-macro-rx"></block></block>
   <block id="e1694ebeb85fe94bccea1c7ce60bcf95" category="paragraph">在SnapCenter环境中自动执行IBM DB2数据库的应用程序感知型备份、还原和克隆。</block>
   <block id="14a02484b22cd41372b79139584ea8df" category="paragraph">在SnapCenter环境中自动执行PostgreSQL实例的应用感知型备份、还原和克隆。</block>
   <block id="af671f4e28804df81a33c5ddbbc096d9" category="paragraph">在SnapCenter环境中自动执行MySQL实例的应用程序感知型备份、还原和克隆。</block>
@@ -9132,12 +9124,10 @@ destination</block>
   <block id="fb8cbfb09269d05de2cde0403c3fb8d5" category="list-text">添加实例。</block>
   <block id="97a676bff5c6f6964f17a9e945591bb4" category="inline-link-macro">在 Windows Server 2016 或更高版本上为自定义应用程序配置组托管服务帐户</block>
   <block id="2020ef05a364af8330a7eb0e2f7b41ba" category="paragraph"><block ref="2020ef05a364af8330a7eb0e2f7b41ba" category="inline-link-macro-rx"></block></block>
-  <block id="39dc341d0aacca81299928400f8040ff" category="admonition">NetApp支持的插件可在Windows和Linux环境中使用。</block>
   <block id="b93827c0ed47f7107260b8849105dfab" category="paragraph">您可以从列表中安装以下插件：</block>
   <block id="206e3718af092fd1d12f80cae771ccac" category="list-text">MongoDB</block>
   <block id="b20d129960fe49b7633884a489f7be76" category="list-text">ORASCPM (显示为Oracle应用程序)</block>
   <block id="cdee3d093954e7eef1d1def2838f1f3a" category="list-text">SAP ASE</block>
-  <block id="0b61c14db730a17ea712108f132be517" category="list-text">ORASCPM</block>
   <block id="70c702908f3d7b1a5e1c952c1cddbde7" category="list-text">SAP MaxDB</block>
   <block id="f10287c6f08b8cd9f2eb337e2b486270" category="list-text">(可选)选择*更多选项*以安装其他插件。</block>
   <block id="fdadbc4689c75884565947c7d9c98734" category="doc">向NetApp支持的插件添加资源</block>
@@ -9173,7 +9163,6 @@ destination</block>
   <block id="eebb4c734f3f1079fd5d41eea32a2d1e" category="paragraph">模板必须存在、并且是外部类型的备份模板。要为MaxDB 7.8及更高版本启用快照集成、您必须具有MaxDB后台服务器功能、并且已配置外部类型的MaxDB备份模板。</block>
   <block id="9477337b7878a4f25ccde00ea9416b9b" category="list-text">MaxDB_BG_SERVER_PREfix：指定后台服务器名称的前缀。</block>
   <block id="16bfac97af8708431c25ec2291a1e479" category="paragraph">如果设置了 MaxDB_backup_templates 参数，则还必须设置 MaxDB_BG_SERVER_PREFIXP参数 。如果未设置前缀、则会使用默认值na_bg_。</block>
-  <block id="00776d7e76d2ff924005283f8a850e22" category="section-title">适用于Sybase ASE的插件</block>
   <block id="341a000d7d6fb3a7fffdc617dffab5d1" category="list-text">Sybase_Server (data_server-name)指定Sybase数据服务器名称(isql命令上的-S选项)。例如、p_test。</block>
   <block id="b86cb3989b481da0c083baf1da18da20" category="list-text">如果使用"all"结构、Sybase_database排除(db_name)允许排除数据库。</block>
   <block id="940b268cac3ed1330e0f7e0319d1e859" category="paragraph">您可以使用分号分隔列表指定多个数据库。例如：pubs2；test_db1。</block>
@@ -9212,7 +9201,6 @@ destination</block>
   <block id="3d409e4955bb3de9bcf0382e6ed02f3c" category="doc">如何使用资源、资源组和策略来保护NetApp支持的插件资源</block>
   <block id="041c2bc239865621fefddc8c25a37009" category="summary">如果要保护SnapCenter NetApp支持的插件资源、应安装并设置NetApp支持的插件。</block>
   <block id="51810f5f2de2f019cb898ee5bb825600" category="doc">SnapCenter NetApp支持的插件的安装工作流</block>
-  <block id="d2b3fcd21580309bc53248671abf5edb" category="image-alt">SnapCenter NetApp支持的插件的工作流</block>
   <block id="935a5e63802feb7c41be8f11c154dcc4" category="paragraph"><block ref="935a5e63802feb7c41be8f11c154dcc4" category="inline-link-macro-rx"></block></block>
   <block id="d3b3bbe44f365266410ca923ecee56a6" category="summary">您应使用SnapCenter用户界面(UI)安装SnapCenter NetApp支持的插件。如果您的环境不允许从SnapCenter UI远程安装此插件、则可以使用命令行界面(CLI)在控制台模式或静默模式下安装NetApp支持的插件。</block>
   <block id="d2c5b20234fc44c2f17c36b2966fd013" category="doc">使用命令行界面在Linux主机上安装NetApp支持的插件</block>
@@ -9227,15 +9215,11 @@ destination</block>
   <block id="551510ad784e6da2c3f884b2632f3d7f" category="doc">监控安装NetApp支持的插件的状态</block>
   <block id="e4891e855778eb8bfa7326df11fb3b8a" category="summary">SnapCenter 可与插件应用程序以及存储系统上的 NetApp 技术集成。要使用NetApp支持的插件、请使用SnapCenter图形用户界面。</block>
   <block id="b3fd2be40a1a8297516a32e7a0d29b47" category="paragraph">SnapCenter将NetApp快照技术与NetApp支持的插件结合使用来备份资源。快照占用的存储空间最少。</block>
-  <block id="51131ea2ea7c5e5d4f4289dc92c63642" category="paragraph">使用NetApp支持的插件功能还具有以下优势：</block>
   <block id="0c405394f36ec393b5157ee9b65e6c96" category="summary">您可以为所使用的应用程序开发NetApp支持的插件、然后使用SnapCenter备份、还原或克隆这些应用程序。与其他SnapCenter插件一样、NetApp支持的插件也充当NetApp SnapCenter软件的主机端组件、从而实现应用程序感知型数据保护和资源管理。</block>
   <block id="6f340d12d1d89a06a86c347f946aadae" category="doc">NetApp支持的插件概述</block>
-  <block id="3d10d535e62683cb492127539a79bfa7" category="paragraph">您可以使用NetApp支持的插件、也可以为所使用的应用程序开发自定义插件、然后使用SnapCenter备份、还原或克隆这些应用程序。NetApp支持的插件可充当NetApp SnapCenter软件的主机端组件、从而实现应用程序感知型数据保护和资源管理。</block>
   <block id="0ef428737d69052be8c7b16e117c7af7" category="paragraph">安装NetApp支持的插件后、您可以使用采用NetApp SnapMirror技术的SnapCenter在另一个卷上创建备份集的镜像副本、并使用NetApp SnapVault技术执行磁盘到磁盘备份复制。NetApp支持的插件可在Windows和Linux环境中使用。</block>
   <block id="051fcccc818f247e161e5bd9fe65741b" category="admonition">SnapCenterCLI不支持NetApp支持的插件命令。</block>
-  <block id="0ebde499c9409e2f7dfc27dfc03b3151" category="paragraph">您可以从添加主机页面安装NetApp支持的插件和自定义插件以及存储插件。</block>
   <block id="5c02c38860d64c515a98f74285c5e9af" category="paragraph"><block ref="5c02c38860d64c515a98f74285c5e9af" category="inline-link-macro-rx"></block></block>
-  <block id="2deb9d91af2a78b8ded94544bfbf8879" category="paragraph">NetApp还提供MongoDB、MySQL、PostgreSQL、存储、MaxDB、 Sybase ASE、ORASCPM、MongoDB和DPGlue插件。</block>
   <block id="858560511f7cf57cf79818f39ae5e7e5" category="paragraph">您可以参考指南创建自己的自定义插件 <block ref="07744b4146eed8737957be4236ad4ea6" category="inline-link-macro-rx"></block> 。</block>
   <block id="031130cc740dce019fe31437829d3261" category="doc">为NetApp支持的插件准备用于SnapMirror和SnapVault复制的存储系统</block>
   <block id="b5d24747e2254cd74a278959e55db769" category="summary">在使用SnapCenter NetApp支持的插件之前、SnapCenter管理员必须安装和配置SnapCenter服务器并执行必备任务。</block>
@@ -9243,13 +9227,8 @@ destination</block>
   <block id="b64964f7c6cb3e2d0ad50647f28415f4" category="list-text">如果适用、请在插件主机上安装Java 11。</block>
   <block id="de748d4f218eb82701a830c41d04af9f" category="list-text">如果 SVM 中有多个数据路径（ LIF ），则 SnapCenter 会选择适当的数据路径（ LIF ）来挂载 NFS 克隆卷。但是，如果要指定特定数据路径（ LIF ），则必须运行 Set-SvmPreferredDataPath CLI 。有关可与命令结合使用的参数及其说明的信息，可通过运行 _get-help command_name_ 来获取。或者，您也可以参考<block ref="1be7dd030b7b4d460912ef60d82c1252" category="inline-link-rx"></block>。</block>
   <block id="70470fa292d95a8fc9a82053e4e3efc0" category="paragraph">除了NetApp所需的其他端口之外、还必须保留端口9090供SnapCenter支持的插件使用。</block>
-  <block id="bf141cdebf5daef18e4981545288f2a4" category="summary">在添加主机并安装插件软件包之前，您必须满足所有要求。NetApp支持的插件可在Windows和Linux环境中使用。</block>
   <block id="db39871b690a95f007f3b71acd6533d2" category="doc">添加主机和安装NetApp支持的插件的前提条件</block>
   <block id="896f53a1228bbdd8ed2cd52ad89184a3" category="list-text">您必须已在Linux或Windows主机上安装Java 11。</block>
-  <block id="47ca16829f36965b6a8f742d83988318" category="list-text">执行添加主机操作的客户端主机上必须具有NetApp支持的插件。</block>
-  <block id="f76395bec51952170480338f3e52b5b5" category="list-text">对于NetApp支持的插件、应确保已将NetApp支持的插件文件的SHA512哈希添加到_custom_plugin_校 验和_list_文件中。</block>
-  <block id="f0dfe7239e8a77a9af63c70290df922b" category="paragraph">custom_plugin_校 验和列表是SnapCenter在主机上安装NetApp支持的插件的一部分。</block>
-  <block id="1e05dd04f8ec23e47584027ef040654b" category="list-text">对于为您的应用程序创建的NetApp支持的插件、您应已执行以下步骤：</block>
   <block id="1bd7b03e9e6f0b21298c8109c8f483ce" category="paragraph">如果您对SnapCenter服务器主机使用Windows Server 2019或Windows Server 2016、则必须安装Java 11。互操作性表工具（ IMT ）包含有关要求的最新信息。</block>
   <block id="06489e5a01873cf102f78c0da703ea59" category="list-text">默认还原操作仅还原存储对象。只有当NetApp支持的插件提供应用程序级别的还原操作时、才能执行该操作。</block>
   <block id="67d899b4318f9296298e7c4bb8999573" category="doc">还原NetApp支持的插件资源</block>
@@ -9264,9 +9243,6 @@ destination</block>
   <block id="a0aca7ac2b59ce8155344a6f8d8606d1" category="admonition">您无法恢复手动添加的NetApp支持的插件资源。</block>
   <block id="50787980c9356103ab7c58a3f9f7570f" category="doc">在"Topology-"页面中查看NetApp支持的插件与资源相关的备份和克隆</block>
   <block id="d8ba70b334989d2002d48ab5721908ea" category="summary">您可以使用NetApp支持的插件执行数据保护操作。</block>
-  <block id="58a0d06df2214b110774fbcd2f7e7b41" category="doc">使用NetApp支持的插件和存储插件可以执行什么操作</block>
-  <block id="62c7b5d64f39e4e815d9a33b635765c3" category="paragraph">您可以使用NetApp支持的插件执行数据保护操作。</block>
-  <block id="639362ed59cd972e832132a5bd6eeb39" category="paragraph">* NetApp支持的插件*</block>
   <block id="3f1eb07fb9288e9a6c05da32d838f4b8" category="inline-link-macro">在Windows Server 2016或更高版本上为PostgreSQL配置组托管服务帐户</block>
   <block id="e85fd1efe28ded34e4f29fbd336c7bbd" category="admonition">适用于PostgreSQL的插件安装在PostgreSQL客户端主机上、此主机可以位于Windows系统或Linux系统上。</block>
   <block id="e3df741a94b6d36005faa0f2075e2f23" category="paragraph">使用REST API安装适用于PostgreSQL的插件时、必须将版本传递为3.0。例如、PostgreSQL：3.0</block>
@@ -9540,7 +9516,6 @@ destination</block>
   <block id="2d9eb22f67056d86366a15efb099883a" category="sidebar">NetApp支持的插件的备份策略</block>
   <block id="d8af169199bfc163fc18d9c1ac586c27" category="sidebar">NetApp支持的插件资源的备份计划</block>
   <block id="bda453cd5a6724b496252c260674fa69" category="sidebar">手动添加的NetApp支持的插件资源支持的还原策略类型</block>
-  <block id="f68d31617b8573d721bea1d57f377612" category="sidebar">SnapCenter中的自定义插件</block>
   <block id="792464ae681ba52772c64594e159d7f2" category="sidebar">准备安装NetApp支持的插件</block>
   <block id="e65dc40ee96b13cf83d05151b71aaa6f" category="sidebar">NetApp支持的插件的安装工作流</block>
   <block id="19bd9625214c87b1c38eac929848e1ba" category="sidebar">安装NetApp支持的插件</block>
@@ -9644,7 +9619,6 @@ destination</block>
   <block id="503fe1d0e01220df2c700af08ab0d45a" category="paragraph">您可以通过从*监控*&gt;*计划*&gt;* SnapCenter _StleJobCleanUp*运行计划来触发按需清理。</block>
   <block id="4bc64b43c586cee88983f327d8a04770" category="list-text">设置_C：\Program Files\WebApp\Web.Web.UI.dll.config_中_CleanUpStalJobsIntervalHours_参数的值NetApp SnapCenter SnapManager。</block>
   <block id="f89f0ec412a77c24f996a08f409d1820" category="image-alt">资源和策略</block>
-  <block id="5b4d4e6767fabff6697c56232130561b" category="paragraph"><block ref="5b4d4e6767fabff6697c56232130561b" category="inline-link-macro-rx"></block></block>
   <block id="34d41de6bbbd59c588068d1c2b2e073d" category="paragraph">您还可以为适用于 VMware vSphere 的 SnapCenter 插件部署 CA 证书。有关详细信息，请参见<block ref="bdfc8d677279c2d2dc7a5041c41cc2d9" category="inline-link-rx"></block>。</block>
   <block id="23162359b252c2000ad518a55793125e" category="summary">使用F5、网络负载平衡或Amazon Web Services在SnapCenter中配置高可用性</block>
   <block id="83e606e7229254f977fc3348f76ce3d4" category="doc">配置SnapCenter服务器以实现高可用性</block>
@@ -9843,4 +9817,131 @@ destination</block>
   <block id="22cbf6497132aefc41cc34f24b8abc93" category="admonition">例如、如果您使用的是SnapCenter 4.9版、并希望升级到6.0.0、则应先升级到5.0、然后再滚动升级到6.0。</block>
   <block id="ef32bf0484293958fd8b49026606bf5e" category="sidebar">SnapCenter 软件是一个简单，集中化且可扩展的平台，可为混合云中任意位置的 ONTAP 系统上运行的应用程序，数据库，主机文件系统和 VM 提供应用程序一致的数据保护。本文档库包含6.0和6.0.0版本的信息。</block>
   <block id="db1c2c3cb6f2d1f2978caf1a4dce483c" category="sidebar">使用NetApp支持的插件保护应用程序</block>
+  <block id="e66b727df529163e059dccac755199b5" category="paragraph">支持对Microsoft Exchange Server、Microsoft SQL Server、Linux或AIX上的Oracle数据库、SAP HANA数据库、IBM DB2、PostgreSQL、MySQL以及ONTAP系统上运行的Windows主机文件系统进行数据保护。</block>
+  <block id="4dee8d3c72d98ca6077f2c8d5e31691e" category="paragraph">通过提供一个用于创建用户定义的 SnapCenter 插件的框架，其他标准或自定义应用程序和数据库也支持数据保护。这样就可以通过同一个单一管理平台为其他应用程序和数据库提供数据保护。通过利用此框架、NetApp发布了适用于MongoDB、存储、MaxDB、Sybase ASE和ORASCPM的SnapCenter插件。除此之外、您还可以使用开发人员指南创建自己的插件。</block>
+  <block id="93115fb35bbdfcd0d89a15e51ee29360" category="paragraph"><block ref="93115fb35bbdfcd0d89a15e51ee29360" category="inline-link-macro-rx"></block></block>
+  <block id="54e1870bb16fcbd1f89a2a9cb158c564" category="list-text">适用于MongoDB的SnapCenter插件</block>
+  <block id="f17c3f092b22f18a18513007253feb63" category="list-text">适用于ORASCPM的SnapCenter插件(Oracle应用程序)</block>
+  <block id="25eb4bcdd1e7dc86b1ab79cf6353b8c4" category="list-text">适用于 SAP ASE 的 SnapCenter 插件</block>
+  <block id="50abee4601abc8a9eaf9eda45fc890fe" category="list-text">适用于SAP MaxDB的SnapCenter插件</block>
+  <block id="8ef14040961bb0da029f3fc304b6207a" category="list-text">适用于存储的SnapCenter插件插件</block>
+  <block id="309dab896f56b3d37ea98a7bf810fbfa" category="paragraph">MongoDB主机</block>
+  <block id="d0dd1e46f3d2a9df5db113f5d4887fe1" category="paragraph">适用于ORASCPM的插件(Oracle应用程序)</block>
+  <block id="5cee7b6aa7ee8f8137a525779101e458" category="paragraph">适用于SAP ASE的插件</block>
+  <block id="a1ed78eb846876547dbbead9faf94c49" category="paragraph">SAP主机</block>
+  <block id="5ecca3be7057bb09f73af5a604bacae8" category="paragraph">适用于SAP MaxDB的插件</block>
+  <block id="5ebe126580d21ed8a7871727539c34a5" category="paragraph">SAP MaxDB主机</block>
+  <block id="c0a20598d510707e9ac421eb3a2e8d21" category="paragraph">适用于存储的插件插件</block>
+  <block id="b2e15324e17e46f57b49f3c8abfda8fe" category="paragraph">存储主机</block>
+  <block id="146084b70da6db6727813aa08668f9ab" category="paragraph">NetApp支持的插件包括MongoDB、ORASCPM (Oracle应用程序)、SAP ASE、SAP MaxDB和存储插件。</block>
+  <block id="42eb8a85bcf7b15c7630f27394ab2de4" category="paragraph">您必须使用SnapCenter添加主机页面添加主机、然后安装插件软件包。这些插件会自动安装在远程主机上。您可以为单个主机或集群添加主机并安装插件软件包。</block>
+  <block id="d8c34ac95ee06b7ff704879a39ce5962" category="list-text">对于Windows主机、必须确保选择适用于Windows的SnapCenter插件。</block>
+  <block id="7e6bb0931a72759d39514aa924b420bc" category="list-text">AIX</block>
+  <block id="9b704c4c9b36125c4198983397aac38f" category="admonition">NetApp支持的插件可在Windows、Linux和AIX环境中使用。</block>
+  <block id="da88e81dd023c697c2742e5a13b15675" category="admonition">AIX支持存储和Oracle应用程序。</block>
+  <block id="1de83b57e1abf49ed0abc0257c25adce" category="paragraph">NetApp支持的插件可以安装在Windows系统或Linux系统上。</block>
+  <block id="a9744f4497381c8e55a308fa6c9814c6" category="list-text">对于适用于Linux的SnapCenter插件软件包和适用于AIX的SnapCenter插件软件包，默认路径为<block ref="ad6569b575c0a3830082f4336038186a" prefix=" " category="inline-code"></block>。</block>
+  <block id="684d03676aad8f0afdac19ef9d8e146b" category="paragraph">如果此错误与磁盘空间或RAM相关、您可以更新位于的web.config文件以修改默认值。<block ref="bbf206564dadd00dca5180cc2949c1ee" prefix=" " category="inline-code"></block>如果此错误与其他参数相关，则必须修复问题描述。</block>
+  <block id="fd6a9d0fa065de8e047432e33188b6b1" category="admonition">在HA设置中、如果要更新App.Web.UI.dll.config、则必须同时更新两个节点上的文件并重新启动SnapManager SnapCenter Pool。</block>
+  <block id="0f569c4c057166810a0263561cc03eb8" category="paragraph">Windows默认路径为<block ref="75385c52c9f14e0941e2ff3204140056" prefix=" " category="inline-code"></block></block>
+  <block id="a828e35048c20e82de816a6786560bfe" category="paragraph">Linux默认路径为<block ref="a64d770b5f8b2257daf194a8f30a5882" prefix=" " category="inline-code"></block></block>
+  <block id="33e8bd0cb41cde44deff796a222fa9cf" category="doc">安装适用于Linux和AIX的SnapCenter插件软件包的主机要求</block>
+  <block id="fc25ac2856df14fba18477a9cf699e7a" category="paragraph">在安装适用于Linux或AIX的SnapCenter插件软件包之前、应确保主机满足要求。</block>
+  <block id="a0d05ac13a4562be381d9152320c4194" category="image-alt">][ SnapCenter NetApp支持的插件的工作流</block>
+  <block id="48ed8f3ff553bb06e5db886bd2c6e619" category="doc">使用cmdlet在多个远程主机上安装适用于Linux、Windows或AIX的SnapCenter插件软件包</block>
+  <block id="442903fceb71220ba92d6bc08fba383f" category="paragraph">您可以使用Install-SmHostPackage PowerShell cmdlet在多个主机上同时安装适用于Linux、Windows或AIX的SnapCenter插件软件包。</block>
+  <block id="b281607668dced6feda7018d01ede377" category="list-text">_DINGLL_LOG_NAME用于指定日志文件的名称。</block>
+  <block id="da103d0dc9ba0a7bdc05e47cb6ceddc0" category="paragraph">SnapCenter 可与插件应用程序以及存储系统上的 NetApp 技术集成。要使用MongoDB、ORASCPM (Oracle应用程序)、SAP ASE、SAP MaxDB和存储插件等NetApp支持的插件、请使用SnapCenter图形用户界面。</block>
+  <block id="e00e8f9be649322d8c66d05810c7d449" category="paragraph">NetApp支持的插件还具有以下优势：</block>
+  <block id="ed889c4749ceddfb9bbb34d736c331cb" category="paragraph">您可以对所使用的应用程序使用NetApp支持的插件、例如MongoDB、ORASCPM (Oracle应用程序)、SAP ASE、SAP MaxDB和存储插件、然后使用SnapCenter备份、还原或克隆这些应用程序。NetApp支持的插件可充当NetApp SnapCenter软件的主机端组件、从而实现应用程序感知型数据保护和资源管理。</block>
+  <block id="c8df28b406eabc43243b92181d68f712" category="paragraph">您可以从添加主机页面安装NetApp支持的插件。</block>
+  <block id="cb15647de6f65c6f817e3b480a54f7db" category="summary">在添加主机并安装插件软件包之前，您必须满足所有要求。NetApp支持的插件可在Windows、Linux或AIX环境中使用。</block>
+  <block id="01b37fc83542f28040f13cc0ca72a787" category="paragraph">在添加主机并安装插件软件包之前，您必须满足所有要求。NetApp支持的插件在Windows、Linux和AIX环境中受支持。</block>
+  <block id="a12fcc2714160353d9eaad3f6b1236bc" category="list-text">必须已在Linux、Windows或AIX主机上安装Java 11。</block>
+  <block id="4baf1f02e89e733c2e9e86eb70c5a37b" category="list-text">要执行添加主机操作的客户端主机上必须具有NetApp支持的插件、例如MongoDB、ORASCPM、Oracle应用程序、SAP ASE、SAP MaxDB和存储插件。</block>
+  <block id="0612f5c4c0ebcf5d100decba8d34d5a2" category="list-text">您必须手动选择适用于Microsoft Windows的SnapCenter插件。</block>
+  <block id="97f324a8c5553ff0e590a7f1d7426c7b" category="list-text">Linux或AIX主机</block>
+  <block id="f5f6a1811692e6a86da538aa5c811bf1" category="paragraph">您必须设置凭据才能在Linux或AIX主机上安装插件。</block>
+  <block id="7327f5f0e2968d1fa35822d7d6f788aa" category="paragraph">选择要使用的身份验证类型。</block>
+  <block id="43cc85c69233f4440d07f2e3061c15a5" category="admonition">仅适用于Linux和AIX用户。</block>
+  <block id="d2359afa8132d4e27ade60817ab1a816" category="paragraph">您可以使用MongoDB、ORASCPM、Oracle应用程序、SAP ASE、SAP MaxDB和存储等NetApp支持的插件执行数据保护操作。</block>
+  <block id="14aee625cd152256e849c1aa7031d871" category="admonition">自定义插件可在 Windows 和 Linux 环境中使用。</block>
+  <block id="e535346a3db70ff385fc97189dce883d" category="paragraph">SnapCenter自定义插件可以安装在Windows系统或Linux系统上。</block>
+  <block id="5acceba2cee4fe40d121e90d997fa439" category="doc">向 SnapCenter 自定义插件添加资源</block>
+  <block id="1f3ce8cb4c6bb4bf02aa0b3d1e189ae7" category="paragraph">添加资源后，您可以修改资源详细信息。</block>
+  <block id="a426ad547c71e321ba843cef964120d7" category="doc">备份SnapCenter自定义插件资源</block>
+  <block id="9378c23d00fd78b8947bd7e11f09030a" category="summary">如果某个SnapCenter自定义插件资源不属于任何资源组，则可以从资源页面备份该资源。您可以按需备份资源，或者，如果资源已附加策略并配置了计划，则会根据计划自动进行备份。</block>
+  <block id="08b954c361c2ce7b23e572ce828859aa" category="doc">备份各个SnapCenter自定义插件资源</block>
+  <block id="a37b4d82e3dae7c24db9d5162f48fd96" category="paragraph">如果某个自定义插件资源不属于任何资源组，则可以从“资源”页面备份该资源。您可以按需备份资源，或者，如果资源已附加策略并配置了计划，则会根据计划自动进行备份。</block>
+  <block id="2b88427244b62aacd4debde72476dcb0" category="paragraph">单击 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>，然后选择主机名和资源类型以筛选资源。然后、您可以单击 <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block> 以关闭筛选器窗格。</block>
+  <block id="665e27cacd5b140b3ca5a518bbd41724" category="doc">备份自定义插件资源的资源组</block>
+  <block id="e4e0cadac57fe2f7fc1d76c019a73967" category="doc">自定义插件资源的备份计划</block>
+  <block id="79db142fcc9311cc0f07d756c08b4ca0" category="doc">取消SnapCenter自定义插件的备份操作</block>
+  <block id="f574c5c8b76c4ae3d8e59b1478323386" category="doc">克隆SnapCenter自定义插件资源备份</block>
+  <block id="89f4fce6715ddef3315f9c412063572c" category="list-text">默认克隆操作仅克隆存储对象。只有在自定义插件提供应用程序级别的克隆操作时，才能执行此功能。</block>
+  <block id="15af88bae18a779b0123b601ed1f33b1" category="summary">在使用 SnapCenter 备份自定义插件特定资源之前，您必须为要备份的资源或资源组创建备份策略。</block>
+  <block id="45ff3f433bdb1ede8743b649a4ecb7c3" category="doc">为自定义插件资源创建策略</block>
+  <block id="90de5bc1543ef2c832e0acbf4e27cc39" category="paragraph">有关详细信息，请参见有关为自定义插件定义数据保护策略的信息。</block>
+  <block id="75b3f5ccaa0a432666656554ea274cd8" category="inline-link-macro">在 Topology 页面中查看与自定义插件资源相关的备份和克隆</block>
+  <block id="f14c7af4999f47dba1e2a191fea8c11f" category="paragraph">请参阅。 <block ref="0bc29e24db2bfeb522f90f83680fcdb4" category="inline-link-macro-rx"></block></block>
+  <block id="6ad653f84eed0c76647686ab11205da7" category="doc">如何使用资源，资源组和策略保护自定义插件资源</block>
+  <block id="2fc5c212a0ba7f3f442fe029d893a845" category="summary">如果要保护自定义插件资源、应安装和设置SnapCenter自定义插件。</block>
+  <block id="d9ac41630ae6a20177466403e2d328d8" category="doc">SnapCenter 自定义插件的安装工作流</block>
+  <block id="caef6d3f9e7cdd9ed1d3eaabe29db549" category="paragraph">如果要保护自定义插件资源，应安装和设置 SnapCenter 自定义插件。</block>
+  <block id="8f328255df3c97c90d7cfcc63b284018" category="image-alt">SnapCenter自定义插件的工作流</block>
+  <block id="0d137907411e77ba81a3c7f3193d7c4a" category="summary">您应使用SnapCenter用户界面(User Interface、UI)安装SnapCenter自定义插件。如果您的环境不允许从SnapCenter UI远程安装此插件、则可以使用命令行界面(CLI)在控制台模式或静默模式下安装此自定义插件。</block>
+  <block id="b5c24629ead5c583e2208216205af10a" category="doc">使用命令行界面在 Linux 主机上安装 SnapCenter 自定义插件</block>
+  <block id="0f18e8aaa7478aae88b697e6b89d15f0" category="paragraph">您应使用 SnapCenter 用户界面（ UI ）安装 SnapCenter 自定义插件。如果您的环境不允许从 SnapCenter UI 远程安装此插件，则可以使用命令行界面（ CLI ）在控制台模式或静默模式下安装此自定义插件。</block>
+  <block id="ef5b54514d2bc2cec099dbe31b43d400" category="list-text">将适用于 Linux 的 SnapCenter 插件软件包安装文件（ snapcenter_linux_host_plugin.bin ）从 C ： \ProgramData\NetApp\SnapCenter\Package Repository 复制到要安装自定义插件的主机。</block>
+  <block id="f96e2a1e803fa28017557015321ddb3a" category="list-text">登录到 SnapCenter ，然后从 UI 或使用 PowerShell cmdlet 上传自定义插件。</block>
+  <block id="bdc72ebb02dfcda19f5dd85c44715b14" category="paragraph">您可以参考第节从UI上传自定义插件 <block ref="f72fab5b6c914bbb8d5e6637ea3f5a3f" category="inline-link-macro-rx"></block> 。</block>
+  <block id="301724bd950c161b79552d6f655df446" category="doc">自定义插件所需的最小 ONTAP 权限</block>
+  <block id="322752ebdea85a56b4a5d899f24c4325" category="doc">监控自定义插件资源克隆操作</block>
+  <block id="ea74c30d0b14b0ca9fd30f2713505fb0" category="doc">监控自定义插件资源备份操作</block>
+  <block id="78d6b4b75546fc8aa5983130521da2da" category="doc">监控自定义插件资源还原操作</block>
+  <block id="36c1f2ec62294c41aad60383fd84873d" category="doc">监控安装自定义插件的状态</block>
+  <block id="6af1ebe4d54e4d359cfda12fdfc23a05" category="doc">准备用于 SnapMirror 的存储系统，以及用于自定义插件的 SnapVault 复制</block>
+  <block id="c338295edd6028b8881fc2e030e0af4c" category="summary">在使用SnapCenter自定义插件之前、SnapCenter管理员必须安装和配置SnapCenter服务器并执行必备任务。</block>
+  <block id="2f2b7315a3ee2bd24ebcb2968f2d7471" category="doc">使用 SnapCenter 自定义插件的前提条件</block>
+  <block id="563eeaf2ba85a493983bca82e8f08302" category="paragraph">除了SnapCenter所需的其他端口之外、还必须保留端口9090供自定义插件使用。</block>
+  <block id="cfc5bf454b40740731ed76f94a8f970c" category="summary">在添加主机并安装插件软件包之前，您必须满足所有要求。自定义插件可在 Windows 和 Linux 环境中使用。</block>
+  <block id="d4a7ff82c08a07473e6db99d099607ac" category="doc">添加主机和安装 SnapCenter 自定义插件的前提条件</block>
+  <block id="af0b5aed7941c6f843b87c68b201035e" category="paragraph">在添加主机并安装插件软件包之前，您必须满足所有要求。自定义插件既可以在 Windows 环境中使用，也可以在 Linux 环境中使用。</block>
+  <block id="f6435544e19487a5d349a72241d6531d" category="list-text">自定义插件必须在执行添加主机操作的客户端主机上可用。</block>
+  <block id="d0304f4e107917a8451ca9cbb3d3b342" category="list-text">对于自定义插件、应确保已将自定义插件文件的SHA512哈希添加到_custom_plugin_校 验和_list_文件中。</block>
+  <block id="a05404237ea51ddb4ea1e7c6debd0079" category="paragraph">custom_plugin_checksum_list是SnapCenter 在主机上安装的自定义插件的一部分。</block>
+  <block id="8af2774827e3e07de108382c962be1a0" category="list-text">对于为应用程序创建的自定义插件、您应已执行以下步骤：</block>
+  <block id="2124f96b55bd8bcfe23c27d4d7c30129" category="list-text">默认还原操作仅还原存储对象。只有在自定义插件提供应用程序级别的还原操作时，才能执行此功能。</block>
+  <block id="d586cfbb655ff9a83e5820c52931584f" category="doc">还原自定义插件资源</block>
+  <block id="08bd15b8d89877f65879f0e9486f22f7" category="doc">设置 SnapCenter 自定义插件的凭据</block>
+  <block id="4f0a79bbbb1c2f86716f750b2620d7ca" category="list-text">自定义插件应用程序</block>
+  <block id="eaa33d42e6fa75d8b2d8dabc59d645aa" category="summary">SnapCenter 可与插件应用程序以及存储系统上的 NetApp 技术集成。要使用自定义插件、请使用SnapCenter图形用户界面。</block>
+  <block id="7e2dbe0ceba88df5406b9c6925b9b55b" category="doc">SnapCenter 自定义插件功能</block>
+  <block id="be729a6539659c901e8d8721dbd4263d" category="paragraph">SnapCenter将NetApp快照技术与自定义插件结合使用来备份资源。快照占用的存储空间最少。</block>
+  <block id="15b52e4150617b0308c95562aaf68617" category="paragraph">使用自定义插件功能还具有以下优势：</block>
+  <block id="f5f43eea7e5881f7c06831585bdf5df3" category="summary">您可以为使用的应用程序开发自定义插件，然后使用 SnapCenter 备份，还原或克隆这些应用程序。与其他 SnapCenter 插件一样，您的自定义插件也充当 NetApp SnapCenter 软件的主机端组件，从而实现应用程序感知型数据保护和资源管理。</block>
+  <block id="d30c90ed422af36347bce4755fe70260" category="doc">SnapCenter 自定义插件概述</block>
+  <block id="caa41de91fb5b317c8ea619089e3c365" category="paragraph">您可以为使用的应用程序开发自定义插件，然后使用 SnapCenter 备份，还原或克隆这些应用程序。您的自定义插件可充当NetApp SnapCenter软件的主机端组件、从而实现应用程序感知型数据保护和资源管理。</block>
+  <block id="cb5170fba0d79e8f77791b01b65474cb" category="paragraph">安装自定义插件后、您可以使用采用NetApp SnapMirror技术的SnapCenter在另一个卷上创建备份集的镜像副本、并使用NetApp SnapVault技术执行磁盘到磁盘备份复制。自定义插件可在 Windows 和 Linux 环境中使用。</block>
+  <block id="612ec908f9242be88271aff279afcb8c" category="admonition">SnapCenterCLI不支持自定义插件命令。</block>
+  <block id="ac1853e1b8c52dcd72090686ddcea0a4" category="paragraph">您可以从添加主机页面安装自定义插件。</block>
+  <block id="83aeb7b594481ad598eb0b519836777b" category="summary">SnapCenter 在物理机和虚拟机上均支持多种存储类型。在安装 SnapCenter 自定义插件之前，您必须验证是否支持您的存储类型。</block>
+  <block id="c48a2f5430d3aff55420b834363bcc46" category="doc">SnapCenter 自定义插件支持的存储类型</block>
+  <block id="c646559470c5e7c2ce007b2f588217ce" category="summary">您必须先定义策略，然后才能使用 SnapCenter 成功执行还原操作。手动添加的自定义插件资源有两种还原策略。您无法恢复手动添加的自定义插件资源。</block>
+  <block id="74f3688654489538321178bb35e0308a" category="doc">手动添加的自定义插件资源支持的还原策略类型</block>
+  <block id="d09f169f58ca3636a49dbb1d90c5ccb2" category="paragraph">您必须先定义策略，然后才能使用 SnapCenter 成功执行还原操作。手动添加的自定义插件资源有两种还原策略。</block>
+  <block id="10b4ebc3af3b43078bbe14cbd2f856b5" category="admonition">您无法恢复手动添加的自定义插件资源。</block>
+  <block id="068e66f9f630e931ca9256c9d49a4894" category="doc">在Topology页面中查看与资源相关的自定义插件备份和克隆</block>
+  <block id="ffcbfe2535c5e409d12457d03945597a" category="summary">您可以使用自定义插件执行数据保护操作。</block>
+  <block id="91ed5f58b9ed12fe9c0ba6ac5fbaa1b7" category="doc">您可以使用SnapCenter自定义插件执行哪些操作</block>
+  <block id="5bb2f9bf573dcbada2bc999d2acc3d80" category="paragraph">您可以使用自定义插件执行数据保护操作。</block>
+  <block id="f130b1c1614c0136264ae62249141b2f" category="sidebar">保护自定义应用程序</block>
+  <block id="ad41f7a9e85843a998743e132424a395" category="sidebar">SnapCenter 自定义插件</block>
+  <block id="27a900f1a63545d14b71e4b2d44fc8a9" category="sidebar">您可以使用 SnapCenter 自定义插件执行什么操作</block>
+  <block id="3d8a9e359cdf4b956d6850836e03a25e" category="sidebar">自定义插件的备份策略</block>
+  <block id="08759ac851b4d644eddfd819f2b366e9" category="sidebar">准备安装 SnapCenter 自定义插件</block>
+  <block id="834849dd07442651b1ce8092c92186f0" category="sidebar">安装 SnapCenter 自定义插件</block>
+  <block id="33e8da2f20646df222fc0acf35201fe4" category="sidebar">备份自定义插件资源</block>
+  <block id="8ffa4ba0dd2df5995fd397c72a149679" category="sidebar">备份各个自定义插件资源</block>
+  <block id="e734e6e2e702d38ebab6ed3c050a5e72" category="sidebar">克隆自定义插件资源备份</block>
 </blocks>

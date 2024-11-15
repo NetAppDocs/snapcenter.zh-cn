@@ -1,23 +1,20 @@
 ---
-permalink: protect-nsp/install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets.html 
+permalink: protect-scc/install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets.html 
 sidebar: sidebar 
 keywords: install, snapcenter 
 summary: 您可以使用 Install-SmHostPackage PowerShell cmdlet 在多个主机上同时安装适用于 Linux 或 Windows 的 SnapCenter 插件软件包。 
 ---
-= 使用cmdlet在多个远程主机上安装适用于Linux、Windows或AIX的SnapCenter插件软件包
+= 使用 cmdlet 在多个远程主机上安装适用于 Linux 或 Windows 的 SnapCenter 插件软件包
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以使用Install-SmHostPackage PowerShell cmdlet在多个主机上同时安装适用于Linux、Windows或AIX的SnapCenter插件软件包。
+您可以使用 Install-SmHostPackage PowerShell cmdlet 在多个主机上同时安装适用于 Linux 或 Windows 的 SnapCenter 插件软件包。
 
 .开始之前
 添加主机的用户应具有该主机的管理权限。
-
-
-NOTE: AIX支持存储和Oracle应用程序。
 
 .步骤
 . 启动 PowerShell 。

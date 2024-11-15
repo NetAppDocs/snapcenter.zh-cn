@@ -1,0 +1,28 @@
+---
+permalink: protect-scc/clone_custom_plug_in_resource_backups.html 
+sidebar: sidebar 
+keywords: clone, custom plug-ins 
+summary: 克隆工作流包括执行克隆操作和监控操作。 
+---
+= 克隆SnapCenter自定义插件资源备份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+克隆工作流包括执行克隆操作和监控操作。
+
+.关于此任务
+克隆资源备份的原因如下：
+
+* 测试在应用程序开发周期中必须使用当前资源结构和内容实施的功能
+* 用于填充数据仓库时的数据提取和操作工具
+* 恢复错误删除或更改的数据
+
+
+以下工作流显示了必须执行克隆操作的顺序：
+
+image::../media/sco_scc_wfs_clone_workflow.png[克隆工作流]
+
+您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。有关PowerShell cmdlet的详细信息，请使用SnapCenter cmdlet帮助或参见 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。

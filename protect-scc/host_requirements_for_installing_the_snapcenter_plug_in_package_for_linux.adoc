@@ -1,20 +1,17 @@
 ---
-permalink: protect-nsp/host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux.html 
+permalink: protect-scc/host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux.html 
 sidebar: sidebar 
 keywords: SnapCenter 
 summary: 在安装适用于 Linux 的 SnapCenter 插件软件包之前，应确保主机满足要求。 
 ---
-= 安装适用于Linux和AIX的SnapCenter插件软件包的主机要求
+= 安装适用于 Linux 的 SnapCenter 插件软件包的主机要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在安装适用于Linux或AIX的SnapCenter插件软件包之前、应确保主机满足要求。
-
-
-NOTE: AIX支持存储和Oracle应用程序。
+在安装适用于 Linux 的 SnapCenter 插件软件包之前，应确保主机满足要求。
 
 |===
 | 项目 | 要求 
@@ -56,8 +53,3 @@ Java 11 Oracle Java或OpenJDK
 
 |===
 有关受支持版本的最新信息、请参见 https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"]
-
-[]
-====
-
-====

@@ -50,13 +50,13 @@ SnapCenter 包括以下主要功能：
 
 * 集中式应用程序一致的数据保护
 +
-支持对Microsoft Exchange Server、Microsoft SQL Server、Linux或AIX上的Oracle数据库、SAP HANA数据库、IBM DB2以及ONTAP系统上运行的Windows主机文件系统进行数据保护。
+支持对Microsoft Exchange Server、Microsoft SQL Server、Linux或AIX上的Oracle数据库、SAP HANA数据库、IBM DB2、PostgreSQL、MySQL以及ONTAP系统上运行的Windows主机文件系统进行数据保护。
 
 +
-通过提供一个用于创建用户定义的 SnapCenter 插件的框架，其他标准或自定义应用程序和数据库也支持数据保护。这样就可以通过同一个单一管理平台为其他应用程序和数据库提供数据保护。通过利用此框架、NetApp发布了SnapCenter适用于MongoDB、MySQL、PostgreSQL、存储、MaxDB、 Sybase ASE、ORASCPM、MongoDB和DPGlue。除此之外、您还可以使用开发人员指南创建自己的插件。
+通过提供一个用于创建用户定义的 SnapCenter 插件的框架，其他标准或自定义应用程序和数据库也支持数据保护。这样就可以通过同一个单一管理平台为其他应用程序和数据库提供数据保护。通过利用此框架、NetApp发布了适用于MongoDB、存储、MaxDB、Sybase ASE和ORASCPM的SnapCenter插件。除此之外、您还可以使用开发人员指南创建自己的插件。
 
 +
-link:../protect-nsp/develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"]
+link:../protect-scc/develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"]
 
 * 基于策略的备份
 +
@@ -176,6 +176,11 @@ SnapCenter 由 SnapCenter 服务器和 SnapCenter 插件组成。您应仅安装
 ** 适用于IBM DB2的SnapCenter插件
 ** 适用于PostgreSQL的SnapCenter插件
 ** 适用于MySQL的SnapCenter插件
+** 适用于MongoDB的SnapCenter插件
+** 适用于ORASCPM的SnapCenter插件(Oracle应用程序)
+** 适用于 SAP ASE 的 SnapCenter 插件
+** 适用于SAP MaxDB的SnapCenter插件
+** 适用于存储的SnapCenter插件插件
 
 
 * 适用于 Linux 的 SnapCenter 插件软件包，其中包括以下插件：
@@ -186,15 +191,20 @@ SnapCenter 由 SnapCenter 服务器和 SnapCenter 插件组成。您应仅安装
 ** 适用于IBM DB2的SnapCenter插件
 ** 适用于PostgreSQL的SnapCenter插件
 ** 适用于MySQL的SnapCenter插件
+** 适用于MongoDB的SnapCenter插件
+** 适用于ORASCPM的SnapCenter插件(Oracle应用程序)
+** 适用于 SAP ASE 的 SnapCenter 插件
+** 适用于SAP MaxDB的SnapCenter插件
+** 适用于存储的SnapCenter插件插件
 
 
 * 适用于 AIX 的 SnapCenter 插件软件包，其中包括以下插件：
 +
 ** 适用于 Oracle 数据库的 SnapCenter 插件
 ** 适用于UNIX文件系统的SnapCenter插件
+** 适用于IBM DB2的SnapCenter插件
 
 
-* SnapCenter NetApp支持的插件
 
 
 适用于 VMware vSphere 的 SnapCenter 插件（以前称为 NetApp 数据代理）是一个独立的虚拟设备，支持在虚拟化数据库和文件系统上执行 SnapCenter 数据保护操作。
@@ -351,6 +361,71 @@ Db2MySQL主机
  a| 
 Linux 或 Windows
 
+
+
+ a| 
+适用于MongoDB的插件
+ a| 
+适用于 Linux 的插件软件包和适用于 Windows 的插件软件包
+ a| 
+适用于 UNIX 的插件或适用于 Windows 的插件
+ a| 
+MongoDB主机
+ a| 
+Linux 或 Windows
+
+
+
+ a| 
+适用于ORASCPM的插件(Oracle应用程序)
+ a| 
+适用于 Linux 的插件软件包和适用于 Windows 的插件软件包
+ a| 
+适用于 UNIX 的插件或适用于 Windows 的插件
+ a| 
+Oracle 主机
+ a| 
+Linux 或 Windows
+
+
+
+ a| 
+适用于SAP ASE的插件
+ a| 
+适用于 Linux 的插件软件包和适用于 Windows 的插件软件包
+ a| 
+适用于 UNIX 的插件或适用于 Windows 的插件
+ a| 
+SAP主机
+ a| 
+Linux 或 Windows
+
+
+
+ a| 
+适用于SAP MaxDB的插件
+ a| 
+适用于 Linux 的插件软件包和适用于 Windows 的插件软件包
+ a| 
+适用于 UNIX 的插件或适用于 Windows 的插件
+ a| 
+SAP MaxDB主机
+ a| 
+Linux 或 Windows
+
+
+
+ a| 
+适用于存储的插件插件
+ a| 
+适用于 Linux 的插件软件包和适用于 Windows 的插件软件包
+ a| 
+适用于 UNIX 的插件或适用于 Windows 的插件
+ a| 
+存储主机
+ a| 
+Linux 或 Windows
+
 |===
 
 NOTE: 适用于 VMware vSphere 的 SnapCenter 插件支持对虚拟机（ VM ），数据存储库和虚拟机磁盘（ VMDK ）执行崩溃状态一致和 VM 一致的备份和还原操作，并支持 SnapCenter 应用程序专用插件，以保护虚拟化数据库和文件系统的应用程序一致的备份和还原操作。
@@ -421,14 +496,12 @@ NOTE: 适用于 Windows 的插件在物理和 RDM LUN 上配置 SMB 共享和 Wi
 
 === NetApp支持的插件功能
 
+NetApp支持的插件包括MongoDB、ORASCPM (Oracle应用程序)、SAP ASE、SAP MaxDB和存储插件。
+
 * 支持使用其他插件来管理其他SnapCenter插件不支持的应用程序或数据库。NetApp支持的插件不会在SnapCenter安装中提供。
 * 支持在另一个卷上为备份集创建镜像副本，并执行磁盘到磁盘备份复制。
 * 同时支持 Windows 和 Linux 环境。在 Windows 环境中，通过自定义插件的自定义应用程序可以选择使用适用于 Microsoft Windows 的 SnapCenter 插件进行文件系统一致的备份。
 
-
-NetApp支持创建和使用受支持的插件；但是、NetApp不支持您创建的插件。
-
-有关详细信息、请参见 link:../protect-nsp/develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"]
 
 
 

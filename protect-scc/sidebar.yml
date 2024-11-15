@@ -5,126 +5,122 @@ entries:
 - title: SnapCenter 自定义插件
   entries:
   - title: SnapCenter 自定义插件概述
-    url: "/protect-scc/concept_snapcenter_custom_plug_ins_overview.html"
+    url: "/protect-scc/snapcenter_custom_plug_ins_overview.html"
   - title: 您可以使用 SnapCenter 自定义插件执行什么操作
-    url: "/protect-scc/concept_what_you_can_do_with_the_snapcenter_custom_plug_ins.html"
+    url: "/protect-scc/what_you_can_do_with_custom_plugins.html"
   - title: SnapCenter 自定义插件功能
-    url: "/protect-scc/concept_snapcenter_custom_plug_ins_features.html"
+    url: "/protect-scc/snapcenter_custom_plug_ins_features.html"
   - title: SnapCenter 自定义插件支持的存储类型
-    url: "/protect-scc/reference_storage_types_supported_by_snapcenter_custom_plug_in.html"
+    url: "/protect-scc/storage_types_supported_by_custom_plugins.html"
   - title: 自定义插件所需的最小 ONTAP 权限
-    url: "/protect-scc/reference_minimum_ontap_privileges_required_for_custom_plug_in.html"
+    url: "/protect-scc/minimum_ontap_privileges_required_for_custom_plugins.html"
   - title: 准备用于 SnapMirror 和 SnapVault 复制的存储系统
-    url: "/protect-scc/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_scc.html"
+    url: "/protect-scc/prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_custom_plugins.html"
   - title: 定义备份策略
-    url: "/protect-scc/task_define_a_backup_strategy.html"
+    url: "/protect-scc/define_a_backup_strategy.html"
   - title: 自定义插件的备份策略
     entries:
     - title: 自定义插件资源的备份计划
-      url: "/protect-scc/reference_backup_schedules_of_custom_plug_in_resources.html"
+      url: "/protect-scc/backup_schedules_of_custom_plug_in_resources.html"
     - title: 所需备份作业的数量
-      url: "/protect-scc/concept_number_of_backup_jobs_needed.html"
+      url: "/protect-scc/number_of_backup_jobs_needed.html"
   - title: 手动添加的自定义插件资源支持的还原策略类型
-    url: "/protect-scc/reference_types_of_restore_strategies_supported_for_manually_added_custom_plugin_resources.html"
+    url: "/protect-scc/types_of_restore_strategies_supported_for_manually_added_custom_plugin_resources.html"
 - title: 为您的应用程序开发一个插件
   entries:
   - title: 概述
-    url: "/protect-scc/concept_develop_a_plug_in_for_your_application.html"
+    url: "/protect-scc/develop_a_plug_in_for_your_application.html"
   - title: 基于 Perl 的开发
-    url: "/protect-scc/reference_perl.html"
+    url: "/protect-scc/perl.html"
   - title: 原生模式
-    url: "/protect-scc/reference_native.html"
+    url: "/protect-scc/native.html"
   - title: Java 模式
-    url: "/protect-scc/reference_java.html"
+    url: "/protect-scc/java.html"
   - title: SnapCenter 中的自定义插件
-    url: "/protect-scc/reference_custom_plugin_in_snapcenter.html"
+    url: "/protect-scc/custom_plugins_in_snapcenter.html"
 - title: 准备安装 SnapCenter 自定义插件
   entries:
   - title: SnapCenter 自定义插件的安装工作流
-    url: "/protect-scc/task_install_snapcenter_custom_plug_in.html"
+    url: "/protect-scc/install_snapcenter_custom_plug_in.html"
   - title: 添加主机和安装 SnapCenter 自定义插件的前提条件
-    url: "/protect-scc/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_custom_plug_ins.html"
+    url: "/protect-scc/prerequisites_to_adding_hosts_and_installing_snapcenter_custom_plug_ins.html"
   - title: 安装适用于 Windows 的 SnapCenter 插件软件包的主机要求
-    url: "/protect-scc/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_scc.html"
+    url: "/protect-scc/host_requirements_to_install_snapcenter_plug_in_package_for_windows.html"
   - title: 安装适用于 Linux 的 SnapCenter 插件软件包的主机要求
-    url: "/protect-scc/reference_host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux_scc.html"
+    url: "/protect-scc/host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux.html"
   - title: 设置 SnapCenter 自定义插件的凭据
-    url: "/protect-scc/task_set_up_credentials_for_snapcenter_custom_plug_in.html"
-  - title: 在 Windows Server 2012 或更高版本上配置 GMSA
-    url: "/protect-scc/task_configure_gMSA_on_windows_server_2012_or_later.html"
+    url: "/protect-scc/set_up_credentials_for_snapcenter_custom_plug_in.html"
+  - title: 在 Windows Server 2016 或更高版本上配置 GMSA
+    url: "/protect-scc/configure_gMSA_on_windows_server_2012_or_later.html"
   - title: 安装 SnapCenter 自定义插件
     entries:
     - title: 添加主机并在远程主机上安装插件软件包
-      url: "/protect-scc/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html"
+      url: "/protect-scc/add_hosts_and_install_plug_in_packages_on_remote_hosts.html"
     - title: 使用 cmdlet 在多个远程主机上安装适用于 Linux 或 Windows 的 SnapCenter 插件软件包
-      url: "/protect-scc/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_scc.html"
+      url: "/protect-scc/install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets.html"
     - title: 使用命令行界面在 Linux 主机上安装 SnapCenter 自定义插件
-      url: "/protect-scc/task_install_the_snapcenter_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html"
+      url: "/protect-scc/install_the_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html"
     - title: 监控 SnapCenter 插件软件包安装状态
-      url: "/protect-scc/task_monitor_the_status_of_installing_plugin_for_scc.html"
+      url: "/protect-scc/monitor_the_status_of_installing_plugin.html"
   - title: 配置 CA 证书
     entries:
     - title: 生成 CA 证书 CSR 文件
-      url: "/protect-scc/reference_generate_CA_certificate_CSR_file.html"
+      url: "/protect-scc/generate_CA_certificate_CSR_file.html"
     - title: 导入 CA 证书
-      url: "/protect-scc/task_import_CA_certificates.html"
+      url: "/protect-scc/import_CA_certificates.html"
     - title: 获取 CA 证书指纹
-      url: "/protect-scc/task_get_the_CA_certificate_thumbprint.html"
+      url: "/protect-scc/get_the_CA_certificate_thumbprint.html"
     - title: 使用 Windows 主机插件服务配置 CA 证书
-      url: "/protect-scc/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
+      url: "/protect-scc/configure_CA_certificate_with_Windows_host_plug-in_services.html"
     - title: 在 Linux 主机上为 SnapCenter 自定义插件服务配置 CA 证书
-      url: "/protect-scc/task_configure_CA_certificate_for_SCC_on_Linux_host.html"
+      url: "/protect-scc/configure_CA_certificate_on_Linux_host.html"
     - title: 在 Windows 主机上为 SnapCenter 自定义插件服务配置 CA 证书
-      url: "/protect-scc/task_configure_CA_certificate_for_SCC_on_windows_host.html"
+      url: "/protect-scc/configure_CA_certificate_on_windows_host.html"
     - title: 为插件启用 CA 证书
-      url: "/protect-scc/task_enable_ca_certificates_for_plug-ins.html"
+      url: "/protect-scc/enable_ca_certificates_for_plug-ins.html"
 - title: 准备数据保护
   entries:
   - title: 使用 SnapCenter 自定义插件的前提条件
-    url: "/protect-scc/reference_prerequisites_for_using_snapcenter_custom_plug_ins.html"
+    url: "/protect-scc/prerequisites_for_using_custom_plugins.html"
   - title: 如何使用资源，资源组和策略保护自定义插件资源
-    url: "/protect-scc/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_custom_plug_in_resources.html"
+    url: "/protect-scc/how_resources_resource_groups_policies_used_for_protecting_custom_plugins_resources.html"
 - title: 备份自定义插件资源
   entries:
   - title: 备份工作流
-    url: "/protect-scc/task_back_up_custom_plug_in_resources.html"
+    url: "/protect-scc/back_up_custom_plugins_resources.html"
   - title: 向 SnapCenter 自定义插件添加资源
-    url: "/protect-scc/task_add_resources_to_snapcenter_custom_plug_ins.html"
+    url: "/protect-scc/add_resources_to_snapcenter_custom_plug_ins.html"
   - title: 为自定义插件资源创建策略
-    url: "/protect-scc/task_create_policies_for_custom_plug_in_resources.html"
+    url: "/protect-scc/create_policies_for_custom_plug_in_resources.html"
   - title: 创建资源组并附加策略
-    url: "/protect-scc/task_create_resource_groups_and_attach_policies.html"
+    url: "/protect-scc/create_resource_groups_and_attach_policies.html"
   - title: 备份各个自定义插件资源
-    url: "/protect-scc/task_back_up_individual_custom_plug_in_resources.html"
+    url: "/protect-scc/back_up_individual_custom_plugins_resources.html"
   - title: 备份自定义插件资源的资源组
-    url: "/protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html"
+    url: "/protect-scc/back_up_resource_groups_of_custom_plug_in_resources.html"
   - title: 使用 PowerShell cmdlet 创建存储系统连接和凭据
-    url: "/protect-scc/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_scc.html"
-  - title: 使用 PowerShell cmdlet 备份资源
-    url: "/protect-scc/task_back_up_resources_using_powershell_cmdlets.html"
+    url: "/protect-scc/create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets.html"
   - title: 监控备份操作
-    url: "/protect-scc/task_monitor_scc_resources_backup_operations.html"
+    url: "/protect-scc/monitor_resources_backup_operations.html"
   - title: 取消备份操作
-    url: "/protect-scc/task_cancel_backup_operations_for_scc.html"
+    url: "/protect-scc/cancel_backup_operations.html"
   - title: 在 Topology 页面中查看与自定义插件资源相关的备份和克隆
-    url: "/protect-scc/task_view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html"
+    url: "/protect-scc/view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html"
 - title: 还原自定义插件资源
   entries:
   - title: 还原工作流
-    url: "/protect-scc/task_restore_custom_plug_in_resources.html"
+    url: "/protect-scc/restore_custom_plug_in_resources.html"
   - title: 还原资源备份
-    url: "/protect-scc/task_restore_a_resource_backup.html"
+    url: "/protect-scc/restore_a_resource_backup.html"
   - title: 使用 PowerShell cmdlet 还原资源
-    url: "/protect-scc/task_restore_and_recover_resources_using_powershell_cmdlets_scc.html"
+    url: "/protect-scc/restore_and_recover_resources_using_powershell_cmdlets.html"
   - title: 监控还原操作
-    url: "/protect-scc/task_monitor_scc_resources_restore_operations.html"
+    url: "/protect-scc/monitor_resources_restore_operations.html"
 - title: 克隆自定义插件资源备份
   entries:
   - title: 克隆工作流
-    url: "/protect-scc/task_clone_custom_plug_in_resource_backups.html"
+    url: "/protect-scc/clone_custom_plug_in_resource_backups.html"
   - title: 从备份克隆
-    url: "/protect-scc/task_clone_from_a_backup.html"
-  - title: 使用 PowerShell cmdlet 克隆备份
-    url: "/protect-scc/task_clone_backups_using_powershell_cmdlets.html"
+    url: "/protect-scc/clone_from_a_backup.html"
   - title: 监控 SnapCenter 中的克隆操作
-    url: "/protect-scc/task_monitor_scc_resource_clone_operations.html"
+    url: "/protect-scc/monitor_resource_clone_operations.html"

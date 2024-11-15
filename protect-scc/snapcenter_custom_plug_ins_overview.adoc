@@ -1,0 +1,28 @@
+---
+permalink: protect-scc/snapcenter_custom_plug_ins_overview.html 
+sidebar: sidebar 
+keywords: custom plug-ins 
+summary: 您可以为使用的应用程序开发自定义插件，然后使用 SnapCenter 备份，还原或克隆这些应用程序。与其他 SnapCenter 插件一样，您的自定义插件也充当 NetApp SnapCenter 软件的主机端组件，从而实现应用程序感知型数据保护和资源管理。 
+---
+= SnapCenter 自定义插件概述
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以为使用的应用程序开发自定义插件，然后使用 SnapCenter 备份，还原或克隆这些应用程序。您的自定义插件可充当NetApp SnapCenter软件的主机端组件、从而实现应用程序感知型数据保护和资源管理。
+
+安装自定义插件后、您可以使用采用NetApp SnapMirror技术的SnapCenter在另一个卷上创建备份集的镜像副本、并使用NetApp SnapVault技术执行磁盘到磁盘备份复制。自定义插件可在 Windows 和 Linux 环境中使用。
+
+
+NOTE: SnapCenterCLI不支持自定义插件命令。
+
+您可以从添加主机页面安装自定义插件。
+
+link:add_hosts_and_install_plug_in_packages_on_remote_hosts.html["添加主机并在远程主机上安装插件软件包。"^]
+
+
+NOTE: SnapCenter 支持策略将涵盖对 SnapCenter 自定义插件框架，核心引擎和关联 API 的支持。支持范围不包括插件源代码以及基于自定义插件框架构建的关联脚本。
+
+您可以参考指南创建自己的自定义插件 link:develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"^] 。

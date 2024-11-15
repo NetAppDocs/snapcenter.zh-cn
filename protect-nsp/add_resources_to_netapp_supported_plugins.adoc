@@ -1,7 +1,7 @@
 ---
 permalink: protect-nsp/add_resources_to_netapp_supported_plugins.html 
 sidebar: sidebar 
-keywords: NetApp supported plug-in, resources, snapcenter 
+keywords: NetApp supported plug-in, resources, NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: 您必须添加要备份或克隆的资源。根据您的环境，资源可能是要备份或克隆的数据库实例或集合。 
 ---
 = 向NetApp支持的插件添加资源
@@ -15,7 +15,6 @@ summary: 您必须添加要备份或克隆的资源。根据您的环境，资�
 
 .开始之前
 * 您必须已完成安装 SnapCenter 服务器，添加主机，创建存储系统连接和添加凭据等任务。
-* 您必须具有 link:develop_a_plug_in_for_your_application.html["已为您的应用程序创建自定义插件"]。
 * 您必须已将插件上传到 SnapCenter 服务器。
 
 
@@ -73,7 +72,7 @@ Type
 NOTE: NetApp支持的插件不支持自动发现资源。物理和虚拟环境的存储详细信息也不会自动发现。您必须在创建资源时提供物理和虚拟环境的存储信息。
 
 +
-image::../media/storage_footprint.gif[存储占用空间]
+image::../media/storage_footprint.png[存储占用空间]
 
 . 在资源设置页面中，为资源提供自定义密钥值对。
 +
@@ -164,7 +163,7 @@ NOTE: 对于Windows环境、路径必须使用双引号("...")。
 
 
 
-=== 适用于Sybase ASE的插件
+=== 适用于SAP ASE的插件
 
 资源设置：
 

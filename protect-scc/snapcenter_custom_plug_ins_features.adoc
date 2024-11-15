@@ -1,17 +1,17 @@
 ---
-permalink: protect-nsp/netapp_supported_plugins_features.html 
+permalink: protect-scc/snapcenter_custom_plug_ins_features.html 
 sidebar: sidebar 
-keywords: NetApp supported plug-ins features, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
-summary: SnapCenter 可与插件应用程序以及存储系统上的 NetApp 技术集成。要使用NetApp支持的插件、请使用SnapCenter图形用户界面。 
+keywords: custom plug-ins features 
+summary: SnapCenter 可与插件应用程序以及存储系统上的 NetApp 技术集成。要使用自定义插件、请使用SnapCenter图形用户界面。 
 ---
-= NetApp支持的插件功能
+= SnapCenter 自定义插件功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter 可与插件应用程序以及存储系统上的 NetApp 技术集成。要使用MongoDB、ORASCPM (Oracle应用程序)、SAP ASE、SAP MaxDB和存储插件等NetApp支持的插件、请使用SnapCenter图形用户界面。
+SnapCenter 可与插件应用程序以及存储系统上的 NetApp 技术集成。要使用自定义插件、请使用SnapCenter图形用户界面。
 
 * * 统一图形用户界面 *
 +
@@ -23,11 +23,11 @@ SnapCenter 界面可在插件和环境之间实现标准化和一致性。通过
 
 * *无中断NetApp快照技术*
 +
-SnapCenter将NetApp快照技术与NetApp支持的插件结合使用来备份资源。快照占用的存储空间最少。
+SnapCenter将NetApp快照技术与自定义插件结合使用来备份资源。快照占用的存储空间最少。
 
 
 
-NetApp支持的插件还具有以下优势：
+使用自定义插件功能还具有以下优势：
 
 * 支持备份，还原和克隆工作流
 * 支持 RBAC 的安全性和集中式角色委派

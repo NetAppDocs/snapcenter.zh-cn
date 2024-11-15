@@ -1,5 +1,5 @@
 ---
-permalink: protect-nsp/java.html 
+permalink: protect-scc/java.html 
 sidebar: sidebar 
 keywords: Custom plug-in 
 summary: 使用 Java 模式开发此插件。 

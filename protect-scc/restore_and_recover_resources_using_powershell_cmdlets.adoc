@@ -1,5 +1,5 @@
 ---
-permalink: protect-nsp/restore_and_recover_resources_using_powershell_cmdlets.html 
+permalink: protect-scc/restore_and_recover_resources_using_powershell_cmdlets.html 
 sidebar: sidebar 
 keywords: restore resources 
 summary: 还原资源备份包括启动与 SnapCenter 服务器的连接会话，列出备份和检索备份信息以及还原备份。 

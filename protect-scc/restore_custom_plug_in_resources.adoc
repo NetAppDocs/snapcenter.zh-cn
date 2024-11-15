@@ -1,10 +1,10 @@
 ---
-permalink: protect-nsp/restore_netapp_supported_plugins_resources.html 
+permalink: protect-scc/restore_custom_plug_in_resources.html 
 sidebar: sidebar 
 keywords:  
 summary: 还原和恢复工作流包括规划，执行还原操作和监控操作。 
 ---
-= 还原NetApp支持的插件资源
+= 还原自定义插件资源
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

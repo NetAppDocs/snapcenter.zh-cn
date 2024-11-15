@@ -2,24 +2,23 @@
 permalink: protect-nsp/prerequisites_to_adding_hosts_and_installing_netapp_supported_plugins.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: 在添加主机并安装插件软件包之前，您必须满足所有要求。NetApp支持的插件可在Windows和Linux环境中使用。 
+summary: 在添加主机并安装插件软件包之前，您必须满足所有要求。NetApp支持的插件可在Windows、Linux或AIX环境中使用。 
 ---
-= 添加主机和安装NetApp支持的插件的前提条件
+= 添加主机和安装适用于Windows、Linux或AIX的插件软件包的前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在添加主机并安装插件软件包之前，您必须满足所有要求。NetApp支持的插件可在Windows和Linux环境中使用。
+在添加主机并安装插件软件包之前，您必须满足所有要求。NetApp支持的插件在Windows、Linux和AIX环境中受支持。
 
-* 您必须已创建自定义插件。有关详细信息，请参见开发人员信息。
-+
-link:develop_a_plug_in_for_your_application.html["为您的应用程序开发一个插件"]
 
-* 您必须已在Linux或Windows主机上安装Java 11。
+NOTE: AIX支持存储和Oracle应用程序。
+
+* 必须已在Linux、Windows或AIX主机上安装Java 11。
 * 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
-* 执行添加主机操作的客户端主机上必须具有NetApp支持的插件。
+* 要执行添加主机操作的客户端主机上必须具有NetApp支持的插件、例如MongoDB、ORASCPM、Oracle应用程序、SAP ASE、SAP MaxDB和存储插件。
 
 
 
@@ -30,53 +29,19 @@ link:develop_a_plug_in_for_your_application.html["为您的应用程序开发一
 
 
 
-== SHA512哈希
-
-* 对于NetApp支持的插件、应确保已将NetApp支持的插件文件的SHA512哈希添加到_custom_plugin_校 验和_list_文件中。
-+
-** 对于Linux主机、SHA512哈希位于：_/var/opt/snapcenter/SCC/custom_plugin_checksum_list.txt
-** 对于Windows主机、SHA512哈希位于_C：\Program Files\NetApp\SnapCenter Plug-in Creator\etc\custom_plugin_checksum_list.txt
-+
-对于自定义安装路径、SHA512哈希位于_<custom path>\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\custom_plugin_checksum_list.txt
-
-
-
-+
-custom_plugin_校 验和列表是SnapCenter在主机上安装NetApp支持的插件的一部分。
-
-* 对于为您的应用程序创建的NetApp支持的插件、您应已执行以下步骤：
-+
-.. 已生成插件zip文件的SHA512哈希。
-+
-您可以使用等联机工具 https://emn178.github.io/online-tools/sha512_file_hash.html["SHA512哈希"^]。
-
-.. 已将生成的SHA512哈希添加到custom_plugin_checksum_list文件中的新行。
-+
-注释以#符号开头、用于标识哈希所属的插件。
-
-+
-以下是校验和文件中SHA512哈希条目的示例：
-
-+
-....
-#ORASCPM
-03721f567a1e4a1cb5569066b9a58af619ee12b1f8713108f81b696cfbdb81c25232fa63d6e6777a2b2a1ec068bb0a93a59a8ade71587182f8bccbe81f7e0ba6
-....
-
-
-
-
-
-
 == Windows 主机
 
 * 您必须具有具有本地管理员权限的域用户，并在远程主机上具有本地登录权限。
 * 如果您在 SnapCenter 中管理集群节点，则必须具有对集群中所有节点具有管理权限的用户。
+* 您必须手动选择适用于Microsoft Windows的SnapCenter插件。
 
 
 
 
-== Linux 主机
+== Linux和AIX主机
+
+
+NOTE: AIX支持存储和Oracle应用程序。
 
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
 * 您必须已在Linux主机上安装Java 11。
@@ -122,3 +87,130 @@ IMPORTANT: 此示例只能用作创建自己数据的参考。
 
 
 
+
+
+
+== AIX 主机要求
+
+在安装适用于 AIX 的 SnapCenter 插件软件包之前，应确保主机满足要求。
+
+
+NOTE: AIX支持存储和Oracle应用程序。
+
+
+NOTE: 适用于 UNIX 的 SnapCenter 插件是适用于 AIX 的 SnapCenter 插件软件包的一部分，不支持并发卷组。
+
+|===
+| 项目 | 要求 
+
+
+ a| 
+操作系统
+ a| 
+AIX 7.1或更高版本
+
+
+
+ a| 
+主机上 SnapCenter 插件的最小 RAM
+ a| 
+4 GB
+
+
+
+ a| 
+主机上 SnapCenter 插件的最小安装和日志空间
+ a| 
+2 GB
+
+
+NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消耗。所需的日志空间因要保护的实体数量和数据保护操作的频率而异。如果没有足够的磁盘空间，则不会为最近运行的操作创建日志。
+
+
+
+ a| 
+所需的软件包
+ a| 
+Java 11 IBM Java
+
+如果已将 Java 升级到最新版本，则必须确保 /var/opt/snapcenter/spl/etc/spl.properties 上的 java_home 选项设置为正确的 Java 版本和路径。
+
+|===
+有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+
+
+
+=== 为 AIX 主机的非 root 用户配置 sudo 权限
+
+通过 SnapCenter 4.4 及更高版本，非 root 用户可以安装适用于 AIX 的 SnapCenter 插件软件包并启动插件过程。此插件进程将以有效的非root用户身份运行。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。
+
+* 您需要的内容 *
+
+* sudo 1.8.7或更高版本。
+* 编辑 /etc/ssh/sshd_config_ 文件以配置消息身份验证代码算法： macs HMAC-SHA2-256 和 MAC HMAC-SHA2-512 。
++
+更新配置文件后重新启动 sshd 服务。
+
++
+示例
+
++
+[listing]
+----
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+#Legacy changes
+#KexAlgorithms diffie-hellman-group1-sha1
+#Ciphers aes128-cbc
+#The default requires explicit activation of protocol
+Protocol 2
+HostKey/etc/ssh/ssh_host_rsa_key
+MACs hmac-sha2-256
+----
+
+
+* 关于此任务 *
+
+您应为非 root 用户配置 sudo 权限，以提供对以下路径的访问：
+
+* /home/_aix_user_//.SC_NetApp/snapcenter_aix_host_plugin.bsx
+* /custom_location/netapp/snapcenter/spl/installation/plugins/uninstall
+* /custom_location/netapp/snapcenter/spl/bin/spl
+
+
+* 步骤 *
+
+. 登录到要安装适用于 AIX 的 SnapCenter 插件软件包的 AIX 主机。
+. 使用 visudo Linux 实用程序将以下行添加到 /etc/sudoers 文件中。
++
+[listing, subs="+quotes"]
+----
+Cmnd_Alias HPPACMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/snapcenter_aix_host_plugin.bsx,
+/opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/AIX_Prechecks.sh
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+_AIX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPACMD, PRECHECKCMD, CONFIGCHECKCMD, SCCMD
+Defaults: _AIX_USER_ !visiblepw
+Defaults: _AIX_USER_ !requiretty
+----
++
+
+NOTE: 如果您正在设置RAC以及其他允许的命令、则应将以下命令添加到/etc/sudoers文件中："/rc/bin/olsnodes'<crs_home>
+
+
+
+您可以从/etc/oracle/ocl.loc_文件中获取_crs_home_的值。
+
+_aix_user_是 您创建的非 root 用户的名称。
+
+您可以从*SC_UNIX)插件校验和.txt文件获取_校 验和值_，该文件位于：
+
+* _C：\ProgramData\NetApp\SnapCenter\Package Repository \SC_UNIS_plugins_校 验和.TXT_(如果SnapCenter服务器安装在Windows主机上)。
+* _/opt/NetApp/snapcentre/SnapManagerWeb/Repository /SC_UNIX)插件_Checksum．txt _(如果SnapCenter服务器安装在Linux主机上)。
+
+
+
+IMPORTANT: 此示例只能用作创建自己数据的参考。

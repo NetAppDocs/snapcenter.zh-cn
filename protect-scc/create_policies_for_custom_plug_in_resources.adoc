@@ -1,22 +1,22 @@
 ---
-permalink: protect-nsp/create_policies_for_netapp_supported_plugins_resources.html 
+permalink: protect-scc/create_policies_for_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords: create policies, NetApp supported plug-in 
-summary: 在使用SnapCenter备份NetApp支持的插件特定资源之前、您必须为要备份的资源或资源组创建备份策略。 
+keywords: create policies, custom plug-in 
+summary: 在使用 SnapCenter 备份自定义插件特定资源之前，您必须为要备份的资源或资源组创建备份策略。 
 ---
-= 为NetApp支持的插件资源创建策略
+= 为自定义插件资源创建策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在使用SnapCenter备份NetApp支持的插件特定资源之前、您必须为要备份的资源或资源组创建备份策略。
+在使用 SnapCenter 备份自定义插件特定资源之前，您必须为要备份的资源或资源组创建备份策略。
 
 .开始之前
 * 您应已定义备份策略。
 +
-有关详细信息、请参见有关为NetApp支持的插件定义数据保护策略的信息。
+有关详细信息，请参见有关为自定义插件定义数据保护策略的信息。
 
 * 您应已做好数据保护准备。
 +
@@ -119,7 +119,7 @@ SnapLock保留期限应少于100年。
 
 单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
 
-请参阅。 link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["在"Topology-"页面中查看NetApp支持的插件资源相关备份和克隆"]
+请参阅。 link:view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["在 Topology 页面中查看与自定义插件资源相关的备份和克隆"]
 
 
 
@@ -135,7 +135,7 @@ SnapLock保留期限应少于100年。
 有关SnapLock存储的详细信息、请参见将快照提交到存储上的WORM
 destination
 
-link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["在"Topology-"页面中查看NetApp支持的插件资源相关备份和克隆"](英文)
+请参阅。 link:view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["在 Topology 页面中查看与自定义插件资源相关的备份和克隆"]
 
 
 

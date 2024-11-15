@@ -26,18 +26,6 @@ entries:
       url: "/protect-nsp/number_of_backup_jobs_needed.html"
   - title: 手动添加的NetApp支持的插件资源支持的还原策略类型
     url: "/protect-nsp/types_of_restore_strategies_supported_for_manually_added_netapp_supported_plugins_resources.html"
-- title: 为您的应用程序开发一个插件
-  entries:
-  - title: 概述
-    url: "/protect-nsp/develop_a_plug_in_for_your_application.html"
-  - title: 基于 Perl 的开发
-    url: "/protect-nsp/perl.html"
-  - title: 原生模式
-    url: "/protect-nsp/native.html"
-  - title: Java 模式
-    url: "/protect-nsp/java.html"
-  - title: SnapCenter中的自定义插件
-    url: "/protect-nsp/custom_plugins_in_snapcenter.html"
 - title: 准备安装NetApp支持的插件
   entries:
   - title: NetApp支持的插件的安装工作流
@@ -112,8 +100,6 @@ entries:
     url: "/protect-nsp/restore_netapp_supported_plugins_resources.html"
   - title: 还原资源备份
     url: "/protect-nsp/restore_a_resource_backup.html"
-  - title: 使用 PowerShell cmdlet 还原资源
-    url: "/protect-nsp/restore_and_recover_resources_using_powershell_cmdlets.html"
   - title: 监控还原操作
     url: "/protect-nsp/monitor_resources_restore_operations.html"
 - title: 克隆NetApp支持的插件资源备份
