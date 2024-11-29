@@ -8141,10 +8141,6 @@ SnapLock设置由ONTAP管理。</block>
   <block id="dcc66de93aefa3105fda8cbdb3cdc2cf" category="list-text">选择备份，然后单击 *<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*</block>
   <block id="13bc47d703b82b962d33b3cf47bf64fb" category="list-text">在名称页面中，选择*PDB克隆*并指定其他详细信息。</block>
   <block id="92336218cb59d91f7080fee85c60b95f" category="list-text">在"Post-Ops"页面中、默认情况下会选中*直到取消*以执行克隆数据库的恢复。</block>
-  <block id="82a14f04b2bdde64af5a7a694ab98bba" category="section-title">拆分Oracle数据库克隆</block>
-  <block id="787b61c3679ebc574f4962a1f5aebb0c" category="list-text">选择克隆的资源(例如数据库或LUN)、然后单击*<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*</block>
-  <block id="562ffa91cb05be38d306e7ac7ab12d9c" category="list-text">从管理副本视图中，从主存储系统中选择*Clones *。</block>
-  <block id="62ef6c6e852eca46dfc82fdc6ad386b2" category="list-text">选择PDB克隆(目标CDB：PDBClone)、然后单击*<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*</block>
   <block id="06297b8a736154148ec90e3788831eaa" category="doc">还原和恢复SQL Server数据库</block>
   <block id="b01943524a657671dfae0f3f1f0948e5" category="paragraph">您可以使用 SnapCenter 还原备份的 SQL Server 数据库。数据库还原是一个多阶段过程、它会将所有数据和日志页面从指定的SQL Server备份复制到指定的数据库。</block>
   <block id="ddec2d3a4d88b9b7250ed10e6ef19f3f" category="list-text">从管理副本视图中，选择*从存储系统备份*。</block>
@@ -8480,7 +8476,6 @@ destination</block>
   <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">选择备份并单击*删除保护*。</block>
   <block id="ad569cc1cca820033bb20ffe1d5bc4a5" category="paragraph">AIX 7.1或更高版本</block>
   <block id="6b139c8a52407032a30a5d0cbb7c1438" category="list-text">volume snapshot modify-snapLock-expiry-time</block>
-  <block id="ce67e9a5c3006b689a5f150a9c30d732" category="list-text">(英文)。 NET核心8.0.5</block>
   <block id="4a58751c57809081912e30803a16d52e" category="list-text">PowerShell核心7.4.2</block>
   <block id="b7ccd7f577996dd33bde8070db971b93" category="list-text">Java 11 Oracle Java和OpenJDK</block>
   <block id="9b722cfab4d80b751e95d2565746573a" category="paragraph">NFS和SAN上的VVOV数据存储库</block>
@@ -8628,7 +8623,6 @@ destination</block>
   <block id="2ac5f63d0bb2ab4a9898d18445391caf" category="list-text">Rabbitmq</block>
   <block id="62e0b5b350c9e3d2c19aa801d9442ba9" category="list-text">nginx</block>
   <block id="f7e853158b776246c53345b938159cc1" category="list-text">Erlang</block>
-  <block id="4b895fbdf0b21e04dc01c9b2f52bd5ee" category="list-text">.NET Framework 8.0.5</block>
   <block id="21624173efc06090951170116cd13563" category="list-text">PAM-DEVEL</block>
   <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="list-text">PowerShell</block>
   <block id="6e3da1e6c4de3ddc55b5442f3d8fbf10" category="summary">您可以在Linux主机上安装SnapCenter服务器。</block>
@@ -8714,9 +8708,7 @@ destination</block>
   <block id="b0ca30368b247fa738c8bdba36dd4d73" category="paragraph">默认的NET。 适用于Windows的插件使用TCP端口连接到Exchange VSS回调。</block>
   <block id="accc958f08cd768c04d4e40292acd632" category="paragraph">要自定义端口，请参见 <block ref="db95a9150e60a9ea9da8200975d83e74" category="inline-link-macro-rx"></block>。</block>
   <block id="cc0974b8a511f2e4b4d021cda6e5e820" category="paragraph">NetApp支持的SnapCenter插件</block>
-  <block id="77e6d1d743590f1944df090df04f64fb" category="list-text">ASP。 NET Core托管包(8.0.5或更高版本)</block>
   <block id="628b02e3b9750945ce37b6d84682cd2b" category="paragraph">+.NET Framework 8.0.5功能+</block>
-  <block id="aaf9b73d8f0e71b5b8ed41944e56091d" category="list-text">ASP.NET 8.0.5</block>
   <block id="7eaa993723e57b3bfc99923c196e2e17" category="list-text">Rabbitmq</block>
   <block id="6905661e5d7f8f3e6a4faffbbab0f627" category="cell">Windows主机要求</block>
   <block id="e7074f744b12e993cbdc6c77ee980b3e" category="list-text">Red Hat Enterprise Linux (RHEL) 8和9</block>
@@ -8726,7 +8718,6 @@ destination</block>
   <block id="9f101c0e6e5929a04c9e7663fdf91eda" category="paragraph">15 GB</block>
   <block id="d6874413f4fac004d1cb83f02eccc33c" category="admonition">注意：如果 SnapCenter 服务器位于安装 SnapCenter 存储库的同一驱动器中，则建议具有 15 GB 。</block>
   <block id="4c6ec01f6ae03e08c146fe6865423a4b" category="list-text">PowerShell 7.4.2或更高版本</block>
-  <block id="43e185b7580feec0acd79569efc4e099" category="list-text">ASP。 NET Core Runtime 8.0.5或更高版本</block>
   <block id="149d1be25c7d76696b875863179ac66d" category="list-text">NGINX是一个可用作反向代理的Web服务器</block>
   <block id="6d4ed4face9b51c5caae12208e47fa1e" category="paragraph">PAM (可插拔鉴定模块)是一个系统安全工具，它允许系统管理员设置鉴定策略，而不必重新编译执行鉴定的程序。</block>
   <block id="e49b0f86241cddbd59f6488d104741df" category="list-text">Chrome 125及更高版本</block>
@@ -8786,7 +8777,6 @@ destination</block>
   <block id="7e5dacddaaa8672290ea4564cf1c41ad" category="paragraph">如果未选中跳过预检复选框、则会对主机进行验证、以确认主机是否满足安装插件的要求。 磁盘空间、RAM、PowerShell版本。 根据最低要求验证了NET版本、位置(对于Windows插件)和Java 11 (对于Windows和Linux插件)。如果不满足最低要求，则会显示相应的错误或警告消息。</block>
   <block id="0fcc0f3a2dace0457cd9db71bb8bfef8" category="list-text">对于Windows插件、安装和升级日志位于：_C：\Windows\SnapCenter plugin\Install_Windows\&lt;JOBID&gt;</block>
   <block id="4921a99bb14e7c74ffbcbc45df56f359" category="list-text">对于Linux插件、安装日志位于：/var//opt/snapcCenter/logs/SnapCenter_Linux_Host_Plug-in Install_Linux.log &lt;JOBID&gt;、升级日志位于：/var//opt/snapcCenter/logs/SnapCenter_Linux_Host_Plug-in Upgrade_Linux.log &lt;JOBID&gt;</block>
-  <block id="0a14114e3ff4a5d760adcf058a9a4579" category="paragraph">如果要升级到SnapCenter 6.0版、现有的DB2基于Perl的插件将从远程插件服务器上卸载。</block>
   <block id="f55d81a07e6e0581f3e19eff0a932069" category="summary">某些DB2实例不支持自动发现。您必须手动添加这些资源。</block>
   <block id="48f6b76a211d0c32945a6f4c2a082f3c" category="paragraph">Windows主机不支持自动发现。必须手动添加DB2实例和数据库资源。</block>
   <block id="66fe54fa4e213e520e33fab0de4829f3" category="list-text">您必须已完成安装SnapCenter服务器、添加主机和设置存储系统连接等任务。</block>
@@ -9049,7 +9039,6 @@ destination</block>
   <block id="5960f7331fcbdec5c21642b1d51cc972" category="list-text">适用于MySQL的SnapCenter插件不支持自动发现驻留在RDM/VMDK虚拟环境中的资源。您必须在手动添加数据库时为虚拟环境提供存储信息。</block>
   <block id="d6e5affbef5f3cc4e984ce8bcf594a94" category="list-text">在左侧导航窗格中，单击*Resoles*，然后从列表中选择适用于MySQL的插件。</block>
   <block id="f09ef27e0279c131a669a6a13b1cbb6a" category="admonition">如果在SnapCenter外部重命名实例、则必须刷新资源。</block>
-  <block id="533bfd13df04fd1382b86a2d79550e09" category="list-text">Dotnet核心8.0.5</block>
   <block id="abb388d4926d485f81269db2a3f0891f" category="summary">SnapCenter在存储系统和文件系统级别以及MySQL备份目录中管理日志和数据备份的内务管理。</block>
   <block id="62fded2795270fcd11011954ceeb813b" category="doc">SnapCenter如何管理日志备份的内务管理</block>
   <block id="a44bea300ebfa8b4240129a005791668" category="doc">如何使用资源、资源组和策略来保护MySQL</block>
@@ -9803,7 +9792,6 @@ destination</block>
   <block id="31152c60a83a3da780e5073389e4b747" category="inline-image-macro">从资源组添加策略</block>
   <block id="80594268749f867035de9885db91d7c7" category="list-text">在为选定策略配置计划部分中、单击 <block ref="fb07bcf88c7c1b46f6236382e5e0ff22" category="inline-image-macro-rx" type="image"></block> 要配置计划的策略的配置计划列。</block>
   <block id="583e42a8940ae8003094ff152460e62b" category="inline-link">《SnapCenter软件6.0 6.0.1发行说明》</block>
-  <block id="5c515af353439e417dd1d3ff4a8a8714" category="paragraph">有关详细信息，请参见<block ref="96c6a9ad961cdb98d787b7b13bc5a289" category="inline-link-rx"></block>。</block>
   <block id="4d6b1749d463347a1b3df01a9e8b0ea5" category="list-text">在启动升级操作之前，如果已手动将服务器主机置于维护模式，则在升级后，您需要通过单击*hosts*&gt;*Activate Schedule *手动将服务器主机退出维护模式。</block>
   <block id="490e9071957ca8b80f7019e9cb2a8b99" category="list-text">您应在服务器主机上执行全新资源发现。</block>
   <block id="06eee3caed57cb295b8ae731bc4b8dce" category="paragraph">如果服务器主机的状态显示为已停止、您可以等待一段时间、然后执行全新发现。您还可以将 * HostRefreshInterval* 参数的值（默认值为 3600 秒）更改为 10 分钟以上的任何值。</block>
@@ -9944,4 +9932,67 @@ destination</block>
   <block id="33e8da2f20646df222fc0acf35201fe4" category="sidebar">备份自定义插件资源</block>
   <block id="8ffa4ba0dd2df5995fd397c72a149679" category="sidebar">备份各个自定义插件资源</block>
   <block id="e734e6e2e702d38ebab6ed3c050a5e72" category="sidebar">克隆自定义插件资源备份</block>
+  <block id="305e2d6826371134136661ce4869e554" category="list-text">以8.0.5开头的.NET核心、包括所有后续的.NET 8修补程序</block>
+  <block id="52498505b3fc927f491c9b006eecae92" category="list-text">以8.0.5开头的.NET Framework、包括所有后续的.NET 8修补程序</block>
+  <block id="76ab71a79937e997e9cf1c7dc354e025" category="list-text">以8.0.5开头的ASP.NET核心托管包、包括所有后续.NET 8修补程序</block>
+  <block id="3728d48973e3d053d0a862af7bf6c785" category="list-text">以8.0.5开头的ASP.NET、包括所有后续的.NET 8修补程序</block>
+  <block id="c1de3dacba751659ff9e6c8833e5f903" category="list-text">从8.0.5开始的ASP.NET核心运行时、包括所有后续的.NET 8修补程序</block>
+  <block id="881a29d62175189b1872a856fce933da" category="paragraph">您可以使用 SnapCenter 通过数据库备份克隆 Oracle 数据库。创建的克隆为厚克隆、并在父容量池上创建。</block>
+  <block id="57507899dd312cf4de9c076e90990d6a" category="paragraph">您可以使用SnapCenter通过数据库备份克隆SAP HANA数据库。创建的克隆为厚克隆、并在父容量池上创建。</block>
+  <block id="73c291e6ad930a577bf1c1d0267ecd80" category="paragraph">您可以使用SnapCenter通过数据库备份克隆SQL数据库。创建的克隆为厚克隆、并在父容量池上创建。</block>
+  <block id="c606038e9f060e87fd33c813592804d3" category="list-text">不支持克隆拆分。</block>
+  <block id="30d32a0f164bac6778a1be0b6bbad3d1" category="paragraph">选择您创建的凭据名称或创建新凭据。凭据必须对远程主机具有管理权限。有关详细信息，请参见有关创建凭据的信息。</block>
+  <block id="0d09fd1c49f1d2d9fdc72b9e6af179ff" category="paragraph">如果要升级到SnapCenter 6.0或更高版本、现有的DB2基于Perl的插件将从远程插件服务器上卸载。</block>
+  <block id="8bd5c68a1ade9c22f98424902eb6b969" category="admonition">不支持DB2 pureScale环境和DB2多节点(DPF)系统。</block>
+  <block id="2d2b303d961d395bd777f5532d182df1" category="list-text">从8.0.5开始的网络核心、包括所有后续的.NET 8修补程序</block>
+  <block id="d26271179537201ce6d4270b088e3629" category="paragraph">了解SnapCenter 6.0和6.0.0中提供的新增功能和增强功能。</block>
+  <block id="e26065304cca26ac94a12ba286943668" category="inline-link-macro">6.0.1 6.0.1中的新增功能</block>
+  <block id="1389d6b3bba6a06a7cec4120c31b52b7" category="inline-link-macro">SnapCenter 6.0中的新增功能</block>
+  <block id="a63ea5d9f72525ae37d941e9bc5ecbc7" category="paragraph">有关新增功能和增强功能的完整列表，请参见<block ref="2b7c5d00a49e44d91d9f881dc992a4a5" category="inline-link-macro-rx"></block>和<block ref="e9409363ebf38833c42f0fa2ec48a387" category="inline-link-macro-rx"></block>。</block>
+  <block id="e9d4ea3f0c1b4cd9e879f1519fb60c79" category="paragraph">有关已知问题、限制、已修复问题以及新增命令和更改命令的详细信息，请参见<block ref="96c6a9ad961cdb98d787b7b13bc5a289" category="inline-link-rx"></block>。您必须使用NetApp帐户登录或创建帐户才能访问发行说明。</block>
+  <block id="89f4d38108821acdbf6cd6b780454397" category="summary">SnapCenter支持的升级路径。</block>
+  <block id="5097f966477870c178d6885558d88ef0" category="doc">SnapCenter支持的升级路径</block>
+  <block id="917e552e8290664f15e1332b2d723ec0" category="paragraph">升级路径有助于您了解可以从哪些早期版本的SnapCenter升级到最新版本的SnapCenter以及支持哪些版本的插件。</block>
+  <block id="ab3e1b5fbcd7c46009ad34f096e65d30" category="admonition">例如、如果您使用的是SnapCenter 4.9版、并希望升级到6.0.0、则应先升级到5.0、然后再滚动升级到6.0.0。</block>
+  <block id="430bb58f6ef28c742787a646394cc85d" category="summary">SnapCenter软件6.0版包括几项新功能和增强功能。</block>
+  <block id="c93a09afa54abf05ddd4770e3b2343a1" category="doc">SnapCenter软件6.0中的新增功能</block>
+  <block id="5864c825e06c8214939d2a9d0894bf16" category="inline-link-macro">支持企业级工作负载插件并支持NetApp</block>
+  <block id="b378547eb64b7be3e2ffe67d84149895" category="cell"><block ref="b378547eb64b7be3e2ffe67d84149895" category="inline-link-macro-rx"></block></block>
+  <block id="3be8c0bcb79f27206e60c05521a2483c" category="paragraph">SnapCenter提供了一些插件来管理PostgreSQL、MySQL和IBM DB2等工作负载。您可以自动发现、备份、还原、挂载和克隆工作负载。</block>
+  <block id="1fa76ac55ad0967716ac4dfee12b4407" category="paragraph">SnapCenter还提供了一些插件来管理SAP ASE、SAP MaxDB、MongoDB、Oracle应用程序和ONTAP存储等工作负载。您可以备份、还原和克隆工作负载。</block>
+  <block id="2e267d83f08284f9047134b3c074b19b" category="inline-link-macro">支持在云和内部工作负载中使用Linux版本的SnapCenter</block>
+  <block id="ca5b1ab4090623818a4fec6b963d13f9" category="cell"><block ref="ca5b1ab4090623818a4fec6b963d13f9" category="inline-link-macro-rx"></block></block>
+  <block id="7daff1874dce5a11aba2586028b0c18f" category="list-text">支持Azure NetApp Files、Amazon FSx for NetApp ONTAP、Cloud Volumes ONTAP和ONTAP存储。</block>
+  <block id="762100fcdd1477c85af12beef8cd62c3" category="list-text">适用于Red Hat Enterprise Linux (RHEL)、Oracle Linux和SUSE Linux Enterprise Server (SLES)等Linux模式的单独二进制文件。</block>
+  <block id="13600e1a28d7c26b057fc84f30416618" category="list-text">支持SAP HANA、Oracle、IBM DB2、SAP ASE、SAP MaxDB等经典数据库。</block>
+  <block id="1dbcbbe14ef1a2328b3e7e8b86a02d30" category="list-text">支持PostgreSQL、MySQL和MongoDB等现代工作负载。</block>
+  <block id="42e9bb4040dfb564c8bc793490bd7ba6" category="list-text">支持用于ONTAP卷和Linux文件系统的插件、用于保护任何不受支持的或自行开发的应用程序。</block>
+  <block id="95c6ebe4e9f4b874b3476bd9c75d257b" category="inline-link-macro">支持SnapMirror活动同步</block>
+  <block id="8440547858789da7c3b2feb37f16cb25" category="cell"><block ref="8440547858789da7c3b2feb37f16cb25" category="inline-link-macro-rx"></block></block>
+  <block id="d318b0578f25b54d744e21d30b035e8a" category="paragraph">能够无缝备份、还原和克隆SAN工作负载(数据库和VMware VM)、这些工作负载配置用于透明的应用程序故障转移和业务连续性。</block>
+  <block id="e030f85ea3742a8498cd3f4ce5f26a2f" category="inline-link-macro">通过SMB3支持Microsoft SQL Server</block>
+  <block id="c550e496e988fba14212cef600247fed" category="cell"><block ref="c550e496e988fba14212cef600247fed" category="inline-link-macro-rx"></block></block>
+  <block id="661984b66e3a7f72fbbda59c35c7aa92" category="paragraph">现在、在ONTAP、Azure NetApp Files、Amazon FSx for NetApp ONTAP和ONTAP云卷中基于SMB3协议部署的Microsoft SQL Server数据库可以使用SnapCenter进行保护。</block>
+  <block id="534b29f3d774d1d19d1dc1030cdc4b3d" category="inline-link-macro">支持NVMe/TCP</block>
+  <block id="98d7af4aa50fe1e0cd7013f44cc2cebc" category="cell"><block ref="98d7af4aa50fe1e0cd7013f44cc2cebc" category="inline-link-macro-rx"></block></block>
+  <block id="6b4fa7a607a45ee2985d38d057ed95a1" category="paragraph">如果要将关键工作负载迁移到NVMe/TCP以提高性能、则可以使用SnapCenter备份和恢复应用程序和文件系统。</block>
+  <block id="64727e12025200ba369f3ba7c0682081" category="cell">支持VMware vvol</block>
+  <block id="8717c0ac7cfbe6d918d19dd574d63e73" category="paragraph">如果您已在VMware vvol上部署数据库和文件系统、则可以使用SnapCenter对其进行保护。</block>
+  <block id="180a2e8c671bfb57b670570970b59480" category="summary">6.0.1版本的SnapCenter软件包括多项新功能和增强功能。</block>
+  <block id="f5db6e0b0a7608b32dd00dbb85353e53" category="doc">SnapCenter 6.0.1中的新增功能</block>
+  <block id="0ee351a583abf7baa869129519adaddb" category="inline-link-macro">支持Azure NetApp Files备份</block>
+  <block id="62c2d7366772786ca345ac877bf79c4a" category="cell"><block ref="62c2d7366772786ca345ac877bf79c4a" category="inline-link-macro-rx"></block></block>
+  <block id="4cc6d2996939fe7970c652728017b3e9" category="paragraph">SnapCenter支持Azure NetApp Files备份功能、该功能可通过为长期恢复、归档和合规性提供完全托管的备份解决方案来扩展Azure NetApp Files的数据保护功能。</block>
+  <block id="f47390dbd7bff67c8e4d16001f8c4395" category="inline-link-macro">支持在Linux上运行的SnapCenter的高可用性</block>
+  <block id="fa7aa08aceadadc58383fc01281330d1" category="cell"><block ref="fa7aa08aceadadc58383fc01281330d1" category="inline-link-macro-rx"></block></block>
+  <block id="8951fc15a429c65f620e89da09c5240e" category="paragraph">在Windows或Linux上运行的SnapCenter中配置高可用性、可以使用F5负载平衡器、Microsoft网络负载平衡(NLB)、Amazon Web Services (AWS) El生 性负载平衡(ELB)或Azure负载平衡器。</block>
+  <block id="1810fc343d328f63ca20580898910abc" category="inline-link-macro">支持管理计划的备份作业</block>
+  <block id="a9e5aa37b3dc50c95040bd19f911000b" category="cell"><block ref="a9e5aa37b3dc50c95040bd19f911000b" category="inline-link-macro-rx"></block></block>
+  <block id="6775f2c837a6e0d211c88415495a3ca3" category="paragraph">用于为可在任意给定时间运行的计划作业数设置阈值。这样、您可以根据系统硬件配置控制要运行的备份数量。</block>
+  <block id="6c1303e3667436380323a8f91aeeb3b1" category="inline-link-macro">支持管理陈旧作业</block>
+  <block id="0f16714fed95f3a4b2ef5ba9724d3658" category="cell"><block ref="0f16714fed95f3a4b2ef5ba9724d3658" category="inline-link-macro-rx"></block></block>
+  <block id="4b6d2450b6badef80cca9ba40b34bd88" category="paragraph">允许您清除滞留72小时以上的陈旧作业。</block>
+  <block id="70e43ac38d4ee9a77d2476513c883d81" category="cell">支持AIX上的IBM DB2、Oracle应用程序和存储插件</block>
+  <block id="9b37c223b27baf9481210cc34272107f" category="paragraph">支持对AIX上的IBM DB2、Oracle应用程序和存储插件进行数据保护</block>
+  <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">发行说明</block>
 </blocks>

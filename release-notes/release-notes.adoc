@@ -1,0 +1,18 @@
+---
+permalink: release-notes/release-notes.html 
+sidebar: sidebar 
+keywords: release notes, snapcenter 
+summary: 提供有关此版本的 SnapCenter 服务器和 SnapCenter 插件软件包的重要信息，包括已修复的问题，已知问题，注意事项和限制。 
+---
+= 发行说明
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解SnapCenter 6.0和6.0.0中提供的新增功能和增强功能。
+
+有关新增功能和增强功能的完整列表，请参见link:what's-new-in-snapcenter601.html["6.0.1 6.0.1中的新增功能"]和link:what's-new-in-snapcenter60.html["SnapCenter 6.0中的新增功能"]。
+
+有关已知问题、限制、已修复问题以及新增命令和更改命令的详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468["《SnapCenter软件6.0 6.0.1发行说明》"^]。您必须使用NetApp帐户登录或创建帐户才能访问发行说明。

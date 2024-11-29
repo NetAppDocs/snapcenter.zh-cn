@@ -19,6 +19,9 @@ summary: 适用于IBM DB2的SnapCenter插件是NetApp SnapCenter软件的主机�
 
 SnapCenter支持单实例和多实例DB2设置。您可以在Linux和Windows环境中使用适用于IBM DB2数据库的插件。在Windows环境中、DB2将作为手动资源受支持。
 
+
+NOTE: 不支持DB2 pureScale环境和DB2多节点(DPF)系统。
+
 安装适用于IBM DB2数据库的插件后、您可以使用采用NetApp SnapMirror技术的SnapCenter在另一个卷上创建备份集的镜像副本。您还可以使用采用 NetApp SnapVault 技术的插件执行磁盘到磁盘备份复制，以满足标准要求。
 
 适用于DB2的SnapCenter插件支持基于ONTAP和Azure NetApp文件存储布局的NFS和SAN。

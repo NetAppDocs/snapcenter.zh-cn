@@ -63,7 +63,7 @@ Web 服务器
 +
 ** .NET 可扩展性 4.5
 ** 应用程序初始化
-** ASP。 NET Core托管包(8.0.5或更高版本)
+** 以8.0.5开头的ASP.NET核心托管包、包括所有后续.NET 8修补程序
 ** 服务器端包括
 ** WebSocket 协议
 
@@ -89,8 +89,8 @@ IIS 管理脚本和工具
  a| 
 +.NET Framework 8.0.5功能+
  a| 
-* .NET Framework 8.0.5
-* ASP.NET 8.0.5
+* 以8.0.5开头的.NET Framework、包括所有后续的.NET 8修补程序
+* 以8.0.5开头的ASP.NET、包括所有后续的.NET 8修补程序
 * Windows Communication Foundation （ WCF ） HTTP 激活 45
 +
 ** TCP 激活

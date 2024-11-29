@@ -83,13 +83,13 @@ NOTE: 注意：如果 SnapCenter 服务器位于安装 SnapCenter 存储库的�
 所需的软件包
  a| 
 * Microsoft .NET Framework 4.7.2或更高版本
-* ASP。 NET Core托管包(8.0.5或更高版本)
+* 以8.0.5开头的ASP.NET核心托管包、包括所有后续.NET 8修补程序
 * PowerShell 7.4.2或更高版本
 
 
 有关.NET专用的故障排除信息、请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["对于没有Internet连接的原有系统、SnapCenter 升级或安装失败"^]。
  a| 
-* ASP。 NET Core Runtime 8.0.5或更高版本
+* 从8.0.5开始的ASP.NET核心运行时、包括所有后续的.NET 8修补程序
 * PowerShell 7.4.2或更高版本
 * NGINX是一个可用作反向代理的Web服务器
 * PAM-DEVEL

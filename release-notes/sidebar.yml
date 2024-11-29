@@ -1,0 +1,12 @@
+---
+section: release-notes
+title: 发行说明
+entries:
+- title: 发行说明
+  url: "/release-notes/release-notes.html"
+- title: 6.0.1 6.0.1中的新增功能
+  url: "/release-notes/what's-new-in-snapcenter601.html"
+- title: SnapCenter 6.0中的新增功能
+  url: "/release-notes/what's-new-in-snapcenter60.html"
+- title: SnapCenter支持的升级路径
+  url: "/release-notes/upgrade-path.html"

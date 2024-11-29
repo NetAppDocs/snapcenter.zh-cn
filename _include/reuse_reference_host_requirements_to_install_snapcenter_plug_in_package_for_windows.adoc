@@ -37,7 +37,7 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
  a| 
 所需的软件包
  a| 
-* (英文)。 NET核心8.0.5
+* 以8.0.5开头的.NET核心、包括所有后续的.NET 8修补程序
 * PowerShell核心7.4.2
 * Java 11 Oracle Java和OpenJDK
 

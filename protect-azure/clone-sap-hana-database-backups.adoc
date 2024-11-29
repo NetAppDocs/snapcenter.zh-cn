@@ -11,7 +11,7 @@ summary: 您可以使用 SnapCenter 克隆备份。
 
 
 [role="lead"]
-您可以使用 SnapCenter 克隆备份。
+您可以使用SnapCenter通过数据库备份克隆SAP HANA数据库。创建的克隆为厚克隆、并在父容量池上创建。
 
 .步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
