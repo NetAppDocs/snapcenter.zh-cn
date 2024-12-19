@@ -252,11 +252,11 @@ NOTE: 您必须对主机上的每个配置文件运行 SMO 凭据集命令。
 *** `smsap credential set -repository -dbname repository_database_name -host host_name -port port_number -login -username user_name_for_repository_database`
 *** `smsap profile sync -repository -dbname repository_database_name -host host_name -port port_number -login -username host_user_name_for_repository_database`
 *** `smsap credential set -profile -name profile_name`
-
-
 +
 
 NOTE: 您必须对主机上的每个配置文件运行 smsap credential set 命令。
+
+
 
 
 

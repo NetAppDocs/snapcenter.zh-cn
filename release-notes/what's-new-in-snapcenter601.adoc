@@ -18,26 +18,33 @@ summary: 6.0.1版本的SnapCenter软件包括多项新功能和增强功能。
 
 
 | link:https://docs.netapp.com/us-en/snapcenter/protect-azure/protect-applications-azure-netapp-files.html["支持Azure NetApp Files备份"]  a| 
-SnapCenter支持Azure NetApp Files备份功能、该功能可通过为长期恢复、归档和合规性提供完全托管的备份解决方案来扩展Azure NetApp Files的数据保护功能。
+现在、您可以使用SnapCenter将驻留在Azure NetApp Files上的应用程序备份和克隆到Azure Blb存储(对象存储)。
 
 
 
 | link:https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["支持在Linux上运行的SnapCenter的高可用性"]  a| 
-在Windows或Linux上运行的SnapCenter中配置高可用性、可以使用F5负载平衡器、Microsoft网络负载平衡(NLB)、Amazon Web Services (AWS) El生 性负载平衡(ELB)或Azure负载平衡器。
+现在、对SnapCenter HA配置的支持已扩展到Linux系统。您可以在此配置中使用标准负载平衡器：
+
+* F5负载平衡器
+* Microsoft网络负载平衡(NLB)
+* Amazon Web Services （ AWS ）
+* 弹性负载平衡(ELB)
+* Azure负载平衡器
 
 
 
-| link:https://docs.netapp.com/us-en/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-scheduled-backup-jobs["支持管理计划的备份作业"]  a| 
-用于为可在任意给定时间运行的计划作业数设置阈值。这样、您可以根据系统硬件配置控制要运行的备份数量。
+
+| link:https://docs.netapp.com/us-en/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-scheduled-backup-jobs["能够管理计划的备份作业"]  a| 
+现在、您可以根据系统硬件配置为计划的作业设置一个阈值、以控制要在任何给定时间运行的备份数量。
 
 
 
-| link:https://docs.netapp.com/us-en/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-stale-jobs["支持管理陈旧作业"]  a| 
-允许您清除滞留72小时以上的陈旧作业。
+| link:https://docs.netapp.com/us-en/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-stale-jobs["能够管理陈旧作业"]  a| 
+现在、您可以设置一个预定义的计划来清除滞留72小时以上的陈旧作业。
 
 
 
-| 支持AIX上的IBM DB2、Oracle应用程序和存储插件  a| 
-支持对AIX上的IBM DB2、Oracle应用程序和存储插件进行数据保护
+| 在AIX上运行的IBM DB2、Oracle应用程序和存储插件包含数据保护功能  a| 
+支持对AIX上运行的IBM DB2、Oracle应用程序和存储插件进行数据保护。
 
 |===

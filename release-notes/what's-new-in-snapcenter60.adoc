@@ -25,6 +25,8 @@ SnapCenter还提供了一些插件来管理SAP ASE、SAP MaxDB、MongoDB、Oracl
 
 
 | link:https://docs.netapp.com/us-en/snapcenter/install/install_snapcenter_server_linux.html["支持在云和内部工作负载中使用Linux版本的SnapCenter"]  a| 
+现在、可以为Red Hat Enterprise Linux (RHEL)、Oracle Linux和SUSE Linux Enterprise Server (SLES)等Linux模式提供单独的SnapCenter二进制文件。
+
 * 支持Azure NetApp Files、Amazon FSx for NetApp ONTAP、Cloud Volumes ONTAP和ONTAP存储。
 * 适用于Red Hat Enterprise Linux (RHEL)、Oracle Linux和SUSE Linux Enterprise Server (SLES)等Linux模式的单独二进制文件。
 * 支持SAP HANA、Oracle、IBM DB2、SAP ASE、SAP MaxDB等经典数据库。
@@ -34,22 +36,22 @@ SnapCenter还提供了一些插件来管理SAP ASE、SAP MaxDB、MongoDB、Oracl
 
 
 
-| link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html["支持SnapMirror活动同步"]  a| 
-能够无缝备份、还原和克隆SAN工作负载(数据库和VMware VM)、这些工作负载配置用于透明的应用程序故障转移和业务连续性。
+| link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html["支持SnapMirror主动同步"]  a| 
+现在、您可以使用SnapCenter配置SnapMirror主动同步功能、并有效地备份、还原和克隆数据库和VMware VM的SAN工作负载。这样可以确保透明的应用程序故障转移和业务连续性。
 
 
 
 | link:https://docs.netapp.com/us-en/snapcenter/install/concept_create_and_manage_smb_shares.html["通过SMB3支持Microsoft SQL Server"]  a| 
-现在、在ONTAP、Azure NetApp Files、Amazon FSx for NetApp ONTAP和ONTAP云卷中基于SMB3协议部署的Microsoft SQL Server数据库可以使用SnapCenter进行保护。
+现在、您可以在ONTAP、Azure NetApp Files、Amazon FSx for NetApp ONTAP和Cloud Volumes ONTAP中使用SnapCenter保护基于SMB3协议部署的Microsoft SQL Server数据库。
 
 
 
 | link:https://docs.netapp.com/us-en/snapcenter/protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html#storage-types-supported-on-linux["支持NVMe/TCP"]  a| 
-如果要将关键工作负载迁移到NVMe/TCP以提高性能、则可以使用SnapCenter备份和恢复应用程序和文件系统。
+SnapCenter现在支持基于TCP协议的NVMe、用于备份和恢复应用程序和文件系统。
 
 
 
-| 支持VMware vvol  a| 
-如果您已在VMware vvol上部署数据库和文件系统、则可以使用SnapCenter对其进行保护。
+| 支持VMware vSphere虚拟卷(vvol)  a| 
+现在、您可以使用保护部署在SnapCenter上的数据库和文件系统。
 
 |===

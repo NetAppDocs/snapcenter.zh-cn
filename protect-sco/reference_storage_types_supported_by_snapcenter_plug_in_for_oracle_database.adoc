@@ -32,7 +32,7 @@ SnapCenter 不支持为 Linux 和 AIX 配置存储。
 * iSCSI 连接的 LUN
 * NFS-connected volumes
 * NVMe-FC
-* NVMe-TCP
+* NVMe/TCP
 
 
 
@@ -46,7 +46,7 @@ VMware ESXi
 
 * iSCSI 启动程序直接连接到子系统的 iSCSI LUN
 * NFS数据存储库上的VMDK
-* VMFS上通过NVMe-TCP创建的VMDK
+* VMFS上通过NVMe/TCP创建的VMDK
 +
 
 NOTE: ESX 8.0U2支持RAC、并支持共享VMDK
