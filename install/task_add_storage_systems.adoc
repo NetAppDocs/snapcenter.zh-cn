@@ -1,7 +1,7 @@
 ---
 permalink: install/task_add_storage_systems.html 
 sidebar: sidebar 
-keywords: add, storage system, SVM 
+keywords: add, storage system, SVM, ASA r2 systems 
 summary: 您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储，以执行数据保护和配置操作。您可以添加一个独立 SVM ，也可以添加一个由多个 SVM 组成的集群。 
 ---
 = 添加存储系统
@@ -11,7 +11,7 @@ summary: 您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储，�
 
 
 [role="lead"]
-您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储或适用于 NetApp ONTAP 的 Amazon FSX ，以执行数据保护和配置操作。
+要执行数据保护和配置操作、您应设置存储系统、使SnapCenter能够访问ONTAP存储、ASA R2系统或Amazon FSx for NetApp ONTAP。
 
 您可以添加一个独立 SVM ，也可以添加一个由多个 SVM 组成的集群。如果您使用的是适用于 NetApp ONTAP 的 Amazon FSX ，则可以使用 fsxadmin 帐户添加由多个 SVM 组成的 FSX 管理 LIF ，也可以在 SnapCenter 中添加 FSX SVM 。
 

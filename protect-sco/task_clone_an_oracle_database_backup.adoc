@@ -40,8 +40,7 @@ NOTE: 在 FlexASM 设置中，如果基数小于 RAC 集群中的节点数，则
 * 对于启用了SnapLock的策略、对于ONTAP 9.12.1及更低版本、如果指定了Snapshot锁定期限、则在还原过程中从防篡改Snapshot创建的克隆将继承SnapLock到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
-* 步骤 *
-
+.步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。
 . 在资源页面中，从 * 视图 * 列表中选择 * 数据库 * 或 * 资源组 * 。
 . 从数据库详细信息视图或资源组详细信息视图中选择数据库。
@@ -207,7 +206,7 @@ Oracle 主目录，用户名和组详细信息会自动从源数据库中填充�
 
 .. 在 Database parameter settings 部分中，修改用于初始化数据库的预先填充的数据库参数值。
 +
-您可以单击 * 来添加其他参数image:../media/add_policy_from_resourcegroup.gif[""]*
+您可以单击**来添加其他参数image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 
 +
 如果您使用的是 Oracle 标准版，并且数据库以归档日志模式运行，或者您希望从归档重做日志还原数据库，请添加参数并指定路径。
@@ -355,4 +354,30 @@ NOTE: 如果在克隆期间未执行恢复，则克隆的数据库的备份可�
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["还原或克隆失败，并显示 ORA-00308 错误消息"^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_recover_a_cloned_database["无法恢复克隆的数据库"^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["可自定义的参数，用于在 AIX 系统上执行备份，还原和克隆操作"^]
+
+
+
+
+== 更新主机上的首选IP
+
+克隆操作完成后、存储访问层()为克隆提供的路径将采用_SAL <nfs_lif_IP>：<JunctionPath>_格式。要提供首选IP、必须在主机上使用sccli命令进行配置。
+
+.步骤
+. 登录到数据库主机。
+. 为指定用户启动与SnapCenter的PowerShell连接会话。
++
+open-smConnection
+
+. 创建空文件。
++
+轻触SnapCenter /var//opt/scU//etc/storagepreference.properties
+
+. 为SVM配置首选数据LIF。
++
+Add-SvmPreferredDataPath -SVM <SVM Name>-DataPath <IP address or FQDN>
+
+. 验证首选路径。
++
+获取SvmPreferredDataPath
+
 

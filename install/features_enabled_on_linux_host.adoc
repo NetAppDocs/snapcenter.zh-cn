@@ -16,7 +16,7 @@ SnapCenter服务器会安装以下软件包、这些软件包可能适合进行�
 * Rabbitmq
 * nginx
 * Erlang
-* 以8.0.5开头的.NET Framework、包括所有后续的.NET 8修补程序
+* .NET 8.0.12 (以及所有后续的8.0.x修补程序)
 * PAM-DEVEL
 * PowerShell
 

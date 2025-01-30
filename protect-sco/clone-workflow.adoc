@@ -22,4 +22,4 @@ summary: 克隆工作流包括规划，执行克隆操作以及监控操作。
 
 以下工作流显示了必须执行克隆操作的顺序：
 
-image::../media/sco_scc_wfs_clone_workflow.png[克隆工作流]
+image::../media/sco_scc_wfs_clone_workflow.gif[克隆工作流]

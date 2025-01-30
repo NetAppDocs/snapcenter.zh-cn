@@ -102,6 +102,8 @@ entries:
     url: "/protect-db2/create-backup-policies-for-ibm-db2.html"
   - title: 创建资源组并附加策略
     url: "/protect-db2/create-resource-groups-and-attach-policies.html"
+  - title: 创建资源组并为ASA R2系统上的IBM DB2资源启用二级保护
+    url: "/protect-db2/create-resource-groups-secondary-protection-for-asa-r2-db2-resources.html"
   - title: 使用适用于IBM DB2的PowerShell cmdlet创建存储系统连接和凭据
     url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
   - title: 备份DB2数据库

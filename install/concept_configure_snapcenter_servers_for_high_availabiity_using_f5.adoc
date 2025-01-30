@@ -13,7 +13,7 @@ summary: 使用F5、网络负载平衡或Amazon Web Services在SnapCenter中配�
 [role="lead"]
 要在Windows或Linux上运行的SnapCenter中支持高可用性(HA)、您可以安装F5负载平衡器。F5 允许 SnapCenter 服务器在最多两个位于同一位置的主机中支持主动 - 被动配置。要在 SnapCenter 中使用 F5 负载平衡器，您应配置 SnapCenter 服务器并配置 F5 负载平衡器。
 
-您还可以配置Microsoft网络负载平衡(NLB)以设置SnapCenter高可用性。您应在SnapCenter安装之外手动配置NLB以实现高可用性。
+您还可以配置网络负载平衡(NLB)以设置SnapCenter高可用性。您应在SnapCenter安装之外手动配置NLB以实现高可用性。
 
 对于云环境、您可以使用Amazon Web Services (AWS) Elapic Load Belligence (ELB)和Azure负载平衡器配置高可用性。
 
@@ -23,7 +23,7 @@ summary: 使用F5、网络负载平衡或Amazon Web Services在SnapCenter中配�
 --
 此工作流图列出了使用 F5 负载平衡器配置 SnapCenter 服务器以实现高可用性的步骤。有关详细说明，请参阅 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["如何使用 F5 负载平衡器配置 SnapCenter 服务器以实现高可用性"^]。
 
-image::../media/sc-F5-configure-workflow.png[使用F5进行HA配置]
+image::../media/sc-F5-configure-workflow.gif[F5 配置工作流]
 
 您必须是 SnapCenter 服务器上本地管理员组的成员（除了分配给 SnapCenterAdmin 角色之外），才能使用以下 cmdlet 添加和删除 F5 集群：
 
@@ -47,7 +47,7 @@ image::../media/sc-F5-configure-workflow.png[使用F5进行HA配置]
 --
 .使用网络负载平衡(NLB)配置高可用性
 --
-您可以配置 Microsoft 网络负载平衡（ NLB ）以设置 SnapCenter 高可用性。您应在SnapCenter安装之外手动配置NLB以实现高可用性。
+您可以配置网络负载平衡(NLB)来设置SnapCenter高可用性。您应在SnapCenter安装之外手动配置NLB以实现高可用性。
 
 有关如何使用SnapCenter配置网络负载平衡(NLB)的信息，请参阅 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_NLB_and_ARR_with_SnapCenter["如何使用 SnapCenter 配置 NLB"^]。
 

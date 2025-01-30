@@ -44,12 +44,12 @@ IMPORTANT: 如果您在 Windows 文件系统环境中工作，请勿备份数据
 您可以选择任何现有策略，然后单击 * 详细信息 * 以确定是否可以使用该策略。
 
 +
-如果没有符合要求的现有策略、您可以复制并修改现有策略、也可以通过单击启动策略向导来创建新策略 image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"] 。
+如果没有符合要求的现有策略、您可以复制并修改现有策略、也可以通过单击启动策略向导来创建新策略 image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"] 。如果没有符合要求的现有策略、您可以复制并修改现有策略、也可以通过单击启动策略向导来创建新策略 image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"] 。
 
 +
 选定策略将在为选定策略配置计划部分的策略列中列出。
 
-.. 在为选定策略配置计划部分中、单击 image:../media/add_policy_from_resourcegroup.gif["从资源组添加策略"] 要配置计划的策略的配置计划列。
+.. 在为选定策略配置计划部分中、单击 image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"] 要配置计划的策略的配置计划列。
 .. 在添加策略 _policy_name_ 的计划对话框中，指定开始日期，到期日期和频率来配置计划，然后单击 * 完成 * 。
 +
 已配置的计划将列在为选定策略配置计划部分的已应用计划列中。

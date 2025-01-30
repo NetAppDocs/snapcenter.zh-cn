@@ -15,7 +15,7 @@ summary: 您可以为资源（数据库）或资源组创建备份。
 
 以下工作流显示了必须执行备份操作的顺序：
 
-image::../media/sco_backup_workflow.png[Oracle 的备份工作流]
+image::../media/sco_backup_workflow.gif[Oracle 的备份工作流]
 
 为Oracle数据库创建备份时、会在Oracle数据库主机上的/var/opt/snapcenter/soc/lock_目录中创建一个操作锁定文件(_.sm_lock_dbsid_)、以避免对数据库执行多个操作。备份数据库后，操作锁定文件将自动删除。
 

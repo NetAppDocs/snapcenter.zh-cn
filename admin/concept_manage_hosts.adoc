@@ -322,7 +322,7 @@ NOTE: 确保插件版本与 SnapCenter 服务器版本相同。
 . 在左侧导航窗格中，单击 * 主机 * 。
 . 在主机页面中，单击 * 受管主机 * 。
 . 在受管主机页面中，选择要启动的主机。
-. 单击，然后单击image:../media/more_icon.gif["更多图标"]*Start Service*或*Restart Service*。
+. 单击 image:../media/more_icon.gif["更多图标"] 图标，然后单击*Start Service*或*Restart Service*。
 +
 您可以同时启动或重新启动多个主机的服务。
 
@@ -342,7 +342,7 @@ NOTE: 您不能在已关闭的主机上暂停计划，因为 SnapCenter 无法�
 . 在左侧导航窗格中，单击 * 主机 * 。
 . 在主机页面中，单击 * 受管主机 * 。
 . 在受管主机页面中，选择要暂停的主机。
-. 单击image:../media/more_icon.gif["更多图标"]，然后单击*挂起 计划*，将此插件的主机置于维护模式。
+. 单击 image:../media/more_icon.gif["更多图标"] 图标，然后单击*暂停计划*将此插件的主机置于维护模式。
 +
 您可以同时暂停多个主机的计划。
 

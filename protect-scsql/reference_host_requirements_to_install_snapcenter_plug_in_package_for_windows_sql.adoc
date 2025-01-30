@@ -46,9 +46,12 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
  a| 
 所需的软件包
  a| 
-* 以8.0.5开头的.NET核心、包括所有后续的.NET 8修补程序
+* ASP.NET Core 8.0.12 (以及所有后续的8.0.x修补程序)托管包
 * PowerShell核心7.4.2
 * Java 11 Oracle Java和OpenJDK
++
+只有SAP HANA、IBM DB2、PostgreSQL、MySQL、NetApp支持的插件以及可以安装在Windows主机上的其他自定义应用程序才需要Java 11 Oracle Java和OpenJDK。
+
 
 
 有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。

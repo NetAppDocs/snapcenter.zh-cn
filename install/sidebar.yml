@@ -14,6 +14,8 @@ entries:
     url: "/install/reference_san_host_requirements.html"
   - title: 支持的存储系统和应用程序
     url: "/install/reference_supported_storage_systems_and_applications.html"
+  - title: 了解如何在SnapCenter中支持ASA R2系统
+    url: "/install/learn-about-supporting-asa-r2-in-snapcenter.html"
   - title: 支持的浏览器
     url: "/install/reference_supported_browsers.html"
   - title: 连接和端口要求
@@ -106,8 +108,12 @@ entries:
     url: "/install/task_add_an_rbac_role_using_security_login_commands.html"
   - title: 创建具有最低权限的 SVM 角色
     url: "/install/create-svm-roles-minimum-privileges.html"
+  - title: 为ASA R2系统创建SVM角色
+    url: "/install/create-svm-roles-asa-r2-resources.html"
   - title: 创建具有最低权限的 ONTAP 集群角色
     url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
+  - title: 为ASA R2系统创建ONTAP集群角色
+    url: "/install/create-cluster-roles-asa-r2-resources.html"
   - title: 配置 IIS 应用程序池以启用 Active Directory 读取权限
     url: "/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html"
 - title: 配置审核日志设置

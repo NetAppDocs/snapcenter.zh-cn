@@ -19,7 +19,7 @@ summary: 在环境中安装适用于 Microsoft SQL Server 的 SnapCenter 插件�
 
 以下工作流显示了必须执行备份操作的顺序：
 
-image::../media/scsql_backup_workflow.png[SCSQL 备份工作流]
+image::../media/scsql_backup_workflow.gif[SCSQL 备份工作流]
 
 
 NOTE: 如果选择非 NetApp LUN ，已损坏的数据库或正在还原的数据库，则 " 资源 " 页面上的 " 立即备份 " ， " 还原 " ， " 管理备份 " 和 " 克隆 " 选项将被禁用。

@@ -68,6 +68,8 @@ entries:
     url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
   - title: 创建资源组
     url: "/protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html"
+  - title: 在ASA R2系统上创建资源组并为Oracle资源启用二级保护
+    url: "/protect-sco/create-resource-groups-secondary-protection-for-asa-r2-oracle-resources.html"
   - title: 备份 Oracle 资源
     url: "/protect-sco/task_back_up_oracle_resources.html"
   - title: 备份资源组

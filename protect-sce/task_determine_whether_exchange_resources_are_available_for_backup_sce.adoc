@@ -39,7 +39,7 @@ summary: 资源是指由您安装的插件维护的数据库和 Exchange 数据�
 所有数据库和 DAG 都以 FQDN 格式显示，并显示其 DAG 或主机名，以便您可以区分多个数据库。
 
 +
-单击 image:../media/filter_icon.png["筛选器图标"] 并选择主机名和 Exchange Server 以筛选资源。然后，您可以单击 image:../media/filter_icon.png["筛选器图标"] 以关闭筛选器窗格。
+单击 image:../media/filter_icon.gif["筛选器图标"] 并选择主机名和Exchange Server以筛选资源。然后、您可以单击 image:../media/filter_icon.gif["筛选器图标"] 以关闭筛选器窗格。
 
 . 单击 * 刷新资源 * 。
 +

@@ -15,4 +15,4 @@ summary: 还原工作流包括规划，执行还原操作和监控操作。
 
 以下工作流显示了必须执行还原操作的顺序：
 
-image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_restore_Workflow]
+image::../media/all_plug_ins_restore_workflow.gif[all_plug-ins_restore_Workflow]

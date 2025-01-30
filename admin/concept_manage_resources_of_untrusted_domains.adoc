@@ -78,5 +78,5 @@ summary: 除了管理 Active Directory \ （ AD\ ）受信任域中的主机之�
 . 在设置页面中，单击 * 全局设置 * 。
 . 在全局设置页面中，单击 * 域设置 * 。
 . 从域列表中，选择要取消注册的域。
-. 单击 image:../media/delete_icon.gif[""]，然后单击 * 确定 * 。
+. 单击，然后单击 image:../media/delete_icon.gif["删除图标"]*OK*。
 

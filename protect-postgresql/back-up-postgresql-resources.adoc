@@ -15,6 +15,6 @@ summary: '您可以为资源\(集群\)或资源组创建备份。备份工作流
 
 以下工作流显示了必须执行备份操作的顺序：
 
-image::../media/db2_backup_workflow.png[PostgreSQL备份工作流]
+image::../media/db2_backup_workflow.gif[PostgreSQL备份工作流]
 
 您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。SnapCenter cmdlet 帮助和 cmdlet 参考信息包含有关 PowerShell cmdlet 的详细信息。https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^](英文)

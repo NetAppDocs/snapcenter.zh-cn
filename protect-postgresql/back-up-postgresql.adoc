@@ -36,7 +36,7 @@ NOTE: 如果命令列表中不存在这些命令、则操作将失败。
 . 在左侧导航窗格中，选择*Resoles*，然后从列表中选择相应的插件。
 . 在资源页面中，根据资源类型从 * 视图 * 下拉列表中筛选资源。
 +
-选择image:../media/filter_icon.png["筛选器图标"]，然后选择主机名和资源类型以筛选资源。然后、您可以选择 image:../media/filter_icon.png["筛选器图标"] 关闭筛选器窗格。
+选择*image:../media/filter_icon.gif["筛选器图标"]、然后选择主机名和资源类型以筛选资源。然后、您可以选择 image:../media/filter_icon.gif["筛选器图标"] 关闭筛选器窗格。
 
 . 选择要备份的资源。
 . 在资源页面中，选择*对Snapshot副本使用自定义名称格式*，然后输入要用于Snapshot名称的自定义名称格式。
@@ -108,12 +108,12 @@ image:../media/application_settings.gif["应用程序设置"]
 .. 从下拉列表中选择一个或多个策略。
 +
 
-NOTE: 您也可以单击 * 来创建策略image:../media/add_policy_from_resourcegroup.gif[""]*
+NOTE: 您也可以单击**来创建策略image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 
 +
 在为选定策略配置计划部分中，将列出选定策略。
 
-.. 选择*image:../media/add_policy_from_resourcegroup.gif[""]* 。
+.. 在配置计划列中、为要配置计划的策略选择*image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 .. 在为policy _policy_name_添加计划对话框中，配置该计划，然后选择*OK*。
 +
 _policy_name_ 是所选策略的名称。

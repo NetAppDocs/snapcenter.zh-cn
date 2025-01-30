@@ -26,6 +26,6 @@ summary: 克隆工作流包括执行克隆操作和监控操作。
 
 以下工作流显示了必须执行克隆操作的顺序：
 
-image::../media/sco_scc_wfs_clone_workflow.png[克隆工作流]
+image::../media/sco_scc_wfs_clone_workflow.gif[克隆工作流]
 
 您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。SnapCenter cmdlet 帮助和 cmdlet 参考信息包含有关 PowerShell cmdlet 的详细信息。

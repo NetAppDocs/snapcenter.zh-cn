@@ -22,9 +22,9 @@ summary: 您必须配置 HDB 用户存储密钥和 HDBSQL 操作系统用户，�
 .步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择适用于 SAP HANA 数据库的 SnapCenter 插件。
 . 在资源页面中，从 * 视图 * 列表中选择资源类型。
-. (可选)单击 image:../media/filter_icon.png["筛选器图标"] 并选择主机名。
+. (可选)单击 image:../media/filter_icon.gif["筛选器图标"] 并选择主机名。
 +
-然后、您可以单击 image:../media/filter_icon.png["筛选器图标"] 以关闭筛选器窗格。
+然后、您可以单击 image:../media/filter_icon.gif["筛选器图标"] 以关闭筛选器窗格。
 
 . 选择数据库，然后单击 * 配置数据库 * 。
 . 在 Configure database settings 部分中，输入 HDB Secure User Store Key 。

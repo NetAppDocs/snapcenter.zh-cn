@@ -64,7 +64,7 @@ Type
 |===
 . 在提供存储占用空间页面中，选择存储类型并选择一个或多个卷、LUN和qtrees，然后单击*Save*。
 +
-可选：您可以单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 图标，用于从其他存储系统添加更多卷， LUN 和 qtree 。
+可选：您可以单击*image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]图标从其他存储系统添加更多卷、LUN和qtrees。
 
 . 可选：在资源设置页面中、输入MySQL插件的自定义键值对。
 . 查看摘要，然后单击 * 完成 * 。

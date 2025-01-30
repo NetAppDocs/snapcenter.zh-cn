@@ -17,7 +17,7 @@ summary: 克隆工作流包括规划，执行克隆操作以及监控操作。
 
 您应执行以下命令来创建 Oracle 数据库克隆规范文件并启动克隆操作。
 
-有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["《 SnapCenter 软件命令参考指南》"^]。
+有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["《 SnapCenter 软件命令参考指南》"^]。
 
 * 步骤 *
 

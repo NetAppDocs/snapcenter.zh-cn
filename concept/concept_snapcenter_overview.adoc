@@ -29,6 +29,7 @@ SnapCenter 既包括 SnapCenter 服务器，也包括单个轻型插件。您可
 ** 位于ONTAP FAS、AFF或全SAN阵列(ASA)主系统上并复制到ONTAP FAS、AFF或ASA二级系统的数据
 ** ONTAP Select 主系统上的数据
 ** 位于ONTAP FAS、AFF或ASA主系统和二级系统上并受本地StorageGRID对象存储保护的数据
+** ONTAP ASA R2主系统和二级系统上的数据
 
 
 * 内部部署在混合云中以保护以下内容：
@@ -89,7 +90,7 @@ SnapCenter 包含 REST API ，可提供与任何业务流程软件集成的大�
 有关Windows cmdlet的详细信息，请参阅 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 +
-有关UNIX命令的详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["《 SnapCenter 软件命令参考指南》"^]。
+有关UNIX命令的详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["《 SnapCenter 软件命令参考指南》"^]。
 
 * 集中式数据保护信息板和报告
 * 基于角色的访问控制（ Role-Based Access Control ， RBAC ），确保安全性和委派。
@@ -111,10 +112,10 @@ SnapCenter 的高可用性使用外部负载平衡器（ F5 ）进行设置。�
 
 * SnapLock
 +
-SnapLock是一款高性能合规性解决方案、适用于使用一次写入、多次读取(Write Unes、Read M众多、WORM)存储以原始形式保留文件以满足合规和监管要求的组织。
+SnapLock是一款高性能合规性解决方案、适用于使用一次写入、多次读取(Write Unes、Read M众多、WORM)存储以原始形式保留文件以满足合规和监管要求的组织。有关SnapLock的详细信息，请参阅 https://docs.netapp.com/us-en/ontap/snaplock/["什么是 SnapLock"]。
 
 +
-有关SnapLock的详细信息、请参见 https://docs.netapp.com/us-en/ontap/snaplock/["什么是 SnapLock"]
+锁定快照可确保它们不会被意外或恶意删除。使用SnapCenter可以指定主快照和二级快照的锁定期限。
 
 * SnapMirror主动同步(最初作为SnapMirror业务连续性[SM-BC)发布)
 +

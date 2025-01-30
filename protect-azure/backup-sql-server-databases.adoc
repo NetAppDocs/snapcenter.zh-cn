@@ -23,7 +23,7 @@ summary: '从"Resourcs"页面备份资源。'
 . 在策略页面中，执行以下步骤：
 +
 .. 从下拉列表中选择一个或多个策略。
-.. 选择*image:../media/add_policy_from_resourcegroup.gif[""]* 。
+.. 在配置计划列中、为要配置计划的策略选择*image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 .. 在为policy _policy_name_添加计划对话框中，配置该计划，然后选择*OK*。
 +
 _policy_name_ 是所选策略的名称。
@@ -34,7 +34,7 @@ _policy_name_ 是所选策略的名称。
 . 在验证页面中，执行以下步骤：
 +
 .. 选择验证服务器。
-.. 选择要为其配置验证计划的策略，然后单击 *image:../media/add_policy_from_resourcegroup.gif[""]*
+.. 选择要为其配置验证计划的策略、然后单击**image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 .. 选择*备份后运行验证*或*运行计划的验证*。
 .. 单击确定。
 

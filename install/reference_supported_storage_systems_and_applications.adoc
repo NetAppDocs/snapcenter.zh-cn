@@ -1,7 +1,7 @@
 ---
 permalink: install/reference_supported_storage_systems_and_applications.html 
 sidebar: sidebar 
-keywords: storage system, ONTAP version 
+keywords: storage system, ONTAP version, ASA r2 systems 
 summary: 您应了解支持的存储系统，应用程序和数据库。 
 ---
 = 支持的存储系统和应用程序
@@ -14,6 +14,13 @@ summary: 您应了解支持的存储系统，应用程序和数据库。
 您应了解支持的存储系统，应用程序和数据库。
 
 * SnapCenter 支持 ONTAP 9.12.1 及更高版本来保护数据。
+* SnapCenter 6.1支持运行ONTAP 9.161的NetApp ASA R2系统(ASA A1K、ASA A70和ASA A90)。
++
+ASA R2系统可为基于全闪存平台构建的纯SAN环境提供统一的硬件和软件解决方案。ASA R2系统在实施其存储层、支持的协议和ONTAP特性方面与其他ONTAP系统(ASA、AFF和FAS)有所不同。
+
++
+有关ASA R2系统的信息，请参见 https://docs.netapp.com/us-en/asa-r2/index.html["ASA R2文档"^]。
+
 * SnapCenter 支持适用于 NetApp ONTAP 的 Amazon FSx ，以保护您的数据免受 SnapCenter 软件 4.5 P1 修补版本的影响。
 +
 如果您使用的是适用于 NetApp ONTAP 的 Amazon FSx ，请确保 SnapCenter 服务器主机插件升级到 4.5 P1 或更高版本以执行数据保护操作。

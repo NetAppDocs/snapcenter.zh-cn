@@ -15,6 +15,6 @@ summary: 备份工作流包括规划，确定要备份的资源，管理备份�
 
 以下工作流显示了必须执行备份操作的顺序：
 
-image::../media/scc_backup_workflow.png[备份工作流]
+image::../media/scc_backup_workflow.gif[备份工作流]
 
 您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。有关PowerShell cmdlet的详细信息、请使用SnapCenter cmdlet帮助或参阅 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"]

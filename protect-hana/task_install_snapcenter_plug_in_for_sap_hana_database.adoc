@@ -13,4 +13,4 @@ summary: 如果要保护 SAP HANA 数据库，您应安装和设置适用于 SAP
 [role="lead"]
 如果要保护 SAP HANA 数据库，您应安装和设置适用于 SAP HANA 数据库的 SnapCenter 插件。
 
-image::../media/sap_hana_install_configure_workflow.png[安装HANA插件工作流]
+image::../media/sap_hana_install_configure_workflow.gif[安装SAP HANA插件]

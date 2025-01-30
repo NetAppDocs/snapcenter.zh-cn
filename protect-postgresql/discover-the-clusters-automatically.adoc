@@ -28,9 +28,9 @@ summary: 资源是Linux主机上由SnapCenter管理的PostgreSQL集群。发现�
 .步骤
 . 在左侧导航窗格中，单击*Resoles*，然后从列表中选择适用于PostgreSQL的插件。
 . 在资源页面中，从视图列表中选择资源类型。
-. （可选）单击 *image:../media/filter_icon.png["筛选器图标"]* ，然后选择主机名。
+. (可选)单击image:../media/filter_icon.gif["筛选器图标"]*、然后选择主机名。
 +
-然后，您可以单击 *image:../media/filter_icon.png["筛选器图标"]* 以关闭筛选器窗格。
+然后、您可以单击**image:../media/filter_icon.gif["筛选器图标"]关闭筛选器窗格。
 
 . 单击 * 刷新资源 * 以发现主机上可用的资源。
 +

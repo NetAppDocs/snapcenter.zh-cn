@@ -90,7 +90,7 @@ HDBSQL 操作系统用户
 |===
 . 在提供存储占用空间页面中，选择一个存储系统并选择一个或多个卷， LUN 和 qtree ，然后单击 * 保存 * 。
 +
-可选：您可以单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 图标，用于从其他存储系统添加更多卷， LUN 和 qtree 。
+可选：您可以单击*image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]图标从其他存储系统添加更多卷、LUN和qtrees。
 
 . 查看摘要，然后单击 * 完成 * 。
 +

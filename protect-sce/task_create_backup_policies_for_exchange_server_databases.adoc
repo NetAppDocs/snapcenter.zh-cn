@@ -57,10 +57,6 @@ summary: 您可以在使用 SnapCenter 备份 Microsoft Exchange Server 资源�
 +
 对于ONTAP 9.12.1及更低版本、从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
-+
-
-NOTE: 主SnapLock设置在SnapCenter备份策略中进行管理、辅SnapLock设置由ONTAP进行管理。
-
 
 
 
@@ -69,8 +65,8 @@ NOTE: 主SnapLock设置在SnapCenter备份策略中进行管理、辅SnapLock设
 . 在左侧导航窗格中，单击 * 设置 * 。
 . 在设置页面中，单击 * 策略 * 。
 . 单击 * 新建 * 。
-. 在名称页面中，输入策略名称和问题描述。
-. 在备份类型页面中，执行以下步骤：
+. 在名称页面中、输入策略名称和详细信息。
+. 在备份类型和复制页面中、执行以下步骤：
 +
 .. 选择备份类型：
 +
@@ -164,6 +160,59 @@ NOTE: 您可以在创建资源组时为备份操作指定计划（开始日期�
 
 NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不会触发此计划。
 
+.. 选择策略标签。
++
+根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。
+
++
+
+NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
+
+.. 在选择二级复制选项部分中、选择以下一个或两个二级复制选项：
++
+
+NOTE: 要使*二级Snapshot副本锁定期限*生效、必须选择二级复制选项。“保留”页面中提供了“二级Snapshot副本锁定期限”选项。
+
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+创建本地Snapshot后更新SnapMirror
+ a| 
+选择此选项可将备份集的镜像副本保留在另一个卷（ SnapMirror ）上。
+
+在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。
+
+对于SnapMirror活动同步、应启用此选项。
+
+
+IMPORTANT: 如果为Exchange ONTAP卷设置了SnapMirror活动同步、则无法使用仅主策略。SnapCenter不允许这样做。您应启用"镜像"选项。
+
+单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
+
+请参阅。 link:../protect-sce/task_view_exchange_backups_in_the_topology_page.html["在 Topology 页面中查看 Exchange 备份"]
+
+
+
+ a| 
+创建本地快照后更新SnapVault
+ a| 
+选择此选项可执行磁盘到磁盘备份复制。
+
+
+
+ a| 
+错误重试次数
+ a| 
+输入在进程暂停之前应进行的复制尝试次数。
+
+|===
++
+
+NOTE: 您应在ONTAP中为二级存储配置SnapMirror保留策略、以避免达到二级存储上Snapshot的最大限制。
+
 
 
 . 在保留页面中，配置保留设置。
@@ -243,11 +292,24 @@ SnapLock保留期限应少于100年。
 
 
  a| 
-Snapshot锁定期限
+主快照锁定期限
  a| 
-选择*Snapshot副本锁定期限*，然后选择天、月或年。
+选择*主Snapshot副本锁定期限*、然后选择天、月或年。
 
 SnapLock保留期限应少于100年。
+
+
+
+ a| 
+二级快照锁定期限
+ a| 
+选择*二级Snapshot副本锁定期限*、然后选择天、月或年。
+
+要使此选项生效、您必须执行以下任务：
+
+*** 选择*主Snapshot副本锁定期限*。
+*** 选择一个或两个二级复制选项。
+
 
 |===
 +
@@ -264,59 +326,6 @@ SnapLock保留期限应少于100年。
 
 
 
-
-. 在复制页面中，选择以下一个或两个二级复制选项：
-+
-|===
-| 对于此字段 ... | 执行此操作 ... 
-
-
- a| 
-创建本地Snapshot后更新SnapMirror
- a| 
-选择此选项可将备份集的镜像副本保留在另一个卷（ SnapMirror ）上。
-
-在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。
-
-对于SnapMirror活动同步、应启用此选项。
-
-
-IMPORTANT: 如果为Exchange ONTAP卷设置了SnapMirror活动同步、则无法使用仅主策略。SnapCenter不允许这样做。您应启用"镜像"选项。
-
-单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
-
-请参阅。 link:../protect-sce/task_view_exchange_backups_in_the_topology_page.html["在 Topology 页面中查看 Exchange 备份"]
-
-
-
- a| 
-创建本地快照后更新SnapVault
- a| 
-选择此选项可执行磁盘到磁盘备份复制。
-
-
-
- a| 
-二级策略标签
- a| 
-选择 Snapshot 标签。
-
-根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。
-
-
-NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
-
-
-
- a| 
-错误重试次数
- a| 
-输入在进程暂停之前应进行的复制尝试次数。
-
-|===
-+
-
-NOTE: 您应在ONTAP中为二级存储配置SnapMirror保留策略、以避免达到二级存储上Snapshot的最大限制。
 
 . 在脚本页面中，分别输入应在备份操作前后运行的预处理或后处理程序的路径和参数。
 +

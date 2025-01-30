@@ -35,14 +35,11 @@ summary: 在使用SnapCenter备份PostgreSQL集群资源之前、必须为要备
 
 
 
-
-NOTE: 主SnapLock设置在SnapCenter备份策略中进行管理、辅SnapLock设置由ONTAP进行管理。
-
 .步骤
 . 在左侧导航窗格中，单击 * 设置 * 。
 . 在设置页面中，单击 * 策略 * 。
 . 单击 * 新建 * 。
-. 在名称页面中，输入策略名称和问题描述。
+. 在名称页面中、输入策略名称和详细信息。
 . 在策略类型页面中、执行以下操作：
 +
 .. 选择存储类型。
@@ -52,20 +49,18 @@ NOTE: 主SnapLock设置在SnapCenter备份策略中进行管理、辅SnapLock设
 
 
 
-. 在Snapshot页面中、通过选择*按需*、*每小时*、*每日*、*每周*或*每月*来指定计划类型。
+. 在备份和复制页面中、执行以下操作：
++
+.. 通过选择 * 按需 * ， * 每小时 * ， * 每日 * ， * 每周 * 或 * 每月 * 来指定计划频率。
 +
 
 NOTE: 您可以在创建资源组时为备份操作指定计划（开始日期，结束日期和频率）。这样，您就可以创建共享相同策略和备份频率的资源组，但也可以为每个策略分配不同的备份计划。
 
 +
-image::../media/backup_settings.gif[备份设置]
-
-+
 
 NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不会触发此计划。
 
-. 在Snapshot设置部分中、指定要保留的快照数量。
-. 在保留页面中，指定备份类型的保留设置以及在备份类型页面中选择的计划类型：
+.. 在Snapshot设置部分中，指定在*Backup Type*页面中选择的备份类型和计划类型的保留设置：
 +
 |===
 | 如果您要 ... | 那么 ... 
@@ -74,14 +69,106 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
  a| 
 保留一定数量的快照
  a| 
-选择*要保留的副本*、然后指定要保留的快照数量。
+选择*要保留的副本*，然后指定要保留的快照数。
 
 如果快照数量超过指定数量、则会删除快照、并首先删除最早的副本。
+
+
+NOTE: 如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。
+
+
+NOTE: 对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，对于 ONTAP 9.3 或更早版本上的资源，最大保留值为 254 。如果将保留设置为高于底层 ONTAP 版本支持的值，则备份将失败。
+
+
+
+ a| 
+将Snapshot保留一定天数
+ a| 
+选择*保留副本时间*、然后指定要在删除快照之前保留这些快照的天数。
+
+
+
+ a| 
+主Snapshot副本锁定期限
+ a| 
+选择Snapshot锁定期限、然后选择天、月或年。
+
+SnapLock保留期限应少于100年。
+
+
+
+ a| 
+二级Snapshot副本锁定期限
+ a| 
+选择*二级Snapshot副本锁定期限*、然后选择天、月或年。
+
+要使此选项生效、您必须执行以下任务：
+
+*** 选择*主Snapshot副本锁定期限*。
+*** 选择一个或两个二级复制选项。
+
+
+|===
+
+
+. 选择策略标签。
++
+根据您选择的策略标签、ONTAP会应用与此标签匹配的二级Snapshot保留策略。
+
++
+
+NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
+
+. 在选择二级复制选项部分中、选择以下一个或两个二级复制选项：
++
+
+NOTE: 要使*二级Snapshot副本锁定期限*生效、必须选择二级复制选项。
+
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+* 创建本地 Snapshot 副本后更新 SnapMirror *
+ a| 
+选择此字段可在另一个卷上创建备份集的镜像副本（ SnapMirror 复制）。
+
+如果ONTAP中的保护关系类型为"镜像和存储"、而您仅选择此选项、则在主系统上创建的快照不会传输到目标系统、而是会在目标系统中列出。如果从目标中选择此Snapshot来执行还原操作、则会显示以下错误消息：Secondary Location is not available for the selected vauled/Mirrored backup。
+
+在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。
+
+单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
+
+请参阅。 link:view-postgresql-cluster-backups-and-clones-in-the-topology-page.html["在Topology页面中查看PostgreSQL资源相关的备份和克隆"]
+
+
+
+ a| 
+* 创建本地 Snapshot 副本后更新 SnapVault *
+ a| 
+选择此选项可执行磁盘到磁盘备份复制（ SnapVault 备份）。
+
+在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
+
+如果仅在ONTAP中称为SnapLock存储的二级系统上配置了SnapLock，则单击“拓扑”页面中的*Refresh*按钮可刷新从ONTAP检索到的二级系统上的锁定期限。
+
+有关SnapLock存储的详细信息、请参见将快照提交到存储上的WORM
+destination
+
+请参阅。 link:view-postgresql-cluster-backups-and-clones-in-the-topology-page.html["在Topology页面中查看PostgreSQL资源相关的备份和克隆"]
+
+
+
+ a| 
+* 错误重试计数 *
+ a| 
+输入操作停止前允许的最大复制尝试次数。
 
 |===
 +
 
-IMPORTANT: 对于基于 Snapshot 副本的备份，如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。
+NOTE: 您应在ONTAP中为二级存储配置SnapMirror保留策略、以避免达到二级存储上Snapshot的最大限制。
 
 . 查看摘要，然后单击 * 完成 * 。
 

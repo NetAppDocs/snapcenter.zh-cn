@@ -17,7 +17,7 @@ summary: 如果发生数据丢失、您可以使用SnapCenter还原数据。
 
 * 您应执行以下命令以与 SnapCenter 服务器建立连接，列出备份并检索其信息以及还原备份。
 +
-有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["《 SnapCenter 软件命令参考指南》"^]。
+有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["《 SnapCenter 软件命令参考指南》"^]。
 
 * 对于SnapMirror活动同步还原操作、您必须从主位置选择备份。
 

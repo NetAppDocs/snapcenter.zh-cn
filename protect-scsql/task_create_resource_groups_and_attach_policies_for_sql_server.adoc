@@ -78,12 +78,12 @@ NOTE: 如果您最近添加了资源，则只有在刷新资源列表后，这�
 .. 从下拉列表中选择一个或多个策略。
 +
 
-NOTE: 您也可以单击 * 来创建策略image:../media/add_policy_from_resourcegroup.gif[""]*
+NOTE: 您也可以单击**来创建策略image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 
 +
 在为选定策略配置计划部分中，将列出选定策略。
 
-.. 在为选定策略配置计划部分中，单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 。
+.. 在为选定策略配置计划部分中、单击要配置计划的策略的配置计划列中的*image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 .. 在添加策略 _policy_name_ 的计划对话框中，指定开始日期，到期日期和频率来配置计划，然后单击 * 确定 * 。
 +
 您必须对策略中列出的每个频率执行此操作。已配置的计划将在 * 为选定策略配置计划 * 部分的已应用计划列中列出。
@@ -111,7 +111,7 @@ NOTE: 您也可以单击 * 来创建策略image:../media/add_policy_from_resourc
 NOTE: 验证服务器版本应与托管主数据库的 SQL Server 的版本相匹配。
 
 .. 单击 * 加载定位器 * 以加载 SnapMirror 和 SnapVault 卷，以便在二级存储上执行验证。
-.. 选择要为其配置验证计划的策略，然后单击 *image:../media/add_policy_from_resourcegroup.gif[""]*
+.. 选择要为其配置验证计划的策略、然后单击**image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 .. 在添加验证计划 policy_name 对话框中，执行以下操作：
 +
 |===

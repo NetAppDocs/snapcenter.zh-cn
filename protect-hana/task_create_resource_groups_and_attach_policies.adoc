@@ -186,12 +186,12 @@ SnapCenter以创建存储级别快照
 .. 从下拉列表中选择一个或多个策略。
 +
 
-NOTE: 您也可以单击 * 来创建策略image:../media/add_policy_from_resourcegroup.gif[""]*
+NOTE: 您也可以单击**来创建策略image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 
 +
 这些策略将在为选定策略配置计划部分列出。
 
-.. 在配置计划列中，单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 表示要配置的策略。
+.. 在配置计划列中、单击要配置的策略的**image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 .. 在添加策略 _policy_name_ 的计划对话框中，配置计划，然后单击 * 确定 * 。
 +
 其中， policy_name 是选定策略的名称。

@@ -13,4 +13,4 @@ summary: 工作流图显示了安装和配置 SnapCenter 服务器的步骤。
 [role="lead"]
 此工作流显示了安装和配置 SnapCenter 服务器所需的不同任务。
 
-image::../media/install_snapcenter_server.png[安装 SnapCenter 服务器]
+image::../media/install_snapcenter_server.gif[安装 SnapCenter 服务器]

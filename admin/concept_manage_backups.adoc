@@ -62,7 +62,7 @@ NOTE: 如果备份与克隆的资源相关联，则无法删除此备份。
 +
 您不能删除二级存储系统上的备份。
 
-. 选择备份，然后单击 image:../media/delete_icon.gif[""]。
+. 选择备份，然后单击 image:../media/delete_icon.gif["删除图标"]。
 +
 如果要删除 SAP HANA 数据库备份，则此备份的关联 SAP HANA 目录也会被删除。
 

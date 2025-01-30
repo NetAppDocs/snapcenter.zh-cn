@@ -56,14 +56,14 @@ Tags
 . 在策略页面中，执行以下步骤：
 +
 .. 从下拉列表中选择一个或多个策略。
-.. 在配置计划列中，单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 表示要配置的策略。
+.. 在配置计划列中、单击要配置的策略的**image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 .. 在添加策略 _policy_name_ 的计划对话框中，配置计划，然后单击 * 确定 * 。
 
 
 . 在验证页面中，执行以下步骤：
 +
 .. 选择验证服务器。
-.. 选择要为其配置验证计划的策略，然后单击 *image:../media/add_policy_from_resourcegroup.gif[""]。
+.. 选择要为其配置验证计划的策略，然后单击*image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 .. 选择*备份后运行验证*或*运行计划的验证*。
 .. 单击 * 确定 * 。
 

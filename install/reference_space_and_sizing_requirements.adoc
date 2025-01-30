@@ -82,14 +82,13 @@ NOTE: 注意：如果 SnapCenter 服务器位于安装 SnapCenter 存储库的�
  a| 
 所需的软件包
  a| 
-* Microsoft .NET Framework 4.7.2或更高版本
-* 以8.0.5开头的ASP.NET核心托管包、包括所有后续.NET 8修补程序
+* ASP.NET Core 8.0.12 (以及所有后续的8.0.x修补程序)托管包
 * PowerShell 7.4.2或更高版本
 
 
 有关.NET专用的故障排除信息、请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["对于没有Internet连接的原有系统、SnapCenter 升级或安装失败"^]。
  a| 
-* 从8.0.5开始的ASP.NET核心运行时、包括所有后续的.NET 8修补程序
+* .NET 8.0.12 (以及所有后续的8.0.x修补程序)
 * PowerShell 7.4.2或更高版本
 * NGINX是一个可用作反向代理的Web服务器
 * PAM-DEVEL
@@ -99,3 +98,5 @@ PAM (可插拔鉴定模块)是一个系统安全工具，它允许系统管理�
 
 
 |===
+
+NOTE: ASP.NET核心需要IIS_IUSRS才能访问Windows上SnapCenter服务器中的临时文件系统。

@@ -13,4 +13,4 @@ summary: 如果要保护SnapCenter NetApp支持的插件资源、应安装并设
 [role="lead"]
 如果要保护SnapCenter NetApp支持的插件资源、应安装并设置NetApp支持的插件。
 
-image::../media/sap_hana_install_configure_workflow.png[][ SnapCenter NetApp支持的插件的工作流]
+image::../media/scc_install_configure_workflow.gif[SnapCenter NetApp支持的插件的工作流]

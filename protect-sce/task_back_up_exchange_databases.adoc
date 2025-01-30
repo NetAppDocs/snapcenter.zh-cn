@@ -34,14 +34,14 @@ summary: '如果数据库不属于任何资源组，您可以从 " 资源 " 页�
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择 * Microsoft Exchange Server 插件 * 。
 . 在资源页面中，从 * 查看 * 列表中选择 * 数据库 * 或 * 数据库可用性组 * 。
 +
-在资源页面中、此 image:../media/not_supported_icon.png["不支持的存储"] 图标表示数据库位于非NetApp存储上。
+在资源页面中、此 image:../media/not_supported_icon.gif["不支持图标"] 图标表示数据库位于非NetApp存储上。
 
 +
 
 NOTE: 在 DAG 中，如果活动数据库副本位于非 NetApp 存储上，并且至少有一个被动数据库副本驻留在 NetApp 存储上，则可以保护数据库。
 
 +
-单击 *image:../media/filter_icon.png[""]* ，然后选择主机名和数据库类型以筛选资源。然后，您可以单击 *image:../media/filter_icon.png[""]* 以关闭筛选器窗格。
+单击*image:../media/filter_icon.gif["筛选器图标"]、然后选择主机名和数据库类型以筛选资源。然后、您可以单击**image:../media/filter_icon.gif["筛选器图标"]关闭筛选器窗格。
 
 +
 ** 如果要备份数据库，请单击数据库名称。
@@ -62,7 +62,7 @@ NOTE: 在 DAG 中，如果活动数据库副本位于非 NetApp 存储上，并�
 .. 从下拉列表中选择一个或多个策略。
 +
 
-NOTE: 您也可以单击 * 来创建策略image:../media/add_policy_from_resourcegroup.gif[""]*
+NOTE: 您也可以单击**来创建策略image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 
 +
 
@@ -74,7 +74,7 @@ NOTE: 如果某个策略包含 * 备份作业创建时间要选择的服务器�
 在为选定策略配置计划部分中，将列出选定策略。
 
 +
-.. 单击 *image:../media/add_policy_from_resourcegroup.gif[""]* 。
+.. 单击要为其配置计划的策略的配置计划列中的*image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 .. 在添加策略 _policy_name_ 的计划窗口中，配置该计划，然后单击 * 确定 * 。
 +
 其中， _policy_name_ 是选定策略的名称。

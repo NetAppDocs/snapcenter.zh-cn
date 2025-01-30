@@ -118,6 +118,8 @@ entries:
     url: "/protect-scsql/task_create_backup_policies_for_sql_server_databases.html"
   - title: 为 SQL Server 创建资源组并附加策略
     url: "/protect-scsql/task_create_resource_groups_and_attach_policies_for_sql_server.html"
+  - title: 在ASA R2系统上创建资源组并为Microsoft SQL Server资源启用二级保护
+    url: "/protect-scsql/create-resource-groups-secondary-protection-for-asa-r2-mssql-resources.html"
   - title: 备份 SQL 资源的要求
     url: "/protect-scsql/concept_requirements_for_backing_up_sql_resources.html"
   - title: 使用 PowerShell cmdlet 创建存储系统连接和凭据

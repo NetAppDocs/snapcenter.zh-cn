@@ -16,9 +16,9 @@ summary: '如果某个资源不属于任何资源组，您可以从 "Resources" 
 .步骤
 . 在左侧导航窗格中，选择*Resoles*，然后从列表中选择相应的插件。
 . 在资源页面中，从视图列表中选择 * 数据库 * 。
-. 单击 image:../media/filter_icon.png["筛选器图标"]，然后选择主机名和数据库类型以筛选资源。
+. 单击 image:../media/filter_icon.gif["筛选器图标"]，然后选择主机名和数据库类型以筛选资源。
 +
-然后，您可以单击 image:../media/filter_icon.png["筛选器图标"] 以关闭筛选器窗格。
+然后、您可以单击 image:../media/filter_icon.gif["筛选器图标"] 以关闭筛选器窗格。
 
 . 选择要备份的数据库。
 +

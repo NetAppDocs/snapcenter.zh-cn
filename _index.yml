@@ -4,12 +4,12 @@ indexpage:
   keywords: snapcenter server, plug-in, data protection, applications, databases,
     host file systems, VmWare, backup, restore, clone
   lead: SnapCenter 软件是一个简单，集中化且可扩展的平台，可为混合云中任意位置的 ONTAP 系统上运行的应用程序，数据库，主机文件系统和 VM
-    提供应用程序一致的数据保护。本文档库包含6.0和6.0.0版本的信息。
+    提供应用程序一致的数据保护。本文档库包含版本6.1的信息。
   tiles:
   - title: 入门
     links:
     - title: 发行说明
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665
     - title: 了解 SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: 升级 SnapCenter 服务器和 SnapCenter 插件
@@ -83,7 +83,7 @@ indexpage:
     - title: "《 cmdlet 参考指南》"
       url: https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html
     - title: 命令参考指南
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666
     - title: 早期版本的 SnapCenter 文档
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: NetApp 知识库— SnapCenter

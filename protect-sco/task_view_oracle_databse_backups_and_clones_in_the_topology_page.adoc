@@ -80,11 +80,11 @@ NOTE: 您不能重命名或删除二级存储上的备份。
 ** 如果您已使用 Oracle Recovery Manager （ RMAN ）对备份进行了编目，则无法重命名这些已编目的备份。
 
 
-. 如果要删除克隆，请从表中选择此克隆，然后单击 image:../media/delete_icon.gif[""]。
+. 如果要删除克隆，请从表中选择克隆，然后单击 image:../media/delete_icon.gif["删除图标"]。
 
 
 如果分配给 SnapmirrorStatusUpdateWaitTime 的值小于此值，则即使数据和日志卷已成功保护，镜像和存储备份副本也不会列在拓扑页面上。您应使用 _set-SmConfigSettings_ PowerShell cmdlet 增加分配给 SnapmirrorStatusUpdateWaitTime 的值。
 
 有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。
 
-或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["《 SnapCenter 软件命令参考指南》"^] 或 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["《 SnapCenter 软件命令参考指南》"^] 或 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。

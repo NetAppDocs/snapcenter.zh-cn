@@ -82,6 +82,8 @@ entries:
     url: "/protect-nsp/create_policies_for_netapp_supported_plugins_resources.html"
   - title: 创建资源组并附加策略
     url: "/protect-nsp/create_resource_groups_and_attach_policies.html"
+  - title: 在ASA R2系统上创建资源组并为资源启用二级保护
+    url: "/protect-nsp/create-resource-groups-secondary-protection-for-asa-r2-resources.html"
   - title: 使用 PowerShell cmdlet 创建存储系统连接和凭据
     url: "/protect-nsp/create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets.html"
   - title: 备份各个NetApp支持的插件资源

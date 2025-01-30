@@ -14,6 +14,7 @@ summary: '如果某个资源尚未加入任何资源组，您可以从 "Resource
 如果某个资源尚未加入任何资源组，您可以从 "Resources" 页面备份该资源。
 
 .关于此任务
+* 要优化备份操作、您应在DNS服务器中创建Windows集群名称和IP地址的反向查找记录。
 * 对于 Windows 凭据身份验证，您必须在安装插件之前设置凭据。
 * 对于 SQL Server 实例身份验证，您必须在安装插件后添加凭据。
 * 对于 GMSA 身份验证，您必须在 * 添加主机 * 或 * 修改主机 * 页面中向 SnapCenter 注册主机时设置 GMSA ，以启用和使用 GMSA 。
@@ -51,12 +52,12 @@ summary: '如果某个资源尚未加入任何资源组，您可以从 "Resource
 +
 .. 在策略部分中，从下拉列表中选择一个或多个策略。
 +
-您可以通过选择*来创建策略image:../media/add_policy_from_resourcegroup.gif[""]* 以启动策略向导。
+您可以通过选择**启动策略向导来创建image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]策略。
 
 +
 在 * 为选定策略配置计划 * 部分中，将列出选定策略。
 
-.. 选择*image:../media/add_policy_from_resourcegroup.gif[""]* 。
+.. 在配置计划列中、为要配置计划的策略选择*image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 .. 在*为策略添加计划*中 `policy_name` 对话框中，配置计划，然后选择*OK*。
 +
 此处 `policy_name` 是所选策略的名称。
@@ -78,7 +79,7 @@ summary: '如果某个资源尚未加入任何资源组，您可以从 "Resource
 NOTE: 验证服务器版本应等于或高于托管主数据库的 SQL Server 版本。
 
 .. 选择 * 加载二级定位器以验证二级存储系统上的备份 * 以验证二级存储系统上的备份。
-.. 选择要为其配置验证计划的策略、然后选择*image:../media/add_policy_from_resourcegroup.gif[""]*
+.. 选择要为其配置验证计划的策略、然后选择**image:../media/add_policy_from_resourcegroup.gif["添加策略表单资源组"]。
 .. 在添加验证计划 _policy_name_ 对话框中，执行以下操作：
 +
 |===

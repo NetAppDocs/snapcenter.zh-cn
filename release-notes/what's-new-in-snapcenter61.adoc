@@ -1,0 +1,28 @@
+---
+permalink: 'release-notes/what"s-new-in-snapcenter61.html' 
+sidebar: sidebar 
+keywords: what is new, features, enhancements, 6.1 
+summary: SnapCenter软件6.1版包括几项新功能和增强功能。 
+---
+= SnapCenter软件6.1中的新增功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter软件6.1版包括几项新功能和增强功能。
+
+|===
+| 更新 | Description 
+
+
+| link:../install/learn-about-supporting-asa-r2-in-snapcenter.html["支持ASA R2系统"]  a| 
+SnapCenter现在支持ASA R2系统、可根据仅SAN客户的需求提供简化的体验。
+
+
+
+| 支持二级防篡改快照  a| 
+使用SnapCenter可以指定二级快照的锁定期限。
+
+|===

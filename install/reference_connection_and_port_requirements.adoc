@@ -33,47 +33,61 @@ summary: 在安装 SnapCenter 服务器和应用程序或数据库插件之前�
 下表列出了不同的端口及其默认值。
 
 |===
-| 端口类型 | 默认端口 
+| 端口名称 | 端口号 | 协议 | 方向 | Description 
 
 
  a| 
 SnapCenter 端口
  a| 
-8146 （ HTTPS ），双向，可自定义，如 URL ： _\https://server:8146_
+8146
+ a| 
+HTTPS
+ a| 
+双向
+ a| 
+此端口用于SnapCenter客户端(SnapCenter用户)和SnapCenter服务器之间的通信、也用于从插件主机到SnapCenter服务器的通信。
 
-用于 SnapCenter 客户端（ SnapCenter 用户）与 SnapCenter 服务器之间的通信。也用于从插件主机到 SnapCenter 服务器的通信。
-
-要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安装向导安装SnapCenter服务器。"]
+您可以自定义端口号。
 
 
 
  a| 
 SnapCenter SMCore 通信端口
  a| 
-8145 （ HTTPS ），双向，可自定义
+8145
+ a| 
+HTTPS
+ a| 
+双向
+ a| 
+此端口用于在SnapCenter 服务器与安装SnapCenter 插件的主机之间进行通信。
 
-此端口用于在 SnapCenter 服务器与安装 SnapCenter 插件的主机之间进行通信。
-
-要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安装向导安装SnapCenter服务器。"]
+您可以自定义端口号。
 
 
 
  a| 
 计划程序服务端口
  a| 
-8154 (HTTPS)
-
+8154
+ a| 
+HTTPS
+ a| 
+ a| 
 此端口用于集中编排SnapCenter服务器主机中所有受管插件的SnapCenter计划程序工作流。
 
-要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安装向导安装SnapCenter服务器。"]
+您可以自定义端口号。
 
 
 
  a| 
 Rabbitmq端口
  a| 
-5472 (TCP)
-
+5672
+ a| 
+TCP
+ a| 
+ a| 
 这是Rabbitmq侦听的默认端口、用于在计划程序服务和SnapCenter之间进行发布者-订阅者模型通信。
 
 
@@ -81,78 +95,85 @@ Rabbitmq端口
  a| 
 MySQL 端口
  a| 
-3306 (HTTPS)、双向、可自定义
-
-此端口用于在 SnapCenter 和 MySQL 存储库数据库之间进行通信。
-
-您可以创建从 SnapCenter 服务器到 MySQL 服务器的安全连接。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["了解更多信息。"]
-
-要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安装向导安装SnapCenter服务器。"]
+3306
+ a| 
+HTTPS
+ a| 
+ a| 
+此端口用于与SnapCenter存储库数据库进行通信。您可以创建从SnapCenter服务器到MySQL服务器的安全连接。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["了解更多信息。"]
 
 
 
  a| 
 Windows 插件主机
  a| 
-135 ， 445 （ TCP ）
-
-除了端口 135 和 445 之外， Microsoft 指定的动态端口范围也应处于打开状态。远程安装操作使用 Windows Management Instrumentation （ WMI ）服务，该服务会动态搜索此端口范围。
-
-有关支持的动态端口范围的信息，请参见 https://support.microsoft.com/kb/832017["Windows 的服务概述和网络端口要求"^]
-
-这些端口用于在 SnapCenter 服务器与要安装此插件的主机之间进行通信。要将插件软件包二进制文件推送到 Windows 插件主机，这些端口只能在插件主机上打开，并且可以在安装后关闭。
+135、445
+ a| 
+TCP
+ a| 
+ a| 
+此端口用于SnapCenter服务器与安装此插件的主机之间的通信。Microsoft指定的其他动态端口范围也应处于打开状态。
 
 
 
  a| 
 Linux 或 AIX 插件主机
  a| 
-22 （ SSH ）
-
-这些端口用于在 SnapCenter 服务器与要安装此插件的主机之间进行通信。SnapCenter 使用这些端口将插件软件包二进制文件复制到 Linux 或 AIX 插件主机，这些端口应处于打开状态或从防火墙或 IP 表中排除。
+22
+ a| 
+SSH
+ a| 
+单向
+ a| 
+此端口用于SnapCenter服务器与主机之间的通信、此通信是从服务器启动到客户端主机的。
 
 
 
  a| 
-适用于 Windows 的 SnapCenter 插件软件包，适用于 Linux 的 SnapCenter 插件软件包或适用于 AIX 的 SnapCenter 插件软件包
+适用于Windows、Linux或AIX的SnapCenter插件软件包
  a| 
-8145 （ HTTPS ），双向，可自定义
+8145
+ a| 
+HTTPS
+ a| 
+双向
+ a| 
+此端口用于SMCore与安装了插件包的主机之间的通信。可自定义。
 
-此端口用于在 SMCore 与安装了插件软件包的主机之间进行通信。
-
-此外，还需要在 SVM 管理 LIF 和 SnapCenter 服务器之间打开通信路径。
-
-要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html["添加主机并安装适用于 Microsoft Windows 的 SnapCenter 插件"] 或 https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["添加主机并安装适用于Linux或AIX的SnapCenter插件软件包。"]
+您可以自定义端口号。
 
 
 
  a| 
 适用于 Oracle 数据库的 SnapCenter 插件
  a| 
-27216 ，可自定义
-
+27216
+ a| 
+ a| 
+ a| 
 适用于 Oracle 的插件使用默认 JDBC 端口连接到 Oracle 数据库。
-
-要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["添加主机并安装适用于Linux或AIX的SnapCenter插件软件包。"]
 
 
 
  a| 
 适用于Exchange数据库的SnapCenter插件
  a| 
-909 ，可自定义
-
+909
+ a| 
+ a| 
+ a| 
 默认的NET。 适用于Windows的插件使用TCP端口连接到Exchange VSS回调。
-
-要自定义端口，请参见 link:../protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html["添加主机并安装适用于 Exchange 的插件"]。
 
 
 
  a| 
 NetApp支持的SnapCenter插件
  a| 
-9090 （ HTTPS ），已修复
-
+9090
+ a| 
+HTTPS
+ a| 
+ a| 
 这是一个仅在自定义插件主机上使用的内部端口；不需要防火墙异常。
 
 SnapCenter 服务器与自定义插件之间的通信通过端口 8145 进行路由。
@@ -162,31 +183,49 @@ SnapCenter 服务器与自定义插件之间的通信通过端口 8145 进行路
  a| 
 ONTAP 集群或 SVM 通信端口
  a| 
-443 （ HTTPS ），双向 80 （ HTTP ），双向
+* 443 (HTTPS)
+* 80 (HTTP)
 
+ a| 
+* HTTPS
+* HTTP
+
+ a| 
+双向
+ a| 
 SAL （存储抽象层）使用此端口在运行 SnapCenter 服务器的主机与 SVM 之间进行通信。SnapCenter for Windows 插件主机上的 SAL 当前也使用此端口在 SnapCenter 插件主机与 SVM 之间进行通信。
 
 
 
  a| 
-适用于SAP HANA数据库的SnapCenter 插件vCode拼写检查程序
+适用于 SAP HANA 数据库的 SnapCenter 插件
  a| 
-3 个 instance_number13 或 3 个 instance_number15 ， HTTP 或 HTTPS ，双向且可自定义
+* 3instance_number13
+* 3instance_number15
 
+ a| 
+* HTTPS
+* HTTP
+
+ a| 
+双向
+ a| 
 对于多租户数据库容器（ MDC ）单租户，端口号以 13 结尾；对于非 MDC ，端口号以 15 结尾。
 
-例如， 32013 是实例 20 的端口号， 31015 是实例 10 的端口号。
-
-要自定义端口、请参见 https://docs.netapp.com/us-en/snapcenter/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html["添加主机并在远程主机上安装插件软件包。"]
+您可以自定义端口号。
 
 
 
  a| 
-域控制器通信端口
+适用于PostgreSQL的SnapCenter插件
  a| 
-请参见 Microsoft 文档以确定域控制器上应在防火墙中打开的端口，以便身份验证能够正常工作。
+5432
+ a| 
+ a| 
+ a| 
+此端口是PostgreSQL插件用于与PostgreSQL集群通信的默认PostgreSQL端口。
 
-必须在域控制器上打开 Microsoft 所需的端口，以便 SnapCenter 服务器，插件主机或其他 Windows 客户端能够对用户进行身份验证。
+您可以自定义端口号。
 
 |===
 要修改端口详细信息，请参见 link:../admin/concept_manage_hosts.html#modify-plug-in-hosts["修改插件主机"]。

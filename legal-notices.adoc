@@ -47,4 +47,4 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP3323471["SnapCenter 6.0的通知"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP3337668["SnapCenter 6.1的通知"^]

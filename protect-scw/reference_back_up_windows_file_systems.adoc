@@ -17,6 +17,8 @@ summary: 在环境中安装适用于 Microsoft Windows 的 SnapCenter 插件时�
 
 以下工作流显示了必须执行备份操作的顺序：
 
+image::../media/sce_backup_workflow.gif[备份工作流]
+
 image::../media/sce_backup_workflow.gif[Exchange数据库的备份工作流]
 
 您也可以手动或在脚本中使用 PowerShell cmdlet 执行备份，还原和克隆操作。SnapCenter cmdlet帮助或包含有关PowerShell cmdlet的 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^] 详细信息。

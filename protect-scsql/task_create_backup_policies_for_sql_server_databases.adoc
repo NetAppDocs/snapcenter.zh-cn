@@ -52,10 +52,6 @@ summary: 您可以在使用 SnapCenter 备份 SQL Server 资源之前为资源�
 +
 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
-+
-
-NOTE: 主SnapLock设置在SnapCenter备份策略中进行管理、辅SnapLock设置由ONTAP进行管理。
-
 
 
 
@@ -67,24 +63,26 @@ NOTE: 主SnapLock设置在SnapCenter备份策略中进行管理、辅SnapLock设
 . 在左侧导航窗格中，选择*Settings*。
 . 在设置页面中，选择*Policies*。
 . 选择*New*。
-. 在 * 名称 * 页面中，输入策略名称和问题描述。
+. 在*Name*页面中，输入策略名称和详细信息。
 
 
 
 
-== 第2步：配置备份选项
+== 第2步：配置策略选项
 
-. 选择备份类型
-
-
+. 在"Policy type"(策略类型)页面中、执行以下步骤：
++
+.. 选择存储类型。
+.. 选择策略范围。
++
 [role="tabbed-block"]
 ====
 .完整备份和日志备份
 --
 备份数据库文件和事务日志、并将事务日志进行truncate。
 
-. 选择 * 完整备份和日志备份 * 。
-. 输入应为每个Snapshot备份的最大数据库数。
+... 选择 * 完整备份和日志备份 * 。
+... 输入应为每个Snapshot备份的最大数据库数。
 +
 
 NOTE: 如果要同时运行多个备份操作，则必须增加此值。
@@ -96,8 +94,8 @@ NOTE: 如果要同时运行多个备份操作，则必须增加此值。
 --
 备份数据库文件。
 
-. 选择 * 完整备份 * 。
-. 输入应为每个Snapshot备份的最大数据库数。
+... 选择 * 完整备份 * 。
+... 输入应为每个Snapshot备份的最大数据库数。
 默认值为 100
 +
 
@@ -108,14 +106,14 @@ NOTE: 如果要同时运行多个备份操作，则必须增加此值。
 --
 .日志备份
 --
-. 备份事务日志。
-. 选择 * 日志备份 * 。
+... 备份事务日志。
+... 选择 * 日志备份 * 。
 
 
 --
 .仅复制备份
 --
-. 如果要使用另一个备份应用程序备份资源，请选择 * 仅复制备份 * 。
+... 如果要使用另一个备份应用程序备份资源，请选择 * 仅复制备份 * 。
 
 
 保持事务日志完好无损可使任何备份应用程序恢复数据库。在任何其他情况下，通常不应使用仅复制选项。
@@ -125,6 +123,14 @@ NOTE: 对于二级存储， Microsoft SQL 不支持 * 仅复制备份 * 选项�
 
 --
 ====
+
+
+
+
+
+
+== 第3步：配置可用性组设置
+
 . 在可用性组设置部分中，执行以下操作：
 +
 .. 仅在首选备份副本上备份。
@@ -148,12 +154,17 @@ NOTE: 对于二级存储， Microsoft SQL 不支持 * 仅复制备份 * 选项�
 
 NOTE: 在集群配置中，备份会根据策略中设置的保留设置保留在集群的每个节点上。如果 AG 的所有者节点发生更改，则会根据保留设置进行备份，并保留先前所有者节点的备份。AG 的保留仅适用于节点级别。
 
-. 为此策略计划备份频率。通过选择*按需*、*每小时*、*每日*、*每周*或*每月*来指定计划类型。
+
+
+
+
+== 第4步：配置Snapshot和复制设置
+
+. 在Snapshot and Replication页面中、执行以下步骤：
++
+.. 通过选择 * 按需 * ， * 每小时 * ， * 每日 * ， * 每周 * 或 * 每月 * 来指定计划类型。
 +
 您只能为策略选择一种计划类型。
-
-+
-image:../media/backup_settings.gif["备份设置屏幕。"]
 
 +
 
@@ -167,11 +178,11 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
 
 
 
-== 第3步：配置保留设置
 
-在保留页面中，根据在备份类型页面中选择的备份类型，执行以下一项或多项操作：
 
-. 在最新还原操作的保留设置部分中，执行以下操作之一：
+== 第5步：配置最新保留设置
+
+. 在分钟级保留设置部分中、根据在备份类型页面中选择的备份类型、执行以下一项或多项操作：
 
 
 [role="tabbed-block"]
@@ -193,11 +204,15 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
 
 --
 ====
-. 在按需保留设置的 * 完整备份保留设置 * 部分中，执行以下操作：
+
+
+== 第6步：配置Snapshot设置
+
+. 对于完整备份保留设置、请执行以下操作：
 +
-.. 指定要保留的Snapshot总数
+.. 指定要保留的快照总数
 +
-... 要指定要保留的Snapshot数量、请选择*要保留的Snapshot副本总数*。
+... 要指定要保留的快照数量，请选择*要保留的副本*。
 ... 如果快照数量超过指定数量、则会删除快照、并首先删除最早的副本。
 
 
@@ -213,58 +228,54 @@ NOTE: 对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，
 
 . 保留快照的时间长度
 +
-.. 如果要指定在删除快照之前要保留这些快照的天数，请选择*保留Snapshot副本*。
+.. 如果要指定在删除快照之前保留快照的天数、请选择*保留副本*。
 
 
-. 如果要指定Snapshot锁定期限、请选择* Snapshot副本锁定期限*、然后选择天、月或年。
+. 如果要指定主Snapshot副本锁定期限、请选择*主Snapshot副本锁定期限*、然后选择天、月或年。
 +
 SnapLock保留期限应少于100年。
 
-
-
-. 在每小时，每天，每周和每月保留设置的 * 完整备份保留设置 * 部分中，为备份类型页面中选择的计划类型指定保留设置。
+. 如果要指定二级Snapshot副本锁定期限、请选择*二级Snapshot副本锁定期限*、然后选择天、月或年。
 +
-.. 指定要保留的Snapshot总数
-+
-... 要指定要保留的Snapshot数量、请选择*要保留的Snapshot副本总数*。如果快照数量超过指定数量、则会删除快照、并首先删除最早的副本。
-
-
-
-
-
-
-
-IMPORTANT: 如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。
-
-. 保留快照的时间长度
-+
-.. 要指定在删除快照之前要保留这些快照的天数，请选择*保留Snapshot副本*。
-
-
-. 如果要指定Snapshot锁定期限、请选择* Snapshot副本锁定期限*、然后选择天、月或年。
-+
-SnapLock保留期限应少于100年。
+要使此选项生效、您必须执行以下任务：
 
 +
-默认情况下、日志Snapshot保留时间设置为7天。使用Set-SmPolicy cmdlet更改日志Snapshot保留。
-
-
-
+** 选择*主Snapshot副本锁定期限*。
+** 选择一个或两个二级复制选项。
++
 以下示例将日志Snapshot保留设置为2：
 
++
 .显示示例
 []
 ====
 set-smPolicy -PolicyName 'newpol'-PolicyType 'Backup'-PluginPolicyType 'CSQL'-sqlbackuptype 'FullBackupAndLogBackup'-RetenituSettings @｛BackupType='Data'；scheduletType=' Hourly'；Retenitone=2｝、@@｛BackupType='Log_Snapshot；Retettype='、schedulettype=2｝
 
 ====
++
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_retains_Snapshot_copies_of_the_database["SnapCenter 会保留数据库的 Snapshot 副本"]
 
 
 
-== 第4步：配置复制设置
+. 选择Snapshot标签
++
+根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。
 
-. 在复制页面中，指定复制到二级存储系统：
++
+
+NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
+
+
+
+
+
+== 第7步：配置二级复制选项
+
+. 在选择二级复制选项部分中、选择以下一个或两个二级复制选项：
++
+
+NOTE: 要使*二级Snapshot副本锁定期限*生效、必须选择二级复制选项。
+
 
 
 [role="tabbed-block"]
@@ -281,7 +292,7 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。
 
 +
-请参阅。 link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["在拓扑页面中查看 SQL Server 备份和克隆"]
+请参阅。 link:../protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["在拓扑页面中查看 SQL Server 备份和克隆"]
 
 
 
@@ -301,20 +312,9 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 有关SnapLock存储的详细信息、请参见 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["将Snapshot副本提交到存储目标上的WORM"]
 
 +
-请参阅。 link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["在拓扑页面中查看 SQL Server 备份和克隆"]
+请参阅。 link:../protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["在拓扑页面中查看 SQL Server 备份和克隆"]
 
 
-
---
-.二级策略标签
---
-. 选择 Snapshot 标签。
-
-
-根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。
-
-
-NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
 
 --
 .错误重试计数
@@ -326,7 +326,7 @@ NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则
 ====
 
 
-== 第5步：配置脚本设置
+== 第8步：配置脚本设置
 
 . 在脚本页面中，分别输入应在备份操作前后运行的预处理或后处理程序的路径和参数。
 +
@@ -344,7 +344,7 @@ NOTE: 您必须在ONTAP中配置SnapMirror保留策略、以使二级存储不�
 
 
 
-== 第6步：配置验证设置
+== 第9步：配置验证设置
 
 在验证页面中，执行以下步骤：
 
@@ -388,7 +388,7 @@ NOTE: 预处理脚本或后处理脚本路径不应包含驱动器或共享。�
 
 
 
-== 第7步：查看摘要
+== 第10步：查看摘要
 
 . 查看摘要，然后选择*完成*。
 

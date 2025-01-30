@@ -46,3 +46,5 @@ summary: 如果不再希望使用 SnapCenter 管理主机的数据保护作业�
 * 您应已将 RBAC 用户分配给主机，适用于 Microsoft SQL Server 的 SnapCenter 插件，凭据，克隆生命周期资源组和存储系统。
 * 您应已以 RBAC 用户身份登录 SnapCenter 。
 
+
+有关卸载适用于VMware vSphere的SnapCenter插件的信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_remove_plugin.html["删除适用于 VMware vSphere 的 SnapCenter 插件"^]。
