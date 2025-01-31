@@ -9521,7 +9521,6 @@ destination</block>
   <block id="03ba6af8c8aacc925daefdecc52c1ced" category="paragraph">Azure NetApp Files是一款高级存储解决方案、长期备份保留成本高昂。为了优化成本、您可以将备份从Azure NetApp Files存储移动到Azure对象存储。从SnapCenter 6.0.0开始、您可以将驻留在Azure NetApp Files上的应用程序备份和克隆到Azure Blb存储(对象存储)。您可以维护两个数据副本、一个是Azure NetApp Files存储上的卷Snapshot副本、用于短期恢复、另一个是Azure Blb存储上的副本、用于长期恢复。</block>
   <block id="20c30f0cc89f35ed825a3cd3d901372c" category="paragraph">启用具有Azure NetApp Files备份的策略并将其与资源关联后、SnapCenter将负责创建卷快照并将其备份到Azure Blb存储。SnapCenter将创建备份存储并为卷启用备份。如果已为卷启用备份、则SnapCenter将利用现有存储。</block>
   <block id="e55ea9fc643ab80ebff324b5ff0d6b8d" category="list-text">FAS或AFF ONTAP以及FSxN存储系统不支持对象存储功能。</block>
-  <block id="5b44b7d138d30c112390cba3570d49bf" category="list-text">不支持Oracle和SAP HANA挂载和目录工作流。</block>
   <block id="1e05d9799692ccd6b7989f741f68ec55" category="list-text">不支持从对象存储执行备份验证、REST API支持、从对象存储执行克隆生命周期管理以及为对象存储备份执行报告功能。</block>
   <block id="c54485c49dccc7921e44c57c0bc07610" category="list-text">不支持从Azure Blb Storage上的备份还原到Azure NetApp Files。您也可以使用克隆选项。</block>
   <block id="9a6872cf47cae5149dfd734be3f2eee0" category="paragraph"><block ref="9a6872cf47cae5149dfd734be3f2eee0" category="inline-link-macro-rx"></block></block>
@@ -10063,4 +10062,6 @@ destination</block>
   <block id="9792c7ba1a8a833a1c75e11c4a7b46c3" category="list-text">如果要升级多个主机，请选择所有主机，单击，然后单击 <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>*Upgrade*&gt;*OK*。</block>
   <block id="eafbda6a16d2997896c70ba8ded3db33" category="sidebar">SnapCenter 软件是一个简单，集中化且可扩展的平台，可为混合云中任意位置的 ONTAP 系统上运行的应用程序，数据库，主机文件系统和 VM 提供应用程序一致的数据保护。本文档库包含版本6.1的信息。</block>
   <block id="888e5b40ea166427f96db1a9c08af7fc" category="sidebar">SnapCenter软件6.1文档</block>
+  <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">对象存储备份不支持Oracle和SAP HANA挂载和目录工作流、但快照支持这些工作流。</block>
+  <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">对象存储备份不支持Oracle PDB克隆、但快照支持此克隆。</block>
 </blocks>

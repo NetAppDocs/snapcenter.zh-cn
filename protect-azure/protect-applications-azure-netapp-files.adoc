@@ -22,7 +22,8 @@ Azure NetApp Files是一款高级存储解决方案、长期备份保留成本�
 == 限制
 
 * FAS或AFF ONTAP以及FSxN存储系统不支持对象存储功能。
-* 不支持Oracle和SAP HANA挂载和目录工作流。
+* 对象存储备份不支持Oracle和SAP HANA挂载和目录工作流、但快照支持这些工作流。
+* 对象存储备份不支持Oracle PDB克隆、但快照支持此克隆。
 * 不支持从对象存储执行备份验证、REST API支持、从对象存储执行克隆生命周期管理以及为对象存储备份执行报告功能。
 * 不支持从Azure Blb Storage上的备份还原到Azure NetApp Files。您也可以使用克隆选项。
 * 不支持克隆拆分。
