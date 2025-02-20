@@ -116,7 +116,7 @@ path参数用于指定在SnapCenter 服务器主机中保存MFA元数据文件�
 
 也可以使用REST API启用SnapCenter MFA功能。
 
-有关故障排除的信息、请参阅 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["在多个选项卡中同时尝试登录时会显示MFA错误"]。
+有关故障排除信息，请参阅 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["在多个选项卡中同时尝试登录时会显示MFA错误"]。
 
 
 
@@ -143,8 +143,8 @@ path参数用于指定在SnapCenter 服务器主机中保存MFA元数据文件�
 .步骤
 . 在AD FS主机中、打开AD FS管理向导并执行以下步骤：
 +
-.. 单击*依赖方信任*。
-.. 右键单击为SnapCenter 创建的依赖方信任、然后单击*删除*。
+.. 选择*依赖方信任*。
+.. 右键单击为SnapCenter创建的依赖方信任，然后选择*Delete*。
 +
 此时将显示依赖方信任的用户定义名称。
 

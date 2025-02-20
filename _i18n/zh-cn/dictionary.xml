@@ -1133,8 +1133,6 @@
   <block id="659d429411e9bdf1792d1ee2e9be57e8" category="paragraph">SQL Server 数据库使用 Microsoft SQL Server 数据库一致性检查程序（ DBCC ）来检查数据库中对象的逻辑和物理完整性。</block>
   <block id="56e4a44986eec2c6c805eb91f2eb9f57" category="admonition">您可能需要选择此选项以缩短执行时间。</block>
   <block id="f896d9aec3aeda8f9d538e812b63bad4" category="list-text">查看摘要，然后单击 "* 完成 "* 。</block>
-  <block id="0441f921ecb29005b4b309df792042a3" category="summary">通过为 SQL Server 定义还原策略，您可以成功还原数据库。</block>
-  <block id="24fc557949539a292d3c18f3c9454f62" category="doc">定义 SQL Server 的还原策略</block>
   <block id="2a681580cba5d0bac1fe8b6665a6a47e" category="doc">支持的备份类型</block>
   <block id="3f2b6cc2adaf1a1f28214b5ed39ff5cd" category="paragraph">您可以选择仅复制选项以指定 SQL Server 不截断事务日志。如果同时使用其他备份应用程序管理 SQL Server ，则应使用此选项。保持事务日志完好无损可使任何备份应用程序恢复系统数据库。纯副本备份与计划的备份顺序无关，它们不会影响数据库的备份和还原过程。</block>
   <block id="a3c82f66d39159c3e9d428cd534beb34" category="cell">备份类型</block>
@@ -2865,7 +2863,6 @@
   <block id="10680a7aa79949d8b454b29a782cc64a" category="summary">在使用 FC RDM LUN 在 Microsoft 集群中的节点之间共享存储之前，必须先创建共享仲裁磁盘和共享存储磁盘，然后将其添加到集群中的两个虚拟机。</block>
   <block id="5010ac065b072d3a5a66d4913af22358" category="doc">创建共享 FC RDM LUN</block>
   <block id="cbdb6828febec04786f22df9a1ccc748" category="inline-link">跨物理主机的集群虚拟机</block>
-  <block id="343e62dffb88999e9c503088341e1fc0" category="paragraph">共享磁盘不是使用适用于 Windows 的插件创建的。您应创建共享 LUN ，然后将其添加到集群中的每个虚拟机。有关信息，请参见<block ref="4339506e2feb8115940eea5a6e9ba248" category="inline-link-rx"></block>。</block>
   <block id="474c0722911434e135bf42df035f7de6" category="summary">如果您满足特定配置要求，适用于 Windows 的插件可为在属于两个不同 ESX 或 ESXi 服务器的两个不同虚拟机上使用 FC RDM LUN 的 Microsoft 集群提供支持，这两个虚拟机也称为跨机集群。</block>
   <block id="70a4074331de52ecee06dc3b774cd173" category="list-text">虚拟机（ VM ）必须运行相同的 Windows Server 版本。</block>
   <block id="c2b3831649c02f541b854d02dd08fd7e" category="list-text">每个 VMware 父主机的 ESX 或 ESXi 服务器版本必须相同。</block>
@@ -6857,8 +6854,6 @@
   <block id="0129ab4e23da78e3b3d44732592d15ea" category="list-text">运行以下cmdlet以更新SnapCenter 中的AD FS元数据：</block>
   <block id="97088f26ec75cb4d55c4fe5eeb3b62b4" category="section-title">更新SnapCenter MFA元数据</block>
   <block id="ac82039d46e3be923c813d3d4c5456e4" category="paragraph">只要在ADFS服务器中进行任何修改、例如修复、CA证书续订、DR等、您就应更新AD FS中的SnapCenter MFA元数据。</block>
-  <block id="56ec825045a003fc115765658ea8b639" category="list-text">单击*依赖方信任*。</block>
-  <block id="83e84b83a6a686044df5e13021693e95" category="list-text">右键单击为SnapCenter 创建的依赖方信任、然后单击*删除*。</block>
   <block id="d929cc2f30ed7ebb91266d0b79b5f2cf" category="paragraph">此时将显示依赖方信任的用户定义名称。</block>
   <block id="18231d11def74e66e747d2eb30fc1c50" category="list-text">启用多因素身份验证(MFA)。</block>
   <block id="a606674f3f6a9cee6f0ddf2eef03b07b" category="section-title">禁用多因素身份验证(MFA)</block>
@@ -7399,7 +7394,6 @@
   <block id="c8010626798701f4dd6505ffd8c7bab3" category="paragraph">您可以使用PowerShell命令为SnapCenter服务器启用MFA功能。</block>
   <block id="65b2ac31e28fbe23df3871ad716e40c2" category="list-text">使用为SnapCenter 服务器启用MFA<block ref="2eb01e8a95b53a60b13860ce5cac5104" prefix=" " category="inline-code"></block> cmdlet。</block>
   <block id="b73f485c1067e4b3168b292142131855" category="inline-link">在多个选项卡中同时尝试登录时会显示MFA错误</block>
-  <block id="9e4f9470d66f1730ad7525f9043126be" category="paragraph">有关故障排除的信息、请参阅<block ref="361c774ee5cb22be42ef8ea152ed45ad" category="inline-link-rx"></block>。</block>
   <block id="b3844eddf099b8f80b95a7c68ca22ae5" category="list-text">使用禁用MFA并清理在启用MFA时创建的配置文件<block ref="2eb01e8a95b53a60b13860ce5cac5104" prefix=" " category="inline-code"></block> cmdlet。</block>
   <block id="b31ad42cda3bd1bc7787fd71d2a175bf" category="summary">您可以使用REST API、PowerShell和sccli接口配置MFA。</block>
   <block id="0699cec0b36b38a01a2c7453df793209" category="doc">使用PowerShell、sccli和REST API在SnapCenter服务器中配置MFA</block>
@@ -7898,9 +7892,6 @@ NetApp®Single Mailbox Recovery已于2023年5月12日终止提供(EOA)。在支�
   <block id="8ffddc72407882a56963d8f378c8a456" category="list-text">主存储刷新</block>
   <block id="9f4800cf67d29558e0e5678693afc837" category="paragraph">支持通过存储技术更新将主存储更换为新存储。您不能将现有二级存储转换为主存储。</block>
   <block id="1e1065b586c984207ccf5533c1320669" category="list-text">二级存储刷新</block>
-  <block id="3d31d63019c8a7405127998ac1be0ceb" category="paragraph">支持的其他方案包括：</block>
-  <block id="0985fc6b1b51806986eb62030f325040" category="list-text">SVM名称更改</block>
-  <block id="fc957d9228b0c0b7e2969feb8f831113" category="list-text">卷名称更改</block>
   <block id="7fd4a62a4b2e1acfeaddfc8e7f2832c8" category="section-title">更新主存储的备份</block>
   <block id="ff8ce159bd650a518bc9706cce5196da" category="paragraph">在对存储进行技术更新后、您应运行存储技术刷新API或cmdlet、以便使用新的存储详细信息更新SnapCenter中的旧备份。</block>
   <block id="e1efdab7eb1b670b3a9bd8ace49c4b03" category="list-text">将数据从旧存储迁移到新存储。</block>
@@ -10064,4 +10055,9 @@ destination</block>
   <block id="888e5b40ea166427f96db1a9c08af7fc" category="sidebar">SnapCenter软件6.1文档</block>
   <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">对象存储备份不支持Oracle和SAP HANA挂载和目录工作流、但快照支持这些工作流。</block>
   <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">对象存储备份不支持Oracle PDB克隆、但快照支持此克隆。</block>
+  <block id="6eec14240810faadbd60c3ec98b543e7" category="paragraph">共享磁盘不是使用适用于 Windows 的插件创建的。您应创建共享 LUN ，然后将其添加到集群中的每个虚拟机。有关信息，请参见<block ref="0564b16166a6e24aa234d21e5bcdc18a" category="inline-link-rx"></block>。</block>
+  <block id="744d48cfa6032e04d109166f7ff6aeaf" category="paragraph">有关故障排除信息，请参阅<block ref="361c774ee5cb22be42ef8ea152ed45ad" category="inline-link-rx"></block>。</block>
+  <block id="a141599a0eec0e6d9aea907fc97ea039" category="list-text">选择*依赖方信任*。</block>
+  <block id="458f1b484cf2f93e8e2f35b3f5a3b94a" category="list-text">右键单击为SnapCenter创建的依赖方信任，然后选择*Delete*。</block>
+  <block id="c6cd54ad2b3bca5fe6357919d1ec62e7" category="list-text">您应安装ASP.NET Core 8.0.12 (以及所有后续的8.0.x修补程序) Hosting Bundle和7.4.2或更高版本。</block>
 </blocks>

@@ -16,6 +16,7 @@ summary: 您可以使用 SnapCenter 服务器安装程序可执行文件升级 S
 .开始之前
 * SnapCenter 服务器主机必须是最新的 Windows 更新，并且不会发生待定系统重新启动。
 * 在启动升级操作之前，应确保没有其他操作正在运行。
+* 您应安装ASP.NET Core 8.0.12 (以及所有后续的8.0.x修补程序) Hosting Bundle和7.4.2或更高版本。
 * 在确保未运行任何作业之后，您应备份 SnapCenter 存储库（ MySQL ）数据库。建议在升级 SnapCenter 服务器和 Exchange 插件之前执行此操作。
 +
 有关信息，请参见 link:../admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["备份 SnapCenter 存储库"^]。
