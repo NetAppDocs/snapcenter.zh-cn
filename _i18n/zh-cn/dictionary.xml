@@ -9850,8 +9850,6 @@ destination</block>
   <block id="5444e411b400fd0c1d17ad74b8d82bff" category="paragraph">+.NET Framework 8.0.12功能+</block>
   <block id="8c16affd19f6d2610f039e0bf745fe04" category="list-text">.NET 8.0.12 (以及所有后续的8.0.x修补程序)</block>
   <block id="36ab4d2d051baac565e5a2261da2c98d" category="admonition">ASP.NET核心需要IIS_IUSRS才能访问Windows上SnapCenter服务器中的临时文件系统。</block>
-  <block id="78f63cd4c898dfa4fb35e6755c784b8e" category="list-text">SnapCenter 6.1支持运行ONTAP 9.161的NetApp ASA R2系统(ASA A1K、ASA A70和ASA A90)。</block>
-  <block id="a96666c23540f7c6d0da8ca6ab7b57d5" category="paragraph">ASA R2系统可为基于全闪存平台构建的纯SAN环境提供统一的硬件和软件解决方案。ASA R2系统在实施其存储层、支持的协议和ONTAP特性方面与其他ONTAP系统(ASA、AFF和FAS)有所不同。</block>
   <block id="1bb71df56b7ae979d57d7cedfffe49f5" category="inline-link">ASA R2文档</block>
   <block id="5cbf1300bdf2b6a56588b252b251a998" category="paragraph">有关ASA R2系统的信息，请参见<block ref="d94cf7303df26cfd7838987d91518061" category="inline-link-rx"></block>。</block>
   <block id="de14602aec2aa05e977975d7781f0163" category="paragraph">有关权限列表的信息，请参见 <block ref="d791b2cd4a5fa29c456ec537e56c834d" category="inline-link-macro-rx"></block>。</block>
@@ -10060,4 +10058,6 @@ destination</block>
   <block id="a141599a0eec0e6d9aea907fc97ea039" category="list-text">选择*依赖方信任*。</block>
   <block id="458f1b484cf2f93e8e2f35b3f5a3b94a" category="list-text">右键单击为SnapCenter创建的依赖方信任，然后选择*Delete*。</block>
   <block id="c6cd54ad2b3bca5fe6357919d1ec62e7" category="list-text">您应安装ASP.NET Core 8.0.12 (以及所有后续的8.0.x修补程序) Hosting Bundle和7.4.2或更高版本。</block>
+  <block id="088d994d276e3b7e6090022acb48aaf7" category="list-text">SnapCenter 6.1支持运行ONTAP 9.161的NetApp ASA R2系统。</block>
+  <block id="a1c01ec21d4b8df32fe29facff7e7688" category="paragraph">ASA R2系统可为基于全闪存平台构建的纯SAN环境提供统一的硬件和软件解决方案。</block>
 </blocks>
