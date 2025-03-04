@@ -31,7 +31,7 @@ summary: 您可以使用NetApp支持的插件执行数据保护操作。
 
 * 使用SnapCenter策略利用现有复制关系(SnapVault或SnapMirror)将主系统上创建的快照更新到ONTAP二级系统
 +
-ONTAP主存储系统和二级存储系统可以是ONTAP FAS、AFF、全SAN阵列(ASA)、Select或Cloud ONTAP。
+ONTAP主卷和二级卷可以是ONTAP FAS、AFF、ASA、ONTAP Select或Cloud Volumes ONTAP。
 
 * 恢复完整的 ONTAP 卷， LUN 或文件。
 +

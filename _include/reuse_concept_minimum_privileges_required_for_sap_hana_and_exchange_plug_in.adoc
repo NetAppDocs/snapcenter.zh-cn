@@ -4,7 +4,7 @@
 
 所需的最小 ONTAP 权限因用于数据保护的 SnapCenter 插件而异。
 
-* all-access 命令： ONTAP 8.3.0 及更高版本所需的最低权限
+* all-access 命令： ONTAP 9.12.1 及更高版本所需的最低权限
 +
 ** event generate-autosupport-log
 ** 作业历史记录显示

@@ -6,8 +6,6 @@ summary: 与从 SnapCenter 执行的各种操作相关的信息存储在 SnapCen
 ---
 = 管理 SnapCenter 服务器存储库
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
 [role="lead"]

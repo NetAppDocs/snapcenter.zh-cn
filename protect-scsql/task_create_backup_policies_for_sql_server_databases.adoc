@@ -224,7 +224,7 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
 IMPORTANT: 默认情况下，保留计数值设置为 2 。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。
 
 
-NOTE: 对于 ONTAP 9.4 或更高版本上的资源，最大保留值为 1018 ，对于 ONTAP 9.3 或更早版本上的资源，最大保留值为 254 。如果将保留设置为高于底层 ONTAP 版本支持的值，则备份将失败。
+NOTE: 最大保留值为1018。如果保留设置的值高于底层NetApp ONTAP版本支持的值、备份将失败。
 
 . 保留快照的时间长度
 +
@@ -237,13 +237,7 @@ SnapLock保留期限应少于100年。
 
 . 如果要指定二级Snapshot副本锁定期限、请选择*二级Snapshot副本锁定期限*、然后选择天、月或年。
 +
-要使此选项生效、您必须执行以下任务：
-
-+
-** 选择*主Snapshot副本锁定期限*。
-** 选择一个或两个二级复制选项。
-+
-以下示例将日志Snapshot保留设置为2：
+以下示例将日志快照保留设置为2：
 
 +
 .显示示例
@@ -254,8 +248,6 @@ set-smPolicy -PolicyName 'newpol'-PolicyType 'Backup'-PluginPolicyType 'CSQL'-sq
 ====
 +
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_retains_Snapshot_copies_of_the_database["SnapCenter 会保留数据库的 Snapshot 副本"]
-
-
 
 . 选择Snapshot标签
 +

@@ -99,3 +99,38 @@ NOTE: 您不能选择属于集群的 SVM 。
 NOTE: 如果使用 ONTAP 图形用户界面从 ONTAP 集群中删除了 SVM ，请在 SnapCenter 图形用户界面中单击 * 重新发现 * 以更新 SVM 列表。
 
 
+
+
+
+== REST API 支持
+
+默认情况下、与ONTAP和ASA R2存储系统的所有存储连接都将通过ZAPI。可以为选定ONTAP版本启用REST API。
+
+您可以修改以下配置文件中的配置密钥：
+
+* IsRestEnableForStorageConnection
++
+默认值为 false 。
+
+* MinOntapVersion至UseREST
++
+默认值为9.13.1.
+
+
+
+.通过REST API启用连接
+. 将IsRestEnableForStorageConnection设置为true。
+. 在服务器和Windows插件主机上的SMCore.ServiceHost.dll.config和SnapDriveService.dll.config中添加该密钥。
++
+_<add key="IsRestEnabledForStorageConnection" value="true" />_
+
+
+
+.将通过REST API进行的连接限制为特定版本的ONTAP
+. 将config参数MinOntapVersion ToUseREST设置为true。
+. 在服务器和Windows插件主机上的SMCore.ServiceHost.dll.config和SnapDriveService.dll.config中添加该密钥。
++
+_<add key="MinOntapVersionToUseREST" value="9.13.1" />_
+
+. 在服务器上重新启动SmCore服务、并在插件计算机上重新启动插件和SnapDrive服务。
+

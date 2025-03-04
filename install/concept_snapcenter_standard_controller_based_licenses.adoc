@@ -11,13 +11,13 @@ summary: 如果您使用的是FAS、AFF或ASA存储控制器、则需要一个�
 
 
 [role="lead"]
-如果您使用的是FAS、AFF或全SAN阵列(ASA)存储控制器、则需要一个基于控制器的SnapCenter标准许可证。
+如果您使用的是FAS、AFF或ASA存储控制器、则需要一个基于控制器的SnapCenter标准版许可证。
 
 基于控制器的许可证具有以下特征：
 
 * 购买高级版或闪存捆绑包时附带的 SnapCenter 标准权益（不随基础包一起提供）
 * 存储使用量无限制
-* 可通过使用ONTAP系统管理器或存储集群命令行将其直接添加到FAS、AFF或ASA存储控制器来启用
+* 可通过使用ONTAP系统管理器或ONTAP命令行界面将其直接添加到FAS、AFF或ASA存储控制器来启用。
 +
 
 NOTE: 对于基于 SnapCenter 控制器的许可证，您不会在 SnapCenter 图形用户界面中输入任何许可证信息。
@@ -162,7 +162,7 @@ All-Flash Optimized: false
 
 == 第4步：检索基于控制器的许可证的序列号
 
-如果您使用的是 FAS 或 AFF 存储，则可以先从 NetApp 支持站点检索基于 SnapCenter 控制器的许可证，然后再使用 ONTAP 命令行进行安装。
+如果您使用的是FAS、ASA或AFF存储、则可以先从NetApp支持站点检索基于SnapCenter控制器的许可证、然后再使用ONTAP命令行进行安装。
 
 .开始之前
 * 您应具有有效的 NetApp 支持站点登录凭据。

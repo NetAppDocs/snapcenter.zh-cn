@@ -130,9 +130,6 @@ NOTE: 如果添加的 SVM 使用短名称或 FQDN ，则必须可从 SnapCenter 
 
 
 
-
-NOTE: 如果已将FAS或AFF存储系统升级到全SAN阵列(ASA)、则必须刷新SnapCenter服务器中的存储连接、以在SnapCenter中反映新的存储类型。
-
 * 完成后 *
 
 集群管理员必须在每个存储系统节点上启用 AutoSupport ，才能通过在存储系统命令行中运行以下命令从 SnapCenter 有权访问的所有存储系统发送电子邮件通知：

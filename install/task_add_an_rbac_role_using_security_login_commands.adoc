@@ -1,17 +1,17 @@
 ---
 permalink: install/task_add_an_rbac_role_using_security_login_commands.html 
 sidebar: sidebar 
-keywords: RBAC roles, add, ONTAP RBAC role 
-summary: 如果存储系统运行的是集群模式 ONTAP ，则可以使用 security login 命令添加 ONTAP RBAC 角色。 
+keywords: RBAC roles, add, NetApp ONTAP RBAC role 
+summary: 如果存储系统运行的是集群模式NetApp ONTAP、则可以使用security login命令添加NetApp ONTAP RBAC角色。 
 ---
-= 使用 security login 命令添加 ONTAP RBAC 角色
+= 使用security login命令添加NetApp ONTAP RBAC角色
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-如果存储系统运行的是集群模式 ONTAP ，则可以使用 security login 命令添加 ONTAP RBAC 角色。
+如果存储系统运行的是集群模式ONTAP、则可以使用security login命令添加NetApp ONTAP RBAC角色。
 
 .开始之前
 * 在为运行集群模式 ONTAP 的存储系统创建 ONTAP RBAC 角色之前，您必须确定以下内容：
@@ -37,12 +37,12 @@ summary: 如果存储系统运行的是集群模式 ONTAP ，则可以使用 sec
 
 * 关于此任务 *
 
-要简化在存储系统上配置这些角色的过程，您可以使用适用于 Data ONTAP 的 RBAC User Creator 工具，该工具已发布在 NetApp 社区论坛上。
+为了简化在存储系统上配置这些角色的过程、您可以使用适用于NetApp ONTAP的RBAC User Creator工具、此工具发布在NetApp社区论坛上。
 
-此工具会自动正确设置 ONTAP 权限。例如，适用于 Data ONTAP 的 RBAC User Creator 工具会自动按正确顺序添加权限，以便首先显示所有访问权限。如果先添加只读权限，然后再添加纯访问权限，则 ONTAP 会将纯访问权限标记为重复项并忽略它们。
+此工具会自动正确设置 ONTAP 权限。例如、适用于NetApp ONTAP的RBAC User Creator工具会自动按正确顺序添加Privileges、以便首先显示完全访问Privileges。如果先添加只读权限，然后再添加纯访问权限，则 ONTAP 会将纯访问权限标记为重复项并忽略它们。
 
 
-NOTE: 如果稍后升级 SnapCenter 或 ONTAP ，则应重新运行适用于 Data ONTAP 的 RBAC 用户创建程序工具以更新先前创建的用户角色。为早期版本的 SnapCenter 或 ONTAP 创建的用户角色无法在升级后的版本中正常工作。重新运行此工具时，它会自动处理升级。您无需重新创建角色。
+NOTE: 如果稍后升级SnapCenter或ONTAP、则应重新运行适用于NetApp ONTAP的RBAC User Creator工具以更新先前创建的用户角色。为早期版本的 SnapCenter 或 ONTAP 创建的用户角色无法在升级后的版本中正常工作。重新运行此工具时，它会自动处理升级。您无需重新创建角色。
 
 有关设置 ONTAP RBAC 角色的详细信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-adm-auth-rbac/home.html["《 ONTAP 9 管理员身份验证和 RBAC 高级指南》"^]。
 

@@ -20,11 +20,11 @@ SnapCenter 需要多个许可证才能对应用程序，数据库，文件系统
  a| 
 基于 SnapCenter 标准控制器
  a| 
-对于FAS、AFF、全SAN阵列(ASA)为必需项
+对于FAS、AFF、ASA为必需项
 
-SnapCenter标准版许可证是基于控制器的许可证、包含在ONTAP One中。如果您拥有 SnapManager 套件许可证，则还可以获得 SnapCenter 标准许可证授权。如果您要在FAS、AFF或ASA存储中试用SnapCenter、可以联系销售代表来获取ONTAP One评估版许可证。
+SnapCenter标准版许可证是一种基于控制器的许可证、包含在NetApp ONTAP One中。如果您拥有 SnapManager 套件许可证，则还可以获得 SnapCenter 标准许可证授权。如果您要在FAS、AFF或ASA存储中试用SnapCenter、可以联系销售代表来获取NetApp ONTAP One评估版许可证。
 
-有关ONTAP One附带的许可证的信息，请参阅 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["ONTAP One附带的许可证"]。
+有关NetApp ONTAP One附带的许可证的信息，请参阅 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["NetApp ONTAP One附带的许可证"]。
 
 
 NOTE: SnapCenter 也作为数据保护包的一部分提供。如果您购买的是 A400 或更高版本，则应购买数据保护包。

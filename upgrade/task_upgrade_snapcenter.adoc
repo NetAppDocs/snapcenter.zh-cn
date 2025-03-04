@@ -30,10 +30,7 @@ SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe 
 .关于此任务
 * 升级期间，系统会执行 SQL 脚本以更新 NSM 数据库中的 Exchange 数据，从而将 DAG 和主机短名称转换为 FQDN 。只有在将 SnapCenter 服务器与 Exchange 插件结合使用时，此选项才适用。
 * 在启动升级操作之前，如果已手动将服务器主机置于维护模式，则在升级后，您需要通过单击*hosts*>*Activate Schedule *手动将服务器主机退出维护模式。
-* 对于适用于Microsoft SQL Server的SnapCenter 插件、适用于Microsoft Exchange Server的SnapCenter 插件和适用于Microsoft Windows的SnapCenter 插件、建议将服务器和插件主机都升级到4.7版、以便scripts_path能够运行。
-+
-对于在策略中启用了预处理和后处理脚本的现有备份和验证计划、备份操作将在升级后继续运行。
-
+* 对于在策略中启用了预处理和后处理脚本的现有备份和验证计划、备份操作将在升级后继续运行。
 +
 在*作业详细信息*页面中、会显示一条警告消息、建议客户将脚本复制到scripts_path并编辑策略、以提供与scripts_path相关的路径。对于克隆生命周期作业、子作业级别将显示警告消息。
 

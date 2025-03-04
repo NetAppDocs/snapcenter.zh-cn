@@ -96,12 +96,6 @@ SnapLock保留期限应少于100年。
  a| 
 选择*二级Snapshot副本锁定期限*、然后选择天、月或年。
 
-要使此选项生效、您必须执行以下任务：
-
-*** 选择*主Snapshot副本锁定期限*。
-*** 选择一个或两个二级复制选项。
-
-
 |===
 +
 
@@ -148,9 +142,10 @@ NOTE: 要使*二级Snapshot副本锁定期限*生效、必须选择二级复制�
  a| 
 选择 Snapshot 标签。
 
-+根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。
+根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。
 
-+注意：如果选择了*创建本地SnapMirror副本后更新Snap照*，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
+
+NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
 
 
 

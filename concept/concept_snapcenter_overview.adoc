@@ -26,7 +26,7 @@ SnapCenter 既包括 SnapCenter 服务器，也包括单个轻型插件。您可
 
 * 内部部署以保护以下内容：
 +
-** 位于ONTAP FAS、AFF或全SAN阵列(ASA)主系统上并复制到ONTAP FAS、AFF或ASA二级系统的数据
+** 位于ONTAP FAS、AFF或ASA主系统上并复制到ONTAP FAS、AFF或ASA二级系统的数据
 ** ONTAP Select 主系统上的数据
 ** 位于ONTAP FAS、AFF或ASA主系统和二级系统上并受本地StorageGRID对象存储保护的数据
 ** ONTAP ASA R2主系统和二级系统上的数据

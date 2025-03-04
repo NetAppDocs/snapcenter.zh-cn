@@ -87,7 +87,7 @@ NOTE: 不应使用通配符条目(*)来允许所有命令。
 
 == 为 Linux 主机的非 root 用户配置 sudo 权限
 
-通过 SnapCenter 2.0 及更高版本，非 root 用户可以安装适用于 Linux 的 SnapCenter 插件软件包并启动插件过程。此插件进程将以有效的非root用户身份运行。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。
+SnapCenter允许非root用户安装适用于Linux的SnapCenter插件软件包并启动插件进程。此插件进程将以有效的非root用户身份运行。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。
 
 * 您需要的内容 *
 

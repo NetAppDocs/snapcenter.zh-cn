@@ -22,8 +22,7 @@ NOTE: 正在执行数据收集任务时，系统 CPU 利用率较高。只要操
 
 默认情况下， EMS 数据收集处于启用状态，并在安装日期后每七天运行一次。您可以随时使用 PowerShell cmdlet _Disable-SmDataCollectionEMS_ 禁用数据收集。
 
-* 步骤 *
-
+.步骤
 . 在 PowerShell 命令行中，输入 _Open-SmConnection_ 与 SnapCenter 建立会话。
 . 输入 _Disable-SmDataCollectionEms_禁用 EMS 数据收集。
 
@@ -34,10 +33,9 @@ NOTE: 正在执行数据收集任务时，系统 CPU 利用率较高。只要操
 
 EMS 数据收集默认处于启用状态，计划从安装日期起每七天运行一次。如果已禁用 EMS ，则可以使用 _Enable-SmDataCollectionEMS_ cmdlet 重新启动 EMS 数据收集。
 
-已向 Storage Virtual Machine （ SVM ）用户授予 Data ONTAP event generate-autosupport-log 权限。
+已向Storage Virtual Machine (AutoSupport)用户授予NetApp ONTAP event genere-SVM-log权限。
 
-* 步骤 *
-
+.步骤
 . 在 PowerShell 命令行中，输入 _Open-SmConnection_ 与 SnapCenter 建立会话。
 . 输入 _Enable-SmDataCollectionEMS_ 以启用 EMS 数据收集。
 
@@ -48,8 +46,7 @@ EMS 数据收集默认处于启用状态，计划从安装日期起每七天运�
 
 您可以使用 PowerShell cmdlet 更改 EMS 数据收集计划或目标 Storage Virtual Machine （ SVM ）。
 
-* 步骤 *
-
+.步骤
 . 在 PowerShell 命令行中，要与 SnapCenter 建立会话，请输入 _Open-SmConnection_ cmdlet 。
 . 要更改 EMS 数据收集目标，请输入 _Set-SmDataCollectionEmsTarget_ cmdlet 。
 . 要更改 EMS 数据收集计划，请输入 _Set-SmDataCollectionEmsSchedule_ cmdlet 。
@@ -61,8 +58,7 @@ EMS 数据收集默认处于启用状态，计划从安装日期起每七天运�
 
 您可以使用多个 PowerShell cmdlet 监控 EMS 数据收集的状态。您可以获取有关计划， Storage Virtual Machine （ SVM ）目标和状态的信息。
 
-* 步骤 *
-
+.步骤
 . 在 PowerShell 命令行中，输入 _Open-SmConnection_ 与 SnapCenter 建立会话。
 . 输入 _Get-SmDataCollectionEmsSchedule_ 以检索有关 EMS 数据收集计划的信息。
 . 输入 _Get-SmDataCollectionEmsStatus_ 以检索有关 EMS 数据收集状态的信息。

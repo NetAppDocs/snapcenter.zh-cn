@@ -28,7 +28,7 @@ summary: 您可以使用 SnapCenter 克隆备份。您可以从主备份或二�
 NOTE: 如果命令列表中不存在这些命令、则操作将失败。
 
 .关于此任务
-* 有关克隆拆分操作限制的信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 ONTAP 9 逻辑存储管理指南》"^]。
+* 有关FlexClone卷拆分操作的信息，请参见https://docs.netapp.com/us-en/ontap/volumes/split-flexclone-from-parent-task.html["将 FlexClone 卷从其父卷拆分"]。
 * 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
 
