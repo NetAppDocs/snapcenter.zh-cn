@@ -8034,7 +8034,6 @@ NetApp®Single Mailbox Recovery已于2023年5月12日终止提供(EOA)。在支�
   <block id="98950caea953c79d817eba870ba7ae48" category="summary">在SnapCenter中创建Azure凭据以访问Azure NetApp帐户。</block>
   <block id="1ed01bab203e8745a0dcfe58f019c1d9" category="doc">在SnapCenter中创建Azure凭据</block>
   <block id="df807c6f76450e7af962b9ec2ffe867e" category="paragraph">您应在SnapCenter中创建Azure凭据以访问Azure NetApp帐户。</block>
-  <block id="c564c60262d5040cb9b4b2cb05c8532d" category="paragraph">在创建Azure凭据之前、请确保已在Azure中创建服务主体。要创建Azure凭据、需要提供与服务主体关联的租户ID、客户端ID和机密密钥。</block>
   <block id="aeec85b47cdcde0a1bea1e8a52e7efae" category="paragraph">从下拉列表中选择*Azure凭据*。</block>
   <block id="7131a7a6bfe81200d21d5a33c64847b6" category="paragraph">租户ID</block>
   <block id="797fc8989dfaa45ed85ce3b352fc0fb9" category="paragraph">输入租户ID。</block>
@@ -10070,4 +10069,11 @@ destination</block>
   <block id="cdc0da196ab05c60eaebdca9a2459cd1" category="list-text">有关FlexClone卷拆分操作的信息、请参见、<block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block></block>
   <block id="dc4d7bf5602b12335597fd5350deab23" category="admonition">最大保留值为1018。如果保留设置的值高于底层NetApp ONTAP版本支持的值、备份将失败。</block>
   <block id="ee96dd48de878c0191d0701d853dd514" category="paragraph">以下示例将日志快照保留设置为2：</block>
+  <block id="ab6d9fe11358cebc1d2cc02fa1c47496" category="list-text">确保已在Azure中创建服务主体。</block>
+  <block id="6f346066b074941885d0989051206e4e" category="list-text">确保您拥有与服务主体关联的租户ID、客户端ID和机密密钥。</block>
+  <block id="db4af27eace345776f29f9a3dbb3b5ff" category="list-text">租户ID可在Azure门户中的"概述"页面上找到。</block>
+  <block id="dc2337ddc542969fd93e297dc61108a9" category="list-text">客户端ID也称为企业应用程序/服务主体的应用程序ID。您可以在Azure门户中为作为SnapCenter服务主体而创建的企业应用程序的"概述"页面上找到此信息。</block>
+  <block id="ee69fc7e193d5b369d8bd7792465c781" category="list-text">客户端机密密钥也称为机密值。您可以通过导航到Entra ID下的*应用程序注册*在Azure门户中创建此客户端密钥。选择创建的企业应用程序后，导航到*证书和机密*，然后选择*新客户端机密*。</block>
+  <block id="732f79401041a0ecc8df586c30756a84" category="admonition">只有在创建机密值时、才能访问此值。您无法稍后访问它。</block>
+  <block id="f221207f0adcd828979d33693cf006d5" category="list-text">需要为服务主体授予权限。贡献方角色允许服务主体在Azure中执行所需操作。可以从"订 阅"页面中的访问控制(IAM)页面授予此权限。</block>
 </blocks>
