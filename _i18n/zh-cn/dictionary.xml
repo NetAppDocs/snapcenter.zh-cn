@@ -4302,7 +4302,6 @@
   <block id="f367d650e57088caf7b808e01235016d" category="inline-link">如何使用 SnapCenter 从 SMBR 中的二级存储还原</block>
   <block id="41b4c689a8b0e3ba8bfecb2a1e608e46" category="list-text"><block ref="41b4c689a8b0e3ba8bfecb2a1e608e46" category="inline-link-rx"></block></block>
   <block id="f004280f6db6ea5f9302c9851388d751" category="inline-link">使用 SMBR 从 SnapVault 恢复 Microsoft Exchange 邮件</block>
-  <block id="1b0fb59a5bc951f7dc82cb43fe362145" category="list-text"><block ref="00a76af185a73b84e54e96058031aef5" category="inline-link-rx"></block></block>
   <block id="4b1461b70222d8080efe5c1e72d3018c" category="summary">通过为 Exchange Server 定义还原策略，您可以成功还原数据库。</block>
   <block id="d21865bd5c6bde2b3334a20e500f9b18" category="doc">定义 Exchange 数据库的还原策略</block>
   <block id="02956df3a6f27d5bd93ba2c6646fbdef" category="section-title">Exchange Server 中还原操作的源</block>
@@ -6976,7 +6975,6 @@
   <block id="a8d03bc12fa704a66e02c6802c0766f8" category="summary">当适用于SQL Server的SnapCenter 插件关闭时、请执行以下手动步骤来恢复此插件。</block>
   <block id="112fa4c1243fe1af31b4cf57c26ced23" category="list-text">使用 * 添加主机 * 或 * 修改主机 * 页面将适用于 SQL Server 的 SnapCenter 插件推送到备用主机。请参见 <block ref="fc11fadbfb2b2b87f8c260a133d75ad2" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
-  <block id="ab9238ca6f628634f6f6f2cf63502cdb" category="paragraph">请参见 <block ref="44de5c9fafab2e4e76e19e3717abc2e2" category="inline-link-macro-rx"></block> 视频。</block>
   <block id="94c4200231b3891f27561beda5d4e31f" category="doc">SnapCenter 灾难恢复</block>
   <block id="1da5a00a663269fc81a2098b0d91e4d6" category="paragraph">您可以在发生资源损坏或服务器崩溃等灾难时使用SnapCenter 灾难恢复(DR)功能恢复SnapCenter 服务器。您可以恢复 SnapCenter 存储库，服务器计划和服务器配置组件。您还可以恢复适用于 SQL Server 的 SnapCenter 插件和适用于 SQL Server 的 SnapCenter 插件存储。</block>
   <block id="68e856b5be6554a8e4ee8b393b327b0b" category="paragraph">本节介绍SnapCenter 中的两种类型的灾难恢复(DR)：</block>
@@ -10076,4 +10074,6 @@ destination</block>
   <block id="ee69fc7e193d5b369d8bd7792465c781" category="list-text">客户端机密密钥也称为机密值。您可以通过导航到Entra ID下的*应用程序注册*在Azure门户中创建此客户端密钥。选择创建的企业应用程序后，导航到*证书和机密*，然后选择*新客户端机密*。</block>
   <block id="732f79401041a0ecc8df586c30756a84" category="admonition">只有在创建机密值时、才能访问此值。您无法稍后访问它。</block>
   <block id="f221207f0adcd828979d33693cf006d5" category="list-text">需要为服务主体授予权限。贡献方角色允许服务主体在Azure中执行所需操作。可以从"订 阅"页面中的访问控制(IAM)页面授予此权限。</block>
+  <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
+  <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">观看 <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> 视频。</block>
 </blocks>
