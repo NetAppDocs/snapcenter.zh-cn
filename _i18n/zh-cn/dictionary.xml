@@ -8768,7 +8768,6 @@ destination</block>
   <block id="bed33f0d8ca7a361d2db96468ec4530a" category="paragraph">SnapCenter支持单实例和多实例DB2设置。您可以在Linux和Windows环境中使用适用于IBM DB2数据库的插件。在Windows环境中、DB2将作为手动资源受支持。</block>
   <block id="c3395454ca09d74ac87021eb3fc9f403" category="paragraph">安装适用于IBM DB2数据库的插件后、您可以使用采用NetApp SnapMirror技术的SnapCenter在另一个卷上创建备份集的镜像副本。您还可以使用采用 NetApp SnapVault 技术的插件执行磁盘到磁盘备份复制，以满足标准要求。</block>
   <block id="ee9977908b8afee30488e8caec66d0fb" category="paragraph">适用于DB2的SnapCenter插件支持基于ONTAP和Azure NetApp文件存储布局的NFS和SAN。</block>
-  <block id="d63a091b1a9135cd24b47b631680f297" category="paragraph">不支持VMDK或虚拟存储布局。</block>
   <block id="f36fcdaf30a6f579eb56856f5e83318d" category="summary">SnapCenter 在物理机和虚拟机（ VM ）上支持多种存储类型。在安装适用于IBM DB2的SnapCenter插件之前、您必须验证是否支持您的存储类型。</block>
   <block id="6426213ce16798143b0b51f16c7f4f53" category="doc">适用于IBM DB2的SnapCenter插件支持的存储类型</block>
   <block id="571cf05bca5a2c1b66a39de8869e3134" category="summary">备份类型指定要创建的备份类型。SnapCenter支持IBM DB2数据库基于Snapshot副本的备份类型。</block>
@@ -8907,7 +8906,6 @@ destination</block>
   <block id="7f30d362b46650080b9026ef95dfe5f2" category="paragraph">SnapCenter支持单实例MySQL设置。您可以在Linux和Windows环境中使用适用于MySQL数据库的插件。在Windows环境中、支持将MySQL作为手动资源。</block>
   <block id="e417b7c5210d9ffe922c02319c459751" category="paragraph">安装适用于MySQL数据库的插件后、您可以使用采用NetApp SnapMirror技术的SnapCenter在另一个卷上创建备份集的镜像副本。您还可以使用采用 NetApp SnapVault 技术的插件执行磁盘到磁盘备份复制，以满足标准要求。</block>
   <block id="8a1b03bf3dea7ac1c1925685477e35ea" category="paragraph">适用于MySQL的SnapCenter插件支持基于ONTAP和Azure NetApp文件存储布局的NFS和SAN。</block>
-  <block id="72f4f1f1ebc26a28eb085ea04d34b5db" category="paragraph">支持VMDK或虚拟存储布局。</block>
   <block id="aeb9838805bc067b8277d80da271966d" category="paragraph">不支持符号链接。</block>
   <block id="3a16a89981eac15a65e1d123f0f768f0" category="summary">SnapCenter 在物理机和虚拟机（ VM ）上支持多种存储类型。在安装适用于MySQL的SnapCenter插件之前、您必须验证是否支持您的存储类型。</block>
   <block id="a8e3ba965f3e160532b9d3ee582e1c53" category="doc">适用于MySQL的SnapCenter插件支持的存储类型</block>
@@ -10076,4 +10074,5 @@ destination</block>
   <block id="f221207f0adcd828979d33693cf006d5" category="list-text">需要为服务主体授予权限。贡献方角色允许服务主体在Azure中执行所需操作。可以从"订 阅"页面中的访问控制(IAM)页面授予此权限。</block>
   <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
   <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">观看 <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> 视频。</block>
+  <block id="5c8b8bc332cb41802ffbe6c5cda258ab" category="paragraph">支持VMDK、VVOV和RDM虚拟存储布局。</block>
 </blocks>
