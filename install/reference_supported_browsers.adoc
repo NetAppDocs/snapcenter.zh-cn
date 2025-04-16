@@ -2,7 +2,7 @@
 permalink: install/reference_supported_browsers.html 
 sidebar: sidebar 
 keywords: SnapCenter, browsers, chrome, IE, Edge 
-summary: SnapCenter 软件可在多个浏览器上使用。 
+summary: SnapCenter软件可以在多个浏览器上使用。 
 ---
 = 支持的浏览器
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: SnapCenter 软件可在多个浏览器上使用。
 
 
 [role="lead"]
-SnapCenter 软件可在多个浏览器上使用。
+SnapCenter软件可以在多个浏览器上使用。
 
 * Chrome 125及更高版本
 * Microsoft Edge 110.0.1857.17及更高版本

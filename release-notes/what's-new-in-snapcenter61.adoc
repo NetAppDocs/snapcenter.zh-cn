@@ -2,7 +2,7 @@
 permalink: 'release-notes/what"s-new-in-snapcenter61.html' 
 sidebar: sidebar 
 keywords: what is new, features, enhancements, 6.1 
-summary: SnapCenter软件6.1版包括几项新功能和增强功能。 
+summary: SnapCenter软件6.1版包含多项新增功能和增强功能。 
 ---
 = SnapCenter软件6.1中的新增功能
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: SnapCenter软件6.1版包括几项新功能和增强功能。
 
 
 [role="lead"]
-SnapCenter软件6.1版包括几项新功能和增强功能。
+SnapCenter软件6.1版包含多项新增功能和增强功能。
 
 |===
 | 更新 | Description 

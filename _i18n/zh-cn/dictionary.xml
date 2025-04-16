@@ -2943,7 +2943,6 @@
   <block id="305bc77c5f1449ccc8d075c59674aa7b" category="paragraph">如果无法从 SnapCenter 服务器解析域 FQDN ，请指定一个或多个域控制器 IP 地址。</block>
   <block id="589c06f8044162e1674ebcff52932922" category="inline-link">从图形用户界面中为不可信域添加域控制器 IP</block>
   <block id="d8348d0bfeb3374f54049d8825a97310" category="paragraph">有关详细信息，请参见<block ref="0bda2cd349437bc7a5675533156ebe46" category="inline-link-rx"></block>。</block>
-  <block id="14c90652b0a2e523d6e8630706107e75" category="summary">SnapCenter 软件可在多个浏览器上使用。</block>
   <block id="6d84e3718084e0db779da4ff8791a2f2" category="doc">支持的浏览器</block>
   <block id="c939b5dd7dddc4f1908d7f58a2ab351d" category="summary">SnapCenter 需要多个许可证才能启用数据保护操作。您安装的 SnapCenter 许可证类型取决于您的存储环境和要使用的功能。</block>
   <block id="54e6e66bc0a69ef86d9bb0b63900793e" category="admonition">SnapCenter 也作为数据保护包的一部分提供。如果您购买的是 A400 或更高版本，则应购买数据保护包。</block>
@@ -3266,7 +3265,6 @@
   <block id="c3e1b81c639b755bd5245222004fcec1" category="paragraph">有关 SnapCenter REST API 的信息，请参见 <block ref="e8336f36b6d511b2bbec5417287ec502" category="inline-link-macro-rx"></block></block>
   <block id="4ee2d383554981f4ea8eff4f35db6832" category="inline-link">适用于 VMware vSphere 的 SnapCenter 插件 REST API</block>
   <block id="2d058bff360144951b6c9212e64bf5d8" category="paragraph">有关适用于 VMware vSphere 的 SnapCenter 插件 REST API 的信息，请参见<block ref="bf36dff0c9f063d6a54a8208136c7e68" category="inline-link-rx"></block></block>
-  <block id="0344fda8fff2d8c5a125ffa5ba5f19a7" category="summary">SnapCenter 软件是一个简单，集中化且可扩展的平台，可为混合云中任意位置的 ONTAP 系统上运行的应用程序，数据库，主机文件系统和 VM 提供应用程序一致的数据保护。</block>
   <block id="6309043436d4e7e5bad9a81c89ff15e4" category="doc">SnapCenter 概述</block>
   <block id="edaafea0543ae64ebb79a2ed2e7a055b" category="paragraph">SnapCenter 利用 NetApp Snapshot ， SnapRestore ， FlexClone ， SnapMirror 和 SnapVault 技术提供以下功能：</block>
   <block id="6d02db19251dfec578c356202bfb1bdc" category="list-text">快速，节省空间，应用程序一致且基于磁盘的备份</block>
@@ -4865,7 +4863,6 @@
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">有关 NetApp 拥有的专利的最新列表，请访问：</block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隐私政策</block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
-  <block id="7608e75619cff3eeb4e8bce40481b456" category="doc">SnapCenter 软件文档</block>
   <block id="057a347dfa62d3d36d0bcd41b7f519e2" category="summary">如果无法从 SnapCenter 服务器访问主机，则可以在主机上本地卸载 SnapCenter 插件。</block>
   <block id="d5d4a6227e7796d7106e554275bb0848" category="doc">在主机上本地卸载插件</block>
   <block id="c43d0a9c7e734ff5e0792fd672fef2eb" category="paragraph">卸载各个插件或插件软件包的最佳做法是，在 SnapCenter 服务器主机命令行界面上使用 SnapCenter 图形用户界面或使用 Uninstall-SmHostPackage cmdlet 。这些过程有助于 SnapCenter 服务器随时了解任何更改。</block>
@@ -9996,8 +9993,6 @@ destination</block>
   <block id="4a3f09c73e2dacacbebddfd96cac1948" category="inline-link">SnapCenter软件6.1发行说明</block>
   <block id="77400fe4524142ac29310162939726cb" category="paragraph">有关已知问题、限制、已修复问题以及新增命令和更改命令的详细信息，请参见<block ref="5c68c6454568b27710c4196bb910da4f" category="inline-link-rx"></block>。您必须使用NetApp帐户登录或创建帐户才能访问发行说明。</block>
   <block id="d6eb82c324cab2f36e345863fad95090" category="cell">6.1</block>
-  <block id="e62d168588d6c1af2fbd37668a7343da" category="summary">SnapCenter软件6.1版包括几项新功能和增强功能。</block>
-  <block id="0220307da5eec95fc03c435ffbbc2bfa" category="doc">SnapCenter软件6.1中的新增功能</block>
   <block id="1e095c69621645fccc8f12cd7f35f6fc" category="inline-link-macro">支持ASA R2系统</block>
   <block id="cf1b0e66e5b65c6a3b32f92fdc6552c4" category="cell"><block ref="cf1b0e66e5b65c6a3b32f92fdc6552c4" category="inline-link-macro-rx"></block></block>
   <block id="cc753d144910e12701641281c8cb88ed" category="paragraph">SnapCenter现在支持ASA R2系统、可根据仅SAN客户的需求提供简化的体验。</block>
@@ -10006,8 +10001,6 @@ destination</block>
   <block id="92d37724657724129ae0451584c728aa" category="inline-link">删除适用于 VMware vSphere 的 SnapCenter 插件</block>
   <block id="79cfb9f00fa8ea603f631e679e453fad" category="paragraph">有关卸载适用于VMware vSphere的SnapCenter插件的信息，请参见<block ref="cae8a6db54fa4da6d80207fee61e78d1" category="inline-link-rx"></block>。</block>
   <block id="9792c7ba1a8a833a1c75e11c4a7b46c3" category="list-text">如果要升级多个主机，请选择所有主机，单击，然后单击 <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>*Upgrade*&gt;*OK*。</block>
-  <block id="eafbda6a16d2997896c70ba8ded3db33" category="sidebar">SnapCenter 软件是一个简单，集中化且可扩展的平台，可为混合云中任意位置的 ONTAP 系统上运行的应用程序，数据库，主机文件系统和 VM 提供应用程序一致的数据保护。本文档库包含版本6.1的信息。</block>
-  <block id="888e5b40ea166427f96db1a9c08af7fc" category="sidebar">SnapCenter软件6.1文档</block>
   <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">对象存储备份不支持Oracle和SAP HANA挂载和目录工作流、但快照支持这些工作流。</block>
   <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">对象存储备份不支持Oracle PDB克隆、但快照支持此克隆。</block>
   <block id="6eec14240810faadbd60c3ec98b543e7" category="paragraph">共享磁盘不是使用适用于 Windows 的插件创建的。您应创建共享 LUN ，然后将其添加到集群中的每个虚拟机。有关信息，请参见<block ref="0564b16166a6e24aa234d21e5bcdc18a" category="inline-link-rx"></block>。</block>
@@ -10075,4 +10068,11 @@ destination</block>
   <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
   <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">观看 <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> 视频。</block>
   <block id="5c8b8bc332cb41802ffbe6c5cda258ab" category="paragraph">支持VMDK、VVOV和RDM虚拟存储布局。</block>
+  <block id="e5385a9de21528bfedd644f4c0331eb1" category="summary">SnapCenter软件是一个简单、集中且可扩展的平台、可为混合云中任意位置ONTAP系统上运行的应用程序、数据库、主机文件系统和VM提供应用程序一致的数据保护。</block>
+  <block id="0d391616b89aaac354c13202aaccb4ba" category="summary">SnapCenter软件可以在多个浏览器上使用。</block>
+  <block id="68578ccfcf5117ca8a9a2d7d884e320f" category="summary">SnapCenter软件6.1版包含多项新增功能和增强功能。</block>
+  <block id="600ede45d5c4a07242a73e3a5a885e15" category="doc">SnapCenter软件6.1中的新增功能</block>
+  <block id="8f13c7650e8ef95e186d64196ea879a5" category="sidebar">SnapCenter软件是一个简单、集中且可扩展的平台、可为混合云中任意位置ONTAP系统上运行的应用程序、数据库、主机文件系统和VM提供应用程序一致的数据保护。本文档库包含版本6.1的信息。</block>
+  <block id="8127605cde4cee83a23b35f1207c7572" category="sidebar">SnapCenter软件文档</block>
+  <block id="f3e84c2e19a0aa80c716ba1fc7f07e0e" category="sidebar">SnapCenter软件6.1文档</block>
 </blocks>

@@ -1,6 +1,6 @@
 ---
 settings:
-  name: SnapCenter Software
+  name: SnapCenter software
   internal:
     pdf_enabled: true
   prod:
