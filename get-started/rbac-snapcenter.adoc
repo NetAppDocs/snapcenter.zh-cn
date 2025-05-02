@@ -1,19 +1,40 @@
 ---
-permalink: concept/reference_pre_defined_snapcenter_roles_and_permissions.html 
+permalink: get-started/rbac-snapcenter.html 
 sidebar: sidebar 
-keywords: RBAC, role, permission, pre-defined role 
-summary: SnapCenter 附带预定义角色，每个角色都已启用一组权限。在设置和管理基于角色的访问控制（ RBAC ）时，您可以使用这些预定义角色，也可以创建新角色。 
+keywords: RBAC, roles, permissions, application-level RBAC, ONTAP permissions, default snapcenter roles, ONTAP permissions, SnapCenter Admin role 
+summary: 通过 SnapCenter 基于角色的访问控制（ Role-Based Access Control ， RBAC ）和 ONTAP 权限， SnapCenter 管理员可以创建角色并设置访问权限。通过这种集中管理的访问，应用程序管理员可以在委派的环境中安全地工作。 
 ---
-= 预定义的 SnapCenter 角色和权限
+= SnapCenter中基于角色的访问控制
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter 附带预定义角色，每个角色都已启用一组权限。在设置和管理基于角色的访问控制（ Role-Based Access Control ， RBAC ）时，您可以使用这些预定义角色，也可以创建新角色。
+通过 SnapCenter 基于角色的访问控制（ Role-Based Access Control ， RBAC ）和 ONTAP 权限， SnapCenter 管理员可以将 SnapCenter 资源的控制权委派给不同的用户或用户组。通过这种集中管理的访问，应用程序管理员可以在委派的环境中安全地工作。
 
-SnapCenter 包括以下预定义角色：
+您可以随时创建和修改角色、并为用户添加资源访问权限。但是、首次设置SnapCenter时、应至少将Active Directory用户或组添加到角色、然后再添加对这些用户或组的资源访问权限。
+
+
+NOTE: 您不能使用 SnapCenter 创建用户或组帐户。您应在操作系统或数据库的 Active Directory 中创建用户或组帐户。
+
+
+
+== SnapCenter中的RBAC类型
+
+SnapCenter 使用以下类型的基于角色的访问控制：
+
+* SnapCenter RBAC
+* 应用程序级 RBAC
+* 适用于VMware vSphere RBAC的SnapCenter插件
+* ONTAP 权限
+
+
+
+
+=== SnapCenter RBAC
+
+SnapCenter具有预定义角色、您可以为这些角色分配用户或用户组。预定义角色包括：
 
 * SnapCenter 管理员角色
 * 应用程序备份和克隆管理员角色
@@ -21,19 +42,61 @@ SnapCenter 包括以下预定义角色：
 * 基础架构管理员角色
 
 
+在为用户分配角色时、只有与该用户相关的作业才会显示在作业页面中、除非您已分配SnapCenterAdmin角色。
+
+您还可以创建新角色并管理权限和用户。您可以为用户或组分配访问主机，存储连接和资源组等 SnapCenter 对象的权限。
+
+您可以为同一林中的用户和组以及属于不同林的用户分配 RBAC 权限。您不能为属于林间嵌套组的用户分配 RBAC 权限。
+
+
+NOTE: 如果要创建自定义角色、则该角色必须包含SnapCenterAdmin角色的所有权限。如果您仅复制某些权限，例如 Host add 或 Host remove ，则无法执行这些操作。
+
+用户需要在登录期间通过图形用户界面（ GUI ）或 PowerShell cmdlet 提供身份验证。如果用户是多个角色的成员，则在输入登录凭据后，系统会提示用户指定要使用的角色。用户还需要提供身份验证才能运行 API 。
+
+
+
+=== 应用程序级 RBAC
+
+SnapCenter 使用凭据验证授权的 SnapCenter 用户是否也具有应用程序级别的权限。
+
+例如、如果要在SQL Server环境中执行数据保护操作、则必须使用正确的Windows或SQL凭据设置凭据。SnapCenter 服务器使用任一方法对设置的凭据进行身份验证。如果要在Windows文件系统环境中对ONTAP存储执行数据保护操作、SnapCenter管理员角色必须在Windows主机上具有管理员Privileges。
+
+同样，如果要对 Oracle 数据库执行数据保护操作，并且在数据库主机中禁用了操作系统（ OS ）身份验证，则必须使用 Oracle 数据库或 Oracle ASM 凭据设置凭据。SnapCenter 服务器会根据操作使用以下方法之一对凭据集进行身份验证。
+
+
+
+=== 适用于 VMware vSphere RBAC 的 SnapCenter 插件
+
+如果您使用 SnapCenter VMware 插件进行 VM 一致的数据保护，则 vCenter Server 可提供额外级别的 RBAC 。SnapCenter VMware插件支持vCenter Server RBAC和ONTAP RBAC。 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["了解更多信息"^]
+
+|===
+
+
+| * 最佳实践： * NetApp 建议您为适用于 VMware vSphere 的 SnapCenter 插件操作创建一个 ONTAP 角色，并为其分配所有必需的特权。 
+|===
+
+
+=== ONTAP 权限
+
+您应创建具有访问存储系统所需权限的vsadmin帐户。link:../install/task_add_a_user_or_group_and_assign_role_and_assets.html["了解更多信息"]
+
+
+
+== 分配给预定义SnapCenter角色的权限
+
 将用户添加到角色时，您必须分配 StorageConnection 权限以启用 Storage Virtual Machine （ SVM ）通信，或者向用户分配 SVM 以启用使用 SVM 的权限。用户可以通过存储连接权限创建 SVM 连接。
 
 例如，具有 SnapCenter 管理员角色的用户可以创建 SVM 连接并将其分配给具有应用程序备份和克隆管理员角色的用户，默认情况下，此用户无权创建或编辑 SVM 连接。如果没有 SVM 连接，用户将无法完成任何备份，克隆或还原操作。
 
 
 
-== SnapCenter 管理员角色
+=== SnapCenter 管理员角色
 
 SnapCenter 管理员角色已启用所有权限。您不能修改此角色的权限。您可以将用户和组添加到角色或将其删除。
 
 
 
-== 应用程序备份和克隆管理员角色
+=== 应用程序备份和克隆管理员角色
 
 应用程序备份和克隆管理员角色具有为应用程序备份和克隆相关任务执行管理操作所需的权限。此角色不具有主机管理，配置，存储连接管理或远程安装的权限。
 
@@ -311,7 +374,7 @@ migration
 |===
 
 
-== 备份和克隆查看器角色
+=== 备份和克隆查看器角色
 
 备份和克隆查看器角色具有所有权限的只读视图。此角色还可以启用发现，报告和访问信息板的权限。
 
@@ -590,7 +653,7 @@ migration
 |===
 
 
-== 基础架构管理员角色
+=== 基础架构管理员角色
 
 基础架构管理员角色已启用主机管理，存储管理，配置，资源组，远程安装报告， 并访问信息板。
 

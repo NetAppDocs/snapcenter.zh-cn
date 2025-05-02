@@ -21,7 +21,7 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 适用于 Microsoft SQL Server 的 SnapCenter 插件使用 Microsoft VDI Framework ，这需要 sysadmin 访问权限。
 
 +
-http://support.microsoft.com/kb/2926557/["Microsoft 支持文章 2926557 ： SQL Server VDI 备份和还原操作需要 sysadmin 特权"]
+https://mskb.pkisolutions.com/kb/2926557["Microsoft 支持文章 2926557 ： SQL Server VDI 备份和还原操作需要 sysadmin 特权"]
 
 * 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
 * 如果安装了 SnapManager for Microsoft SQL Server ，则必须已停止或禁用此服务和计划。

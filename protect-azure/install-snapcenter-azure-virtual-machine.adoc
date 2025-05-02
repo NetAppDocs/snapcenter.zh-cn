@@ -14,8 +14,8 @@ summary: 在Azure虚拟机上下载并安装SnapCenter。
 您可以从NetApp 支持站点 下载SnapCenter软件、然后在Azure虚拟机上安装该软件。
 
 .开始之前
-* 确保Azure Windows虚拟机满足SnapCenter服务器安装要求。有关信息，请参见 link:../install/reference_domain_and_workgroup_requirements.html["准备安装 SnapCenter 服务器"]。
-* 如果您是Azure NetApp Files的新用户且没有现有NetApp帐户、请确保您已注册、以便可以访问SnapCenter软件。
+* 确保Azure Windows虚拟机满足SnapCenter服务器安装要求。有关信息，请参见 link:../install/requirements-to-install-snapcenter-server.html["安装SnapCenter服务器的要求"]。
+* 如果您是Azure NetApp Files的新用户且没有现有NetApp帐户、请确保您已注册、以便可以访问SnapCenter软件。有关说明，请参阅link:../install/register_enable_software_access.html["注册以访问SnapCenter软件"]。
 
 
 .步骤

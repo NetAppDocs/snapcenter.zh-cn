@@ -4,16 +4,14 @@ sidebar: sidebar
 keywords: REST APIs, swagger 
 summary: 介绍如何使用 REST API 执行多个 SnapCenter 管理操作。REST API 通过 Swagger 网页公开。 
 ---
-= REST API 概述
+= 使用REST API实现SnapCenter自动化
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-REST API 可用于执行多个 SnapCenter 管理操作。REST API 通过 Swagger 网页公开。
-
-您可以访问位于 ｛ \https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_ ｝ 的 Swagger 网页，以显示 REST API 文档以及手动对 API 调用执行问题描述操作。
+您可以使用 REST API 执行多个 SnapCenter 管理操作。REST API 通过 Swagger 网页公开。您可以访问位于以下位置的Swagger网页<SnapCenter_IP_address_or_name>：_\https：//API：<SnapCenter_port>：API/swagger /_、以显示REST文档、并手动执行API调用问题描述。
 
 支持 REST API 的插件包括：
 
@@ -22,3 +20,5 @@ REST API 可用于执行多个 SnapCenter 管理操作。REST API 通过 Swagger
 * 自定义插件
 * 适用于 Oracle 数据库的插件
 
+
+有关适用于 VMware vSphere 的 SnapCenter 插件 REST API 的信息，请参见 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_rest_apis_overview.html["适用于 VMware vSphere 的 SnapCenter 插件 REST API"^]

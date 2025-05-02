@@ -15,8 +15,6 @@ summary: 您可以在Linux主机上安装SnapCenter服务器。
 
 .开始之前
 * 如果您要使用没有足够权限安装SnapCenter的非root用户安装SnapCenter服务器、请从NetApp支持站点获取sudoers校验和文件。您应根据Linux版本使用适当的校验和文件。
-* 在安装期间。 NET运行时，如果安装程序无法解析_libicu_库的依赖关系，则运行以下命令来安装_libicu_： `yum install -y libicu`
-* 如果由于_PERL_不可用而导致SnapCenter服务器安装失败、请运行以下命令来安装_PERL_： `yum install -y perl`
 * 如果sudo软件包在SUSE Linux中不可用、请安装sudo软件包以避免身份验证失败。
 * 对于SUSE Linux，请配置主机名以避免安装失败。
 * 运行命令以检查安全Linux状态 `sestatus`。如果_SELinux statu_为"enenabled "、而_current mode_为"enforcing"、请执行以下操作：
@@ -66,6 +64,8 @@ _webapp_External port_的默认值为8146
 ** 用于登录到SnapCenter的基于密钥的身份验证
 
 
+* 在安装期间。 NET运行时，如果安装程序无法解析_libicu_库的依赖关系，则运行以下命令来安装_libicu_： `yum install -y libicu`
+* 如果由于_PERL_不可用而导致SnapCenter服务器安装失败、请运行以下命令来安装_PERL_： `yum install -y perl`
 
 
 .步骤
@@ -140,23 +140,4 @@ _webapp_External port_的默认值为8146
 .. 运行 `setsebool -P httpd_can_network_connect on`
 
 
-
-
-
-
-== 注册产品以启用支持
-
-如果您是NetApp的新用户、并且没有现有的NetApp帐户、则应注册产品以启用支持。
-
-.步骤
-. 安装SnapCenter后，导航到*help >关于*。
-. 在_About SnapCenter _对话框中、记下SnapCenter实例、该实例是一个以871开头的20位数字。
-. 单击。 https://register.netapp.com[]
-. 单击 * 我不是 NetApp 注册客户 * 。
-. 指定您的详细信息以自行注册。
-. 将NetApp Reference SN字段留空。
-. 从“SnapCenter产品线”下拉列表中选择*Product*。
-. 选择计费提供商。
-. 输入20位数的SnapCenter实例ID。
-. 单击 * 提交 * 。
 

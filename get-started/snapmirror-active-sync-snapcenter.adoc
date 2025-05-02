@@ -1,0 +1,29 @@
+---
+permalink: get-started/snapmirror-active-sync-snapcenter.html 
+sidebar: sidebar 
+keywords: snapmirror active sync 
+summary: 您可以使用 SnapCenter 灾难恢复功能在发生资源损坏或服务器崩溃等灾难时恢复 SnapCenter 服务器。 
+---
+= SnapCenter中的SnapMirror活动同步
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过SnapMirror主动同步、即使在整个站点发生故障时、业务服务也可以继续运行、从而支持应用程序使用二级副本透明地进行故障转移。使用SnapMirror活动同步触发故障转移无需手动干预或额外编写脚本。
+
+有关SnapMirror活动同步的详细信息，请参阅 https://docs.netapp.com/us-en/ontap/smbc/index.html["SnapMirror活动同步概述"]。
+
+对于SnapMirror主动同步、请确保满足各种硬件、软件和系统配置要求。有关信息、请参见 https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_prerequisites.html["前提条件"]
+
+此功能支持的插件包括适用于SQL Server的SnapCenter插件、适用于Windows的SnapCenter插件、适用于Oracle数据库的SnapCenter插件、适用于SAP HANA数据库的SnapCenter插件、适用于Microsoft Exchange Server的SnapCenter插件以及适用于Unix的SnapCenter插件。
+
+
+NOTE: 要在SnapCenter中支持主机启动程序接近、应在ONTAP中设置其值、即源或目标。
+
+SnapCenter中不支持的使用情形：
+
+* 如果在ONTAP中将SnapMirror活动同步关系上的策略从_automatedfailover_更改为_automatedfailoverdew双 工_、从而将现有的非对称SnapMirror活动同步工作负载转换为对称工作负载、则SnapCenter不支持这种转换。
+* 如果某个资源组有备份(已在SnapCenter中受保护)、然后将SnapMirror活动同步关系上的存储策略从_automatedfailover_更改为ONTAP中的_automatedfailoverdew双 工_、则SnapCenter不支持这种做法。
+

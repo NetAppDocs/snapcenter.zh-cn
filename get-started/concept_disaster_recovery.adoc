@@ -1,0 +1,35 @@
+---
+permalink: get-started/concept_disaster_recovery.html 
+sidebar: sidebar 
+keywords: Disaster Recovery, DR, crash, resource deleted 
+summary: 您可以使用 SnapCenter 灾难恢复功能在发生资源损坏或服务器崩溃等灾难时恢复 SnapCenter 服务器。 
+---
+= SnapCenter中的灾难恢复
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过SnapCenter灾难恢复(DR)功能、您可以从资源损坏或服务器崩溃等灾难中恢复。它有助于还原SnapCenter存储库、服务器计划、配置组件以及适用于SQL Server的SnapCenter插件及其存储。
+
+本节介绍SnapCenter中的两种灾难恢复类型：
+
+
+
+== SnapCenter 服务器灾难恢复
+
+* SnapCenter 服务器数据会进行备份、并且可以在不向SnapCenter 服务器添加任何插件或由服务器管理的情况下进行恢复。
+* 二级SnapCenter 服务器应安装在与主SnapCenter 服务器相同的安装目录和端口上。
+* 对于多因素身份验证(MFA)、请在SnapCenter服务器灾难恢复期间关闭所有浏览器选项卡、然后重新打开浏览器以重新登录。这将清除现有或活动会话Cookie并更新正确的配置数据。
+* SnapCenter灾难恢复功能使用REST API备份SnapCenter服务器。请参阅。 link:../tech-refresh/task_tech_refresh_server_host.html["用于 SnapCenter 服务器灾难恢复的 REST API 工作流"]
+* 与审核设置相关的配置文件不会在灾难恢复备份中进行备份、在还原操作后、也不会备份到灾难恢复服务器上。您应手动重复审核日志设置。
+
+
+
+
+== SnapCenter 插件和存储灾难恢复
+
+DR仅适用于适用于SQL Server的SnapCenter插件。如果此插件已关闭、请切换到另一个SQL主机、然后按照几个步骤恢复数据。请参阅。 link:../protect-scsql/task_disaster_recovery_scsql.html["适用于 SQL Server 的 SnapCenter 插件的灾难恢复"]
+
+SnapCenter使用ONTAP SnapMirror复制数据、可通过将中的数据同步到二级站点来用于灾难恢复。要启动故障转移、请中断SnapMirror复制。在回退期间、反向执行同步、以便将数据从灾难恢复站点复制回主位置。

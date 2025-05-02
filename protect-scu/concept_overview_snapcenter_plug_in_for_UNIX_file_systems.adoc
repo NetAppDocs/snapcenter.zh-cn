@@ -95,3 +95,18 @@ NFS和SAN上的VVOV数据存储库。 只能使用适用于VMware vSphere的ONTA
 * 不支持NVMe。
 * 不支持配置。
 
+
+
+
+== 功能
+
+* 允许适用于 Oracle 数据库的插件通过处理 Linux 或 AIX 系统上的底层主机存储堆栈在 Oracle 数据库上执行数据保护操作
+* 在运行 ONTAP 的存储系统上支持网络文件系统（ NFS ）和存储区域网络（ SAN ）协议。
+* 对于 Linux 系统，在部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件时，支持 VMDK 和 RDM LUN 上的 Oracle 数据库。
+* 支持 SAN 文件系统和 LVM 布局上的 Mount Guard for AIX 。
+* 仅支持对 SAN 文件系统和 AIX 系统的 LVM 布局进行实时日志记录的增强型日志文件系统（ JFS2 ）。
++
+支持基于 SAN 设备构建的 SAN 原生设备，文件系统和 LVM 布局。
+
+* 自动执行SnapCenter环境中UNIX文件系统的应用程序感知型备份、还原和克隆操作
+

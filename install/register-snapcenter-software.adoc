@@ -1,0 +1,25 @@
+---
+permalink: install/register-snapcenter-software.html 
+sidebar: sidebar 
+keywords: register, new customer, NetApp account, enable support 
+summary: 如果您没有现有的NetApp帐户、则应注册产品以启用支持。 
+---
+= 注册SnapCenter
+:allow-uri-read: 
+
+
+[role="lead"]
+如果您是NetApp产品的新用户、并且没有现有的NetApp帐户、则应注册SnapCenter以启用支持。
+
+.步骤
+. 安装SnapCenter后，导航到*help >关于*。
+. 在_About SnapCenter _对话框中、记下SnapCenter实例、该实例是一个以871开头的20位数字。
+. 单击。 https://register.netapp.com[]
+. 单击 * 我不是 NetApp 注册客户 * 。
+. 指定您的详细信息以自行注册。
+. 将NetApp Reference SN字段留空。
+. 从“SnapCenter产品线”下拉列表中选择*Product*。
+. 选择计费提供商。
+. 输入20位数的SnapCenter实例ID。
+. 单击 * 提交 * 。
+

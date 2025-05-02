@@ -10,17 +10,13 @@ indexpage:
     - title: 发行说明
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665
     - title: 了解 SnapCenter
-      url: "/concept/concept_snapcenter_overview.html"
+      url: "/get-started/concept_snapcenter_overview.html"
+    - title: SnapCenter软件快速入门
+      url: "/get-started/quick-start-snapcenter.html"
     - title: 升级 SnapCenter 服务器和 SnapCenter 插件
       url: "/upgrade/upgrade_workflow.html"
   - title: 安装 SnapCenter 服务器
     links:
-    - title: 所需许可证
-      url: "/install/concept_snapcenter_licenses.html"
-    - title: 配置端口
-      url: "/install/reference_connection_and_port_requirements.html"
-    - title: 注册以访问SnapCenter软件
-      url: "/install/register_enable_software_access.html"
     - title: 在Windows主机上安装SnapCenter服务器
       url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
     - title: 在Linux主机上安装SnapCenter服务器

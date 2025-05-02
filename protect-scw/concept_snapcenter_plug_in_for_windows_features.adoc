@@ -35,7 +35,7 @@ SnapCenter 界面为您提供了跨插件和环境的标准化和一致性。通
 * 支持 RBAC 的安全性和集中式角色委派
 * 使用 NetApp FlexClone 技术为生产文件系统创建节省空间的副本，以供测试或数据提取之用
 +
-有关 FlexClone 许可信息，请参见 link:../install/concept_snapcenter_licenses.html["SnapCenter 许可证"^]。
+有关FlexClone许可信息，请参见 link:../get-started/concept_snapcenter_licenses.html["SnapCenter 许可证"^]。
 
 * 能够在多个服务器上同时运行多个备份
 * 用于备份，还原和克隆操作脚本的 PowerShell cmdlet

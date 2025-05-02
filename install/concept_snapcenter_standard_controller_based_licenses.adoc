@@ -25,7 +25,7 @@ NOTE: 对于基于 SnapCenter 控制器的许可证，您不会在 SnapCenter �
 * 锁定到控制器的序列号
 
 
-有关所需许可证的信息，请参见 link:../install/concept_snapcenter_licenses.html["SnapCenter 许可证"^]。
+有关所需许可证的信息，请参见 link:../get-started/concept_snapcenter_licenses.html["SnapCenter 许可证"]。
 
 
 

@@ -31,8 +31,7 @@ NOTE: 您不应将 SnapCenter 服务器安装在具有 Microsoft Exchange Server
 
 
 
-* 步骤 *
-
+.步骤
 . 从下载 SnapCenter 服务器安装包 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp 支持站点"^]。
 . 双击下载的 .exe 文件启动 SnapCenter 服务器安装。
 +
@@ -63,23 +62,4 @@ NOTE: 如果单击 * 取消 * 按钮，则正在执行的步骤将完成，然�
 +
 日志文件始终列在管理员用户的 %temp% 文件夹中（最早的先列出）。如果要重定向日志位置，请从命令提示符处运行以下命令来启动 SnapCenter 服务器安装：``C ： \installer_location\installer_name.exe /log"C" ： \"``
 
-
-
-
-
-== 注册产品以启用支持
-
-如果您是NetApp产品的新用户、并且没有现有的NetApp帐户、则应注册该产品以启用支持。
-
-.步骤
-. 安装SnapCenter后，导航到*help >关于*。
-. 在_About SnapCenter _对话框中、记下SnapCenter实例、该实例是一个以871开头的20位数字。
-. 单击。 https://register.netapp.com[]
-. 单击 * 我不是 NetApp 注册客户 * 。
-. 指定您的详细信息以自行注册。
-. 将NetApp Reference SN字段留空。
-. 从“SnapCenter产品线”下拉列表中选择*Product*。
-. 选择计费提供商。
-. 输入20位数的SnapCenter实例ID。
-. 单击 * 提交 * 。
 

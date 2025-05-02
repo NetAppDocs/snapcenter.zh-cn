@@ -1,0 +1,75 @@
+---
+permalink: get-started/reference_supported_storage_systems_and_applications.html 
+sidebar: sidebar 
+keywords: storage system, ONTAP version, ASA r2 systems 
+summary: 您应了解支持的存储系统，应用程序和数据库。 
+---
+= SnapCenter支持的存储系统和应用程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您应了解SnapCenter支持的存储系统、应用程序和数据库。
+
+
+
+== 支持的存储系统
+
+* NetApp ONTAP 9.12.1及更高版本
+* Azure NetApp Files
+* 适用于 NetApp ONTAP 的 Amazon FSX
++
+支持基于传输控制协议(TCP)的非易失性内存快速(NVMe)。
+
++
+有关适用于 NetApp ONTAP 的 Amazon FSX 的信息，请参见 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX for NetApp ONTAP 文档"^]。
+
+* 运行NetApp ONTAP 9.161的NetApp ASA R2系统。
++
+ASA R2系统可为基于全闪存平台构建的纯SAN环境提供统一的硬件和软件解决方案。 https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["详细了解ASA R2系统"](英文)。
+
++
+
+NOTE: SnapCenter在ASA R2系统上仅支持VMware虚拟机文件系统(Virtual Machine File System、VMFS)。
+
++
+|===
+| 支持的操作 | 不支持操作 
+
+
+ a| 
+** 通过VMDK为应用程序创建主备份
+** 将一致性组快照传输到二级存储系统
+** 还原备份并从备用位置还原
++
+*** 使用VMware vMotion从主存储和二级存储进行原位还原
+*** 从主存储和二级存储连接和复制还原
+
+
+** 克隆备份并克隆到备用位置
+
+ a| 
+** 原始设备映射(RDM)
+** 适用于Oracle的应用程序卷
+** SAP HANA NDV
+** LockVault
+** 防篡改快照
+** Flex Group
+** 分层一致性组
+** 从ONTAP 9.x迁移到ASA R2系统
+** 重命名快照
+** SnapCenter不支持对SQL插件主机的日志目录进行二级配置。您应使用ONTAP命令行界面或系统管理器手动配置。
+
+
+|===
+
+
+
+
+== 支持的应用程序和数据库
+
+SnapCenter 支持保护不同的应用程序和数据库。有关支持的应用程序和数据库的详细信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+
+SnapCenter支持在基于Amazon Web Services (AWS)的VMware Cloud软件定义的数据中心(SDDC)环境中保护Oracle和Microsoft SQL工作负载。https://community.netapp.com/t5/Tech-ONTAP-Blogs/Protect-Oracle-MS-SQL-workloads-using-NetApp-SnapCenter-in-VMware-Cloud-on-AWS/ba-p/449168["了解更多信息"^](英文)

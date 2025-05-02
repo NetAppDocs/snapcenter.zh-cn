@@ -45,7 +45,7 @@ RAC One Node数据库仅会根据/etc/oratab条目进行发现。数据库应处
 
 
 
-== 适用于Oracle 12cR2至18c版本
+== 适用于Oracle 12cR2至18c、19c或21c版本
 
 .RAC数据库
 RAC数据库是使用srvCTLconfig命令发现的。您应在 /etc/oratab 文件中包含数据库条目。

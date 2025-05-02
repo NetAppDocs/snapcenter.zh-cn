@@ -23,3 +23,7 @@ NetApp Single Mailbox Recovery是Ontrack提供的合作伙伴产品。Ontrack Po
 适用于Exchange的插件支持SnapMirror活动同步(最初作为SnapMirror Business Continuing [SM-BC)发布)、即使在站点完全瘫痪时、业务服务也能继续运行、从而支持应用程序使用二级副本透明地进行故障转移。使用SnapMirror活动同步触发故障转移无需手动干预或额外编写脚本。
 
 它支持SnapMirror活动同步的非对称、故障转移或非双工模式。这是指优化路径仅来自主端LUN所属节点的解决方案。通过将二级集群路径上的任何I/O代理到主集群来提供这些I/O。同步复制是单向的、从主复制到二级复制。
+
+* 为 SnapCenter 环境中的 Microsoft Exchange Server 数据库和数据库可用性组（ DAG ）自动执行应用程序感知型备份和还原操作
+* 在部署适用于VMware vSphere的SnapCenter插件并向SnapCenter注册此插件时、支持在RDM LUN上使用虚拟化的Exchange Server。
+

@@ -24,7 +24,7 @@ summary: '如果某个资源不属于任何资源组，您可以从 "Resources" 
 +
 此时将显示 " 数据库保护 " 页面。
 
-. 在资源页面中、您可以执行以下步骤：
+. 在资源页面中，执行以下步骤：
 +
 .. 选中此复选框、然后输入要用于Snapshot名称的自定义名称格式。
 +
@@ -37,8 +37,7 @@ summary: '如果某个资源不属于任何资源组，您可以从 "Resources" 
 +
 .. 从下拉列表中选择一个或多个策略。
 +
-
-NOTE: 您可以单击来创建策略 image:../media/add_policy_from_resourcegroup.gif["添加符号"]。
+您可以单击来创建策略 image:../media/add_policy_from_resourcegroup.gif["添加符号"]。
 
 +
 在为选定策略配置计划部分中，将列出选定策略。

@@ -1,0 +1,26 @@
+---
+section: get-started
+title: 入门
+entries:
+- title: 了解SnapCenter软件
+  entries:
+  - title: 概述
+    url: "/get-started/concept_snapcenter_overview.html"
+  - title: 安全性和身份验证
+    url: "/get-started/reference_data_security.html"
+  - title: 基于角色的访问控制
+    url: "/get-started/rbac-snapcenter.html"
+  - title: 灾难恢复
+    url: "/get-started/concept_disaster_recovery.html"
+  - title: 许可
+    url: "/get-started/concept_snapcenter_licenses.html"
+  - title: SnapMirror活动同步
+    url: "/get-started/snapmirror-active-sync-snapcenter.html"
+  - title: 数据保护的关键概念
+    url: "/get-started/concept_resources_resource_groups_and_policies.html"
+  - title: 支持的存储系统和应用程序
+    url: "/get-started/reference_supported_storage_systems_and_applications.html"
+  - title: 身份验证方法
+    url: "/get-started/concept_authentication_methods_for_your_credentials.html"
+- title: 快速入门
+  url: "/get-started/quick-start-snapcenter.html"

@@ -390,7 +390,7 @@ SnapCenter 使用凭据对 SnapCenter 操作的用户进行身份验证。您应
 
 * 关于此任务 *
 
-您应查看 Oracle 数据库支持的不同身份验证方法。有关信息，请参见link:../install/concept_authentication_methods_for_your_credentials.html["凭据的身份验证方法"^]。
+您应查看 Oracle 数据库支持的不同身份验证方法。有关信息，请参见 link:../get-started/concept_authentication_methods_for_your_credentials.html["凭据的身份验证方法"^]。
 
 如果您为各个资源组设置了凭据，并且用户名不具有完全管理员权限，则用户名必须至少具有资源组和备份权限。
 
