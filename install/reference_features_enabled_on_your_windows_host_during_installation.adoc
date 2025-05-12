@@ -111,6 +111,7 @@ IIS 管理脚本和工具
 NOTE: 确保没有其他应用程序使用 SnapCenter 创建和管理的 MSMQ 服务。
 
 * Rabbitmq
+* Erlang
 
 
 

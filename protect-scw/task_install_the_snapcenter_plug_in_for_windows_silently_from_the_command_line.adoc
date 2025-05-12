@@ -16,7 +16,6 @@ summary: 如果无法从 SnapCenter 图形用户界面远程安装适用于 Micr
 .开始之前
 * 您必须已安装ASP.NET Core 8.0.12 (以及所有后续的8.0.x修补程序) Hosting Bundle。
 * 您必须已安装PowerShell 7.4.2或更高版本。
-* 您必须已启用 Windows 消息队列。
 * 您必须是主机上的本地管理员。
 
 

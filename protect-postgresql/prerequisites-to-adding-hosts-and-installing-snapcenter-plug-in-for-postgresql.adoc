@@ -143,14 +143,9 @@ Defaults: _LINUX_USER_ !visiblepw
 Defaults: _LINUX_USER_ !requiretty
 ----
 +
-
-NOTE: 如果您正在设置RAC以及其他允许的命令、则应将以下命令添加到/etc/sudoers文件中："/rc/bin/olsnodes'<crs_home>
-
-
-
-您可以从/etc/oracle/ocl.loc_文件中获取_crs_home_的值。
-
 _linux_user_是 您创建的非root用户的名称。
+
+
 
 您可以从*SC_UNIX)插件校验和.txt文件获取_校 验和值_，该文件位于：
 
