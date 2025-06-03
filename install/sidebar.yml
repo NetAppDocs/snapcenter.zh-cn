@@ -1,6 +1,6 @@
 ---
 section: install
-title: SnapCenter 服务器安装
+title: 安装和配置 SnapCenter 服务器
 entries:
 - title: 准备安装 SnapCenter 服务器
   entries:
@@ -26,10 +26,56 @@ entries:
     url: "/install/register-snapcenter-software.html"
   - title: 登录到 SnapCenter
     url: "/install/task_log_in_to_snapcenter.html"
-  - title: 安装期间在 Windows 主机上启用的功能
-    url: "/install/reference_features_enabled_on_your_windows_host_during_installation.html"
-  - title: 安装期间在Linux主机上启用的功能
-    url: "/install/features_enabled_on_linux_host.html"
+- title: 配置 SnapCenter 服务器
+  entries:
+  - title: 添加并配置存储系统
+    entries:
+    - title: 添加存储系统
+      url: "/install/task_add_storage_systems.html"
+    - title: 存储连接和凭据
+      url: "/install/concept_svm_connections_and_credentials.html"
+    - title: 在 Windows 主机上配置存储
+      entries:
+      - title: 创建和管理 igroup
+        url: "/install/concept_create_and_manage_igroups.html"
+      - title: 创建和管理磁盘
+        url: "/install/task_create_and_manage_disks.html"
+      - title: 创建和管理 SMB 共享
+        url: "/install/concept_create_and_manage_smb_shares.html"
+      - title: 回收存储系统上的空间
+        url: "/install/task_reclaim_space_on_the_storage_system.html"
+      - title: 使用 PowerShell cmdlet 配置存储
+        url: "/install/reference_provision_storage_using_powershell_cmdlets.html"
+    - title: 在 VMware 环境中配置存储
+      url: "/install/concept_provision_storage_in_vmware_environments.html"
+  - title: 添加基于 SnapCenter 标准控制器的许可证
+    url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
+  - title: 配置高可用性
+    entries:
+    - title: 配置SnapCenter服务器以实现高可用性
+      url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
+    - title: SnapCenter MySQL 存储库的高可用性
+      url: "/install/concept_high_availability_for_snapcenter_mysql_repository.html"
+  - title: 配置基于角色的访问控制（ RBAC ）
+    entries:
+    - title: 创建角色
+      url: "/install/task_create_a_role.html"
+    - title: 使用 security login 命令添加 ONTAP RBAC 角色
+      url: "/install/task_add_an_rbac_role_using_security_login_commands.html"
+    - title: 创建具有最低权限的 SVM 角色
+      url: "/install/create-svm-roles-minimum-privileges.html"
+    - title: 为ASA R2系统创建SVM角色
+      url: "/install/create-svm-roles-asa-r2-resources.html"
+    - title: 创建具有最低权限的 ONTAP 集群角色
+      url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
+    - title: 为ASA R2系统创建ONTAP集群角色
+      url: "/install/create-cluster-roles-asa-r2-resources.html"
+    - title: 添加用户或组并分配角色和资产
+      url: "/install/task_add_a_user_or_group_and_assign_role_and_assets.html"
+  - title: 配置审核日志设置
+    url: "/install/task_configure_audit_log_settings.html"
+  - title: 配置与 SnapCenter 服务器的安全 MySQL 连接
+    url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
 - title: 配置基于证书的身份验证
   url: "/install/configure_certificate_based_authentication.html"
 - title: 为Windows主机配置CA证书
@@ -64,57 +110,7 @@ entries:
   entries:
   - title: 注册不可信的 Active Directory 域
     url: "/install/task_register_untrusted_active_directory_domains.html"
-  - title: 为 LDAPS 配置 CA 客户端证书
-    url: "/install/task_configure_CA_client_certificate_for_LDAPS.html"
-- title: 配置高可用性
-  entries:
-  - title: 配置SnapCenter服务器以实现高可用性
-    url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
-  - title: SnapCenter MySQL 存储库的高可用性
-    url: "/install/concept_high_availability_for_snapcenter_mysql_repository.html"
-- title: 配置基于角色的访问控制（ RBAC ）
-  entries:
-  - title: 添加用户或组并分配角色和资产
-    url: "/install/task_add_a_user_or_group_and_assign_role_and_assets.html"
-  - title: 创建角色
-    url: "/install/task_create_a_role.html"
-  - title: 使用 security login 命令添加 ONTAP RBAC 角色
-    url: "/install/task_add_an_rbac_role_using_security_login_commands.html"
-  - title: 创建具有最低权限的 SVM 角色
-    url: "/install/create-svm-roles-minimum-privileges.html"
-  - title: 为ASA R2系统创建SVM角色
-    url: "/install/create-svm-roles-asa-r2-resources.html"
-  - title: 创建具有最低权限的 ONTAP 集群角色
-    url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
-  - title: 为ASA R2系统创建ONTAP集群角色
-    url: "/install/create-cluster-roles-asa-r2-resources.html"
   - title: 配置 IIS 应用程序池以启用 Active Directory 读取权限
     url: "/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html"
-- title: 配置审核日志设置
-  url: "/install/task_configure_audit_log_settings.html"
-- title: 添加存储系统
-  url: "/install/task_add_storage_systems.html"
-- title: Storage Virtual Machine 连接和凭据
-  url: "/install/concept_svm_connections_and_credentials.html"
-- title: 添加基于 SnapCenter 标准控制器的许可证
-  url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
-- title: 配置存储系统
-  entries:
-  - title: 在 Windows 主机上配置存储
-    entries:
-    - title: 配置 LUN 存储
-      url: "/install/concept_configure_lun_storage.html"
-    - title: 创建和管理 igroup
-      url: "/install/concept_create_and_manage_igroups.html"
-    - title: 创建和管理磁盘
-      url: "/install/task_create_and_manage_disks.html"
-    - title: 创建和管理 SMB 共享
-      url: "/install/concept_create_and_manage_smb_shares.html"
-    - title: 回收存储系统上的空间
-      url: "/install/task_reclaim_space_on_the_storage_system.html"
-    - title: 使用 PowerShell cmdlet 配置存储
-      url: "/install/reference_provision_storage_using_powershell_cmdlets.html"
-  - title: 在 VMware 环境中配置存储
-    url: "/install/concept_provision_storage_in_vmware_environments.html"
-- title: 配置与 SnapCenter 服务器的安全 MySQL 连接
-  url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
+  - title: 为 LDAPS 配置 CA 客户端证书
+    url: "/install/task_configure_CA_client_certificate_for_LDAPS.html"

@@ -11,7 +11,7 @@ summary: 如果您不想使用 SnapCenter 图形用户界面执行主机配置�
 
 
 [role="lead"]
-如果您不想使用 SnapCenter 图形用户界面执行主机配置和空间回收作业，则可以使用适用于 Microsoft Windows 的 SnapCenter 插件提供的 PowerShell cmdlet 。您可以直接使用 cmdlet 或将其添加到脚本中。
+如果您不想使用 SnapCenter GUI 执行主机配置和空间回收作业，则可以使用 PowerShell cmdlet。您可以直接使用 cmdlet 或将其添加到脚本中。
 
 如果要在远程插件主机上运行 cmdlet ，则必须运行 SnapCenter Open-SMConnection cmdlet 以打开与 SnapCenter 服务器的连接。
 

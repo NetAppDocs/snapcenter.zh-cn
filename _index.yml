@@ -2,7 +2,7 @@
 indexpage:
   title: SnapCenter软件文档
   keywords: snapcenter server, plug-in, data protection, applications, databases,
-    host file systems, VmWare, backup, restore, clone
+    host file systems, VmWare, backup, restore, clone, asa r2
   lead: SnapCenter软件是一个简单、集中且可扩展的平台、可为混合云中任意位置ONTAP系统上运行的应用程序、数据库、主机文件系统和VM提供应用程序一致的数据保护。本文档库包含版本6.1的信息。
   tiles:
   - title: 入门

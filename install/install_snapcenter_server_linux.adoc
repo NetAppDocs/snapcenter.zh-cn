@@ -141,3 +141,13 @@ _webapp_External port_的默认值为8146
 
 
 
+
+
+
+== 安装期间在Linux主机上启用的功能
+
+SnapCenter 服务器安装以下软件包，可帮助排除故障和维护主机系统。
+
+* Rabbitmq
+* Erlang
+

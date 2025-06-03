@@ -1,7 +1,7 @@
 ---
 permalink: install/task_reclaim_space_on_the_storage_system.html 
 sidebar: sidebar 
-keywords: space 
+keywords: space, storage system, reclaim 
 summary: 虽然在删除或修改文件时 NTFS 会跟踪 LUN 上的可用空间，但它不会向存储系统报告新信息。您可以在适用于 Windows 的插件主机上运行空间回收 PowerShell cmdlet ，以确保新释放的块在存储中标记为可用。 
 ---
 = 回收存储系统上的空间

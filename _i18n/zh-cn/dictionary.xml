@@ -2377,7 +2377,6 @@
   <block id="736f3871653c42d5fc23c7b63472291d" category="paragraph">您应已以 "SnapCenterAdmin" 角色登录。</block>
   <block id="b65c1e59593548dad4a7a0a8af00e702" category="list-text">在设置页面中，单击 * 角色 * 。</block>
   <block id="009dc93979222b8650a313a069bc7b26" category="list-text">单击 <block ref="db9d5f6f137b990473b3ea783cd913f5" category="inline-image-macro-rx" type="image"></block>。</block>
-  <block id="5c53e4d8c07d4cd65ccef16c0c161e93" category="list-text">在添加角色页面中，指定新角色的名称和问题描述。</block>
   <block id="6796f46044b1e944ba537cec849ce2dc" category="list-text">选择 * 此角色的所有成员均可查看其他成员的对象 * ，以使该角色的其他成员能够在刷新资源列表后查看卷和主机等资源。</block>
   <block id="bdc510da052289a87e1a226330d7f96c" category="paragraph">如果不希望此角色的成员查看分配给其他成员的对象，则应取消选择此选项。</block>
   <block id="ded362adb32c7d3904226c777c650579" category="admonition">启用此选项后，如果用户与创建对象或资源的用户具有相同的角色，则不需要为用户分配对对象或资源的访问权限。</block>
@@ -2612,9 +2611,7 @@
   <block id="eecd98b341176ec9088da78eefbf3544" category="paragraph">分配这些权限后，您可以在子操作系统上安装适用于 Windows 的插件。</block>
   <block id="e0b8c0081a448231b99fbbd92c77468c" category="summary">在执行数据保护操作之前，您应设置存储连接并添加 SnapCenter 服务器和 SnapCenter 插件将使用的凭据。</block>
   <block id="1dd26f6fcf67127f078a9bb0e9318802" category="doc">存储连接和凭据</block>
-  <block id="6a57d2f6137b4e66b867cbd6a5c2622a" category="list-text">* 存储连接 *</block>
   <block id="96da08df10311c05ab070820f34934cd" category="paragraph">通过存储连接， SnapCenter 服务器和 SnapCenter 插件可以访问 ONTAP 存储。设置这些连接还需要配置 AutoSupport 和事件管理系统（ EMS ）功能。</block>
-  <block id="3a8e375f86c81e7b283b9ee0db531e4d" category="list-text">* 凭据 *</block>
   <block id="1128bf8c7fbf508706d1da7b9442abbf" category="list-text">域管理员或管理员组的任何成员</block>
   <block id="b8031226b769413159c3d5ab1797ec8e" category="paragraph">指定要安装 SnapCenter 插件的系统上的域管理员或管理员组的任何成员。用户名字段的有效格式为：</block>
   <block id="d85f921b47758996b8653f3b79ea9ec4" category="list-text">用户名@UPN_</block>
@@ -2725,8 +2722,6 @@
   <block id="ed996e97427b9382e039c0a5dde5d493" category="list-text">使用 ONTAP 命令行登录到控制器。</block>
   <block id="1220394f5402b4332338e11150062d91" category="list-text">输入 system show -instance 命令，然后查看输出以查找控制器序列号。</block>
   <block id="065b83de49a875bb4bd71dbe16fad428" category="list-text">记录序列号。</block>
-  <block id="b6ac2f945924adc12a6cced3f4732d89" category="summary">SnapCenter 服务器安装程序可在安装期间在 Windows 主机上启用 Windows 功能和角色。出于故障排除和主机系统维护的目的，这些功能可能会很重要。</block>
-  <block id="03b777e98e70f41a1b91fc53f61e82ae" category="doc">安装期间在 Windows 主机上启用的功能</block>
   <block id="3adbdb3ac060038aa0e6e6c138ef9873" category="cell">类别</block>
   <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">功能</block>
   <block id="3e197446d1794d1838e3734e66b2162c" category="paragraph">Web 服务器</block>
@@ -2775,20 +2770,11 @@
   <block id="a8e1305e0c86caf1fec261807b3362ef" category="paragraph">Windows 进程激活服务</block>
   <block id="494ecde4fb6ee77e99799902ed23cd14" category="list-text">流程模型</block>
   <block id="293616622aeda675821b42e39b4d4e7b" category="paragraph">配置 API</block>
-  <block id="248724fdb43c06d73682eae495a17c67" category="summary">您可以使用 SnapCenter 配置 FC 连接或 iSCSI 连接的 LUN 。您还可以使用 SnapCenter 将现有 LUN 连接到 Windows 主机。</block>
-  <block id="30837f98cbd95f5a4cd8f19178a695e8" category="doc">配置 LUN 存储</block>
-  <block id="9660abd0b48a5f9635c3e498547f1163" category="inline-link">《 ONTAP 9 SAN 配置指南》</block>
-  <block id="e44dc355289fca4137269dc7b5607927" category="paragraph">LUN 是 SAN 配置中的基本存储单元。Windows 主机将系统上的 LUN 视为虚拟磁盘。有关详细信息，请参见<block ref="9216224738613ab52bfe8b66b8e2b039" category="inline-link-rx"></block>。</block>
   <block id="a69e754efca1b9623b6b0f65a2d8dc73" category="doc">使用 security login 命令添加 ONTAP RBAC 角色</block>
-  <block id="474d9e4d882e646ea038c1c3f1057d2e" category="list-text">在为运行集群模式 ONTAP 的存储系统创建 ONTAP RBAC 角色之前，您必须确定以下内容：</block>
-  <block id="ebe591ae9d43ae4398d95940e9fd9562" category="list-text">要执行的一项或多项任务</block>
-  <block id="7a0abee5eccc23660191580add8cd728" category="list-text">执行这些任务所需的权限</block>
-  <block id="f8d5d5371173552fd813059761bfc086" category="list-text">配置 RBAC 角色需要执行以下操作：</block>
   <block id="1559a0574adcf52bb6e38eec37381b49" category="list-text">为命令和 / 或命令目录授予权限。</block>
   <block id="875c5aedd735db244786063faf6da722" category="paragraph">每个命令 / 命令目录有两个访问级别： all-access 和 read-only 。</block>
   <block id="dee6c2623edcbb8e68bfe81ea75668fa" category="paragraph">您必须始终先分配所有访问权限。</block>
   <block id="1deb5fee27bfdda7d20d4c10f6e8f273" category="list-text">为用户分配角色。</block>
-  <block id="407e9947315902e28583d3951a4332d4" category="list-text">根据 SnapCenter 插件是连接到整个集群的集群管理员 IP 还是直接连接到集群中的 SVM ，更改您的配置。</block>
   <block id="9dc5053bca32e6394932747f3adab2c4" category="inline-link">《 ONTAP 9 管理员身份验证和 RBAC 高级指南》</block>
   <block id="cf450319b4b50a20dcf243d6273acbf4" category="paragraph">有关设置 ONTAP RBAC 角色的详细信息，请参见<block ref="4054a3747c1ed1604c443c75434e693a" category="inline-link-rx"></block>。</block>
   <block id="eaa07c06fe679751494bfd4b2951b580" category="list-text">在存储系统上，输入以下命令以创建新角色：</block>
@@ -2810,11 +2796,6 @@
   <block id="af0a6ea22dad5952ae57a4085df7f018" category="list-text">输入以下命令，验证是否已正确创建用户：</block>
   <block id="07c1ab7f978b1eea65254e331b2a8733" category="paragraph">`ssecurity login show – vserver &lt;svm_name\&gt; -user-or-group-name &lt;user_name\&gt;`</block>
   <block id="5c47cbaa537c35e208658ea0c916ea4f" category="paragraph">user_name 是您在步骤 3 中创建的用户的名称。</block>
-  <block id="cbb23b8d6f2ddac05adf3b8df4d48c63" category="summary">有时，您可能需要将 iSCSI 会话与具有多个会话的目标断开连接。</block>
-  <block id="4abe930f7ed4aa8557d64ff364aa1be7" category="doc">断开 iSCSI 会话的连接</block>
-  <block id="8604cb873c825c8a47d73b5809f9ece3" category="list-text">从 iSCSI 会话列表中，选择要断开连接的会话，然后单击 * 断开会话 * 。</block>
-  <block id="404198fd96b17670e542d194555e13b5" category="list-text">在断开会话对话框中，单击 * 确定 * 。</block>
-  <block id="690d3c16f8977d088a13175ac12ac454" category="paragraph">SnapCenter 会断开 iSCSI 会话的连接。</block>
   <block id="01030a4579e57d7bfe53d02858238c30" category="summary">您可以运行 SnapCenter 服务器安装程序可执行文件来安装 SnapCenter 服务器。</block>
   <block id="6bbbc97f76f0cc1fe72bf085e402d899" category="admonition">不支持使用命令行静默安装 SnapCenter 服务器。</block>
   <block id="43ee0e34a532e1eabe2077111168d79c" category="list-text">SnapCenter 服务器主机必须是最新的 Windows 更新，并且不会发生待定系统重新启动。</block>
@@ -4266,7 +4247,6 @@
   <block id="c594ad15b5f030456ddf5f2e5ad4ad9a" category="paragraph">克隆操作完成后，您可以重命名克隆。</block>
   <block id="7372096d67d7a00d21e644f03bd6b3f6" category="summary">如果无法从 SnapCenter 图形用户界面远程安装适用于 Microsoft Windows 的 SnapCenter 插件，则可以在 Windows 主机上本地安装此插件。您可以通过 Windows 命令行在无人参与的情况下以静默模式运行适用于 Microsoft Windows 的 SnapCenter 插件安装程序。</block>
   <block id="3065bc79c85488f5e9c34540aa589dee" category="doc">通过命令行无提示安装适用于 Microsoft Windows 的 SnapCenter 插件</block>
-  <block id="45305b0c2be46c68805c14c7667e37d1" category="list-text">您必须已启用 Windows 消息队列。</block>
   <block id="3f9e658ebdc571b944cc7a6bb94fa2fc" category="list-text">您必须是主机上的本地管理员。</block>
   <block id="012cef6769a01d5c95c3bd84a1587de6" category="list-text">从安装位置下载适用于 Microsoft Windows 的 SnapCenter 插件。</block>
   <block id="e0080a28dd770f19702e65fb9e7b8c86" category="paragraph">例如，默认安装路径为 C ： \ProgramData\NetApp\SnapCenter\Package Repository 。</block>
@@ -5679,9 +5659,7 @@
   <block id="5cb6a75832518fd27c8d399ca2772808" category="sidebar">监控 SnapCenter 中的克隆操作</block>
   <block id="463da88e9b9043684d0979147f719cf3" category="sidebar">适用于 Oracle 的插件的功能</block>
   <block id="0c58a3855986bd6a26417ff4c654cda1" category="sidebar">克隆 Oracle 数据库</block>
-  <block id="ab5f4e39159ac71e7f3f1e7080905a20" category="sidebar">SnapCenter 服务器安装</block>
   <block id="f514139bd8bb4cc318cbbff458dd2226" category="sidebar">准备安装 SnapCenter 服务器</block>
-  <block id="bb8e9cdba9e13f92c0ca73c3ae3f6c05" category="sidebar">Storage Virtual Machine 连接和凭据</block>
   <block id="e94a41320f7b470ab4c94c28575be94e" category="sidebar">配置 CA 证书</block>
   <block id="d816b0b5150b290e2a4a44bdb570d328" category="sidebar">导入 CA 证书</block>
   <block id="d15484ff4ea42a9f2e2b7d78bd97103b" category="sidebar">为 SnapCenter 服务器启用 CA 证书</block>
@@ -5760,7 +5738,6 @@
   <block id="a93524c7ce74bfb10fdd0fcbd38fb81a" category="list-text">netsh int ipv4 show dynamicport udp</block>
   <block id="2c96e470eb2241a7251fea5747194f79" category="list-text">netsh int ipv6 show dynamicport tcp</block>
   <block id="60164a3b49ae9e6d0a2f8ca1ca1b0ac3" category="list-text">netsh int ipv6 show dynamicport udp</block>
-  <block id="5d4caff07857398d579cdda92ce3f34f" category="sidebar">配置存储系统</block>
   <block id="bb02d89ec46fa9ff65099dc0fc0d1737" category="sidebar">适用于 Microsoft Windows 的 SnapCenter 插件概念</block>
   <block id="268dbeaafbfc6c1c4598d5990f02d4ee" category="sidebar">配置 CA 证书</block>
   <block id="87ab0eaad6e67624f5afc8ca70f468a6" category="sidebar">还原 Windows 文件系统</block>
@@ -6701,7 +6678,6 @@
   <block id="59080c688ea671f9f0cc2eed3afb7bf8" category="paragraph">请勿在密码中使用双引号(")或反勾号(`)。不应使用小于(&lt;)和感叹号(！) 密码中的符号。例如、小于&lt;！10、小于10&lt;！、回退键`12。</block>
   <block id="0352418be0d30e5f0f0b3f664c74e1aa" category="admonition">在该插件的故障转移或故障恢复期间、不会立即刷新该插件的整体状态。主机和插件的整体状态将在后续主机刷新操作期间更新。</block>
   <block id="db73b4bff7f9b92f00d36e2a3fa01152" category="paragraph">二级SnapCenter 服务器应安装在与主SnapCenter 服务器相同的安装目录和端口上。</block>
-  <block id="74fec6bb431ffa93b327d4933607ec3f" category="admonition">为了确保一致性， SnapCenter 文档将角色称为使用特权。OnCommand 系统管理器图形用户界面使用术语_attribute_、而不是_privilege。设置ONTAP RBAC角色时、这两个术语的含义相同。</block>
   <block id="654c0ff0573689496c47502d09cfe7a8" category="list-text">您应在源数据库参数文件中将exclude_seed_cdb_view的值设置为false、以检索与种子PDB相关的信息、以便克隆12_c_数据库的备份。</block>
   <block id="dfb3e8f24407538f95c7f42d27411d1b" category="admonition">您应在备份12_c_数据库之前设置此值。</block>
   <block id="0d51371cbb850772d2130a36f4368df4" category="list-text">MetroCluster 显示</block>
@@ -8220,14 +8196,10 @@ destination</block>
   <block id="d980d1319cdc2e847ec81791913617aa" category="list-text"><block ref="20c46755c96f02dde2f4eed87e68d5d1" prefix="" category="inline-code"></block></block>
   <block id="c9d5338c9cdd07e93595b944d815cb6b" category="list-text"><block ref="eaba2b789999def4688a2d7d4052792b" prefix="" category="inline-code"></block></block>
   <block id="e37068689bf336f6598b2d7e4c655d04" category="list-text"><block ref="eca0518c19e4265640a4cff88fbe761b" prefix="" category="inline-code"></block></block>
-  <block id="e2d84dceaeb159e34341cf9ed5c25d5b" category="summary">SnapCenter服务器安装程序可在安装期间在Linux主机上启用Linux功能和角色。出于故障排除和主机系统维护的目的，这些功能可能会很重要。</block>
   <block id="0615d0e2ee2ca176a2602bdbb3cbf96e" category="doc">安装期间在Linux主机上启用的功能</block>
-  <block id="bff6720248dd6aaffe2e42a4d70ef683" category="paragraph">SnapCenter服务器会安装以下软件包、这些软件包可能适合进行故障排除和维护主机系统。</block>
   <block id="2ac5f63d0bb2ab4a9898d18445391caf" category="list-text">Rabbitmq</block>
-  <block id="62e0b5b350c9e3d2c19aa801d9442ba9" category="list-text">nginx</block>
   <block id="f7e853158b776246c53345b938159cc1" category="list-text">Erlang</block>
   <block id="21624173efc06090951170116cd13563" category="list-text">PAM-DEVEL</block>
-  <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="list-text">PowerShell</block>
   <block id="6e3da1e6c4de3ddc55b5442f3d8fbf10" category="summary">您可以在Linux主机上安装SnapCenter服务器。</block>
   <block id="a5133039db74945642b3f4bbb769135d" category="doc">在Linux主机上安装SnapCenter服务器</block>
   <block id="1f4157da0a0359b1f842a4aae6fa96a5" category="list-text">如果您要使用没有足够权限安装SnapCenter的非root用户安装SnapCenter服务器、请从NetApp支持站点获取sudoers校验和文件。您应根据Linux版本使用适当的校验和文件。</block>
@@ -9495,7 +9467,6 @@ destination</block>
   <block id="8c4149a5e3a16e71c373cac16eab56eb" category="list-text"><block ref="8031b6dd89dc17bc568c9124170bb66a" prefix="" category="inline-code"></block></block>
   <block id="1f46b6eec6f3def165a94aea4fbd2de8" category="list-text"><block ref="d873942b6f54bbecd97eb915c6e95c45" prefix="" category="inline-code"></block></block>
   <block id="73c050ddeaec2b5e5a856c81666f8026" category="list-text">单击 <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block> 图标，然后单击*启用证书验证*。</block>
-  <block id="920adb74812a2a6ff8228ec39336b73d" category="list-text">.NET 8.0.12 (以及所有后续的8.0.x修补程序)</block>
   <block id="233125590fad11d81c05c1b0279c56f1" category="admonition">SnapCenter在ASA R2系统上仅支持VMware虚拟机文件系统(Virtual Machine File System、VMFS)。</block>
   <block id="989977a18a476a92018e04dd60ec37c1" category="inline-link">详细了解ASA R2系统</block>
   <block id="b3c78f6e772922673e6d35ae6df26cbd" category="list-text">通过VMDK为应用程序创建主备份</block>
@@ -9776,7 +9747,6 @@ destination</block>
   <block id="9efdf202df78f9a33e298564c835e4ba" category="summary">如果存储系统运行的是集群模式NetApp ONTAP、则可以使用security login命令添加NetApp ONTAP RBAC角色。</block>
   <block id="2ad5f6ef1c47048e237f2fafae87313a" category="doc">使用security login命令添加NetApp ONTAP RBAC角色</block>
   <block id="e1be0500812e131476a1a2d9b7429541" category="paragraph">如果存储系统运行的是集群模式ONTAP、则可以使用security login命令添加NetApp ONTAP RBAC角色。</block>
-  <block id="34a087679e427c81dd4b62602fb6e759" category="paragraph">为了简化在存储系统上配置这些角色的过程、您可以使用适用于NetApp ONTAP的RBAC User Creator工具、此工具发布在NetApp社区论坛上。</block>
   <block id="cd63f10378363da86bcf8672b918512a" category="paragraph">此工具会自动正确设置 ONTAP 权限。例如、适用于NetApp ONTAP的RBAC User Creator工具会自动按正确顺序添加Privileges、以便首先显示完全访问Privileges。如果先添加只读权限，然后再添加纯访问权限，则 ONTAP 会将纯访问权限标记为重复项并忽略它们。</block>
   <block id="0715b20c4e81f0c852f66480ef00c667" category="admonition">如果稍后升级SnapCenter或ONTAP、则应重新运行适用于NetApp ONTAP的RBAC User Creator工具以更新先前创建的用户角色。为早期版本的 SnapCenter 或 ONTAP 创建的用户角色无法在升级后的版本中正常工作。重新运行此工具时，它会自动处理升级。您无需重新创建角色。</block>
   <block id="30962a20671f7b70a267e94343e24484" category="list-text">不支持FAS、ASA或AFF ONTAP以及适用于NetApp ONTAP存储系统的Amazon FSx的对象存储功能。</block>
@@ -9995,4 +9965,19 @@ destination</block>
   <block id="2eadd26d0e5aeb8538a0e0d8cf0e68bf" category="sidebar">身份验证方法</block>
   <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">快速入门</block>
   <block id="a9246bf3c3eb55a8aee642477b14a8f7" category="sidebar">在NetApp支持站点上注册</block>
+  <block id="f8f43715a5fc1f86f8da231ed019b0c6" category="section-title">存储连接</block>
+  <block id="596fc94bf8faf17d4f6a3ec6fc53437f" category="paragraph">SnapCenter 服务器安装以下软件包，可帮助排除故障和维护主机系统。</block>
+  <block id="74b83e8446b3a82f3063984fb362fc4a" category="paragraph">如果您不想使用 SnapCenter GUI 执行主机配置和空间回收作业，则可以使用 PowerShell cmdlet。您可以直接使用 cmdlet 或将其添加到脚本中。</block>
+  <block id="63865c4d9ae769f19103f3ee2d977184" category="list-text">确定您要执行的任务以及执行这些任务所需的权限。</block>
+  <block id="d7d6797642e09c2dc77b50ef5e78df62" category="list-text">根据您的 SnapCenter 插件是连接到整个集群的集群管理员 IP 还是直接连接到集群内的 SVM 来确定您的配置。</block>
+  <block id="02db4b32d20778ef679bcd2da9e5e94a" category="paragraph">为了简化存储系统上这些角色的配置，您可以使用 NetApp ONTAP 的 RBAC 用户创建器工具，该工具发布在 NetApp 社区论坛上。</block>
+  <block id="edb8104325c03cc5ddc6550b87275741" category="paragraph">要创建自己的角色，必须以“SnapCenterAdmin”角色登录。</block>
+  <block id="8116454de7e5e8911f5a289d793b43d9" category="list-text">为新角色指定名称和描述。</block>
+  <block id="0d27cfd920c0e17d1df5689d46baa774" category="admonition">用户名和组名中只能使用以下特殊字符：空格（ ）、连字符（-）、下划线（_）和冒号（:）。</block>
+  <block id="28dbcf5fe30fd921ce51a9e1c3a6c30f" category="section-title">安装期间在 Windows 主机上启用的功能</block>
+  <block id="83e7de52a01e78e22c88a405e22e660a" category="paragraph">SnapCenter 服务器安装程序可在安装期间在 Windows 主机上启用 Windows 功能和角色。这些可能对故障排除和维护主机系统有用。</block>
+  <block id="76335228f2ee14e5df4e858ae5e7684c" category="sidebar">安装和配置 SnapCenter 服务器</block>
+  <block id="d39d360863f3fda3c5d615dc978e14ae" category="sidebar">安装 SnapCenter 服务器</block>
+  <block id="3199d4d0758d0f4f53db9a8f36670c18" category="sidebar">配置 SnapCenter 服务器</block>
+  <block id="4c975961e88401702aa6aac167300031" category="sidebar">添加并配置存储系统</block>
 </blocks>

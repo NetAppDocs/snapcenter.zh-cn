@@ -1,7 +1,7 @@
 ---
 permalink: install/task_install_the_snapcenter_server_using_the_install_wizard.html 
 sidebar: sidebar 
-keywords: install, snapcenter software, install wizard 
+keywords: install, snapcenter software, install wizard, features enabled 
 summary: 您可以运行 SnapCenter 服务器安装程序可执行文件来安装 SnapCenter 服务器。 
 ---
 = 在Windows主机上安装SnapCenter服务器
@@ -63,3 +63,127 @@ NOTE: 如果单击 * 取消 * 按钮，则正在执行的步骤将完成，然�
 日志文件始终列在管理员用户的 %temp% 文件夹中（最早的先列出）。如果要重定向日志位置，请从命令提示符处运行以下命令来启动 SnapCenter 服务器安装：``C ： \installer_location\installer_name.exe /log"C" ： \"``
 
 
+
+
+
+== 安装期间在 Windows 主机上启用的功能
+
+SnapCenter 服务器安装程序可在安装期间在 Windows 主机上启用 Windows 功能和角色。这些可能对故障排除和维护主机系统有用。
+
+|===
+| 类别 | 功能 
+
+
+ a| 
+Web 服务器
+ a| 
+* Internet 信息服务
+* 全球 Web 服务
+* 常见 HTTP 功能
++
+** 默认文档
+** 目录浏览
+** HTTP 错误
+** HTTP 重定向
+** 静态内容
+** WebDAV 发布
+
+
+* 运行状况和诊断
++
+** 自定义日志记录
+** HTTP 日志记录
+** 日志记录工具
+** 请求监控器
+** 跟踪
+
+
+* 性能功能
++
+** 静态内容压缩
+
+
+* 安全性
++
+** IP 安全性
+** 基本身份验证
+** 集中式 SSL 证书支持
+** 客户端证书映射身份验证
+** IIS 客户端证书映射身份验证
+** IP 和域限制
+** 请求筛选
+** URL 授权
+** Windows 身份验证
+
+
+* 应用程序开发功能
++
+** .NET 可扩展性 4.5
+** 应用程序初始化
+** ASP.NET Core 8.0.12 (以及所有后续的8.0.x修补程序)托管包
+** 服务器端包括
+** WebSocket 协议
+
+
+* 管理工具
++
+** IIS 管理控制台
+
+
+
+
+
+
+ a| 
+IIS 管理脚本和工具
+ a| 
+* IIS 管理服务
+* Web 管理工具
+
+
+
+
+ a| 
++.NET Framework 8.0.12功能+
+ a| 
+* ASP.NET Core 8.0.12 (以及所有后续的8.0.x修补程序)托管包
+* Windows Communication Foundation （ WCF ） HTTP 激活 45
++
+** TCP 激活
+** HTTP 激活
+
+
+
+
+有关.NET专用的故障排除信息、请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["对于没有Internet连接的原有系统、SnapCenter 升级或安装失败"^]。
+
+
+
+ a| 
+消息队列
+ a| 
+* 消息队列服务
++
+
+NOTE: 确保没有其他应用程序使用 SnapCenter 创建和管理的 MSMQ 服务。
+
+* Rabbitmq
+* Erlang
+
+
+
+
+ a| 
+Windows 进程激活服务
+ a| 
+* 流程模型
+
+
+
+
+ a| 
+配置 API
+ a| 
+全部
+
+|===
