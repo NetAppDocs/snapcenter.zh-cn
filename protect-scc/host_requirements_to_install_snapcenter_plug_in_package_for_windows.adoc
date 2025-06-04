@@ -22,7 +22,7 @@ summary: 在安装适用于 Windows 的 SnapCenter 插件软件包之前，您�
  a| 
 Microsoft Windows
 
-有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+有关受支持版本的最新信息，请参见 https://imt.netapp.com/imt/imt.jsp?components=134502;&solution=1258&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 

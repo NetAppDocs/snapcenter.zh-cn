@@ -17,6 +17,10 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 NOTE: AIX支持存储和Oracle应用程序。
 
 * 必须已在Linux、Windows或AIX主机上安装Java 11。
++
+
+NOTE: IBM Java 在 Windows 和 Linux 主机上不受支持。
+
 * 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。
 * 要执行添加主机操作的客户端主机上必须具有NetApp支持的插件、例如MongoDB、ORASCPM、Oracle应用程序、SAP ASE、SAP MaxDB和存储插件。
 
@@ -34,6 +38,9 @@ NOTE: AIX支持存储和Oracle应用程序。
 * 您必须具有具有本地管理员权限的域用户，并在远程主机上具有本地登录权限。
 * 如果您在 SnapCenter 中管理集群节点，则必须具有对集群中所有节点具有管理权限的用户。
 * 您必须手动选择适用于Microsoft Windows的SnapCenter插件。
++
+http://www.java.com/en/download/manual.jsp["下载适用于 Windows 的 JAVA"]
+
 
 
 
@@ -49,7 +56,10 @@ NOTE: AIX支持存储和Oracle应用程序。
 如果您对SnapCenter服务器主机使用Windows Server 2019或Windows Server 2016、则必须安装Java 11。互操作性表工具（ IMT ）包含有关要求的最新信息。
 
 +
-http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
+http://www.java.com/en/download/manual.jsp["下载适用于 Linux 的 JAVA"]
+
++
+https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["下载适用于 AIX 的 JAVA"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]

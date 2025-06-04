@@ -16,7 +16,7 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 * 您必须已在主机上安装Java 11。
 +
 
-NOTE: 不支持IBM Java。
+NOTE: IBM Java 在 Windows 和 Linux 主机上不受支持。
 
 * 您必须已在主机上安装 SAP HANA 数据库交互式终端（ HDBSQL 客户端）。
 * 对于 Windows ，插件 Creator 服务应使用 "`LocalSystem` " Windows 用户运行，这是以域管理员身份安装适用于 SAP HANA 数据库的插件时的默认行为。
@@ -35,7 +35,7 @@ NOTE: 不支持IBM Java。
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
 * 您必须已在Windows主机上安装Java 11。
 +
-http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
+http://www.java.com/en/download/manual.jsp["下载适用于所有操作系统的 JAVA"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"]
@@ -49,7 +49,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
 * 您必须已在Linux主机上安装Java 11。
 +
-http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
+http://www.java.com/en/download/manual.jsp["下载适用于所有操作系统的 JAVA"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"]

@@ -16,7 +16,7 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 * 您必须已在主机上安装Java 11。
 +
 
-NOTE: 不支持IBM Java。
+NOTE: IBM Java 在 Windows 和 Linux 主机上不受支持。
 
 * 对于Windows、插件Creator服务应使用"`LocalSystem`" Windows用户运行、这是以域管理员身份安装适用于MySQL的插件时的默认行为。
 * 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。默认情况下、适用于Microsoft Windows的SnapCenter插件将与MySQL插件一起部署在Windows主机上。
@@ -33,7 +33,7 @@ NOTE: 不支持IBM Java。
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
 * 您必须已在Windows主机上安装Java 11。
 +
-http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
+http://www.java.com/en/download/manual.jsp["下载适用于所有操作系统的 JAVA"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
@@ -47,7 +47,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
 * 您必须已在Linux主机上安装Java 11。
 +
-http://www.java.com/en/download/manual.jsp["适用于所有操作系统的 Java 下载"]
+http://www.java.com/en/download/manual.jsp["下载适用于所有操作系统的 JAVA"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
