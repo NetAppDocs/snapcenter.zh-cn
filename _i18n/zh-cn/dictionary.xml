@@ -9989,5 +9989,5 @@ destination</block>
   <block id="67366bdaf9086e6015fe527a27beb845" category="inline-link">下载适用于所有操作系统的 JAVA</block>
   <block id="230f7d0fc162c3a559cd8b29556f41f4" category="paragraph"><block ref="230f7d0fc162c3a559cd8b29556f41f4" category="inline-link-rx"></block></block>
   <block id="17103b09b3247a2b39032b11b995b325" category="list-text">ORACLE_BACKUPMODE 指定是否执行在线还是离线备份。</block>
-  <block id="849d9298ad9d6def4918273148b3d4bf" category="list-text">ORACLE_EXPORT_PARAMETERS 指定在运行 _bin/su_ 时是否可以导出环境变量。ORACLE_EXPORT_PARAMETERS的值应设置为 *y*。</block>
+  <block id="e787bc810fe0c9919da5538cad8cb1f1" category="list-text">ORACLE_EXPORT_PARAMETERS 指定在运行 /bin/su &lt;user running sqlplus&gt; -c sqlplus /nolog &lt;cmd&gt; 时是否应重新导出上述定义的环境变量。通常情况下，当运行 sqlplus 的用户尚未设置使用 connect / as sysdba 连接数据库所需的所有环境变量时，就会出现这种情况。</block>
 </blocks>
