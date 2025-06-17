@@ -1,0 +1,58 @@
+---
+permalink: get-started/learn-about-snapcenter-support-for-asa-r2-systems.html 
+sidebar: sidebar 
+keywords: storage system, ONTAP version, ASA r2 systems 
+summary: 您应了解支持的存储系统，应用程序和数据库。 
+---
+= ASA r2 系统支持的 SnapCenter 操作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+从 SnapCenter 6.1 开始支持 ASA r2 存储系统。  https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["详细了解ASA R2系统"]
+
+SnapCenter 利用 REST API 在 ASA r2 系统上执行所有操作，而 ASA r2 系统不支持 ZAPI。
+
+*SnapCenter for ASA r2 系统支持的操作*
+
+* 通过VMDK为应用程序创建主备份
+* 将一致性组快照传输到二级存储系统
+* 将主存储系统和辅助存储系统的备份还原到原始主机或备用主机
++
+** 使用 VMware vMotion 从主存储系统和辅助存储系统进行就地恢复
+** 连接主存储系统和辅助存储系统并复制恢复
+
+
+* 将备份克隆到原始主机或备用主机
+
+
+SnapCenter 可以发现或创建 ONTAP 一致性组。它还可以配置并初始化与目标集群的 SnapMirror 关系，以提供二级保护。
+
+有关在 ASA r2 系统上为您的应用程序启用二级保护的信息，请参阅：
+
+* https://docs.netapp.com/us-en/snapcenter/protect-scsql/create-resource-groups-secondary-protection-for-asa-r2-mssql-resources.html["为 Microsoft SQL Server 资源启用二级保护"]
+* https://docs.netapp.com/us-en/snapcenter/protect-hana/create-resource-groups-secondary-protection-for-asa-r2-hana-resources.html["为 SAP HANA 资源启用二级保护"]
+* https://docs.netapp.com/us-en/snapcenter/protect-sco/create-resource-groups-secondary-protection-for-asa-r2-oracle-resources.html["启用 Oracle 资源的二级保护"]
+* https://docs.netapp.com/us-en/snapcenter/protect-scw/create-resource-groups-secondary-protection-for-asa-r2-windows-file-systems.html["为 Windows 文件系统启用二级保护"]
+* https://docs.netapp.com/us-en/snapcenter/protect-db2/create-resource-groups-secondary-protection-for-asa-r2-db2-resources.html["为 IBM Db2 资源启用二级保护"]
+* https://docs.netapp.com/us-en/snapcenter/protect-postgresql/create-resource-groups-secondary-protection-for-asa-r2-postgresql-resources.html["为 PostgreSQL 资源启用二级保护"]
+* https://docs.netapp.com/us-en/snapcenter/protect-mysql/create-resource-groups-secondary-protection-for-asa-r2-mysql-resources.html["启用 MySQL 资源的二级保护"]
+* https://docs.netapp.com/us-en/snapcenter/protect-scu/create-resource-groups-secondary-protection-for-asa-r2-unix-resources.html["为 Unix 文件系统启用二级保护"]
+
+
+*SnapCenter 不支持 ASA r2 系统的操作*
+
+* 原始设备映射(RDM)
+* 适用于Oracle的应用程序卷
+* SAP HANA NDV
+* LockVault
+* 防篡改快照
+* FlexGroup 卷
+* 分层一致性组
+* 从 ASA、AFF 或 FAS 存储系统迁移到 ASA r2 存储系统
+* 保护混合有 ASA、AFF 或 FAS 资源和 ASA r2 资源的数据库
+* 重命名快照
+* SQL插件宿主机日志目录二次配置
+

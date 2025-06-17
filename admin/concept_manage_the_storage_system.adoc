@@ -104,7 +104,9 @@ NOTE: 如果使用 ONTAP 图形用户界面从 ONTAP 集群中删除了 SVM ，�
 
 == REST API 支持
 
-默认情况下、与ONTAP和ASA R2存储系统的所有存储连接都将通过ZAPI。可以为选定ONTAP版本启用REST API。
+默认情况下，所有 ASA、AFF 或 FAS 系统与 ONTAP 的连接都将通过 ZAPI 进行。您可以针对特定 ONTAP 版本启用 REST API。
+
+SnapCenter 利用 REST API 在 ASA r2 系统上执行所有操作，而 ASA r2 系统不支持 ZAPI。
 
 您可以修改以下配置文件中的配置密钥：
 

@@ -23,7 +23,7 @@ summary: '资源组是主机或集群上的一组资源。系统会对资源组�
 NOTE: 备份文件系统时， SnapCenter 不会备份挂载在要备份的文件系统的卷挂载点（ VMP ）上的 LUN 。
 
 
-IMPORTANT: 如果您在 Windows 文件系统环境中工作，请勿备份数据库文件。这样做会导致备份不一致，并且在还原时可能会丢失数据。要保护数据库文件，您必须使用适用于数据库的 SnapCenter 插件（例如，适用于 Microsoft SQL Server 的 SnapCenter 插件，适用于 Microsoft Exchange Server 的 SnapCenter 插件或适用于数据库文件的自定义插件）。
+IMPORTANT: 如果您在 Windows 文件系统环境中工作，请勿备份数据库文件。这样做会导致备份不一致，并且在还原时可能会丢失数据。要保护数据库文件，必须使用适合数据库的 SnapCenter 插件（例如，适用于 Microsoft SQL Server 的 SnapCenter 插件或适用于 Microsoft Exchange Server 的 SnapCenter 插件）。
 
 .步骤
 . 在左侧导航窗格中，单击 * 资源 * ，然后从列表中选择相应的插件。

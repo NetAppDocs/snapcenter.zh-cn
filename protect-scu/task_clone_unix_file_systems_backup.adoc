@@ -15,7 +15,7 @@ summary: 您可以使用SnapCenter通过文件系统备份克隆Unix文件系统
 
 .开始之前
 * 您可以通过在_agent.properties_文件(位于：/opt/NetApp/snapcentre/SCC/ETC_)中将_ski_fstab_update_的值设置为* true *来跳过fstab文件更新。
-* 您可以通过在_agent.properties_文件(位于：/opt/NetApp/snapcCenter/SCC/ETC_)中将_use_custom_CLONE _volume_name_format_的值设置为* true *来获得静态克隆卷名称和接合路径。更新文件后、您应运行以下命令来重新启动自定义插件服务的SnapCenter： `/opt/NetApp/snapcenter/scc/bin/scc restart`。
+* 您可以通过在_agent.properties_文件(位于：/opt/NetApp/snapcCenter/SCC/ETC_)中将_use_custom_CLONE _volume_name_format_的值设置为* true *来获得静态克隆卷名称和接合路径。更新文件后，您应该通过运行以下命令重新启动 SnapCenter 插件创建者服务：  `/opt/NetApp/snapcenter/scc/bin/scc restart` 。
 +
 示例：如果没有此属性、克隆卷名称和接合路径将类似于<Source_volume_name>克隆<Timestamp>、但现在将为<Source_volume_name>克隆<Clone_Name>
 

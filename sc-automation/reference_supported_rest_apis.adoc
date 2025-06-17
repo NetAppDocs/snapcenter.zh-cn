@@ -119,7 +119,6 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 * 还原SQL数据库备份
 * 还原Oracle数据库备份
 * 还原自定义应用程序备份
-* 创建自定义插件资源
 * 创建SAP HANA资源
 * 使用适用于自定义应用程序的插件保护自定义资源
 * 使用适用于Microsoft SQL Server的插件保护Microsoft SQL Server资源
@@ -272,7 +271,6 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 * 使用密钥配置SAP HANA数据库
 * 使用密钥配置Oracle数据库
 * 使用密钥还原自定义应用程序备份
-* 创建自定义插件资源
 * 创建SAP HANA资源
 * 创建Oracle应用程序卷资源
 * 使用适用于自定义应用程序的插件保护自定义资源

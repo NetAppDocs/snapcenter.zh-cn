@@ -20,7 +20,7 @@ summary: 如果某个资源不在资源组中，您可以从资源页面按需�
 NOTE: 备份文件系统时， SnapCenter 不会备份挂载在要备份的文件系统的卷挂载点（ VMP ）上的 LUN 。
 
 
-IMPORTANT: 如果您在 Windows 文件系统环境中工作，请勿备份数据库文件。这样做会导致备份不一致，并且在还原时可能会丢失数据。要保护数据库文件，您必须使用适用于数据库的 SnapCenter 插件（例如，适用于 Microsoft SQL Server 的 SnapCenter 插件，适用于 Microsoft Exchange Server 的 SnapCenter 插件或适用于数据库文件的自定义插件）。
+IMPORTANT: 如果您在 Windows 文件系统环境中工作，请勿备份数据库文件。这样做会导致备份不一致，并且在还原时可能会丢失数据。要保护数据库文件，必须使用适合数据库的 SnapCenter 插件（例如，适用于 Microsoft SQL Server 的 SnapCenter 插件或适用于 Microsoft Exchange Server 的 SnapCenter 插件）。
 
 [role="tabbed-block"]
 ====

@@ -27,43 +27,6 @@ summary: 您应了解支持的存储系统，应用程序和数据库。
 有关适用于 NetApp ONTAP 的 Amazon FSX 的信息，请参见 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX for NetApp ONTAP 文档"^]。
 
 * 运行NetApp ONTAP 9.161的NetApp ASA R2系统。
-+
-ASA R2系统可为基于全闪存平台构建的纯SAN环境提供统一的硬件和软件解决方案。 https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["详细了解ASA R2系统"](英文)。
-
-+
-
-NOTE: SnapCenter在ASA R2系统上仅支持VMware虚拟机文件系统(Virtual Machine File System、VMFS)。
-
-+
-|===
-| 支持的操作 | 不支持操作 
-
-
- a| 
-** 通过VMDK为应用程序创建主备份
-** 将一致性组快照传输到二级存储系统
-** 还原备份并从备用位置还原
-+
-*** 使用VMware vMotion从主存储和二级存储进行原位还原
-*** 从主存储和二级存储连接和复制还原
-
-
-** 克隆备份并克隆到备用位置
-
- a| 
-** 原始设备映射(RDM)
-** 适用于Oracle的应用程序卷
-** SAP HANA NDV
-** LockVault
-** 防篡改快照
-** Flex Group
-** 分层一致性组
-** 从ONTAP 9.x迁移到ASA R2系统
-** 重命名快照
-** SnapCenter不支持对SQL插件主机的日志目录进行二级配置。您应使用ONTAP命令行界面或系统管理器手动配置。
-
-
-|===
 
 
 

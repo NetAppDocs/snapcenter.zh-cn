@@ -60,9 +60,9 @@ entries:
       url: "/protect-nsp/get_the_CA_certificate_thumbprint.html"
     - title: 使用 Windows 主机插件服务配置 CA 证书
       url: "/protect-nsp/configure_CA_certificate_with_Windows_host_plug-in_services.html"
-    - title: 在 Linux 主机上为 SnapCenter 自定义插件服务配置 CA 证书
+    - title: 为 Linux 主机上的 SnapCenter 插件服务配置 CA 证书
       url: "/protect-nsp/configure_CA_certificate_on_Linux_host.html"
-    - title: 在 Windows 主机上为 SnapCenter 自定义插件服务配置 CA 证书
+    - title: 为 Windows 主机上的 SnapCenter 插件服务配置 CA 证书
       url: "/protect-nsp/configure_CA_certificate_on_windows_host.html"
     - title: 为插件启用 CA 证书
       url: "/protect-nsp/enable_ca_certificates_for_plug-ins.html"

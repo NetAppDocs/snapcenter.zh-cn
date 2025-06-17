@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_sql.html 
 sidebar: sidebar 
-keywords: SAP HANA,Custom plug-ins 
+keywords: requirements, prerequisites, install, plug-in for Windows 
 summary: 在安装适用于 Windows 的 SnapCenter 插件软件包之前，您应熟悉一些基本的主机系统空间要求和规模估算要求。 
 ---
 = 安装适用于 Windows 的 SnapCenter 插件软件包的主机要求

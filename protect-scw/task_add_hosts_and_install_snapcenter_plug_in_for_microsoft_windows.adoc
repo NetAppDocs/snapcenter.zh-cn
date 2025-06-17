@@ -38,7 +38,6 @@ link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Serve
 ** Microsoft Exchange Server
 ** Microsoft SQL Server
 ** SAP HANA
-** 自定义插件
 
 
 * 在集群上安装插件

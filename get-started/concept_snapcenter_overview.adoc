@@ -55,10 +55,7 @@ SnapCenter提供以下主要功能：
 
 * 为不同应用程序提供应用程序一致的集中式数据保护
 +
-支持对Microsoft Exchange Server、Microsoft SQL Server、Linux或AIX上的Oracle数据库、SAP HANA数据库、IBM DB2、PostgreSQL、MySQL以及ONTAP系统上运行的Windows主机文件系统进行数据保护。
-
-+
-通过提供一个用于创建用户定义的 SnapCenter 插件的框架，其他标准或自定义应用程序和数据库也支持数据保护。这样就可以通过同一个单一管理平台为其他应用程序和数据库提供数据保护。通过利用此框架、NetApp发布了适用于MongoDB、存储、MaxDB、Sybase ASE和ORASCPM的SnapCenter插件。您也可以使用开发人员指南创建自己的插件。
+支持对Microsoft Exchange Server、Microsoft SQL Server、Linux或AIX上的Oracle数据库、SAP HANA数据库、IBM DB2、PostgreSQL、MySQL以及ONTAP系统上运行的Windows主机文件系统进行数据保护。SnapCenter 还支持 MongoDB、Storage、MaxDB、Sybase ASE、ORASCPM 等应用程序的保护。
 
 * 基于策略的备份
 +
@@ -182,19 +179,6 @@ Linux 或 AIX
 适用于UNIX的插件或适用于Windows的插件
  a| 
 HDBSQL 客户端主机
- a| 
-Linux 或 Windows
-
-
-
- a| 
-SnapCenter 自定义插件
- a| 
-适用于Linux的插件软件包和适用于Windows的插件软件包
- a| 
-对于文件系统备份、请使用适用于Windows的插件
- a| 
-自定义应用程序主机
  a| 
 Linux 或 Windows
 

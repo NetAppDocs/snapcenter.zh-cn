@@ -2,7 +2,7 @@
 permalink: protect-mysql/configure-CA-certificate-for-mysql-on-Linux-host.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: 在 Linux 主机上为 SnapCenter 自定义插件服务配置 CA 证书 
+summary: 为 Linux 主机上的 SnapCenter MySQL 插件服务配置 CA 证书 
 ---
 = 在Linux主机上为SnapCenter MySQL插件服务配置CA证书
 :allow-uri-read: 
@@ -11,16 +11,16 @@ summary: 在 Linux 主机上为 SnapCenter 自定义插件服务配置 CA 证书
 
 
 [role="lead"]
-您应管理自定义插件密钥库及其证书的密码，配置 CA 证书，为自定义插件信任存储配置根或中间证书，并将 CA 签名密钥对配置为使用 SnapCenter 自定义插件服务的自定义插件信任存储，以激活已安装的数字证书。
+您应该管理插件密钥库及其证书的密码，配置 CA 证书，将根或中间证书配置到插件信任库，并使用 SnapCenter 插件服务将 CA 签名密钥对配置到插件信任库以激活已安装的数字证书。
 
-自定义插件使用文件 "keystore.jks" ，该文件位于 _/opt/netapp/snapcenter/scc/ etc_ ，同时用作其信任存储和密钥存储。
+插件使用位于 _/opt/NetApp/snapcenter/scc/etc_ 的文件“keystore.jks”作为其信任库和密钥库。
 
 
 
-== 管理自定义插件密钥库的密码以及正在使用的 CA 签名密钥对的别名
+== 管理插件密钥库的密码以及正在使用的 CA 签名密钥对的别名
 
 .步骤
-. 您可以从自定义插件代理属性文件中检索自定义插件密钥库默认密码。
+. 您可以从插件代理属性文件中检索插件密钥库默认密码。
 +
 它是与密钥 "keystore_pass" 对应的值。
 
@@ -37,16 +37,16 @@ summary: 在 Linux 主机上为 SnapCenter 自定义插件服务配置 CA 证书
 
 
 
-NOTE: 自定义插件密钥库的密码和专用密钥的所有关联别名密码应相同。
+NOTE: 插件密钥库的密码和所有相关私钥别名的密码应该相同。
 
 
 
-== 将根证书或中间证书配置为自定义插件信任存储
+== 配置根证书或中间证书以插入信任库
 
-您应将不带私钥的根证书或中间证书配置为自定义插件信任存储。
+您应该配置没有私钥的根证书或中间证书来插入信任库。
 
 .步骤
-. 导航到包含自定义插件密钥库的文件夹： /opt/netapp/snapcenter/SCC/etc.
+. 导航到包含插件密钥库的文件夹：/opt/NetApp/snapcenter/scc/etc。
 . 找到文件 "keystore.jks" 。
 . 列出密钥库中添加的证书：
 +
@@ -55,7 +55,7 @@ NOTE: 自定义插件密钥库的密码和专用密钥的所有关联别名密�
 . 添加根证书或中间证书：
 +
  keytool -import -trustcacerts -alias myRootCA -file /root/USERTrustRSA_Root.cer -keystore keystore.jks
-. 将根证书或中间证书配置为自定义插件信任存储后重新启动服务。
+. 配置根证书或中间证书以插入信任库后重新启动服务。
 
 
 
@@ -63,12 +63,12 @@ NOTE: 您应先添加根 CA 证书，然后再添加中间 CA 证书。
 
 
 
-== 将 CA 签名密钥对配置为自定义插件信任存储
+== 配置 CA 签名密钥对以插入信任库
 
-您应将 CA 签名密钥对配置为自定义插件信任存储。
+您应该将 CA 签名的密钥对配置到插件信任库中。
 
 .步骤
-. 导航到包含自定义插件密钥库 /opt/netapp/snapcenter/scc/ 等的文件夹
+. 导航到包含插件密钥库 /opt/NetApp/snapcenter/scc/etc 的文件夹。
 . 找到文件 "keystore.jks" 。
 . 列出密钥库中添加的证书：
 +
@@ -85,7 +85,7 @@ NOTE: 您应先添加根 CA 证书，然后再添加中间 CA 证书。
 . 验证密钥库是否包含与已添加到密钥库中的新 CA 证书对应的别名。
 . 将为 CA 证书添加的私钥密码更改为密钥库密码。
 +
-默认自定义插件密钥库密码是 agent.properties 文件中密钥 keystore_pass 的值。
+默认插件密钥库密码是 agent.properties 文件中密钥 KEYSTORE_PASS 的值。
 
 +
  keytool -keypasswd -alias "alias_name_in_CA_cert" -keystore keystore.jks
@@ -96,16 +96,16 @@ NOTE: 您应先添加根 CA 证书，然后再添加中间 CA 证书。
 +
 根据密钥 SCC_certificate_alias 更新此值。
 
-. 将 CA 签名密钥对配置为自定义插件信任存储后重新启动服务。
+. 配置 CA 签名密钥对以插入信任库后重新启动服务。
 
 
 
 
-== 为 SnapCenter 自定义插件配置证书撤消列表（ Certificate Revocation List ， CRL ）
+== 为插件配置证书吊销列表 (CRL)
 
 .关于此任务
-* SnapCenter 自定义插件将在预配置的目录中搜索 CRL 文件。
-* SnapCenter 自定义插件的 CRL 文件的默认目录为 " opt/netapp/snapcenter/SCC/etc/CRL" 。
+* SnapCenter 插件将在预配置的目录中搜索 CRL 文件。
+* SnapCenter 插件的 CRL 文件的默认目录是“ opt / NetApp / snapcenter / scc / etc / crl ”。
 
 
 .步骤
