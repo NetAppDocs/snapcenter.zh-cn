@@ -41,6 +41,8 @@ Microsoft Windows
 
 有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
+如果您使用的是 Windows 集群设置，您还应该安装和配置 Windows 远程管理 (WinRM)。
+
 
 
  a| 

@@ -9585,5 +9585,5 @@ destination</block>
   <block id="6fea498808c5d97bb251d0bdbc3943eb" category="sidebar">为 Linux 主机上的 SnapCenter 插件服务配置 CA 证书</block>
   <block id="5c1418af1ce8eeaeb3745b659e1fcfe8" category="sidebar">为 Windows 主机上的 SnapCenter 插件服务配置 CA 证书</block>
   <block id="f890e4e7d1398542e6dfe99fa9cf5732" category="paragraph">有关使用 F5 负载平衡器配置SnapCenter服务器以实现高可用性的说明，请参阅<block ref="4d4c1b07c3f7cab3f346d17a2617da56" category="inline-link-rx"></block> 。</block>
-  <block id="78805a221a988e79ef3f42d7c5bfd418" category="paragraph">图像</block>
+  <block id="c0f10ba70433b3a51c779845827cf459" category="paragraph">如果您使用的是 Windows 集群设置，您还应该安装和配置 Windows 远程管理 (WinRM)。</block>
 </blocks>
