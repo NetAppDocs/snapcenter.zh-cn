@@ -4114,27 +4114,17 @@
   <block id="a1ac647a4800ac6e83fce03944e544fa" category="cell">* 最佳实践： * 建议您在还原完成后执行新的完整备份和日志备份。</block>
   <block id="3e14735831893a80b59d388151734265" category="paragraph">执行最新还原后，用于还原的备份仅可用于时间点还原操作。</block>
   <block id="c589a9c8b3b9ae7adc1d5609288b15f4" category="summary">您可以使用 SnapCenter 服务器安装程序可执行文件升级 SnapCenter 服务器。</block>
-  <block id="5ddb71adbd6daab9bc17e4749bc281f8" category="list-text">SnapCenter 服务器主机必须是最新的 Windows 更新，并且不会发生待定系统重新启动。</block>
-  <block id="b8c9089814c2cbd7d1cee812b814e743" category="list-text">在启动升级操作之前，应确保没有其他操作正在运行。</block>
   <block id="236f3838bf3097da34ea64631cb10786" category="inline-link-macro">备份 SnapCenter 存储库</block>
   <block id="7a705c8931c016f06134daebf36e80fe" category="paragraph">有关信息，请参见 <block ref="e8b16a01919e198d9e965cee62b54323" category="inline-link-macro-rx"></block>。</block>
-  <block id="93e063301f68e16961686672bfe6208e" category="list-text">您应备份 SnapCenter 服务器主机或插件主机上已修改的所有 SnapCenter 配置文件。</block>
   <block id="77b44cc84c18e6f68f7831889cfc9abd" category="paragraph">SnapCenter 配置文件示例： SnapDriveService.exe ， SMCoreServiceHost.exe ， config 等。</block>
   <block id="d6d9056bd3ccaf6f2ea25c46f86b217c" category="list-text">从 NetApp 支持站点下载 SnapCenter 服务器安装包。</block>
   <block id="8e3a959801db0274c8bf2982a663244b" category="paragraph"><block ref="8e3a959801db0274c8bf2982a663244b" category="inline-link-rx"></block></block>
   <block id="b74248c6cef601e9db35af2dd0a5b036" category="list-text">创建位于 C ： \Program Files\NetApp\SnapCenter WebApp 的 web.config 副本。</block>
-  <block id="5c2a71118d4b6f36cf346a5f00cf560b" category="list-text">从 Windows 任务计划导出与插件主机相关的 SnapCenter 计划，以便在升级失败时使用该计划还原计划。</block>
   <block id="7e6c836a82252a29bd95ec48739979b0" category="paragraph">`md ： \\scBackup``schtasks /query /xml /tn taskNAME &gt;&gt; "D： \scBackup\TaskName.xml "`</block>
   <block id="873d8e42b0c7d55896b02efe6ca3e73c" category="list-text">如果未配置存储库备份，请创建 SnapCenter MySQL 数据库转储。</block>
   <block id="fd143985bfb19ac69751205ce500692d" category="paragraph">`md ： \\scBackup``mysqldump -all-databases -single 事务 -add-drop-database -dele- 触发器 -rouses -u root -p &gt; D ： \scBackup\SCRepoBackup.dmp`</block>
   <block id="b5dc8ae18451c8407650044643e43811" category="paragraph">出现提示时，输入密码。</block>
-  <block id="715be68c1d183df2f2605537fa205329" category="list-text">双击下载的 .exe 文件，启动 SnapCenter 服务器升级。</block>
-  <block id="782c158d0db07bc3333c092b1cf2e891" category="paragraph">启动升级后，系统将执行所有预检，如果不满足最低要求，则会显示相应的错误或警告消息。您可以忽略警告消息并继续安装。但是，错误应予以修复。</block>
-  <block id="e34a8d49d9566ab396f31c7424226785" category="admonition">SnapCenter 将继续使用在安装早期版本的 SnapCenter 服务器期间提供的现有 MySQL 服务器存储库数据库密码。</block>
   <block id="f6e8db7e26c18ff77395c70107114b81" category="list-text">单击 * 升级 * 。</block>
-  <block id="b783d3e004ffabe67253f1b39595280f" category="paragraph">在任何阶段，如果单击 * 取消 * 按钮，升级工作流都将被取消。它不会将 SnapCenter 服务器回滚到先前的状态。</block>
-  <block id="01d8aef1693c1ab37693630fe558d8cc" category="cell">* 最佳实践： * 您应先注销然后登录到 SnapCenter ，或者先关闭再打开一个新浏览器以访问 SnapCenter 图形用户界面。</block>
-  <block id="075ef73eccc4174ca2b3625b875d44d4" category="list-text">如果升级失败，您应清理失败的安装，重新安装早期版本的 SnapCenter ，然后将 NSM 数据库还原到其先前状态。</block>
   <block id="bd4996c43fa463bf9a4df1c1fbc6a660" category="summary">此插件软件包会在 SnapCenter 升级过程中分发。</block>
   <block id="3ddc921ba3599c9da9d32f036cfcb5ca" category="doc">升级插件软件包</block>
   <block id="5045fb7fa597d081bf2426b83c9cdd64" category="list-text">如果您是能够访问 Linux 计算机的非 root 用户，则在执行升级操作之前，应使用最新的校验和值更新 /etc/sudoers_ 文件。</block>
@@ -5638,8 +5628,6 @@
   <block id="f715a2ef0611ea5de427814c843a9ab0" category="paragraph">域控制器名称</block>
   <block id="dbd15fc926d88400581480c213191cb7" category="paragraph">指定一个或多个域控制器名称，然后单击 * 解析 * 。</block>
   <block id="71e6f64a457aae198ec095aa115ff2d0" category="paragraph">如果域控制器名称无法从 SnapCenter 服务器解析，则应更正 DNS 解析。</block>
-  <block id="a679759c30b6a98b50a9a2e53167f15b" category="list-text">在确保未运行任何作业之后，您应备份 SnapCenter 存储库（ MySQL ）数据库。建议在升级 SnapCenter 服务器和 Exchange 插件之前执行此操作。</block>
-  <block id="a6230500cc307e0a76e575726dcf9cdd" category="list-text">升级期间，系统会执行 SQL 脚本以更新 NSM 数据库中的 Exchange 数据，从而将 DAG 和主机短名称转换为 FQDN 。只有在将 SnapCenter 服务器与 Exchange 插件结合使用时，此选项才适用。</block>
   <block id="66ae478deb0faaf5c7e1c6c30e561515" category="list-text">SAP HANA 系统复制</block>
   <block id="bf44bd646cda2a6eae32f8dcdedbe899" category="list-text">您可以保护主 SAP HANA 系统，并且可以执行所有数据保护操作。</block>
   <block id="8c0704450309a78e5288d21fa9908fcd" category="list-text">您可以保护二级 SAP HANA 系统，但无法创建备份。</block>
@@ -8885,9 +8873,7 @@ destination</block>
   <block id="82b5f56e4e495a0f42039a0e31754afa" category="image-alt">安装工作流</block>
   <block id="91da037872518a1a728ddd088fba0a5e" category="image-alt">Exchange数据库的备份工作流</block>
   <block id="ac4db59a3117eb625954347693361d30" category="inline-image-macro">添加策略表单资源组</block>
-  <block id="4d6b1749d463347a1b3df01a9e8b0ea5" category="list-text">在启动升级操作之前，如果已手动将服务器主机置于维护模式，则在升级后，您需要通过单击*hosts*&gt;*Activate Schedule *手动将服务器主机退出维护模式。</block>
   <block id="490e9071957ca8b80f7019e9cb2a8b99" category="list-text">您应在服务器主机上执行全新资源发现。</block>
-  <block id="06eee3caed57cb295b8ae731bc4b8dce" category="paragraph">如果服务器主机的状态显示为已停止、您可以等待一段时间、然后执行全新发现。您还可以将 * HostRefreshInterval* 参数的值（默认值为 3600 秒）更改为 10 分钟以上的任何值。</block>
   <block id="86b796a66464051399647b9c6f8c917f" category="list-text">升级服务器主机后、您还必须先升级插件、然后再添加任何存储系统。</block>
   <block id="c58e9b1492d681b897440ca05419e132" category="paragraph">您不必手动将要升级的每个插件主机置于维护模式、因为升级过程会将Windows、Linux或AIX插件主机置于维护模式。在升级期间、维护模式会阻止在插件主机上执行任何计划的作业。</block>
   <block id="5e8cc9f28d33dd253f7204b7723e45b6" category="list-text">如果其中一个插件主机的整体状态列显示Upgrade Available、请单击插件主机名并执行以下操作：</block>
@@ -9247,7 +9233,6 @@ destination</block>
   <block id="744d48cfa6032e04d109166f7ff6aeaf" category="paragraph">有关故障排除信息，请参阅<block ref="361c774ee5cb22be42ef8ea152ed45ad" category="inline-link-rx"></block>。</block>
   <block id="a141599a0eec0e6d9aea907fc97ea039" category="list-text">选择*依赖方信任*。</block>
   <block id="458f1b484cf2f93e8e2f35b3f5a3b94a" category="list-text">右键单击为SnapCenter创建的依赖方信任，然后选择*Delete*。</block>
-  <block id="c6cd54ad2b3bca5fe6357919d1ec62e7" category="list-text">您应安装ASP.NET Core 8.0.12 (以及所有后续的8.0.x修补程序) Hosting Bundle和7.4.2或更高版本。</block>
   <block id="9044893459e9f46e1e17047570a05298" category="list-text">all-access 命令： ONTAP 9.12.1 及更高版本所需的最低权限</block>
   <block id="a70835f5bcf15a6863468bb82abc19de" category="inline-link">将 FlexClone 卷从其父卷拆分</block>
   <block id="fc3cc01cd9612e6f3077d4a6505ead8a" category="list-text">有关FlexClone卷拆分操作的信息，请参见<block ref="5db08c189f8e967bc5a82064aa92c31e" category="inline-link-rx"></block>。</block>
@@ -9586,4 +9571,26 @@ destination</block>
   <block id="5c1418af1ce8eeaeb3745b659e1fcfe8" category="sidebar">为 Windows 主机上的 SnapCenter 插件服务配置 CA 证书</block>
   <block id="f890e4e7d1398542e6dfe99fa9cf5732" category="paragraph">有关使用 F5 负载平衡器配置SnapCenter服务器以实现高可用性的说明，请参阅<block ref="4d4c1b07c3f7cab3f346d17a2617da56" category="inline-link-rx"></block> 。</block>
   <block id="c0f10ba70433b3a51c779845827cf459" category="paragraph">如果您使用的是 Windows 集群设置，您还应该安装和配置 Windows 远程管理 (WinRM)。</block>
+  <block id="d3ad73cb89e8cd3b7bc0a7c93d5208e7" category="paragraph">您应该升级SnapCenter服务器以访问最新版本中提供的最新功能和增强功能。</block>
+  <block id="f8a11972986bab5fab5be38e24515d0e" category="list-text">使用最新的 Windows 更新来更新SnapCenter Server 主机，并确保没有待处理的系统重启。</block>
+  <block id="00145f040529d6d617e2736bd1dc62af" category="list-text">确保在开始升级之前没有其他操作正在运行。</block>
+  <block id="ef1705c72306ba832d5e22c24121c7e2" category="list-text">安装 ASP.NET Core Runtime 8.0.12（以及所有后续 8.0.x 补丁）托管包和 PowerShell 7.4.2 或更高版本。</block>
+  <block id="db24b3a162cda240ba12e6bf377ad275" category="list-text">确保没有正在运行的作业后，备份SnapCenter存储库（MySQL）数据库。在升级SnapCenter Server 和 Exchange 插件之前建议这样做。</block>
+  <block id="89befeb3776cdd11052fa85b6e4f4928" category="list-text">备份SnapCenter服务器主机或插件主机上修改的所有已修改的SnapCenter配置文件。</block>
+  <block id="aaac04103c1097d63b5a7be06269c7d9" category="list-text">如果您在SnapCenter 5.0 中安装了多个版本的自定义插件，则在升级到 6.0 或更高版本之前，您应该运行 powershell cmdlet 从SnapCenter存储库（NSM 数据库）中删除所有早期版本的自定义插件（最新版本除外）。</block>
+  <block id="b81129baefdfc97f130bbcee1da98ce6" category="list-text">跑步<block ref="5127bb5818426c9a226f86808b688df6" prefix=" " category="inline-code"></block>并使用 SnapCenterAdmin 角色凭据登录</block>
+  <block id="e11a306a86d86aaffa2d69ff55fb9302" category="list-text">跑步<block ref="4c7adb4c09f9d1c7b33d1cf906860d34" prefix=" " category="inline-code"></block></block>
+  <block id="922142e2126839c9c17b4801781905c0" category="inline-link">升级到SnapCenter 6.0 或更高版本失败</block>
+  <block id="b644e2b1fd194b2e530e570c13e0336d" category="paragraph">有关更多信息，请参阅<block ref="2f58e6674e7cd1d2be8dd8a7ec9f27f2" category="inline-link-rx"></block> 。</block>
+  <block id="9593a30d4190c278ff6dcb05dd8f4490" category="list-text">在升级期间， SnapCenter执行 SQL 脚本来更新 NSM 数据库中的 Exchange 数据，将 DAG 和主机短名称转换为 FQDN。这仅适用于将SnapCenter Server 与 Exchange 插件一起使用的情况。</block>
+  <block id="8aa9742ec42a665e29a75ccfb11e5a6b" category="list-text">如果您已手动将服务器主机置于维护模式，则升级后选择*主机*&gt;*激活计划*以使服务器主机退出维护模式。</block>
+  <block id="99f490d55db332fcfd40fadd27ccf8ec" category="list-text">如果升级失败，请从 Windows 任务计划程序中导出SnapCenter插件主机计划以恢复它们。</block>
+  <block id="33265f62f6c00a1c3380415625af38b6" category="list-text">双击下载的 .exe 文件以启动SnapCenter服务器升级。</block>
+  <block id="7655051254116dbc8146da8395c9c450" category="paragraph">开始升级后， SnapCenter会运行预检查。如果系统不满足最低要求， SnapCenter会显示错误或警告消息。您可以忽略警告并继续安装，但必须修复所有错误。</block>
+  <block id="39f4e3c8612af14950612dcb1a3682d0" category="admonition">SnapCenter继续使用在安装早期版本的SnapCenter Server 期间提供的现有 MySQL Server 存储库数据库密码。</block>
+  <block id="3210c75ca343f7bd2eddfaaef1a24817" category="list-text">选择*升级*。</block>
+  <block id="81b95d1db157f5935ef43124b0c7ecf5" category="paragraph">如果您在任何阶段选择“*取消*”， SnapCenter将停止升级。它不会将SnapCenter服务器回滚到以前的状态。</block>
+  <block id="401632ff9d010db44abc6611b886a1fb" category="paragraph">*最佳实践：*注销并重新登录，或打开新的浏览器来访问SnapCenter用户界面。</block>
+  <block id="2894135a685829401e009e2fb1bc8cfe" category="paragraph">如果SnapCenter显示服务器主机状态为已停止，请等待一段时间并执行新的发现。您还可以将 *HostRefreshInterval* 参数的值（默认值为 3600 秒）更改为任何大于 10 分钟的值。</block>
+  <block id="91e42bb62d5ea6816d03c5a5de9ccfad" category="list-text">如果升级失败，请清理失败的安装，重新安装早期版本的SnapCenter，并将 NSM 数据库还原到之前的状态。</block>
 </blocks>
