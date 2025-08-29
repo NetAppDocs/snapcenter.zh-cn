@@ -17,10 +17,10 @@ summary: 如果您使用的是FAS、AFF或ASA存储控制器、则需要一个�
 
 * 购买高级版或闪存捆绑包时附带的 SnapCenter 标准权益（不随基础包一起提供）
 * 存储使用量无限制
-* 可通过使用ONTAP系统管理器或ONTAP命令行界面将其直接添加到FAS、AFF或ASA存储控制器来启用。
+* 使用ONTAP系统管理器或ONTAP CLI 直接添加到FAS、 AFF或ASA存储控制器。
 +
 
-NOTE: 对于基于 SnapCenter 控制器的许可证，您不会在 SnapCenter 图形用户界面中输入任何许可证信息。
+NOTE: 您无需在SnapCenter用户界面中输入基于SnapCenter控制器的许可证的任何许可证信息。
 
 * 锁定到控制器的序列号
 
@@ -31,10 +31,10 @@ NOTE: 对于基于 SnapCenter 控制器的许可证，您不会在 SnapCenter �
 
 == 第1步：验证是否已安装SnapManager 套件许可证
 
-您可以使用SnapCenter图形用户界面查看FAS、AFF或ASA主存储系统上是否安装了SnapManager套件许可证、并确定哪些存储系统可能需要SnapManager套件许可证。SnapManager套件许可证仅适用于主存储系统上的FAS、AFF和ASA SVM或集群。
+您可以使用SnapCenter用户界面检查FAS、 AFF或ASA主存储系统上是否安装了SnapManager Suite 许可证，并确定哪些系统需要许可证。  SnapManager Suite 许可证仅适用于主存储系统上的FAS、 AFF和ASA SVM 或集群。
 
 
-NOTE: 如果您的控制器上已安装 SnapManagerSuite 许可证，则系统会自动提供基于 SnapCenter 标准控制器的许可证授权。SnapManagerSuite 许可证和基于 SnapCenter 标准控制器的许可证这两个名称可以互换使用，但它们表示的是同一个许可证。
+NOTE: 如果您的控制器上已有SnapManager Suite 许可证， SnapCenter会自动提供基于标准控制器的许可证授权。  SnapManagerSuite 许可证和基于SnapCenter Standard 控制器的许可证这两个名称可以互换使用，但它们指的是同一个许可证。
 
 .步骤
 . 在左侧导航窗格中，选择*存储系统*。
@@ -66,11 +66,11 @@ NOTE: 如果您的控制器上已安装 SnapManagerSuite 许可证，则系统�
 您可以使用 ONTAP 命令行查看控制器上安装的所有许可证。您应该是FAS、AFF或ASA系统的集群管理员。
 
 
-NOTE: 基于 SnapCenter 标准控制器的许可证在控制器上显示为 SnapManagerSuite 许可证。
+NOTE: 控制器将基于SnapCenter Standard 控制器的许可证显示为 SnapManagerSuite 许可证。
 
 .步骤
 . 使用 ONTAP 命令行登录到 NetApp 控制器。
-. 输入 license show 命令，然后查看输出以确定是否已安装 SnapManagerSuite 许可证。
+. 输入 license show 命令，然后查看输出以查看是否已安装 SnapManagerSuite 许可证。
 +
 .示例输出
 [%collapsible]
@@ -110,7 +110,7 @@ SnapManagerSuite  license  SnapManagerSuite License -
 
 == 第3步：检索控制器序列号
 
-您需要具有控制器序列号才能检索基于控制器的许可证的序列号。您可以使用 ONTAP 命令行检索控制器序列号。您应该是FAS、AFF或ASA系统的集群管理员。
+使用ONTAP命令行获取控制器序列号。您必须是FAS、 AFF或ASA系统上的集群管理员才能获取基于控制器的许可证序列号。
 
 .步骤
 . 使用 ONTAP 命令行登录到控制器。
@@ -162,12 +162,12 @@ All-Flash Optimized: false
 
 == 第4步：检索基于控制器的许可证的序列号
 
-如果您使用的是FAS、ASA或AFF存储、则可以先从NetApp支持站点检索基于SnapCenter控制器的许可证、然后再使用ONTAP命令行进行安装。
+如果您使用的是FAS、 ASA或AFF存储，则可以先从NetApp支持站点检索基于SnapCenter控制器的许可证，然后再使用ONTAP命令行进行安装。
 
 .开始之前
 * 您应具有有效的 NetApp 支持站点登录凭据。
 +
-如果未输入有效凭据，则不会为搜索返回任何信息。
+如果您没有输入有效的凭证，系统将不会返回任何有关您搜索的信息。
 
 * 您应具有控制器序列号。
 
@@ -220,7 +220,7 @@ image::../media/nss_controller_license_select.gif[选择条件和序列号输入
 
 == 第6步：删除试用许可证
 
-如果您使用的是基于控制器的 SnapCenter 标准许可证，并且需要删除基于容量的试用许可证（序列号以 "`50` " 结尾），则应使用 MySQL 命令手动删除此试用许可证。无法使用 SnapCenter 图形用户界面删除试用许可证。
+如果您正在使用基于控制器的SnapCenter标准许可证，并且需要删除基于容量的试用许可证（序列号以“50”结尾），则应使用 MySQL 命令手动删除试用许可证。无法使用SnapCenter用户界面删除试用许可证。
 
 
 NOTE: 只有在使用基于 SnapCenter 标准控制器的许可证时，才需要手动删除试用许可证。
@@ -228,10 +228,10 @@ NOTE: 只有在使用基于 SnapCenter 标准控制器的许可证时，才需�
 .步骤
 . 在 SnapCenter 服务器上，打开 PowerShell 窗口以重置 MySQL 密码。
 +
-.. 运行 Open-SmConnection cmdlet ，为 SnapCenterAdmin 帐户启动与 SnapCenter 服务器的连接会话。
+.. 运行 Open-SmConnection cmdlet 为 SnapCenterAdmin 帐户与SnapCenter服务器建立连接。
 .. 运行 Set-SmRepositoryPassword 以重置 MySQL 密码。
 +
-有关cmdlet的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+有关 cmdlet 的信息，请参阅 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。
 
 
 
@@ -241,6 +241,6 @@ MySQL 将提示您输入密码。输入在重置密码时提供的凭据。
 
 . 从数据库中删除试用许可证：
 +
-`使用 NSM ；``D从 NSM_License 中删除，其中 NSM_License_Serial_Number="510000050" ；`
+`use nsm;DELETE FROM nsm_License WHERE nsm_License_Serial_Number='510000050';`
 
 

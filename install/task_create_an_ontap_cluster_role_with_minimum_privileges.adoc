@@ -25,7 +25,7 @@ NOTE: 您应对每个权限重复此命令。
 
 . 创建一个用户并将该角色分配给该用户。
 +
-`ssecurity login create -user <user_name\> -vserver <cluster_name\> -application ontapi -authmethod password -role <role_name\>`
+`security login create -user <user_name\> -vserver <cluster_name\> -application ontapi http -authmethod password -role <role_name\>`
 
 . 解除用户锁定。
 +

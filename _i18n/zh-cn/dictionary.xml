@@ -2471,7 +2471,6 @@
   <block id="5d34ca6ba489992e0959bb7d8068013f" category="paragraph">`ssecurity login role create – vserver &lt;cluster_name\&gt;- role &lt;role_name\&gt; -cmddirname &lt;permission\&gt;`</block>
   <block id="c121008bc3f1abe5fbc50c2756f1c2b9" category="admonition">您应对每个权限重复此命令。</block>
   <block id="2d6ee3457a72db18d9c7997a6bdf25c4" category="list-text">创建一个用户并将该角色分配给该用户。</block>
-  <block id="3b558f738f420e0cfe944e3e6cd3376a" category="paragraph">`ssecurity login create -user &lt;user_name\&gt; -vserver &lt;cluster_name\&gt; -application ontapi -authmethod password -role &lt;role_name\&gt;`</block>
   <block id="50dd0a56e2faa99d354fb627dcb6e89a" category="list-text">解除用户锁定。</block>
   <block id="e36c8512e3778b0a83d27f616b9ba1ff" category="paragraph">`ssecurity login unlock -user &lt;user_name\&gt; -vserver &lt;cluster_name\&gt;`</block>
   <block id="81fb23c0c8e735fb97f9f661b58902b8" category="section-title">用于创建角色和分配权限的 ONTAP 命令行界面命令</block>
@@ -2597,11 +2596,9 @@
   <block id="b1c23ca4e9e67a158bfb24299743d88f" category="paragraph">基于控制器的许可证具有以下特征：</block>
   <block id="5300768d44eab29e62cfac966d22baea" category="list-text">购买高级版或闪存捆绑包时附带的 SnapCenter 标准权益（不随基础包一起提供）</block>
   <block id="c55c867b9e6458f61ad9c49c7535bfab" category="list-text">存储使用量无限制</block>
-  <block id="c0919ecf5802c65bf773794b7af70540" category="admonition">对于基于 SnapCenter 控制器的许可证，您不会在 SnapCenter 图形用户界面中输入任何许可证信息。</block>
   <block id="17449a90a0d7161db56cba83fa4f2728" category="list-text">锁定到控制器的序列号</block>
   <block id="0daccd45abdac281e7508c5de0fa492c" category="doc">在 Windows 主机上配置存储</block>
   <block id="062174c6682cfbf4f3b6b5c1d6707824" category="list-text">使用 ONTAP 命令行登录到 NetApp 控制器。</block>
-  <block id="9865599458fea2a88fc4f94d29ab5c4e" category="list-text">输入 license show 命令，然后查看输出以确定是否已安装 SnapManagerSuite 许可证。</block>
   <block id="5b12cbd18ef5bbd432e4411b45e422ad" category="paragraph">在此示例中，安装了 SnapManagerSuite 许可证，因此无需执行其他 SnapCenter 许可操作。</block>
   <block id="509675a9a6ae231c84937ede65cbf4a7" category="doc">SnapCenter RDM 操作所需的最小 vCenter 特权</block>
   <block id="ef02a3bf909198f5789f51eb7f4ff85b" category="list-text">数据存储库：删除文件</block>
@@ -2633,12 +2630,10 @@
   <block id="a26bff28c23606c7396b4619af8af1bd" category="paragraph">SAL （存储抽象层）使用此端口在运行 SnapCenter 服务器的主机与 SVM 之间进行通信。SnapCenter for Windows 插件主机上的 SAL 当前也使用此端口在 SnapCenter 插件主机与 SVM 之间进行通信。</block>
   <block id="5afe34fece774db451a111901841c2f9" category="paragraph">对于多租户数据库容器（ MDC ）单租户，端口号以 13 结尾；对于非 MDC ，端口号以 15 结尾。</block>
   <block id="68dae2573ac7874d6dd234af4fa4c752" category="list-text">在 SnapCenter 服务器上，打开 PowerShell 窗口以重置 MySQL 密码。</block>
-  <block id="aa5c2438bb48bc6f9fc91294d9f5f2c1" category="list-text">运行 Open-SmConnection cmdlet ，为 SnapCenterAdmin 帐户启动与 SnapCenter 服务器的连接会话。</block>
   <block id="677b5668995b5d565b03294fb7b16727" category="list-text">运行 Set-SmRepositoryPassword 以重置 MySQL 密码。</block>
   <block id="bdc5e2c886d9f1d7c2db87ea0140c771" category="list-text">打开命令提示符并运行 mysql -u root -p 以登录到 MySQL 。</block>
   <block id="4c6cef07724f31f81802bd1558b3066b" category="paragraph">MySQL 将提示您输入密码。输入在重置密码时提供的凭据。</block>
   <block id="730761cf69bd21652f5f5b9dc5170f63" category="list-text">从数据库中删除试用许可证：</block>
-  <block id="11ed0a0d13245c242749913d8aee1584" category="paragraph">`使用 NSM ；``D从 NSM_License 中删除，其中 NSM_License_Serial_Number="510000050" ；`</block>
   <block id="e4dbf1e5d099c4253a603227e4b3bc08" category="summary">您应设置存储系统，使 SnapCenter 能够访问 ONTAP 存储，以执行数据保护和配置操作。您可以添加一个独立 SVM ，也可以添加一个由多个 SVM 组成的集群。</block>
   <block id="787d250b4622b9b1f34f52b01f5768aa" category="doc">添加存储系统</block>
   <block id="70991649072f70fdb060c64c2144c8c8" category="paragraph">SnapCenter 不支持在不同集群上使用相同名称的多个存储系统。SnapCenter 支持的每个存储系统都应具有唯一的名称和唯一的数据 LIF IP 地址。</block>
@@ -2921,7 +2916,6 @@
   <block id="37258956f8a9c89da0109335d18aa405" category="paragraph">如果源卷不可用，则 SnapMirror 目标系统需要提供数据。</block>
   <block id="59746a4c33021bdc9cb716ea91eadbb0" category="section-title">单邮箱恢复（ SMBR ）许可证</block>
   <block id="8119a3fca1d141f0d7a8e7156604c296" category="paragraph">如果您使用适用于 Exchange 的 SnapCenter 插件管理 Microsoft Exchange Server 数据库和单邮箱恢复（ SMBR ），则需要为 SMBR 提供额外的许可证，此许可证需要根据用户邮箱单独购买。</block>
-  <block id="315713e21026e04eaaa2b9a3821e4c3d" category="paragraph">如果未输入有效凭据，则不会为搜索返回任何信息。</block>
   <block id="b5ddaee766816307a016e7736f50313d" category="paragraph">此时将显示指定控制器的许可证列表。</block>
   <block id="5da6f07d19afc1937b1b5b064152d98e" category="list-text">找到并记录 SnapCenter 标准版或 SnapManagerSuite 许可证。</block>
   <block id="18cd7192921dd5ac27a1a7c5ef795c20" category="doc">空间和规模估算要求</block>
@@ -3149,23 +3143,15 @@
   <block id="4ee2d383554981f4ea8eff4f35db6832" category="inline-link">适用于 VMware vSphere 的 SnapCenter 插件 REST API</block>
   <block id="2d058bff360144951b6c9212e64bf5d8" category="paragraph">有关适用于 VMware vSphere 的 SnapCenter 插件 REST API 的信息，请参见<block ref="bf36dff0c9f063d6a54a8208136c7e68" category="inline-link-rx"></block></block>
   <block id="6309043436d4e7e5bad9a81c89ff15e4" category="doc">SnapCenter 概述</block>
-  <block id="edaafea0543ae64ebb79a2ed2e7a055b" category="paragraph">SnapCenter 利用 NetApp Snapshot ， SnapRestore ， FlexClone ， SnapMirror 和 SnapVault 技术提供以下功能：</block>
   <block id="6d02db19251dfec578c356202bfb1bdc" category="list-text">快速，节省空间，应用程序一致且基于磁盘的备份</block>
-  <block id="3f47ac8ce2ea087a29a167d91aa9f473" category="list-text">快速，精细的恢复以及应用程序一致的恢复</block>
   <block id="730379f67cffd2b9f827972fda727e5c" category="list-text">快速，节省空间的克隆</block>
-  <block id="ad5726653853fba2b5d98515c638da77" category="list-text">内部部署以保护以下内容：</block>
   <block id="7deab53ede49d0d1a58c65f2e25ff259" category="list-text">ONTAP Select 主系统上的数据</block>
-  <block id="bc549d53e5e7a7aeb8a41511751a99f2" category="list-text">内部部署在混合云中以保护以下内容：</block>
   <block id="ca5570a253e3c0a27562c65c06bb6125" category="list-text">在公有云中保护以下内容：</block>
   <block id="b340c2b4a7a978a510c8ebb351622143" category="list-text">位于 Cloud Volumes ONTAP （原 ONTAP 云）主系统上的数据</block>
   <block id="1e06a8cc16bd3bc423f81e8ff56e4fc0" category="list-text">基于策略的备份</block>
-  <block id="c6f23063f5e9e828f1d4a0d52255f07c" category="list-text">备份多个资源</block>
-  <block id="050fe282bd8b711ba366c400655d1e2a" category="paragraph">您可以使用 SnapCenter 资源组同时备份多个相同类型的资源（应用程序，数据库或主机文件系统）。</block>
   <block id="6be8f3086a30e59e908d53eb620b51dd" category="list-text">还原和恢复</block>
   <block id="b28420c602ed165d9f1cc771175a4c88" category="paragraph">SnapCenter 可以快速，精细地恢复备份，并实现应用程序一致且基于时间的恢复。您可以从混合云中的任何目标进行还原。</block>
   <block id="217601d383b816e6a2548e57b5006f92" category="list-text">克隆</block>
-  <block id="e83cfee5e1167f2033d1e804f1841a96" category="paragraph">SnapCenter 可提供快速，节省空间的应用程序一致克隆，从而加快软件开发速度。您可以在混合云中的任何目标上克隆。</block>
-  <block id="4f6da05ed76330876dac0fffae948e27" category="list-text">单一用户管理图形用户界面（ GUI ）</block>
   <block id="c534b8c3e9d947f12540681e6b032d6e" category="list-text">REST API ， Windows cmdlet ， UNIX 命令</block>
   <block id="aa4473d6d9a217be25c4635b52860652" category="list-text">自动推送安装插件</block>
   <block id="520b661a272c9e6f55f469cc9c24193d" category="list-text">高可用性</block>
@@ -3192,7 +3178,6 @@
   <block id="d2d37741a3c204436d78ca699e0e7154" category="paragraph">适用于 UNIX 的插件或适用于 Windows 的插件</block>
   <block id="5d5cde1005f814f00d44032094a9a04f" category="paragraph">HDBSQL 客户端主机</block>
   <block id="4abb41aae1dfe9c81afb3c3672df559c" category="paragraph">Linux 或 Windows</block>
-  <block id="a364132418180f0b14b5eb7db8b87808" category="admonition">适用于 VMware vSphere 的 SnapCenter 插件支持对虚拟机（ VM ），数据存储库和虚拟机磁盘（ VMDK ）执行崩溃状态一致和 VM 一致的备份和还原操作，并支持 SnapCenter 应用程序专用插件，以保护虚拟化数据库和文件系统的应用程序一致的备份和还原操作。</block>
   <block id="50e95eafa6faf8d2ee3f01921820b42b" category="list-text">自动对 SnapCenter 环境中的 Microsoft SQL Server 数据库执行应用程序感知备份，还原和克隆操作。</block>
   <block id="e40237d2b53363bc373f8134071d1be1" category="list-text">在部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件时，支持 VMDK 和原始设备映射（ RDM ） LUN 上的 Microsoft SQL Server 数据库</block>
   <block id="a7e3ff2bca34971756f1600032ff8b61" category="list-text">仅支持配置 SMB 共享。不支持在 SMB 共享上备份 SQL Server 数据库。</block>
@@ -3212,7 +3197,6 @@
   <block id="d7fdaf85ee16b5bdacd134994a4bb218" category="section-title">适用于 SAP HANA 数据库的 SnapCenter 插件功能</block>
   <block id="3012455ba6e0ba02dfa333bdecc83c57" category="section-title">SnapCenter 存储库</block>
   <block id="cc1d85843af98a2ce08e58f1408e6364" category="paragraph">SnapCenter 存储库有时称为 NSM 数据库，用于存储每个 SnapCenter 操作的信息和元数据。</block>
-  <block id="b795272c033653aa88e12f8f4fd442ca" category="paragraph">默认情况下，在安装 SnapCenter 服务器时会安装 MySQL 服务器存储库数据库。如果已安装 MySQL 服务器，而您正在执行 SnapCenter 服务器的全新安装，则应卸载 MySQL 服务器。</block>
   <block id="132ec4f136226945615e1d3845afb9d0" category="paragraph">SnapCenter 存储库存储以下信息和元数据：</block>
   <block id="5a26534ccd7cfe885d29bb4751dbc4af" category="list-text">备份，克隆，还原和验证元数据</block>
   <block id="9ceb046e6eba84331a9300ae7040cfa9" category="list-text">报告，作业和事件信息</block>
@@ -5331,11 +5315,8 @@
   <block id="de1dc9ecd8b785149fcee2f9c27647bd" category="section-title">在活动窗格中监控数据保护操作</block>
   <block id="26e6565b87611c0e2e61e424bbf253a8" category="list-text">您应具有有效的 NetApp 支持站点登录凭据。</block>
   <block id="f011a01ebc3350e546311efaf71140bc" category="doc">添加基于 SnapCenter 标准控制器的许可证</block>
-  <block id="6aa5717c99b34de9980debfbe3c6fa76" category="admonition">如果您的控制器上已安装 SnapManagerSuite 许可证，则系统会自动提供基于 SnapCenter 标准控制器的许可证授权。SnapManagerSuite 许可证和基于 SnapCenter 标准控制器的许可证这两个名称可以互换使用，但它们表示的是同一个许可证。</block>
-  <block id="e7590fb47d0f1f083a0a8a323aa643a0" category="admonition">基于 SnapCenter 标准控制器的许可证在控制器上显示为 SnapManagerSuite 许可证。</block>
   <block id="253fa4a7008b4934e4b20001065ef254" category="list-text">您应具有控制器序列号。</block>
   <block id="9a935baf19dae6c50cae12b831745abd" category="list-text">您应具有 SnapCenter 标准版或 SnapManagerSuite 许可证。</block>
-  <block id="f01f22cfc141e64ad20b64a9b3f2ac85" category="paragraph">如果您使用的是基于控制器的 SnapCenter 标准许可证，并且需要删除基于容量的试用许可证（序列号以 "`50` " 结尾），则应使用 MySQL 命令手动删除此试用许可证。无法使用 SnapCenter 图形用户界面删除试用许可证。</block>
   <block id="ca92f38ec64bb5da713b4badc8620434" category="paragraph">要在子操作系统中执行 RDM 操作，您应在主机上具有以下 vCenter 权限：</block>
   <block id="03d6fc6f0007d8c1e15a56f0a4522686" category="paragraph">SnapCenter 需要多个许可证才能对应用程序，数据库，文件系统和虚拟机进行数据保护。您安装的 SnapCenter 许可证类型取决于您的存储环境和要使用的功能。</block>
   <block id="b3b5361b491a028013fc3043e9bbf7a7" category="doc">如何使用资源，资源组和策略保护 SAP HANA 数据库</block>
@@ -6733,11 +6714,9 @@
   <block id="b76827cae3bbfa9b3f16f50aaeeb8b94" category="paragraph">作为基本AUTH标题发送</block>
   <block id="5cd6f358fe0cd7802054f95932163e71" category="paragraph">在*Advance Options *选项卡中，添加与回调URL值相同的“资源”字段，该值在JWT令牌中显示为“aud”值。</block>
   <block id="28f9c2d1c67ea659588c7bfc2680e96d" category="summary">如果您使用的是FAS、AFF或ASA存储控制器、则需要一个基于控制器的SnapCenter标准版许可证。</block>
-  <block id="4675b365d16842b130752bb3fa27614d" category="paragraph">您可以使用SnapCenter图形用户界面查看FAS、AFF或ASA主存储系统上是否安装了SnapManager套件许可证、并确定哪些存储系统可能需要SnapManager套件许可证。SnapManager套件许可证仅适用于主存储系统上的FAS、AFF和ASA SVM或集群。</block>
   <block id="bf8a4dfe438069855e34bbd2f8ec59d7" category="list-text"><block ref="1b6b7d2df953b943aed63061cd428e2b" category="inline-image-macro-rx" type="image"></block> 表示SnapManager套件许可证安装在FAS、AFF或ASA主存储系统上。</block>
   <block id="982c80480700680b3b8dc4d7d03053af" category="list-text"><block ref="1ca20f925112adf63235e58f0e4483cd" category="inline-image-macro-rx" type="image"></block> 表示FAS、AFF或ASA主存储系统上未安装SnapManager套件许可证。</block>
   <block id="3585befdeb665365a6ab248a97882128" category="paragraph">您可以使用 ONTAP 命令行查看控制器上安装的所有许可证。您应该是FAS、AFF或ASA系统的集群管理员。</block>
-  <block id="aad4d9def4b52672ae7f25a26b4f8fde" category="paragraph">您需要具有控制器序列号才能检索基于控制器的许可证的序列号。您可以使用 ONTAP 命令行检索控制器序列号。您应该是FAS、AFF或ASA系统的集群管理员。</block>
   <block id="c15b837a96c2882e6964418dadf776c1" category="paragraph">如果您使用的是FAS、AFF或ASA系统、并且拥有SnapCenter标准版或SnapManagerSuite许可证、则可以使用ONTAP命令行添加基于SnapCenter控制器的许可证。</block>
   <block id="a2e17d154f1b1314694615de5b51003c" category="list-text">您应该是FAS、AFF或ASA系统的集群管理员。</block>
   <block id="37ee5b6fcdef2d12a533711b6917c5d7" category="paragraph">如果您要使用FAS、AFF或ASA存储试用SnapCenter、则可以获取超值包评估许可证、以便在控制器上安装。</block>
@@ -6973,7 +6952,6 @@ NetApp®Single Mailbox Recovery已于2023年5月12日终止提供(EOA)。在支�
   <block id="5477ea177e290e8ac1c03a7ee8f2a92b" category="list-text">选择*立即备份*。</block>
   <block id="3f897d901d24f02777ff0994b7823d1a" category="list-text">位于ONTAP FAS、AFF或ASA主系统和二级系统上并受本地StorageGRID对象存储保护的数据</block>
   <block id="f7b38c62b0e74d318a255bc3094cf531" category="list-text">位于ONTAP FAS、AFF或ASA主系统和二级系统上并受云中对象存储和归档存储保护的数据(使用BlueXP备份和恢复集成)</block>
-  <block id="b62cae9c23cf035ec4b43fec7f0697d6" category="paragraph">SnapCenter 服务器和插件使用 HTTPS 与主机代理进行通信。有关 SnapCenter 操作的信息存储在 SnapCenter 存储库中。</block>
   <block id="6920404cf085bab5be2132dbc275f33b" category="paragraph">资源组是主机或集群上的一组资源。备份操作将对资源组中定义的所有资源执行。</block>
   <block id="a833804e6b707a2a653d8b6273573c9f" category="paragraph">您可以从 " 资源 " 页面按需备份资源组。如果资源组附加了策略并配置了计划、则会根据该计划创建备份。</block>
   <block id="45b6721b8137bd82de1f2497a525d57a" category="list-text">选择要备份的资源。</block>
@@ -7649,7 +7627,6 @@ destination</block>
   <block id="be786b6916e284b80ab94c9292822f55" category="paragraph">如果此资源包含卷或qtrees、则在为此类卷或qtrees选择要还原的Snapshot之后创建的Snapshot将被删除、并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。</block>
   <block id="726c62039b2a1ccfba1cc9d89c1b6047" category="paragraph">系统会根据保留设置删除主存储或二级存储上的Snapshot及其在SAP HANA目录中对应的条目。在备份和资源组删除期间， SAP HANA 目录条目也会被删除。</block>
   <block id="360b1745b63d8c10b566bfa854abc3ac" category="paragraph">基于Snapshot副本的备份可利用NetApp Snapshot技术为SAP HANA数据库所在的卷创建联机只读副本。</block>
-  <block id="9939c592ab7bc8c3264f4ed7fde3bd18" category="paragraph">基于策略的备份可利用NetApp Snapshot技术创建快速、节省空间、应用程序一致且基于磁盘的备份。或者，您也可以通过更新现有保护关系自动将这些备份保护到二级存储。</block>
   <block id="a156a2baa4fc7e4c8c93e2f496941e06" category="list-text">支持Windows主机的存储配置、Snapshot一致性和空间回收</block>
   <block id="3fd5f1108d9e6e2f31a2b951b94fcc66" category="list-text">删除主机所需的时间取决于备份数量和保留设置。这是因为系统会从每个控制器中删除Snapshot、并清理元数据。</block>
   <block id="921eceabf04ab9f25c362a6542724dba" category="paragraph">最新的 " 保护摘要 " 图块为您提供有权访问的所有实体的保护状态。默认情况下，此显示设置为提供所有插件的状态。系统会提供以Snapshot形式备份到主存储以及使用SnapMirror和SnapVault技术备份到二级存储的资源的状态信息。二级存储的保护状态信息的可用性取决于所选插件类型。</block>
@@ -7719,10 +7696,8 @@ destination</block>
   <block id="7affc9aa382d06b530a170abd5ed58b0" category="paragraph">DB2主机</block>
   <block id="de2f98bb47449438a4cc0f3280943d06" category="paragraph">PostgreSQL主机</block>
   <block id="b0e07179f36c91a15e47f4d7a80a4360" category="section-title">NetApp支持的插件功能</block>
-  <block id="15d048e327e80031abf5c8b2302df43b" category="paragraph">SnapCenter 支持使用 MySQL Server 8.0.37 或更高版本作为 SnapCenter 存储库数据库。如果您使用的是早期版本的 MySQL 服务器和早期版本的 SnapCenter ，则在 SnapCenter 升级期间， MySQL 服务器将升级到 8.0.37 或更高版本。</block>
   <block id="c11dc4986aae3f449b65e2cc978cb5da" category="paragraph">您应安装一个或多个 SnapCenter 许可证。有关如何添加许可证的信息，请参见 <block ref="978050eb868e07441781781da059ebc5" category="inline-link-macro-rx"></block>。</block>
   <block id="b69cd8afc7ba47f5300e7eb1864b6e2f" category="admonition">只有在使用基于 SnapCenter 标准控制器的许可证时，才需要手动删除试用许可证。</block>
-  <block id="de07b96d6e0726ed58c0b7506fed6a37" category="paragraph">有关cmdlet的信息，请参见<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
   <block id="24d3d7a47c8a6bc8f8121257c5b3734e" category="summary">您应在Linux主机上使用SnapCenter服务器配置CA证书。</block>
   <block id="a4edcfdfc889aead495fa92bc734d112" category="doc">为Linux主机配置CA证书</block>
   <block id="18ae08106eef2261e3ddf3194dc3429d" category="paragraph">在Linux上安装SnapCenter服务器后、安装程序将创建自签名证书。如果要使用CA证书、则应为Nginx反向代理、审核日志记录和SnapCenter服务配置证书。</block>
@@ -9257,8 +9232,6 @@ destination</block>
   <block id="82d07a027b5d595de4499a5069c4ccf5" category="paragraph">SnapCenter标准版许可证是一种基于控制器的许可证、包含在NetApp ONTAP One中。如果您拥有 SnapManager 套件许可证，则还可以获得 SnapCenter 标准许可证授权。如果您要在FAS、AFF或ASA存储中试用SnapCenter、可以联系销售代表来获取NetApp ONTAP One评估版许可证。</block>
   <block id="173cbb56fed3c8d1bffc40cfe1678533" category="inline-link">NetApp ONTAP One附带的许可证</block>
   <block id="94875c624efb32d934c5cd2c0c78f2f0" category="paragraph">有关NetApp ONTAP One附带的许可证的信息，请参阅<block ref="0ab66dfac600c25af9e742e0f8819421" category="inline-link-rx"></block>。</block>
-  <block id="8bf34d96b4ef3036d5fecf25c54f239f" category="list-text">可通过使用ONTAP系统管理器或ONTAP命令行界面将其直接添加到FAS、AFF或ASA存储控制器来启用。</block>
-  <block id="f59cbb2508b7e0a4a75f1eddabac7e1e" category="paragraph">如果您使用的是FAS、ASA或AFF存储、则可以先从NetApp支持站点检索基于SnapCenter控制器的许可证、然后再使用ONTAP命令行进行安装。</block>
   <block id="9efdf202df78f9a33e298564c835e4ba" category="summary">如果存储系统运行的是集群模式NetApp ONTAP、则可以使用security login命令添加NetApp ONTAP RBAC角色。</block>
   <block id="2ad5f6ef1c47048e237f2fafae87313a" category="doc">使用security login命令添加NetApp ONTAP RBAC角色</block>
   <block id="e1be0500812e131476a1a2d9b7429541" category="paragraph">如果存储系统运行的是集群模式ONTAP、则可以使用security login命令添加NetApp ONTAP RBAC角色。</block>
@@ -9326,13 +9299,9 @@ destination</block>
   <block id="4472af35b609c9246e4bb55f728b01c4" category="paragraph">脚本在备份策略中指定。备份作业启动时、策略会自动将脚本与要备份的资源关联起来。创建备份策略时，您可以指定 prestpt 和 postScript 参数。</block>
   <block id="fdc25f4e4e50282783f6d6bbd351fb7c" category="doc">SnapCenter所需的许可证</block>
   <block id="ece5d50a5bb2d395e1da043ece57184c" category="paragraph">协议许可证</block>
-  <block id="e0067e0950b0060576d778dc781cc470" category="paragraph">SnapCenter软件是一个简单、集中且可扩展的平台、可为混合云中在ONTAP系统上运行的应用程序、数据库、主机文件系统和VM提供应用程序一致的数据保护。</block>
-  <block id="80c547faf272be2b228fc24b6cf865f5" category="paragraph">SnapCenter 既包括 SnapCenter 服务器，也包括单个轻型插件。您可以自动将插件部署到远程应用程序主机、计划备份、验证和克隆操作以及监控所有数据保护操作。</block>
-  <block id="17166d817786a7b08901227773723cf1" category="paragraph">SnapCenter既可以安装在内部环境中、也可以安装在公共云中以保护数据。</block>
   <block id="be01a357ae2c9752875b5385c732b017" category="section-title">主要功能：</block>
   <block id="167ec2cbfb2138b492dfdc49a527d301" category="paragraph">SnapCenter提供以下主要功能：</block>
   <block id="8cf888c772c03c3d648b58558da6e63e" category="list-text">为不同应用程序提供应用程序一致的集中式数据保护</block>
-  <block id="fbe4c82f71e9d38697b35f4a20991f38" category="paragraph">SnapCenter提供了一个图形用户界面、该界面是一个一站式界面、用于管理混合云中任何目标中资源的备份和克隆。</block>
   <block id="7c3bb00618d034ac43cb570a8e2d7a19" category="paragraph">SnapCenter提供了REST API、用于实现与任何业务流程软件集成以及使用Windows PowerShell cmdlet和命令行界面的大多数功能。</block>
   <block id="14b689a9c9a340e9114e5ea589110eca" category="list-text">集中式数据保护信息板和报告</block>
   <block id="b869d32b0a220d5f6624202b4105ce29" category="list-text">基于角色的访问控制(Role-Based Access Control、RBAC)、用于确保安全性和委派</block>
@@ -9341,7 +9310,6 @@ destination</block>
   <block id="0f45de2ede2fe6c32648866c22d6562e" category="list-text">SnapLock<block ref="5d492c0956f305803cd514ba32423952" category="inline-link-rx"></block></block>
   <block id="462fdcf093443297c1f9338c2c3383e2" category="list-text">同步镜像<block ref="95fe696371e9165fe75b9b2447e07b1a" category="inline-link-rx"></block></block>
   <block id="befd5249dc22444101ff9cd8ae621549" category="section-title">SnapCenter架构和组件</block>
-  <block id="544e93f3cdb44bfd113d60fcd99e1eaa" category="paragraph">SnapCenter平台基于多层架构、其中包括一个集中式管理服务器和一个插件主机。SnapCenter 支持多站点数据中心。SnapCenter服务器主机和插件主机可以位于不同的地理位置。</block>
   <block id="5e8f0f670e38fbdf628b0883f946934f" category="image-alt">图中显示了输入/输出对话框或表示已写入内容</block>
   <block id="92382cc3deb4906d36097ac6011e91bb" category="paragraph">SnapCenter包括SnapCenter服务器、适用于Windows的SnapCenter插件软件包和适用于Linux的SnapCenter插件软件包。每个软件包都包含适用于各种应用程序和基础架构组件的插件。</block>
   <block id="c66f894c16e09b048b2a6915abe8e051" category="paragraph">SnapCenter服务器支持Microsoft Windows和Linux (RHEL 8.x、RHEL 9.x、SLES 15 SP5)操作系统。SnapCenter服务器包括Web服务器、基于HTML5的集中式用户界面、PowerShell cmdlet、REST API和SnapCenter存储库。</block>
@@ -9366,7 +9334,6 @@ destination</block>
   <block id="0e7de338b19130a498349175e4a58590" category="paragraph">适用于SAP MaxDB的SnapCenter插件</block>
   <block id="3fa99d68ba982a33659ca2379e3e8ff4" category="paragraph">适用于存储的SnapCenter插件插件</block>
   <block id="6750ae8e3ac97dc2f5fc26009449892d" category="paragraph">适用于Linux的插件软件包和适用于Windows的插件软件包</block>
-  <block id="a3b8e6be3869d2fb101f596d05e3b4e7" category="paragraph">如果数据库或文件系统存储在VM上、或者您希望保护VM和数据存储库、则必须部署适用于VMware vSphere的SnapCenter插件虚拟设备。有关信息，请参阅<block ref="856325c2376fb402b33d836e8e7311f1" category="inline-link-rx"></block>。</block>
   <block id="ebc4b17076689e818245c6a254bc3841" category="doc">SnapCenter软件快速入门</block>
   <block id="fe3df7903e4787d992afd733b0e0aa92" category="paragraph">快速入门指南概述了安装和配置SnapCenter软件的基本步骤。</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">一个</block>
@@ -9593,4 +9560,37 @@ destination</block>
   <block id="401632ff9d010db44abc6611b886a1fb" category="paragraph">*最佳实践：*注销并重新登录，或打开新的浏览器来访问SnapCenter用户界面。</block>
   <block id="2894135a685829401e009e2fb1bc8cfe" category="paragraph">如果SnapCenter显示服务器主机状态为已停止，请等待一段时间并执行新的发现。您还可以将 *HostRefreshInterval* 参数的值（默认值为 3600 秒）更改为任何大于 10 分钟的值。</block>
   <block id="91e42bb62d5ea6816d03c5a5de9ccfad" category="list-text">如果升级失败，请清理失败的安装，重新安装早期版本的SnapCenter，并将 NSM 数据库还原到之前的状态。</block>
+  <block id="d39f4a97d8aa5892dc79d2b31c49cde5" category="paragraph">SnapCenter software是一个简单、集中且可扩展的平台，用于应用程序一致的数据保护。它保护混合云中ONTAP系统上的应用程序、数据库、主机文件系统和虚拟机。</block>
+  <block id="1161c9fd21b6d9ad537516dd735c8f85" category="paragraph">SnapCenter使用NetApp Snapshot、 SnapRestore、 FlexClone、 SnapMirror和SnapVault技术来提供：</block>
+  <block id="18da5f770adc321e5d554727bd238664" category="list-text">快速、详细的恢复和应用程序一致的恢复</block>
+  <block id="82c18a70878cd373500ae86edaa8c132" category="paragraph">SnapCenter包括SnapCenter服务器和轻量级插件。您可以自动将插件部署到远程应用程序主机，安排备份、验证和克隆操作，并监控数据保护操作。</block>
+  <block id="1f0cb45d83b41c1ce41bc65a1f8d91ed" category="paragraph">您可以在本地或公共云上安装SnapCenter来保护数据。</block>
+  <block id="d7a374ccd4f0b1d1e9e0798f4b1a8869" category="list-text">本地保护以下内容：</block>
+  <block id="67387428a7e5d4e4205f94627d948f8a" category="list-text">在混合云中本地保护以下内容：</block>
+  <block id="dfcd27a2398e2137fe772b14d150822c" category="paragraph">基于策略的备份利用NetApp Snapshot 技术来创建快速、节省空间、应用程序一致的基于磁盘的备份。您还可以通过更新现有的保护关系来设置这些备份到二级存储的自动保护。</block>
+  <block id="4f2fa2357cd0758124af2752680b0f38" category="list-text">多种资源的备份</block>
+  <block id="43b72483415c88320d60f1fc8a4b38b2" category="paragraph">您可以使用SnapCenter资源组一次备份同一类型的多个资源（应用程序、数据库或主机文件系统）。</block>
+  <block id="e048ab4f81e7759a39a859c1ae5a79c2" category="paragraph">SnapCenter提供快速、节省空间且应用程序一致的克隆。您可以在混合云中的任何目的地进行克隆。</block>
+  <block id="1262f35a107c5968275c3edf3c56eb84" category="list-text">单用户管理图形用户界面</block>
+  <block id="752689013e2985d7b19018df00f3b7b8" category="paragraph">SnapCenter提供单一界面来管理任何混合云目标中的备份和克隆。</block>
+  <block id="3832908a72119ba8d0b1faf1588da9f2" category="paragraph">SnapCenter采用分层设计，包含中央管理服务器和插件主机。服务器和插件主机可以位于不同的位置。</block>
+  <block id="1d8ca39a8b19e487e6a5decec32baf83" category="paragraph">SnapCenter将其操作的相关信息存储在SnapCenter存储库中。</block>
+  <block id="5fefa7f3d3b16845a72ae6dbd05daee8" category="paragraph">SnapCenter Plug-in for VMware vSphere支持虚拟机 (VM)、数据存储库和虚拟机磁盘 (VMDK) 的崩溃一致性和 VM 一致性备份和还原操作。它还支持虚拟化数据库和文件系统的应用程序一致的备份和恢复操作。</block>
+  <block id="12ae0b4b790b9a1fadc5cd19958e7891" category="paragraph">要保护数据库、文件系统、虚拟机或虚拟机上的数据存储区，请部署SnapCenter Plug-in for VMware vSphere。欲了解详细信息，请参阅<block ref="856325c2376fb402b33d836e8e7311f1" category="inline-link-rx"></block>。</block>
+  <block id="e341c72410665bafc2c007eb116e98b1" category="paragraph">SnapCenter Server 安装默认安装 MySQL Server 存储库数据库。如果您已经安装了 MySQL Server 并想要执行SnapCenter Server 的全新安装，则必须卸载 MySQL Server。</block>
+  <block id="90f6284c67326cc494a0d7c664bc0130" category="paragraph">SnapCenter支持 MySQL Server 8.0.37 或更高版本作为SnapCenter存储库数据库。如果您将早期版本的 MySQL Server 与早期版本的SnapCenter一起使用，则SnapCenter升级过程会将 MySQL Server 升级到版本 8.0.37 或更高版本。</block>
+  <block id="92abb015a8ee1a77855e690131dadbb4" category="list-text">使用ONTAP系统管理器或ONTAP CLI 直接添加到FAS、 AFF或ASA存储控制器。</block>
+  <block id="7125e641e5662264883f8aaeea3e82d4" category="admonition">您无需在SnapCenter用户界面中输入基于SnapCenter控制器的许可证的任何许可证信息。</block>
+  <block id="7a033f7dc254bbd0058e53fdcff1bb27" category="paragraph">您可以使用SnapCenter用户界面检查FAS、 AFF或ASA主存储系统上是否安装了SnapManager Suite 许可证，并确定哪些系统需要许可证。  SnapManager Suite 许可证仅适用于主存储系统上的FAS、 AFF和ASA SVM 或集群。</block>
+  <block id="d84b90a7e575831a7b9fd2b1f8321c73" category="admonition">如果您的控制器上已有SnapManager Suite 许可证， SnapCenter会自动提供基于标准控制器的许可证授权。  SnapManagerSuite 许可证和基于SnapCenter Standard 控制器的许可证这两个名称可以互换使用，但它们指的是同一个许可证。</block>
+  <block id="d553d8a6fc62f3d8567f93ee39689025" category="admonition">控制器将基于SnapCenter Standard 控制器的许可证显示为 SnapManagerSuite 许可证。</block>
+  <block id="f47d644cff3f38f3fe18cdfd3946f164" category="list-text">输入 license show 命令，然后查看输出以查看是否已安装 SnapManagerSuite 许可证。</block>
+  <block id="5c1790e9b20f9160d116ea4a6d92c4bf" category="paragraph">使用ONTAP命令行获取控制器序列号。您必须是FAS、 AFF或ASA系统上的集群管理员才能获取基于控制器的许可证序列号。</block>
+  <block id="916aa221ab9dbad5bdf10318bc6645ae" category="paragraph">如果您使用的是FAS、 ASA或AFF存储，则可以先从NetApp支持站点检索基于SnapCenter控制器的许可证，然后再使用ONTAP命令行进行安装。</block>
+  <block id="086d25a4c755caee6d45473239c5de33" category="paragraph">如果您没有输入有效的凭证，系统将不会返回任何有关您搜索的信息。</block>
+  <block id="1e9427347d7c2da702bcda6ee8066e34" category="paragraph">如果您正在使用基于控制器的SnapCenter标准许可证，并且需要删除基于容量的试用许可证（序列号以“50”结尾），则应使用 MySQL 命令手动删除试用许可证。无法使用SnapCenter用户界面删除试用许可证。</block>
+  <block id="023ba4b197892a3704c54c4fa35189c5" category="list-text">运行 Open-SmConnection cmdlet 为 SnapCenterAdmin 帐户与SnapCenter服务器建立连接。</block>
+  <block id="0f6e39c02439e0ed8443edc2be967e14" category="paragraph">有关 cmdlet 的信息，请参阅<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
+  <block id="87592b536cbfa9f8d915045e1c7873f1" category="paragraph"><block ref="2c04bf704e48a12576c63de2102c1c43" prefix="" category="inline-code"></block></block>
+  <block id="fa091713eff4575bdb9b210ff2415c9c" category="paragraph"><block ref="b883ee9ba55ef21bf483fd5986981580" prefix="" category="inline-code"></block></block>
 </blocks>
