@@ -109,13 +109,10 @@
   <block id="a16b9f3426d9cfca29c06a875b667023" category="admonition">如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不会触发此计划。</block>
   <block id="94ce778033bf4abe093ce9cc1e7a0498" category="paragraph">将备份副本保留特定天数</block>
   <block id="9bbf41d74c8f89f293d3299ea7bebf83" category="paragraph">选择 * 保留适用于最后 &lt; 天数 &gt; 天完整备份 * 选项，并指定保留日志备份副本的天数。</block>
-  <block id="f2d35fb96ac070e63c88b1b43cf8c70b" category="inline-link">SnapCenter 会保留数据库的 Snapshot 副本</block>
-  <block id="96df6a4d32e4546cfd055ffa3e9a7097" category="paragraph"><block ref="96df6a4d32e4546cfd055ffa3e9a7097" category="inline-link-rx"></block></block>
   <block id="1841ccf0461e2eaacdadd6d0965185ca" category="paragraph">创建本地 Snapshot 副本后更新 SnapMirror</block>
   <block id="b62913a5294dae473801568644e4e8a8" category="paragraph">选择此选项可在另一个卷（ SnapMirror ）上创建备份集的镜像副本。</block>
   <block id="289c48679623091e500c33f4b820d032" category="paragraph">创建 Snapshot 副本后更新 SnapVault</block>
   <block id="74634d46f4094928b9a2dbffb638ae7f" category="paragraph">选择此选项可执行磁盘到磁盘备份复制。</block>
-  <block id="58d70fc926069f010ab51ffa86e123d8" category="paragraph">二级策略标签</block>
   <block id="7236d615f588fda61e35cc1fa07c46cb" category="paragraph">选择 Snapshot 标签。</block>
   <block id="f4d84b8f919668d97d6f1c1e6384cfac" category="admonition">如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。</block>
   <block id="e64e99351ad3ec8079ffd2d91fbd7f12" category="paragraph">错误重试次数</block>
@@ -1339,7 +1336,6 @@
   <block id="57af7cc9669227d9ac6afec5db802561" category="paragraph">选择 * 从所有目标删除归档日志 * 。</block>
   <block id="be859d432cb8f72f5fb9b4c1622d56b1" category="paragraph">从属于备份一部分的日志目标中删除归档日志</block>
   <block id="3330083979ff2e07d7e4609ee2228f08" category="paragraph">选择 * 从属于备份一部分的目标中删除归档日志 * 。</block>
-  <block id="9696f79f02f1b72ee2751fa3ac8cee1b" category="admonition">只有在备份过程中选择了归档日志文件时，才能保留归档日志备份。</block>
   <block id="1275946d22bd30ab4fa43a93760353bd" category="paragraph">选择此字段可在另一个卷上创建备份集的镜像副本（ SnapMirror 复制）。</block>
   <block id="5599318ff76ac470ccc995aab6f33577" category="paragraph">创建本地 Snapshot 副本后更新 SnapVault</block>
   <block id="a8026657de84cf12f52f1113eca69500" category="paragraph">选择此选项可执行磁盘到磁盘备份复制（ SnapVault 备份）。</block>
@@ -6551,8 +6547,6 @@
   <block id="619f22faf39c2dfe9a11af29647bb1a6" category="list-text">选择 * 保留适用于过去 &lt; 天数 &gt; 天 * 的日志备份选项，并指定要保留的天数。如果您接近此限制，则可能需要删除较早的副本。</block>
   <block id="fe9e179b8597c5b1e7f1e2ff0644a5c8" category="open-title">特定天数</block>
   <block id="82c2224d099110596a9863d056598afe" category="paragraph">将备份副本保留特定天数。</block>
-  <block id="92ac5fc0212c94ee50e6dc85913caeec" category="example-title">显示示例</block>
-  <block id="8047dd542f0833c625160d18deaef831" category="paragraph">set-smPolicy -PolicyName 'newpol'-PolicyType 'Backup'-PluginPolicyType 'CSQL'-sqlbackuptype 'FullBackupAndLogBackup'-RetenituSettings @｛BackupType='Data'；scheduletType=' Hourly'；Retenitone=2｝、@@｛BackupType='Log_Snapshot；Retettype='、schedulettype=2｝</block>
   <block id="df5624cba097e4a1613f2162cfe02d72" category="open-title">更新SnapMirror</block>
   <block id="4fbf861fa73d7c46a9d919de9dba7f88" category="paragraph">创建本地Snapshot副本后更新SnapMirror。</block>
   <block id="721dcaba6ffe06898a1264f811fd7874" category="open-title">更新SnapVault</block>
@@ -7035,7 +7029,6 @@ NetApp®Single Mailbox Recovery已于2023年5月12日终止提供(EOA)。在支�
   <block id="7389de2f41b1c6eb64e4d894ab05e286" category="paragraph">如果仅在ONTAP中称为SnapLock存储的二级系统上配置了SnapLock，则单击“拓扑”页面中的*Refresh*按钮可刷新从ONTAP检索到的二级系统上的锁定期限。</block>
   <block id="d5d1fb88800eaa5cdf83e2dae3c93633" category="inline-link">将Snapshot副本提交到存储目标上的WORM</block>
   <block id="64c2ad2359ef41b8550053e63b4db5d2" category="paragraph">有关SnapLock存储的详细信息、请参见<block ref="8b200d34c0f23901ee8d0559f7380d4b" category="inline-link-rx"></block></block>
-  <block id="86b78accb82bf0596de946657114e7dd" category="paragraph">选择Snapshot副本锁定期限、然后选择天、月或年。</block>
   <block id="cad9d181a2b84fefcf0bef1326b5660c" category="paragraph">在二级复制期间、SnapLock到期时间会加载主SnapLock到期时间。</block>
   <block id="08ec8ae585abf03648f1d4e2cb173c27" category="paragraph">单击"Topology"页面中的*Refresh*按钮可刷新从ONTAP检索到的二级和主SnapLock到期时间。</block>
   <block id="40b141d81ebc81d0277454ddd95983be" category="paragraph">按需备份后，单击*Refresh*按钮可刷新备份或克隆的详细信息。</block>
@@ -7506,12 +7499,9 @@ NetApp®Single Mailbox Recovery已于2023年5月12日终止提供(EOA)。在支�
   <block id="4fcec4fe97075a54e91b04a9e79f56ff" category="list-text">指定Snapshot锁定期限可防止删除Snapshot、直到保留期限到期为止。这样可能会导致保留的Snapshot数量超过策略中指定的数量。</block>
   <block id="f2c85d871e7c5ae1520349e8a3869fea" category="list-text">对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。</block>
   <block id="cee00ab879a477aea09f4b1f404b14fc" category="paragraph">保留一定数量的快照</block>
-  <block id="b19465911649130b0ad9e7ed87b43f2f" category="paragraph">选择*要保留的Snapshot副本总数*、然后指定要保留的Snapshot数量。</block>
   <block id="7537e0d42ad63b5bae18964aee575640" category="paragraph">如果快照数量超过指定数量、则会删除快照、并首先删除最早的副本。</block>
   <block id="95dfd611f9419ea2abdea4d84377aeab" category="admonition">如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。</block>
   <block id="298d4bea409e146b0187ec130a39fb72" category="paragraph">将Snapshot保留一定天数</block>
-  <block id="e736f4106d35f31cff1a51f091e56c06" category="paragraph">选择*保留Snapshot副本的时间*、然后指定要在删除快照之前保留这些快照的天数。</block>
-  <block id="7cd1d77689881addd5facf23970563df" category="paragraph">选择Snapshot锁定期限、然后选择天、月或年。</block>
   <block id="7630e21f8142849489483b7354d0643a" category="paragraph">如果ONTAP中的保护关系类型为"镜像和存储"、而您仅选择此选项、则在主系统上创建的快照不会传输到目标系统、而是会在目标系统中列出。如果从目标中选择此Snapshot来执行还原操作、则会显示以下错误消息：Secondary Location is not available for the selected vauled/Mirrored backup。</block>
   <block id="d2f577cb0769d7c31f2785dd590b9f27" category="paragraph">有关SnapLock存储的详细信息、请参见将快照提交到存储上的WORM
 destination</block>
@@ -7566,7 +7556,6 @@ destination</block>
   <block id="40e1269ad4c969b2e34a183b8fe9f42e" category="list-text">输入应为每个Snapshot备份的最大数据库数。
 默认值为 100</block>
   <block id="8822b1db0297028652e02db3e4af760f" category="paragraph">仅保留特定数量的快照。</block>
-  <block id="149450cb3a9e3ecae5eaba7a4573516f" category="paragraph">根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。</block>
   <block id="dccc8011e6f51f002aae83ff00479c7d" category="admonition">您必须在ONTAP中配置SnapMirror保留策略、以使二级存储不会达到Snapshot的最大限制。</block>
   <block id="610559e33fd2c1c02990a8421918d746" category="list-text">限制检查并获取锁定、而不是使用内部数据库快照(TABLOCk)</block>
   <block id="3ec8d83deb8081e2273aae284a9a87c1" category="list-text">选择*限制检查并获取锁定，而不是使用内部数据库Snapshot副本(TABLOC)*来限制检查并获取锁定，而不是使用内部数据库Snapshot。</block>
@@ -7582,7 +7571,6 @@ destination</block>
   <block id="0bfdfbd1ef58fc826a8deec759820453" category="summary">使用 SnapCenter 备份 SQL Server 系统和用户数据库需要选择资源类型，例如数据库， SQL Server 实例和可用性组 \ （ ag\ ）。利用Snapshot技术为资源所在的卷创建联机只读副本。</block>
   <block id="b4d3eba987f9528647b8ea2102ac055f" category="paragraph">使用 SnapCenter 备份 SQL Server 系统和用户数据库需要选择资源类型，例如数据库， SQL Server 实例和可用性组（ Availability Group ， AG ）。利用Snapshot技术为资源所在的卷创建联机只读副本。</block>
   <block id="37467ff0195d6765df22bdc34e035d04" category="list-text">如果要将快照复制到镜像或存储二级存储、则SnapCenter管理员必须已为源卷和目标卷分配SVM。</block>
-  <block id="099321e862ba2170dc1c3e6b1f02ef72" category="paragraph">对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。</block>
   <block id="1635764350a12c1ff0349008881e57dd" category="paragraph">Snapshot锁定期限</block>
   <block id="3c2828ba75d966a57611ae076f53de62" category="paragraph">创建本地Snapshot后更新SnapMirror</block>
   <block id="d515aa4634219e7d2319e5e18234ff1a" category="paragraph">创建本地快照后更新SnapVault</block>
@@ -9039,8 +9027,6 @@ destination</block>
   <block id="51c4ef6c91626ee6bcba80f0f3a8fd59" category="list-text">在Snapshot and Replication页面中、执行以下操作。</block>
   <block id="e70a56107961334e45231ff9d5f1bda8" category="list-text">在Snapshot设置部分中、执行以下操作：</block>
   <block id="d21b6c7742082098834aa7ac817fc423" category="paragraph">选择*保留副本时间*、然后指定要在删除快照之前保留这些快照的天数。</block>
-  <block id="a37760bcf65acb1e666f7880b234b107" category="paragraph">主Snapshot副本锁定期限</block>
-  <block id="8c4df87df7072888db58abdf493c82ba" category="paragraph">如果要为主卷指定快照锁定期限、请选择Snapshot副本锁定期限、然后选择天、月或年。</block>
   <block id="37f001fbef310181d8f4577b4c03a798" category="paragraph">二级快照锁定期限</block>
   <block id="2e37f31a39b30876eff1858ef3d01783" category="paragraph">选择*二级Snapshot副本锁定期限*、然后选择天、月或年。</block>
   <block id="49d10f32e6045f6eb1e87608c6663036" category="list-text">在选择二级复制选项部分中、选择以下一个或两个二级复制选项：</block>
@@ -9062,13 +9048,11 @@ destination</block>
   <block id="8945d91112d6305825278287a12463cf" category="list-text">在Snapshot and Replication页面中、执行以下步骤：</block>
   <block id="26c5fd73c2f414e21745bac4c9061520" category="list-text">在Snapshot and Replication页面中、指定备份类型以及在Backup Type页面中选择的计划类型的保留设置：</block>
   <block id="eff059db75a3581eefbc224fcb754955" category="paragraph">选择*要保留的副本*，然后指定要保留的快照数。</block>
-  <block id="75653881b192c0f71e63eff99df780b0" category="paragraph">二级Snapshot副本锁定期限</block>
   <block id="ad6c4cefab999b5d3b0c637f45be0c1e" category="list-text">对于基于Snapshot副本的备份、在选择二级复制选项部分中、选择以下一个或两个二级复制选项：</block>
   <block id="c0cfc52080e2a067b98e24711aebb894" category="paragraph"><block ref="c0cfc52080e2a067b98e24711aebb894" category="inline-image-macro-rx" type="image"></block></block>
   <block id="90f9660dfd88af9a8e7316dbe773ef8d" category="list-text">在自定义备份设置部分中、以键值格式提供必须传递到此插件的任何特定备份设置。</block>
   <block id="8ec0c5b593d331f0bf00c2469725e303" category="list-text">在Snapshot设置部分中，指定在*Backup Type*页面中选择的备份类型和计划类型的保留设置：</block>
   <block id="b794f07b4da865ba0ea5b2e45e40e2d7" category="list-text">选择策略标签。</block>
-  <block id="d8321bde9335ee452a7c54b922588669" category="paragraph">根据您选择的策略标签、ONTAP会应用与此标签匹配的二级Snapshot保留策略。</block>
   <block id="40760df99ad1881cc4099caa2853c64b" category="inline-link-macro">在Topology页面中查看MySQL资源相关的备份和克隆</block>
   <block id="81a788b178a1784f4d3b3c98f0a5c0fd" category="paragraph">请参阅。 <block ref="6710edbd3b148f1744e483f97807e560" category="inline-link-macro-rx"></block></block>
   <block id="c708e7888448bf0b8b9020a354adbf4d" category="doc">在ASA R2系统上创建资源组并为MySQL资源启用二级保护</block>
@@ -9095,7 +9079,6 @@ destination</block>
   <block id="5c72942e47dd59d535a0243e01b915c5" category="paragraph">您可以通过在搜索框中输入资源组名称或单击*并选择标记来搜索资源组<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>。然后、您可以单击**<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>关闭筛选器窗格。</block>
   <block id="75dd626c2900bf0ae903a1af9ff5bb4d" category="list-text">在备份类型和复制页面中、执行以下步骤：</block>
   <block id="66e5ec1722ee55d19932c5bc96d7c5c3" category="list-text">选择策略标签。</block>
-  <block id="5a448dc3de839f6ccafc3c5c79832c90" category="admonition">要使*二级Snapshot副本锁定期限*生效、必须选择二级复制选项。“保留”页面中提供了“二级Snapshot副本锁定期限”选项。</block>
   <block id="41b7523d6eb2b3d6f06599d202b36bc2" category="paragraph">主快照锁定期限</block>
   <block id="bdb12321d80003b575f05b8f7554d39f" category="paragraph">选择*主Snapshot副本锁定期限*、然后选择天、月或年。</block>
   <block id="a76a81f87730cc587fdae2f40fc9d18b" category="paragraph">单击 <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> 并选择主机名和Exchange Server以筛选资源。然后、您可以单击 <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> 以关闭筛选器窗格。</block>
@@ -9132,8 +9115,6 @@ destination</block>
   <block id="1524074fad20a78ac464c12b7c0ab1be" category="paragraph"><block ref="1524074fad20a78ac464c12b7c0ab1be" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5116143fc568cf90dd6d42f66fce7458" category="list-text">在Snapshot and Replication页面中、执行以下步骤：</block>
   <block id="eb1d9d00c6e807619cab9ea37bcf137a" category="list-text">在数据快照保留设置部分中、指定备份类型以及在备份类型页面中选择的计划类型的保留设置：</block>
-  <block id="a5f1bd1f3375b552f48386ca5d05e45a" category="paragraph">如果要指定主Snapshot副本锁定期限、请选择*主Snapshot副本锁定期限*、然后选择天、月或年。</block>
-  <block id="2c1e6867a6e3b711ba7c5a6b89167c44" category="paragraph">如果要指定二级Snapshot副本锁定期限、请选择*二级Snapshot副本锁定期限*、然后选择天、月或年。</block>
   <block id="218bd996ffd443419d26b630b917d4da" category="list-text">在归档日志快照保留设置部分中、指定备份类型和备份类型页面中选择的计划类型的保留设置：</block>
   <block id="17e51acfcdd274bfcfeb54ea63213736" category="list-text">选择策略标签。</block>
   <block id="e38051a0d9227426e5f8160402a78211" category="paragraph">有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help command_name 来获取。或者，您也可以参考<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>。</block>
@@ -9165,7 +9146,6 @@ destination</block>
   <block id="955e59c39a685284fed2337a93e106ba" category="admonition">默认情况下，保留计数值设置为 2 。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。</block>
   <block id="de89a185c7194c68782b531cfd26fd28" category="list-text">保留快照的时间长度</block>
   <block id="baf9bfd10581e4153f7ec33ae67cdfc2" category="list-text">如果要指定在删除快照之前保留快照的天数、请选择*保留副本*。</block>
-  <block id="d2f6ae7e40615559468909d9d4717552" category="list-text">选择Snapshot标签</block>
   <block id="6eeddb49abf2b478b28ef816bcc9d4b5" category="section-title">第7步：配置二级复制选项</block>
   <block id="81acf3e2ad702e58e6f17b488f420f60" category="paragraph">请参阅。 <block ref="a3a1de85b36025c39faacf264d5c19f2" category="inline-link-macro-rx"></block></block>
   <block id="ef37f84ddc9d52086dc669514422940b" category="section-title">第8步：配置脚本设置</block>
@@ -9178,7 +9158,6 @@ destination</block>
   <block id="ea64a472e78bd4b210304f394bbe8e3a" category="list-text">单击 <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>，然后选择主机名和Unix文件系统以筛选资源。</block>
   <block id="fe87c152ea8a027207bc606ca85f3c4c" category="list-text">指定备份设置。</block>
   <block id="9cda14399e82414944fcea8fffd39485" category="list-text">在保留页面中、指定备份类型以及在备份和复制页面中选择的计划类型的保留设置：</block>
-  <block id="5f455fba952d07764d32e75250b5ba52" category="paragraph">如果要为主卷指定快照锁定期限、请选择*主快照副本锁定期限*、然后选择天、月或年。</block>
   <block id="68cdec5e109e43073b7bf9bf31a79009" category="doc">在ASA R2系统上创建资源组并为Windows文件系统启用二级保护</block>
   <block id="6f939f8b76abcb6333b6300620a5e0f3" category="image-alt">备份工作流</block>
   <block id="6af63e081593a62ed023786db3b2e4ee" category="paragraph">如果没有符合要求的现有策略、您可以复制并修改现有策略、也可以通过单击启动策略向导来创建新策略 <block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block> 。如果没有符合要求的现有策略、您可以复制并修改现有策略、也可以通过单击启动策略向导来创建新策略 <block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block> 。</block>
@@ -9248,7 +9227,6 @@ destination</block>
   <block id="bf1764b9ff5a6e7b28ab3b2166bff7a4" category="admonition">NetApp ONTAP支持从二级位置进行原位还原。</block>
   <block id="cdc0da196ab05c60eaebdca9a2459cd1" category="list-text">有关FlexClone卷拆分操作的信息、请参见、<block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block></block>
   <block id="dc4d7bf5602b12335597fd5350deab23" category="admonition">最大保留值为1018。如果保留设置的值高于底层NetApp ONTAP版本支持的值、备份将失败。</block>
-  <block id="ee96dd48de878c0191d0701d853dd514" category="paragraph">以下示例将日志快照保留设置为2：</block>
   <block id="ab6d9fe11358cebc1d2cc02fa1c47496" category="list-text">确保已在Azure中创建服务主体。</block>
   <block id="6f346066b074941885d0989051206e4e" category="list-text">确保您拥有与服务主体关联的租户ID、客户端ID和机密密钥。</block>
   <block id="db4af27eace345776f29f9a3dbb3b5ff" category="list-text">租户ID可在Azure门户中的"概述"页面上找到。</block>
@@ -9593,4 +9571,17 @@ destination</block>
   <block id="0f6e39c02439e0ed8443edc2be967e14" category="paragraph">有关 cmdlet 的信息，请参阅<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="87592b536cbfa9f8d915045e1c7873f1" category="paragraph"><block ref="2c04bf704e48a12576c63de2102c1c43" prefix="" category="inline-code"></block></block>
   <block id="fa091713eff4575bdb9b210ff2415c9c" category="paragraph"><block ref="b883ee9ba55ef21bf483fd5986981580" prefix="" category="inline-code"></block></block>
+  <block id="971b3c1d99a5aa6f2b187690d01d852c" category="paragraph">快照副本锁定期</block>
+  <block id="6b98a909e75e4d7d49461b7870f270bb" category="paragraph">选择*Snapshot 副本锁定期限*并指定天、月或年。</block>
+  <block id="7f9c21c186057efab059e539477e7cb8" category="list-text">指定策略标签。</block>
+  <block id="2c5bee50fa6fe5f3871c65e5847d0382" category="paragraph">您可以为远程复制的主快照分配SnapMirror标签，从而允许主快照将快照复制操作从SnapCenter卸载到ONTAP二级系统。无需在策略页面中启用SnapMirror或SnapVault选项即可完成此操作。</block>
+  <block id="4dd3845fa1427b8270fec6409779e3ce" category="paragraph">如果快照数量超过指定数量，则首先删除最旧的快照。</block>
+  <block id="9f4dc04b028094d2b50c905cb66cb584" category="admonition">最大保留值为 1018。如果保留设置的值高于ONTAP版本支持的值，则备份将失败。</block>
+  <block id="1df9ce8f8ee70d4668259711a2f20cd1" category="paragraph">选择*Snapshot 副本锁定期限*，并指定天、月或年。</block>
+  <block id="83c353dab613896fa690239dff46e104" category="admonition">最大保留值为 1018。如果保留设置的值高于ONTAP版本支持的值，则备份将失败。</block>
+  <block id="3300240ffba2f4633a53323d37d6b7e1" category="paragraph">+ 指定快照锁定期可防止在保留期到期之前删除快照。这可能导致保留的快照数量超过策略中指定的数量。</block>
+  <block id="dca9965d6a6b336628078d10c70a83d6" category="paragraph">+ 对于ONTAP 9.12.1 及以下版本，作为恢复的一部分从SnapLock Vault 快照创建的克隆将继承SnapLock Vault 到期时间。存储管理员应在SnapLock到期后手动清理克隆。</block>
+  <block id="bd4112ff24244ca0e669eb1f5a3bae9b" category="paragraph">选择*Snapshot 副本锁定期限*并指定天、月或年的持续时间。</block>
+  <block id="4b0801e52b058b04e3451f31a90447e6" category="list-text">选择*Snapshot 副本锁定期限*并指定天、月或年的持续时间。</block>
+  <block id="5c2f59b69b9e772c86d6723464bda765" category="paragraph">选择快照锁定期限，并指定持续时间（天、月或年）。</block>
 </blocks>

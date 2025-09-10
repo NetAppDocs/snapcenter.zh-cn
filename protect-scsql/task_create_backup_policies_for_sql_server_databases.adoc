@@ -214,48 +214,33 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
 +
 ... 要指定要保留的快照数量，请选择*要保留的副本*。
 ... 如果快照数量超过指定数量、则会删除快照、并首先删除最早的副本。
-
-
-
-
-
-
++
 
 IMPORTANT: 默认情况下，保留计数值设置为 2 。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。
 
++
 
 NOTE: 最大保留值为1018。如果保留设置的值高于底层NetApp ONTAP版本支持的值、备份将失败。
+
+
+
+
+
+
 
 . 保留快照的时间长度
 +
 .. 如果要指定在删除快照之前保留快照的天数、请选择*保留副本*。
 
 
-. 如果要指定主Snapshot副本锁定期限、请选择*主Snapshot副本锁定期限*、然后选择天、月或年。
+. 选择*Snapshot 副本锁定期限*并指定天、月或年的持续时间。
 +
 SnapLock保留期限应少于100年。
 
-. 如果要指定二级Snapshot副本锁定期限、请选择*二级Snapshot副本锁定期限*、然后选择天、月或年。
-+
-以下示例将日志快照保留设置为2：
-
-+
-.显示示例
-[]
-====
-set-smPolicy -PolicyName 'newpol'-PolicyType 'Backup'-PluginPolicyType 'CSQL'-sqlbackuptype 'FullBackupAndLogBackup'-RetenituSettings @｛BackupType='Data'；scheduletType=' Hourly'；Retenitone=2｝、@@｛BackupType='Log_Snapshot；Retettype='、schedulettype=2｝
-
-====
-+
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_retains_Snapshot_copies_of_the_database["SnapCenter 会保留数据库的 Snapshot 副本"]
-
-. 选择Snapshot标签
-+
-根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。
-
+. 选择策略标签。
 +
 
-NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
+NOTE: 您可以为远程复制的主快照分配SnapMirror标签，从而允许主快照将快照复制操作从SnapCenter卸载到ONTAP二级系统。无需在策略页面中启用SnapMirror或SnapVault选项即可完成此操作。
 
 
 
@@ -264,10 +249,6 @@ NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则
 == 第7步：配置二级复制选项
 
 . 在选择二级复制选项部分中、选择以下一个或两个二级复制选项：
-+
-
-NOTE: 要使*二级Snapshot副本锁定期限*生效、必须选择二级复制选项。
-
 
 
 [role="tabbed-block"]

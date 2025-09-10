@@ -83,39 +83,24 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
 
 
  a| 
-主Snapshot副本锁定期限
+快照副本锁定期
  a| 
-如果要为主卷指定快照锁定期限、请选择Snapshot副本锁定期限、然后选择天、月或年。
+选择*Snapshot 副本锁定期限*并指定天、月或年。
 
 SnapLock保留期限应少于100年。
-
-
-
- a| 
-二级快照锁定期限
- a| 
-选择*二级Snapshot副本锁定期限*、然后选择天、月或年。
 
 |===
 +
 
 IMPORTANT: 对于基于 Snapshot 副本的备份，如果计划启用 SnapVault 复制，则必须将保留计数设置为 2 或更高。如果将保留计数设置为1、则保留操作可能会失败、因为第一个快照是SnapVault关系的参考快照、直到将较新的快照复制到目标为止。
 
-.. 选择 Snapshot 标签。
+.. 指定策略标签。
 +
-根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。
-
-+
-
-NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
+您可以为远程复制的主快照分配SnapMirror标签，从而允许主快照将快照复制操作从SnapCenter卸载到ONTAP二级系统。无需在策略页面中启用SnapMirror或SnapVault选项即可完成此操作。
 
 
 
 . 在选择二级复制选项部分中、选择以下一个或两个二级复制选项：
-+
-
-NOTE: 要使*二级Snapshot副本锁定期限*生效、必须选择二级复制选项。
-
 +
 |===
 | 对于此字段 ... | 执行此操作 ... 
@@ -134,18 +119,6 @@ NOTE: 要使*二级Snapshot副本锁定期限*生效、必须选择二级复制�
 创建本地 Snapshot 副本后更新 SnapVault
  a| 
 选择此选项可执行磁盘到磁盘备份复制（ SnapVault 备份）。
-
-
-
- a| 
-二级策略标签
- a| 
-选择 Snapshot 标签。
-
-根据您选择的Snapshot标签、ONTAP会应用与该标签匹配的二级Snapshot保留策略。
-
-
-NOTE: 如果选择了 * 创建本地 Snapshot 副本后更新 Snapmirror* ，则可以选择指定二级策略标签。但是，如果在创建本地 Snapshot 副本之后选择了 * 更新 SnapVault * ，则应指定二级策略标签。
 
 
 
