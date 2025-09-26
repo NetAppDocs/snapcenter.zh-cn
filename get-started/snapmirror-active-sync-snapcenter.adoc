@@ -19,6 +19,18 @@ summary: 您可以使用 SnapCenter 灾难恢复功能在发生资源损坏或�
 
 此功能支持的插件包括适用于SQL Server的SnapCenter插件、适用于Windows的SnapCenter插件、适用于Oracle数据库的SnapCenter插件、适用于SAP HANA数据库的SnapCenter插件、适用于Microsoft Exchange Server的SnapCenter插件以及适用于Unix的SnapCenter插件。
 
+安装SnapCenter服务器和插件后，您应该启用SnapCenter的 REST API 来检测SnapMirror活动同步关系。
+
+* 在SnapCenter服务器主机上，编辑 _C:\Program Files\ NetApp\SMCore\SMCoreServiceHost.dll.config_ 文件以将 _IsRestEnabledForStorageConnection_ 参数的值修改为 _true_，然后重新启动SnapCenter SMCore 服务。
+* 在 Windows 插件主机上：
++
+** 编辑 _C:\Program Files\ NetApp\ SnapCenter\SMCore\SMCoreServiceHost.dll.config_ 文件，将 _IsRestEnabledForStorageConnection_ 参数的值修改为 _true_。
+** 编辑 _C:\Program Files\ NetApp\ SnapCenter\SMCore\SnapDriveService.dll.config_ 文件，将 _IsRestEnabledForStorageConnection_ 参数的值修改为 _true_。
+** 重新启动SnapCenter SMCore 服务。
+
+
+
+
 
 NOTE: 要在SnapCenter中支持主机启动程序接近、应在ONTAP中设置其值、即源或目标。
 

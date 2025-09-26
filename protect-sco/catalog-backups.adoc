@@ -68,4 +68,4 @@ NOTE: 强制删除 SnapCenter 主机时，不会删除与该主机关联的已�
 
 ` /opt/netapp/snapcenter/spl/bin/spl restart`
 
-有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help command_name 来获取。或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["《 SnapCenter 软件命令参考指南》"^]。
+可以通过运行 Get-Help command_name 获取有关可与命令一起使用的参数及其描述的信息。或者，您可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP3359469["《 SnapCenter 软件命令参考指南》"^]。

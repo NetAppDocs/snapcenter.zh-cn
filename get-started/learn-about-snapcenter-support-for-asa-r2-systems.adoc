@@ -11,14 +11,14 @@ summary: 您应了解支持的存储系统，应用程序和数据库。
 
 
 [role="lead"]
-从 SnapCenter 6.1 开始支持 ASA r2 存储系统。  https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["详细了解ASA R2系统"]
+从SnapCenter 6.1 开始支持ASA r2 存储系统。 https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["详细了解ASA R2系统"^] 。
 
-SnapCenter 利用 REST API 在 ASA r2 系统上执行所有操作，而 ASA r2 系统不支持 ZAPI。
+SnapCenter支持在物理系统和虚拟机文件系统 (VMFS) 上运行的应用程序的主要保护和次要保护。  SnapCenter使用 REST API 对ASA r2 系统上的所有操作进行操作。  ASA r2 系统不支持 ZAPI。
 
 *SnapCenter for ASA r2 系统支持的操作*
 
-* 通过VMDK为应用程序创建主备份
-* 将一致性组快照传输到二级存储系统
+* 创建应用程序的主要备份
+* 将分层一致性组快照移动到二级存储系统
 * 将主存储系统和辅助存储系统的备份还原到原始主机或备用主机
 +
 ** 使用 VMware vMotion 从主存储系统和辅助存储系统进行就地恢复
@@ -26,11 +26,19 @@ SnapCenter 利用 REST API 在 ASA r2 系统上执行所有操作，而 ASA r2 �
 
 
 * 将备份克隆到原始主机或备用主机
+* 原始设备映射(RDM)
+* 保护 Oracle 的应用程序卷
+* SAP HANA NDV 保护
+* LockVault
+* SQL插件宿主机日志目录二次配置
 
 
-SnapCenter 可以发现或创建 ONTAP 一致性组。它还可以配置并初始化与目标集群的 SnapMirror 关系，以提供二级保护。
+SnapCenter发现或创建ONTAP一致性组。它在目标集群上设置SnapMirror关系以提供二次保护。 https://docs.netapp.com/us-en/ontap/consistency-groups["了解有关ONTAP一致性组的更多信息"^] 。
 
-有关在 ASA r2 系统上为您的应用程序启用二级保护的信息，请参阅：
+
+NOTE: 升级到SnapCenter 6.2（服务器和插件）和ONTAP 9.17.1 后， SnapCenter会在第一次计划备份期间将平面一致性组更改为分层一致性组。
+
+要了解如何在ASA r2 系统上为您的应用程序启用二级保护，请参阅：
 
 * https://docs.netapp.com/us-en/snapcenter/protect-scsql/create-resource-groups-secondary-protection-for-asa-r2-mssql-resources.html["为 Microsoft SQL Server 资源启用二级保护"]
 * https://docs.netapp.com/us-en/snapcenter/protect-hana/create-resource-groups-secondary-protection-for-asa-r2-hana-resources.html["为 SAP HANA 资源启用二级保护"]
@@ -44,15 +52,15 @@ SnapCenter 可以发现或创建 ONTAP 一致性组。它还可以配置并初�
 
 *SnapCenter 不支持 ASA r2 系统的操作*
 
-* 原始设备映射(RDM)
-* 适用于Oracle的应用程序卷
-* SAP HANA NDV
-* LockVault
 * 防篡改快照
 * FlexGroup 卷
-* 分层一致性组
 * 从 ASA、AFF 或 FAS 存储系统迁移到 ASA r2 存储系统
-* 保护混合有 ASA、AFF 或 FAS 资源和 ASA r2 资源的数据库
+* 使用ASA、 AFF或FAS资源和ASA r2 资源的混合保护数据库
 * 重命名快照
-* SQL插件宿主机日志目录二次配置
+* Windows 资源配置
+* 如果存在SnapMirror主动同步故障转移，则提供二级保护
+* 如果启用了SnapMirror主动同步，则使用非易失性内存快速 (NVMe) 协议
+* 保护在 AIX 上运行的应用程序
+* 技术更新
+* Microsoft SQL 资源的灾难恢复
 

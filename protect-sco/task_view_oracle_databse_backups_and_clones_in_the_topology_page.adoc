@@ -87,4 +87,4 @@ NOTE: 您不能重命名或删除二级存储上的备份。
 
 有关可与命令结合使用的参数及其说明的信息，可通过运行 get-help _command_name_ 来获取。
 
-或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["《 SnapCenter 软件命令参考指南》"^] 或 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。
+或者，您也可以参考 https://library.netapp.com/ecm/ecm_download_file/ECMLP3359469["《 SnapCenter 软件命令参考指南》"^]或者 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《 SnapCenter 软件 cmdlet 参考指南》"^]。
