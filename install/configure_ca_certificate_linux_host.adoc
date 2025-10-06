@@ -11,7 +11,7 @@ summary: 您应在Linux主机上使用SnapCenter服务器配置CA证书。
 
 
 [role="lead"]
-在Linux上安装SnapCenter服务器后、安装程序将创建自签名证书。如果要使用CA证书、则应为Nginx反向代理、审核日志记录和SnapCenter服务配置证书。
+在 Linux 上安装SnapCenter服务器后，安装程序会创建自签名证书。如果要使用 CA 证书，则应配置 nginx 反向代理、审计日志记录和SnapCenter 的证书。
 
 
 
@@ -45,7 +45,7 @@ _INSTALL_DIR_的默认值是__/opt/_。
 
 
 
-== 配置SnapCenter服务证书
+== 配置SnapCenter证书
 
 .步骤
 . 使用vi或任何文本编辑器打开以下配置文件。
@@ -60,7 +60,7 @@ _INSTALL_DIR_的默认值是__/opt/_。
 
 . 编辑*service_certification_path*和*service_certification_password*密钥，以分别包含CA证书路径和密码。
 +
-SnapCenter服务证书仅支持_.pfx_格式。
+SnapCenter证书仅支持 _.pfx_ 格式。
 
 . 保存并关闭文件。
 . 重新启动所有服务。

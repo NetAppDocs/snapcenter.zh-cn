@@ -35,7 +35,7 @@ SnapCenter包括SnapCenter服务器和轻量级插件。您可以自动将插件
 * 在混合云中本地保护以下内容：
 +
 ** 位于ONTAP FAS、AFF或ASA主系统上并复制到Cloud Volumes ONTAP的数据
-** 位于ONTAP FAS、AFF或ASA主系统和二级系统上并受云中对象存储和归档存储保护的数据(使用BlueXP备份和恢复集成)
+** 位于ONTAP FAS、 AFF或ASA主系统和辅助系统上的数据，使用NetApp备份和恢复集成保护到云中的对象和归档存储
 
 
 * 在公有云中保护以下内容：

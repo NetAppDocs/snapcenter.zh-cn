@@ -23,3 +23,10 @@ SnapCenter 6.2（服务器和插件）以及ONTAP 9.17.1 利用分层一致性�
 升级到SnapCenter 6.2 和ONTAP 9.17.1 后， SnapCenter会在第一次计划备份期间将平面一致性组更改为分层一致性组。
 
 |===
+
+
+== BlueXP现在是NetApp控制台
+
+NetApp控制台建立在增强和重组的BlueXP基础之上，可在企业级内部和云环境中集中管理NetApp存储和NetApp数据服务，提供实时洞察、更快的工作流程和简化的管理，并且高度安全且合规。
+
+有关更改的详细信息，请参阅link:https://docs.netapp.com/us-en/bluexp-relnotes/index.html["NetApp控制台发行说明"^]。
