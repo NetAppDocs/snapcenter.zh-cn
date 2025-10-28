@@ -9612,4 +9612,5 @@ destination</block>
   <block id="2ef9d641d45afe99b74ad6f9a9f797ad" category="inline-link-macro">NetApp控制台发行说明</block>
   <block id="1e3eeac5409758903bc21870184a640a" category="paragraph">有关更改的详细信息，请参阅<block ref="06d876b9fcdfcba8772d93beac1ca38b" category="inline-link-macro-rx"></block>。</block>
   <block id="e6f36a956625505e0a3733e3e0073fa0" category="paragraph">SnapCenter Web 端口</block>
+  <block id="da994c44eacde8f5cafe8883779cb695" category="sidebar">SnapCenter技术报告</block>
 </blocks>
