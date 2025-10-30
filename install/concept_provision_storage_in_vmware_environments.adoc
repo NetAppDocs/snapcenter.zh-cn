@@ -31,8 +31,6 @@ summary: 您可以在 VMware 环境中使用适用于 Microsoft Windows 的 Snap
 
 
 
-有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp 互操作性表工具"^]。
-
 
 
 === VMware ESXi 服务器相关限制

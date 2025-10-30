@@ -156,14 +156,13 @@ NOTE: 对于电子邮件通知，您必须已使用 GUI 或 PowerShell 命令 se
 
 . 查看摘要，然后选择*完成*。
 . 通过选择*Monitor*>*Jobs*来监视操作进度。
++
+
+NOTE: 创建克隆后，您不应对其进行重命名。
 
 
-.完成后
-创建克隆后，您不应对其进行重命名。
 
 .相关信息
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["使用默认 tcp_timeout 值时，克隆操作可能会失败或需要较长时间才能完成"]
-
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/The_failover_cluster_instance_database_clone_fails["故障转移集群实例数据库克隆失败"]
 
 --

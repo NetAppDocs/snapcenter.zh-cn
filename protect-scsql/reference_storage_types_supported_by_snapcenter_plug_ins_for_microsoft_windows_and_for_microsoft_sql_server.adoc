@@ -13,7 +13,7 @@ summary: SnapCenter 在物理机和虚拟机上均支持多种存储类型。在
 [role="lead"]
 SnapCenter 在物理机和虚拟机上均支持多种存储类型。在为主机安装软件包之前，您必须验证是否支持您的存储类型。
 
-Windows Server 支持 SnapCenter 配置和数据保护。有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+Windows Server 上提供SnapCenter配置和数据保护支持。有关受支持版本的最新信息，请参阅 https://imt.netapp.com/imt/imt.jsp?components=180321;180339;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 |===
 | 计算机 | Storage type | 使用配置 | 支持说明 

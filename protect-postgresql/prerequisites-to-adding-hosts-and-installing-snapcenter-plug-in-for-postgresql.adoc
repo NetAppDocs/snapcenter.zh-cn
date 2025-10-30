@@ -34,9 +34,6 @@ NOTE: IBM Java 在 Windows 和 Linux 主机上不受支持。
 +
 http://www.java.com/en/download/manual.jsp["下载适用于所有操作系统的 JAVA"]
 
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121069;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
-
 
 
 
@@ -47,9 +44,6 @@ https://imt.netapp.com/matrix/imt.jsp?components=121069;&solution=1259&isHWU&src
 * 您必须已在Linux主机上安装Java 11。
 +
 http://www.java.com/en/download/manual.jsp["下载适用于所有操作系统的 JAVA"]
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121069;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
 
 * 对于在Linux主机上运行的PostgreSQL集群、在安装适用于PostgreSQL的插件时、系统会自动安装适用于UNIX的SnapCenter插件。
 * 您应将*bash*用作插件安装的默认shell。

@@ -87,4 +87,3 @@ NOTE: 不支持 AIX 和文件系统上的 NFS 。
 
 
 |===
- https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]包含有关受支持版本的最新信息。

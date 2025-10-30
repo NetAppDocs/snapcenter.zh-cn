@@ -57,7 +57,7 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
  a| 
 Microsoft Windows
 
-有关受支持版本的最新信息，请参见 https://imt.netapp.com/imt/imt.jsp?components=134502;&solution=1258&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+有关受支持版本的最新信息，请参阅 https://imt.netapp.com/imt/imt.jsp?components=180321;180339;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 
@@ -88,8 +88,6 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
 只有SAP HANA、IBM DB2、PostgreSQL、MySQL、NetApp支持的插件以及可以安装在Windows主机上的其他自定义应用程序才需要Java 11 Oracle Java和OpenJDK。
 
 
-
-有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 有关.NET专用的故障排除信息、请参见 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["对于没有Internet连接的原有系统、SnapCenter 升级或安装失败。"]
 
@@ -144,7 +142,7 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
  a| 
 Microsoft Windows
 
-有关受支持版本的最新信息，请参见 https://imt.netapp.com/imt/imt.jsp?components=134502;&solution=1258&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+有关受支持版本的最新信息，请参阅 https://imt.netapp.com/imt/imt.jsp?components=180321;180339;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 
 
@@ -175,8 +173,6 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
 只有SAP HANA、IBM DB2、PostgreSQL、MySQL、NetApp支持的插件以及可以安装在Windows主机上的其他自定义应用程序才需要Java 11 Oracle Java和OpenJDK。
 
 
-
-有关受支持版本的最新信息，请参见 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
 
 有关.NET专用的故障排除信息、请参见 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["对于没有Internet连接的原有系统、SnapCenter 升级或安装失败。"]
 

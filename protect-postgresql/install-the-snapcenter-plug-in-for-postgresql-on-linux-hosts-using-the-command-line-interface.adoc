@@ -17,10 +17,7 @@ summary: '您应使用SnapCenter用户界面(UI)安装适用于PostgreSQL集群�
 * 您应在PostgreSQL客户端所在的每个Linux主机上安装适用于PostgreSQL集群的插件。
 * 要安装适用于PostgreSQL集群的SnapCenter插件的Linux主机必须满足相关软件、集群和操作系统要求。
 +
-互操作性表工具（ IMT ）包含有关受支持配置的最新信息。
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121069;&solution=1259&isHWU&src=IMT["NetApp 互操作性表工具"]
+这 https://imt.netapp.com/imt/imt.jsp?components=180320;180333;&solution=1257&isHWU&src=IMT["互操作性表工具 (IMT)"] 包含有关所支持配置的最新信息。
 
 * 适用于PostgreSQL集群的SnapCenter插件是适用于Linux的SnapCenter插件软件包的一部分。在安装适用于 Linux 的 SnapCenter 插件软件包之前，您应已在 Windows 主机上安装 SnapCenter 。
 

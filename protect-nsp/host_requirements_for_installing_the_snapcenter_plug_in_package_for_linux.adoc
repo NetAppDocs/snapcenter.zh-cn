@@ -56,8 +56,3 @@ Java 11 Oracle Java或OpenJDK
 
 |===
 有关受支持版本的最新信息、请参见 https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"]
-
-[]
-====
-
-====
