@@ -22,6 +22,7 @@ NOTE: IBM Java 在 Windows 和 Linux 主机上不受支持。
 * 在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。默认情况下、适用于Microsoft Windows的SnapCenter插件将与MySQL插件一起部署在Windows主机上。
 * SnapCenter服务器应有权访问适用于MySQL主机的插件的8145或自定义端口。
 * 对于MySQL 5.7、应在myql配置(my.cnf或myql-server.cnf)文件中指定binlog。
+* 如果您使用的是低于 8.0 版本的 MySQL，则需要手动安装并启用 MySQLX 插件。MySQLX 插件在 MySQL 8.0 或更高版本中默认安装并启用。
 
 
 
