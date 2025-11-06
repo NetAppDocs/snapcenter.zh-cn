@@ -17,6 +17,5 @@ summary: 适用于 Microsoft SQL Server 的 SnapCenter 插件是 NetApp SnapCent
 
 * 自动对 SnapCenter 环境中的 Microsoft SQL Server 数据库执行应用程序感知备份，还原和克隆操作。
 * 在部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件时，支持 VMDK 和原始设备映射（ RDM ） LUN 上的 Microsoft SQL Server 数据库
-* 仅支持配置 SMB 共享。不支持在 SMB 共享上备份 SQL Server 数据库。
 * 支持将备份从适用于 Microsoft SQL Server 的 SnapManager 导入到 SnapCenter 。
 

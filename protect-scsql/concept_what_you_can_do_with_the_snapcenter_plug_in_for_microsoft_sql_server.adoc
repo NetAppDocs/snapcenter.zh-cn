@@ -37,6 +37,3 @@ summary: 在您的环境中安装适用于 Microsoft SQL Server 的 SnapCenter �
 * 计划备份操作和克隆操作
 * 监控备份操作，还原操作和克隆操作
 
-
-
-NOTE: 适用于 SQL Server 的插件不支持备份和恢复 SMB 共享上的 SQL Server 数据库。

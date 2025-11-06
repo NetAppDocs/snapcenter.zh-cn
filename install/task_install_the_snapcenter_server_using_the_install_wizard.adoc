@@ -160,24 +160,9 @@ IIS 管理脚本和工具
 
 
  a| 
-消息队列
- a| 
-* 消息队列服务
-+
-
-NOTE: 确保没有其他应用程序使用 SnapCenter 创建和管理的 MSMQ 服务。
-
-* Rabbitmq
-* Erlang
-
-
-
-
- a| 
 Windows 进程激活服务
  a| 
-* 流程模型
-
+流程模型
 
 
 
