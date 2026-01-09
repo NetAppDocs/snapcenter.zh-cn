@@ -402,7 +402,6 @@
   <block id="c48d82f0b1e5949ce3d34dc8ac74b4b5" category="paragraph">不支持验证 SQL Server 系统数据库。SnapCenter 克隆数据库以执行验证操作。SnapCenter 无法克隆 SQL Server 系统数据库，因此不支持验证这些数据库。</block>
   <block id="c27ceb4a4892c429a975a62841762540" category="list-text">计划备份操作和克隆操作</block>
   <block id="aa71cd3a5a90a32aafb3072b19a68b09" category="list-text">监控备份操作，还原操作和克隆操作</block>
-  <block id="c343d8ab7af87f16e58b8e8040d7813a" category="admonition">适用于 SQL Server 的插件不支持备份和恢复 SMB 共享上的 SQL Server 数据库。</block>
   <block id="6895fc6b34ff814dd8d20f8eb70439e5" category="doc">取消适用于 Microsoft SQL Server 的 SnapCenter 插件备份操作</block>
   <block id="d15cddcc0f2911c53261943c85948fab" category="list-text">要取消还原操作，您必须以 SnapCenter 管理员或作业所有者的身份登录。</block>
   <block id="1e4f7aaf5f275f33488c6753583b5d84" category="list-text">您只能取消已排队或正在运行的日志或完整备份操作。</block>
@@ -2744,9 +2743,6 @@
   <block id="623ef35114e69633221d2c9bf99f6cab" category="list-text">Windows Communication Foundation （ WCF ） HTTP 激活 45</block>
   <block id="c38d32373eca3e6335e44b42893f0034" category="list-text">TCP 激活</block>
   <block id="cb6ddd90b08469e2479460ec34538fe2" category="list-text">HTTP 激活</block>
-  <block id="c3dbd8c35d4829310dd57365a749f10f" category="paragraph">消息队列</block>
-  <block id="9c7750973d73f078f45c6bfd80cbfc85" category="list-text">消息队列服务</block>
-  <block id="be0efd214f0b56cf8372d18ec1837f53" category="admonition">确保没有其他应用程序使用 SnapCenter 创建和管理的 MSMQ 服务。</block>
   <block id="a8e1305e0c86caf1fec261807b3362ef" category="paragraph">Windows 进程激活服务</block>
   <block id="494ecde4fb6ee77e99799902ed23cd14" category="list-text">流程模型</block>
   <block id="293616622aeda675821b42e39b4d4e7b" category="paragraph">配置 API</block>
@@ -3158,7 +3154,6 @@
   <block id="4abb41aae1dfe9c81afb3c3672df559c" category="paragraph">Linux 或 Windows</block>
   <block id="50e95eafa6faf8d2ee3f01921820b42b" category="list-text">自动对 SnapCenter 环境中的 Microsoft SQL Server 数据库执行应用程序感知备份，还原和克隆操作。</block>
   <block id="e40237d2b53363bc373f8134071d1be1" category="list-text">在部署适用于 VMware vSphere 的 SnapCenter 插件并向 SnapCenter 注册此插件时，支持 VMDK 和原始设备映射（ RDM ） LUN 上的 Microsoft SQL Server 数据库</block>
-  <block id="a7e3ff2bca34971756f1600032ff8b61" category="list-text">仅支持配置 SMB 共享。不支持在 SMB 共享上备份 SQL Server 数据库。</block>
   <block id="6bff10ef4d0d0d6d7ed28de9adc0169d" category="list-text">支持将备份从适用于 Microsoft SQL Server 的 SnapManager 导入到 SnapCenter 。</block>
   <block id="1b789581aeaa48640561ebae3b263a76" category="list-text">为 SnapCenter 环境中 Windows 主机上运行的其他插件启用应用程序感知型数据保护</block>
   <block id="d764b7be86ece9a7b21fa445a8e1493c" category="list-text">自动对 SnapCenter 环境中的 Microsoft 文件系统执行应用程序感知型备份，还原和克隆操作</block>
@@ -7827,7 +7822,6 @@ destination</block>
   <block id="10dbf6dc6b3b30fd58efded1253516d8" category="paragraph">适用于Exchange数据库的SnapCenter插件</block>
   <block id="b0ca30368b247fa738c8bdba36dd4d73" category="paragraph">默认的NET。 适用于Windows的插件使用TCP端口连接到Exchange VSS回调。</block>
   <block id="cc0974b8a511f2e4b4d021cda6e5e820" category="paragraph">NetApp支持的SnapCenter插件</block>
-  <block id="7eaa993723e57b3bfc99923c196e2e17" category="list-text">Rabbitmq</block>
   <block id="6905661e5d7f8f3e6a4faffbbab0f627" category="cell">Windows主机要求</block>
   <block id="e7074f744b12e993cbdc6c77ee980b3e" category="list-text">Red Hat Enterprise Linux (RHEL) 8和9</block>
   <block id="447430d602cceb081264e037425cd96e" category="list-text">SUSE Linux Enterprise Server (SLES) 15.</block>
@@ -9608,4 +9602,6 @@ destination</block>
   <block id="9ece03be74b25dcc59b19ce7d0ef2dfb" category="list-text">备份SnapCenter服务器主机或插件主机上所有已修改的SnapCenter配置文件（例如 SnapDriveService.exe.config、SMCoreServiceHost.exe.config 等）。</block>
   <block id="def9934ca3f718accf65ee67850cf9eb" category="list-text">如果“总体状态”列显示某个插件主机“可升级”，请单击该插件主机名称并执行以下操作：</block>
   <block id="25c5cc506d7be2c3d358fc8fd23f0e8f" category="admonition">如果您不选择“跳过预检查”， SnapCenter将检查插件主机是否满足要求。如果未满足要求，则会显示错误或警告信息。如果错误与磁盘空间或 RAM 有关，您可以更新位于 _C:\Program Files\ NetApp\ SnapCenter WebApp_ 的 web.config 文件，或者更新位于 _C:\Windows\System32\WindowsPowerShell\v1.0\Modules\ SnapCenter\_ 的 PowerShell 配置文件，以修改默认值。如果错误与剩余参数有关，那么您必须解决问题，然后再次验证要求。</block>
+  <block id="ef99553115dfc1718a9b51a970da1ae9" category="paragraph">指定归档日志文件的扩展名。</block>
+  <block id="7f051ce525ea23f09ed6b21ec49fa590" category="paragraph">例如，如果归档日志文件为 log_backup_0_1.log，则指定 .log 作为文件扩展名。</block>
 </blocks>
