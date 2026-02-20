@@ -134,4 +134,10 @@ NOTE: ESX 5.5i 之前的版本不支持此功能。
 
 在使用 FC RDM LUN 在 Microsoft 集群中的节点之间共享存储之前，必须先创建共享仲裁磁盘和共享存储磁盘，然后将其添加到集群中的两个虚拟机。
 
-共享磁盘不是使用适用于 Windows 的插件创建的。您应创建共享 LUN ，然后将其添加到集群中的每个虚拟机。有关信息，请参见 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-7/setup-for-failover-clustering-and-microsoft-cluster-service.html["跨物理主机的集群虚拟机"^]。
+共享磁盘不是使用 Plug-in for Windows 创建的。您应该创建共享 LUN，然后将其添加到集群中的每个虚拟机。
+
+
+
+== 相关信息
+
+请参阅 link:https://techdocs.broadcom.com["Broadcom 技术文档"^] 和搜索有关跨物理主机群集虚拟机以及为 Microsoft 群集创建共享 FC RDM LUN 的文档。

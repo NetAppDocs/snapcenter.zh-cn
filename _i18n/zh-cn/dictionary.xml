@@ -2791,7 +2791,6 @@
   <block id="bf81ea5010d5d85942a2a57301afd2ac" category="paragraph">日志文件始终列在管理员用户的 %temp% 文件夹中（最早的先列出）。如果要重定向日志位置，请从命令提示符处运行以下命令来启动 SnapCenter 服务器安装：``C ： \installer_location\installer_name.exe /log"C" ： \"``</block>
   <block id="10680a7aa79949d8b454b29a782cc64a" category="summary">在使用 FC RDM LUN 在 Microsoft 集群中的节点之间共享存储之前，必须先创建共享仲裁磁盘和共享存储磁盘，然后将其添加到集群中的两个虚拟机。</block>
   <block id="5010ac065b072d3a5a66d4913af22358" category="doc">创建共享 FC RDM LUN</block>
-  <block id="cbdb6828febec04786f22df9a1ccc748" category="inline-link">跨物理主机的集群虚拟机</block>
   <block id="474c0722911434e135bf42df035f7de6" category="summary">如果您满足特定配置要求，适用于 Windows 的插件可为在属于两个不同 ESX 或 ESXi 服务器的两个不同虚拟机上使用 FC RDM LUN 的 Microsoft 集群提供支持，这两个虚拟机也称为跨机集群。</block>
   <block id="70a4074331de52ecee06dc3b774cd173" category="list-text">虚拟机（ VM ）必须运行相同的 Windows Server 版本。</block>
   <block id="c2b3831649c02f541b854d02dd08fd7e" category="list-text">每个 VMware 父主机的 ESX 或 ESXi 服务器版本必须相同。</block>
@@ -9092,7 +9091,6 @@ destination</block>
   <block id="9792c7ba1a8a833a1c75e11c4a7b46c3" category="list-text">如果要升级多个主机，请选择所有主机，单击，然后单击 <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>*Upgrade*&gt;*OK*。</block>
   <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">对象存储备份不支持Oracle和SAP HANA挂载和目录工作流、但快照支持这些工作流。</block>
   <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">对象存储备份不支持Oracle PDB克隆、但快照支持此克隆。</block>
-  <block id="6eec14240810faadbd60c3ec98b543e7" category="paragraph">共享磁盘不是使用适用于 Windows 的插件创建的。您应创建共享 LUN ，然后将其添加到集群中的每个虚拟机。有关信息，请参见<block ref="0564b16166a6e24aa234d21e5bcdc18a" category="inline-link-rx"></block>。</block>
   <block id="744d48cfa6032e04d109166f7ff6aeaf" category="paragraph">有关故障排除信息，请参阅<block ref="361c774ee5cb22be42ef8ea152ed45ad" category="inline-link-rx"></block>。</block>
   <block id="a141599a0eec0e6d9aea907fc97ea039" category="list-text">选择*依赖方信任*。</block>
   <block id="458f1b484cf2f93e8e2f35b3f5a3b94a" category="list-text">右键单击为SnapCenter创建的依赖方信任，然后选择*Delete*。</block>
@@ -9604,4 +9602,8 @@ destination</block>
   <block id="25c5cc506d7be2c3d358fc8fd23f0e8f" category="admonition">如果您不选择“跳过预检查”， SnapCenter将检查插件主机是否满足要求。如果未满足要求，则会显示错误或警告信息。如果错误与磁盘空间或 RAM 有关，您可以更新位于 _C:\Program Files\ NetApp\ SnapCenter WebApp_ 的 web.config 文件，或者更新位于 _C:\Windows\System32\WindowsPowerShell\v1.0\Modules\ SnapCenter\_ 的 PowerShell 配置文件，以修改默认值。如果错误与剩余参数有关，那么您必须解决问题，然后再次验证要求。</block>
   <block id="ef99553115dfc1718a9b51a970da1ae9" category="paragraph">指定归档日志文件的扩展名。</block>
   <block id="7f051ce525ea23f09ed6b21ec49fa590" category="paragraph">例如，如果归档日志文件为 log_backup_0_1.log，则指定 .log 作为文件扩展名。</block>
+  <block id="1e70ac4737c2e839c6fd901789e3bafb" category="paragraph">共享磁盘不是使用 Plug-in for Windows 创建的。您应该创建共享 LUN，然后将其添加到集群中的每个虚拟机。</block>
+  <block id="ae0aa1a81eb18e69d5fc662eaee0efd5" category="inline-link-macro">Broadcom 技术文档</block>
+  <block id="35108ed715245e1479e838ca41d91463" category="paragraph">请参阅 <block ref="fba62a4233b1f0aa3ff3e46f7f59037b" category="inline-link-macro-rx"></block> 和搜索有关跨物理主机群集虚拟机以及为 Microsoft 群集创建共享 FC RDM LUN 的文档。</block>
+  <block id="82b9e59bccf9587b5e339fa8a0f02dd5" category="list-text">NVMe 控制器仅支持 NVMe 数据存储区。</block>
 </blocks>
