@@ -32,7 +32,7 @@ NOTE: IBM Java 在 Windows 和 Linux 主机上不受支持。
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
 * 您必须已在Windows主机上安装Java 11。
 +
-http://www.java.com/en/download/manual.jsp["下载适用于 Windows 的 JAVA"]
+link:https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html["下载适用于 Windows 的 JAVA"^]
 
 
 
@@ -41,12 +41,12 @@ http://www.java.com/en/download/manual.jsp["下载适用于 Windows 的 JAVA"]
 == Linux和AIX主机
 
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
-* 您必须已在Linux主机上安装Java 11。
+* 您必须在 Linux 或 AIX 主机上安装 Java 11。
 +
-http://www.java.com/en/download/manual.jsp["下载适用于 Linux 的 JAVA"]
+link:https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html["下载适用于 Linux 的 JAVA"^]
 
 +
-https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["下载适用于 AIX 的 JAVA"]
+link:https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["下载适用于 AIX 的 JAVA"^]
 
 * 对于在Linux主机上运行的IBM DB2数据库、在安装适用于IBM DB2的插件时、系统会自动安装适用于UNIX的SnapCenter插件。
 * 您应将*bash*用作插件安装的默认shell。

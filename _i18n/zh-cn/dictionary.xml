@@ -7878,7 +7878,6 @@ destination</block>
   <block id="66fe54fa4e213e520e33fab0de4829f3" category="list-text">您必须已完成安装SnapCenter服务器、添加主机和设置存储系统连接等任务。</block>
   <block id="8d8222bc5c37db0562c84d9175b85db9" category="paragraph">以下配置不支持手动发现：</block>
   <block id="0e74c3e0dd316d16d24798ac1b0249ef" category="list-text">在左侧导航窗格中，选择*Resoles*，然后从下拉列表中选择适用于IBM DB2的SnapCenter插件。</block>
-  <block id="6425c50f54d17cde35a57532dc8e8d08" category="list-text">在“资源”页面中，单击*添加IBM DB2资源*。</block>
   <block id="75795411fa0821e8da73e95200ff81ad" category="paragraph">指定数据库名称。</block>
   <block id="1c07f24dbaeb847f4662960d2691d528" category="paragraph">主机名</block>
   <block id="ce7a42c0c120b0e761b1d9b2851def5b" category="paragraph">输入主机名。</block>
@@ -7888,7 +7887,6 @@ destination</block>
   <block id="5efe9e6fa4156b39ced69425eba7fb49" category="paragraph">选择凭据或添加凭据的信息。</block>
   <block id="deec2d29ae112d513d1bbd8cb6f3a23c" category="paragraph">这是可选的。</block>
   <block id="4e4f9229f5def86d57e9acaf8014a093" category="list-text">在提供存储占用空间页面中，选择存储类型并选择一个或多个卷、LUN和qtrees，然后单击*Save*。</block>
-  <block id="bdf0204433b7ea9c415d7d723d74d2ef" category="list-text">可选：对于Windows主机上的资源、在"Resource Settings"页面中、输入IBM DB2插件的自定义键值对</block>
   <block id="da0726c01021262f418bf88a38a3c39d" category="paragraph">此时将显示数据库以及主机名、关联资源组和策略以及整体状态等信息</block>
   <block id="c919dec0be0a88ec3d86651541015ec0" category="paragraph">添加数据库后、您可以修改IBM DB2数据库详细信息。</block>
   <block id="8c1a9a6f582efdb1bcf39b24b3a86ac7" category="summary">资源是指Linux主机上由SnapCenter管理的IBM DB2数据库和实例。安装适用于IBM DB2插件的SnapCenter插件后、系统会自动发现该Linux主机上的IBM DB2数据库、并将其显示在"资源"页面中。</block>
@@ -9606,4 +9604,21 @@ destination</block>
   <block id="ae0aa1a81eb18e69d5fc662eaee0efd5" category="inline-link-macro">Broadcom 技术文档</block>
   <block id="35108ed715245e1479e838ca41d91463" category="paragraph">请参阅 <block ref="fba62a4233b1f0aa3ff3e46f7f59037b" category="inline-link-macro-rx"></block> 和搜索有关跨物理主机群集虚拟机以及为 Microsoft 群集创建共享 FC RDM LUN 的文档。</block>
   <block id="82b9e59bccf9587b5e339fa8a0f02dd5" category="list-text">NVMe 控制器仅支持 NVMe 数据存储区。</block>
+  <block id="cc05f18551b367465c63e80895a59c04" category="list-text">在资源页面中，选择 *Add IBM DB2 Resource*。</block>
+  <block id="89cb4324d3c17b7b0eaa5b7eb935edd8" category="paragraph">挂载路径</block>
+  <block id="cc1a25d74bb64939e2163e074e092923" category="paragraph">输入装载资源的装载路径。这仅适用于 Windows 主机。</block>
+  <block id="30deb25c4a7c59e8200ce96d5e23156f" category="paragraph">此字段为可选字段。</block>
+  <block id="d353032aed6d3d3117bcf87b841c7809" category="list-text">可选：在"资源设置"页面中，对于安装了 SnapCenter Plug-in for IBM Db2 的 Linux 主机上的资源，为 IBM Db2 插件输入自定义键值对。已注册为集中式 Windows 插件的 IBM Db2 数据库不支持自定义键值对。</block>
+  <block id="a56c9defea42601d21f4c5106fa4712f" category="paragraph">数据库与主机名、关联的资源组和策略以及总体状态等信息一起显示。</block>
+  <block id="aeab626a715ace67f9b44eba97173286" category="list-text">对于 ONTAP 9.12.1 及更早版本，在恢复过程中从 SnapLock Vault 快照创建的克隆将继承 SnapLock Vault 到期时间。存储管理员应在 SnapLock 到期时间后手动清理克隆。</block>
+  <block id="988351bdb1f1d7ecd10610f11fe7bd42" category="list-text">在 Resources 页面中，选择 *New Resource Group*。</block>
+  <block id="5c97cba64ecb09baf4d77b8f9af3d46f" category="paragraph">对快照使用自定义名称格式</block>
+  <block id="5ff5fcae197a653580a534917740d7f8" category="list-text">选择 *Scripts* 箭头，并输入静止、快照和不静止操作的 pre 和 post 命令。您还可以输入在发生故障时退出之前要执行的 pre 命令。</block>
+  <block id="d3436e2d89e59038914374a22cc8c673" category="list-text">选择 *Custom Configurations* 箭头，然后输入使用此资源的所有数据保护操作所需的自定义键值对。</block>
+  <block id="98f1c90d5d623746b2adfec471311f76" category="list-text">选择 *Snapshot Copy Tool* 箭头以选择用于创建快照的工具：</block>
+  <block id="7658971f73ec7751e63de7b917ad3277" category="paragraph">输入要在主机上执行的命令以创建快照。</block>
+  <block id="375a1cee000ea12f25f7ea0aa40c92d2" category="paragraph"><block ref="375a1cee000ea12f25f7ea0aa40c92d2" category="inline-link-macro-rx"></block></block>
+  <block id="3edc812c3aede1bb8931ed56901c3d63" category="list-text">您必须在 Linux 或 AIX 主机上安装 Java 11。</block>
+  <block id="67444cdbc60594b36af73fd32a491c3e" category="paragraph"><block ref="67444cdbc60594b36af73fd32a491c3e" category="inline-link-macro-rx"></block></block>
+  <block id="947890351727a5bfefd25ab911655064" category="paragraph"><block ref="947890351727a5bfefd25ab911655064" category="inline-link-macro-rx"></block></block>
 </blocks>
