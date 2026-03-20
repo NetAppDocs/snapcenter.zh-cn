@@ -3612,9 +3612,7 @@
   <block id="39044c9904e8af5b92ac884123a563e6" category="paragraph">archive_log_recursive_SE arch</block>
   <block id="f5c64a8a00482e0316a9a53b3ee3affc" category="paragraph">用于管理子目录中的归档日志。</block>
   <block id="88ff0775a15d5ae4d05b9ecdeb6b5a48" category="paragraph">如果归档日志位于子目录下，则应使用此参数。</block>
-  <block id="0d1c37a6cf22ce8a58bdf0cb6bb40c68" category="admonition">自定义密钥值对支持 SAP HANA Linux 插件系统，而注册为集中式 Windows 插件的 SAP HANA 数据库则不支持自定义密钥值对。</block>
   <block id="62559cf2803ff56106a84e128591c337" category="paragraph">此选项不适用于适用于 SAP HANA 数据库的 SnapCenter 插件。</block>
-  <block id="086beaa9afd2391b7d5204a8db47791c" category="paragraph">可输入要在主机上执行的命令以创建 Snapshot 副本。</block>
   <block id="39fba97fa35b3e2df0e6339cd21abe23" category="paragraph">这些策略将在为选定策略配置计划部分列出。</block>
   <block id="2a7c4561536268cef70578e0e4124a6c" category="paragraph">其中， policy_name 是选定策略的名称。</block>
   <block id="572a352f5f18989eb8c33a0e36d194c3" category="paragraph">您还必须指定发件人和收件人电子邮件地址以及电子邮件主题。必须在 * 设置 * &gt; * 全局设置 * 中配置 SMTP 服务器。</block>
@@ -5084,7 +5082,6 @@
   <block id="5a0d010510d163ad44131286e573b19c" category="list-text">输入 _Get-SmDataCollectionEmsTarget_ 以检索有关 EMS 数据收集目标的信息。</block>
   <block id="b36ee7ff89fbb252e1b22b5a6cce9b0f" category="summary">与从 SnapCenter 执行的各种操作相关的信息存储在 SnapCenter 服务器数据库存储库中。您必须为存储库创建备份，以防止 SnapCenter 服务器数据丢失。</block>
   <block id="7d0bb889cb0b99adea9fd13298f9dc65" category="doc">管理 SnapCenter 服务器存储库</block>
-  <block id="a1e91e17ee1b5e24f7c7302a0064632f" category="paragraph">SnapCenter 服务器存储库有时称为 NSM 数据库。</block>
   <block id="fe7cd80bae6be2bcc96ab226eb99c50a" category="section-title">保护 SnapCenter 存储库的前提条件</block>
   <block id="01ef52f0d7aff8362a33649ac3782a4e" category="paragraph">您的环境应满足保护 SnapCenter 存储库的特定前提条件。</block>
   <block id="56cd02514fc7e3e9a291f682b7b4152f" category="list-text">管理 Storage Virtual Machine （ SVM ）连接</block>
@@ -5094,20 +5091,10 @@
   <block id="5939935560a57cf24f66e58fc3474130" category="paragraph">有关添加主机，设置 SVM 连接和配置主机的详细信息，请参见安装说明。</block>
   <block id="f59018181ccb88a6778559b6b5c4473e" category="list-text">配置 iSCSI LUN 或 VMDK</block>
   <block id="4ab874225134090fa4c4cfdc80864dd6" category="paragraph">对于高可用性（ HA ）配置，您可以在其中一个 SnapCenter 服务器中配置 iSCSI LUN 或 VMDK 。</block>
-  <block id="7597d52eb0c956005115012b9fa9bd26" category="paragraph">备份 SnapCenter 服务器存储库有助于防止数据丢失。您可以运行 _protect-SmRepository_ cmdlet 来备份存储库。</block>
-  <block id="df8c6c6a4cbe864804d25a19c138d1e4" category="paragraph">使用 _protect-SmRepository_ cmdlet 可完成以下任务：</block>
   <block id="a50ee732cf2b94825d6f396603785b14" category="list-text">创建资源组和策略</block>
   <block id="bcd34fe0c0a8a4c0ceaad81a07d9c1a3" category="list-text">为 SnapCenter 存储库创建备份计划</block>
-  <block id="304b4f669a8de7a8bc81003b9b4662ac" category="list-text">使用 _protect-SmRepository_ cmdlet 和所需参数备份存储库。</block>
   <block id="619a478ddd75b061c06fe4b486fd257d" category="section-title">查看 SnapCenter 存储库的备份</block>
-  <block id="3914a7caf7bf09997c2fc2fbe52d8be9" category="paragraph">您可以运行 _Get-SmRepositoryBackups_cmdlet 来显示 SnapCenter 服务器数据库存储库备份列表。</block>
-  <block id="cf09cb1daef76e19292bdba03e3b0854" category="paragraph">系统将根据 _protect-SmRepository_ cmdlet 中指定的计划创建存储库备份。</block>
-  <block id="82e30b4352734f6dc42efb531c81acab" category="list-text">在命令提示符处，输入以下 cmdlet ，然后提供用于连接到 SnapCenter 服务器的凭据： _Open-SMConnection_</block>
-  <block id="1052207e87a7abc9637c274fe1512058" category="list-text">使用 _Get-SmRepositoryBackups_cmdlet 列出所有可用的 SnapCenter 数据库备份。</block>
   <block id="1f3fde786df2928c4db966c705ec8ba1" category="section-title">还原 SnapCenter 数据库存储库</block>
-  <block id="8efce21441fffae32eaf2ee4fec1a9b8" category="paragraph">您可以通过运行 _Restore-SmRepositoryBackup_ cmdlet 来还原 SnapCenter 存储库。</block>
-  <block id="09a6d5e712449f112a3dcd2169dac55a" category="paragraph">还原 SnapCenter 存储库时，正在运行的其他 SnapCenter 操作将受到影响，因为在还原操作期间，存储库数据库不可访问。</block>
-  <block id="f65a265b9c1e948edcb4b8b5bd492a18" category="list-text">使用 _Restore-SmRepositoryBackup_ cmdlet 还原存储库备份。</block>
   <block id="ec9dad1ea2b1a5314f82d20d3bf23f49" category="paragraph">以下 cmdlet 可从 iSCSI LUN 或 VMDK 上的现有备份还原 SnapCenter MySQL 数据库存储库：</block>
   <block id="071788d560dec04e39684f7e9734f7f8" category="section-title">迁移 SnapCenter 存储库</block>
   <block id="36a43a17d046b7175ef97b0dd0dbf8f8" category="paragraph">您可以将 SnapCenter 服务器数据库存储库从默认位置迁移到另一个磁盘。如果要将存储库重新定位到具有更多空间的磁盘，则可以迁移该存储库。</block>
@@ -5125,8 +5112,6 @@
   <block id="b8b2c5727e9add44321ab3714400d246" category="section-title">重置 SnapCenter 存储库密码</block>
   <block id="faa0310fc3df6f9869f6dc9e0bb9d44d" category="paragraph">从 SnapCenter 4.2 安装 SnapCenter 服务器期间，系统会自动生成 MySQL 服务器存储库数据库密码。SnapCenter 用户在任何时候都不知道自动生成的密码。如果要访问存储库数据库，应重置密码。</block>
   <block id="b34c04c23047012dce89ab9b0f667d6f" category="paragraph">要重置密码，您应具有 SnapCenter 管理员权限。</block>
-  <block id="2bc36d79452c84a7d4dcf76ddbbd79db" category="list-text">在命令提示符处，输入以下命令，然后提供用于连接到 SnapCenter 服务器的凭据： _Open-SMConnection_</block>
-  <block id="f14f9ddeff8bba25b45edf7c8f27a7f1" category="list-text">重置存储库密码： _set-SmRepositoryPassword_</block>
   <block id="e340c193c1f0abe76ae4f936229af71d" category="paragraph">以下命令将重置存储库密码：</block>
   <block id="ea93db76f5f80c2943941a01d7031d2d" category="summary">您可以对资源组执行各种操作。</block>
   <block id="ec972bce7640d5d440d3549702031815" category="doc">管理资源组</block>
@@ -7571,8 +7556,6 @@ destination</block>
   <block id="6fa0e3128174a7e08f019a67d401084d" category="list-text">选择*Scripts*箭头可运行用于静修、快照和取消静修操作的PRE和POST命令。</block>
   <block id="5b0cda43c7e63de2868d2bf0d3b62f53" category="paragraph">SnapCenter以创建存储级别快照</block>
   <block id="d00226243bd3282875e3647e34ef9ac2" category="paragraph">SnapCenter以使用适用于Windows的插件将文件系统置于一致状态、然后创建Snapshot</block>
-  <block id="513e9e5c9242c20cd3a0e1af2c91141c" category="paragraph">选择*紧急*、*中*或*宽松*以指定完成Snapshot操作的等待时间。</block>
-  <block id="7753c7b112c057fc94bcaa18ecc0f343" category="list-text">单击*Scripts*箭头并输入用于quiese, Snapshot和unquiese"操作的前处理命令和后处理命令。此外，您还可以输入在发生故障时退出之前要执行的 PRE 命令。</block>
   <block id="660ee777f341ef8a02048c649ceb5033" category="admonition">如果此资源包含卷或qtrees、则在为此类卷或qtrees选择要还原的Snapshot之后创建的Snapshot将被删除、并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。</block>
   <block id="99b447de4897ad60ae2d4ef832acc11d" category="paragraph">例如、如果主Snapshot保留期限为7天、二级Snapshot保留期限为45天、则在45天完成且所有备份均被删除后、您必须删除资源组和旧的已删除资源。</block>
   <block id="d7d148a2da0b4f8f54f724e577240359" category="paragraph">如果此资源包含卷或qtrees、则在为此类卷或qtrees选择要还原的Snapshot之后创建的Snapshot将被删除、并且无法恢复。此外，如果任何其他资源托管在同一个卷或 qtree 上，则该资源也会被删除。如果选择了 * 使用 * 卷还原 * 选项完成资源 * ，则此选项适用。</block>
@@ -9143,7 +9126,6 @@ destination</block>
   <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">观看 <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> 视频。</block>
   <block id="5c8b8bc332cb41802ffbe6c5cda258ab" category="paragraph">支持VMDK、VVOV和RDM虚拟存储布局。</block>
   <block id="e5385a9de21528bfedd644f4c0331eb1" category="summary">SnapCenter软件是一个简单、集中且可扩展的平台、可为混合云中任意位置ONTAP系统上运行的应用程序、数据库、主机文件系统和VM提供应用程序一致的数据保护。</block>
-  <block id="68578ccfcf5117ca8a9a2d7d884e320f" category="summary">SnapCenter软件6.1版包含多项新增功能和增强功能。</block>
   <block id="8127605cde4cee83a23b35f1207c7572" category="sidebar">SnapCenter软件文档</block>
   <block id="e76a4ae8df1bf6770838ce7c7d94e229" category="paragraph">启动插件服务(仅适用于在Windows主机上运行的插件)</block>
   <block id="8e6af76634121af640a2987aea883af4" category="doc">SnapCenter凭据的身份验证方法</block>
@@ -9533,13 +9515,11 @@ destination</block>
   <block id="67998d9af35dea74903e9cdb371f7e7a" category="paragraph">或者，您也可以参考<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block>或者<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="e2affc8ad90cb942103d56d82396b5f7" category="paragraph">了解SnapCenter 6.2 中的新功能和增强功能。</block>
   <block id="652468e7a8f47c94c0dfc2bbbe3f6788" category="inline-link-macro">SnapCenter 6.2 中的新增功能</block>
-  <block id="d5d7d6e218fb8deef9aa758f16f3e053" category="paragraph">有关新功能和增强功能的完整列表，请参阅<block ref="ba56a05032a421946bbeef30dde12674" category="inline-link-macro-rx"></block> 。</block>
   <block id="24443d9133830b434ac05072f0c9653a" category="inline-link">SnapCenter软件 6.2 发行说明</block>
   <block id="320bd16b81d8a6a0a077d7308db7683d" category="paragraph">升级路径显示您可以从哪些SnapCenter版本升级以及支持哪些插件版本。</block>
   <block id="f734f899336791933d28373bca69a72f" category="admonition">如果将SnapCenter Server 升级到 6.2，也请将插件升级到 6.2。</block>
   <block id="7a22247de8db3271f3bf8573be10e986" category="cell">6.2</block>
   <block id="cb2f94cd974dcdf68577ffd66816a900" category="doc">SnapCenter software6.2 中的新增功能</block>
-  <block id="02a7a1f2d7c2b92647dd96da7bf06024" category="paragraph">SnapCenter software6.2 版本包含以下新功能。</block>
   <block id="efd8ec518c3271e168cebeb4a21d4fc3" category="paragraph">SnapCenter 6.2（服务器和插件）以及ONTAP 9.17.1 利用分层一致性组支持在物理系统（Linux 和 Windows）和虚拟机文件系统 (VMFS) 上运行的应用程序的主要和次要保护。</block>
   <block id="669e7e163e3b320fc474c04f2cd99bdc" category="paragraph">升级到SnapCenter 6.2 和ONTAP 9.17.1 后， SnapCenter会在第一次计划备份期间将平面一致性组更改为分层一致性组。</block>
   <block id="9e1557573461036ce114499c0c41ed6f" category="paragraph">工作流列出了升级SnapCenter服务器和插件包必须完成的任务。</block>
@@ -9621,4 +9601,40 @@ destination</block>
   <block id="3edc812c3aede1bb8931ed56901c3d63" category="list-text">您必须在 Linux 或 AIX 主机上安装 Java 11。</block>
   <block id="67444cdbc60594b36af73fd32a491c3e" category="paragraph"><block ref="67444cdbc60594b36af73fd32a491c3e" category="inline-link-macro-rx"></block></block>
   <block id="947890351727a5bfefd25ab911655064" category="paragraph"><block ref="947890351727a5bfefd25ab911655064" category="inline-link-macro-rx"></block></block>
+  <block id="4eecf71620cb916df975db3d622e9c30" category="paragraph">SnapCenter 服务器存储库有时称为 NSM 数据库。有关所有可用 cmdlet 的详细信息，请参见<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
+  <block id="e9087f4d1c2c90b2c0e70f14ce029f2b" category="paragraph">备份 SnapCenter Server 存储库有助于防止数据丢失。您可以通过运行 <block ref="f89bc12c0d2d413f64b24c351b6b566d" prefix=" " category="inline-code"></block> cmdlet 来备份存储库。</block>
+  <block id="7de02e43c7e5e44fea6db42bf98f4e4f" category="paragraph"><block ref="f89bc12c0d2d413f64b24c351b6b566d" prefix=" " category="inline-code"></block> cmdlet 完成以下任务：</block>
+  <block id="7c6f43e53987a1cba407a45574b6e131" category="list-text">在 SnapCenter 服务器主机上，使用 <block ref="5127bb5818426c9a226f86808b688df6" prefix=" " category="inline-code"></block> cmdlet 建立会话，然后输入您的凭据。</block>
+  <block id="2313913b76aff94d8503163d4f267e85" category="list-text">使用采用以下必需参数的<block ref="f89bc12c0d2d413f64b24c351b6b566d" prefix=" " category="inline-code"></block> cmdlet 备份存储库：</block>
+  <block id="a78522bed1f819174f25cef96c0c0ff3" category="list-text"><block ref="cf11ed5faa9031625d5872a33b51369d" prefix="" category="inline-code"></block>：指定 SnapCenter 存储库所在的服务器的主机名。</block>
+  <block id="f72b4d51cc947b4944fe5bff106a159e" category="list-text"><block ref="6c15defbbb5591f238f00aae21da8102" prefix="" category="inline-code"></block>：指定存储存储库备份的 NetApp 存储系统上的文件系统路径。</block>
+  <block id="45cfbc93f52bddc8332cbb3821a79fcd" category="list-text"><block ref="3e6a04e315cffe1935944c6e148259e3" prefix="" category="inline-code"></block>：定义存储库备份的计划。它通常被定义为哈希表。</block>
+  <block id="ea93be765766b1b0340a46ec9fa44007" category="list-text"><block ref="17c9a3d0386d0c9388f23f0e1746b442" prefix="" category="inline-code"></block>：指定要保留的资料库备份的数量。当备份数量超过此计数时，将删除最旧的备份。</block>
+  <block id="fbb43b857700ed367835ec83901639b4" category="inline-link">SnapCenter Software Cmdlet 参考指南 - Get-SmRepositoryBackups</block>
+  <block id="bc38773382be3f74dc73755cd9827105" category="paragraph">您可以通过运行 <block ref="8f3ee45ff6a4d15cb1535fbb2104cbe3" prefix=" " category="inline-code"></block> cmdlet 来显示 SnapCenter Server 数据库存储库备份的列表。有关详细信息，请参见 <block ref="c67bf538930b4faf23ee321b029e47b4" category="inline-link-rx"></block>。</block>
+  <block id="fe977c7845ac3fb77271396a2eccec70" category="paragraph">系统会根据 <block ref="f89bc12c0d2d413f64b24c351b6b566d" prefix=" " category="inline-code"></block> cmdlet 中指定的计划创建存储库备份。</block>
+  <block id="c55d0155b4fd52f1558139d035379b17" category="list-text">在命令提示符处，输入 <block ref="5127bb5818426c9a226f86808b688df6" prefix=" " category="inline-code"></block> cmdlet，并提供连接到 SnapCenter 服务器的凭据。</block>
+  <block id="1d8ed305cde1786adbe54ceb761583b1" category="list-text">使用 <block ref="8f3ee45ff6a4d15cb1535fbb2104cbe3" prefix=" " category="inline-code"></block> cmdlet 列出所有可用的 SnapCenter 数据库备份。</block>
+  <block id="f815b5ceaf8636c8128f6fdfe485fca0" category="paragraph">您可以通过运行 <block ref="8ae865811cf35c74eae23a4044145d22" prefix=" " category="inline-code"></block> cmdlet 来还原 SnapCenter 存储库。</block>
+  <block id="358aee23266781e25636c5c68e9d029f" category="paragraph">还原 SnapCenter 存储库时，其他正在运行的 SnapCenter 操作会受到影响，因为在还原操作期间无法访问存储库数据库。</block>
+  <block id="ade1166053736f73c976329f5201c8e3" category="list-text">使用 <block ref="8ae865811cf35c74eae23a4044145d22" prefix=" " category="inline-code"></block> cmdlet 还原存储库备份。</block>
+  <block id="493b7d8df398bc120f9f428c564acc5c" category="list-text">使用 <block ref="e276a5794a7efafc0fd13b7cc2d4468c" prefix=" " category="inline-code"></block> cmdlet 重置存储库密码。</block>
+  <block id="151857987a4ca8ab0b6b4ae84218e0ef" category="paragraph">您可以通过运行 <block ref="b306feeed6ddda97d08ef1f2a0ba62d9" prefix=" " category="inline-code"></block> 命令获取有关可与 cmdlet 及其描述一起使用的参数的信息。或者，您可以参考 <block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
+  <block id="f6290ecec0b6032b705450a72b783056" category="list-text">对于 ONTAP 9.12.1 及更早版本，在恢复过程中从 SnapLock Vault 快照创建的克隆将继承 SnapLock Vault 到期时间。存储管理员应在 SnapLock 到期后手动清理克隆。</block>
+  <block id="5e0169811e6298c75af680faf7eb3898" category="paragraph">对快照使用自定义名称格式。</block>
+  <block id="32aa9c674cdcdd67bbedcd5786e9c89c" category="paragraph">例如，customtext_resourcegroup_policy_hostname 或 resource group_hostname。默认情况下，时间戳附加到快照名称。</block>
+  <block id="71c597cb94a0c26a5fa6146e850d4c89" category="paragraph">指定归档日志保留的天数。</block>
+  <block id="25b35304e237e166d7ff315d9ad4ba4d" category="paragraph">此设置必须大于或等于 NTAP_SNAPSHOT_RETENTIONS。</block>
+  <block id="7e4961425800a99500e244a5e02bc700" category="paragraph">指定包含归档日志的目录的路径。</block>
+  <block id="244579f440504a33f1468b477f530b72" category="paragraph">指定与日志文件的文件名扩展名匹配的正则表达式。</block>
+  <block id="2168489b9f8e6334897f26a5329667ab" category="paragraph">对于以多个数字结尾的日志文件，请使用正则表达式，例如<block ref="ececa0327fd65b97690ab7756b7b6c18" prefix=" " category="inline-code"></block>或（来自 6.0）<block ref="217c2028762e7dcdedd3dce416220593" prefix=" " category="inline-code"></block>（至少一个字符的任何数字长度）作为参数的值，该值表示 SAP HANA 中的任何日志序列号。</block>
+  <block id="488081ea3d4e639bcf2be8f71cd46132" category="paragraph">ARCHIVE_LOG_RECURSIVE_SEARCH</block>
+  <block id="85bbfdb76a2b2ed0fd1b0da7a4fb3785" category="paragraph">启用子目录内归档日志的管理。</block>
+  <block id="4c6d3857eae63796ee3d5f67011e194f" category="paragraph">如果归档日志位于子目录下，则应使用此参数。</block>
+  <block id="5223ed0f09a7ed8f79cb34ee678642b2" category="admonition">适用于 Linux 系统上的 SAP HANA 数据库的 SnapCenter 插件支持自定义键值对，但不适用于在 Microsoft Windows 的 SnapCenter 插件中注册的 SAP HANA 数据库。</block>
+  <block id="fef844efd5d5274641ab5a8e530ced87" category="admonition">您也可以选择 *<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>* 来创建策略。</block>
+  <block id="d3562ace999b51c49c22ce4c580579b0" category="list-text">在 Configure Schedules（配置计划）列中，为要配置的策略选择 *<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>*。</block>
+  <block id="8d3b5ad5b9f27b4f9781e490487c376e" category="paragraph">有关新增功能和增强功能的完整列表，请参见 <block ref="333326639e0f94ceb693906a79235ec5" category="inline-link-macro-rx"></block>。</block>
+  <block id="2f1352033f9cdf5dbec684bea0d87ee5" category="summary">SnapCenter software 6.2 版包括几个新增功能和增强功能。</block>
+  <block id="f4090871da1ea3c21c90ff0a2bfe77db" category="paragraph">6.2 版本的 SnapCenter software 包含以下扩展功能。</block>
 </blocks>
