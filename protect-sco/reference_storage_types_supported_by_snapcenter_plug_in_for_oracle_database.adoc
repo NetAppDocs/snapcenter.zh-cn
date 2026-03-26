@@ -58,6 +58,21 @@ NOTE: ESX 8.0U2支持RAC、并支持共享VMDK
 
 
 
+
+
+ a| 
+其他虚拟机管理程序
+ a| 
+支持在 KVM、Xen、Hyper-V 和超大规模虚拟机监控程序下运行的 Linux，其中来宾操作系统可以使用以下方法直接通过 TCP/IP 访问所需的 ONTAP 存储资源：
+
+* iSCSI 连接的 LUN
+* NFS-connected volumes
+* NVMe/TCP
+
+
+
+NOTE: VMware 之外不支持数据存储区和原始设备演示文稿。
+
 |===
 
 

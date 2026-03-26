@@ -9637,4 +9637,7 @@ destination</block>
   <block id="8d3b5ad5b9f27b4f9781e490487c376e" category="paragraph">有关新增功能和增强功能的完整列表，请参见 <block ref="333326639e0f94ceb693906a79235ec5" category="inline-link-macro-rx"></block>。</block>
   <block id="2f1352033f9cdf5dbec684bea0d87ee5" category="summary">SnapCenter software 6.2 版包括几个新增功能和增强功能。</block>
   <block id="f4090871da1ea3c21c90ff0a2bfe77db" category="paragraph">6.2 版本的 SnapCenter software 包含以下扩展功能。</block>
+  <block id="e8210c34cf4a643a11f3bfc4c0fd905f" category="paragraph">其他虚拟机管理程序</block>
+  <block id="ff968c11eab0f01c02347241d47d4a25" category="paragraph">支持在 KVM、Xen、Hyper-V 和超大规模虚拟机监控程序下运行的 Linux，其中来宾操作系统可以使用以下方法直接通过 TCP/IP 访问所需的 ONTAP 存储资源：</block>
+  <block id="19228485fa8108fc9a8c5a7a0e681742" category="admonition">VMware 之外不支持数据存储区和原始设备演示文稿。</block>
 </blocks>
