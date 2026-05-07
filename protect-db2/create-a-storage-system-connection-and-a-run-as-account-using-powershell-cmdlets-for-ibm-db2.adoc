@@ -27,7 +27,7 @@ SnapCenter 不支持在不同集群上使用相同名称的多个存储系统。
 
 
 .步骤
-. 单击*SnapCenterPS*以启动PowerShell Core。
+. 选择 *SnapCenterPS* 启动 PowerShell。
 . 使用 Add-SmStorageConnection cmdlet 创建与存储系统的新连接。
 +
 [listing]

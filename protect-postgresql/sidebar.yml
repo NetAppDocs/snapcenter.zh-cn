@@ -96,6 +96,8 @@ entries:
   entries:
   - title: 备份工作流
     url: "/protect-postgresql/back-up-postgresql-resources.html"
+  - title: 为 PostgreSQL 集群配置凭据
+    url: "/protect-postgresql/configure-credentials-for-postgresql-cluster.html"
   - title: 自动发现集群
     url: "/protect-postgresql/discover-the-clusters-automatically.html"
   - title: 手动将资源添加到插件主机

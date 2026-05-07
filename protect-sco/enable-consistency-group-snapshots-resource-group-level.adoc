@@ -1,0 +1,28 @@
+---
+permalink: protect-sco/enable-consistency-group-snapshots-resource-group-level.html 
+sidebar: sidebar 
+keywords: consistency group, enable, create, resource group level 
+summary: 资源组是一个容器、您可以在其中添加要备份和保护的资源。通过资源组、您可以同时备份与给定应用程序关联的所有数据。 
+---
+= 在资源组级别启用一致性组快照
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+默认情况下，适用于 Oracle 数据库的 SnapCenter 插件会在自动存储管理 (ASM) 磁盘组或逻辑卷管理 (LVM) 卷组级别创建一致性组快照。作为最佳实践，单个资源组内的数据库不应跨 ASM 磁盘组或 LVM 卷组共享 ONTAP 卷。
+
+但是，如果 ASM 磁盘组或 LVM 卷组共享基础 ONTAP 卷，则一致性组快照可能会因重复快照冲突而失败。在这种情况下，SnapCenter 会自动回退到卷级快照。
+
+.关于此任务
+在跨 ASM 磁盘组或 LVM 卷组共享卷的情况下，SnapCenter 支持在资源组级别启用一致性组快照。这可确保在单个一致性组快照下捕获资源组内与数据库关联的所有 ASM 磁盘组或 LVM 卷组。以下步骤概述了如何使用此功能。
+
+.步骤
+. 导航到 SnapCenter 服务器上的以下配置文件：
++
+`C:\Program Files\NetApp\SMCore\SMCoreServiceHost.dll.config`.
+
+. 找到 `isCgSnapshotForRg`参数并将其值从 *false* 更改为 *true*。
+. 重新启动  `SMCoreService` 服务以使更改生效。
+

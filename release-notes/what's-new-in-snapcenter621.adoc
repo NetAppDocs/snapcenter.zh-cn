@@ -1,0 +1,14 @@
+---
+permalink: 'release-notes/what"s-new-in-snapcenter621.html' 
+sidebar: sidebar 
+keywords: what is new, features, enhancements, 6.2.1 
+summary: 6.2.1 版本的 SnapCenter 软件没有新功能或增强功能，仅包括 SnapCenter 服务器和插件的已知错误修复和合格版本更新。 
+---
+= SnapCenter 软件 6.2.1 中的新增功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+6.2.1 版本的 SnapCenter software 没有新增功能或增强项。该版本仅包含已知错误修复以及 SnapCenter Server 和插件的合格版本更新。有关更多详细信息，请参阅 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 6.2.1 发行说明"^]。

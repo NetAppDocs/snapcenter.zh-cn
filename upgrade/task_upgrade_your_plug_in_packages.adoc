@@ -17,8 +17,8 @@ summary: 此插件软件包会在 SnapCenter 升级过程中分发。
 
 .开始之前
 * 如果您是能够访问 Linux 计算机的非 root 用户，则在执行升级操作之前，应使用最新的校验和值更新 /etc/sudoers_ 文件。
-* 确保 Windows 插件主机上已安装 PowerShell Core 7.4.2。
-* 确保在 Windows 和 Linux 插件主机上安装了 Java 11、Oracle Java 和 OpenJDK。
+* 确保已在 Windows 插件主机上安装 PowerShell 7.4.13。
+* 确保在 Windows 和 Linux 插件主机上安装了 Java 17（Oracle Java 和 OpenJDK）。
 * 默认情况下， SnapCenter 会从环境中检测 java_home 。如果要使用固定的 java_home ，并且要升级 Linux 主机上的插件，则应在位于 /var/opt/snapcenter/spl/etc/ 的 _spl.properties_ 文件中手动添加 skip_JAVAHOME_update 参数，并将该值设置为 true 。
 +
 当此插件升级或 SnapCenter 插件加载程序（ SPL ）服务重新启动时， java_home 的值将更新。在升级或重新启动 SPL 之前，如果添加 skip_JAVAHOME_UPDATE 参数并将值设置为 true ，则不会更新 java_home 的值。
