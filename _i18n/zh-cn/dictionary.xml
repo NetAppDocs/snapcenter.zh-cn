@@ -31,7 +31,6 @@
   <block id="95d04783b89b5d5f8a4c905e6a139950" category="paragraph">有关部署的信息，请参见<block ref="09fdd78e4c4f2997a9baa6b6e4423d52" category="inline-link-rx"></block>。</block>
   <block id="0a43bd1f35095f6ca081444f65372381" category="section-title">部署 CA 证书</block>
   <block id="c9abc3786b4bb68c9d780c7e265731ff" category="inline-link">创建或导入 SSL 证书</block>
-  <block id="77e6d176ef9b9d439f75a9636390005d" category="paragraph">要使用适用于 VMware vSphere 的 SnapCenter 插件配置 CA 证书，请参见<block ref="1b5e247395791063ff5d33fa4a1ba4ec" category="inline-link-rx"></block>。</block>
   <block id="3228309100966454e78a162d4ba9bd75" category="section-title">配置此 CRL 文件</block>
   <block id="456dce50d13fcf7c2c4881e39c114254" category="paragraph">适用于 VMware vSphere 的 SnapCenter 插件会在预先配置的目录中查找此 CRL 文件。适用于 VMware vSphere 的 SnapCenter 插件的 CRL 文件的默认目录为： _/opt/netapp/config/CRL_ 。</block>
   <block id="1b782c06b199c89589ed8bcf1a6ca9ab" category="paragraph">您可以在此目录中放置多个 CRL 文件。系统将根据每个 CRL 验证传入的证书。</block>
@@ -6701,9 +6700,7 @@
   <block id="ac91c641781bd7c7379113e123abc706" category="doc">启用基于证书的身份验证</block>
   <block id="2deb2b431122c2428813248c5cc7e3cf" category="paragraph">要为SnapCenter服务器和Windows插件主机启用基于证书的身份验证、请运行以下PowerShell cmdlet。  对于Linux插件主机、启用双向SSL后、将启用基于证书的身份验证。</block>
   <block id="012d451c2966c8058914f66afd3ff9be" category="list-text">启用基于客户端证书的身份验证：</block>
-  <block id="c7414a7d4890863a34509bebe1bd9225" category="paragraph"><block ref="a578dd94961bb2b0ce287d29a112740b" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="a71cdd4660400fab236be52b25300411" prefix=" " category="inline-code"></block></block>
   <block id="8b5db05d124326542535790d2a1a0411" category="list-text">禁用基于客户端证书的身份验证：</block>
-  <block id="b5cfca9930b60b6f87f38ad0e8d31765" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="b1b73520f4b4ea4d2583cc59029bbe0d" prefix=" " category="inline-code"></block></block>
   <block id="1a415d60c0654233b8e03281525e6b18" category="admonition">存储系统名称(不包括域名)必须包含15个或更少字符、并且这些名称必须可进行析。要创建名称包含超过 15 个字符的存储系统连接，可以使用 Add-SmStorageConnectionPowerShell cmdlet 。</block>
   <block id="542082ddc576a51ede49e11ac68a28ff" category="paragraph">如果您已在SnapCenter中添加SVM、则用户需要从下拉列表中手动选择平台类型。</block>
   <block id="440355fc57f515aab537d229da6473e3" category="paragraph">您可以在Active Directory联合身份验证服务(AD FS)服务器和SnapCenter服务器中管理多因素身份验证(MFA)功能。</block>
@@ -9256,7 +9253,6 @@ destination</block>
   <block id="334226d3cfa4581cf30266ef27f8d444" category="list-text">在部署适用于VMware vSphere的SnapCenter插件并向SnapCenter注册此插件时、支持在RDM LUN上使用虚拟化的Exchange Server。</block>
   <block id="d606f67e2e785da61d4eec544382d173" category="section-title">适用于Oracle 12cR2至18c、19c或21c版本</block>
   <block id="6a02cc7ce0251bbc4d48ab0a5e120358" category="paragraph">您应查看 Oracle 数据库支持的不同身份验证方法。有关信息，请参见 <block ref="7870051f24add37682324e1578aee75d" category="inline-link-macro-rx"></block>。</block>
-  <block id="cb5d59c817a7392efa454c9c69508067" category="paragraph"><block ref="cb5d59c817a7392efa454c9c69508067" category="inline-link-rx"></block></block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
   <block id="d662aa2b841a0c131c86e10f89661f14" category="paragraph">有关FlexClone许可信息，请参见 <block ref="d9f19820592fa27802c8f2a3fe0b8c47" category="inline-link-macro-rx"></block>。</block>
   <block id="073f586b61cc6ba33a4441cb7dadca15" category="cell"><block ref="073f586b61cc6ba33a4441cb7dadca15" category="inline-link-macro-rx"></block></block>
@@ -9668,4 +9664,8 @@ destination</block>
   <block id="f0de22be0ad3dd3c1e51ed207f0e298e" category="paragraph">6.2.1 版本的 SnapCenter software 没有新增功能或增强项。该版本仅包含已知错误修复以及 SnapCenter Server 和插件的合格版本更新。有关更多详细信息，请参阅 <block ref="f297672c4e3c5441ce384d3bd8457e0c" category="inline-link-macro-rx"></block>。</block>
   <block id="8ca913d8030ab27ecf31b8863c908b83" category="list-text">确保已在 Windows 插件主机上安装 PowerShell 7.4.13。</block>
   <block id="1a0f97251fd1801dcc25004385c56be0" category="list-text">确保在 Windows 和 Linux 插件主机上安装了 Java 17（Oracle Java 和 OpenJDK）。</block>
+  <block id="92f7e9adcc0061bde4c2abd78f00e01e" category="paragraph">要使用 SnapCenter Plug-in for VMware vSphere 配置 CA 证书，请参见<block ref="e0ef04da7ad7ee6e29cb49ed5497582e" category="inline-link-rx"></block>。</block>
+  <block id="0ff275ffe02e672fcd7c5215c9cbcfb6" category="paragraph"><block ref="a578dd94961bb2b0ce287d29a112740b" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
+  <block id="11428fc511268a2c63fa0e7ebcb2530d" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
+  <block id="2af0fc8c21c11cf5ed04e0063f53931e" category="paragraph"><block ref="2af0fc8c21c11cf5ed04e0063f53931e" category="inline-link-rx"></block></block>
 </blocks>
