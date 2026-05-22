@@ -4000,13 +4000,11 @@
   <block id="606cd2bdcf82131642fd100272b51b92" category="list-text">从主备份和二级备份还原数据库</block>
   <block id="e53c11d95478892635e2a7753106adc5" category="summary">在添加主机并安装插件软件包之前，您必须满足所有要求。</block>
   <block id="690761e3a499ee562da842d3bd6f2db0" category="doc">添加主机和安装适用于 Microsoft Exchange Server 的 SnapCenter 插件的前提条件</block>
-  <block id="3135b36cd939fa03c3be552b0fbe8534" category="list-text">您必须对独立和数据库可用性组配置使用 Microsoft Exchange Server 2013 ， 2016 或 2019 。</block>
   <block id="28d2b8ff10c1db028f2426c313a6f6ac" category="list-text">您必须具有对 Exchange Server 具有管理权限的用户。</block>
   <block id="b387198e1b998aa635e2ad89704fa61e" category="list-text">如果已安装 SnapManager for Microsoft Exchange Server 和 SnapDrive for Windows ，则必须先注销 SnapDrive for Windows 使用的 VSS 硬件提供程序，然后才能在同一 Exchange Server 上安装适用于 Exchange 的插件，以确保使用 SnapCenter 成功保护数据。</block>
   <block id="e14f254ce5508b044595b70ba76e2dd9" category="list-text">如果 SnapManager for Microsoft Exchange Server 和 Plug-in for Exchange 安装在同一台服务器上，则必须暂停或从 Windows 计划程序中删除 SnapManager for Microsoft Exchange Server 创建的所有计划。</block>
   <block id="363807fbbec214888e9bb4ab89312c45" category="list-text">主机必须可从服务器解析为完全限定域名（ FQDN ）。如果修改了 hosts 文件以使其可解析，并且在 hosts 文件中同时指定了短名称和 FQDN ，请在 SnapCenter hosts 文件中以以下格式创建一个条目： _&lt;IP_address&gt; &lt;host_FQDN&gt; &lt;host_name&gt;_ 。</block>
   <block id="16b480a328aa6342db0d1f44787d9eaf" category="list-text">对于 Windows 2016 和 Exchange 2016 ，端口范围为 50000 - 51000</block>
-  <block id="3d865e6796dba371ef2bbaf9003ed1eb" category="list-text">对于 Windows 2012 R2 和 Exchange 2013 ，端口范围为 6000 - 6500</block>
   <block id="2973bd6a9b781fc2968849d58205311c" category="list-text">对于 Windows 2019 ，端口范围为 49152 - 65536</block>
   <block id="9bcf17f4427582cfbb783f46971b1eb0" category="summary">在创建备份作业之前定义备份策略有助于确保您拥有成功还原数据库所需的备份。您的服务级别协议（ Service Level Agreement ， SLA ），恢复时间目标（ Recovery Time Objective ， RTO ）和恢复点目标（ Recovery Point Objective ， RPO ）在很大程度上决定了您的备份策略。</block>
   <block id="7fc686e60d66e170f709548904c946f0" category="doc">为 Exchange Server 资源定义备份策略</block>
@@ -5305,7 +5303,6 @@
   <block id="f19bda06b34cef66f42b2a2700dbd329" category="section-title">监控安装状态</block>
   <block id="c6055785b167d1305aed46955c971ab0" category="list-text">为安装用户创建身份验证模式为 Linux 或 AIX 的凭据。 <block ref="ea30e46e8a254ae027cbb29705df6d6a" category="inline-link-macro-rx"></block></block>
   <block id="96a691c75f4e8548b130dd4af0ea4e53" category="paragraph">请参见 <block ref="323b90807a9546f6e557752e6cfa6177" category="inline-link-macro-rx"></block> 或 <block ref="e2c91a506ccd79e4b35095669002c16d" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
-  <block id="49178d8917274413da493299118d6557" category="list-text">确保防火墙中未阻止以下端口，否则添加主机操作将失败。要解析此问题描述，必须配置动态端口范围。有关详细信息，请参见<block ref="70d4a5fd2803e35738264291f84fc1aa" category="inline-link-rx"></block>。</block>
   <block id="fe76fc133ce5d0e6aa2e73fa56ca464c" category="paragraph">要确定端口范围，请执行以下命令：</block>
   <block id="70766abc1e0d9fa835c550fd65fe8108" category="list-text">netsh int ipv4 show dynamicport tcp</block>
   <block id="a93524c7ce74bfb10fdd0fcbd38fb81a" category="list-text">netsh int ipv4 show dynamicport udp</block>
@@ -9668,4 +9665,7 @@ destination</block>
   <block id="0ff275ffe02e672fcd7c5215c9cbcfb6" category="paragraph"><block ref="a578dd94961bb2b0ce287d29a112740b" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
   <block id="11428fc511268a2c63fa0e7ebcb2530d" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
   <block id="2af0fc8c21c11cf5ed04e0063f53931e" category="paragraph"><block ref="2af0fc8c21c11cf5ed04e0063f53931e" category="inline-link-rx"></block></block>
+  <block id="58065290ed803cdf3874ac1d4114dcef" category="list-text">您必须将 Microsoft Exchange Server 用于独立和数据库可用性组配置。有关受支持的 Microsoft Exchange Server 版本，请参阅<block ref="a56461e56210fb5ec91e8f031015b65a" category="inline-link-macro-rx"></block>。</block>
+  <block id="00ae82bfdfa80871841f81003a4c71b8" category="list-text">确保以下端口在防火墙中未被阻塞，否则 add host 操作失败。要解决此问题，必须配置动态端口范围。有关详细信息，请参见<block ref="70d4a5fd2803e35738264291f84fc1aa" category="inline-link-rx"></block>。有关受支持的 Microsoft Exchange Server 版本，请参见<block ref="a56461e56210fb5ec91e8f031015b65a" category="inline-link-macro-rx"></block>。</block>
+  <block id="e009ef54959ef44bca3f7d7710210754" category="list-text">适用于 Windows 2012 R2 和 Exchange 2013 的端口范围 6000 - 6500</block>
 </blocks>
