@@ -120,7 +120,7 @@ Web 服务器
 +
 ** .NET 可扩展性 4.5
 ** 应用程序初始化
-** ASP.NET Core 8.0.12 (以及所有后续的8.0.x修补程序)托管包
+** ASP.NET Core Runtime 8.0.24 （以及所有后续的 8.0.x 修补程序）Hosting Bundle
 ** 服务器端包括
 ** WebSocket 协议
 
@@ -144,9 +144,9 @@ IIS 管理脚本和工具
 
 
  a| 
-+.NET Framework 8.0.12功能+
++.NET Framework 功能+
  a| 
-* ASP.NET Core 8.0.12 (以及所有后续的8.0.x修补程序)托管包
+* ASP.NET Core Runtime 8.0.24 （以及所有后续的 8.0.x 修补程序）Hosting Bundle
 * Windows Communication Foundation （ WCF ） HTTP 激活 45
 +
 ** TCP 激活
