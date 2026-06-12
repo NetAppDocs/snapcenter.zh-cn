@@ -15,7 +15,7 @@ summary: 如果无法从 SnapCenter 图形用户界面远程安装适用于 Micr
 
 .开始之前
 * 您必须已安装 ASP.NET Core Runtime 8.0.24（以及所有后续的 8.0.x 修补程序）Hosting Bundle。
-* 您必须已安装PowerShell 7.4.2或更高版本。
+* 您必须已安装 PowerShell 7.4.13 或更高版本。
 * 您必须是主机上的本地管理员。
 
 

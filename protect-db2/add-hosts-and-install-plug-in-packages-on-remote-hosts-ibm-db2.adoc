@@ -129,7 +129,7 @@ NOTE: GMSA 仅用作适用于 Windows 的 SnapCenter 插件服务的登录服务
 |===
 . 单击 * 提交 * 。
 +
-如果未选中 *跳过预检查* 复选框，则会验证主机以验证主机是否符合安装插件的要求。磁盘空间、RAM、PowerShell 版本、.NET 版本、位置（适用于 Windows 插件）和 Java 17、Java 11（仅适用于 SnapCenter 6.2）等 Windows 和 Linux 插件将根据最低要求进行验证。如果未满足最低要求，则会显示相应的错误或警告消息。
+如果未选中*跳过预检查*复选框，则会验证主机以验证主机是否符合安装插件的要求。磁盘空间、RAM、PowerShell 版本、.NET 版本、位置（适用于 Windows 插件）和 Java 17（适用于 SnapCenter 6.2.1 及更高版本）或 Java 11（适用于 SnapCenter 6.2 及更早版本）等 Windows 和 Linux 插件都将根据最低要求进行验证。如果未满足最低要求，则会显示相应的错误或警告消息。
 
 +
 如果此错误与磁盘空间或 RAM 相关，您可以更新位于 C ： \Program Files\NetApp\SnapCenter WebApp 的 web.config 文件以修改默认值。如果此错误与其他参数相关，则必须修复问题描述。
