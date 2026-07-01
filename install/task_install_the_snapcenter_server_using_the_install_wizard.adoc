@@ -120,7 +120,7 @@ Web 服务器
 +
 ** .NET 可扩展性 4.5
 ** 应用程序初始化
-** ASP.NET Core Runtime 8.0.24 （以及所有后续的 8.0.x 修补程序）Hosting Bundle
+** ASP.NET Core 10.0.7 托管捆绑包（或更高版本）请参阅 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 软件发行说明"^]，了解适用于您特定 SnapCenter 版本的 ASP.NET Core 最新合格版本。
 ** 服务器端包括
 ** WebSocket 协议
 
@@ -146,11 +146,11 @@ IIS 管理脚本和工具
  a| 
 +.NET Framework 功能+
  a| 
-* ASP.NET Core Runtime 8.0.24 （以及所有后续的 8.0.x 修补程序）Hosting Bundle
+* ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更高版本）
 * Windows Communication Foundation （ WCF ） HTTP 激活 45
 +
 ** TCP 激活
-** HTTP 激活
+** HTTP Activation 有关特定 SnapCenter 版本的 ASP.NET Core 最新合格版本，请参阅 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 软件发行说明"^]。
 
 
 

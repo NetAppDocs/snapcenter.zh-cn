@@ -2735,7 +2735,6 @@
   <block id="80d3af8b299e19c823acbbffefc4856a" category="list-text">Web 管理工具</block>
   <block id="623ef35114e69633221d2c9bf99f6cab" category="list-text">Windows Communication Foundation （ WCF ） HTTP 激活 45</block>
   <block id="c38d32373eca3e6335e44b42893f0034" category="list-text">TCP 激活</block>
-  <block id="cb6ddd90b08469e2479460ec34538fe2" category="list-text">HTTP 激活</block>
   <block id="a8e1305e0c86caf1fec261807b3362ef" category="paragraph">Windows 进程激活服务</block>
   <block id="494ecde4fb6ee77e99799902ed23cd14" category="list-text">流程模型</block>
   <block id="293616622aeda675821b42e39b4d4e7b" category="paragraph">配置 API</block>
@@ -8491,7 +8490,6 @@ destination</block>
   <block id="ea62cc4b7d9cd7944081adc0c2c67058" category="list-text">DINSTORL_LOG_NAME：用于存储安装日志的日志文件名。</block>
   <block id="39c80f79d5024dfd3e2edbc67a0ee950" category="paragraph">系统将提示您确认升级。输入除0以外的任何值以确认SnapCenter服务器升级。</block>
   <block id="d4e9c7592fe4ab5b42d9052ea3bc865c" category="admonition">您应先注销、然后再登录到SnapCenter、或者关闭并打开一个新浏览器以访问SnapCenter图形用户界面。</block>
-  <block id="9f41f9f1c434718ae6e50ffba61152d0" category="cell">6.0</block>
   <block id="1231c8ea8da87c73515938fe7d9cafd5" category="sidebar">为Windows主机配置CA证书</block>
   <block id="871fc681c918eeb8bc97c43c286a51ca" category="sidebar">在Windows主机上配置和启用双向SSL通信</block>
   <block id="b4a3c04aec1d573cc0ee1d415ca27eae" category="sidebar">在Linux主机上配置和启用双向SSL通信</block>
@@ -8763,7 +8761,6 @@ destination</block>
   <block id="8bd5c68a1ade9c22f98424902eb6b969" category="admonition">不支持DB2 pureScale环境和DB2多节点(DPF)系统。</block>
   <block id="89f4d38108821acdbf6cd6b780454397" category="summary">SnapCenter支持的升级路径。</block>
   <block id="5097f966477870c178d6885558d88ef0" category="doc">SnapCenter支持的升级路径</block>
-  <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">发行说明</block>
   <block id="8b7c42123642e2e4ea7dd426aeb2de58" category="list-text">NVMe/TCP</block>
   <block id="e32c19b9fdeb1a3c3b963304701ce944" category="list-text">VMFS上通过NVMe/TCP创建的VMDK</block>
   <block id="6182907e4faa060590fa16b6618267ff" category="list-text">启动备份操作后、单击"Active"(活动)窗格上的**<block ref="64eace402f8f00b7a999e38fb6d87e55" category="inline-image-macro-rx" type="image"></block>以查看五个最新操作。</block>
@@ -9571,11 +9568,9 @@ destination</block>
   <block id="fef844efd5d5274641ab5a8e530ced87" category="admonition">您也可以选择 *<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>* 来创建策略。</block>
   <block id="d3562ace999b51c49c22ce4c580579b0" category="list-text">在 Configure Schedules（配置计划）列中，为要配置的策略选择 *<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>*。</block>
   <block id="2f1352033f9cdf5dbec684bea0d87ee5" category="summary">SnapCenter software 6.2 版包括几个新增功能和增强功能。</block>
-  <block id="f4090871da1ea3c21c90ff0a2bfe77db" category="paragraph">6.2 版本的 SnapCenter software 包含以下扩展功能。</block>
   <block id="e8210c34cf4a643a11f3bfc4c0fd905f" category="paragraph">其他虚拟机管理程序</block>
   <block id="ff968c11eab0f01c02347241d47d4a25" category="paragraph">支持在 KVM、Xen、Hyper-V 和超大规模虚拟机监控程序下运行的 Linux，其中来宾操作系统可以使用以下方法直接通过 TCP/IP 访问所需的 ONTAP 存储资源：</block>
   <block id="19228485fa8108fc9a8c5a7a0e681742" category="admonition">VMware 之外不支持数据存储区和原始设备演示文稿。</block>
-  <block id="d5339ec2460f6dc04a037cc1e0c21e2c" category="list-text">PowerShell 7.4.13</block>
   <block id="0b28f3dba3d0679c7ead8286c1b86497" category="admonition">升级到 SnapCenter 6.2.1（服务器和插件）和 ONTAP 9.17.1 后，SnapCenter 会在第一次计划备份期间将平面一致性组更改为分层一致性组。</block>
   <block id="1eb0af61a769d0522873cb3b2942d431" category="list-text">选择 *SnapCenterPS* 启动 PowerShell。</block>
   <block id="852731c1b7550625486510fe72aa91ae" category="paragraph">如果您已将 Java 升级到最新版本，则必须确保位于 /var/opt/snapcenter/spl/etc/spl.properties 的 JAVA_HOME 选项设置为正确的 Java 版本和正确的路径。</block>
@@ -9611,7 +9606,6 @@ destination</block>
   <block id="104eca5a6c04470e26d35fe31b06c3ea" category="paragraph"><block ref="be2c922dfeee4a22e9331f08a784def3" prefix="" category="inline-code"></block>.</block>
   <block id="46376aff63fb964edf22387df4324caa" category="list-text">找到<block ref="bc0b5416c67e568e5fd5d624fd885d11" prefix=" " category="inline-code"></block>参数并将其值从 *false* 更改为 *true*。</block>
   <block id="911f345bc86988158b772d982e282ada" category="list-text">重新启动 <block ref="92d506e04aeaf411d00bd3530505a36b" prefix=" " category="inline-code"></block> 服务以使更改生效。</block>
-  <block id="c21b5da89b1f81162977127cb9031d22" category="list-text">Linux 支持来自 Oracle 和 OpenJDK 的 Java。</block>
   <block id="3a963dcf9de35dbba651650701736b82" category="list-text">IBM Java for AIX。您可以从 <block ref="c0de5e0b50d0c2c65f1c384a68baae61" category="inline-link-rx"></block> 下载。</block>
   <block id="4984a1c61cf9b38d22b24181dc7e50e9" category="list-text">编辑<block ref="07b421e5f5e0300b1a0fd6cc22745306" prefix=" " category="inline-code"></block>文件以配置消息身份验证代码算法：MACs hmac-sha2-256 和 MACs hmac-sha2-512。</block>
   <block id="1eb22a3ae1c2ce45dd6dd271f5a31da7" category="admonition">虽然您可以在部署主机和安装插件后创建凭据，但 *最佳做法* 是在添加 SVM 后以及在部署主机和安装插件之前创建凭据。</block>
@@ -9620,12 +9614,9 @@ destination</block>
   <block id="d8f223fc0bc1bca623d2d7c084e193c2" category="list-text">选择数据库，然后选择 *Database Settings* &gt; *Configure Database*。</block>
   <block id="dab985facceb94f13f985f8249833bc0" category="paragraph">有关详细信息，请参阅 <block ref="8f2b39531f2b3f3e4e9667f4d7ba23f5" category="inline-link-macro-rx"></block>。</block>
   <block id="fe83151208012d5b73e22523d7f033ba" category="paragraph">有关 Java 下载的信息，请参阅 <block ref="f2ff54b9e43f2ec55847a13d208d9402" category="inline-link-macro-rx"></block>。</block>
-  <block id="41a4b4dac1c1d04e2b895fdb51832356" category="paragraph">了解 SnapCenter 6.2 和 6.2.1 中提供的新功能和增强功能。</block>
   <block id="ba326f97f514ee86456bacdbb611b94c" category="inline-link-macro">SnapCenter 6.2.1 中的新增功能</block>
   <block id="1e8a051ced3087d8f8c0358cafb2bae4" category="paragraph">要查看新功能和增强功能的完整列表，请参阅 <block ref="dbbc4e697b5acac11e7237418d4e74e7" category="inline-link-macro-rx"></block>。</block>
   <block id="660e11cd0d8b7a0d5f30a5c4ab9874ee" category="paragraph">要查看新功能和增强功能的完整列表，请参阅 <block ref="333326639e0f94ceb693906a79235ec5" category="inline-link-macro-rx"></block>。</block>
-  <block id="6fb4aad380990fd6f7b6d9b9431147f8" category="inline-link">SnapCenter Software 6.2.1 发行说明</block>
-  <block id="555ee24c1ccffeec9a9363373d9b08a6" category="paragraph">有关已知问题、限制、修复问题以及新命令和更改的命令的详细信息，请参见<block ref="039e73fc576f8d9ddcba7242690e2327" category="inline-link-rx"></block>。您必须使用您的 NetApp 帐户登录或创建帐户才能访问发行说明。</block>
   <block id="5aae26cfc631423a28ee9f3eea8618b0" category="cell">6.2.1</block>
   <block id="4405435b2ad2e79a5a4506de478aafd7" category="summary">6.2.1 版本的 SnapCenter 软件没有新功能或增强功能，仅包括 SnapCenter 服务器和插件的已知错误修复和合格版本更新。</block>
   <block id="fed22bd00ec1bb7537e843bbc0886bcc" category="doc">SnapCenter 软件 6.2.1 中的新增功能</block>
@@ -9638,51 +9629,59 @@ destination</block>
   <block id="58065290ed803cdf3874ac1d4114dcef" category="list-text">您必须将 Microsoft Exchange Server 用于独立和数据库可用性组配置。有关受支持的 Microsoft Exchange Server 版本，请参阅<block ref="a56461e56210fb5ec91e8f031015b65a" category="inline-link-macro-rx"></block>。</block>
   <block id="00ae82bfdfa80871841f81003a4c71b8" category="list-text">确保以下端口在防火墙中未被阻塞，否则 add host 操作失败。要解决此问题，必须配置动态端口范围。有关详细信息，请参见<block ref="70d4a5fd2803e35738264291f84fc1aa" category="inline-link-rx"></block>。有关受支持的 Microsoft Exchange Server 版本，请参见<block ref="a56461e56210fb5ec91e8f031015b65a" category="inline-link-macro-rx"></block>。</block>
   <block id="e009ef54959ef44bca3f7d7710210754" category="list-text">适用于 Windows 2012 R2 和 Exchange 2013 的端口范围 6000 - 6500</block>
-  <block id="89f809cf75828a2d4c90b8f6a2d824a8" category="list-text">ASP.NET Core Runtime 8.0.24 （以及所有后续的 8.0.x 修补程序）Hosting Bundle</block>
-  <block id="2ec3c1941108a0b73ba16cd1f51e91a2" category="list-text">(Oracle Java 或 OpenJDK) (或 Java 11 for SnapCenter 6.2)</block>
   <block id="4fcda169e2d730f4d7e58ab11dada974" category="paragraph">+.NET Framework 功能+</block>
   <block id="665be5e1b9dadcbb7301375fc518ac35" category="inline-link-macro">如何为基于 SnapCenter SSH 密钥的凭据创建 RSA 密钥</block>
   <block id="3b7da8598a81d63ce4f466a50cc7f36d" category="admonition">RSA 密钥是 SnapCenter 唯一支持的 SSH 密钥格式。有关如何创建 SSH 密钥的详细信息，请参阅知识库文章 <block ref="d40341440b723151f44e615b4ce137a9" category="inline-link-macro-rx"></block>。</block>
   <block id="017b89dbeed4d6c39a07b04821e77062" category="paragraph">有关受支持版本的最新信息，请参见<block ref="7bd33b95d0920bcbb6caeb370fe1470a" category="inline-link-rx"></block>。</block>
   <block id="3bb60a37742e52f43083aadd15b42634" category="admonition">对于文件系统一致性，将为卷组中涉及的 LUN 获取一致性组快照。</block>
   <block id="039e5b00c69b5f0b1d8102eed90a99d2" category="admonition">如果在资源组中添加了不同的文件系统，则来自资源组中不同文件系统的所有卷都将放入一致性组中。对于故障一致性备份，即使只有一个文件系统或卷，默认情况下也会拍摄一致性组快照。</block>
-  <block id="81dc1fd31e1618567754ef16f452f80d" category="list-text">您必须已安装 ASP.NET Core Runtime 8.0.24（以及所有后续的 8.0.x 修补程序）Hosting Bundle。</block>
-  <block id="6d379457554ecca51ab298da606eeb2d" category="list-text">PowerShell 7.4.13 或更高版本</block>
   <block id="a169558050265df89ca0306e418e6a7b" category="paragraph">您可以选择使用 PowerShell cmdlet 执行多个安装和配置过程。您应该使用 PowerShell 7.4.13 或更高版本。</block>
   <block id="7bc90b8946c9287aa4837e2c5d0f1a81" category="paragraph">如果未选中*跳过预检查*复选框，则会验证主机以验证主机是否符合安装插件的要求。磁盘空间、RAM、PowerShell 版本、.NET 版本、位置（适用于 Windows 插件）和 Java 17（适用于 SnapCenter 6.2.1 及更高版本）或 Java 11（适用于 SnapCenter 6.2 及更早版本）等 Windows 和 Linux 插件都将根据最低要求进行验证。如果未满足最低要求，则会显示相应的错误或警告消息。</block>
-  <block id="abfbfd83f2c483daf4440823a9e0a9ab" category="list-text">适用于 SnapCenter 6.2.1 及更高版本的 Java 17（Oracle Java 或 OpenJDK）或</block>
-  <block id="dfbd857138771ee8449cb85654e62cf2" category="list-text">Java 11 适用于 SnapCenter 6.2 及更早版本</block>
-  <block id="ffd1a97da6d9463bfd834a42505ddd6b" category="list-text">为 SnapCenter 6.2.1 及更高版本安装 Java 17（Oracle Java 或 OpenJDK）或</block>
-  <block id="546926a720f9dc7c00286127d57d2155" category="list-text">Linux 或 Windows 主机上的 Java 11 for SnapCenter 6.2 及更早版本。</block>
-  <block id="5996261d2f1d31f4f804897d9e4eb07f" category="list-text">您必须已为 SnapCenter 6.2.1 及更高版本安装 Java 17（Oracle Java 或 OpenJDK）或</block>
-  <block id="3bb66432d41243ee00b353a799874a9c" category="list-text">主机上的 Java 11 for SnapCenter 6.2 及更早版本。</block>
-  <block id="92908a41204679133faed8314eae374e" category="list-text">Linux 或 AIX 主机上的 SnapCenter 6.2 及更早版本的 Java 11。</block>
-  <block id="9adc1f2bc331d9d94d9a205e48957d36" category="list-text">Windows 主机上用于 SnapCenter 6.2 及更早版本的 Java 11。</block>
-  <block id="51475d2ed2902cef48dd258ccabb797f" category="list-text">Linux 主机上用于 SnapCenter 6.2 及更早版本的 Java 11。</block>
-  <block id="43fd72623499b5234779dd47f414cbbc" category="list-text">如果适用，请安装 Java 17（Oracle Java 或 OpenJDK）用于 SnapCenter 6.2.1 及更高版本或</block>
-  <block id="647b5ed7d2fe5d2447dab38c7968bf25" category="list-text">插件主机上的 Java 11 for SnapCenter 6.2 及更早版本。</block>
-  <block id="285cfe0af3a19e1eb54755170c50209c" category="list-text">Linux、Windows 或 AIX 主机上用于 SnapCenter 6.2 及更早版本的 Java 11。</block>
-  <block id="72ba6005a64f422a3d5be89eb973a40d" category="paragraph">如果要使用 Windows Server 2019 或 Windows Server 2016 作为 SnapCenter Server 主机，则必须为 SnapCenter 6.2.1 及更高版本安装 Java 17（Oracle Java 或 OpenJDK），或为 SnapCenter 6.2 及更早版本安装 Java 11。</block>
-  <block id="053398b8efb795d378bd0be3e1aa5134" category="list-text">适用于 SnapCenter 6.2.1 及更高版本的 Java 17、IBM Java 或</block>
-  <block id="0d7e20101a3e419a465e1b6f8a1ebc37" category="list-text">适用于 SnapCenter 6.2 及更早版本的 Java 11，IBM Java</block>
-  <block id="c842fd3cfc5f62a17cf7f19fd729eaa2" category="list-text">安装 Java 17（用于 SnapCenter 6.2.1 及更高版本）或</block>
-  <block id="ddfb156e468d0aa9a0ffb0fcdba4a8d4" category="list-text">Linux 或 Windows 主机上的 Java 11（适用于 SnapCenter 6.2 及更早版本）。</block>
-  <block id="109ff0460272edc0bd3491d5f2eb73e0" category="list-text">您必须已安装 Java 17（用于 SnapCenter 6.2.1 及更高版本）或</block>
-  <block id="0c494a1e6f3783c5f3e653b10574a52b" category="list-text">主机上的 Java 11（适用于 SnapCenter 6.2 及更早版本）。</block>
-  <block id="33fbc477dfdbff390971c493832a3265" category="list-text">Windows 主机上的 Java 11（适用于 SnapCenter 6.2 及更早版本）。</block>
-  <block id="a7ef3d889d89cbb2d0e4fc54c9de1d70" category="list-text">Linux 主机上的 Java 11（适用于 SnapCenter 6.2 及更早版本）。</block>
-  <block id="a8f721a877a07dc425cb496a5a8b12c0" category="list-text">Linux 或 AIX 主机上的 Java 11（适用于 SnapCenter 6.2 及更早版本）。</block>
   <block id="f046fe622c3b6e85f42746be044fc2ab" category="admonition">请确保仅在 Linux 主机上安装了认证版本的 Java 17（适用于 SnapCenter 6.2.1 及更高版本）或 Java 11（适用于 SnapCenter 6.2 及更低版本）。</block>
-  <block id="ad4079e1181a0e9bb4d9fa57bb01ec8b" category="list-text">适用于 SnapCenter 6.2.1 及更高版本的 Java 17（Oracle 或 OpenJDK）或</block>
   <block id="9ce62cd4575b0c0494165028b8132a2e" category="admonition">请确保仅在 Linux 主机上安装了 SnapCenter 6.2.1 及更高版本的 Java 17 认证版本或 SnapCenter 6.2 及更低版本的 Java 11 认证版本。</block>
-  <block id="94b8a8fb91d667b4a4496a600e8d33db" category="list-text">IBM Java 17 for SnapCenter 6.2.1 及更高版本或</block>
-  <block id="9542d1521504d218851303316af3283e" category="list-text">IBM Java 11 for SnapCenter 6.2 及更早版本</block>
-  <block id="b01cafc658d1fa9656a555819d02f92a" category="list-text">您必须已为 SnapCenter 6.2.1 及更高版本安装 Java 17 或</block>
-  <block id="a7969fc9aa7edecbc676b844a3cebb1d" category="list-text">您必须已安装 PowerShell 7.4.13 或更高版本。</block>
   <block id="5721856931f9d7a5db61bfbfdaa64f25" category="list-text">在 *设置* 页面中，选择 *软件*。</block>
   <block id="78697add9083ce88242f5ce4c68a5ff4" category="list-text">选择 *检查更新* 以查看是否有任何较新版本的插件包可用。</block>
   <block id="0b87bff3a1b090fd638eb30e63a17a17" category="list-text">选择 *Schedule Updates* 以创建计划，指定您希望接收有关可用更新信息的时间间隔：</block>
-  <block id="bcb8accb5335c40025954514ef35481e" category="list-text">安装 ASP.NET Core Runtime 8.0.24（以及所有后续的 8.0.x 修补程序）Hosting Bundle 和 PowerShell 7.4.13 或更高版本。</block>
-  <block id="0d4f9ea16fd7eba541b088d3783fd1a6" category="list-text">确保已在 Windows 插件主机上安装 ASP.NET Core Runtime 8.0.24（以及所有后续的 8.0.x 修补程序）Hosting Bundle 和 PowerShell 7.4.13 或更高版本。</block>
-  <block id="a0eb79b89395199c485c81b2df9a6da3" category="list-text">确保已在 Windows 和 Linux 插件主机上安装适用于 SnapCenter 6.2.1 及更高版本的 Java 17（Oracle Java 或 OpenJDK）或适用于 SnapCenter 6.2 及更早版本的 Java 11。</block>
+  <block id="18d2fed0525b5440aab3c0f7ac71df0c" category="list-text">ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更高版本）</block>
+  <block id="d982414fdbcde05e09995028a55cdd64" category="list-text">PowerShell 7.6.1（或更高版本）</block>
+  <block id="98fc6a920a801cd154e7b52a698b3093" category="list-text">Java 17（Oracle Java、OpenJDK 或 SAP JDK）或 Java 11（适用于 SnapCenter 6.2 或更早版本）</block>
+  <block id="6db68585370b1b0ac48d972178655de8" category="inline-link-macro">SnapCenter 软件发行说明</block>
+  <block id="365920359ba84acf8b962e0936eb9292" category="paragraph">请参阅 <block ref="30dc9da80e935d7fc39e11e3246f988e" category="inline-link-macro-rx"></block> 以了解适用于您特定 SnapCenter 版本的最新合格 ASP.NET Core 和 PowerShell 版本。</block>
+  <block id="0114ad06d728f1834e36fe1a39574ef4" category="list-text">Perl</block>
+  <block id="e72ce8737d929ab1dafd176bd00d8ea3" category="list-text">ASP.NET Core 10.0.7 托管捆绑包（或更高版本）请参阅 <block ref="30dc9da80e935d7fc39e11e3246f988e" category="inline-link-macro-rx"></block>，了解适用于您特定 SnapCenter 版本的 ASP.NET Core 最新合格版本。</block>
+  <block id="7208e87fc976686e16a9d6acc0d2f0f9" category="list-text">HTTP Activation 有关特定 SnapCenter 版本的 ASP.NET Core 最新合格版本，请参阅 <block ref="30dc9da80e935d7fc39e11e3246f988e" category="inline-link-macro-rx"></block>。</block>
+  <block id="ac77b32395f20067bd3295d030d435ba" category="list-text">Java 17（Oracle Java、OpenJDK 或 SAP JDK），适用于 SnapCenter 6.2.1 及更高版本；或 Java 11，适用于 SnapCenter 6.2 及更早版本</block>
+  <block id="1ae530f1ac47f09fc65d66ebf3d3e531" category="list-text">在 Linux 或 Windows 主机上，为 SnapCenter 6.2.1 及更高版本安装 Java 17（Oracle Java、OpenJDK 或 SAP JDK），或为 SnapCenter 6.2 及更早版本安装 Java 11。</block>
+  <block id="19a6ba029f040ca90f8031fb7fd84193" category="list-text">必须在主机上为 SnapCenter 6.2.1 及更高版本安装 Java 17（Oracle Java、OpenJDK 或 SAP JDK），或为 SnapCenter 6.2 及更早版本安装 Java 11。</block>
+  <block id="f89c865e450c622762f6e96de7fb80a1" category="list-text">必须在 Linux 或 AIX 主机上为 SnapCenter 6.2.1 及更高版本安装 Java 17（Oracle Java、OpenJDK 或 SAP JDK），或为 SnapCenter 6.2 及更早版本安装 Java 11。</block>
+  <block id="883abaf1905ae60d84cf8c69db72563e" category="list-text">必须在 Windows 主机上为 SnapCenter 6.2.1 及更高版本安装 Java 17（Oracle Java、OpenJDK 或 SAP JDK），或为 SnapCenter 6.2 及更早版本安装 Java 11。</block>
+  <block id="522ad6bc7bee6ddee0be8e7b0aa2f533" category="list-text">必须在 Linux 主机上为 SnapCenter 6.2.1 及更高版本安装 Java 17（Oracle Java、OpenJDK 或 SAP JDK），或为 SnapCenter 6.2 及更早版本安装 Java 11。</block>
+  <block id="32443c4567cedea78ae9e9235d72aad0" category="list-text">如果适用，请在插件主机上安装适用于 SnapCenter 6.2.1 及更高版本的 Java 17（Oracle Java、OpenJDK 或 SAP JDK）或适用于 SnapCenter 6.2 及更早版本的 Java 11。</block>
+  <block id="ae23138f3db4fce23c5a19bb98d59561" category="list-text">必须在 Linux、Windows 或 AIX 主机上安装 Java 17（Oracle Java、OpenJDK 或 SAP JDK）（适用于 SnapCenter 6.2.1 及更高版本）或 Java 11（适用于 SnapCenter 6.2 及更早版本）。</block>
+  <block id="7ff04a19dcbdd3f7e904cacb4508d72b" category="paragraph">如果要使用 Windows Server 2019 或 Windows Server 2016 作为 SnapCenter 服务器主机，则必须为 SnapCenter 6.2.1 及更高版本安装 Java 17（Oracle Java、OpenJDK 或 SAP JDK），或为 SnapCenter 6.2 及更早版本安装 Java 11。</block>
+  <block id="ee235cb25de9e8cc45c427d353029763" category="list-text">Java 17 for SnapCenter 6.2.1 及更高版本，IBM Java 或 Java 11 for SnapCenter 6.2 及更早版本，IBM Java</block>
+  <block id="51ca6f1167fa08f065ad7e023ccfdb0a" category="list-text">在 Linux 或 Windows 主机上安装 Java 17（适用于 SnapCenter 6.2.1 及更高版本）或 Java 11（适用于 SnapCenter 6.2 及更早版本）。</block>
+  <block id="5bfdae05fbded85a2bfc80c665fd3fcc" category="list-text">您必须在主机上安装 Java 17（用于 SnapCenter 6.2.1 及更高版本）或 Java 11（用于 SnapCenter 6.2 及更早版本）。</block>
+  <block id="8ebd101d75b1819dadd3b77d75be0554" category="list-text">您必须在 Windows 主机上安装 Java 17（用于 SnapCenter 6.2.1 及更高版本）或 Java 11（用于 SnapCenter 6.2 及更早版本）。</block>
+  <block id="831853327be7493192d6136c7344cff7" category="list-text">您必须在 Linux 主机上安装 Java 17（用于 SnapCenter 6.2.1 及更高版本）或 Java 11（用于 SnapCenter 6.2 及更早版本）。</block>
+  <block id="be60762f6855df7237cb91be7368840e" category="list-text">必须在 Linux 或 AIX 主机上安装 Java 17（用于 SnapCenter 6.2.1 及更高版本）或 Java 11（用于 SnapCenter 6.2 及更早版本）。</block>
+  <block id="e25f9b64a5632fe0adb1c31241197ca0" category="list-text">Linux 支持 Oracle、OpenJDK 或 SAP JDK 中的 Java。</block>
+  <block id="9c8a34b59126bf76d9cdae6f643b5f63" category="list-text">IBM Java 17 for SnapCenter 6.2.1 及更高版本或 IBM Java 11 for SnapCenter 6.2 及更早版本</block>
+  <block id="39ba353d702229155256e298616dd0e9" category="list-text">您必须在 Linux 主机上为 SnapCenter 6.2.1 及更高版本安装 Java 17，或为 SnapCenter 6.2 及更早版本安装 Java 11。</block>
+  <block id="f876eb454a143bb9b6ede6eb4f5d0c25" category="list-text">您必须已安装 ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更高版本）。</block>
+  <block id="12eef6603e9d6e7e0f7396e2f1e8f9f1" category="list-text">您必须已安装 PowerShell 7.6.1（或更高版本）。</block>
+  <block id="b019cdc322bc185f2cdc3f59ae2b1ac4" category="paragraph">了解 SnapCenter 6.2、6.2.1 和 6.2.2 中提供的新功能和增强功能。</block>
+  <block id="6993919150e52bd9b34176c264e22513" category="inline-link-macro">SnapCenter 6.2.2 中的新增功能</block>
+  <block id="3043c81c3ea9bb59a962f1a8c25998aa" category="paragraph">要查看新功能和增强功能的完整列表，请参阅 <block ref="b49911080e0d8e9d778dd3850ba77c90" category="inline-link-macro-rx"></block>。</block>
+  <block id="7276a69fb4994eeb60e98f647f8809cc" category="inline-link">SnapCenter Software 6.2.2 发行说明</block>
+  <block id="5c4c3a61d43c17720237d0252bd7964f" category="paragraph">有关已知问题、限制、修复问题以及新命令和更改的命令的详细信息，请参见<block ref="310da251eb499e87cac462ed442bc118" category="inline-link-rx"></block>。您必须使用您的 NetApp 帐户登录或创建帐户才能访问发行说明。</block>
+  <block id="3e7e96fad5e237fb2d5a081c6cb11212" category="cell">6.2.2</block>
+  <block id="ec72aa272d1e0c8676733268fcea8629" category="inline-link-macro">SnapCenter 6.2.2 发行说明</block>
+  <block id="3939a14b7eae2f5a633f8c4b2e990fa8" category="paragraph">SnapCenter 软件的 6.2 版本包括 SnapCenter 服务器和插件的合格版本的已知错误修复和更新。它还包括以下扩展功能。有关更多详细信息，请参阅 <block ref="8325eb4c00d5692ebe130b4b8b28f43c" category="inline-link-macro-rx"></block>。</block>
+  <block id="1d9c92dfdf9a7170a6f57175018cd0b6" category="summary">6.2.2 版本的 SnapCenter 软件没有新功能或增强功能，仅包括 SnapCenter 服务器和插件的已知错误修复和合格版本更新。</block>
+  <block id="f45649ab475309b80142ce8fdc3cfeeb" category="doc">SnapCenter 软件 6.2.2 中的新增功能</block>
+  <block id="132161a0728f2aca84e97d9ad274492b" category="paragraph">6.2.2 版本的 SnapCenter software 没有新增功能或增强项。该版本仅包含已知错误修复以及 SnapCenter Server 和插件的合格版本更新。有关更多详细信息，请参阅 <block ref="8325eb4c00d5692ebe130b4b8b28f43c" category="inline-link-macro-rx"></block>。</block>
+  <block id="cd093f4c82c3df7f4e6ea55c02b1ffda" category="list-text">安装 ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更高版本）和 PowerShell 7.6.1（或更高版本）。</block>
+  <block id="fd0b9239b899bfaafa239db9df2999d8" category="list-text">确保已在 Windows 插件主机上安装 ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更高版本）和 PowerShell 7.6.1（或更高版本）。</block>
+  <block id="66898743f260fbb7a17be9643b2f4490" category="list-text">确保已在 Windows 和 Linux 插件主机上安装适用于 SnapCenter 6.2.1 及更高版本的 Java 17（Oracle Java、OpenJDK 或 SAP JDK）或适用于 SnapCenter 6.2 及更早版本的 Java 11。</block>
 </blocks>

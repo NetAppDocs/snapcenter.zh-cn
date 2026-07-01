@@ -17,8 +17,11 @@ summary: 此插件软件包会在 SnapCenter 升级过程中分发。
 
 .开始之前
 * 如果您是能够访问 Linux 计算机的非 root 用户，则在执行升级操作之前，应使用最新的校验和值更新 /etc/sudoers_ 文件。
-* 确保已在 Windows 插件主机上安装 ASP.NET Core Runtime 8.0.24（以及所有后续的 8.0.x 修补程序）Hosting Bundle 和 PowerShell 7.4.13 或更高版本。
-* 确保已在 Windows 和 Linux 插件主机上安装适用于 SnapCenter 6.2.1 及更高版本的 Java 17（Oracle Java 或 OpenJDK）或适用于 SnapCenter 6.2 及更早版本的 Java 11。
+* 确保已在 Windows 插件主机上安装 ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更高版本）和 PowerShell 7.6.1（或更高版本）。
++
+请参阅 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 软件发行说明"^] 以了解适用于您特定 SnapCenter 版本的最新合格 ASP.NET Core 和 PowerShell 版本。
+
+* 确保已在 Windows 和 Linux 插件主机上安装适用于 SnapCenter 6.2.1 及更高版本的 Java 17（Oracle Java、OpenJDK 或 SAP JDK）或适用于 SnapCenter 6.2 及更早版本的 Java 11。
 * 默认情况下， SnapCenter 会从环境中检测 java_home 。如果要使用固定的 java_home ，并且要升级 Linux 主机上的插件，则应在位于 /var/opt/snapcenter/spl/etc/ 的 _spl.properties_ 文件中手动添加 skip_JAVAHOME_update 参数，并将该值设置为 true 。
 +
 当此插件升级或 SnapCenter 插件加载程序（ SPL ）服务重新启动时， java_home 的值将更新。在升级或重新启动 SPL 之前，如果添加 skip_JAVAHOME_UPDATE 参数并将值设置为 true ，则不会更新 java_home 的值。

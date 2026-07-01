@@ -14,10 +14,12 @@ summary: 如果无法从 SnapCenter 图形用户界面远程安装适用于 Micr
 如果无法从 SnapCenter 图形用户界面远程安装适用于 Microsoft Windows 的 SnapCenter 插件，则可以在 Windows 主机上本地安装此插件。您可以通过 Windows 命令行在无人参与的情况下以静默模式运行适用于 Microsoft Windows 的 SnapCenter 插件安装程序。
 
 .开始之前
-* 您必须已安装 ASP.NET Core Runtime 8.0.24（以及所有后续的 8.0.x 修补程序）Hosting Bundle。
-* 您必须已安装 PowerShell 7.4.13 或更高版本。
+* 您必须已安装 ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更高版本）。
+* 您必须已安装 PowerShell 7.6.1（或更高版本）。
 * 您必须是主机上的本地管理员。
 
+
+请参阅 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 软件发行说明"^] 以了解适用于您特定 SnapCenter 版本的最新合格 ASP.NET Core 和 PowerShell 版本。
 
 .步骤
 . 从安装位置下载适用于 Microsoft Windows 的 SnapCenter 插件。
