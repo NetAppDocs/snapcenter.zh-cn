@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: consistency group, enable, create, resource group level 
 summary: 资源组是一个容器、您可以在其中添加要备份和保护的资源。通过资源组、您可以同时备份与给定应用程序关联的所有数据。 
 ---
-= 在资源组级别启用一致性组快照
+= 在资源组级别启用 SnapCenter 一致性组快照
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

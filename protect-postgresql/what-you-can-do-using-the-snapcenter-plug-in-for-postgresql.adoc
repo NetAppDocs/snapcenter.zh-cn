@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: 在您的环境中安装适用于PostgreSQL的插件时、您可以使用SnapCenter备份、还原和克隆PostgreSQL及其资源。您还可以执行支持这些操作的任务。 
 ---
-= 使用适用于PostgreSQL的SnapCenter插件可以执行什么操作
+= 适用于 PostgreSQL 的 SnapCenter 插件功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

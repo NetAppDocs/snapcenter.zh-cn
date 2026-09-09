@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, overview, add, modify, delete, Oracle database 
 summary: 您应手动添加应用程序卷。 
 ---
-= 添加应用程序卷
+= 在 SnapCenter 中添加 Oracle 数据库的应用程序卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -42,6 +42,7 @@ NOTE: 应用程序卷仅支持直接NFS和直接iSCSI连接。
 
 
 
+[[modify-application-volume]]
 == 修改应用程序卷
 
 如果未创建备份，则可以修改添加应用程序卷时指定的所有值。如果创建备份，则只能修改存储系统详细信息。
@@ -56,6 +57,7 @@ NOTE: 应用程序卷仅支持直接NFS和直接iSCSI连接。
 
 
 
+[[delete-application-volume]]
 == 删除应用程序卷
 
 删除应用程序卷时，如果存在与应用程序卷关联的任何备份，则应用程序卷将置于维护模式，并且不会创建新备份，也不会保留先前的备份。如果没有关联的备份，则会删除所有元数据。

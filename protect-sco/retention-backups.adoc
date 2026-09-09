@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: 备份保留选项。 
 ---
-= 备份保留选项
+= SnapCenter 中的备份保留选项
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

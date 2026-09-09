@@ -15,6 +15,7 @@ summary: 您可以使用REST API、PowerShell和sccli接口配置MFA。
 
 
 
+[[snapcenter-mfa-cli-authentication]]
 == SnapCenter MFA命令行界面身份验证
 
 在PowerShell和sccli中、现有cmdlet (Open-SmConnection)扩展为另外一个名为"AccessToken "的字段、以使用承载令牌对用户进行身份验证。
@@ -25,12 +26,14 @@ summary: 您可以使用REST API、PowerShell和sccli接口配置MFA。
 
 
 
+[[snapcenter-mfa-rest-api-authentication]]
 == SnapCenter MFA REST API身份验证
 
 在REST <access token>客户端(如Postman或swagger)中使用格式为_Authorization=Bearer API_的承载令牌、并在标题中提及用户RoleName、以从SnapCenter获得成功响应。
 
 
 
+[[mfa-rest-api-workflow]]
 == MFA REST API工作流
 
 如果为MFA配置了AD FS、则应使用访问(承载)令牌进行身份验证、以便通过任何REST API访问SnapCenter应用程序。
@@ -80,6 +83,7 @@ summary: 您可以使用REST API、PowerShell和sccli接口配置MFA。
 
 
 
+[[enable-or-disable-snapcenter-mfa-functionality-for-rest-api-cli-and-gui]]
 == 为REST API、命令行界面和图形用户界面启用或禁用SnapCenter MFA功能
 
 *图形用户界面*

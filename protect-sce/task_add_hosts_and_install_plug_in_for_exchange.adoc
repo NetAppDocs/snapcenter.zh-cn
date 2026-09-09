@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server, NET TCP 
 summary: 您可以使用 SnapCenterAdd Host 页面添加 Windows 主机。适用于 Exchange 的插件会自动安装在指定主机上。这是安装插件的建议方法。您可以为单个主机或集群添加主机并安装插件。 
 ---
-= 添加主机并安装适用于 Exchange 的插件
+= 添加主机并安装适用于 Microsoft Exchange Server 的 SnapCenter 插件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -194,6 +194,7 @@ NOTE: 在 HA 设置中，如果要更新 web.config 文件，则必须同时更�
 
 
 
+[[configure-custom-port-for-net-tcp-communication]]
 == 为NET TCP通信配置自定义端口
 
 默认情况下、从SnapCenter 6.0版开始、适用于Windows的SnapCenter插件使用端口909进行NET TCP通信。如果端口909正在使用中、您可以为NET TCP通信配置另一个端口。

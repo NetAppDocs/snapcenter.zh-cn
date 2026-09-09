@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: azure netapp files, ANF, back up, restore, clone, ANF backup, Azure Blob storage 
 summary: 您可以备份、还原和克隆Azure NetApp Files上运行的应用程序。 
 ---
-= 保护在Azure NetApp Files上运行的应用程序
+= 了解使用 SnapCenter 进行的 Azure NetApp Files 应用保护
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ Azure NetApp Files是一款高级存储解决方案、长期备份保留成本�
 
 
 
+[[limitations]]
 == 限制
 
 * 不支持FAS、ASA或AFF ONTAP以及适用于NetApp ONTAP存储系统的Amazon FSx的对象存储功能。

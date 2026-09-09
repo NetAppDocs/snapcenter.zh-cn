@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, resource group, back up, database 
 summary: 您可以备份仅包含应用程序卷的资源组，也可以同时包含应用程序卷和数据库。 
 ---
-= 备份应用程序卷资源组
+= 备份 SnapCenter 中的应用程序卷资源组
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: F5, netwoek load balancer, NLB, high availability, elastic load balancing, ELB, Azure load balancing, Amazon Web Services, AWS 
 summary: 使用F5、网络负载平衡或Amazon Web Services在SnapCenter中配置高可用性 
 ---
-= 配置SnapCenter服务器以实现高可用性
+= 配置 SnapCenter 服务器以实现高可用性
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

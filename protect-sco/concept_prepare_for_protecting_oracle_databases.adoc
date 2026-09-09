@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle, preparation for protection, prerequisites 
 summary: 在执行备份，克隆或还原操作等任何数据保护操作之前，您必须定义策略并设置环境。您还可以设置 SnapCenter 服务器以使用 SnapMirror 和 SnapVault 技术。 
 ---
-= 准备保护 Oracle 数据库
+= 使用 SnapCenter 保护 Oracle 数据库的先决条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

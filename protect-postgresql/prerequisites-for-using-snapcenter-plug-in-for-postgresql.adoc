@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Credentials,SnapCenter Plug-in for postgresql 
 summary: 在使用适用于PostgreSQL的SnapCenter插件之前、SnapCenter管理员必须安装和配置SnapCenter服务器并执行必备任务。 
 ---
-= 使用适用于PostgreSQL的SnapCenter插件的前提条件
+= 使用 SnapCenter Plug-in for PostgreSQL 的先决条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, Oracle, backup policies 
 summary: 为要备份的资源或资源组创建备份策略。 
 ---
-= 为 Oracle 数据库创建备份策略
+= 在 SnapCenter 中为 Oracle 数据库创建备份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

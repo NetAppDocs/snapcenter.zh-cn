@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: topology, unix file systems, 
 summary: 在准备备份、还原或克隆资源时、您可能会发现以图形方式显示主存储和二级存储上的所有备份、还原的文件系统以及克隆会很有用。 
 ---
-= 在Topology页面中查看受保护的Unix文件系统
+= 在 SnapCenter 拓扑页面中查看受保护的 UNIX 文件系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

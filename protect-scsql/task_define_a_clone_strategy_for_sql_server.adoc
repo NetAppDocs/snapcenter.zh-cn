@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone strategy 
 summary: 通过定义克隆策略，您可以成功克隆数据库。 
 ---
-= 为 SQL Server 定义克隆策略
+= SQL Server 在 SnapCenter 中的克隆策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ summary: 通过定义克隆策略，您可以成功克隆数据库。
 
 
 
+[[limitations-of-clone-operations]]
 == 克隆操作的限制
 
 在克隆数据库之前，您应了解克隆操作的限制。
@@ -31,6 +32,7 @@ summary: 通过定义克隆策略，您可以成功克隆数据库。
 
 
 
+[[types-of-clone-operations]]
 == 克隆操作的类型
 
 您可以使用 SnapCenter 克隆 SQL Server 数据库备份或生产数据库。

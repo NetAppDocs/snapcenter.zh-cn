@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 适用于Windows的插件可在存储系统上与NetApp Snapshot技术集成。要使用适用于 Windows 的插件，请使用 SnapCenter 界面。 
 ---
-= 适用于 Windows 的 SnapCenter 插件功能
+= SnapCenter Plug-in for Microsoft Windows 功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -17,6 +17,7 @@ summary: SnapCenter 如何发现Oracle数据库。
 
 
 
+[[for-oracle-versions-11g-to-12cr1]]
 == 适用于 Oracle 版本 11_g_ 到 12_c_R1
 
 .RAC数据库
@@ -45,6 +46,7 @@ RAC One Node数据库仅会根据/etc/oratab条目进行发现。数据库应处
 
 
 
+[[for-oracle-versions-12cr2-to-18c-19c-or-21c]]
 == 适用于Oracle 12cR2至18c、19c或21c版本
 
 .RAC数据库

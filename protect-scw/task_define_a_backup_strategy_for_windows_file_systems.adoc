@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup strategy 
 summary: 在创建备份之前定义备份策略可为您提供成功还原或克隆文件系统所需的备份。您的服务级别协议（ SLA ），恢复时间目标（ RTO ）和恢复点目标（ RPO ）在很大程度上决定了您的备份策略。 
 ---
-= 为 Windows 文件系统定义备份策略
+= Windows 文件系统在 SnapCenter 中的备份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ SLA 定义了预期的服务级别，并解决了许多与服务相关的问题�
 
 
 
+[[backup-schedules-for-windows-file-systems]]
 == Windows 文件系统的备份计划
 
 备份频率在策略中指定；备份计划在资源组配置中指定。在确定备份频率或计划时，最关键的因素是资源的更改率以及数据的重要性。您可以每小时备份一次使用率较高的资源，而每天备份一次很少使用的资源。其他因素包括资源对组织的重要性，服务级别协议（ Service Level Agreement ， SLA ）和恢复点目标（ Recovery Point Objective ， RPO ）。
@@ -39,12 +40,14 @@ SLA 定义了预期的服务级别，并解决了许多与服务相关的问题�
 
 
 
+[[number-of-backups-needed-for-windows-file-systems]]
 == Windows 文件系统所需的备份数
 
 决定所需备份数量的因素包括 Windows 文件系统的大小，使用的卷数，文件系统的更改率以及您的服务级别协议（ Service Level Agreement ， SLA ）。
 
 
 
+[[backup-naming-convention-for-windows-file-systems]]
 == Windows 文件系统的备份命名约定
 
 Windows文件系统备份使用默认的Snapshot命名约定。默认备份命名约定会为Snapshot名称添加一个时间戳、以帮助您确定副本的创建时间。
@@ -68,6 +71,7 @@ dts1_mach1x88_03-12-2015_23.17.26
 
 
 
+[[backup-retention-options]]
 == 备份保留选项
 
 您可以选择保留备份副本的天数，也可以指定要保留的备份副本数， ONTAP 最多可保留 255 个副本。例如，您的组织可能要求您保留 10 天的备份副本或 130 个备份副本。

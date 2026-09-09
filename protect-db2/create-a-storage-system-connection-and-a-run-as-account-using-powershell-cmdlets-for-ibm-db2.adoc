@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: '在使用PowerShell cmdlet备份、还原或克隆IBM DB2数据库之前、您必须先创建Storage Virtual Machine (SVM)连接和凭据。' 
 ---
-= 使用适用于IBM DB2的PowerShell cmdlet创建存储系统连接和凭据
+= 使用 SnapCenter cmdlet 为 IBM Db2 创建存储连接和凭据
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

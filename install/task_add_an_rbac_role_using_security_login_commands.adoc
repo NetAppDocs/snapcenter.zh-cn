@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: RBAC roles, add, NetApp ONTAP RBAC role, storage system 
 summary: 如果存储系统运行的是集群模式NetApp ONTAP、则可以使用security login命令添加NetApp ONTAP RBAC角色。 
 ---
-= 使用security login命令添加NetApp ONTAP RBAC角色
+= 使用安全登录命令为 SnapCenter 添加 ONTAP RBAC 角色
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

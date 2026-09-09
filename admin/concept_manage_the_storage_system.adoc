@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage storage system 
 summary: 添加存储系统后，您可以修改存储系统配置和连接，或者删除存储系统。 
 ---
-= 管理存储系统
+= 在 SnapCenter 中管理存储系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 添加存储系统后，您可以修改存储系统配置和连接，�
 
 
 
+[[modify-storage-system-configuration]]
 == 修改存储系统配置
 
 如果要更改用户名，密码，平台，端口，协议， SnapCenter 超时期限，首选 IP 地址或消息传送选项。
@@ -72,6 +73,7 @@ ONTAP 集群
 
 
 
+[[delete-the-storage-system]]
 == 删除存储系统
 
 您可以使用 SnapCenter 删除任何未使用的存储系统。
@@ -102,6 +104,7 @@ NOTE: 如果使用 ONTAP 图形用户界面从 ONTAP 集群中删除了 SVM ，�
 
 
 
+[[rest-api-support]]
 == REST API 支持
 
 默认情况下，所有 ASA、AFF 或 FAS 系统与 ONTAP 的连接都将通过 ZAPI 进行。您可以针对特定 ONTAP 版本启用 REST API。

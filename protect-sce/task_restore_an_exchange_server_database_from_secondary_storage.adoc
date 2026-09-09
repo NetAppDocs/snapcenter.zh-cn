@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 您可以从二级存储（镜像或存储）还原备份的 Exchange Server 数据库。 
 ---
-= 从二级存储还原 Exchange Server 数据库
+= 从 SnapCenter 的二级存储还原 Exchange 数据库
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

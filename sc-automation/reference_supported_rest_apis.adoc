@@ -15,12 +15,14 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[auth]]
 == 身份验证
 
 您可以使用此API登录到SnapCenter 服务器。此 API 将返回一个用户授权令牌，用于对后续请求进行身份验证。
 
 
 
+[[domains]]
 == 域
 
 您可以使用API执行不同的操作。
@@ -33,6 +35,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[jobs]]
 == 作业
 
 您可以使用API执行不同的操作。
@@ -44,6 +47,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[settings]]
 == 设置
 
 您可以使用API执行不同的操作。
@@ -59,6 +63,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[hosts]]
 == 主机
 
 您可以使用API执行不同的操作。
@@ -89,6 +94,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[resources]]
 == Resources
 
 您可以使用API执行不同的操作。
@@ -143,6 +149,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[backups]]
 == 备份
 
 您可以使用API执行不同的操作。
@@ -160,6 +167,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[clones]]
 == 克隆
 
 您可以使用API执行不同的操作。
@@ -176,6 +184,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[clone-split]]
 == 克隆拆分
 
 您可以使用API执行不同的操作。
@@ -187,6 +196,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[resource-groups]]
 == 资源组
 
 您可以使用API执行不同的操作。
@@ -207,6 +217,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[policies]]
 == 策略
 
 您可以使用API执行不同的操作。
@@ -223,6 +234,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[storage]]
 == 存储
 
 您可以使用API执行不同的操作。
@@ -239,6 +251,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[share]]
 == 共享
 
 您可以使用API执行不同的操作。
@@ -251,6 +264,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[plugins]]
 == 插件
 
 您可以使用API执行不同的操作。
@@ -293,6 +307,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[reports]]
 == 报告
 
 您可以使用API执行不同的操作。
@@ -304,6 +319,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[alerts]]
 == 警报
 
 您可以使用API执行不同的操作。
@@ -315,6 +331,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[rbac]]
 == RBAC
 
 您可以使用API执行不同的操作。
@@ -333,6 +350,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[configuration]]
 == Configuration
 
 您可以使用API执行不同的操作。
@@ -343,6 +361,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[certificatesettings]]
 == 证书设置
 
 您可以使用API执行不同的操作。
@@ -353,6 +372,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[repository]]
 == 存储库
 
 您可以使用API执行不同的操作。
@@ -366,6 +386,7 @@ summary: 通过 SnapCenter REST API 提供的资源按类别进行组织，如 S
 
 
 
+[[version]]
 == version
 
 您可以使用此API查看SnapCenter 版本。

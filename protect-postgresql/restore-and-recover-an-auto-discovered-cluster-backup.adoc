@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: 您可以使用 SnapCenter 从一个或多个备份还原和恢复数据。 
 ---
-= 还原和恢复自动发现的集群备份
+= 使用适用于 PostgreSQL 的 SnapCenter 插件还原和恢复自动发现的集群备份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

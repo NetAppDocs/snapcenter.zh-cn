@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: '资源是Linux主机上由SnapCenter管理的MySQL实例。安装适用于MySQL的SnapCenter插件插件后、系统会自动发现该Linux主机上的MySQL数据库、并将其显示在"Resues"页面中。' 
 ---
-= 自动发现 Linux 主机上的资源
+= 在 Linux 主机上自动发现 MySQL 资源
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

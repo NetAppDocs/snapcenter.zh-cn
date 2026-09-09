@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server Database, clone, database, backups 
 summary: 您可以使用 SnapCenter 克隆备份。 
 ---
-= 克隆SQL Server数据库备份
+= 使用 SnapCenter 克隆 SQL Server 数据库备份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -50,6 +50,7 @@ SMB配置不支持目标实例的SQL身份验证。应在SnapCenter中为目标�
 
 
 
+[[perform-clone-lifecycle]]
 == 执行克隆生命周期
 
 使用 SnapCenter ，您可以从资源组或数据库创建克隆。您可以执行按需克隆，也可以计划资源组或数据库的重复克隆操作。如果定期克隆备份，则可以使用克隆开发应用程序，填充数据或恢复数据。

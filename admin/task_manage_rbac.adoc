@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: modify RBAC, role, users, groups 
 summary: 使用 SnapCenter 可以修改角色，用户和组。 
 ---
-= 管理 RBAC
+= 在 SnapCenter 中管理 RBAC
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 使用 SnapCenter 可以修改角色，用户和组。
 
 
 
+[[modify-a-role]]
 == 修改角色
 
 您可以修改 SnapCenter 角色以删除用户或组并更改与该角色关联的权限。如果要更改或删除整个角色使用的权限，则修改角色尤其有用。
@@ -44,6 +45,7 @@ NOTE: 启用此选项后，如果用户与创建对象或资源的用户具有�
 
 
 
+[[modify-users-and-groups]]
 == 修改用户和组
 
 您可以修改 SnapCenter 用户或组以更改其角色和资产。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Monitor jobs, schedules, events, logs 
 summary: '您可以从 " 监控 " 页面监控作业进度，获取有关已计划作业的信息以及查看事件和日志。' 
 ---
-= 监控作业，计划，事件和日志
+= 监控 SnapCenter 作业、计划、事件和日志
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: '您可以从 " 监控 " 页面监控作业进度，获取有关已计�
 
 
 
+[[monitor-jobs]]
 == 监控作业
 
 您可以查看有关 SnapCenter 备份，克隆，还原和验证作业的信息。您可以根据开始和结束日期，作业类型，资源组，策略或 SnapCenter 插件筛选此视图。您还可以获取指定作业的其他详细信息和日志文件。
@@ -33,6 +34,7 @@ NOTE: 您只能监控已创建且与您相关的作业，除非您获得 SnapCen
 
 
 
+[[manage-scheduled-backup-jobs]]
 === 管理计划的备份作业
 
 从6.0.1 6.0.1版开始，引入了一个新参数*JobConcurrencyThreshold"，用于为可在任意给定时间运行的计划作业数设置阈值。这样、您可以根据系统硬件配置控制要运行的备份数量。
@@ -50,6 +52,7 @@ NOTE: 如果启用*JobConcurrencyThreshold"来管理并发作业，SnapCenter将
 
 
 
+[[manage-stale-jobs]]
 === 管理陈旧作业
 
 陈旧作业是由于SnapCenter中断或作业更新不正确而创建的。从6.0.1 6.0.1版开始、我们引入了一个预定义的计划、用于清理这些滞留72小时以上的陈旧作业。您可以通过编辑可配置的参数*CleanUpStaleJobsIntervalHours*来更改计划频率。
@@ -64,6 +67,7 @@ NOTE: 如果启用*JobConcurrencyThreshold"来管理并发作业，SnapCenter将
 
 
 
+[[monitor-schedules]]
 == 监控计划
 
 您可能需要查看当前计划，以确定操作何时启动，上次运行时间以及下次运行时间。您还可以确定运行操作的主机以及操作的资源组和策略信息。
@@ -78,6 +82,7 @@ NOTE: 如果启用*JobConcurrencyThreshold"来管理并发作业，SnapCenter将
 
 
 
+[[monitor-events]]
 == 监控事件
 
 您可以查看系统中的 SnapCenter 事件列表，例如用户创建资源组时或系统启动活动时，例如创建计划的备份。您可能需要查看事件以确定当前是否正在执行备份或还原操作等操作。
@@ -96,6 +101,7 @@ NOTE: 如果启用*JobConcurrencyThreshold"来管理并发作业，SnapCenter将
 
 
 
+[[monitor-logs]]
 == 监控日志
 
 您可以查看和下载 SnapCenter 服务器日志， SnapCenter 主机代理日志和插件日志。您可能希望查看日志以帮助进行故障排除。
@@ -146,6 +152,7 @@ NOTE: 要在故障转移作业完成后访问运行状况或配置信息，请�
 
 
 
+[[remove-jobs-and-logs-from-snapcenter]]
 == 从 SnapCenter 中删除作业和日志
 
 您可以从 SnapCenter 中删除备份，还原，克隆和验证作业和日志。SnapCenter 会无限期存储成功和失败的作业日志，除非您将其删除。您可能需要删除它们以补充存储。

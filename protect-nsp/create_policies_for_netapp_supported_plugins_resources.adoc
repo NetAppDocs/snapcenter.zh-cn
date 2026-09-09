@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, NetApp supported plug-in 
 summary: 在使用SnapCenter备份NetApp支持的插件特定资源之前、您必须为要备份的资源或资源组创建备份策略。 
 ---
-= 为NetApp支持的插件资源创建策略
+= 为 NetApp 支持的插件资源创建 SnapCenter 策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

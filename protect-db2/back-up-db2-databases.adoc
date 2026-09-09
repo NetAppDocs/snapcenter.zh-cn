@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 备份数据库包括与 SnapCenter 服务器建立连接，添加资源，添加策略，创建备份资源组和备份。 
 ---
-= 备份DB2数据库
+= 使用 SnapCenter 备份 IBM Db2 数据库
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

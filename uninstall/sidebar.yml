@@ -4,19 +4,19 @@ title: 卸载 SnapCenter 服务器和插件
 entries:
 - title: 卸载 SnapCenter 插件软件包
   entries:
-  - title: 删除主机的前提条件
+  - title: 从 SnapCenter 中删除主机的前提条件
     url: "/uninstall/reference_prerequisites_for_removing_a_host.html"
-  - title: 删除主机
+  - title: 从 SnapCenter 中删除主机
     url: "/uninstall/task_remove_a_host.html"
   - title: 使用 SnapCenter 图形用户界面卸载插件
     url: "/uninstall/task_uninstall_plug_ins_from_a_host_using_the_snapcenter_gui.html"
-  - title: 使用 PowerShell cmdlet 卸载 Windows 插件
+  - title: 使用 PowerShell 卸载 SnapCenter Windows 插件
     url: "/uninstall/task_uninstalling_windows_plug_ins_using_the_command_line_interface_on_the_snapcenter_server_host.html"
-  - title: 在主机上本地卸载插件
+  - title: 在主机上本地卸载 SnapCenter 插件
     url: "/uninstall/task_uninstall_plug_ins_locally_on_a_host.html"
-  - title: 使用命令行界面卸载适用于 Linux 或 AIX 的插件软件包
+  - title: 使用 CLI 卸载适用于 Linux 或 AIX 的 SnapCenter Plug-ins 软件包
     url: "/uninstall/task_uninstall_snapcenter_plug_ins_package_for_linux_or_aix_using_command_line_interface.html"
-- title: 在Windows主机上卸载SnapCenter服务器
+- title: 在 Windows 主机上卸载 SnapCenter 服务器
   url: "/uninstall/task_uninstalling_the_snapcenter_server.html"
-- title: 卸载Linux主机上的SnapCenter服务器
+- title: 在 Linux 主机上卸载 SnapCenter 服务器
   url: "/uninstall/uninstall_snapcenter_server_linux.html"

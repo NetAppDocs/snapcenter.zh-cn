@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mfa, authentication, multifactor authentication 
 summary: 您可以使用REST API、PowerShell和sccli界面管理MFA。 
 ---
-= 使用REST API、PowerShell和sccli管理多因素身份验证(MFA)
+= 在 SnapCenter 中使用 REST API、PowerShell 和 SCCLI 管理 MFA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 您可以使用REST API、PowerShell和sccli界面管理MFA。
 
 
 
+[[setup-ad-fs-as-oauthoidc]]
 == 将AD FS设置为OAuth/OIDC
 
 *使用Windows GUI向导配置AD FS*
@@ -95,6 +96,7 @@ summary: 您可以使用REST API、PowerShell和sccli界面管理MFA。
 
 
 
+[[create-application-group-using-powershell-commands]]
 == 使用PowerShell命令创建应用程序组
 
 您可以使用PowerShell命令创建应用程序组和Web API、并添加范围和声明。这些命令以自动脚本格式提供。有关详细信息、请参见<link to KB article>。
@@ -174,6 +176,7 @@ summary: 您可以使用REST API、PowerShell和sccli界面管理MFA。
 
 
 
+[[update-access-token-expiry-time]]
 == 更新访问令牌到期时间
 
 您可以使用PowerShell命令更新访问令牌到期时间。
@@ -193,6 +196,7 @@ summary: 您可以使用REST API、PowerShell和sccli界面管理MFA。
 
 
 
+[[get-the-bearer-token-from-ad-fs]]
 == 从AD FS获取承载令牌
 
 您应在任何REST客户端(如Postman)中填写以下参数、并提示您填写用户凭据。此外、您还应输入第二因素身份验证(您拥有的和您所拥有的)以获取承载令牌。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backups 
 summary: '您可以使用Remove-SmBackup cmdlet清理无Snapshot的二级备份的备份计数。如果"管理副本"拓扑中显示的总Snapshot与二级存储Snapshot保留设置不匹配、您可能需要使用此cmdlet。' 
 ---
-= 使用 PowerShell cmdlet 清理二级备份计数
+= 使用 SnapCenter PowerShell cmdlet 清理辅助备份计数
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

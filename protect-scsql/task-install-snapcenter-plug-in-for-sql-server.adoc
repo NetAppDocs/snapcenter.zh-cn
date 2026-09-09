@@ -15,6 +15,7 @@ summary: 提供有关安装适用于Microsoft SQL Server的SnapCenter 插件的�
 
 
 
+[[step-1-set-up-run-as-credentials-to-install-the-plug-in-for-microsoft-sql-server]]
 == 第1步：设置运行身份凭据以安装适用于Microsoft SQL Server的插件
 
 . 在左窗格中，单击 * 设置 > 凭据 > 新建 * 。
@@ -29,6 +30,7 @@ summary: 提供有关安装适用于Microsoft SQL Server的SnapCenter 插件的�
 
 
 
+[[step-2-add-a-host-and-install-the-plug-in-for-microsoft-sql-server]]
 == 第2步：添加主机并安装适用于Microsoft SQL Server的插件
 
 . 在 SnapCenter 图形用户界面左窗格中，单击 * 主机 > 受管主机 > 添加 * 。

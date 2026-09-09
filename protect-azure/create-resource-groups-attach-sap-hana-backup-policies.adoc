@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups, attach policies, snapcenter, SAP HANA, backup polices, schedule 
 summary: 资源组是指必须向其添加要备份和保护的资源的容器。 
 ---
-= 创建资源组并附加SAP HANA备份策略
+= 创建 SnapCenter 资源组并附加 SAP HANA 备份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

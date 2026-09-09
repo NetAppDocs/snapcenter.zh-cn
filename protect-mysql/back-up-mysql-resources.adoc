@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: 您可以为资源（数据库）或资源组创建备份。备份工作流包括规划，确定要备份的数据库，管理备份策略，创建资源组和附加策略，创建备份以及监控操作。 
 ---
-= 备份MySQL资源
+= MySQL 备份工作流与 SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

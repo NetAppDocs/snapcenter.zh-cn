@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: import, SnapManager for Oracle, SnapManager for SAP 
 summary: 通过将数据从 SnapManager for Oracle 和 SnapManager for SAP 导入到 SnapCenter ，您可以继续使用先前版本中的数据。 
 ---
-= 将数据从 SnapManager for Oracle 和 SnapManager for SAP 导入到 SnapCenter
+= SnapCenter 如何从适用于 Oracle 和 SAP 的 SnapManager 导入数据
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -31,6 +31,7 @@ SnapCenter 不支持在 7- 模式下运行的 Data ONTAP 。您可以使用 7- �
 
 
 
+[[configurations-supported-for-importing-data]]
 == 支持导入数据的配置
 
 在将数据从适用于 Oracle 的 SnapManager 3.4.x 和适用于 SAP 的 SnapManager 3.4.x 导入到 SnapCenter 之前，您应了解适用于 Oracle 数据库的 SnapCenter 插件支持的配置。
@@ -39,6 +40,7 @@ SnapCenter Oracle 数据库插件支持的配置列于此处。 https://imt.neta
 
 
 
+[[what-gets-imported-to-snapcenter]]
 == 导入到 SnapCenter 中的内容
 
 您可以导入使用配置文件执行的配置文件，计划和操作。
@@ -195,6 +197,7 @@ SnapCenter 不支持根据 SCN ，日期，周和月进行修剪。
 |===
 
 
+[[what-does-not-get-imported-to-snapcenter]]
 == 不会导入到 SnapCenter 中的内容
 
 导入工具不会将所有内容导入到 SnapCenter 中。
@@ -216,6 +219,7 @@ SnapCenter 不支持根据 SCN ，日期，周和月进行修剪。
 
 
 
+[[prepare-to-import-data]]
 == 准备导入数据
 
 在将数据导入到 SnapCenter 之前，您必须执行某些任务才能成功运行导入操作。
@@ -268,6 +272,7 @@ NOTE: 您必须对主机上的每个配置文件运行 smsap credential set 命�
 
 
 
+[[import-data]]
 == 导入数据
 
 您可以从数据库主机运行导入工具来导入数据。

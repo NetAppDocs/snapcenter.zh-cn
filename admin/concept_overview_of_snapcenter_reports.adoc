@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter reports 
 summary: SnapCenter 提供了多种报告选项，可用于监控和管理系统运行状况以及操作成功情况。 
 ---
-= SnapCenter 报告功能概述
+= 了解 SnapCenter 报告功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -55,6 +55,7 @@ SnapCenter 提供了多种报告选项，可用于监控和管理系统运行状
 |===
 
 
+[[access-reports]]
 == 访问报告
 
 您可以使用 SnapCenter 信息板快速了解系统的运行状况。您可以从信息板深入了解更多详细信息。或者，您也可以直接访问详细报告。
@@ -67,6 +68,7 @@ SnapCenter 提供了多种报告选项，可用于监控和管理系统运行状
 
 
 
+[[filter-your-report]]
 == 筛选报告
 
 您可能需要根据一系列参数筛选报告数据，具体取决于所需信息的详细程度和时间范围。
@@ -91,6 +93,7 @@ SnapCenter 提供了多种报告选项，可用于监控和管理系统运行状
 
 
 
+[[export-or-print-reports]]
 == 导出或打印报告
 
 通过导出 SnapCenter 报告，您可以使用各种备选格式查看报告。您也可以打印报告。
@@ -110,6 +113,7 @@ SnapCenter 提供了多种报告选项，可用于监控和管理系统运行状
 
 
 
+[[set-the-smtp-server-for-email-notifications]]
 == 为电子邮件通知设置 SMTP 服务器
 
 您可以指定用于向自己或他人发送数据保护作业报告的 SMTP 服务器。您也可以发送测试电子邮件来验证配置。这些设置将全局应用于您为其配置电子邮件通知的任何 SnapCenter 作业。
@@ -126,6 +130,7 @@ SnapCenter 提供了多种报告选项，可用于监控和管理系统运行状
 
 
 
+[[configure-the-option-to-email-reports]]
 == 配置用于通过电子邮件发送报告的选项
 
 如果您希望定期向自己或他人发送 SnapCenter 数据保护作业更新，以便监控这些更新的状态，则可以配置在创建资源组时通过电子邮件发送 SnapCenter 报告的选项。

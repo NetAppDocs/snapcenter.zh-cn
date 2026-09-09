@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins 
 summary: 您可以使用NetApp支持的插件执行数据保护操作。 
 ---
-= 您可以使用NetApp支持的插件执行哪些操作
+= 了解 NetApp 在 SnapCenter 中支持的插件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

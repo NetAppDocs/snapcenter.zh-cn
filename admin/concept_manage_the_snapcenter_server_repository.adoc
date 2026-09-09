@@ -15,6 +15,7 @@ SnapCenter 服务器存储库有时称为 NSM 数据库。有关所有可用 cmd
 
 
 
+[[prerequisites-for-protecting-the-snapcenter-repository]]
 == 保护 SnapCenter 存储库的前提条件
 
 您的环境应满足保护 SnapCenter 存储库的特定前提条件。
@@ -38,6 +39,7 @@ SnapCenter 存储库主机上应至少存在一个 NetApp 存储磁盘。如果 
 
 
 
+[[back-up-the-snapcenter-repository]]
 == 备份 SnapCenter 存储库
 
 备份 SnapCenter Server 存储库有助于防止数据丢失。您可以通过运行  `Protect-SmRepository` cmdlet 来备份存储库。
@@ -64,6 +66,7 @@ SnapCenter 存储库主机上应至少存在一个 NetApp 存储磁盘。如果 
 
 
 
+[[view-backups-of-the-snapcenter-repository]]
 == 查看 SnapCenter 存储库的备份
 
 您可以通过运行  `Get-SmRepositoryBackups` cmdlet 来显示 SnapCenter Server 数据库存储库备份的列表。有关详细信息，请参见  https://docs.netapp.com/us-en/snapcenter-cmdlets/Get-SmRepositoryBackups.html["SnapCenter Software Cmdlet 参考指南 - Get-SmRepositoryBackups"^]。
@@ -78,6 +81,7 @@ SnapCenter 存储库主机上应至少存在一个 NetApp 存储磁盘。如果 
 
 
 
+[[restore-the-snapcenter-database-repository]]
 == 还原 SnapCenter 数据库存储库
 
 您可以通过运行  `Restore-SmRepositoryBackup` cmdlet 来还原 SnapCenter 存储库。
@@ -111,6 +115,7 @@ NOTE: 在执行还原操作后检索存储库备份时，不会列出用于执�
 
 
 
+[[migrate-the-snapcenter-repository]]
 == 迁移 SnapCenter 存储库
 
 您可以将 SnapCenter 服务器数据库存储库从默认位置迁移到另一个磁盘。如果要将存储库重新定位到具有更多空间的磁盘，则可以迁移该存储库。
@@ -135,6 +140,7 @@ NOTE: 在执行还原操作后检索存储库备份时，不会列出用于执�
 
 
 
+[[reset-the-snapcenter-repository-password]]
 == 重置 SnapCenter 存储库密码
 
 从 SnapCenter 4.2 安装 SnapCenter 服务器期间，系统会自动生成 MySQL 服务器存储库数据库密码。SnapCenter 用户在任何时候都不知道自动生成的密码。如果要访问存储库数据库，应重置密码。

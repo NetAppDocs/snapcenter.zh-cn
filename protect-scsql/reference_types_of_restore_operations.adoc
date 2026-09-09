@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server 
 summary: 您可以使用 SnapCenter 对 SQL Server 资源执行不同类型的还原操作。 
 ---
-= 还原操作的类型
+= SnapCenter 中的 SQL Server 还原操作类型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -28,6 +28,7 @@ NOTE: SnapCenter 不支持基于卷的 SnapRestore 。
 
 
 
+[[restore-up-to-the-minute]]
 == 恢复时间最长为分钟
 
 在最新的还原操作（默认情况下处于选中状态）中，数据库将恢复到故障点。SnapCenter 通过执行以下顺序来实现此目的：
@@ -48,12 +49,14 @@ NOTE: SnapCenter 不支持基于卷的 SnapRestore 。
 
 
 
+[[example-of-an-up-to-the-minute-restore-operation]]
 == 最新还原操作示例
 
 假设您每天中午和星期三下午 4 ： 00 运行 SQL Server 备份您需要从备份中还原。由于某种原因，星期三中午的备份验证失败，因此您决定从星期二中午的备份还原。之后，如果还原了备份，则所有事务日志都会前移并应用于还原的数据库，从创建星期二备份时未提交的日志开始，然后继续执行星期三下午 4 ： 00 写入的最新事务日志（如果备份了事务日志）。
 
 
 
+[[restore-to-a-previous-point-in-time]]
 == 还原到上一时间点
 
 在时间点还原操作中，数据库只会还原到过去的特定时间。在以下还原情况下会执行时间点还原操作：
@@ -75,6 +78,7 @@ image::../media/point_in_time_recovery_path.gif[还原到上一时间点]
 
 
 
+[[example-of-a-point-in-time-restore-operation]]
 == 时间点还原操作示例
 
 假设您在午夜进行一次完整数据库备份，并每小时进行一次事务日志备份。数据库在上午 9 ： 45 崩溃，但您仍会备份故障数据库的事务日志。您可以从以下时间点还原方案中进行选择：

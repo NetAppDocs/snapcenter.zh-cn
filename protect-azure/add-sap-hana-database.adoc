@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add, add SAP HANA database, manual discovery, automatic discovery 
 summary: 添加SAP HANA数据库。 
 ---
-= 添加SAP HANA数据库
+= 将SAP HANA数据库添加到 SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

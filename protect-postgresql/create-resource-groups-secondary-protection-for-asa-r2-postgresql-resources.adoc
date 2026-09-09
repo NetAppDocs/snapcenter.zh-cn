@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2, secondary protection, consistency group, primary consistency group, secondary consistency group 
 summary: 资源组是一个容器、您可以在其中添加要备份和保护的资源。通过资源组、您可以同时备份与给定应用程序关联的所有数据。 
 ---
-= 在ASA R2系统上创建资源组并为PostgreSQL资源启用二级保护
+= 在 ASA r2 上为 SnapCenter PostgreSQL 创建具有二级保护的资源组
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

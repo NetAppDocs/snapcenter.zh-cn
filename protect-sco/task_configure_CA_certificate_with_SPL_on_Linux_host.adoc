@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, SPL, Plug-in loader service, CA certificate, certificate 
 summary: 在 Linux 主机上使用 SnapCenter 插件加载程序服务配置 CA 证书 
 ---
-= 在 Linux 主机上使用 SnapCenter 插件加载程序（ SPL ）服务配置 CA 证书
+= 在 Linux 主机上为 SnapCenter plug-in Loader 服务配置 CA 证书
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ IMPORTANT: SPL 使用位于‘ /var/opt/snapcenter/spl/etc ' 的文件 keystore.
 
 
 
+[[manage-password-for-spl-keystore-and-alias-of-the-ca-signed-key-pair-in-use]]
 == 管理 SPL 密钥库的密码以及正在使用的 CA 签名密钥对的别名
 
 * 步骤 *
@@ -43,6 +44,7 @@ NOTE: SPL 密钥库的密码和专用密钥的所有关联别名密码应相同�
 
 
 
+[[configure-root-or-intermediate-certificates-to-spl-trust-store]]
 == 配置根证书或中间证书以 SPL 信任存储
 
 您应将不带私钥的根证书或中间证书配置为 SPL 信任存储。
@@ -65,6 +67,7 @@ NOTE: 您应先添加根 CA 证书，然后再添加中间 CA 证书。
 
 
 
+[[configure-ca-signed-key-pair-to-spl-trust-store]]
 == 将 CA 签名密钥对配置为 SPL 信任存储
 
 您应将 CA 签名密钥对配置为 SPL 信任存储。
@@ -101,6 +104,7 @@ NOTE: 您应先添加根 CA 证书，然后再添加中间 CA 证书。
 
 
 
+[[configure-certificate-revocation-list-crl-for-spl]]
 == 为 SPL 配置证书撤消列表（ Certificate Revocation List ， CRL ）
 
 您应该为 SPL 配置此 CRL

@@ -15,6 +15,7 @@ summary: 如果要在独立配置或网络负载平衡 \ （ NLB ）配置中确
 
 
 
+[[configure-secured-mysql-connections-for-standalone-snapcenter-server-configurations]]
 == 为独立的 SnapCenter 服务器配置配置安全的 MySQL 连接
 
 如果要保护 SnapCenter 服务器与 MySQL 服务器之间的通信安全，可以生成安全套接字层（ SSL ）证书和密钥文件。您必须在 MySQL 服务器和 SnapCenter 服务器中配置证书和密钥文件。
@@ -128,6 +129,7 @@ ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-key.pem"
 
 
 
+[[configure-secured-mysql-connections-for-ha-configurations]]
 == 为 HA 配置配置安全 MySQL 连接
 
 如果要确保 SnapCenter 服务器与 MySQL 服务器之间的通信安全，您可以为高可用性（ HA ）节点生成安全套接字层（ SSL ）证书和密钥文件。您必须在 MySQL 服务器和 HA 节点上配置证书和密钥文件。

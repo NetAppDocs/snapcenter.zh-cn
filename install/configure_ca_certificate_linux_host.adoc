@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, configure, CA certificate, linux, linux host 
 summary: 您应在Linux主机上使用SnapCenter服务器配置CA证书。 
 ---
-= 为Linux主机配置CA证书
+= 在 Linux 主机上为 SnapCenter 配置 CA 证书
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 您应在Linux主机上使用SnapCenter服务器配置CA证书。
 
 
 
+[[configure-nginx-certificate]]
 == 配置NGINX证书
 
 .步骤
@@ -28,6 +29,7 @@ summary: 您应在Linux主机上使用SnapCenter服务器配置CA证书。
 
 
 
+[[configure-audit-log-certificate]]
 == 配置审核日志证书
 
 .步骤
@@ -45,6 +47,7 @@ _INSTALL_DIR_的默认值是__/opt/_。
 
 
 
+[[configure-snapcenter-certificate]]
 == 配置SnapCenter证书
 
 .步骤

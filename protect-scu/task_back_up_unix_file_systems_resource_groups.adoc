@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, resource group 
 summary: 系统会对资源组中定义的所有资源执行备份操作。 
 ---
-= 备份Unix文件系统资源组
+= 备份 SnapCenter UNIX 文件系统资源组
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

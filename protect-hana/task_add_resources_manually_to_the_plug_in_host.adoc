@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 某些 HANA 实例不支持自动发现。您必须手动添加这些资源。 
 ---
-= 手动将资源添加到插件主机
+= 手动将资源添加到 SAP HANA 的 SnapCenter 插件主机
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

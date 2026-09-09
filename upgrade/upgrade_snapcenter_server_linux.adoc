@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, upgrade snapcenter server, linux 
 summary: 您可以使用SnapCenter服务器安装程序文件升级SnapCenter服务器。 
 ---
-= 升级Linux主机上的SnapCenter服务器
+= 在 Linux 主机上升级 SnapCenter 服务器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

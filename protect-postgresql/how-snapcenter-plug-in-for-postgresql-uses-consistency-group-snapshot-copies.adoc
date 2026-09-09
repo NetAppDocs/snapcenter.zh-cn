@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: 您可以使用此插件为资源组创建一致性组快照。一致性组是一个容器，可以容纳多个卷，以便将其作为一个实体进行管理。一致性组是指同时为多个卷创建快照、从而为一组卷提供一致的副本。 
 ---
-= 适用于PostgreSQL的SnapCenter插件如何使用一致性组快照
+= 适用于PostgreSQL的SnapCenter插件如何使用一致性组Snapshot副本
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

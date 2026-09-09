@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, plug-in host, supported plug-ins, prerequisites to refresh plug-in hosts, application hosts, limitations for tech refresh of plug-in hosts 
 summary: 将资源从旧主机移至新主机、以对插件主机执行技术更新。 
 ---
-= 对SnapCenter插件主机进行技术更新
+= 对 SnapCenter 插件主机执行技术更新
 :allow-uri-read: 
 
 

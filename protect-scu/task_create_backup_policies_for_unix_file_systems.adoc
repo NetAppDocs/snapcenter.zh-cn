@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policies, policies, unix file systems, file systems 
 summary: 为要备份的Unix文件系统创建一个备份策略。 
 ---
-= 为Unix文件系统创建备份策略
+= 在 SnapCenter 中为 UNIX 文件系统创建备份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

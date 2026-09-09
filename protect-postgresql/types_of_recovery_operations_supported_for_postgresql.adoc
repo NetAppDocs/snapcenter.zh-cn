@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recovery operations 
 summary: 使用SnapCenter可以对PostgreSQL执行不同类型的恢复操作。 
 ---
-= PostgreSQL集群支持的恢复操作类型
+= PostgreSQL 集群在 SnapCenter 中的恢复操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

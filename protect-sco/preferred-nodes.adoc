@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: SnapCenter 如何发现Oracle数据库。 
 ---
-= RAC 设置中的首选节点
+= SnapCenter 如何在 RAC 设置中使用首选节点
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,12 +26,14 @@ node3 不会用于备份，因为它不在首选节点列表中。
 
 
 
+[[flex-asm-setup]]
 == Flex ASM设置
 
 在 FlexASM 设置中，如果基数小于 RAC 集群中的节点数，则叶节点不会列为首选节点。如果 FlexASM 集群节点角色发生任何更改，您应手动发现，以便刷新首选节点。
 
 
 
+[[required-database-state]]
 == 所需的数据库状态
 
 要成功完成备份，首选节点上的 RAC 数据库实例必须处于所需状态：

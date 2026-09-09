@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: '您可以为资源\(集群\)或资源组创建备份。备份工作流包括规划、确定要备份的集群、管理备份策略、创建资源组和附加策略、创建备份以及监控操作。' 
 ---
-= 备份PostgreSQL资源
+= SnapCenter PostgreSQL 资源的备份工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

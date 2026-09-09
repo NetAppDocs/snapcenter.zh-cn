@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disaster recovery 
 summary: 当适用于SQL Server的SnapCenter 插件关闭时、请执行以下手动步骤来恢复此插件。 
 ---
-= 适用于 SQL Server 的 SnapCenter 插件的灾难恢复
+= 灾难后恢复 SnapCenter Plug-in for SQL Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,7 +15,7 @@ summary: 当适用于SQL Server的SnapCenter 插件关闭时、请执行以下�
 
 .开始之前
 * 二级主机应与主主机具有相同的操作系统，应用程序和主机名。
-* 使用 * 添加主机 * 或 * 修改主机 * 页面将适用于 SQL Server 的 SnapCenter 插件推送到备用主机。请参见 link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["管理主机"] 有关详细信息 ...
+* 使用 *添加主机* 或 *修改主机* 页面将 SnapCenter Plug-in for SQL Server 推送到备用主机。有关详细信息，请参见 link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["在 SnapCenter 中管理主机"]。
 
 
 .步骤

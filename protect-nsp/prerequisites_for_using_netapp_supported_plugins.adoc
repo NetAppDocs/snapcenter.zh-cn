@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Credentials 
 summary: 在使用SnapCenter NetApp支持的插件之前、SnapCenter管理员必须安装和配置SnapCenter服务器并执行必备任务。 
 ---
-= 使用NetApp支持的插件的前提条件
+= 将 NetApp 支持的插件与 SnapCenter 结合使用的前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

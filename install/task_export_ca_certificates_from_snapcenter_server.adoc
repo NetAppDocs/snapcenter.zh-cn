@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,authentication, export CA certificates 
 summary: 您应将CA证书从SnapCenter服务器导出到插件主机。 
 ---
-= 从SnapCenter服务器导出证书颁发机构(CA)证书
+= 从 SnapCenter 服务器导出 CA 证书
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

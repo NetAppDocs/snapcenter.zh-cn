@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins 
 summary: SnapCenter 在物理机和虚拟机上均支持多种存储类型。在安装NetApp支持的插件之前、您必须验证是否支持您的存储类型。 
 ---
-= NetApp支持的插件支持的存储类型
+= NetApp 支持的插件在 SnapCenter 中支持的存储类型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

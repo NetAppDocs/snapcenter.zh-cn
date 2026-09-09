@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup types, restore methods, connect-and-copy restore, full restore, partial restore, in-place restore, recovery type, limitations 
 summary: 您必须在还原和恢复数据库之前定义策略，以便成功执行还原和恢复操作。 
 ---
-= 为 Oracle 数据库定义还原和恢复策略
+= 了解 SnapCenter 中 Oracle 数据库的还原和恢复策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 您必须在还原和恢复数据库之前定义策略，以便成功�
 
 
 
+[[types-of-backups-supported-for-restore-and-recovery-operations]]
 == 还原和恢复操作支持的备份类型
 
 SnapCenter 支持还原和恢复不同类型的 Oracle 数据库备份。
@@ -39,6 +40,7 @@ NOTE: 您无法恢复 Active Data Guard 备用数据库。
 
 
 
+[[types-of-restore-methods-supported-for-oracle-databases]]
 == Oracle 数据库支持的还原方法类型
 
 SnapCenter 支持对 Oracle 数据库进行连接和复制或原位还原。在还原操作期间， SnapCenter 会确定适用于在不丢失任何数据的情况下用于还原的文件系统的还原方法。
@@ -48,6 +50,7 @@ NOTE: SnapCenter 不支持基于卷的 SnapRestore 。
 
 
 
+[[connect-and-copy-restore]]
 === 连接和复制还原
 
 如果数据库布局与备份不同，或者创建备份后有任何新文件，则会执行连接和复制还原。在连接和复制还原方法中，将执行以下任务：
@@ -76,6 +79,7 @@ NOTE: 对于 FlexASM 设置（基数小于 RAC 集群中的节点数）或 VMDK 
 
 
 
+[[in-place-restore]]
 === 原位还原
 
 如果数据库布局与备份类似，并且存储和数据库堆栈上未进行任何配置更改，则会执行原位还原，其中会在 ONTAP 上执行文件或 LUN 还原。SnapCenter 仅支持在原位还原方法中使用单个文件 SnapRestore （ SFSR ）。
@@ -110,6 +114,7 @@ NOTE: 您还可以使用 GUI ， SnapCenter 命令行界面或 PowerShell cmdlet
 
 
 
+[[types-of-restore-operations-supported-for-oracle-databases]]
 == Oracle 数据库支持的还原操作类型
 
 通过 SnapCenter ，您可以对 Oracle 数据库执行不同类型的还原操作。
@@ -118,6 +123,7 @@ NOTE: 您还可以使用 GUI ， SnapCenter 命令行界面或 PowerShell cmdlet
 
 
 
+[[full-restore]]
 === 完全还原
 
 * 仅还原数据文件
@@ -128,6 +134,7 @@ NOTE: 您还可以使用 GUI ， SnapCenter 命令行界面或 PowerShell cmdlet
 
 
 
+[[partial-restore]]
 === 部分还原
 
 * 仅还原选定表空间
@@ -137,6 +144,7 @@ NOTE: 您还可以使用 GUI ， SnapCenter 命令行界面或 PowerShell cmdlet
 
 
 
+[[types-of-recovery-operations-supported-for-oracle-databases]]
 == Oracle 数据库支持的恢复操作类型
 
 通过 SnapCenter ，您可以对 Oracle 数据库执行不同类型的恢复操作。
@@ -157,6 +165,7 @@ NOTE: 如果您使用以数据库角色为备用角色创建的备份进行还�
 
 
 
+[[limitations-related-to-restore-and-recovery-of-oracle-databases]]
 == 与还原和恢复 Oracle 数据库相关的限制
 
 在执行还原和恢复操作之前，您必须了解这些限制。
@@ -186,6 +195,7 @@ NOTE: 如果您使用以数据库角色为备用角色创建的备份进行还�
 
 
 
+[[limitations-related-to-point-in-time-recovery-of-tablespaces]]
 == 与表空间的时间点恢复相关的限制
 
 * 不支持系统， SYSAUX 和撤消表空间的时间点恢复（ PITR ）
@@ -212,18 +222,21 @@ NOTE: 如果您使用以数据库角色为备用角色创建的备份进行还�
 
 
 
+[[sources-and-destinations-for-restoring-oracle-databases]]
 == 用于还原 Oracle 数据库的源和目标
 
 您可以从主存储或二级存储上的备份副本还原 Oracle 数据库。您只能将数据库还原到同一数据库实例上的同一位置。但是，在 Real Application Cluster （ RAC ）设置中，您可以将数据库还原到其他节点。
 
 
 
+[[sources-for-restore-operations]]
 === 用于还原操作的源
 
 您可以从主存储或二级存储上的备份还原数据库。如果要从多镜像配置中二级存储上的备份进行还原，则可以选择二级存储镜像作为源。
 
 
 
+[[destinations-for-restore-operations]]
 === 还原操作的目标
 
 您只能将数据库还原到同一数据库实例上的同一位置。

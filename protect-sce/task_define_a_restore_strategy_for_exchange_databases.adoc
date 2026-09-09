@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 通过为 Exchange Server 定义还原策略，您可以成功还原数据库。 
 ---
-= 定义 Exchange 数据库的还原策略
+= 在 SnapCenter 中定义 Exchange 数据库的还原策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 通过为 Exchange Server 定义还原策略，您可以成功还原数
 
 
 
+[[sources-for-a-restore-operation-in-exchange-server]]
 == Exchange Server 中还原操作的源
 
 您可以从主存储上的备份副本还原 Exchange Server 数据库。
@@ -23,6 +24,7 @@ summary: 通过为 Exchange Server 定义还原策略，您可以成功还原数
 
 
 
+[[types-of-restore-operations-supported-for-exchange-server]]
 == Exchange Server 支持的还原操作类型
 
 您可以使用 SnapCenter 对 Exchange 资源执行不同类型的还原操作。
@@ -33,6 +35,7 @@ summary: 通过为 Exchange Server 定义还原策略，您可以成功还原数
 
 
 
+[[restore-up-to-the-minute]]
 === 恢复时间最长为分钟
 
 在最新的还原操作中，数据库将恢复到故障点。SnapCenter 通过执行以下顺序来实现此目的：
@@ -64,6 +67,7 @@ summary: 通过为 Exchange Server 定义还原策略，您可以成功还原数
 
 
 
+[[restore-to-a-previous-point-in-time]]
 === 还原到上一时间点
 
 在时间点还原操作中，数据库只会还原到过去的特定时间。在以下还原情况下会执行时间点还原操作：

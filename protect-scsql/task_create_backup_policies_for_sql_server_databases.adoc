@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policy 
 summary: 您可以在使用 SnapCenter 备份 SQL Server 资源之前为资源或资源组创建备份策略，也可以在创建资源组或备份单个资源时创建备份策略。 
 ---
-= 为 SQL Server 数据库创建备份策略
+= 在 SnapCenter 中为 SQL Server 数据库创建备份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -58,6 +58,7 @@ summary: 您可以在使用 SnapCenter 备份 SQL Server 资源之前为资源�
 
 
 
+[[step-1-create-policy-name]]
 == 第1步：创建策略名称
 
 . 在左侧导航窗格中，选择*Settings*。
@@ -68,6 +69,7 @@ summary: 您可以在使用 SnapCenter 备份 SQL Server 资源之前为资源�
 
 
 
+[[step-2-configure-policy-options]]
 == 第2步：配置策略选项
 
 . 在"Policy type"(策略类型)页面中、执行以下步骤：
@@ -129,6 +131,7 @@ NOTE: 对于二级存储， Microsoft SQL 不支持 * 仅复制备份 * 选项�
 
 
 
+[[step-3-configure-availability-group-settings]]
 == 第3步：配置可用性组设置
 
 . 在可用性组设置部分中，执行以下操作：
@@ -158,6 +161,7 @@ NOTE: 在集群配置中，备份会根据策略中设置的保留设置保留�
 
 
 
+[[step-4-configure-snapshot-and-replication-settings]]
 == 第4步：配置Snapshot和复制设置
 
 . 在Snapshot and Replication页面中、执行以下步骤：
@@ -180,6 +184,7 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
 
 
 
+[[step-5-configure-up-to-the-minute-retention-settings]]
 == 第5步：配置最新保留设置
 
 . 在分钟级保留设置部分中、根据在备份类型页面中选择的备份类型、执行以下一项或多项操作：
@@ -206,6 +211,7 @@ NOTE: 如果您已计划凌晨 2 ： 00 ，则在夏令时（ DST ）期间不�
 ====
 
 
+[[step-6-configure-snapshot-settings]]
 == 第6步：配置Snapshot设置
 
 . 对于完整备份保留设置、请执行以下操作：
@@ -246,6 +252,7 @@ NOTE: 您可以为远程复制的主快照分配SnapMirror标签，从而允许�
 
 
 
+[[step-7-configure-secondary-replication-options]]
 == 第7步：配置二级复制选项
 
 . 在选择二级复制选项部分中、选择以下一个或两个二级复制选项：
@@ -299,6 +306,7 @@ NOTE: 您可以为远程复制的主快照分配SnapMirror标签，从而允许�
 ====
 
 
+[[step-8-configure-script-settings]]
 == 第8步：配置脚本设置
 
 . 在脚本页面中，分别输入应在备份操作前后运行的预处理或后处理程序的路径和参数。
@@ -317,6 +325,7 @@ NOTE: 您必须在ONTAP中配置SnapMirror保留策略、以使二级存储不�
 
 
 
+[[step-9-configure-verification-settings]]
 == 第9步：配置验证设置
 
 在验证页面中，执行以下步骤：
@@ -361,6 +370,7 @@ NOTE: 预处理脚本或后处理脚本路径不应包含驱动器或共享。�
 
 
 
+[[step-10-review-summary]]
 == 第10步：查看摘要
 
 . 查看摘要，然后选择*完成*。

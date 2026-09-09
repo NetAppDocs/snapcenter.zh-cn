@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Credentials, alternate host, clone, FRA, OMF 
 summary: 您可以使用 SnapCenter 通过数据库备份克隆 Oracle 数据库。 
 ---
-= 克隆 Oracle 数据库备份
+= 使用 SnapCenter 克隆 Oracle 数据库备份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -358,6 +358,7 @@ NOTE: 如果在克隆期间未执行恢复，则克隆的数据库的备份可�
 
 
 
+[[update-the-preferred-ip-on-the-host]]
 == 更新主机上的首选IP
 
 克隆操作完成后、存储访问层()为克隆提供的路径将采用_SAL <nfs_lif_IP>：<JunctionPath>_格式。要提供首选IP、必须在主机上使用sccli命令进行配置。

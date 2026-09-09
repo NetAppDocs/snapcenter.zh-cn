@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recovery operations 
 summary: 通过 SnapCenter ，您可以对 SAP HANA 数据库执行不同类型的恢复操作。 
 ---
-= SAP HANA 数据库支持的恢复操作类型
+= SAP HANA 数据库在 SnapCenter 中的恢复操作类型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

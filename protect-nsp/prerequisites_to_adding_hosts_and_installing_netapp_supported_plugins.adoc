@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 在添加主机并安装插件软件包之前，您必须满足所有要求。NetApp支持的插件可在Windows、Linux或AIX环境中使用。 
 ---
-= 添加主机和安装适用于Windows、Linux或AIX的插件软件包的前提条件
+= 添加主机和安装 SnapCenter 插件的前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,12 +27,14 @@ NOTE: IBM Java 在 Windows 和 Linux 主机上不受支持。
 
 
 
+[[general]]
 == 常规
 
 如果使用的是iSCSI、则iSCSI服务应正在运行。
 
 
 
+[[windows-hosts]]
 == Windows 主机
 
 * 您必须具有具有本地管理员权限的域用户，并在远程主机上具有本地登录权限。
@@ -45,6 +47,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["下载适用于
 
 
 
+[[linux-and-aix-hosts]]
 == Linux和AIX主机
 
 
@@ -99,6 +102,7 @@ IMPORTANT: 此示例只能用作创建自己数据的参考。
 
 
 
+[[aix-host-requirements]]
 == AIX 主机要求
 
 在安装适用于 AIX 的 SnapCenter 插件软件包之前，应确保主机满足要求。
@@ -148,6 +152,7 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
 |===
 
 
+[[configure-sudo-privileges-for-non-root-users-for-aix-host]]
 === 为 AIX 主机的非 root 用户配置 sudo 权限
 
 通过 SnapCenter 4.4 及更高版本，非 root 用户可以安装适用于 AIX 的 SnapCenter 插件软件包并启动插件过程。此插件进程将以有效的非root用户身份运行。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。

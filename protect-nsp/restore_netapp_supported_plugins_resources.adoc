@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 还原和恢复工作流包括规划，执行还原操作和监控操作。 
 ---
-= 还原NetApp支持的插件资源
+= NetApp 支持的插件在 SnapCenter 中的还原工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

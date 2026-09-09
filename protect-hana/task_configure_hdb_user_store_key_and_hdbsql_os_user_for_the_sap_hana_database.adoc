@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: HDB User Store Key, HDBSQL OS User, SAP HANA database 
 summary: 您必须配置 HDB 用户存储密钥和 HDBSQL 操作系统用户，才能在 SAP HANA 数据库上执行数据保护操作。 
 ---
-= 为 SAP HANA 数据库配置 HDB 用户存储密钥和 HDBSQL 操作系统用户
+= 为 SnapCenter SAP HANA 数据库配置 HDB 用户存储密钥和 HDBSQL OS 用户
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

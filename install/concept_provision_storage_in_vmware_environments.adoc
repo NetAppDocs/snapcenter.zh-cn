@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: guest OS, VMware ESXi server, limitations, RDM, Microsoft cluster 
 summary: 您可以在 VMware 环境中使用适用于 Microsoft Windows 的 SnapCenter 插件创建和管理 LUN 以及管理 Snapshot 备份副本。 
 ---
-= 在 VMware 环境中配置存储
+= VMware 环境中的 SnapCenter 存储资源调配
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 您可以在 VMware 环境中使用适用于 Microsoft Windows 的 Snap
 
 
 
+[[supported-vmware-guest-os-platforms]]
 == 支持的 VMware 子操作系统平台
 
 * 支持的 Windows Server 版本
@@ -33,6 +34,7 @@ summary: 您可以在 VMware 环境中使用适用于 Microsoft Windows 的 Snap
 
 
 
+[[vmware-esxi-server-related-limitations]]
 === VMware ESXi 服务器相关限制
 
 * 不支持在使用 ESXi 凭据的虚拟机上的 Microsoft 集群上安装适用于 Windows 的插件。
@@ -46,6 +48,7 @@ summary: 您可以在 VMware 环境中使用适用于 Microsoft Windows 的 Snap
 
 
 
+[[minimum-vcenter-privileges-required-for-snapcenter-rdm-operations]]
 === SnapCenter RDM 操作所需的最小 vCenter 特权
 
 要在子操作系统中执行 RDM 操作，您应在主机上具有以下 vCenter 权限：
@@ -61,6 +64,7 @@ summary: 您可以在 VMware 环境中使用适用于 Microsoft Windows 的 Snap
 
 
 
+[[manage-fc-rdm-luns-in-a-microsoft-cluster]]
 == 管理 Microsoft 集群中的 FC RDM LUN
 
 您可以使用适用于 Windows 的插件管理使用 FC RDM LUN 的 Microsoft 集群，但必须先在该插件外部创建共享 RDM 仲裁和共享存储，然后将磁盘添加到集群中的虚拟机。
@@ -69,6 +73,7 @@ summary: 您可以在 VMware 环境中使用适用于 Microsoft Windows 的 Snap
 
 
 
+[[requirements]]
 === 要求
 
 如果您满足特定配置要求，适用于 Windows 的插件可为在属于两个不同 ESX 或 ESXi 服务器的两个不同虚拟机上使用 FC RDM LUN 的 Microsoft 集群提供支持，这两个虚拟机也称为跨机集群。
@@ -111,6 +116,7 @@ NOTE: 在物理兼容模式下将 SCSI 控制器添加到虚拟机上的共享 L
 
 
 
+[[limitations]]
 === 限制
 
 适用于 Windows 的插件支持在属于不同 ESX 或 ESXi 服务器的不同虚拟机上使用 FC/iSCSI RDM LUN 的 Microsoft 集群。
@@ -130,6 +136,7 @@ NOTE: ESX 5.5i 之前的版本不支持此功能。
 
 
 
+[[create-a-shared-fc-rdm-lun]]
 === 创建共享 FC RDM LUN
 
 在使用 FC RDM LUN 在 Microsoft 集群中的节点之间共享存储之前，必须先创建共享仲裁磁盘和共享存储磁盘，然后将其添加到集群中的两个虚拟机。
@@ -138,6 +145,7 @@ NOTE: ESX 5.5i 之前的版本不支持此功能。
 
 
 
+[[related-information]]
 == 相关信息
 
 请参阅 link:https://techdocs.broadcom.com["Broadcom 技术文档"^] 和搜索有关跨物理主机群集虚拟机以及为 Microsoft 群集创建共享 FC RDM LUN 的文档。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split clone, snapcenter 
 summary: 您可以使用 SnapCenter 从父资源拆分克隆的资源。拆分的克隆将独立于父资源。 
 ---
-= 拆分克隆。
+= 拆分 SAP HANA 数据库的 SnapCenter 克隆
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

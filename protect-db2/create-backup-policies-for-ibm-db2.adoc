@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 在使用SnapCenter备份IBM DB2数据库资源之前，必须为要备份的资源或资源组创建一个备份策略。备份策略是一组规则，用于控制如何管理，计划和保留备份。 
 ---
-= 为IBM DB2创建备份策略
+= 在 SnapCenter 中为 IBM Db2 创建备份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

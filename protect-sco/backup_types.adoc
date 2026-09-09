@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
 summary: Oracle数据库支持的备份类型。 
 ---
-= Oracle 数据库支持的备份类型
+= SnapCenter 中支持的 Oracle 数据库备份类型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: Oracle数据库支持的备份类型。
 
 
 
+[[online-backup]]
 == 联机备份
 
 当数据库处于联机状态时创建的备份称为联机备份。联机备份也称为热备份，可用于创建数据库备份，而无需关闭数据库。
@@ -28,6 +29,7 @@ summary: Oracle数据库支持的备份类型。
 
 
 
+[[offline-backup]]
 == 脱机备份
 
 当数据库处于挂载或关闭状态时创建的备份称为脱机备份。脱机备份也称为冷备份。您只能在脱机备份中包含数据文件和控制文件。您可以创建脱机挂载或脱机关闭备份。

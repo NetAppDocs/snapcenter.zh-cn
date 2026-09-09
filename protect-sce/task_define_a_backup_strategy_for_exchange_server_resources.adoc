@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 在创建备份作业之前定义备份策略有助于确保您拥有成功还原数据库所需的备份。您的服务级别协议（ Service Level Agreement ， SLA ），恢复时间目标（ Recovery Time Objective ， RTO ）和恢复点目标（ Recovery Point Objective ， RPO ）在很大程度上决定了您的备份策略。 
 ---
-= 为 Exchange Server 资源定义备份策略
+= 为 SnapCenter 中的 Exchange Server 资源定义备份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ SLA 定义了预期的服务级别，并解决了许多与服务相关的问题�
 
 
 
+[[types-of-backups-supported-for-exchange-database]]
 == Exchange 数据库支持的备份类型
 
 使用 SnapCenter 备份 Exchange 邮箱要求您选择资源类型，例如数据库和数据库可用性组（ DAG ）。利用Snapshot技术为资源所在的卷创建联机只读副本。
@@ -55,6 +56,7 @@ SLA 定义了预期的服务级别，并解决了许多与服务相关的问题�
 |===
 
 
+[[backup-schedules-for-database-plug-ins]]
 == 数据库插件的备份计划
 
 备份频率（计划类型）在策略中指定；备份计划在资源组配置中指定。在确定备份频率或计划时，最关键的因素是资源的更改率以及数据的重要性。您可以每小时备份一次使用率较高的资源，而每天备份一次很少使用的资源。其他因素包括资源对组织的重要性，服务级别协议（ Service Level Agreement ， SLA ）和恢复点目标（ Recovery Point Objective ， RPO ）。
@@ -77,12 +79,14 @@ SLA 定义了预期的服务级别，并解决了许多与服务相关的问题�
 
 
 
+[[number-of-backup-jobs-needed-for-databases]]
 == 数据库所需的备份作业数
 
 决定所需备份作业数量的因素包括资源大小，已用卷数，资源更改率以及您的服务级别协议（ Service Level Agreement ， SLA ）。
 
 
 
+[[backup-naming-conventions]]
 == 备份命名约定
 
 您可以使用默认的Snapshot命名约定、也可以使用自定义的命名约定。默认备份命名约定会为Snapshot名称添加一个时间戳、以帮助您确定副本的创建时间。
@@ -108,6 +112,7 @@ dts1_mach1x88_03-12-2015_23.17.26
 
 
 
+[[backup-retention-options]]
 == 备份保留选项
 
 您可以选择保留备份副本的天数，也可以指定要保留的备份副本数， ONTAP 最多可保留 255 个副本。例如，您的组织可能要求您保留 10 天的备份副本或 130 个备份副本。
@@ -123,6 +128,7 @@ NOTE: 要长期保留备份副本，应使用 SnapVault 备份。
 
 
 
+[[how-long-to-retain-transaction-log-backups-on-the-source-storage-volume-for-exchange-server]]
 == 在 Exchange Server 的源存储卷上保留事务日志备份的时间
 
 适用于 Microsoft Exchange Server 的 SnapCenter 插件需要事务日志备份来执行最新的还原操作，以便将数据库还原到两个完整备份之间的时间。

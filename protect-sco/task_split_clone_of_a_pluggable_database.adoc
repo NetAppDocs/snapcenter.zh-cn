@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split, PDB, cloned PDB 
 summary: 您可以使用 SnapCenter 拆分克隆的可插拔数据库（ PDB ）。 
 ---
-= 可插拔数据库的拆分克隆
+= 在 SnapCenter 中拆分可插入数据库克隆
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

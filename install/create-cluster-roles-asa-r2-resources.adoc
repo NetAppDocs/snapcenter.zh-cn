@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cluster role, privileges, asa r2 systems 
 summary: 您应该为ASA R2系统创建ONTAP集群角色、这样就不必使用ONTAP管理员角色在SnapCenter中执行操作。 
 ---
-= 为ASA R2系统创建ONTAP集群角色
+= 在 SnapCenter 中为 ASA r2 系统创建 ONTAP 集群角色
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,6 +35,7 @@ NOTE: 您应对每个权限重复此命令。
 
 
 
+[[ontap-cli-commands-for-creating-cluster-roles-and-assigning-permissions]]
 == 用于创建集群角色和分配权限的 ONTAP 命令行界面命令
 
 您应运行多个 ONTAP 命令行界面命令来创建集群角色和分配权限。

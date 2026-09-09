@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Minimum ONTAP privileges 
 summary: 所需的最小 ONTAP 权限因用于数据保护的 SnapCenter 插件而异。 
 ---
-= Exchange 插件所需的最低 ONTAP 权限
+= 适用于 Microsoft Exchange Server 的 SnapCenter 插件所需的最低 ONTAP 权限
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

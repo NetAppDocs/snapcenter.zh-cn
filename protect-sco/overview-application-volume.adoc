@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, overview, backup, non-data volumes 
 summary: 应用程序卷是存储与Oracle数据库相关的信息的存储。 
 ---
-= 什么是应用程序卷
+= 了解适用于 Oracle 数据库的 SnapCenter 插件中的应用程序卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

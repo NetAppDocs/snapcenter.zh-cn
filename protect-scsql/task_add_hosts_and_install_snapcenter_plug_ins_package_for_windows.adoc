@@ -34,7 +34,7 @@ link:task_configure_gMSA_on_windows_server_2012_or_later.html["在 Windows Serve
 
 您可以为单个主机或集群添加主机并安装插件软件包。如果要在集群或 Windows Server 故障转移集群（ WSFC ）上安装插件，则这些插件将安装在集群的所有节点上。
 
-有关管理主机的信息，请参见 link:../admin/concept_manage_hosts.html["管理主机"^]。
+有关管理主机的信息，请参见 link:../admin/concept_manage_hosts.html["在 SnapCenter 中管理主机"^]。
 
 .步骤
 . 在左侧导航窗格中，选择 * 主机 * 。

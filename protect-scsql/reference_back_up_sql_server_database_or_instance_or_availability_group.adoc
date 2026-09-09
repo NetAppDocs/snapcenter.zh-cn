@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup workflow 
 summary: 在环境中安装适用于 Microsoft SQL Server 的 SnapCenter 插件时，您可以使用 SnapCenter 备份 SQL Server 资源。 
 ---
-= 备份工作流
+= SnapCenter 中的 SQL Server 备份工作流
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -28,6 +28,7 @@ NOTE: 如果选择非 NetApp LUN ，已损坏的数据库或正在还原的数�
 
 
 
+[[how-snapcenter-backs-up-databases]]
 == SnapCenter 如何备份数据库
 
 SnapCenter使用Snapshot技术备份LUN或VMDK上的SQL Server数据库。SnapCenter通过创建数据库的快照来创建备份。

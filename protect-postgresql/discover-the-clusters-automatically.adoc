@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 资源是Linux主机上由SnapCenter管理的PostgreSQL集群。发现可用的PostgreSQL集群后、您可以将这些资源添加到资源组中以执行数据保护操作。 
 ---
-= 自动发现集群
+= 在 SnapCenter 中自动发现 PostgreSQL 集群
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

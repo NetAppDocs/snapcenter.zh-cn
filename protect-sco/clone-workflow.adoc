@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone operation, clone, workflow 
 summary: 克隆工作流包括规划，执行克隆操作以及监控操作。 
 ---
-= 克隆工作流
+= SnapCenter 适用于 Oracle 数据库的克隆工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

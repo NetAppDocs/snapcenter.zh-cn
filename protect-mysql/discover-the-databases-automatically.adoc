@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 资源是指Linux主机上由SnapCenter管理的MySQL数据库。发现可用的MySQL数据库后、您可以将这些资源添加到资源组中以执行数据保护操作。 
 ---
-= 自动发现数据库
+= 在 SnapCenter 中自动发现 MySQL 数据库
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

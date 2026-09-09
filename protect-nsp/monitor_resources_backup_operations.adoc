@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Server, NetApp supported plug-in 
 summary: 您可以使用 SnapCenter Jobs 页面监控不同备份操作的进度。您可能需要检查进度以确定完成时间或是否存在问题描述。 
 ---
-= 监控NetApp支持的插件资源备份操作
+= 在 SnapCenter 中监控 NetApp 支持的插件资源的备份操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

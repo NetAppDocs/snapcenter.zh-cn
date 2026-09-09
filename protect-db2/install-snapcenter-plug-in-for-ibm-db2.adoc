@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installing 
 summary: 如果要保护IBM DB2、应安装和设置适用于IBM DB2的SnapCenter插件。 
 ---
-= 适用于IBM DB2的SnapCenter插件的安装工作流
+= SnapCenter Plug-in for IBM Db2 安装和设置工作流
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

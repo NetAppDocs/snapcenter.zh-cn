@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 在您的环境中安装适用于IBM DB2的插件时、您可以使用SnapCenter备份、还原和克隆IBM DB2及其资源。您还可以执行支持这些操作的任务。 
 ---
-= 使用适用于IBM DB2的SnapCenter插件可以执行的操作
+= 了解适用于 IBM Db2 的 SnapCenter 插件功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

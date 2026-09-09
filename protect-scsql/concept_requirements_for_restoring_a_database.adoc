@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Requirements 
 summary: 在从适用于 Microsoft SQL Server 的 SnapCenter 插件备份还原 SQL Server 数据库之前，您必须确保满足多项要求。 
 ---
-= 还原数据库的要求
+= 使用 SnapCenter 还原 SQL Server 数据库的要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

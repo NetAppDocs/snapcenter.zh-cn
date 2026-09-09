@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases backup 
 summary: 使用主存储卷或二级存储卷验证备份副本。 
 ---
-= 从何处验证备份副本
+= SnapCenter 如何验证备份副本
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

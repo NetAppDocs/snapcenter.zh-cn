@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
 summary: 定义备份策略可确保您能够成功还原或克隆数据库。 
 ---
-= 为 Oracle 数据库定义备份策略
+= 在 SnapCenter 中为 Oracle 数据库定义备份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -22,6 +22,7 @@ summary: 定义备份策略可确保您能够成功还原或克隆数据库。
 
 
 
+[[supported-oracle-database-configurations-for-backups]]
 == 支持用于备份的 Oracle 数据库配置
 
 SnapCenter 支持备份不同的 Oracle 数据库配置。
@@ -64,12 +65,14 @@ NOTE: 不支持 PDB 迁移和 PDB 克隆操作。
 
 
 
+[[types-of-backup-supported-for-oracle-databases]]
 == Oracle 数据库支持的备份类型
 
 备份类型指定要创建的备份类型。SnapCenter 支持 Oracle 数据库的联机和脱机备份类型。
 
 
 
+[[online-backup]]
 === 联机备份
 
 当数据库处于联机状态时创建的备份称为联机备份。联机备份也称为热备份，可用于创建数据库备份，而无需关闭数据库。
@@ -83,6 +86,7 @@ NOTE: 不支持 PDB 迁移和 PDB 克隆操作。
 
 
 
+[[offline-backup]]
 === 脱机备份
 
 当数据库处于挂载或关闭状态时创建的备份称为脱机备份。脱机备份也称为冷备份。您只能在脱机备份中包含数据文件和控制文件。您可以创建脱机挂载或脱机关闭备份。
@@ -99,6 +103,7 @@ NOTE: 不支持 PDB 迁移和 PDB 克隆操作。
 
 
 
+[[how-snapcenter-discovers-oracle-databases]]
 == SnapCenter 如何发现 Oracle 数据库
 
 " 资源 " 是指主机上由 SnapCenter 维护的 Oracle 数据库。发现可用数据库后，您可以将这些数据库添加到资源组以执行数据保护操作。您应了解 SnapCenter 发现不同类型和版本的 Oracle 数据库所遵循的过程。
@@ -169,6 +174,7 @@ NOTE: 如果 /etc/oratab 文件中存在任何 Oracle 12_c_R2 和 18_c_ 数据�
 
 
 
+[[preferred-nodes-in-rac-setup]]
 == RAC 设置中的首选节点
 
 在 Oracle Real Application Clusters （ RAC ）设置中，您可以指定要执行备份操作的首选节点。如果未指定首选节点， SnapCenter 会自动将某个节点分配为首选节点，并在该节点上创建备份。
@@ -181,6 +187,7 @@ NOTE: 如果 /etc/oratab 文件中存在任何 Oracle 12_c_R2 和 18_c_ 数据�
 
 
 
+[[required-database-state]]
 === 所需的数据库状态
 
 要成功完成备份，首选节点上的 RAC 数据库实例必须处于所需状态：
@@ -192,6 +199,7 @@ NOTE: 如果 /etc/oratab 文件中存在任何 Oracle 12_c_R2 和 18_c_ 数据�
 
 
 
+[[how-to-catalog-backups-with-oracle-recovery-manager]]
 == 如何使用 Oracle Recovery Manager 对备份进行目录编制
 
 Oracle 数据库的备份可以使用 Oracle Recovery Manager （ RMAN ）进行编目，以便将备份信息存储在 Oracle RMAN 存储库中。
@@ -233,6 +241,7 @@ NOTE: 强制删除 SnapCenter 主机时，不会删除与该主机关联的已�
 
 
 
+[[backup-schedules]]
 == 备份计划
 
 备份频率（计划类型）在策略中指定；备份计划在资源组配置中指定。在确定备份频率或计划时，最关键的因素是资源的更改率以及数据的重要性。您可以每小时备份一次使用率较高的资源，而每天备份一次很少使用的资源。其他因素包括资源对组织的重要性，服务级别协议（ Service Level Agreement ， SLA ）和恢复点目标（ Recovery Point Objective ， RPO ）。
@@ -255,6 +264,7 @@ SLA 定义了预期的服务级别，并解决了许多与服务相关的问题�
 
 
 
+[[backup-naming-conventions]]
 == 备份命名约定
 
 您可以使用默认的Snapshot命名约定、也可以使用自定义的命名约定。默认备份命名约定会为Snapshot名称添加一个时间戳、以帮助您确定副本的创建时间。
@@ -280,6 +290,7 @@ dts1_mach1x88_03-12-2015_23.17.26
 
 
 
+[[backup-retention-options]]
 == 备份保留选项
 
 您可以选择保留备份副本的天数，也可以指定要保留的备份副本数， ONTAP 最多可保留 255 个副本。例如，您的组织可能要求您保留 10 天的备份副本或 130 个备份副本。
@@ -295,6 +306,7 @@ NOTE: 要长期保留备份副本，应使用 SnapVault 备份。
 
 
 
+[[verify-backup-copy-using-the-primary-or-secondary-storage-volume]]
 == 使用主存储卷或二级存储卷验证备份副本
 
 您可以验证主存储卷或 SnapMirror 或 SnapVault 二级存储卷上的备份副本。使用二级存储卷进行验证可减少主存储卷上的负载。

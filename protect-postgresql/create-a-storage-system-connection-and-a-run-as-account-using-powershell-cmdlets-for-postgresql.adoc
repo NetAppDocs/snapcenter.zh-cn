@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: '在使用PowerShell cmdlet备份、还原或克隆PostgreSQL集群之前、您必须先创建Storage Virtual Machine (SVM)连接和凭据。' 
 ---
-= 使用适用于PostgreSQL的PowerShell cmdlet创建存储系统连接和凭据
+= 使用 PowerShell cmdlet 为 SnapCenter PostgreSQL 创建存储连接和凭据
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

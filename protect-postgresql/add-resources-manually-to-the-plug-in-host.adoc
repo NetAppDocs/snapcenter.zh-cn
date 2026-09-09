@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Postgresql 
 summary: 某些PostgreSQL实例不支持自动发现。您必须手动添加这些资源。 
 ---
-= 手动将资源添加到插件主机
+= 手动将 SnapCenter PostgreSQL 资源添加到插件主机
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

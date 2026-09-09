@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, prerequisites, plug-in, plug-in packages 
 summary: 如果不再希望使用 SnapCenter 管理主机的数据保护作业，则可以删除该主机。例如，如果某个主机不再具有需要保护的数据，您可能需要将其删除。从 SnapCenter 服务器中删除主机之前，必须执行前提条件任务。 
 ---
-= 删除主机的前提条件
+= 从 SnapCenter 中删除主机的前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,6 +24,7 @@ summary: 如果不再希望使用 SnapCenter 管理主机的数据保护作业�
 
 
 
+[[prerequisites-to-remove-a-host-using-role-based-access-control]]
 == 使用基于角色的访问控制删除主机的前提条件
 
 * 您应已使用具有读取，删除主机，安装，卸载插件和删除对象权限的 RBAC 角色登录。
@@ -37,6 +38,7 @@ summary: 如果不再希望使用 SnapCenter 管理主机的数据保护作业�
 
 
 
+[[prerequisites-to-remove-a-host-with-clones-created-from-clone-lifecycle-operation]]
 == 删除具有从克隆生命周期操作创建的克隆的主机的前提条件
 
 * 您应已使用 SQL 数据库的克隆生命周期管理创建克隆作业。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: igroup 
 summary: 您可以创建启动程序组（ igroup ）来指定哪些主机可以访问存储系统上的给定 LUN 。您可以使用 SnapCenter 在 Windows 主机上创建，重命名，修改或删除 igroup 。 
 ---
-= 创建和管理 igroup
+= 在 SnapCenter 中创建和管理 igroup
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 您可以创建启动程序组（ igroup ）来指定哪些主机可以
 
 
 
+[[create-an-igroup]]
 == 创建 igroup
 
 您可以使用 SnapCenter 在 Windows 主机上创建 igroup 。将 igroup 映射到 LUN 时，可以在创建磁盘或连接磁盘向导中使用此 igroup 。
@@ -72,6 +73,7 @@ SnapCenter 会在存储系统上创建 igroup 。
 
 
 
+[[rename-an-igroup]]
 == 重命名 igroup
 
 您可以使用 SnapCenter 重命名现有 igroup 。
@@ -87,6 +89,7 @@ SnapCenter 会在存储系统上创建 igroup 。
 
 
 
+[[modify-an-igroup]]
 == 修改 igroup
 
 您可以使用 SnapCenter 向现有 igroup 添加 igroup 启动程序。创建 igroup 时，只能添加一个主机。如果要为集群创建 igroup ，可以修改 igroup 以将其他节点添加到该 igroup 。
@@ -103,6 +106,7 @@ SnapCenter 会在存储系统上创建 igroup 。
 
 
 
+[[delete-an-igroup]]
 == 删除 igroup
 
 您可以使用 SnapCenter 删除不再需要的 igroup 。

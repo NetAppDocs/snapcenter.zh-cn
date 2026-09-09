@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 决定所需备份作业数量的因素包括资源大小，已用卷数，资源更改率以及您的服务级别协议 \ （ SLA\ ）。 
 ---
-= IBM DB2所需的备份作业数
+= 适用于 IBM Db2 的 SnapCenter 插件所需的备份作业数
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

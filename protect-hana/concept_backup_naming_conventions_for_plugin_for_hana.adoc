@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup naming conventions 
 summary: 您可以使用默认的Snapshot命名约定、也可以使用自定义的命名约定。默认备份命名约定会为Snapshot名称添加一个时间戳、以帮助您确定副本的创建时间。 
 ---
-= 适用于 SAP HANA 数据库的插件的备份命名约定
+= 适用于 SAP HANA 数据库的 SnapCenter 插件的备份命名约定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

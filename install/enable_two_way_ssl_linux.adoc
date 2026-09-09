@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,enable two-way ssL, windows host, one-way ssl 
 summary: 您可以使用PowerShell命令启用SSL通信、以确保Linux主机上的SnapCenter服务器与插件之间的相互通信安全。 
 ---
-= 在Linux主机上启用SSL通信
+= 在 SnapCenter Linux 主机上启用双向 SSL 通信
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

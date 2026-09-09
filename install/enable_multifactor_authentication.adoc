@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mfa, authentication, multifactor authentication 
 summary: SnapCenter 采用严格的安全性和身份验证功能，可确保数据安全。 
 ---
-= 管理多因素身份验证(MFA)
+= 在 SnapCenter 中管理多因素身份验证
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: SnapCenter 采用严格的安全性和身份验证功能，可确保数
 
 
 
+[[enable-multi-factor-authentication-mfa]]
 == 启用多因素身份验证(MFA)
 
 您可以使用PowerShell命令为SnapCenter服务器启用MFA功能。
@@ -120,6 +121,7 @@ path参数用于指定在SnapCenter 服务器主机中保存MFA元数据文件�
 
 
 
+[[update-ad-fs-mfa-metadata]]
 == 更新AD FS MFA元数据
 
 只要对AD FS服务器进行了任何修改、例如升级、CA证书续订、灾难恢复等、您就应在SnapCenter 中更新AD FS MFA元数据。
@@ -136,6 +138,7 @@ path参数用于指定在SnapCenter 服务器主机中保存MFA元数据文件�
 
 
 
+[[update-snapcenter-mfa-metadata]]
 == 更新SnapCenter MFA元数据
 
 只要在ADFS服务器中进行任何修改、例如修复、CA证书续订、DR等、您就应更新AD FS中的SnapCenter MFA元数据。
@@ -159,6 +162,7 @@ path参数用于指定在SnapCenter 服务器主机中保存MFA元数据文件�
 
 
 
+[[disable-multi-factor-authentication-mfa]]
 == 禁用多因素身份验证(MFA)
 
 .步骤

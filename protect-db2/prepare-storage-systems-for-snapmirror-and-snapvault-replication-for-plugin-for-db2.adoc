@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapmirror, snapvault, storage system, replication 
 summary: 您可以将 SnapCenter 插件与 ONTAP SnapMirror 和 SnapVault 技术结合使用 
 ---
-= 准备用于IBM DB2的SnapMirror和SnapVault复制的存储系统
+= SnapCenter 如何为存储系统准备 SnapMirror 和 SnapVault 复制
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

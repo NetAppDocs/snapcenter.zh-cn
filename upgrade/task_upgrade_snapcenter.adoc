@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, upgrade snapcenter server, windows 
 summary: 您可以使用 SnapCenter 服务器安装程序可执行文件升级 SnapCenter 服务器。 
 ---
-= 升级Windows主机上的SnapCenter服务器
+= 在 Windows 主机上升级 SnapCenter 服务器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

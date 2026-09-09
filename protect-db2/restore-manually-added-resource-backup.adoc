@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 您可以使用 SnapCenter 从一个或多个备份还原和恢复数据。 
 ---
-= 还原手动添加的资源备份
+= 使用 SnapCenter 还原手动添加的资源备份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

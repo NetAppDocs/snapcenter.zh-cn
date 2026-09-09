@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disks, create, manage, clustered disks, view 
 summary: Windows 主机将存储系统上的 LUN 视为虚拟磁盘。您可以使用 SnapCenter 创建和配置 FC 连接或 iSCSI 连接的 LUN 。 
 ---
-= 创建和管理磁盘
+= 在 SnapCenter 中创建和管理磁盘
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,6 +23,7 @@ NOTE: SnapCenter 不支持重命名磁盘。如果重命名由 SnapCenter 管理
 
 
 
+[[view-the-disks-on-a-host]]
 == 查看主机上的磁盘
 
 您可以查看使用 SnapCenter 管理的每个 Windows 主机上的磁盘。
@@ -39,6 +40,7 @@ NOTE: SnapCenter 不支持重命名磁盘。如果重命名由 SnapCenter 管理
 
 
 
+[[view-clustered-disks]]
 == 查看集群模式磁盘
 
 您可以查看使用 SnapCenter 管理的集群上的集群磁盘。只有在从主机下拉列表中选择集群时，才会显示集群磁盘。
@@ -55,6 +57,7 @@ NOTE: SnapCenter 不支持重命名磁盘。如果重命名由 SnapCenter 管理
 
 
 
+[[establish-an-iscsi-session]]
 == 建立 iSCSI 会话
 
 如果您使用 iSCSI 连接到 LUN ，则必须在创建 LUN 之前建立 iSCSI 会话以启用通信。
@@ -129,6 +132,7 @@ SnapCenter 将建立 iSCSI 会话。
 
 
 
+[[create-fc-connected-or-iscsi-connected-luns-or-disks]]
 == 创建 FC 连接或 iSCSI 连接的 LUN 或磁盘
 
 Windows 主机将存储系统上的 LUN 视为虚拟磁盘。您可以使用 SnapCenter 创建和配置 FC 连接或 iSCSI 连接的 LUN 。
@@ -359,6 +363,7 @@ SnapCenter 将创建 LUN 并将其连接到主机上的指定驱动器或驱动�
 
 
 
+[[resize-a-disk]]
 == 调整磁盘大小
 
 您可以根据存储系统需要的变化增加或减小磁盘大小。
@@ -398,6 +403,7 @@ SnapCenter 会调整磁盘大小。
 
 
 
+[[connect-a-disk]]
 == 连接磁盘
 
 您可以使用连接磁盘向导将现有 LUN 连接到主机，或者重新连接已断开连接的 LUN 。
@@ -580,6 +586,7 @@ SnapCenter 会将 LUN 连接到主机上的指定驱动器或驱动器路径。
 
 
 
+[[disconnect-a-disk]]
 == 断开磁盘连接
 
 您可以在不影响 LUN 内容的情况下将 LUN 与主机断开连接，但有一个例外：如果在拆分克隆之前断开克隆的连接，则克隆的内容将丢失。
@@ -613,6 +620,7 @@ SnapCenter 将断开磁盘连接。
 
 
 
+[[delete-a-disk]]
 == 删除磁盘
 
 您可以删除不再需要的磁盘。删除磁盘后，您将无法取消删除该磁盘。

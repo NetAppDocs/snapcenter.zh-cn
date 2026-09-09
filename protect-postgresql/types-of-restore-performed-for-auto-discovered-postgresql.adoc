@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: '对于自动发现的PostgreSQL集群、SnapCenter支持基于卷的SnapRestore \(VBSR\)、单文件SnapRestore以及连接和复制还原类型。' 
 ---
-= 自动发现的PostgreSQL的还原操作类型
+= 在 SnapCenter 中自动发现的 PostgreSQL 的还原类型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: '对于自动发现的PostgreSQL集群、SnapCenter支持基于卷的Sn
 
 
 
+[[single-file-snaprestore-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == 在以下情况下，在 NFS 环境中执行单个文件 SnapRestore ：
 
 * 如果仅选择了*完整资源*选项
@@ -23,6 +24,7 @@ summary: '对于自动发现的PostgreSQL集群、SnapCenter支持基于卷的Sn
 
 
 
+[[single-file-snaprestore-is-performed-in-san-environments-for-the-following-scenarios]]
 == 在以下情况下，在 SAN 环境中执行单个文件 SnapRestore ：
 
 * 如果仅选择了*完整资源*选项

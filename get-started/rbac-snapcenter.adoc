@@ -20,6 +20,7 @@ NOTE: SnapCenter不会创建用户或组帐户。在操作系统或数据库的 
 
 
 
+[[types-of-rbac-in-snapcenter]]
 == SnapCenter中的RBAC类型
 
 SnapCenter支持以下类型的基于角色的访问控制：
@@ -32,6 +33,7 @@ SnapCenter支持以下类型的基于角色的访问控制：
 
 
 
+[[snapcenter-rbac]]
 === SnapCenter RBAC
 
 SnapCenter具有预定义的角色，您可以将用户或组分配给这些角色。
@@ -55,6 +57,7 @@ NOTE: 创建自定义角色时，请确保它包含 SnapCenterAdmin 角色的所
 
 
 
+[[application-level-rbac]]
 === 应用程序级 RBAC
 
 SnapCenter 使用凭据验证授权的 SnapCenter 用户是否也具有应用程序级别的权限。
@@ -65,6 +68,7 @@ SnapCenter 使用凭据验证授权的 SnapCenter 用户是否也具有应用程
 
 
 
+[[snapcenter-plug-in-for-vmware-vsphere-rbac]]
 === 适用于 VMware vSphere RBAC 的 SnapCenter 插件
 
 如果您使用 SnapCenter VMware 插件进行 VM 一致的数据保护，则 vCenter Server 可提供额外级别的 RBAC 。SnapCenter VMware插件支持vCenter Server RBAC和ONTAP RBAC。 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["了解更多信息"^]
@@ -73,12 +77,14 @@ SnapCenter 使用凭据验证授权的 SnapCenter 用户是否也具有应用程
 
 
 
+[[ontap-permissions]]
 === ONTAP 权限
 
 您应该创建具有访问存储系统所需权限的 vsadmin 帐户。link:../install/task_add_a_user_or_group_and_assign_role_and_assets.html["了解更多信息"]
 
 
 
+[[permissions-assigned-to-the-pre-defined-snapcenter-roles]]
 == 分配给预定义SnapCenter角色的权限
 
 将用户添加到角色时，分配 StorageConnection 权限以启用存储虚拟机 (SVM) 通信，或者将 SVM 分配给用户以授予使用 SVM 的权限。存储连接权限允许用户创建 SVM 连接。
@@ -87,12 +93,14 @@ SnapCenter 使用凭据验证授权的 SnapCenter 用户是否也具有应用程
 
 
 
+[[snapcenter-admin-role]]
 === SnapCenter 管理员角色
 
 SnapCenter 管理员角色已启用所有权限。您不能修改此角色的权限。您可以将用户和组添加到角色或将其删除。
 
 
 
+[[app-backup-and-clone-admin-role]]
 === 应用程序备份和克隆管理员角色
 
 应用程序备份和克隆管理员角色具有为应用程序备份和克隆相关任务执行管理操作所需的权限。此角色不具有主机管理，配置，存储连接管理或远程安装的权限。
@@ -371,6 +379,7 @@ migration
 |===
 
 
+[[backup-and-clone-viewer-role]]
 === 备份和克隆查看器角色
 
 备份和克隆查看者角色具有所有权限的只读查看。此角色还具有发现、报告和访问仪表板的权限。
@@ -650,6 +659,7 @@ migration
 |===
 
 
+[[infrastructure-admin-role]]
 === 基础架构管理员角色
 
 基础架构管理员角色已启用主机管理，存储管理，配置，资源组，远程安装报告， 并访问信息板。

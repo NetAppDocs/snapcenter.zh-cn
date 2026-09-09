@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage hosts 
 summary: 您可以添加主机并安装 SnapCenter 插件软件包，添加验证服务器，删除主机，迁移备份作业以及更新主机以升级插件软件包或添加新插件软件包。根据您正在使用的插件，您还可以配置磁盘，管理 SMB 共享，管理启动程序组（ igroup\ ），管理 iSCSI 会话以及迁移数据。 
 ---
-= 管理主机
+= 在 SnapCenter 中管理主机
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -248,6 +248,7 @@ summary: 您可以添加主机并安装 SnapCenter 插件软件包，添加验�
 |===
 
 
+[[refresh-virtual-machine-information]]
 == 刷新虚拟机信息
 
 当 VMware vCenter 凭据发生更改或数据库或文件系统主机重新启动时，您应刷新虚拟机信息。在 SnapCenter 中刷新虚拟机信息可启动与 VMware vSphere vCenter 的通信并获取 vCenter 凭据。
@@ -265,6 +266,7 @@ NOTE: 基于 RDM 的磁盘由适用于 Microsoft Windows 的 SnapCenter 插件�
 
 
 
+[[modify-plug-in-hosts]]
 == 修改插件主机
 
 安装插件后，您可以根据需要修改插件主机详细信息。您可以修改适用于 Microsoft SQL Server 的 SnapCenter 插件，组托管服务帐户（ GMSA ）和插件端口的凭据，安装路径，插件和日志目录详细信息。
@@ -311,6 +313,7 @@ NOTE: 确保插件版本与 SnapCenter 服务器版本相同。
 
 
 
+[[start-or-restart-plug-in-services]]
 == 启动或重新启动插件服务
 
 通过启动 SnapCenter 插件服务，您可以在服务未运行时启动这些服务，或者在服务正在运行时重新启动这些服务。执行维护后，您可能需要重新启动服务。
@@ -330,6 +333,7 @@ NOTE: 确保插件版本与 SnapCenter 服务器版本相同。
 
 
 
+[[suspend-schedules-for-host-maintenance]]
 == 暂停主机维护计划
 
 如果要阻止主机运行任何 SnapCenter 计划作业，可以将主机置于维护模式。在升级插件之前或在主机上执行维护任务时，应执行此操作。

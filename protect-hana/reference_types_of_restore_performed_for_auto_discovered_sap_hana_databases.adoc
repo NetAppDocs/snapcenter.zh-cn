@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Databases 
 summary: 对于自动发现的 SAP HANA 数据库， SnapCenter 支持基于卷的 SnapRestore \ （ VBSR\ ），单个文件 SnapRestore 以及连接和复制还原类型。 
 ---
-= 自动发现的 SAP HANA 数据库的还原操作类型
+= 在 SnapCenter 中自动发现的 SAP HANA 数据库的还原操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 对于自动发现的 SAP HANA 数据库， SnapCenter 支持基于卷�
 
 
 
+[[volume-based-snaprestore-vbsr-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == 在以下情况下，可在 NFS 环境中执行基于卷的 SnapRestore （ VBSR ）：
 
 * 在 SnapCenter 4.3 之前的版本上选择进行还原的备份时，并且只有在选择了 "Complete Resource" 选项的情况下，才会执行此备份
@@ -23,6 +24,7 @@ summary: 对于自动发现的 SAP HANA 数据库， SnapCenter 支持基于卷�
 
 
 
+[[single-file-snaprestore-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == 在以下情况下，在 NFS 环境中执行单个文件 SnapRestore ：
 
 * 在 SnapCenter 4.3 中选择进行还原的备份时，如果仅选择了 * 完成资源 * 选项，则会显示此选项
@@ -32,6 +34,7 @@ summary: 对于自动发现的 SAP HANA 数据库， SnapCenter 支持基于卷�
 
 
 
+[[single-file-snaprestore-is-performed-in-san-environments-for-the-following-scenarios]]
 == 在以下情况下，在 SAN 环境中执行单个文件 SnapRestore ：
 
 * 在 SnapCenter 4.3 之前的版本上执行备份时，并且只有在选择了 * 完整资源 * 选项时才会执行备份
@@ -41,6 +44,7 @@ summary: 对于自动发现的 SAP HANA 数据库， SnapCenter 支持基于卷�
 
 
 
+[[connect-and-copy-based-restore-is-performed-in-san-environments-for-the-following-scenario]]
 == 在以下情况下，在 SAN 环境中执行基于连接和副本的还原：
 
 * 对于 MDC ，如果在 SnapCenter 4.3 中选择了要还原的备份，并且选择了 * 租户数据库 * 选项

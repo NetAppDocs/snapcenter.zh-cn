@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: 适用于MySQL的SnapCenter插件是NetApp SnapCenter软件的主机端组件、支持对MySQL数据库进行应用程序感知型数据保护管理。适用于MySQL数据库的插件可在SnapCenter环境中自动备份、还原和克隆MySQL数据库。 
 ---
-= 适用于MySQL的SnapCenter插件概述
+= 了解适用于 MySQL 的 SnapCenter 插件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

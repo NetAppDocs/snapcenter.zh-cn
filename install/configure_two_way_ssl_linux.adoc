@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,two-way ssl,configure two-way ssl, linux host 
 summary: 您应配置双向SSL通信、以确保Linux主机上的SnapCenter服务器与插件之间的相互通信安全。 
 ---
-= 在Linux主机上配置双向SSL通信
+= 在 SnapCenter Linux 主机上配置双向 SSL 通信
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

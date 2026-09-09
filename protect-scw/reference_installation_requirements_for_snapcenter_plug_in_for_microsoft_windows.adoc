@@ -26,6 +26,7 @@ SnapCenter 管理员角色必须具有管理员权限。
 
 
 
+[[host-requirements-to-install-snapcenter-plug-ins-package-for-windows]]
 == 安装适用于 Windows 的 SnapCenter 插件软件包的主机要求
 
 在安装适用于 Windows 的 SnapCenter 插件软件包之前，您应熟悉一些基本的主机系统空间要求和规模估算要求。
@@ -76,6 +77,7 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
 |===
 
 
+[[set-up-your-credentials-for-the-plug-in-for-windows]]
 == 设置适用于 Windows 的插件的凭据
 
 SnapCenter 使用凭据对 SnapCenter 操作的用户进行身份验证。您应创建用于安装 SnapCenter 插件的凭据，以及用于在 Windows 文件系统上执行数据保护操作的其他凭据。
@@ -145,6 +147,7 @@ Password
 
 
 
+[[configure-gmsa-on-windows-server-2016-or-later]]
 == 在 Windows Server 2016 或更高版本上配置 GMSA
 
 通过 Windows Server 2016 或更高版本，您可以创建组托管服务帐户（ GMSA ），以便从受管域帐户自动管理服务帐户密码。

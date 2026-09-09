@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, snapcenter server, plug-ins, workflow, upgrade path 
 summary: 介绍如何升级SnapCenter 服务器和插件以及支持的升级路径 
 ---
-= 升级工作流
+= SnapCenter 服务器升级工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ image::../media/upgrade_workflow.gif[升级工作流]
 
 
 
+[[supported-upgrade-paths]]
 == 支持的升级路径
 
 本节显示您可以从哪些SnapCenter版本升级以及支持哪些插件版本。

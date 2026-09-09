@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Database, back up, databases, Azure NetApp Files 
 summary: '从"Resourcs"页面备份资源。' 
 ---
-= 备份在Azure NetApp Files上运行的Oracle数据库
+= 使用 SnapCenter 备份 Azure NetApp Files 上的 Oracle 数据库
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

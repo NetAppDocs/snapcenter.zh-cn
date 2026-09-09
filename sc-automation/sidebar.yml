@@ -4,19 +4,19 @@ title: 使用 REST API 实现自动化
 entries:
 - title: REST API 概述
   url: "/sc-automation/overview_rest_apis.html"
-- title: 如何以本机方式访问 SnapCenter REST API
+- title: 对 SnapCenter REST API 的原生访问
   url: "/sc-automation/concept_how_to_access_snapcenter_rest_api_natively.html"
-- title: REST Web 服务基础
+- title: REST Web 服务基础，用于 SnapCenter
   url: "/sc-automation/concept_rest_web_services_foundation.html"
-- title: 基本操作特征
+- title: SnapCenter REST API 的基本操作特性
   url: "/sc-automation/concept_basic_operational_characteristics.html"
-- title: 控制 API 请求的输入变量
+- title: 控制 SnapCenter REST API 请求的输入变量
   url: "/sc-automation/concept_input_variables_controlling_an_api_request.html"
-- title: API 响应的解释
+- title: 解释 SnapCenter REST API 响应
   url: "/sc-automation/concept_interpreting_an_api_response.html"
 - title: SnapCenter 服务器和插件支持的REST API
   url: "/sc-automation/reference_supported_rest_apis.html"
-- title: 如何使用 Swagger API 网页访问 REST API
+- title: 通过 Swagger 网页访问 SnapCenter REST API
   url: "/sc-automation/task_how to_access_rest_apis_using_the_swagger_api_web_page.html"
-- title: 开始使用 REST API
+- title: 开始使用 SnapCenter REST API
   url: "/sc-automation/task_get_started_with_the_rest_api.html"

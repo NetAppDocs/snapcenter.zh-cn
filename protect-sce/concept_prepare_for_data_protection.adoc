@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Exchange Server 
 summary: 在执行备份，克隆或还原操作等任何数据保护操作之前，您必须定义策略并设置环境。您还可以设置 SnapCenter 服务器以使用 SnapMirror 和 SnapVault 技术。 
 ---
-= 准备数据保护
+= 适用于 Microsoft Exchange Server 的 SnapCenter 插件的数据保护前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,6 +21,7 @@ link:https://docs.netapp.com/us-en/ontap-automation/getting_started_with_the_res
 
 
 
+[[prerequisites-for-using-the-snapcenter-plug-in-for-microsoft-exchange-server]]
 == 使用适用于 Microsoft Exchange Server 的 SnapCenter 插件的前提条件
 
 在使用适用于 Exchange 的插件之前， SnapCenter 管理员必须安装和配置 SnapCenter 服务器并执行前提条件任务。
@@ -49,6 +50,7 @@ https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["适用于 VMware vSpher
 
 
 
+[[how-resources-resource-groups-and-policies-are-used-for-protecting-exchange-server]]
 == 如何使用资源，资源组和策略保护 Exchange Server
 
 在使用 SnapCenter 之前，了解与要执行的备份，还原和转义操作相关的基本概念非常有用。您可以与不同操作的资源，资源组和策略进行交互。

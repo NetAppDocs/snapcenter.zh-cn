@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, snapcenter software, install, linux host 
 summary: 您可以在Linux主机上安装SnapCenter服务器。 
 ---
-= 在Linux主机上安装SnapCenter服务器
+= 在 Linux 主机上安装 SnapCenter 服务器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -144,6 +144,7 @@ _webapp_External port_的默认值为8146
 
 
 
+[[features-enabled-on-linux-host-during-installation]]
 == 安装期间在Linux主机上启用的功能
 
 SnapCenter 服务器安装以下软件包，可帮助排除故障和维护主机系统。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, recover, Unix file systems 
 summary: 如果发生数据丢失、您可以使用SnapCenter还原数据。 
 ---
-= 还原Unix文件系统
+= 在 SnapCenter 中还原 UNIX 文件系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

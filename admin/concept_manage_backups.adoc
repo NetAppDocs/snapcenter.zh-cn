@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage backups 
 summary: 您可以重命名和删除备份。您也可以同时删除多个备份。 
 ---
-= 管理备份
+= 在 SnapCenter 中管理备份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 您可以重命名和删除备份。您也可以同时删除多个备�
 
 
 
+[[rename-backups]]
 == 重命名备份
 
 如果要提供更好的名称以提高可搜索性，您可以重命名备份。
@@ -40,6 +41,7 @@ summary: 您可以重命名和删除备份。您也可以同时删除多个备�
 
 
 
+[[delete-backups]]
 == 删除备份
 
 如果您不再需要备份来执行其他数据保护操作，则可以删除备份。
@@ -79,6 +81,7 @@ NOTE: 如果 SnapCenter 中有一些陈旧的数据库备份，而这些备份�
 
 
 
+[[remove-protection]]
 == 删除保护
 
 删除保护将删除所有备份并断开所有策略。在删除保护之前、您应确保未挂载备份、并且备份没有与任何克隆关联。

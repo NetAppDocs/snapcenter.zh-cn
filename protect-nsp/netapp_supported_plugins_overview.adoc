@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: 您可以为所使用的应用程序开发NetApp支持的插件、然后使用SnapCenter备份、还原或克隆这些应用程序。与其他SnapCenter插件一样、NetApp支持的插件也充当NetApp SnapCenter软件的主机端组件、从而实现应用程序感知型数据保护和资源管理。 
 ---
-= NetApp支持的插件概述
+= 了解 NetApp 支持的 SnapCenter 插件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

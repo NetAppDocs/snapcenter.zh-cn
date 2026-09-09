@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
 summary: SnapCenter 支持备份不同的 Oracle 数据库配置。 
 ---
-= 支持用于备份的 Oracle 数据库配置
+= SnapCenter 中支持备份的 Oracle 数据库配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

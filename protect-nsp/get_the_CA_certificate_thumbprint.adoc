@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, CA certificate 
 summary: 获取 CA 证书指纹。 
 ---
-= 获取 CA 证书指纹
+= 在 SnapCenter 中获取 CA 证书指纹
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

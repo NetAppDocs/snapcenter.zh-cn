@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 您必须使用 SnapCenter 添加主机页面添加主机，然后安装插件软件包。这些插件会自动安装在远程主机上。您可以为单个主机或集群添加主机并安装插件软件包。 
 ---
-= 添加主机并在远程主机上安装插件软件包
+= 在远程主机上添加主机并安装 SnapCenter PostgreSQL 插件包
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

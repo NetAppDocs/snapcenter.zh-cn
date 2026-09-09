@@ -19,6 +19,7 @@ SnapCenter 服务器可以通过精心设计的存储布局备份数据库，以
 
 
 
+[[lun-and-vmdk-requirements]]
 == LUN 和 VMDK 要求
 
 您可以选择使用专用 LUN 或 VMDK ，以便为以下数据库提供最佳性能和管理：
@@ -36,6 +37,7 @@ SnapCenter 服务器可以通过精心设计的存储布局备份数据库，以
 
 
 
+[[lun-and-vmdk-sample-layouts]]
 == LUN 和 VMDK 布局示例
 
 下图显示了如何为 LUN 上的大型数据库配置存储布局：

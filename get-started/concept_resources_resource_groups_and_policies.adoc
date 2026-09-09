@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource, resource group, policy 
 summary: 在使用 SnapCenter 之前，了解与要执行的备份，克隆和还原操作相关的基本概念非常有用。 
 ---
-= 数据保护的关键概念
+= SnapCenter 中的资源、资源组和策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,12 +15,14 @@ summary: 在使用 SnapCenter 之前，了解与要执行的备份，克隆和�
 
 
 
+[[resources]]
 == Resources
 
 资源包括使用SnapCenter备份或克隆的数据库、Windows文件系统或文件共享。根据您的环境、资源可能还包括数据库实例、SQL Server可用性组、Oracle数据库、RAC数据库或自定义应用程序组。
 
 
 
+[[resource-group]]
 == Resource group
 
 资源组是主机或集群上的一组资源、可能来自多个主机和集群。根据指定的计划、对资源组执行的操作将应用于其所有资源。您可以对单个资源或组执行按需或计划备份。
@@ -32,6 +34,7 @@ NOTE: 如果共享资源组中的一台主机进入维护模式、则该组的�
 
 
 
+[[policies]]
 == 策略
 
 策略用于指定数据保护操作的备份频率、副本保留、复制、脚本和其他特征。
@@ -46,18 +49,21 @@ NOTE: 如果共享资源组中的一台主机进入维护模式、则该组的�
 
 
 
+[[consistency-group-cg]]
 == 一致性组（CG）
 
 一致性组是作为单个单元进行管理的卷的集合。 CG 同步以确保跨存储单元和卷的数据一致性。在ONTAP中，它们为跨多个卷的应用程序工作负载提供了轻松的管理和保护保障。详细了解link:https://docs.netapp.com/us-en/ontap/consistency-groups["一致性组"^] 。
 
 
 
+[[usage-of-prescripts-and-postscripts]]
 == 前处理脚本和后处理脚本的使用
 
 自定义的前处理脚本和后处理脚本可以在作业之前或之后自动执行数据保护任务。例如、您可以添加一个脚本、用于在作业失败或出现警告时向您发出通知。在设置这些脚本之前、请确保您了解这些脚本的要求。
 
 
 
+[[supported-script-types]]
 === 支持的脚本类型
 
 Windows支持以下类型的脚本：
@@ -80,6 +86,7 @@ NOTE: 除了默认的bash shell之外、还支持其他shell、例如sh-shell、
 
 
 
+[[script-path]]
 === 脚本路径
 
 在非虚拟化和虚拟化存储系统上作为SnapCenter操作的一部分运行的所有前处理脚本和后处理脚本都在插件主机上执行。
@@ -98,6 +105,7 @@ NOTE: 脚本路径会在执行时进行验证。
 
 
 
+[[where-to-specify-scripts]]
 === 指定脚本的位置
 
 脚本在备份策略中指定。备份作业启动时、策略会自动将脚本与要备份的资源关联起来。创建备份策略时，您可以指定 prestpt 和 postScript 参数。
@@ -107,12 +115,14 @@ NOTE: 您不能指定多个脚本。
 
 
 
+[[script-timeouts]]
 === 脚本超时
 
 默认情况下、超时设置为60秒。您可以修改超时值。
 
 
 
+[[script-output]]
 === 脚本输出
 
 Windows预处理和后处理脚本输出文件的默认目录为Windows\System32。

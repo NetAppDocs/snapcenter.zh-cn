@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, workflow 
 summary: 还原工作流包括规划，执行还原操作和监控操作。 
 ---
-= 还原工作流
+= SnapCenter 中的 Oracle 数据库恢复工作流
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

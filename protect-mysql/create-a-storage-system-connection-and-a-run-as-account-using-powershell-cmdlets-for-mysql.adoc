@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: '在使用PowerShell cmdlet备份、还原或克隆MySQL数据库之前、您必须先创建Storage Virtual Machine (SVM)连接和凭据。' 
 ---
-= 使用适用于MySQL的PowerShell cmdlet创建存储系统连接和凭据
+= 使用 SnapCenter PowerShell cmdlet 为 MySQL 创建存储系统连接和凭据
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

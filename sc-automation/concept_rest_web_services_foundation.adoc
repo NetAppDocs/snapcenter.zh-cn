@@ -4,7 +4,7 @@ permalink: sc-automation/concept_rest_web_services_foundation.html
 keywords: uri endpoints, http messages, json format 
 summary: REST 是一种用于创建分布式 Web 应用程序的模式。在设计 Web 服务 API 时，它会建立一组技术和最佳实践，用于公开基于服务器的资源并管理其状态。它使用主流协议和标准为管理 SnapCenter 提供了灵活的基础。 
 ---
-= REST Web 服务基础
+= REST Web 服务基础，用于 SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,24 +15,28 @@ summary: REST 是一种用于创建分布式 Web 应用程序的模式。在设�
 
 
 
+[[resources-and-state-representation]]
 == 资源和状态表示
 
 资源是基于 Web 的系统的基本组件。创建 REST Web 服务应用程序时，早期设计任务包括：
 
 
 
+[[identification-of-system-or-server-based-resources]]
 === 识别系统或基于服务器的资源
 
 每个系统都使用和维护资源。资源可以是文件，业务事务，流程或管理实体。在设计基于 REST Web 服务的应用程序时，首先要完成的任务之一是识别资源。
 
 
 
+[[definition-of-resource-states-and-associated-state-operations]]
 === 资源状态和关联状态操作的定义
 
 资源始终处于数量有限的状态之一。应明确定义状态以及用于影响状态更改的关联操作。
 
 
 
+[[uri-endpoints]]
 == URI 端点
 
 必须使用定义明确的寻址方案定义和提供每个 REST 资源。资源所在的端点和标识的端点使用统一资源标识符（ Uniform Resource Identifier ， URI ）。
@@ -41,6 +45,7 @@ URI 提供了一个通用框架，用于为网络中的每个资源创建唯一�
 
 
 
+[[http-messages]]
 == HTTP 消息
 
 超文本传输协议（ HTTP ）是 Web 服务客户端和服务器用来交换有关资源的请求和响应消息的协议。
@@ -49,6 +54,7 @@ URI 提供了一个通用框架，用于为网络中的每个资源创建唯一�
 
 
 
+[[json-formatting]]
 == JSON 格式化
 
 虽然信息可以通过多种方式在 Web 服务客户端和服务器之间进行结构化和传输，但最受欢迎的选项是 JavaScript 对象表示法（ JSON ）。

@@ -15,6 +15,7 @@ summary: 您应了解支持的存储系统，应用程序和数据库。
 
 
 
+[[supported-storage-systems]]
 == 支持的存储系统
 
 * NetApp ONTAP 9.12.1及更高版本
@@ -34,6 +35,7 @@ Amazon FSx for NetApp ONTAP支持通过传输控制协议 (TCP) 实现的非易�
 
 
 
+[[supported-applications-and-databases]]
 == 支持的应用程序和数据库
 
 SnapCenter支持不同应用程序和数据库的保护。

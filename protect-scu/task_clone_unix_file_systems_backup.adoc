@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: alternate host, clone, Unix file systems, file systems 
 summary: 您可以使用SnapCenter通过文件系统备份克隆Unix文件系统数据库。 
 ---
-= 克隆Unix文件系统备份
+= 使用 SnapCenter 克隆 UNIX 文件系统备份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

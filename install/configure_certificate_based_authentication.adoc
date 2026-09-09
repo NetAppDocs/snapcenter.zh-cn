@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: exporting certificates, enable certificate-based authentication, certificate-based authentication, configure CA signed key pair, configure root, configure intermediate certificates, security,authentication, export CA certificates 
 summary: 导出 SnapCenter 证书。 
 ---
-= 配置基于证书的身份验证
+= 配置 SnapCenter 的基于证书的身份验证
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 导出 SnapCenter 证书。
 
 
 
+[[enable-certificate-based-authentication]]
 == 启用基于证书的身份验证
 
 要为SnapCenter服务器和Windows插件主机启用基于证书的身份验证、请运行以下PowerShell cmdlet。  对于Linux插件主机、启用双向SSL后、将启用基于证书的身份验证。
@@ -31,6 +32,7 @@ summary: 导出 SnapCenter 证书。
 
 
 
+[[export-certificate-authority-ca-certificates-from-snapcenter-server]]
 == 从SnapCenter服务器导出证书颁发机构(CA)证书
 
 您应使用Microsoft管理控制台(MMC)将CA证书从SnapCenter服务器导出到插件主机。
@@ -84,6 +86,7 @@ NOTE: SnapCenter HA配置和适用于VMware vSphere的SnapCenter插件不支持�
 
 
 
+[[import-ca-certificate-to-the-windows-plug-in-hosts]]
 == 将CA证书导入到Windows插件主机
 
 要使用导出的SnapCenter服务器CA证书、应使用Microsoft管理控制台(MMC)将相关证书导入到SnapCenter Windows插件主机。
@@ -131,6 +134,7 @@ NOTE: SnapCenter HA配置和适用于VMware vSphere的SnapCenter插件不支持�
 |===
 
 
+[[import-ca-certificate-to-the-unix-plug-in-hosts]]
 == 将CA证书导入到UNIX插件主机
 
 您应将CA证书导入到UNIX插件主机中。
@@ -154,6 +158,7 @@ NOTE: SnapCenter HA配置和适用于VMware vSphere的SnapCenter插件不支持�
 
 
 
+[[configure-root-or-intermediate-certificates-to-spl-trust-store]]
 === 配置根证书或中间证书以 SPL 信任存储
 
 您应将根证书或中间证书配置为SPL信任存储库。您应先添加根 CA 证书，然后再添加中间 CA 证书。
@@ -171,6 +176,7 @@ NOTE: SnapCenter HA配置和适用于VMware vSphere的SnapCenter插件不支持�
 
 
 
+[[configure-ca-signed-key-pair-to-spl-trust-store]]
 === 将 CA 签名密钥对配置为 SPL 信任存储
 
 您应将CA签名密钥对配置为SPL信任存储库。
@@ -202,6 +208,7 @@ NOTE: SnapCenter HA配置和适用于VMware vSphere的SnapCenter插件不支持�
 
 
 
+[[export-snapcenter-certificates]]
 == 导出 SnapCenter 证书
 
 您应以.pfx格式导出SnapCenter证书。

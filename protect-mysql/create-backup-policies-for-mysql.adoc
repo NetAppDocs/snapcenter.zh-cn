@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: 在使用SnapCenter备份MySQL数据库资源之前、您必须为要备份的资源或资源组创建一个备份策略。备份策略是一组规则，用于控制如何管理，计划和保留备份。 
 ---
-= 为MySQL创建备份策略
+= 使用 SnapCenter 为 MySQL 创建备份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup types, cloning type, clone name, limitations 
 summary: 在克隆数据库之前定义策略可确保克隆操作成功。 
 ---
-= 为 Oracle 数据库定义克隆策略
+= 了解 SnapCenter 中 Oracle 数据库的克隆策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 在克隆数据库之前定义策略可确保克隆操作成功。
 
 
 
+[[types-of-backups-supported-for-cloning]]
 == 支持克隆的备份类型
 
 SnapCenter 支持克隆 Oracle 数据库的不同类型的备份。
@@ -37,6 +38,7 @@ NOTE: 不支持克隆归档日志备份。
 
 
 
+[[types-of-cloning-supported-for-oracle-databases]]
 == Oracle 数据库支持的克隆类型
 
 在 Oracle 数据库环境中， SnapCenter 支持克隆数据库备份。您可以从主存储系统和二级存储系统克隆备份。
@@ -50,6 +52,7 @@ NOTE: 只能使用 UNIX 命令执行克隆刷新操作。
 
 
 
+[[clone-naming-conventions-for-oracle-databases]]
 == Oracle 数据库的克隆命名约定
 
 从 SnapCenter 3.0 开始，文件系统克隆所使用的命名约定与 ASM 磁盘组克隆不同。
@@ -63,6 +66,7 @@ HASHCODEofDISKGROUP 是一个自动生成的数字（ 2 到 10 位数），对�
 
 
 
+[[limitations-of-cloning-oracle-databases]]
 == 克隆 Oracle 数据库的限制
 
 在克隆数据库之前，您应了解克隆操作的限制。

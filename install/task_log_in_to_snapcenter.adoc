@@ -92,6 +92,7 @@ Username
 
 
 
+[[log-in-to-snapcenter-using-multi-factor-authentication-mfa]]
 == 使用多因素身份验证(Multi-Factor Authentication、MFA)登录到SnapCenter
 
 SnapCenter 服务器支持将MFA用于域帐户、此帐户属于活动目录。
@@ -125,6 +126,7 @@ SnapCenter 服务器支持将MFA用于域帐户、此帐户属于活动目录。
 
 
 
+[[modify-the-snapcenter-default-gui-session-timeout]]
 == 修改 SnapCenter 默认 GUI 会话超时
 
 您可以修改 SnapCenter 图形用户界面会话超时期限，使其小于或大于默认超时期限 20 分钟。
@@ -140,6 +142,7 @@ SnapCenter 服务器支持将MFA用于域帐户、此帐户属于活动目录。
 
 
 
+[[secure-the-snapcenter-web-server-by-disabling-ssl-3-0]]
 == 通过禁用 SSL 3.0 来保护 SnapCenter Web 服务器的安全
 
 出于安全考虑，如果在 SnapCenter Web 服务器上启用了安全套接字层（ SSL ） 3.0 协议，则应在 Microsoft IIS 中禁用该协议。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for UNIX file systems, discovery,file systems, UNIX, Unix file systems 
 summary: '安装适用于Unix文件系统的插件后、系统会自动发现主机上的文件系统、并将其显示在"ResResu材料"页面中。' 
 ---
-= 发现可供备份的UNIX文件系统
+= 发现可在 SnapCenter 中备份的 UNIX 文件系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

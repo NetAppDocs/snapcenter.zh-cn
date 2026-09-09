@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: SnapCenter 如何发现Oracle数据库。 
 ---
-= 如何使用 Oracle Recovery Manager 对备份进行目录编制
+= SnapCenter 如何使用 Oracle RMAN 编录备份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,12 +21,14 @@ summary: SnapCenter 如何发现Oracle数据库。
 
 
 
+[[external-catalog-database]]
 == 外部目录数据库
 
 默认情况下，目标数据库控制文件用于目录编制。如果要添加外部目录数据库，可以通过在 SnapCenter 图形用户界面（ GUI ）中使用数据库设置向导指定外部目录的凭据和透明网络基线（ Network Substrate ， TNS ）名称来对其进行配置。此外，您还可以从命令行界面使用 -OracleRmanCatalogCredentialName 和 -OracleRmanCatalogTnsName 选项运行 Configure-SmOracleDatabase 命令来配置外部目录数据库。
 
 
 
+[[rman-command]]
 == RMAN命令
 
 如果在从 SnapCenter 图形用户界面创建 Oracle 备份策略时启用了编目选项，则在备份操作中会使用 Oracle RMAN 对备份进行编目。您还可以通过运行来执行延迟备份编目 `Catalog-SmBackupWithOracleRMAN` 命令：
@@ -35,6 +37,7 @@ summary: SnapCenter 如何发现Oracle数据库。
 
 
 
+[[naming-format]]
 == 命名格式
 
 如果 ASM 磁盘组名称大于或等于 16 个字符，则从 SnapCenter 3.0 开始，用于备份的命名格式为 SC_HASHCODEofDISKGROUP_DBSID_BACKUPID 。但是，如果磁盘组名称少于 16 个字符，则用于备份的命名格式为 DISKGROUPNAME_DBSID_BACKUPID ，此格式与 SnapCenter 2.0 中使用的格式相同。
@@ -43,6 +46,7 @@ HASHCODEofDISKGROUP 是为每个 ASM 磁盘组自动生成的唯一数字（ 2 �
 
 
 
+[[crosscheck-operations]]
 == 交叉检查操作
 
 您可以执行交叉检查来更新有关存储库记录与其物理状态不匹配的备份的过时 RMAN 存储库信息。例如，如果用户使用操作系统命令从磁盘中删除归档日志，则控制文件仍会指示这些日志位于磁盘上，而实际上不在磁盘上。
@@ -53,6 +57,7 @@ HASHCODEofDISKGROUP 是为每个 ASM 磁盘组自动生成的唯一数字（ 2 �
 
 
 
+[[remove-catalog-information]]
 == 删除目录信息
 
 您可以运行 Uncatalog -SmBackupWithOracleRMAN 命令来删除目录信息。您不能使用 SnapCenter 图形用户界面删除目录信息。但是，在删除备份或删除与该已编目备份关联的保留和资源组时，会删除已编目备份的信息。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unix file systems, resource group, policy 
 summary: 资源组是一个容器、您可以在其中添加要备份和保护的资源。 
 ---
-= 为Unix文件系统创建资源组并附加策略
+= 在 SnapCenter 中为 UNIX 文件系统创建资源组并附加策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -29,6 +29,7 @@ NOTE: 您无需在SnapCenter用户界面中输入基于SnapCenter控制器的许
 
 
 
+[[step-1-verify-if-the-snapmanager-suite-license-is-installed]]
 == 第1步：验证是否已安装SnapManager 套件许可证
 
 您可以使用SnapCenter用户界面检查FAS、 AFF或ASA主存储系统上是否安装了SnapManager Suite 许可证，并确定哪些系统需要许可证。  SnapManager Suite 许可证仅适用于主存储系统上的FAS、 AFF和ASA SVM 或集群。
@@ -61,6 +62,7 @@ NOTE: 如果您的控制器上已有SnapManager Suite 许可证， SnapCenter会
 
 
 
+[[step-2-identify-the-licenses-installed-on-the-controller]]
 == 第2步：确定控制器上安装的许可证
 
 您可以使用 ONTAP 命令行查看控制器上安装的所有许可证。您应该是FAS、AFF或ASA系统的集群管理员。
@@ -108,6 +110,7 @@ SnapManagerSuite  license  SnapManagerSuite License -
 
 
 
+[[step-3-retrieve-the-controller-serial-number]]
 == 第3步：检索控制器序列号
 
 使用ONTAP命令行获取控制器序列号。您必须是FAS、 AFF或ASA系统上的集群管理员才能获取基于控制器的许可证序列号。
@@ -160,6 +163,7 @@ All-Flash Optimized: false
 
 
 
+[[step-4-retrieve-the-serial-number-of-the-controller-based-license]]
 == 第4步：检索基于控制器的许可证的序列号
 
 如果您使用的是FAS、 ASA或AFF存储，则可以先从NetApp支持站点检索基于SnapCenter控制器的许可证，然后再使用ONTAP命令行进行安装。
@@ -187,6 +191,7 @@ image::../media/nss_controller_license_select.gif[选择条件和序列号输入
 
 
 
+[[step-5-add-controller-based-license]]
 == 第5步：添加基于控制器的许可证
 
 如果您使用的是FAS、AFF或ASA系统、并且拥有SnapCenter标准版或SnapManagerSuite许可证、则可以使用ONTAP命令行添加基于SnapCenter控制器的许可证。
@@ -218,6 +223,7 @@ image::../media/nss_controller_license_select.gif[选择条件和序列号输入
 
 
 
+[[step-6-remove-the-trial-license]]
 == 第6步：删除试用许可证
 
 如果您正在使用基于控制器的SnapCenter标准许可证，并且需要删除基于容量的试用许可证（序列号以“50”结尾），则应使用 MySQL 命令手动删除试用许可证。无法使用SnapCenter用户界面删除试用许可证。

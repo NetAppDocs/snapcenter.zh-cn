@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, snapcenter software, install wizard, features enabled 
 summary: 您可以运行 SnapCenter 服务器安装程序可执行文件来安装 SnapCenter 服务器。 
 ---
-= 在Windows主机上安装SnapCenter服务器
+= 在 Windows 主机上安装 SnapCenter 服务器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -66,6 +66,7 @@ NOTE: 如果单击 * 取消 * 按钮，则正在执行的步骤将完成，然�
 
 
 
+[[features-enabled-on-windows-host-during-installation]]
 == 安装期间在 Windows 主机上启用的功能
 
 SnapCenter 服务器安装程序可在安装期间在 Windows 主机上启用 Windows 功能和角色。这些可能对故障排除和维护主机系统有用。

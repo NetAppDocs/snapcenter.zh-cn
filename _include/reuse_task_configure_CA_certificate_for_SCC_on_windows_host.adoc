@@ -8,6 +8,7 @@
 
 
 
+[[manage-password-for-plug-in-keystore-and-alias-of-the-ca-signed-key-pair-in-use]]
 == 管理插件密钥库的密码以及正在使用的 CA 签名密钥对的别名
 
 .步骤
@@ -42,6 +43,7 @@ NOTE: 插件密钥库的密码和所有相关私钥别名的密码应该相同�
 
 
 
+[[configure-root-or-intermediate-certificates-to-plug-in-trust-store]]
 == 配置根证书或中间证书以插入信任库
 
 您应该配置没有私钥的根证书或中间证书来插入信任库。
@@ -65,6 +67,7 @@ NOTE: 您应先添加根 CA 证书，然后再添加中间 CA 证书。
 
 
 
+[[configure-ca-signed-key-pair-to-plug-in-trust-store]]
 == 配置 CA 签名密钥对以插入信任库
 
 您应该将 CA 签名的密钥对配置到插件信任库中。
@@ -101,6 +104,7 @@ _keytool -keypasswd -alias "alias_name_in_CA_ct" -keystore keystore.jks_
 
 
 
+[[configure-certificate-revocation-list-crl-for-snapcenter-plug-ins]]
 == 为 SnapCenter 插件配置证书吊销列表 (CRL)
 
 .关于此任务

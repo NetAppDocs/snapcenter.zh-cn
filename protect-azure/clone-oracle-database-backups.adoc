@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Database, clone, database, backups. split clone, pluggable database 
 summary: 您可以使用 SnapCenter 克隆备份。 
 ---
-= 克隆Oracle数据库备份
+= 使用 SnapCenter 克隆 Oracle 数据库备份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -59,6 +59,7 @@ summary: 您可以使用 SnapCenter 克隆备份。
 
 
 
+[[clone-a-pluggable-database]]
 == 克隆可插拔数据库
 
 您可以将可插拔数据库（ PDB ）克隆到同一主机或备用主机上的其他或相同目标 CDB 。您还可以将克隆的 PDB 恢复到所需的 SCN 或日期和时间。

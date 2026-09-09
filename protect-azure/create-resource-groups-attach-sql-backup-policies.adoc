@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups, attach policies, snapcenter, sql, backup polices, schedule 
 summary: 资源组是指必须向其添加要备份和保护的资源的容器。 
 ---
-= 创建资源组并附加SQL备份策略
+= 创建 SnapCenter 资源组并附加 SQL Server 备份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 适用于IBM DB2的SnapCenter插件是NetApp SnapCenter软件的主机端组件、用于对IBM DB2数据库进行应用程序感知型数据保护管理。适用于IBM DB2数据库的插件可自动备份、还原和克隆SnapCenter环境中的IBM DB2数据库。 
 ---
-= 适用于IBM DB2的SnapCenter插件概述
+= 了解适用于 IBM Db2 的 SnapCenter 插件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

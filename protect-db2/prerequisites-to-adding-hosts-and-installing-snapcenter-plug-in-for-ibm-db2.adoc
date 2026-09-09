@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials, Windows, Linux, AIX 
 summary: 在添加主机并安装插件软件包之前，您必须满足所有要求。适用于IBM DB2的SnapCenter插件在Windows、Linux和AIX环境中受支持。 
 ---
-= 添加主机和安装适用于Windows、Linux或AIX的插件软件包的前提条件
+= 添加主机并安装适用于 IBM Db2 的 SnapCenter 插件的先决条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,6 +25,7 @@ NOTE: IBM Java 在 Windows 和 Linux 主机上不受支持。
 
 
 
+[[windows-hosts]]
 == Windows 主机
 
 * 您必须具有具有本地管理员权限的域用户，并在远程主机上具有本地登录权限。
@@ -38,6 +39,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["下载适用于
 
 
 
+[[linux-and-aix-hosts]]
 == Linux和AIX主机
 
 * 您必须已为 root 用户或非 root 用户启用基于密码的 SSH 连接。
@@ -54,6 +56,7 @@ link:https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license
 
 
 
+[[supplemental-commands]]
 == 补充命令
 
 要在适用于IBM DB2的SnapCenter插件上运行补充命令、必须将其包含在_ALLOED_commands.config_文件中。
@@ -87,6 +90,7 @@ NOTE: 不应使用通配符条目(*)来允许所有命令。
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-linux-host]]
 == 为 Linux 主机的非 root 用户配置 sudo 权限
 
 SnapCenter允许非root用户安装适用于Linux的SnapCenter插件软件包并启动插件进程。此插件进程将以有效的非root用户身份运行。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。
@@ -168,6 +172,7 @@ IMPORTANT: 此示例只能用作创建自己数据的参考。
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-aix-host]]
 == 为 AIX 主机的非 root 用户配置 sudo 权限
 
 通过 SnapCenter 4.4 及更高版本，非 root 用户可以安装适用于 AIX 的 SnapCenter 插件软件包并启动插件过程。此插件进程将以有效的非root用户身份运行。您应为非 root 用户配置 sudo 权限，以提供对多个路径的访问权限。

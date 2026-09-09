@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, storage system, 
 summary: 通过将数据从旧存储移至新存储、将新存储挂载到相应主机、然后启动数据库来执行存储系统技术更新。 
 ---
-= 存储系统技术更新
+= 在 SnapCenter 中执行存储系统的技术刷新
 :allow-uri-read: 
 
 
@@ -33,6 +33,7 @@ summary: 通过将数据从旧存储移至新存储、将新存储挂载到相�
 
 
 
+[[update-the-backups-of-the-primary-storage]]
 == 更新主存储的备份
 
 在对存储进行技术更新后、您应运行存储技术刷新API或cmdlet、以便使用新的存储详细信息更新SnapCenter中的旧备份。
@@ -104,6 +105,7 @@ NOTE: 无法在ONTAP中迁移克隆层次结构。如果要迁移的存储在Sna
 
 
 
+[[update-the-backups-of-the-secondary-storage]]
 == 更新二级存储的备份
 
 在对存储进行技术更新后、您应运行存储技术刷新API或cmdlet、以便使用新的存储详细信息更新SnapCenter中的旧备份。

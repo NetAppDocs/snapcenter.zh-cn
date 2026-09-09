@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: audit, log, configure 
 summary: 您可以配置以记录软件平台以及这些平台上运行的所有软件的安全事件。 
 ---
-= 配置审核日志设置
+= 在 SnapCenter 中配置审核日志设置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

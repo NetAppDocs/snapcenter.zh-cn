@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore and recovery strategy, postgresql resources, snapcenter 
 summary: 在还原和恢复集群之前、您必须定义一个策略、以便成功执行还原和恢复操作。 
 ---
-= 为PostgreSQL资源定义还原和恢复策略
+= 在 SnapCenter 中定义 PostgreSQL 的还原和恢复策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

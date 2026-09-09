@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, SnapCenter Server, cmdlet, APIs, F5, rollback, decommission, disaster recovery, standalone 
 summary: 在新主机上安装相同版本的SnapCenter服务器、然后运行API或执行cmdlet从旧服务器备份SnapCenter并将其还原到新服务器上。 
 ---
-= SnapCenter服务器主机技术更新
+= 对 SnapCenter 服务器主机执行技术刷新
 :allow-uri-read: 
 
 
@@ -55,6 +55,7 @@ NOTE: 如果已手动更新旧SnapCenter主机中的web.config文件、则更新
 
 
 
+[[tech-refresh-of-a-node-in-f5-cluster]]
 == F5集群中节点的技术更新
 
 您可以通过删除F5集群中的任何节点并添加新节点来对该节点进行技术更新。如果需要刷新的节点处于活动状态、请将集群中的另一个节点设置为活动状态、然后删除该节点。
@@ -66,22 +67,26 @@ NOTE: 如果F5集群的URL发生更改、则可以使用API：或cmdlet：_set-S
 
 
 
+[[decommissioning-the-old-snapcenter-server-host]]
 == 停用旧SnapCenter服务器主机
 
 您可以在验证新SnapCenter服务器是否已启动且正在运行、并且所有插件主机均可与新SnapCenter服务器主机通信之后删除旧的SnapCenter服务器主机。
 
 
 
+[[rollback-to-the-old-snapcenter-server-host]]
 == 回滚到旧的SnapCenter服务器主机
 
 如果出现任何问题、您可以通过使用API：或cmdlet：_Set-SmServerConfig_更新所有主机中的SnapCenter服务器URL来恢复旧的SnapCenter服务器主机 `/<snapcenter_version>/server/configureurl` 。
 
 
 
+[[disaster-recovery]]
 == 灾难恢复
 
 
 
+[[disaster-recovery-of-standalone-snapcenter-host]]
 === 对独立SnapCenter主机进行灾难恢复
 
 您可以通过将服务器备份还原到新主机来执行灾难恢复。
@@ -115,6 +120,7 @@ NOTE: 服务器_/etc/host_条目将不会还原。您可以从旧服务器手动
 
 
 
+[[disaster-recovery-of-snapcenter-f5-cluster]]
 === 对SnapCenter F5集群进行灾难恢复
 
 您可以通过将服务器备份还原到新主机、然后将独立主机转换为集群来执行灾难恢复。

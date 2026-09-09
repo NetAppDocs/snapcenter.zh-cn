@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, CA certificate 
 summary: 导入 SnapCenter 服务器和 Windows 主机插件的 CA 证书 
 ---
-= 导入 CA 证书
+= 将CA证书导入到 SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

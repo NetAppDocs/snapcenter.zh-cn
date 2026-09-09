@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: environment variable, predefined, prescript, postscript, backup, policy 
 summary: 通过 SnapCenter ，您可以在创建备份策略时执行预处理和后处理脚本时使用预定义的环境变量。 
 ---
-= 用于备份特定的预处理和后处理的预定义环境变量
+= SnapCenter 用于备份的预处理脚本和后处理脚本环境变量
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ SnapCenter 预先定义了可在执行 shell 脚本的环境中直接访问的�
 
 
 
+[[supported-predefined-environment-variables-for-creating-backup-policy]]
 == 支持用于创建备份策略的预定义环境变量
 
 * * 。 sc_job_ID* 指定操作的作业 ID 。
@@ -232,6 +233,7 @@ SnapCenter 预先定义了可在执行 shell 脚本的环境中直接访问的�
 
 
 
+[[supported-delimiters]]
 == 支持的分隔符
 
 * * ： * 用于分隔 SVM 名称和卷名称

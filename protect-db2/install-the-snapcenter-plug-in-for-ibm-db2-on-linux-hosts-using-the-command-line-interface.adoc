@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, SnapCenter Plug-in for IBM Db2 
 summary: '您应使用SnapCenter用户界面(UI)安装适用于IBM DB2数据库的SnapCenter插件。如果您的环境不允许从SnapCenter UI远程安装插件、则可以使用命令行界面(CLI1)在控制台模式或静默模式下安装适用于IBM DB2数据库的插件。' 
 ---
-= 使用命令行界面在Linux主机上安装适用于IBM DB2的SnapCenter插件
+= 使用 CLI 在 Linux 主机上安装适用于 IBM Db2 的 SnapCenter 插件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

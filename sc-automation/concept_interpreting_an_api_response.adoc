@@ -4,7 +4,7 @@ permalink: sc-automation/concept_interpreting_an_api_response.html
 keywords: http status code, error code 
 summary: 每个 API 请求都会生成对客户端的响应。您应检查响应以确定其是否成功，并根据需要检索其他数据。 
 ---
-= API 响应的解释
+= 解释 SnapCenter REST API 响应
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 每个 API 请求都会生成对客户端的响应。您应检查响应
 
 
 
+[[http-status-code]]
 == HTTP 状态代码
 
 下面介绍了 SnapCenter REST API 使用的 HTTP 状态代码。
@@ -54,66 +55,77 @@ summary: 每个 API 请求都会生成对客户端的响应。您应检查响应
 |===
 
 
+[[response-headers]]
 == 响应标头
 
 SnapCenter 生成的 HTTP 响应包含多个标头。
 
 
 
+[[location]]
 === 位置
 
 创建对象时，位置标头包含新对象的完整 URL ，包括分配给该对象的唯一标识符。
 
 
 
+[[content-type]]
 === 内容类型
 
 通常为 `application/json` 。
 
 
 
+[[response-body]]
 == 响应正文
 
 API 请求生成的响应正文内容因对象，处理类型以及请求的成功或失败而异。响应始终在 JSON 中呈现。
 
 
 
+[[single-object]]
 === 单个对象
 
 可以根据请求返回一个对象并显示一组字段。例如，您可以使用 GET 使用唯一标识符检索集群的选定属性。
 
 
 
+[[multiple-objects]]
 === 多个对象
 
 可以从一个资源收集返回多个对象。在所有情况下，都会使用一致的格式，其中 `num_records` 表示包含对象实例数组的记录和记录的数量。例如，您可以检索特定集群中定义的节点。
 
 
 
+[[job-object]]
 === 作业对象
 
 如果异步处理 API 调用，则会返回作业对象，用于将后台任务固定。例如，用于更新集群配置的修补程序请求会异步处理并返回一个作业对象。
 
 
 
+[[error-object]]
 === 错误对象
 
 如果发生错误，则始终返回 Error 对象。例如，在尝试更改未为集群定义的字段时，您将收到错误消息。
 
 
 
+[[empty]]
 === 空
 
 在某些情况下，不会返回任何数据，并且响应正文包含一个空的 JSON 对象。
 
 
 
+[[errors]]
 == errors
 
 如果发生错误，响应正文将返回一个错误对象。
 
 
 
+[[format]]
 === 格式。
 
 错误对象的格式如下：
@@ -129,6 +141,7 @@ API 请求生成的响应正文内容因对象，处理类型以及请求的成�
 
 
 
+[[common-error-codes]]
 === 常见错误代码
 
 下表介绍了常见错误代码。特定 API 调用可能包括其他错误代码。
