@@ -75,7 +75,7 @@ indexpage:
     - title: NetApp 博客— SnapCenter
       url: https://blog.netapp.com/tag/snapcenter/
     - title: NetApp 社区— SnapCenter
-      url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/backup-and-restore-discussions/label-name/snapcenter
+      url: https://community.netapp.com/community/categories/solutions
   - title: 更多资源
     links:
     - title: "《 cmdlet 参考指南》"
