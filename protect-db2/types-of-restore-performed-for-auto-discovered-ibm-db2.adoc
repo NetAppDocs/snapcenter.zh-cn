@@ -2,7 +2,7 @@
 permalink: protect-db2/types-of-restore-performed-for-auto-discovered-ibm-db2.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for IBM Db2 
-summary: '对于自动发现的IBM数据库、SnapCenter支持基于卷的SnapRestore \(VBSR\)、单文件SnapRestore以及连接和副本还原类型。' 
+summary: 'SnapCenter 支持基于卷的 SnapRestore (VBSR)、单文件 SnapRestore 以及适用于自动发现的 IBM Db2 数据库的连接和复制恢复类型。' 
 ---
 = 在 SnapCenter 中自动发现的 IBM Db2 数据库的还原类型
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: protect-mysql/types-of-restore-performed-for-auto-discovered-mysql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for mysql 
-summary: '对于自动发现的SnapRestore数据库、SnapCenter支持基于卷的MySQL \(VBSR\)、单文件SnapRestore以及连接和副本还原类型。' 
+summary: SnapCenter 支持基于卷的 SnapRestore （VBSR）、单文件 SnapRestore 以及适用于自动发现的 MySQL 数据库的连接和复制恢复类型。 
 ---
 = 在 SnapCenter 中自动发现的 MySQL 数据库的还原类型
 :allow-uri-read: 

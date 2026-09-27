@@ -2,7 +2,7 @@
 permalink: install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html 
 sidebar: sidebar 
 keywords: IIS application pool, active directory, enable 
-summary: 如果需要为 SnapCenter 启用 Active Directory 读取权限，您可以在 Windows 服务器上配置 Internet 信息服务 \ （ IIS\ ）以创建自定义应用程序池帐户。 
+summary: 如果需要为 SnapCenter 启用 Active Directory 读取权限，您可以在 Windows 服务器上配置 Internet 信息服务（ Internet Information Services ， IIS ）以创建自定义应用程序池帐户。 
 ---
 = 在 SnapCenter 中为 Active Directory 配置 IIS 应用程序池
 :allow-uri-read: 

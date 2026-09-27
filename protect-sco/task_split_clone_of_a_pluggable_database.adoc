@@ -2,7 +2,7 @@
 permalink: protect-sco/task_split_clone_of_a_pluggable_database.html 
 sidebar: sidebar 
 keywords: split, PDB, cloned PDB 
-summary: 您可以使用 SnapCenter 拆分克隆的可插拔数据库（ PDB ）。 
+summary: 您可以使用 SnapCenter 拆分克隆可插拔数据库（ PDB ）。 
 ---
 = 在 SnapCenter 中拆分可插入数据库克隆
 :allow-uri-read: 

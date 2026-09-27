@@ -2,7 +2,7 @@
 permalink: protect-hana/reference_types_of_restore_performed_for_auto_discovered_sap_hana_databases.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Databases 
-summary: 对于自动发现的 SAP HANA 数据库， SnapCenter 支持基于卷的 SnapRestore \ （ VBSR\ ），单个文件 SnapRestore 以及连接和复制还原类型。 
+summary: 对于自动发现的 SAP HANA 数据库， SnapCenter 支持基于卷的 SnapRestore （ VBSR ），单文件 SnapRestore 和连接和复制还原类型。 
 ---
 = 在 SnapCenter 中自动发现的 SAP HANA 数据库的还原操作
 :allow-uri-read: 

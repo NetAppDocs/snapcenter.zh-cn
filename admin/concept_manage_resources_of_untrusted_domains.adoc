@@ -2,7 +2,7 @@
 permalink: admin/concept_manage_resources_of_untrusted_domains.html 
 sidebar: sidebar 
 keywords: Manage resources 
-summary: 除了管理 Active Directory \ （ AD\ ）受信任域中的主机之外， SnapCenter 还管理多个 AD 不受信任域中的主机。不可信的 AD 域必须注册到 SnapCenter 服务器。SnapCenter 支持多个不可信 AD 域的用户和组。 
+summary: 除了管理 Active Directory （ AD ）受信任域中的主机之外， SnapCenter 还管理多个 AD 不受信任域中的主机。不可信的 AD 域必须注册到 SnapCenter 服务器。SnapCenter 支持多个不可信 AD 域的用户和组。 
 ---
 = 管理不受信任域中的 SnapCenter 资源
 :allow-uri-read: 

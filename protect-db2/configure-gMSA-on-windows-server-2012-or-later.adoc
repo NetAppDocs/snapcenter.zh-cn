@@ -2,7 +2,7 @@
 permalink: protect-db2/configure-gMSA-on-windows-server-2012-or-later.html 
 sidebar: sidebar 
 keywords:  
-summary: 通过 Windows Server 2016 或更高版本，您可以创建组托管服务帐户（ GMSA\ ），以便从受管域帐户自动管理服务帐户密码。 
+summary: 通过 Windows Server 2016 或更高版本，您可以创建组托管服务帐户（ GMSA ），以便从受管域帐户自动管理服务帐户密码。 
 ---
 = 在 Windows Server 2016 或更高版本上为 SnapCenter 配置 gMSA
 :allow-uri-read: 
