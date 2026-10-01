@@ -15,7 +15,7 @@ summary: 资源是Linux主机上由SnapCenter管理的IBM DB2数据库。发现�
 
 .开始之前
 * 您必须已完成安装SnapCenter服务器、添加主机和设置存储系统连接等任务。
-* 适用于IBM DB2的SnapCenter插件不支持自动发现驻留在RDM/VMDK虚拟环境中的资源。您必须在手动添加数据库时为虚拟环境提供存储信息。
+* SnapCenter Plug-in for IBM Db2 不支持自动发现驻留在 RDM/VMDK 虚拟环境中的资源。手动添加数据库时，必须提供虚拟环境的存储信息。有关详细信息，请参阅 <<resources_rdm_vmdk_virtual_environments,驻留在RDM/VMDK虚拟环境中的资源>>。
 
 
 .关于此任务
@@ -45,3 +45,16 @@ summary: 资源是Linux主机上由SnapCenter管理的IBM DB2数据库。发现�
 
 
 IMPORTANT: 如果在 SnapCenter 外部重命名了数据库，则必须刷新资源。
+
+[[resources_rdm_vmdk_virtual_environments]]
+.驻留在RDM/VMDK虚拟环境中的资源
+无法自动发现驻留在 RDM/VMDK 虚拟环境中的资源。您必须禁用自动发现并为适用于 IBM Db2 的 SnapCenter 插件手动添加实例，如下所示：
+
+[listing]
+----
+Set-SmConfigSettings -Agent -Hostname <HOST_NAME> -configSettings @{"DISABLE_AUTO_DISCOVERY"="true"}
+
+PS C:\> Add-SmResource -HostName 10.32.212.13 -PluginCode DB2 -ResourceType Instance -ResourceName db2inst1 -StorageFootPrint
+(@{"VolumeName"="windb201_data01";"LUNName"="windb201_data01";"StorageSystem"="windb2svm"})
+----
+有关详细信息，请参阅link:back-up-db2-databases.html["备份 IBM Db2 数据库、PowerShell cmdlet"]。

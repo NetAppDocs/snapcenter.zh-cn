@@ -49,6 +49,10 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["下载适用于
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["下载适用于所有操作系统的 Java"]
 
++
+
+NOTE: 非root用户必须具有运行Java的执行权限。
+
 * 对于在Linux主机上运行的MySQL数据库、在安装适用于MySQL的插件时、系统会自动安装适用于UNIX的SnapCenter插件。
 * 您应将*bash*用作插件安装的默认shell。
 

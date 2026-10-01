@@ -25,6 +25,10 @@ summary: 在添加主机并安装插件软件包之前，您必须满足所有�
 * 为安装用户创建身份验证模式为 Linux 或 AIX 的凭据。
 * 必须在 Linux 或 AIX 主机上安装 Java 17（用于 SnapCenter 6.2.1 及更高版本）或 Java 11（用于 SnapCenter 6.2 及更早版本）。
 +
+
+NOTE: 非root用户必须具有运行Java的执行权限。
+
++
 ** Linux 支持 Oracle、OpenJDK 或 SAP JDK 中的 Java。
 ** IBM Java for AIX。您可以从  https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?version=17&os=AIX["IBM Semeru运行时下载"^] 下载。
 +
@@ -224,6 +228,10 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
 所需的软件包
  a| 
 * IBM Java 17 for SnapCenter 6.2.1 及更高版本或 IBM Java 11 for SnapCenter 6.2 及更早版本
++
+
+NOTE: 非root用户必须具有运行Java的执行权限。
+
 
 
 如果您已将 Java 升级到最新版本，则必须确保位于 /var/opt/snapcenter/spl/etc/spl.properties 的 JAVA_HOME 选项设置为正确的 Java 版本和正确的路径。

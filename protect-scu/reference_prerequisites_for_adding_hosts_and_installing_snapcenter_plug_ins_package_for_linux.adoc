@@ -76,12 +76,18 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
 所需的软件包
  a| 
 * Java 17（Oracle Java、OpenJDK 或 SAP JDK），适用于 SnapCenter 6.2.1 及更高版本；或 Java 11，适用于 SnapCenter 6.2 及更早版本
-
-
++
 
 NOTE: 请确保仅在 Linux 主机上安装了 SnapCenter 6.2.1 及更高版本的 Java 17 认证版本或 SnapCenter 6.2 及更低版本的 Java 11 认证版本。
 
++
 如果您已将 Java 升级到最新版本，则必须确保位于 /var/opt/snapcenter/spl/etc/spl.properties 的 JAVA_HOME 选项设置为正确的 Java 版本和正确的路径。
+
++
+
+NOTE: 非root用户必须具有运行Java的执行权限。
+
+
 
 |===
 有关受支持版本的最新信息，请参见 https://imt.netapp.com/imt/imt.jsp?components=180320;180338;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。

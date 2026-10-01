@@ -85,6 +85,10 @@ NOTE: 您应分配足够的磁盘空间并通过 logs 文件夹监控存储消�
 * ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更高版本）
 * PowerShell 7.6.1（或更高版本）
 * Java 17（Oracle Java、OpenJDK 或 SAP JDK）或 Java 11（适用于 SnapCenter 6.2 或更早版本）
++
+
+NOTE: 运行 Java 的帐户必须具有执行 Java 的权限。
+
 
 
 请参阅 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 软件发行说明"^] 以了解适用于您特定 SnapCenter 版本的最新合格 ASP.NET Core 和 PowerShell 版本。

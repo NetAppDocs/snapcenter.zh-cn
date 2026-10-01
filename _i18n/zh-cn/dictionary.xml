@@ -7790,7 +7790,6 @@ destination</block>
   <block id="84f9528e600ab53a4c808da98efb3668" category="summary">资源是Linux主机上由SnapCenter管理的IBM DB2数据库。发现可用的IBM DB2数据库后、您可以将这些资源添加到资源组中以执行数据保护操作。</block>
   <block id="1613db1c8ee565787325feb95428e9ea" category="paragraph">资源是Linux主机上由SnapCenter管理的IBM DB2数据库。发现可用的IBM DB2数据库后、您可以将资源添加到资源组中以执行数据保护操作。</block>
   <block id="c39495ad9bcb958b9080a36f441abbbe" category="list-text">您必须已完成安装SnapCenter服务器、添加主机和设置存储系统连接等任务。</block>
-  <block id="97a161d2a9a0ce59a5128905c924a379" category="list-text">适用于IBM DB2的SnapCenter插件不支持自动发现驻留在RDM/VMDK虚拟环境中的资源。您必须在手动添加数据库时为虚拟环境提供存储信息。</block>
   <block id="2fc619a3874b3d7ee66dc2b056c19d58" category="list-text">安装此插件后、系统会自动发现该Linux主机上的所有数据库、并将其显示在"Resues"页面上。</block>
   <block id="1c38e2d02d815dacbf8f55fddf8a55ef" category="list-text">仅自动发现数据库。</block>
   <block id="ad19113026dc77ce4d582f20058e7d2e" category="list-text">在左侧导航窗格中，单击*Resoles*，然后从列表中选择适用于IBM DB2的插件。</block>
@@ -10036,4 +10035,13 @@ destination</block>
   <block id="829690f9bb273b74b9b78d6c6f633563" category="summary">备份频率（计划类型）在策略中指定，备份计划在资源组配置中指定。</block>
   <block id="7961a2a642f2ef14bcc3560c4533978b" category="summary">将备份验证计划在单独的作业中稍后执行，而不是在备份创建后立即执行，以减少对备份作业性能的影响。</block>
   <block id="2faaeb23f72a64bdbb16cfe932406ce8" category="summary">您可以从主存储或辅助存储克隆文件系统备份。您还可以选择满足您需求的目标，可以是原始备份位置，也可以是同一主机或其他主机上的其他目标。目标必须与克隆源备份位于同一卷上。</block>
+  <block id="f7182d7a35e19e73172617deaca2e396" category="admonition">运行 Java 的帐户必须具有执行 Java 的权限。</block>
+  <block id="baf777b8ad8fec11ce73312d60c6beec" category="paragraph">+ NOTE: 非 root 用户必须具有运行 Java 的执行权限。</block>
+  <block id="af4f76638af48843fe26083b8647819a" category="admonition">非root用户必须具有运行Java的执行权限。</block>
+  <block id="28476e82f924742dee48ae4d44d52558" category="inline-xref">驻留在RDM/VMDK虚拟环境中的资源</block>
+  <block id="211bef1be936b825b44ea7171f22e760" category="list-text">SnapCenter Plug-in for IBM Db2 不支持自动发现驻留在 RDM/VMDK 虚拟环境中的资源。手动添加数据库时，必须提供虚拟环境的存储信息。有关详细信息，请参阅 <block ref="40c107052fc48aa77e5bdccb7af86d58" category="inline-xref-macro-rx"></block>。</block>
+  <block id="288d3dea029b52699e9d4a669729d1f7" category="paragraph">无法自动发现驻留在 RDM/VMDK 虚拟环境中的资源。您必须禁用自动发现并为适用于 IBM Db2 的 SnapCenter 插件手动添加实例，如下所示：</block>
+  <block id="8f3b4f1a702849c5530b3620426cca19" category="inline-link-macro">备份 IBM Db2 数据库、PowerShell cmdlet</block>
+  <block id="17a05e9785500431b7cdd6242282c8ed" category="paragraph">有关详细信息，请参阅<block ref="636d9603a663670ca77c87610aa537ee" category="inline-link-macro-rx"></block>。</block>
+  <block id="b9bcbcd68d11ccb28e0b885b2d2877cf" category="admonition">Windows 和 Linux 主机不支持 IBM Java。</block>
 </blocks>
