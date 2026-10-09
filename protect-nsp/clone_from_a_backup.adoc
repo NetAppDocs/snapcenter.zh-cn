@@ -19,6 +19,13 @@ summary: 您可以使用 SnapCenter 克隆备份。您可以从主备份或二�
 * 您应确保托管卷的聚合应位于 Storage Virtual Machine （ SVM ）的已分配聚合列表中。
 
 
+[NOTE]
+====
+* 对于 NVMe over TCP 和 NVMe over FC 存储布局，如果在 LUN 恢复或克隆操作期间尚不存在 NVMe 子系统，则 SnapCenter 会自动创建 NVMe 子系统。
+* SnapCenter 不会删除在删除克隆操作中创建的子系统。它将保留用于进一步的克隆或恢复操作。如果删除子系统，请将其从 ONTAP 中删除，并使用以下命令将其与主机断开连接： `nvme disconnect -n <subsystem_NQN>` 将  `<subsystem_NQN>` 替换为子系统的实际 NQN。
+
+
+====
 .关于此任务
 对于ONTAP 9.12.1及更低版本、在还原过程中从SnapLock存储快照创建的克隆将继承SnapLock存储到期时间。存储管理员应在SnapLock到期时间后手动清理克隆。
 
