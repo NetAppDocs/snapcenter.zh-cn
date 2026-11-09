@@ -11,9 +11,9 @@ summary: 提供有关此版本的 SnapCenter 服务器和 SnapCenter 插件软�
 
 
 [role="lead"]
-了解 SnapCenter 6.2、6.2.1 和 6.2.2 中提供的新功能和增强功能。
+了解 SnapCenter 6.2、6.2.1、6.2.2 和 6.2.3 中提供的新功能和增强功能。
 
-要查看新功能和增强功能的完整列表，请参阅 link:what's-new-in-snapcenter622.html["SnapCenter 6.2.2 中的新增功能"]。
+要查看新功能和增强功能的完整列表，请参阅 link:what's-new-in-snapcenter623.html["SnapCenter 6.2.3 中的新增功能"]。要查看新功能和增强功能的完整列表，请参阅 link:what's-new-in-snapcenter622.html["SnapCenter 6.2.2 中的新增功能"]。
 
 要查看新功能和增强功能的完整列表，请参阅 link:what's-new-in-snapcenter621.html["SnapCenter 6.2.1 中的新增功能"]。
 

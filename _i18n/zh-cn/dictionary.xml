@@ -952,7 +952,6 @@
   <block id="dbef26874057ae0be535fee20766f8cb" category="list-text">如果您在 SnapCenter 中管理集群节点，则必须具有对集群中所有节点具有管理权限的用户。</block>
   <block id="953acf14bebe77c11e648186f3957214" category="list-text">您必须具有对 SQL Server 具有 sysadmin 权限的用户。</block>
   <block id="d165009fc919b7c43f63036983c47ae0" category="paragraph">适用于 Microsoft SQL Server 的 SnapCenter 插件使用 Microsoft VDI Framework ，这需要 sysadmin 访问权限。</block>
-  <block id="9221af74572734362746f0af9104d884" category="inline-link">Microsoft 支持文章 2926557 ： SQL Server VDI 备份和还原操作需要 sysadmin 特权</block>
   <block id="6f4630c11483dcb4143ae30dadd50487" category="list-text">在 Windows 主机上安装插件时，如果您指定的凭据不是内置的，或者用户属于本地工作组用户，则必须在主机上禁用 UAC 。</block>
   <block id="9c9a08a242e9f6311be9fa5bd945d582" category="list-text">如果安装了 SnapManager for Microsoft SQL Server ，则必须已停止或禁用此服务和计划。</block>
   <block id="1931c747684bb6010ac638ae2be606b3" category="paragraph">如果您计划将备份或克隆作业导入到 SnapCenter 中，请勿卸载适用于 Microsoft SQL Server 的 SnapManager 。</block>
@@ -9421,12 +9420,9 @@ destination</block>
   <block id="5aae26cfc631423a28ee9f3eea8618b0" category="cell">6.2.1</block>
   <block id="4405435b2ad2e79a5a4506de478aafd7" category="summary">6.2.1 版本的 SnapCenter 软件没有新功能或增强功能，仅包括 SnapCenter 服务器和插件的已知错误修复和合格版本更新。</block>
   <block id="fed22bd00ec1bb7537e843bbc0886bcc" category="doc">SnapCenter 软件 6.2.1 中的新增功能</block>
-  <block id="f6a2ad4b89455cf23e3e4843e1f51aee" category="inline-link-macro">SnapCenter 6.2.1 发行说明</block>
-  <block id="f0de22be0ad3dd3c1e51ed207f0e298e" category="paragraph">6.2.1 版本的 SnapCenter software 没有新增功能或增强项。该版本仅包含已知错误修复以及 SnapCenter Server 和插件的合格版本更新。有关更多详细信息，请参阅 <block ref="f297672c4e3c5441ce384d3bd8457e0c" category="inline-link-macro-rx"></block>。</block>
   <block id="92f7e9adcc0061bde4c2abd78f00e01e" category="paragraph">要使用 SnapCenter Plug-in for VMware vSphere 配置 CA 证书，请参见<block ref="e0ef04da7ad7ee6e29cb49ed5497582e" category="inline-link-rx"></block>。</block>
   <block id="0ff275ffe02e672fcd7c5215c9cbcfb6" category="paragraph"><block ref="a578dd94961bb2b0ce287d29a112740b" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
   <block id="11428fc511268a2c63fa0e7ebcb2530d" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
-  <block id="2af0fc8c21c11cf5ed04e0063f53931e" category="paragraph"><block ref="2af0fc8c21c11cf5ed04e0063f53931e" category="inline-link-rx"></block></block>
   <block id="58065290ed803cdf3874ac1d4114dcef" category="list-text">您必须将 Microsoft Exchange Server 用于独立和数据库可用性组配置。有关受支持的 Microsoft Exchange Server 版本，请参阅<block ref="a56461e56210fb5ec91e8f031015b65a" category="inline-link-macro-rx"></block>。</block>
   <block id="00ae82bfdfa80871841f81003a4c71b8" category="list-text">确保以下端口在防火墙中未被阻塞，否则 add host 操作失败。要解决此问题，必须配置动态端口范围。有关详细信息，请参见<block ref="70d4a5fd2803e35738264291f84fc1aa" category="inline-link-rx"></block>。有关受支持的 Microsoft Exchange Server 版本，请参见<block ref="a56461e56210fb5ec91e8f031015b65a" category="inline-link-macro-rx"></block>。</block>
   <block id="e009ef54959ef44bca3f7d7710210754" category="list-text">适用于 Windows 2012 R2 和 Exchange 2013 的端口范围 6000 - 6500</block>
@@ -9471,17 +9467,12 @@ destination</block>
   <block id="39ba353d702229155256e298616dd0e9" category="list-text">您必须在 Linux 主机上为 SnapCenter 6.2.1 及更高版本安装 Java 17，或为 SnapCenter 6.2 及更早版本安装 Java 11。</block>
   <block id="f876eb454a143bb9b6ede6eb4f5d0c25" category="list-text">您必须已安装 ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更高版本）。</block>
   <block id="12eef6603e9d6e7e0f7396e2f1e8f9f1" category="list-text">您必须已安装 PowerShell 7.6.1（或更高版本）。</block>
-  <block id="b019cdc322bc185f2cdc3f59ae2b1ac4" category="paragraph">了解 SnapCenter 6.2、6.2.1 和 6.2.2 中提供的新功能和增强功能。</block>
   <block id="6993919150e52bd9b34176c264e22513" category="inline-link-macro">SnapCenter 6.2.2 中的新增功能</block>
-  <block id="3043c81c3ea9bb59a962f1a8c25998aa" category="paragraph">要查看新功能和增强功能的完整列表，请参阅 <block ref="b49911080e0d8e9d778dd3850ba77c90" category="inline-link-macro-rx"></block>。</block>
   <block id="7276a69fb4994eeb60e98f647f8809cc" category="inline-link">SnapCenter Software 6.2.2 发行说明</block>
   <block id="5c4c3a61d43c17720237d0252bd7964f" category="paragraph">有关已知问题、限制、修复问题以及新命令和更改的命令的详细信息，请参见<block ref="310da251eb499e87cac462ed442bc118" category="inline-link-rx"></block>。您必须使用您的 NetApp 帐户登录或创建帐户才能访问发行说明。</block>
   <block id="3e7e96fad5e237fb2d5a081c6cb11212" category="cell">6.2.2</block>
-  <block id="ec72aa272d1e0c8676733268fcea8629" category="inline-link-macro">SnapCenter 6.2.2 发行说明</block>
-  <block id="3939a14b7eae2f5a633f8c4b2e990fa8" category="paragraph">SnapCenter 软件的 6.2 版本包括 SnapCenter 服务器和插件的合格版本的已知错误修复和更新。它还包括以下扩展功能。有关更多详细信息，请参阅 <block ref="8325eb4c00d5692ebe130b4b8b28f43c" category="inline-link-macro-rx"></block>。</block>
   <block id="1d9c92dfdf9a7170a6f57175018cd0b6" category="summary">6.2.2 版本的 SnapCenter 软件没有新功能或增强功能，仅包括 SnapCenter 服务器和插件的已知错误修复和合格版本更新。</block>
   <block id="f45649ab475309b80142ce8fdc3cfeeb" category="doc">SnapCenter 软件 6.2.2 中的新增功能</block>
-  <block id="132161a0728f2aca84e97d9ad274492b" category="paragraph">6.2.2 版本的 SnapCenter software 没有新增功能或增强项。该版本仅包含已知错误修复以及 SnapCenter Server 和插件的合格版本更新。有关更多详细信息，请参阅 <block ref="8325eb4c00d5692ebe130b4b8b28f43c" category="inline-link-macro-rx"></block>。</block>
   <block id="cd093f4c82c3df7f4e6ea55c02b1ffda" category="list-text">安装 ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更高版本）和 PowerShell 7.6.1（或更高版本）。</block>
   <block id="fd0b9239b899bfaafa239db9df2999d8" category="list-text">确保已在 Windows 插件主机上安装 ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更高版本）和 PowerShell 7.6.1（或更高版本）。</block>
   <block id="66898743f260fbb7a17be9643b2f4490" category="list-text">确保已在 Windows 和 Linux 插件主机上安装适用于 SnapCenter 6.2.1 及更高版本的 Java 17（Oracle Java、OpenJDK 或 SAP JDK）或适用于 SnapCenter 6.2 及更早版本的 Java 11。</block>
@@ -10047,4 +10038,24 @@ destination</block>
   <block id="56612541ccd886dc39344f635827756c" category="list-text">SnapCenter 不会删除在删除克隆操作过程中创建的 igroup。它将保留用于进一步的克隆或还原操作。</block>
   <block id="3156e86fd2bdb0611b9b9c89c87999b7" category="list-text">对于 NVMe over TCP 和 NVMe over FC 存储布局，如果在 LUN 恢复或克隆操作期间尚不存在 NVMe 子系统，则 SnapCenter 会自动创建 NVMe 子系统。</block>
   <block id="4426256068c2cde9d001eb996c0ed069" category="list-text">SnapCenter 不会删除在删除克隆操作中创建的子系统。它将保留用于进一步的克隆或恢复操作。如果删除子系统，请将其从 ONTAP 中删除，并使用以下命令将其与主机断开连接：<block ref="49bebb92a89712c3abd8ca411ed2bb21" prefix=" " category="inline-code"></block> 将 <block ref="42f6268ffadaad1cb31f90aff2a0b50b" prefix=" " category="inline-code"></block> 替换为子系统的实际 NQN。</block>
+  <block id="ab8c41fe6c0631568c4f7721188add28" category="paragraph">了解 SnapCenter 6.2、6.2.1、6.2.2 和 6.2.3 中提供的新功能和增强功能。</block>
+  <block id="71d666a1ece80d37fc99f3fb4040beb8" category="inline-link-macro">SnapCenter 6.2.3 中的新增功能</block>
+  <block id="41aef99112aa5172c10c621cf5da53e8" category="paragraph">要查看新功能和增强功能的完整列表，请参阅 <block ref="2155740d9940c2bc1556235aa7189068" category="inline-link-macro-rx"></block>。要查看新功能和增强功能的完整列表，请参阅 <block ref="b49911080e0d8e9d778dd3850ba77c90" category="inline-link-macro-rx"></block>。</block>
+  <block id="56d11aa60f1e8b5d8731445c4d250b09" category="doc">SnapCenter 的升级路径</block>
+  <block id="ae3c4052759d52b1e22fb192d17f29b7" category="section-title">建议的升级路径</block>
+  <block id="9e72d8328f79d15398854da7b2794a1b" category="paragraph">NetApp 建议升级到受支持的最新 SnapCenter 版本 6.2.3，以确保与 SnapCenter 的兼容性和最佳性能。</block>
+  <block id="163b15a5dca02d28e2445b18b3de6862" category="admonition">要从早于 6.0 的版本或从 6.0 版本升级到 SnapCenter 6.2.3，请先升级到支持 .NET 8 和 Java 11 的 6.1P3，然后再升级到支持 .NET 10 和 Java 17 的 6.2.3。请勿使用 6.2.2 或任何其他中间版本作为升级路径的一部分，除非您已经在使用它。</block>
+  <block id="8c02671efcef8b6a724887efbfbaa46a" category="inline-link-macro">SnapCenter 发行说明</block>
+  <block id="ffb1843dceaa58f89d906d41dc88c123" category="paragraph">有关升级主机的更多详细信息，请参阅 <block ref="c12c01bc09a3f61e41d7f2a98eb13862" category="inline-link-macro-rx"></block> 中的 *将主机升级到 SnapCenter 6.2.3*。</block>
+  <block id="5c4d30aeb4e6059223dc156f675a1315" category="cell">6.2.3</block>
+  <block id="d723121d9ecbf7e5520f9d8a9ecbe11a" category="paragraph">SnapCenter 软件的 6.2 版本包括 SnapCenter 服务器和插件的合格版本的已知错误修复和更新。它还包括以下扩展功能。</block>
+  <block id="b3fe65d6300325740113ade6cc8fd3f2" category="paragraph">有关更多详细信息，请参阅 <block ref="c12c01bc09a3f61e41d7f2a98eb13862" category="inline-link-macro-rx"></block>。</block>
+  <block id="cf984782b22632f0c24d17fe92e2b0bd" category="paragraph">6.2.1 版本的 SnapCenter software 没有新增功能或增强项。</block>
+  <block id="35f1c704c4de930b04f776710bd0aba9" category="paragraph">该版本仅包含已知错误修复以及 SnapCenter Server 和插件的合格版本更新。有关更多详细信息，请参阅 <block ref="c12c01bc09a3f61e41d7f2a98eb13862" category="inline-link-macro-rx"></block>。</block>
+  <block id="5f39a09f48a40a5fbced091639035408" category="paragraph">6.2.2 版本的 SnapCenter software 没有新增功能或增强项。</block>
+  <block id="92ef69937457efbd5f4fbf8a70556363" category="summary">6.2.3 版本的 SnapCenter 软件没有新功能或增强功能，仅包括 SnapCenter 服务器和插件的已知错误修复和合格版本更新。</block>
+  <block id="9a9fb0522345d7bedd5c343326c0af18" category="doc">SnapCenter 软件 6.2.3 中的新增功能</block>
+  <block id="a83a9a8dd992eb258a6c4abc6c6b2c97" category="paragraph">6.2.3 版本的 SnapCenter software 没有新增功能或增强项。</block>
+  <block id="064072d3b881bfbb5d5f6ea225eb8867" category="paragraph">要将主机升级到 SnapCenter 6.2.3，请参见 <block ref="c12c01bc09a3f61e41d7f2a98eb13862" category="inline-link-macro-rx"></block> 中的 *将主机升级到 SnapCenter 6.2.3*，了解有关升级主机的更多详细信息。</block>
+  <block id="6fc609e22b9ec71526720e491d7f9a37" category="paragraph">有关将主机升级到 SnapCenter 6.2.3 的更多详细信息，请参阅 <block ref="c12c01bc09a3f61e41d7f2a98eb13862" category="inline-link-macro-rx"></block> 中的 *将主机升级到 SnapCenter 6.2.3*。</block>
 </blocks>
