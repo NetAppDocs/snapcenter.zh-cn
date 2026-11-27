@@ -13,6 +13,16 @@ summary: 在安装SnapCenter服务器之前、应确保满足所有要求
 [role="lead"]
 在Windows或Linux主机上安装SnapCenter服务器之前、您应查看并确保满足您的环境的所有要求。
 
+[NOTE]
+====
+有关 SnapCenter 要求和支持的配置的最新信息，请参阅以下内容：
+
+* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 发行说明"^]
+* link:https://docs.netapp.com/us-en/snapcenter/release-notes/upgrade-path.html["SnapCenter 升级路径"^]
+* link:../upgrade/learn-about-host-upgrades.html["将主机升级到最新 SnapCenter 版本"]
+
+
+====
 
 
 [[domain-and-workgroup-requirements-for-windows-host]]
@@ -52,7 +62,7 @@ Microsoft Windows
 有关受支持版本的最新信息，请参阅 https://imt.netapp.com/imt/imt.jsp?components=180321;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
  a| 
 * Red Hat Enterprise Linux (RHEL) 8和9
-* SUSE Linux Enterprise Server (SLES) 15.
+* SUSE Linux Enterprise Server (SLES) 15 SP7
 
 
 有关受支持版本的最新信息，请参阅 https://imt.netapp.com/imt/imt.jsp?components=180320;&solution=1257&isHWU&src=IMT["NetApp 互操作性表工具"^]。
@@ -98,7 +108,7 @@ SnapCenter 存储库的最小硬盘空间
 8 GB
 
 
-NOTE: 注意：如果 SnapCenter 服务器位于安装 SnapCenter 存储库的同一驱动器中，则建议具有 15 GB 。
+NOTE: 如果 SnapCenter 服务器位于安装 SnapCenter 存储库的同一驱动器中，则建议使用 15GB。
  a| 
 不适用
 
@@ -107,8 +117,8 @@ NOTE: 注意：如果 SnapCenter 服务器位于安装 SnapCenter 存储库的�
  a| 
 所需的软件包
  a| 
-* ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更高版本）
-* PowerShell 7.6.1（或更高版本）
+* ASP.NET Core Runtime 10.0.10 Hosting Bundle（或更高版本）
+* PowerShell 7.6.4（或更高版本）
 
 
 请参阅 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 软件发行说明"^] 以了解适用于您特定 SnapCenter 版本的最新合格 ASP.NET Core 和 PowerShell 版本。
@@ -116,7 +126,7 @@ NOTE: 注意：如果 SnapCenter 服务器位于安装 SnapCenter 存储库的�
 有关.NET专用的故障排除信息、请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["对于没有Internet连接的原有系统、SnapCenter 升级或安装失败"^]。
  a| 
 * .NET 8.0.12 (以及所有后续的8.0.x修补程序)
-* PowerShell 7.6.1（或更高版本）
+* PowerShell 7.6.4（或更高版本）
 * NGINX是一个可用作反向代理的Web服务器
 * Perl
 * PAM-DEVEL
@@ -172,198 +182,388 @@ SnapCenter软件需要使用不同的端口在不同组件之间进行通信。
 下表列出了不同的端口及其默认值。
 
 |===
-| 端口名称 | 端口号 | 协议 | 方向 | Description 
+| Name | 数字 | 协议 | 方向 | 防火墙 | 可定制 | 目的 
 
 
  a| 
-SnapCenter Web 端口
+SnapCenter Web
  a| 
 8146
  a| 
 HTTPS
  a| 
-双向
+入站到 SnapCenter Server
  a| 
-此端口用于SnapCenter客户端(SnapCenter用户)和SnapCenter服务器之间的通信、也用于从插件主机到SnapCenter服务器的通信。
-
-您可以自定义端口号。
+在 SnapCenter 服务器上打开
+ a| 
+是的。
+ a| 
+浏览器、REST、PowerShell 和插件主机回调
 
 
 
  a| 
-SnapCenter SMCore 通信端口
+SnapCenter SMCore 通信
  a| 
 8145
  a| 
 HTTPS
  a| 
-双向
+SnapCenter 服务器到插件主机
  a| 
-此端口用于在SnapCenter 服务器与安装SnapCenter 插件的主机之间进行通信。
-
-您可以自定义端口号。
+在每个插件主机上打开入站
+ a| 
+是的。
+ a| 
+SnapCenter 服务器到 SMCore（Windows）或 SPL（Linux/AIX）
 
 
 
  a| 
-计划程序服务端口
+计划程序服务
  a| 
 8154
  a| 
 HTTPS
  a| 
+SnapCenter Server 上的本地主机
  a| 
-此端口用于集中编排SnapCenter服务器主机中所有受管插件的SnapCenter计划程序工作流。
-
-您可以自定义端口号。
+独立模式无
+ a| 
+是的。
+ a| 
+WebApp 到本地调度程序 API
 
 
 
  a| 
-Rabbitmq端口
+RabbitMQ
  a| 
 5672
  a| 
-TCP
+TCP（AMQP）
  a| 
+SnapCenter Server 上的本地主机
  a| 
-这是Rabbitmq侦听的默认端口、用于在计划程序服务和SnapCenter之间进行发布者-订阅者模型通信。
+绑定到 127.0.0.1
+ a| 
+否
+ a| 
+计划程序和 SnapCenter 消息传递
 
 
 
  a| 
-MySQL 端口
+MySQL 存储库
  a| 
 3306
  a| 
-HTTPS
+TCP（TLS 可选）
  a| 
+SnapCenter 服务器到 MySQL
  a| 
-此端口用于与SnapCenter存储库数据库进行通信。您可以创建从SnapCenter服务器到MySQL服务器的安全连接。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["了解更多信息。"]
+MySQL 为本地时无
+ a| 
+否（固定在 3306）
+ a| 
+SnapCenter 存储库数据库
 
 
 
  a| 
-Windows 插件主机
+Windows 插件安装
  a| 
-135、445
+135, 445, 49152–65535
  a| 
 TCP
  a| 
+SnapCenter 服务器到 Windows 插件主机
  a| 
-此端口用于SnapCenter服务器与安装此插件的主机之间的通信。Microsoft指定的其他动态端口范围也应处于打开状态。
+推送安装期间插件主机上的入站
+ a| 
+否
+ a| 
+用于远程安装的 RPC、SMB 和动态 RPC 范围
 
 
 
  a| 
-Linux 或 AIX 插件主机
+Linux 或 AIX 插件安装
  a| 
 22
  a| 
-SSH
+SSH （TCP）
  a| 
-单向
+SnapCenter 服务器到插件主机
  a| 
-此端口用于SnapCenter服务器与主机之间的通信、此通信是从服务器启动到客户端主机的。
+插件主机上的入站 SSH
+ a| 
+仅当 SSH 端口更改时
+ a| 
+推送安装和主机命令
 
 
 
  a| 
-适用于Windows、Linux或AIX的SnapCenter插件软件包
- a| 
-8145
- a| 
-HTTPS
- a| 
-双向
- a| 
-此端口用于SMCore与安装了插件包的主机之间的通信。可自定义。
-
-您可以自定义端口号。
-
-
-
- a| 
-适用于 Oracle 数据库的 SnapCenter 插件
+Oracle 插件
  a| 
 27216
  a| 
+TCP
  a| 
+Oracle 插件主机上的 Localhost
  a| 
-适用于 Oracle 的插件使用默认 JDBC 端口连接到 Oracle 数据库。
+无
+ a| 
+是的。
+ a| 
+OCI-JDBC 远程对象注册表（不是 1521 上的 Oracle 侦听器）
 
 
 
  a| 
-适用于Exchange数据库的SnapCenter插件
+Exchange 插件
  a| 
 909
  a| 
+NET.TCP
  a| 
+Exchange 主机上的 Localhost
  a| 
-默认的NET。 适用于Windows的插件使用TCP端口连接到Exchange VSS回调。
+无
+ a| 
+是的。
+ a| 
+SnapDrive 服务到 NetApp VSS 提供程序
 
 
 
  a| 
-NetApp支持的SnapCenter插件
+NetApp 支持的插件（SCC）
  a| 
 9090
  a| 
 HTTPS
  a| 
+插件主机上的 Localhost
  a| 
-这是仅在插件主机上使用的内部端口；不需要防火墙例外。
-
-SnapCenter 服务器和插件之间的通信通过端口 8145 进行。
-
-
-
+无
  a| 
-ONTAP 集群或 SVM 通信端口
+否
  a| 
-* 443 (HTTPS)
-* 80 (HTTP)
-
- a| 
-* HTTPS
-* HTTP
-
- a| 
-双向
- a| 
-SAL （存储抽象层）使用此端口在运行 SnapCenter 服务器的主机与 SVM 之间进行通信。SnapCenter for Windows 插件主机上的 SAL 当前也使用此端口在 SnapCenter 插件主机与 SVM 之间进行通信。
+SPL 到本地自定义插件流程
 
 
 
  a| 
-适用于 SAP HANA 数据库的 SnapCenter 插件
+ONTAP 集群或 SVM
  a| 
-* 3instance_number13
-* 3instance_number15
-
+443（HTTPS）、80（HTTP）
  a| 
-* HTTPS
-* HTTP
-
+HTTPS / HTTP
  a| 
-双向
+从 SnapCenter 服务器和 Windows 插件主机出站到 ONTAP 管理 LIF
  a| 
-对于多租户数据库容器（ MDC ）单租户，端口号以 13 结尾；对于非 MDC ，端口号以 15 结尾。
-
-您可以自定义端口号。
+出站
+ a| 
+否
+ a| 
+存储抽象层（SAL）
 
 
 
  a| 
-适用于PostgreSQL的SnapCenter插件
+SAP HANA 插件
+ a| 
+3NN13、3NN15、3NN41
+ a| 
+TCP（TLS 可选）
+ a| 
+插件主机到 HANA 主机
+ a| 
+HANA 主机上来自插件主机的入站
+ a| 
+是，按实例
+ a| 
+SQL 访问（请参阅 SAP HANA SQL 表）
+
+
+
+ a| 
+PostgreSQL 插件
  a| 
 5432
  a| 
+TCP（TLS 可选）
  a| 
+PostgreSQL 插件主机
  a| 
-此端口是PostgreSQL插件用于与PostgreSQL集群通信的默认PostgreSQL端口。
+数据库主机上的入站
+ a| 
+是的。
+ a| 
+PostgreSQL 客户端连接
 
-您可以自定义端口号。
+
+
+ a| 
+Active Directory
+ a| 
+389, 636
+ a| 
+TCP（LDAP、LDAPS）
+ a| 
+SnapCenter 服务器到域控制器
+ a| 
+-
+ a| 
+-
+ a| 
+域身份验证
+
+
+
+ a| 
+Linux SnapCenter 内部 Web
+ a| 
+8147
+ a| 
+HTTP
+ a| 
+Linux SnapCenter 服务器上的 Localhost
+ a| 
+-
+ a| 
+-
+ a| 
+内部 WebApp 端口（8146 保持外部）
+
+
+
+ a| 
+当 SMCore 也存在时的 Linux SPL
+ a| 
+9091
+ a| 
+HTTPS
+ a| 
+SnapCenter 服务器到该 Linux 主机
+ a| 
+-
+ a| 
+-
+ a| 
+SMCore 存在时的 SPL 通信
 
 |===
+
+
+[[sap-hana-sql-ports-client-connections-instance-nn]]
+=== SAP HANA SQL 端口（客户端连接，实例 NN）
+
+|===
+| 数据库 | 端口模式 | 实例 00 | 实例 01 
+
+
+ a| 
+SYSTEMDB（多租户）
+ a| 
+3NN13
+ a| 
+30013
+ a| 
+30113
+
+
+
+ a| 
+第一个租户，或单容器数据库
+ a| 
+3NN15
+ a| 
+30015
+ a| 
+30115
+
+
+
+ a| 
+第二租户
+ a| 
+3NN41
+ a| 
+30041
+ a| 
+30141
+
+
+
+ a| 
+每增加一个租户
+ a| 
+上一个端口 + 3
+ a| 
+30044, 30047, ……
+ a| 
+30144, 30147, ……
+
+|===
+
+
+[[sap-hana-system-replication-hsr-ports-instance-nn]]
+=== SAP HANA 系统复制（HSR）端口，实例 NN
+
+|===
+| Port | 协议 | 方向 | 目的 
+
+
+ a| 
+4NN00–4NN99
+ a| 
+TCP
+ a| 
+主主机 ↔ 辅助主机
+ a| 
+为 HSR 保留的完整范围。两个站点上都必须是空闲的。
+
+
+
+ a| 
+4NN01
+ a| 
+TCP
+ a| 
+主 → 辅助
+ a| 
+日志和数据传送（多租户）
+
+
+
+ a| 
+4NN02
+ a| 
+TCP
+ a| 
+主 ↔ 辅
+ a| 
+未加密的元数据。由 `hdbnsutil -sr_register`使用。
+
+
+
+ a| 
+4NN06
+ a| 
+TCP
+ a| 
+主 ↔ 辅
+ a| 
+加密元数据
+
+|===
+[NOTE]
+====
+* 多租户系统的默认复制端口偏移量为 10000。
+* 从单个容器转换的系统保留偏移量 100，因此实例 NN+1 必须在两个站点上都可用。
+
+
+====

@@ -10,5 +10,9 @@ entries:
   url: "/upgrade/task_upgrade_snapcenter.html"
 - title: 升级Linux主机上的SnapCenter服务器
   url: "/upgrade/upgrade_snapcenter_server_linux.html"
+- title: 将主机升级到最新 SnapCenter 版本
+  url: "/upgrade/learn-about-host-upgrades.html"
+- title: 升级 SnapCenter 插件和主机
+  url: "/upgrade/upgrade-hosts-plugins.html"
 - title: 升级插件软件包
   url: "/upgrade/task_upgrade_your_plug_in_packages.html"

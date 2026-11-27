@@ -1,0 +1,99 @@
+---
+permalink: upgrade/learn-about-host-upgrades.html 
+sidebar: sidebar 
+keywords: upgrade, supported upgrade paths 
+summary: 升级说明描述了产品上一版本与本版本之间的新要求和支持变更，包括任何已弃用的功能。在升级到新版本之前，请仔细查阅此信息。 
+---
+= 将主机升级到最新的 SnapCenter 版本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 SnapCenter Server 以及所有需要升级插件的主机上，SnapCenter 6.2.3 需要更新版本的 Java、.NET 和 PowerShell。请先安装这些版本，并保留现有版本。仅在 SnapCenter Server 和该主机上的所有插件均成功升级后，才可移除旧版 Java 或 .NET。
+
+保留与新版本一起安装的早期 Java 和 .NET 版本不会影响 SnapCenter，前提是 `JAVA_HOME`指向 Java 17。
+
+.开始之前
+* 在更改先决条件之前，请查看 link:../release-notes/upgrade-path.html["SnapCenter 升级备注"] 并确认支持的升级路径。如果您运行的是 SnapCenter 6.0 或更低版本，请先升级到 6.1P3，然后再执行此过程。
+* 阅读 SnapCenter 6.2.3 发行说明并确认服务器和插件主机所需的确切 Java、.NET 和 PowerShell 版本。
+* 记下要升级的每台主机，包括 SnapCenter 服务器和每个 Windows 或 Linux 插件主机。
+* 安排维护时段。在更改先决条件或开始升级之前，请暂停或完成正在运行的备份、还原、克隆和验证作业。
+* 备份 SnapCenter 存储库并确认您可以还原它。记录每个主机上的当前 SnapCenter 服务器版本和插件版本。
+* 确认用于升级的帐户可以设置系统环境变量，并且可以在每个主机上安装软件。
+
+
+
+
+[[install-the-required-runtimes]]
+== 安装所需的运行时
+
+在升级任何插件之前，请在 SnapCenter 服务器和每个插件主机上安装新版本。保留当前安装的 Java 和 .NET。
+
+. 安装 SnapCenter 6.2.3 所需的 Java 17 版本。
+. 为适用的主机安装所需的 .NET 或 ASP.NET Core 托管捆绑包。
+. 为适用的主机安装所需的 PowerShell 7 版本。PowerShell 7 与 Windows PowerShell 5.1 并行安装。
+. 完成安装程序并允许任何请求的重新启动。如果需要重新启动，请在继续之前重新启动主机。
+
+
+
+
+[[point-javahome-to-java-17]]
+== 将 JAVA_HOME 指向 Java 17
+
+安装 Java 17 不会自动配置 SnapCenter 来使用它。如果仍安装了较旧的 Java 版本，则必须显式将 `JAVA_HOME`设置为系统环境变量，以便 SnapCenter 使用 Java 17。
+
+. 将 `JAVA_HOME`设置为系统环境变量，以便 SnapCenter 服务能够识别它。仅限用户的变量是不够的。
+. 将值设置为 Java 17 安装目录。请使用主目录，而不是 `bin`文件夹。
+. 。在 Linux 插件主机上，将相同的系统范围 `JAVA_HOME`设置为 Java 17 主目录。如果 `SKIP_JAVAHOME_UPDATE=TRUE`已在 `/var/opt/snapcenter/spl/etc/spl.properties`中配置，还需将该文件的 `JAVA_HOME`更新为 Java 17 目录。重启 SPL 后，在删除旧版运行时之前，请验证其配置的 Java 路径是否指向 Java 17。
+. 确保系统 `PATH`包括 `%JAVA_HOME%\bin`（Windows）或 `$JAVA_HOME/bin`（Linux）。
+. 打开新的命令提示符，或重新登录，以便加载更新后的变量。在新会话中，确认以下内容：
++
+.. `java -version` 显示 Java 17
+.. `echo %JAVA_HOME%` （Windows）或 `echo $JAVA_HOME` （Linux）显示 Java 17 目录
+
+
+. 使用适用于这些安装程序的命令（例如， `dotnet --list-runtimes`和 `pwsh --version`）确认 .NET 托管捆绑包和 PowerShell 版本。
+. 更改 `JAVA_HOME`后，重新启动 SnapCenter 服务或重新启动主机，以便服务使用新值。在开始插件升级之前执行此操作。
+
+
+
+
+[[upgrade-snapcenter-followed-by-the-plug-ins]]
+== 升级 SnapCenter，然后升级插件
+
+. 将 SnapCenter 服务器升级到 6.2.3，并确认服务器已启动且 Web 界面可用。
+. 从 SnapCenter Server 升级每个主机上的插件。等待每个插件升级作业在作业监视器中成功完成。
+. 确认每台主机都显示 6.2.3 插件版本，并且主机连接正常。
+. 在删除任何较旧的运行时之前，请对代表性资源运行一个简单的操作（例如，发现或小型备份）。
+
+
+
+
+[[remove-older-java-and-net-versions-only-after-the-upgrade-completes]]
+== 仅在升级完成后删除较旧的 Java 和 .NET 版本
+
+. 仅当该主机同时满足以下两个条件时，才卸载以前的 Java 或 .NET 版本：
++
+.. SnapCenter 服务器版本为 6.2.3。
+.. 该主机上的每个 SnapCenter 插件均已升级，并且升级作业已成功。
++
+在升级插件之前删除 Java 或 .NET 可能会导致插件升级失败或使插件安装无法使用。
+
+
+
+. 成功升级后，您可以：
++
+.. 保留先前安装的 Java 和 .NET。当 `JAVA_HOME`指向 Java 17 时，并行安装不会影响 SnapCenter。
+.. 如果主机上没有其他应用程序需要，请卸载以前的 Java 和 .NET。
+
+
+. 如果卸载较旧的 Java 版本：
++
+.. 确认  `JAVA_HOME` 和  `PATH` 指向 Java 17。
+.. 打开一个新会话并确认 `java -version`显示 Java 17。
+.. 重新启动 SnapCenter 服务或主机，并确认主机和插件仍处于运行状态。
+
+
+

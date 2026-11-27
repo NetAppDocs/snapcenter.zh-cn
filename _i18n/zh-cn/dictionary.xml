@@ -889,10 +889,7 @@
   <block id="5be74f1e9c3cdce99e50c0e439ec19b3" category="paragraph">二级目标</block>
   <block id="7dbd4083dc9a93160940c1e53d03999f" category="admonition">建议（但不要求）将 SnapCenter 标准版许可证添加到二级目标。如果二级目标上未启用 SnapCenter 标准许可证，则在执行故障转移操作后，您将无法使用 SnapCenter 备份二级目标上的资源。但是，要执行克隆和验证操作，二级目标需要 FlexClone 许可证。</block>
   <block id="8124579383e90243e4b06323d2b37f8d" category="cell">主机</block>
-  <block id="18622e175ff22b2375f9cbc2314b3285" category="paragraph">SnapCenter SMCore 通信端口</block>
-  <block id="4abc501abe98e95144eba2c4d17174ad" category="paragraph">Windows 插件主机</block>
   <block id="5ae5c2db7baad917cb8389420693266d" category="paragraph">适用于 Windows 的 SnapCenter 插件</block>
-  <block id="48552dce4d9810446c70f66f21f08120" category="paragraph">ONTAP 集群或 SVM 通信端口</block>
   <block id="354c84f19db927b615f7e75880c69840" category="section-title">安装 SnapCenter 服务器</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp 支持站点</block>
   <block id="72de9cea28a7cca58f8423279c68e8c6" category="list-text">从下载 SnapCenter 服务器安装包<block ref="d4fdc92072f5257471f3139636068769" category="inline-link-rx"></block> 然后双击该 exe 。</block>
@@ -2561,12 +2558,7 @@
   <block id="718d9231009edb9654b9f6f52346a835" category="list-text">防火墙，代理或其他网络设备不应干扰连接。</block>
   <block id="eceb61ca100437ca326b49341fc1f909" category="list-text">如果您在安装 SnapCenter 时指定了自定义端口，则应在插件主机上为 SnapCenter 插件加载程序的该端口添加防火墙规则。</block>
   <block id="29e256a27c9d420cee02c5cda005de01" category="paragraph">下表列出了不同的端口及其默认值。</block>
-  <block id="91ca015b30de2a05aff2f16ec93231dd" category="paragraph">MySQL 端口</block>
-  <block id="31287d49a8a96de2e8d195c76a865396" category="paragraph">Linux 或 AIX 插件主机</block>
   <block id="2e41c2081a8838f41650e76a978d4057" category="paragraph">适用于 Oracle 数据库的 SnapCenter 插件</block>
-  <block id="7d75ac58eb57fae611a633f5e57d62d0" category="paragraph">适用于 Oracle 的插件使用默认 JDBC 端口连接到 Oracle 数据库。</block>
-  <block id="a26bff28c23606c7396b4619af8af1bd" category="paragraph">SAL （存储抽象层）使用此端口在运行 SnapCenter 服务器的主机与 SVM 之间进行通信。SnapCenter for Windows 插件主机上的 SAL 当前也使用此端口在 SnapCenter 插件主机与 SVM 之间进行通信。</block>
-  <block id="5afe34fece774db451a111901841c2f9" category="paragraph">对于多租户数据库容器（ MDC ）单租户，端口号以 13 结尾；对于非 MDC ，端口号以 15 结尾。</block>
   <block id="68dae2573ac7874d6dd234af4fa4c752" category="list-text">在 SnapCenter 服务器上，打开 PowerShell 窗口以重置 MySQL 密码。</block>
   <block id="677b5668995b5d565b03294fb7b16727" category="list-text">运行 Set-SmRepositoryPassword 以重置 MySQL 密码。</block>
   <block id="bdc5e2c886d9f1d7c2db87ea0140c771" category="list-text">打开命令提示符并运行 mysql -u root -p 以登录到 MySQL 。</block>
@@ -7646,18 +7638,11 @@ destination</block>
   <block id="e229f2a31adf5bd88e8925c96feb81d2" category="list-text">从“SnapCenter产品线”下拉列表中选择*Product*。</block>
   <block id="cf46417d06a0356fc053eba2626759a2" category="list-text">选择计费提供商。</block>
   <block id="98d7dda5167a79acadd993f0ad819512" category="list-text">输入20位数的SnapCenter实例ID。</block>
-  <block id="a22e3c4898555ed30acf91192f3c301a" category="paragraph">计划程序服务端口</block>
-  <block id="0703d446ecd330b75f76dab17472df37" category="paragraph">此端口用于集中编排SnapCenter服务器主机中所有受管插件的SnapCenter计划程序工作流。</block>
-  <block id="10dbf6dc6b3b30fd58efded1253516d8" category="paragraph">适用于Exchange数据库的SnapCenter插件</block>
-  <block id="b0ca30368b247fa738c8bdba36dd4d73" category="paragraph">默认的NET。 适用于Windows的插件使用TCP端口连接到Exchange VSS回调。</block>
-  <block id="cc0974b8a511f2e4b4d021cda6e5e820" category="paragraph">NetApp支持的SnapCenter插件</block>
   <block id="6905661e5d7f8f3e6a4faffbbab0f627" category="cell">Windows主机要求</block>
   <block id="e7074f744b12e993cbdc6c77ee980b3e" category="list-text">Red Hat Enterprise Linux (RHEL) 8和9</block>
-  <block id="447430d602cceb081264e037425cd96e" category="list-text">SUSE Linux Enterprise Server (SLES) 15.</block>
   <block id="58fcf439498ea50f357222fa8b3b151e" category="paragraph">7 GB</block>
   <block id="a1fb12d161d2304544584ed2d9b82082" category="admonition">如果 SnapCenter 存储库位于安装 SnapCenter 服务器的同一驱动器中，则建议使用 15 GB 。</block>
   <block id="9f101c0e6e5929a04c9e7663fdf91eda" category="paragraph">15 GB</block>
-  <block id="d6874413f4fac004d1cb83f02eccc33c" category="admonition">注意：如果 SnapCenter 服务器位于安装 SnapCenter 存储库的同一驱动器中，则建议具有 15 GB 。</block>
   <block id="149d1be25c7d76696b875863179ac66d" category="list-text">NGINX是一个可用作反向代理的Web服务器</block>
   <block id="6d4ed4face9b51c5caae12208e47fa1e" category="paragraph">PAM (可插拔鉴定模块)是一个系统安全工具，它允许系统管理员设置鉴定策略，而不必重新编译执行鉴定的程序。</block>
   <block id="2e2da9aed107a3761b9b4f5441c315fc" category="summary">如果您没有现有的NetApp帐户、则应按照以下步骤注册以访问软件。</block>
@@ -7829,14 +7814,9 @@ destination</block>
   <block id="a66f61607659e55e7eada5fa0eae6772" category="list-text">_/opt/NetApp/snapcentre/SnapManagerWeb/Repository /SC_UNIX)插件_Checksum．txt _(如果SnapCenter服务器安装在Linux主机上)。</block>
   <block id="3fa350da506fa7200b72bccb8adedef0" category="list-text">对于自动发现的资源、SFSR支持还原。</block>
   <block id="e489b53bcd8344a56dd6eaa6d10a4904" category="list-text">不支持自动恢复。</block>
-  <block id="ebf2b152acd84c2b64a2816e05a1253c" category="list-text">在“恢复范围”页中，选择*Complete Resource*以恢复IBM DB2数据库的已配置数据卷。</block>
-  <block id="509e2ba2190a9690c9ebff6cb0e2b74d" category="paragraph">对于自动发现的资源、不需要卸载命令。</block>
-  <block id="c90dd548c691ca9f32913357e116af19" category="paragraph">对于自动发现的资源、不需要使用挂载命令。</block>
-  <block id="63da44e9da033b590dde9b4ad197a492" category="paragraph">只有当"回滚"状态为"待定数据库"时、才能进行恢复。此状态适用于启用了归档日志记录的DB2数据库。</block>
   <block id="a1d5af660c5e2d1e4fad83bdc58b7ce2" category="admonition">AppObjectId为"Host\Plugin\UID"、其中UID =&lt;instance_name&gt;表示手动发现的实例资源、UID =&lt;databse_name&gt;表示&lt;instance_name&gt;数据库资源。您可以从 Get-smResources cmdlet 获取 ResourceID 。</block>
   <block id="6bd0747e41f5cc71876f961107d5cde4" category="paragraph"><block ref="5c7d1c91ee3f41bdd6f718a502a5613f" category="inline-link-rx"></block>(英文)</block>
   <block id="ba315e9de1111ac853f33529fa2cd3d3" category="doc">还原手动添加的资源备份</block>
-  <block id="0ddabc0cd6d62f0dd9bfd16db895a073" category="list-text">如果选择*Complete Resource*，则会还原IBM DB2数据库的所有已配置数据卷。</block>
   <block id="f710888d31ffa378d3f09201379fa846" category="doc">为适用于IBM DB2的SnapCenter插件设置凭据</block>
   <block id="9acfd3e3a78cc13a8e1c2817f7b54348" category="summary">SnapCenter 可与插件应用程序以及存储系统上的 NetApp 技术集成。要使用适用于IBM DB2数据库的插件、请使用SnapCenter图形用户界面。</block>
   <block id="95902d624b69ea4a39c19f5b019d49fe" category="doc">适用于IBM DB2功能的SnapCenter插件</block>
@@ -8379,8 +8359,6 @@ destination</block>
   <block id="e20a4407f4a132523f0ff53a11de8ea9" category="paragraph">以下示例显示了在MySQLProtocol .Web.UI.dll.config文件中更新的SnapManager密钥值。</block>
   <block id="282f609628cc0aa1febc1031254fda4e" category="list-text">使用您在my.ini文件的[client]部分为两个HA节点指定的路径更新SnapManager．Web.UI.dll.config文件。</block>
   <block id="be9f9eca92a7b91f5cf9f485b92f2f33" category="admonition">CA证书RSA密钥长度必须至少为3072位。</block>
-  <block id="064270f4c1b637c782011391ccc057cb" category="paragraph">Rabbitmq端口</block>
-  <block id="c55a170d16570920e099a9e43d38db67" category="paragraph">这是Rabbitmq侦听的默认端口、用于在计划程序服务和SnapCenter之间进行发布者-订阅者模型通信。</block>
   <block id="fc25be62e75052437e6fa7b8d1571f48" category="open-title">SnapCenter UI</block>
   <block id="41269337bd4507838c6bb1bd7b2141c3" category="sidebar">备份DB2数据库</block>
   <block id="e8bec8246398463ed040582acbbd61f4" category="admonition">尽管备份作业状态显示<block ref="718fe53e11bbf4bb30ca7e885db5e6f5" category="inline-image-macro-rx" type="image"></block>，但当您单击作业详细信息时，您可能会看到备份操作的某些子任务仍在进行中或标记有警告信号。</block>
@@ -8633,39 +8611,20 @@ destination</block>
   <block id="a0f3e47cc5179a026d7b861797055f6d" category="list-text">原始设备映射(RDM)</block>
   <block id="da612433b3e7d1bdc94a92a26f362677" category="list-text">LockVault</block>
   <block id="980869fd79cd78a3682752206f149791" category="list-text">重命名快照</block>
-  <block id="bc3c828cce582fafd1e35e77b8c84327" category="cell">端口名称</block>
-  <block id="f78fb51edae6a69d5e1e911a2b6fc268" category="cell">端口号</block>
   <block id="02674a4ef33e11c879283629996c8ff8" category="cell">方向</block>
   <block id="202ed3792e2cfa7318b12ead83763c37" category="paragraph">8146</block>
   <block id="0e8433f9a404f1f3ba601c14b026d321" category="paragraph">HTTPS</block>
-  <block id="abd4328c725637aabedbd02d3b7ffd40" category="paragraph">双向</block>
-  <block id="57866de61bc9736856544f9431bab0fc" category="paragraph">此端口用于SnapCenter客户端(SnapCenter用户)和SnapCenter服务器之间的通信、也用于从插件主机到SnapCenter服务器的通信。</block>
-  <block id="bb07f54f9658822141c38bac46449ce8" category="paragraph">您可以自定义端口号。</block>
   <block id="0c0cfd9478c6551fbfe74a7acb6fc037" category="paragraph">8145</block>
-  <block id="bb68b5529560433e58ff13eb45622724" category="paragraph">此端口用于在SnapCenter 服务器与安装SnapCenter 插件的主机之间进行通信。</block>
   <block id="d627f44819e0cdb235a1ba10dc32df2e" category="paragraph">8154</block>
   <block id="e7c573c14a09b84f6b7782ce3965f335" category="paragraph">5672</block>
   <block id="b136ef5f6a01d816991fe3cf7a6ac763" category="paragraph">TCP</block>
   <block id="16fc18d787294ad5171100e33d05d4e2" category="paragraph">3306</block>
-  <block id="7da8090ec8d5ceac88850953ed8ca77e" category="paragraph">此端口用于与SnapCenter存储库数据库进行通信。您可以创建从SnapCenter服务器到MySQL服务器的安全连接。 <block ref="cd7568118ad87382648cb2133a315ffd" category="inline-link-macro-rx"></block></block>
-  <block id="a1639b6147c7f85402852464ce33b9ae" category="paragraph">135、445</block>
-  <block id="5d8dd57144f3173af07b91e57b3e3365" category="paragraph">此端口用于SnapCenter服务器与安装此插件的主机之间的通信。Microsoft指定的其他动态端口范围也应处于打开状态。</block>
   <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="paragraph">22</block>
-  <block id="765553e6c7ac8592c389acb9878a050a" category="paragraph">SSH</block>
-  <block id="7c91d399b1b0815caa55eebe8056c2b7" category="paragraph">单向</block>
-  <block id="64ec1e1554e8fa08090ea258f520c9e9" category="paragraph">此端口用于SnapCenter服务器与主机之间的通信、此通信是从服务器启动到客户端主机的。</block>
-  <block id="39a36a098454e387df2924220bccc000" category="paragraph">适用于Windows、Linux或AIX的SnapCenter插件软件包</block>
-  <block id="37069e85e2aa11a189d1cd3d878993f0" category="paragraph">此端口用于SMCore与安装了插件包的主机之间的通信。可自定义。</block>
   <block id="617eed14b937d3e2c5cec24f79eb134d" category="paragraph">27216</block>
   <block id="a4300b002bcfb71f291dac175d52df94" category="paragraph">909</block>
   <block id="38f629170ac3ab74b9d6d2cc411c2f3c" category="paragraph">9090</block>
-  <block id="faddd57d1fffbff724d6e92950b8e8c3" category="list-text">443 (HTTPS)</block>
-  <block id="1c6bde00cd912e15a51576cfce7d0f55" category="list-text">80 (HTTP)</block>
   <block id="293c9ea246ff9985dc6f62a650f78986" category="list-text">HTTP</block>
-  <block id="4e364bac618760c41023e54190a70ba0" category="list-text">3instance_number13</block>
-  <block id="c168c4383d3f0e3cae7be4b16b75d74b" category="list-text">3instance_number15</block>
   <block id="2e92962c0b6996add9517e4242ea9bdc" category="paragraph">5432</block>
-  <block id="b8231355e7b2029d105ac5543f0e6aa8" category="paragraph">此端口是PostgreSQL插件用于与PostgreSQL集群通信的默认PostgreSQL端口。</block>
   <block id="8c16affd19f6d2610f039e0bf745fe04" category="list-text">.NET 8.0.12 (以及所有后续的8.0.x修补程序)</block>
   <block id="36ab4d2d051baac565e5a2261da2c98d" category="admonition">ASP.NET核心需要IIS_IUSRS才能访问Windows上SnapCenter服务器中的临时文件系统。</block>
   <block id="de14602aec2aa05e977975d7781f0163" category="paragraph">有关权限列表的信息，请参见 <block ref="d791b2cd4a5fa29c456ec537e56c834d" category="inline-link-macro-rx"></block>。</block>
@@ -9120,8 +9079,6 @@ destination</block>
   <block id="ee1ef6cf0f3971b44eb2abcac958fb8d" category="list-text">FlexGroup 卷</block>
   <block id="29a720af33d29332fae31060b6910f77" category="list-text">从 ASA、AFF 或 FAS 存储系统迁移到 ASA r2 存储系统</block>
   <block id="dbc2c133826d732ac86927b2062c928d" category="list-text">SQL插件宿主机日志目录二次配置</block>
-  <block id="e29e29246a71235f47845c88c4a61f52" category="paragraph">这是仅在插件主机上使用的内部端口；不需要防火墙例外。</block>
-  <block id="225b299c2a6edae75ebfaff049e07f4e" category="paragraph">SnapCenter 服务器和插件之间的通信通过端口 8145 进行。</block>
   <block id="0b30312a6625cb4a7b0de67a44ddd45a" category="summary">为 Linux 主机上的 SnapCenter IBM Db2Plug-ins 服务配置 CA 证书</block>
   <block id="65acd7dc10bede8dffde6b75a88e10ce" category="summary">为 Linux 主机上的 SnapCenter MySQL 插件服务配置 CA 证书</block>
   <block id="755c3af5dacbed1425beceef56b811a7" category="paragraph">NetApp 提供存储插件，使用 SnapCenter 内置的插件框架对 ONTAP 存储上的数据卷执行数据保护操作。</block>
@@ -9139,7 +9096,6 @@ destination</block>
   <block id="89befeb3776cdd11052fa85b6e4f4928" category="list-text">备份SnapCenter服务器主机或插件主机上修改的所有已修改的SnapCenter配置文件。</block>
   <block id="aaac04103c1097d63b5a7be06269c7d9" category="list-text">如果您在SnapCenter 5.0 中安装了多个版本的自定义插件，则在升级到 6.0 或更高版本之前，您应该运行 powershell cmdlet 从SnapCenter存储库（NSM 数据库）中删除所有早期版本的自定义插件（最新版本除外）。</block>
   <block id="b81129baefdfc97f130bbcee1da98ce6" category="list-text">跑步<block ref="5127bb5818426c9a226f86808b688df6" prefix=" " category="inline-code"></block>并使用 SnapCenterAdmin 角色凭据登录</block>
-  <block id="e11a306a86d86aaffa2d69ff55fb9302" category="list-text">跑步<block ref="4c7adb4c09f9d1c7b33d1cf906860d34" prefix=" " category="inline-code"></block></block>
   <block id="922142e2126839c9c17b4801781905c0" category="inline-link">升级到SnapCenter 6.0 或更高版本失败</block>
   <block id="b644e2b1fd194b2e530e570c13e0336d" category="paragraph">有关更多信息，请参阅<block ref="2f58e6674e7cd1d2be8dd8a7ec9f27f2" category="inline-link-rx"></block> 。</block>
   <block id="9593a30d4190c278ff6dcb05dd8f4490" category="list-text">在升级期间， SnapCenter执行 SQL 脚本来更新 NSM 数据库中的 Exchange 数据，将 DAG 和主机短名称转换为 FQDN。这仅适用于将SnapCenter Server 与 Exchange 插件一起使用的情况。</block>
@@ -9277,7 +9233,6 @@ destination</block>
   <block id="995c8f79a8e07fbd8d519e45d03d6004" category="paragraph">NetApp控制台建立在增强和重组的BlueXP基础之上，可在企业级内部和云环境中集中管理NetApp存储和NetApp数据服务，提供实时洞察、更快的工作流程和简化的管理，并且高度安全且合规。</block>
   <block id="2ef9d641d45afe99b74ad6f9a9f797ad" category="inline-link-macro">NetApp控制台发行说明</block>
   <block id="1e3eeac5409758903bc21870184a640a" category="paragraph">有关更改的详细信息，请参阅<block ref="06d876b9fcdfcba8772d93beac1ca38b" category="inline-link-macro-rx"></block>。</block>
-  <block id="e6f36a956625505e0a3733e3e0073fa0" category="paragraph">SnapCenter Web 端口</block>
   <block id="da994c44eacde8f5cafe8883779cb695" category="sidebar">SnapCenter技术报告</block>
   <block id="a5ae087d92fe3db87c6e8de8e579868c" category="paragraph">有关受支持版本的最新信息，请参阅<block ref="845d98cf9e1414112b381d552d9c8014" category="inline-link-rx"></block>。</block>
   <block id="96210757b8412d030188fecde28ceb9d" category="paragraph">Windows Server 上提供SnapCenter配置和数据保护支持。有关受支持版本的最新信息，请参阅 <block ref="6c9a8409bf98d8a8939e1ebaf2e43454" category="inline-link-rx"></block>。</block>
@@ -10058,4 +10013,263 @@ destination</block>
   <block id="a83a9a8dd992eb258a6c4abc6c6b2c97" category="paragraph">6.2.3 版本的 SnapCenter software 没有新增功能或增强项。</block>
   <block id="064072d3b881bfbb5d5f6ea225eb8867" category="paragraph">要将主机升级到 SnapCenter 6.2.3，请参见 <block ref="c12c01bc09a3f61e41d7f2a98eb13862" category="inline-link-macro-rx"></block> 中的 *将主机升级到 SnapCenter 6.2.3*，了解有关升级主机的更多详细信息。</block>
   <block id="6fc609e22b9ec71526720e491d7f9a37" category="paragraph">有关将主机升级到 SnapCenter 6.2.3 的更多详细信息，请参阅 <block ref="c12c01bc09a3f61e41d7f2a98eb13862" category="inline-link-macro-rx"></block> 中的 *将主机升级到 SnapCenter 6.2.3*。</block>
+  <block id="88e2cea2713e39e9f0807851b2b0ae26" category="paragraph">有关 SnapCenter 要求和支持的配置的最新信息，请参阅以下内容：</block>
+  <block id="c12c01bc09a3f61e41d7f2a98eb13862" category="list-text"><block ref="c12c01bc09a3f61e41d7f2a98eb13862" category="inline-link-macro-rx"></block></block>
+  <block id="399bd8e31f57cdc1aac9a44a13524ab0" category="inline-link-macro">SnapCenter 升级路径</block>
+  <block id="b5c00113a1c3294d46bc2cddc16514d6" category="list-text"><block ref="b5c00113a1c3294d46bc2cddc16514d6" category="inline-link-macro-rx"></block></block>
+  <block id="6b0859455ec28f3587ea3954007ce7d7" category="inline-link-macro">将主机升级到最新 SnapCenter 版本</block>
+  <block id="5cc2c9cf723f9c030ee0935b1337ded5" category="list-text"><block ref="5cc2c9cf723f9c030ee0935b1337ded5" category="inline-link-macro-rx"></block></block>
+  <block id="a1d8dea10cdab017f6a1c2d770f6be65" category="list-text">SUSE Linux Enterprise Server (SLES) 15 SP7</block>
+  <block id="c91e8c6763a921eb764580dc26d685d1" category="admonition">如果 SnapCenter 服务器位于安装 SnapCenter 存储库的同一驱动器中，则建议使用 15GB。</block>
+  <block id="5547b25f8a3b9fbac53f2af4ca70e69a" category="list-text">ASP.NET Core Runtime 10.0.10 Hosting Bundle（或更高版本）</block>
+  <block id="f215a2665aa7af927ef956b65cff8d31" category="list-text">PowerShell 7.6.4（或更高版本）</block>
+  <block id="b2ee912b91d69b435159c7c3f6df7f5f" category="cell">数字</block>
+  <block id="c5381dc540506dbb210e2d300554e4cd" category="cell">防火墙</block>
+  <block id="e851b43855409623612d7992444f909b" category="cell">可定制</block>
+  <block id="261addf78c7b2c961032b3dd08ba0b1f" category="cell">目的</block>
+  <block id="add3094c0a0cc5abe761cdd20b2a4f96" category="paragraph">SnapCenter Web</block>
+  <block id="512f1cc22c3c85c38e2f820ebba92293" category="paragraph">入站到 SnapCenter Server</block>
+  <block id="8d41be68d0b888b50515906f3d17ac46" category="paragraph">在 SnapCenter 服务器上打开</block>
+  <block id="20ba665f00dfa00fec5b6c6441062f96" category="paragraph">浏览器、REST、PowerShell 和插件主机回调</block>
+  <block id="69ebe06092fb02b1443babe9636e4b34" category="paragraph">SnapCenter SMCore 通信</block>
+  <block id="a554621275a769fc7f2a6713da5555cc" category="paragraph">SnapCenter 服务器到插件主机</block>
+  <block id="32ffc49d3daf33ae3ad7639879cb33a0" category="paragraph">在每个插件主机上打开入站</block>
+  <block id="4174bf6ddd559ed24e8eec840278a30f" category="paragraph">SnapCenter 服务器到 SMCore（Windows）或 SPL（Linux/AIX）</block>
+  <block id="c3c9f83735d650544bdfe64ecada1acb" category="paragraph">计划程序服务</block>
+  <block id="c8ea7df9ac41bea6b8eb3569fc16690f" category="paragraph">SnapCenter Server 上的本地主机</block>
+  <block id="f005f4cdd4434498f71939073f39ed22" category="paragraph">独立模式无</block>
+  <block id="1e6e8a308b3fb9d3340cb3b6f0fe4b96" category="paragraph">WebApp 到本地调度程序 API</block>
+  <block id="7eaa993723e57b3bfc99923c196e2e17" category="paragraph">RabbitMQ</block>
+  <block id="5c1be23fbc03a6e303249941362778d0" category="paragraph">TCP（AMQP）</block>
+  <block id="8cbe14f2b70a92e07763994742cb8df2" category="paragraph">绑定到 127.0.0.1</block>
+  <block id="9f587d7946f049d340c39e67e050ce7d" category="paragraph">计划程序和 SnapCenter 消息传递</block>
+  <block id="e4c59c81da46b085c9ecc552766fd774" category="paragraph">MySQL 存储库</block>
+  <block id="32829f211abefd3b4206c8794915a973" category="paragraph">TCP（TLS 可选）</block>
+  <block id="67f1029fbaed6c872d39f2bc05f42b44" category="paragraph">SnapCenter 服务器到 MySQL</block>
+  <block id="e476f1960fe2786c17de784e251311f7" category="paragraph">MySQL 为本地时无</block>
+  <block id="246f5989d61688567ef3d61eacec97ae" category="paragraph">否（固定在 3306）</block>
+  <block id="10907267e6521ac61aac00960f284566" category="paragraph">SnapCenter 存储库数据库</block>
+  <block id="d2887e9f03a325ba9670d6c024a13488" category="paragraph">Windows 插件安装</block>
+  <block id="0810461768b0cb4a1c0c0e232f919030" category="paragraph">135, 445, 49152–65535</block>
+  <block id="b092013dc52b35bdef5d8a39ca545420" category="paragraph">SnapCenter 服务器到 Windows 插件主机</block>
+  <block id="0862bd3af1d8b2cf1a54cdf4b2612bce" category="paragraph">推送安装期间插件主机上的入站</block>
+  <block id="a2278709d5faf9d5cebdd7460d3af41a" category="paragraph">用于远程安装的 RPC、SMB 和动态 RPC 范围</block>
+  <block id="3d25272beed98be3059a9fb317a5a942" category="paragraph">Linux 或 AIX 插件安装</block>
+  <block id="82933aa401674435c658303015f85b5e" category="paragraph">SSH （TCP）</block>
+  <block id="06d88d9f3ba5efc7f0ded7f4c9c65314" category="paragraph">插件主机上的入站 SSH</block>
+  <block id="620d4cc0b58456bb0eb63a2ee500a2d0" category="paragraph">仅当 SSH 端口更改时</block>
+  <block id="9820a2544bcd2915d569784c11e98580" category="paragraph">推送安装和主机命令</block>
+  <block id="a3684897b977a9df99bf11450eb82b68" category="paragraph">Oracle 插件</block>
+  <block id="6f880816e53436461833ebdc2d400269" category="paragraph">Oracle 插件主机上的 Localhost</block>
+  <block id="aed38a10aed52b09e784d91ac2c17216" category="paragraph">OCI-JDBC 远程对象注册表（不是 1521 上的 Oracle 侦听器）</block>
+  <block id="dc7df37530a1a1f8655e0cc70d6699fa" category="paragraph">Exchange 插件</block>
+  <block id="c6b746a6a22f91963c0285aca4687447" category="paragraph">NET.TCP</block>
+  <block id="ddbaaeb4849f0d48a6904ac8c2b3ea93" category="paragraph">Exchange 主机上的 Localhost</block>
+  <block id="437236b1ef554ac69f282434ba84d4f2" category="paragraph">SnapDrive 服务到 NetApp VSS 提供程序</block>
+  <block id="6666dcb5492518b80b8273010ebf5440" category="paragraph">NetApp 支持的插件（SCC）</block>
+  <block id="507d70e902360330ce5bdb64adc4ccd9" category="paragraph">插件主机上的 Localhost</block>
+  <block id="5ed4f8a4ccdb6656f20750461b58d185" category="paragraph">SPL 到本地自定义插件流程</block>
+  <block id="60dc3b16cd1b81d4b4f68c679b7d7bdd" category="paragraph">ONTAP 集群或 SVM</block>
+  <block id="7040aa70fcab708f77518385d367cbdf" category="paragraph">443（HTTPS）、80（HTTP）</block>
+  <block id="f5dfc193733c65c77b14fbdb1b72b560" category="paragraph">HTTPS / HTTP</block>
+  <block id="9e117ed080fa8753f6a3e0dabeb2d9b7" category="paragraph">从 SnapCenter 服务器和 Windows 插件主机出站到 ONTAP 管理 LIF</block>
+  <block id="4c32be4a0b4f48cdd593aef35fd69e44" category="paragraph">出站</block>
+  <block id="bd87b49b152838b2413bcb7a6bc1d5ac" category="paragraph">存储抽象层（SAL）</block>
+  <block id="99c3422adcc71636c457828dd9605b5c" category="paragraph">SAP HANA 插件</block>
+  <block id="6215da76c7b99a57488f24a57ddc9951" category="paragraph">3NN13、3NN15、3NN41</block>
+  <block id="d7b1137217221cadb00b885fecea6220" category="paragraph">插件主机到 HANA 主机</block>
+  <block id="85ef9ef5c1d0834333302db785522882" category="paragraph">HANA 主机上来自插件主机的入站</block>
+  <block id="76c24ecd63e805194e953463b9078f19" category="paragraph">是，按实例</block>
+  <block id="41244caa0542e2ce1954b6a2a0ae3fb8" category="paragraph">SQL 访问（请参阅 SAP HANA SQL 表）</block>
+  <block id="2ebab62c0776e4a8019565cdd921680b" category="paragraph">PostgreSQL 插件</block>
+  <block id="6da3004aa58efd67b0cbd1556532da2c" category="paragraph">PostgreSQL 插件主机</block>
+  <block id="44cafa1af832e721b7d36e35093bf114" category="paragraph">数据库主机上的入站</block>
+  <block id="9581b282e2460e8a7dfa076c912bc1bd" category="paragraph">PostgreSQL 客户端连接</block>
+  <block id="4fbbbcdfcdfad5270a20167c67509f0b" category="paragraph">Active Directory</block>
+  <block id="ac15ba81645a33448f9a8b800541ad51" category="paragraph">389, 636</block>
+  <block id="2acd8e389bcde450f80b84ac2555fad5" category="paragraph">TCP（LDAP、LDAPS）</block>
+  <block id="35dd314f3bf722dc0da7dc91537ca5f8" category="paragraph">SnapCenter 服务器到域控制器</block>
+  <block id="336d5ebc5436534e61d16e63ddfca327" category="paragraph">-</block>
+  <block id="8b66f9358258abdc2c44bd4640432b91" category="paragraph">域身份验证</block>
+  <block id="95791e38270e203a3ab47817f7e0fa10" category="paragraph">Linux SnapCenter 内部 Web</block>
+  <block id="516b38afeee70474b04881a633728b15" category="paragraph">8147</block>
+  <block id="f8ec948d9499e6eafeb11fa1937f9270" category="paragraph">Linux SnapCenter 服务器上的 Localhost</block>
+  <block id="9f09ec051ee52b291cda069571ca3866" category="paragraph">内部 WebApp 端口（8146 保持外部）</block>
+  <block id="15ec72da8cc048776695f4d92c34e236" category="paragraph">当 SMCore 也存在时的 Linux SPL</block>
+  <block id="0a7d7a81e8e3a20e4c34748e98ef45f6" category="paragraph">9091</block>
+  <block id="f034603b7ea6feda58a120e710f6d477" category="paragraph">SnapCenter 服务器到该 Linux 主机</block>
+  <block id="2b5bda5ff91cbadf3b506e0282276e5b" category="paragraph">SMCore 存在时的 SPL 通信</block>
+  <block id="f218ccd27c819063b8881edc21d2b59a" category="section-title">SAP HANA SQL 端口（客户端连接，实例 NN）</block>
+  <block id="04a4eac3c6c3d3b3844272c85de55e50" category="cell">端口模式</block>
+  <block id="6c5c56439cf330f6dcf5013f4de1f440" category="cell">实例 00</block>
+  <block id="995377911599cfd18f082e71a6da2aa9" category="cell">实例 01</block>
+  <block id="b7aec7c8a1f5f2f97c40b7ad43adfab5" category="paragraph">SYSTEMDB（多租户）</block>
+  <block id="45f8827ebeb142cdae8af85881797f07" category="paragraph">3NN13</block>
+  <block id="987abbb401850a3f9d10dc85a625c0c9" category="paragraph">30013</block>
+  <block id="14b9130e6dbe8185cb68fa211921a335" category="paragraph">30113</block>
+  <block id="2bb144858b447c8bc8a92153de632d20" category="paragraph">第一个租户，或单容器数据库</block>
+  <block id="28a872becf7e970dfaceb5efcd2905b2" category="paragraph">3NN15</block>
+  <block id="1772d7476f7f38debfcd459a8489217f" category="paragraph">30015</block>
+  <block id="7d822b455dfe04415f0798e0d2105a13" category="paragraph">30115</block>
+  <block id="45b9aa8d2d4682db046ff6f2eeae2e8f" category="paragraph">第二租户</block>
+  <block id="8205a9492350b047225fc25bcd78b18b" category="paragraph">3NN41</block>
+  <block id="a83d567f09e542dbe66a7e1a9430504a" category="paragraph">30041</block>
+  <block id="55dfcb38698ba26c504d3c3db37e50a9" category="paragraph">30141</block>
+  <block id="dcf03b458a9cf216296efe59e9d1f124" category="paragraph">每增加一个租户</block>
+  <block id="646b8cdbe64ecb20c15dc7ec5e87a22a" category="paragraph">上一个端口 + 3</block>
+  <block id="4b453f6f4a1298fe769e0c735da3e3d6" category="paragraph">30044, 30047, ……</block>
+  <block id="01b7b9d362e6b6b3e5f90278a2520d91" category="paragraph">30144, 30147, ……</block>
+  <block id="4f5325f688d426b4bb5db75e84092d60" category="section-title">SAP HANA 系统复制（HSR）端口，实例 NN</block>
+  <block id="8363eca16d0b222666a3d32338cd0051" category="paragraph">4NN00–4NN99</block>
+  <block id="6a3d75474965bd4e7417907d1d0425ef" category="paragraph">主主机 ↔ 辅助主机</block>
+  <block id="24d4f2104befaad447bfb6e092269bd0" category="paragraph">为 HSR 保留的完整范围。两个站点上都必须是空闲的。</block>
+  <block id="b0246353c1bfe9ce621808fa19ff0394" category="paragraph">4NN01</block>
+  <block id="2f3b538b8c606309056d896c449f0afd" category="paragraph">主 → 辅助</block>
+  <block id="ab1927065045cf83b964b0d611e77acf" category="paragraph">日志和数据传送（多租户）</block>
+  <block id="4357d49d58162e9912c748758cdfd44b" category="paragraph">4NN02</block>
+  <block id="a0972c18c43153dae33bab27fe07df7d" category="paragraph">主 ↔ 辅</block>
+  <block id="92d871d63afcefd17b521ccca417c70c" category="paragraph">未加密的元数据。由<block ref="8d856fc14e7b8d0d1a4f309acc6ea3a4" prefix=" " category="inline-code"></block>使用。</block>
+  <block id="e2fb05aef795e64aebc95a2facbaa070" category="paragraph">4NN06</block>
+  <block id="b27c2906ee9c6397de7a511421f7e6c0" category="paragraph">加密元数据</block>
+  <block id="85051c33f35f85fed9ac487c13998164" category="list-text">多租户系统的默认复制端口偏移量为 10000。</block>
+  <block id="2a3e268ed4d84d82c41642c2e92bb936" category="list-text">从单个容器转换的系统保留偏移量 100，因此实例 NN+1 必须在两个站点上都可用。</block>
+  <block id="6defc68917505518d8717d14a967d7cc" category="list-text">任何应用程序都不应连接到数据库。SnapCenter 会检查连接，如果存在任何连接，则还原操作将失败。</block>
+  <block id="34184a5ba2beb2758459152f80bdc626" category="list-text">任何应用程序都不应连接到数据库。SnapCenter 会检查连接，如果存在任何连接，则使还原失败。</block>
+  <block id="98b82e776b09757411919bb9a6f56b02" category="list-text">Windows 主机上的默认位置：<block ref="511c5c3fc216e319f742dfde6c03e1d8" prefix=" " category="inline-code"></block></block>
+  <block id="aa13e5b2c1f5bb41b918c26e54dbc17f" category="list-text">Linux 主机上的默认位置：<block ref="91d372f85b001dba79ebc4129e5acd32" prefix=" " category="inline-code"></block></block>
+  <block id="703903693011222dbab2e578509f7b4c" category="list-text">当您选择完整资源时，SnapCenter 会使用单文件 SnapRestore （SFSR） 还原数据库。它不会还原卷，并且不会为自动发现的 Db2 资源提供卷还原。该表描述了为每种存储类型还原的内容。</block>
+  <block id="24a99207770256d18686751d28bfb45c" category="list-text">数据文件是数据库存储路径、表空间容器、本地数据库目录和数据库路径下的文件。活动日志路径、实例主目录和归档日志路径被排除在外。</block>
+  <block id="5fcad56cba9b8a827adcc2112f00ba8d" category="list-text">SnapCenter 在还原后不运行 Db2<block ref="036f908691f2fc64aacbcdfe855afcfb" prefix=" " category="inline-code"></block> 命令，并且不支持自动恢复。对于具有归档日志记录的数据库，请在还原完成后手动运行<block ref="036f908691f2fc64aacbcdfe855afcfb" prefix=" " category="inline-code"></block>。</block>
+  <block id="45ef6c42eba564cbbc8097ace76b8537" category="list-text">当您从二级（镜像或保管库）备份进行还原时，SnapCenter 将使用相同文件（NAS）或 LUN（SAN）的 SnapMirror 还原。</block>
+  <block id="87e675284d9964dc1ff84e30ef686299" category="paragraph">下表介绍了 SnapCenter 如何根据存储类型执行自动发现资源的完整资源还原。</block>
+  <block id="c07ee5debf5f3a3fef16c1ee5e8e4942" category="paragraph">NAS</block>
+  <block id="6e99aba7024ba975e389a4c4ba4622b3" category="paragraph">仅记录的 Db2 数据文件的 SFSR。未使用卷还原。Db2 在线（活动）日志和归档日志不会还原，因此备份后写入的事务仍可用于前滚。</block>
+  <block id="62a0282d39568be094470486eaf70c4f" category="paragraph">SAN</block>
+  <block id="cd43f3d40e807e276915a400f0b21b6c" category="paragraph">整个 LUN 的 SFSR - 包含数据文件的文件系统后面的每个 LUN。这些 LUN 上的其他内容也会被还原，包括与数据共享 LUN 的日志文件。仅保存日志或归档文件的文件系统不会被还原。</block>
+  <block id="3dad11a17371dc57e0a5c59d0a10dc08" category="paragraph">对于 ONTAP 9.12.1 及更早版本，在恢复过程中从 SnapLock Vault 快照创建的克隆将继承 SnapLock Vault 到期时间。在 SnapLock 到期时间过后，存储管理员必须手动清理克隆。</block>
+  <block id="5cf27ba0aea3d172215fd24986dd9cf4" category="paragraph">如果资源未受保护，则会在“总体状态”列中显示 <block ref="4aa6066b3ed6d1b995450c6c7ad4a3d8" prefix=" " category="inline-code"></block>。这可能意味着资源未受保护，或者资源是由其他用户备份的。</block>
+  <block id="6b1eefdbadb10959dc2e93772a7c6fa7" category="list-text">在 Restore Scope （还原范围）页面中，选择 *Complete Resource* （完整资源）以还原 Db2 数据库的记录数据文件（NAS）或 LUN（SAN）。</block>
+  <block id="99afd515eb33d890d12eada7b08e0ced" category="list-text">在“操作前”页面中，输入要在还原作业之前运行的预还原命令。对于自动发现的资源，不显示“卸载”命令字段。此步骤为可选步骤。</block>
+  <block id="6273773fb93133849366bb986c5daef2" category="list-text">在“操作后”页面中，输入要在还原作业后运行的还原后命令。对于自动发现的资源，不显示挂载命令字段。此步骤为可选步骤。</block>
+  <block id="15a3385230a20883f39993aab5f5e53e" category="list-text">*归档日志记录* SnapCenter 将数据库初始化为<block ref="72a92ae9c1d172cdda196686278fbfc6" prefix=" " category="inline-code"></block>，并且它保持在<block ref="8c9160eca049cfed45d6d2beb9eb6ba9" prefix=" " category="inline-code"></block>状态。SnapCenter 在初始化后检查前滚状态。如果状态既不是<block ref="8c9160eca049cfed45d6d2beb9eb6ba9" prefix=" " category="inline-code"></block>也不是<block ref="168e7e479deb402a672eed4f81e18609" prefix=" " category="inline-code"></block>，则还原作业将失败。手动运行<block ref="72de893119059000c1c62b0818e118af" prefix=" " category="inline-code"></block>或恢复到某个时间点。在 NAS 上，日志不会被覆盖，因此您可以前滚到日志末尾。</block>
+  <block id="3ad4d769ad183f54589adeb868373586" category="list-text">*循环日志记录* SnapCenter 将数据库初始化为<block ref="46b8744c6bc840d2cb241fa165f3e204" prefix=" " category="inline-code"></block>，无需前滚。</block>
+  <block id="ffeeeafcae8bb9685c5f1d82543d38a8" category="list-text">对于手动添加的资源，SnapCenter 在还原期间不会运行 Db2 命令。它不会检查与数据库的连接或运行<block ref="036f908691f2fc64aacbcdfe855afcfb" prefix=" " category="inline-code"></block>。</block>
+  <block id="d342fb65d6cc8a222ea2a861ba894f77" category="list-text">卷还原仅用于从主备份还原。在 Linux 和 AIX 主机上，当您从辅助（镜像或存储库）备份还原 SAN 资源时，SnapCenter 将使用 LUN 的 SnapMirror 还原。</block>
+  <block id="e897c97a261ac90b61242b8bf9750afa" category="paragraph">下表介绍了 SnapCenter 如何根据存储类型，从主备份对已手动添加的资源执行完整资源还原。</block>
+  <block id="0ab7024f7e9d2c84d9d08a5968bdd048" category="paragraph">卷还原（卷 SnapRestore），因为 SnapCenter 不知道卷上的文件。</block>
+  <block id="1c1e3997ce0b467fead6d0471ab48b08" category="paragraph">整个 LUN 的 SFSR。这些 LUN 上的其他任何内容也会被还原。</block>
+  <block id="088c4f2668990e38b1166bbc5ce5026c" category="list-text">在 Restore Scope 页面中，选择 *Complete Resource* 以恢复 Db2 数据库的所有已配置数据卷（NAS）或 LUN（SAN）。</block>
+  <block id="d87588f15e5d493a11b6223302a4c7cf" category="paragraph">如果资源包含卷或 qtree，则在此类卷或 qtree 上选择用于还原的快照之后拍摄的快照将被删除且无法恢复。此外，如果任何其他资源托管在相同的卷或 qtree 上，则该资源也将被删除。</block>
+  <block id="7cd525f548c14ec0a0d1621cc407685d" category="list-text">选择要还原的卷、qtree 或 LUN。</block>
+  <block id="1c2e3a6b97aafddbd83d9e569fccca28" category="paragraph">SnapCenter 不初始化还原的数据库或对手动添加的资源运行前滚。</block>
+  <block id="6444a5cd1c34698c329d8053b998f60a" category="summary">升级说明描述了产品上一版本与本版本之间的新要求和支持变更，包括任何已弃用的功能。在升级到新版本之前，请仔细查阅此信息。</block>
+  <block id="1d5c7cdcb8cf182d3112b031c2e9011b" category="doc">将主机升级到最新的 SnapCenter 版本</block>
+  <block id="03dab3d4997e8be7b6b410123fd6c057" category="paragraph">在 SnapCenter Server 以及所有需要升级插件的主机上，SnapCenter 6.2.3 需要更新版本的 Java、.NET 和 PowerShell。请先安装这些版本，并保留现有版本。仅在 SnapCenter Server 和该主机上的所有插件均成功升级后，才可移除旧版 Java 或 .NET。</block>
+  <block id="aa966aab59ffcf4e0040432864c271f9" category="paragraph">保留与新版本一起安装的早期 Java 和 .NET 版本不会影响 SnapCenter，前提是<block ref="9687b2072b5af8d9d6bfee01412a8ab8" prefix=" " category="inline-code"></block>指向 Java 17。</block>
+  <block id="9885ab87d8cc7846a72a733f0490b11e" category="inline-link-macro">SnapCenter 升级备注</block>
+  <block id="5c23ad9f97e15ffb4ccc4ebb63c7d2b3" category="list-text">在更改先决条件之前，请查看 <block ref="343d772867902e685fb23a548c42c00a" category="inline-link-macro-rx"></block> 并确认支持的升级路径。如果您运行的是 SnapCenter 6.0 或更低版本，请先升级到 6.1P3，然后再执行此过程。</block>
+  <block id="8c9963c2cd7fab68a34ee4c78cecdb3d" category="list-text">阅读 SnapCenter 6.2.3 发行说明并确认服务器和插件主机所需的确切 Java、.NET 和 PowerShell 版本。</block>
+  <block id="52091dd9676234ef5647cd5688dd0d06" category="list-text">记下要升级的每台主机，包括 SnapCenter 服务器和每个 Windows 或 Linux 插件主机。</block>
+  <block id="2117900ed4716c3898ff81e09c27615d" category="list-text">安排维护时段。在更改先决条件或开始升级之前，请暂停或完成正在运行的备份、还原、克隆和验证作业。</block>
+  <block id="798c6409965a137fb881c8602155488c" category="list-text">备份 SnapCenter 存储库并确认您可以还原它。记录每个主机上的当前 SnapCenter 服务器版本和插件版本。</block>
+  <block id="ff9ed5ce6aa660fa7e224bb34e32ec73" category="list-text">确认用于升级的帐户可以设置系统环境变量，并且可以在每个主机上安装软件。</block>
+  <block id="c8228511ec31e19a22483241ba433ff2" category="section-title">安装所需的运行时</block>
+  <block id="664243aba0ddc092e9156c2d5fdf2227" category="paragraph">在升级任何插件之前，请在 SnapCenter 服务器和每个插件主机上安装新版本。保留当前安装的 Java 和 .NET。</block>
+  <block id="48a8bdd05c843c0e7162faea11a365be" category="list-text">安装 SnapCenter 6.2.3 所需的 Java 17 版本。</block>
+  <block id="ac53d008bb4a63eb22c780c71952a3e9" category="list-text">为适用的主机安装所需的 .NET 或 ASP.NET Core 托管捆绑包。</block>
+  <block id="c00d205917f1a1c4f2f15e6e6ce63e7e" category="list-text">为适用的主机安装所需的 PowerShell 7 版本。PowerShell 7 与 Windows PowerShell 5.1 并行安装。</block>
+  <block id="d2dccff5091f47aad21f28c9a47cf75b" category="list-text">完成安装程序并允许任何请求的重新启动。如果需要重新启动，请在继续之前重新启动主机。</block>
+  <block id="41bd7bb95fa32bd7fe160dfaa945f511" category="section-title">将 JAVA_HOME 指向 Java 17</block>
+  <block id="454784dc82eb06ee6d7bd7446dff5817" category="paragraph">安装 Java 17 不会自动配置 SnapCenter 来使用它。如果仍安装了较旧的 Java 版本，则必须显式将<block ref="9687b2072b5af8d9d6bfee01412a8ab8" prefix=" " category="inline-code"></block>设置为系统环境变量，以便 SnapCenter 使用 Java 17。</block>
+  <block id="786ff8d593f8260682a9ee8d0739a6f9" category="list-text">将<block ref="9687b2072b5af8d9d6bfee01412a8ab8" prefix=" " category="inline-code"></block>设置为系统环境变量，以便 SnapCenter 服务能够识别它。仅限用户的变量是不够的。</block>
+  <block id="02d8693b8c802c00af4f78808ef1bf18" category="list-text">将值设置为 Java 17 安装目录。请使用主目录，而不是<block ref="c1111bd512b29e821b120b86446026b8" prefix=" " category="inline-code"></block>文件夹。</block>
+  <block id="bfce54a4b28e193e321c12c665537969" category="list-text">。在 Linux 插件主机上，将相同的系统范围<block ref="9687b2072b5af8d9d6bfee01412a8ab8" prefix=" " category="inline-code"></block>设置为 Java 17 主目录。如果<block ref="67fd6626746698a2f1cbe30c8529092f" prefix=" " category="inline-code"></block>已在<block ref="a2571c15ba964fcf620620cab9968093" prefix=" " category="inline-code"></block>中配置，还需将该文件的<block ref="9687b2072b5af8d9d6bfee01412a8ab8" prefix=" " category="inline-code"></block>更新为 Java 17 目录。重启 SPL 后，在删除旧版运行时之前，请验证其配置的 Java 路径是否指向 Java 17。</block>
+  <block id="c0c9094ff56f0df08cfc22ce3bf8744c" category="list-text">确保系统<block ref="5ffb5f0d0de78321df46fc7c93ca64a3" prefix=" " category="inline-code"></block>包括<block ref="2d74be0b7ff22584250ae9429ccc097d" prefix=" " category="inline-code"></block>（Windows）或<block ref="acb8c1c0d5ce99aa9573a051d70a5dce" prefix=" " category="inline-code"></block>（Linux）。</block>
+  <block id="ff561362627832cded420b5f0f740985" category="list-text">打开新的命令提示符，或重新登录，以便加载更新后的变量。在新会话中，确认以下内容：</block>
+  <block id="9d959c58b6af4afdb4e8513797730471" category="list-text"><block ref="5d7f69486483ec9123c78fb391309819" prefix="" category="inline-code"></block> 显示 Java 17</block>
+  <block id="f5de5c3ce3e9c3f5307acf1bdb0f7709" category="list-text"><block ref="817de86f7778a1c324a9feac13f6a3b4" prefix="" category="inline-code"></block> （Windows）或<block ref="8495bac536b4851cd23a13ac21f76d7f" prefix=" " category="inline-code"></block> （Linux）显示 Java 17 目录</block>
+  <block id="7f5636d1b22cfae5455cecd06312c354" category="list-text">使用适用于这些安装程序的命令（例如，<block ref="4a34b65170bef7a6295e1e1a3cf81c99" prefix=" " category="inline-code"></block>和<block ref="14723a6ed1d275d4db2ce5d528acf6e3" prefix=" " category="inline-code"></block>）确认 .NET 托管捆绑包和 PowerShell 版本。</block>
+  <block id="76818f2b4d7d65e4b0ddd8e2d266e10d" category="list-text">更改<block ref="9687b2072b5af8d9d6bfee01412a8ab8" prefix=" " category="inline-code"></block>后，重新启动 SnapCenter 服务或重新启动主机，以便服务使用新值。在开始插件升级之前执行此操作。</block>
+  <block id="fd816ead8beec40c52865f2fba8c39d4" category="section-title">升级 SnapCenter，然后升级插件</block>
+  <block id="77272487d5f9c69c9b28053bb35feee9" category="list-text">将 SnapCenter 服务器升级到 6.2.3，并确认服务器已启动且 Web 界面可用。</block>
+  <block id="e757b127c5b16b8398512d0c87afe4f1" category="list-text">从 SnapCenter Server 升级每个主机上的插件。等待每个插件升级作业在作业监视器中成功完成。</block>
+  <block id="0885c1a6360ca5c613e39c41bf155ce0" category="list-text">确认每台主机都显示 6.2.3 插件版本，并且主机连接正常。</block>
+  <block id="ca33b99f5ef5c505dacf25ef4ed2cef3" category="list-text">在删除任何较旧的运行时之前，请对代表性资源运行一个简单的操作（例如，发现或小型备份）。</block>
+  <block id="762afebef2e27e357bc6d5bd2bae1e16" category="section-title">仅在升级完成后删除较旧的 Java 和 .NET 版本</block>
+  <block id="e35539ec934f05beb2366c44f5717be8" category="list-text">仅当该主机同时满足以下两个条件时，才卸载以前的 Java 或 .NET 版本：</block>
+  <block id="e480779a885321f773bb934a60da1e77" category="list-text">SnapCenter 服务器版本为 6.2.3。</block>
+  <block id="524ba29e35b7b2819effaf37908f302d" category="list-text">该主机上的每个 SnapCenter 插件均已升级，并且升级作业已成功。</block>
+  <block id="beb24ef57dab72f6d8c9ec579a416ebf" category="paragraph">在升级插件之前删除 Java 或 .NET 可能会导致插件升级失败或使插件安装无法使用。</block>
+  <block id="b21f9a199ca3866e36d275d35dc4968c" category="list-text">成功升级后，您可以：</block>
+  <block id="cd76f71e33693a6b11c8477941616056" category="list-text">保留先前安装的 Java 和 .NET。当<block ref="9687b2072b5af8d9d6bfee01412a8ab8" prefix=" " category="inline-code"></block>指向 Java 17 时，并行安装不会影响 SnapCenter。</block>
+  <block id="d492ca022afe06920d77d52094d30600" category="list-text">如果主机上没有其他应用程序需要，请卸载以前的 Java 和 .NET。</block>
+  <block id="864a8bb0d39d7962a89fd319f93f206e" category="list-text">如果卸载较旧的 Java 版本：</block>
+  <block id="7ff746320fdf9b66002f903a5f4abbad" category="list-text">确认 <block ref="9687b2072b5af8d9d6bfee01412a8ab8" prefix=" " category="inline-code"></block> 和 <block ref="5ffb5f0d0de78321df46fc7c93ca64a3" prefix=" " category="inline-code"></block> 指向 Java 17。</block>
+  <block id="4a4d3a755fb92ccd577aeb8e4a05c9f4" category="list-text">打开一个新会话并确认<block ref="5d7f69486483ec9123c78fb391309819" prefix=" " category="inline-code"></block>显示 Java 17。</block>
+  <block id="9262d04d84f11018853ee909c87d7560" category="list-text">重新启动 SnapCenter 服务或主机，并确认主机和插件仍处于运行状态。</block>
+  <block id="3b2fa92c5d8508f06b372f44e4bd2a72" category="list-text">运行<block ref="e1d13fb4d5618327c70e64736001f7a7" prefix=" " category="inline-code"></block></block>
+  <block id="59f1970a8d897357b7a0ca480c8b9bcc" category="summary">从 SnapCenter 升级 SnapCenter 插件，或者仅升级插件主机上的 Java、.NET 或 PowerShell 组件，而不更改插件版本。</block>
+  <block id="2600faca45dc4d78ace476526c7099bc" category="doc">升级 SnapCenter 插件和主机</block>
+  <block id="17a283fddf071ba7e583e3e84fbd2688" category="paragraph">您可以从 SnapCenter 升级 SnapCenter 插件，也可以仅升级主机上的 Java、.NET 或 PowerShell 组件，而无需更改插件版本。选择适合您环境的选项，并在开始之前将主机置于维护模式。</block>
+  <block id="d89ac3d097eef8405acf23c4a87c29b1" category="cell">使用场合</block>
+  <block id="071005ebf026a42be5ab8b09eac8078a" category="cell">是否手动停止并启动服务？</block>
+  <block id="128c221162f6d017ffd6bee33415b427" category="cell">从 SnapCenter 升级插件</block>
+  <block id="53d66e95ae3a743ae65d6e59fd6e00d9" category="cell">您可以使用 SnapCenter 用户界面升级插件。</block>
+  <block id="3697ea5fde4e3ccd25964a5c6d8b6aef" category="cell">否，SnapCenter 停止并启动服务。</block>
+  <block id="7711479995a4b3847a5dfed07850445d" category="cell">仅组件升级</block>
+  <block id="1f3a2e725378ac4d923f5ba60c8c7c94" category="cell">您仅更改 Java、.NET 或 PowerShell（例如，为了解决 CVE）。插件版本保持不变。</block>
+  <block id="20de22acd37747e56d4f3895fcab05ad" category="cell">是的。您必须停止并启动服务。</block>
+  <block id="1e71e13447a0ec76c5939fad6edb62d1" category="admonition">请保留已安装的旧版 Java、.NET 和 PowerShell 版本，直到您验证主机在使用新版本时运行正常。</block>
+  <block id="30c43ff7a87c7f53982a95048633830b" category="list-text">将所有受影响的主机置于维护模式。</block>
+  <block id="126079cdfbd7700a4d416fdae6bcdc7a" category="list-text">在插件升级之前准备好必要条件（并排安装；暂不删除旧版本）：</block>
+  <block id="60e1a32f311ac4471140a3724dcfaf15" category="list-text">Java 17 — 将<block ref="9687b2072b5af8d9d6bfee01412a8ab8" prefix=" " category="inline-code"></block>设置为 Java 17；验证命令<block ref="5d7f69486483ec9123c78fb391309819" prefix=" " category="inline-code"></block>显示版本为 17（在 Windows 上，如果注册表默认值仍为 Java 11，则即使安装了 Java 17，升级也可能会失败。）</block>
+  <block id="dc185c419beeb3d8e580c1c3821e49e0" category="list-text">.NET andPowerShell 根据您的 SnapCenter 版本的要求。</block>
+  <block id="aaf604df2f9a8f107f38e03b6521e9e1" category="list-text">从 SnapCenter 升级主机上的插件。</block>
+  <block id="d5310d8e04afe6f1a473262e4630999c" category="list-text">在 SnapCenter 中确认主机和服务是否正常。</block>
+  <block id="b32e387973c9eeedae946174f392ecca" category="list-text">如果主机上没有其他应用程序需要，请卸载旧的 Java、.NET 和 PowerShell 版本。</block>
+  <block id="f06e371a6d09e22525cf863d4ddcbf6f" category="list-text">将主机退出维护模式。</block>
+  <block id="598be1aa0cbab0d820664eac0f68e415" category="list-text">您无需手动停止 SnapCenter 插件 Loader （SPL）、SnapCenter 插件 Creator （SCC） 或<block ref="18f822cb4ac51296ad9cf971966d1680" prefix=" " category="inline-code"></block> 服务，或使用<block ref="38454b595d69ee95240504d774a77950" prefix=" " category="inline-code"></block>。</block>
+  <block id="939adfe9027ea6b0fc568dc7fc5fcdd8" category="list-text">SnapCenter 插件升级会为您停止并启动服务。</block>
+  <block id="38041b2bbcc4047ec002700a946bcc94" category="list-text">如果主机准备不正确（例如，错误的 Java 版本或<block ref="9687b2072b5af8d9d6bfee01412a8ab8" prefix=" " category="inline-code"></block>），升级可能会失败，或者升级后可能无法启动服务。</block>
+  <block id="735ec8d3bd138344d8a6fc209799fbd8" category="section-title">仅组件升级（无插件升级）</block>
+  <block id="dbe5322ab5460a0de12a972e8b9a8eb0" category="inline-xref">在升级前停止服务</block>
+  <block id="5a8b4adf5df57dcec12e6d2000ed9736" category="list-text">停止 SnapCenter 插件服务，如 <block ref="2e1d8f7409435321e19bf76493a31c65" category="inline-xref-macro-rx"></block> 中所述。</block>
+  <block id="3be908dcbb726b77cc2296a196a40047" category="list-text">如果停止过程未将其清理，则清除过时的进程。</block>
+  <block id="f3b3edfa44d13727326a0af160424c47" category="list-text">安装新的 Java、.NET 和 PowerShell 版本，并根据需要更新配置（例如 set<block ref="9687b2072b5af8d9d6bfee01412a8ab8" prefix=" " category="inline-code"></block>）。</block>
+  <block id="7323dc12a1baf493a503a02d36d29ee7" category="inline-xref">升级后启动服务</block>
+  <block id="4a429e341e07436c9750af4ee121b83e" category="list-text">启动 SnapCenter 插件服务，如 <block ref="ad1e8d7f32fd86caba8bdcc70494b3bd" category="inline-xref-macro-rx"></block> 中所述。</block>
+  <block id="71f96ec21180c55874e5c8c91bb41b29" category="list-text">在 SnapCenter 中确认主机状态和服务。</block>
+  <block id="99985a97ec24a95d68c499358f04e332" category="paragraph">在安装新版本的 Java、.NET 或 PowerShell 之前，请先停止主机上的 SnapCenter 插件服务。</block>
+  <block id="4937a0e1c0fabc4ca77c693867731b33" category="list-title">适用于 Linux 和 AIX 主机的步骤</block>
+  <block id="a49ffeffe2de7fe4ff6c9c6647cc9dae" category="list-text">在插件主机上运行以下命令：</block>
+  <block id="8b8bde2284f597ece28d2759da23f417" category="list-text"><block ref="1f078f96cea31a6759c1846af15d3d8d" prefix="" category="inline-code"></block></block>
+  <block id="efb5e12d5fca520a10e9059df526f1c1" category="list-text"><block ref="74dc2fa4ba2ef27f19badbdc31b37c14" prefix="" category="inline-code"></block></block>
+  <block id="084c9a3147b1118399015b356fb20004" category="list-text">通过运行<block ref="7dcf7f278a1d9db8f813989cd06422fd" prefix=" " category="inline-code"></block>检查剩余的 SnapCenter 进程。</block>
+  <block id="2f9aa320c423bd40f1a08e8b1b328835" category="list-text">如果陈旧进程仍然存在，请运行以下命令：</block>
+  <block id="d29262a2f1cdda9b52f5ac835a1f0fb1" category="list-text"><block ref="6aa2e992d618c1b783590ce1f8eab86c" prefix="" category="inline-code"></block></block>
+  <block id="58f1babc11c5eed84fd2f45438ade90d" category="list-text"><block ref="5c808eac0030588ca9814882db082da1" prefix="" category="inline-code"></block></block>
+  <block id="3ef82bc5b15503bb3819af4b142e5836" category="list-text"><block ref="f3c68967ea6a068448d9d5fd80aa945c" prefix="" category="inline-code"></block></block>
+  <block id="195b80aa8908c4dd4182feb97922f1ce" category="list-text">再次运行<block ref="7dcf7f278a1d9db8f813989cd06422fd" prefix=" " category="inline-code"></block>以确认没有剩余的 SnapCenter 进程，然后再继续。</block>
+  <block id="2f8f086f0313278bab65d50853ce0452" category="list-title">适用于 Windows 主机的步骤</block>
+  <block id="d1c3713af2c3ba9e9d6e40a73f4cf6d4" category="list-text">在插件主机上的 PowerShell 中，运行<block ref="c16dd7c6f043e2672cf87a673ee60f66" prefix=" " category="inline-code"></block>。</block>
+  <block id="9099a8a88fa42ff5cfbabc95bc87756c" category="list-text">确认服务已停止。</block>
+  <block id="baf4df4e9fd2bfafece0aedbf285aa87" category="list-text">请先停止所有剩余的 Java 和代理进程，然后再继续。</block>
+  <block id="745e8103e0dc12fa740e7724da222606" category="paragraph">在安装和配置新的 Java、.NET 或 PowerShell 版本后，在主机上启动 SnapCenter 插件服务。</block>
+  <block id="36a8f7df592e7ccdd1ad8ef4a4c21cb4" category="list-text"><block ref="86259fd6144ebe11c219344510b5595d" prefix="" category="inline-code"></block></block>
+  <block id="a89322233b692d63beaf327c1a6f3ebe" category="list-text"><block ref="14e623426a42ebe39f17a8023ca9d17a" prefix="" category="inline-code"></block></block>
+  <block id="b8ca182feb379a62e329c980037908f0" category="list-text">在插件主机上的 PowerShell 中，运行<block ref="45319c3213f5bdc9039c7362649e2a60" prefix=" " category="inline-code"></block>。</block>
+  <block id="fe4f4e2f67179ac940fb0d3134165538" category="section-title">流程清单</block>
+  <block id="300131eea510ebc514da9ee63e30a589" category="open-title">插件升级</block>
+  <block id="2f4eebb3cc0c81012fd198ece017a004" category="list-text">将主机置于维护模式。</block>
+  <block id="d1d8726a1e8342319581aa5627ab7641" category="list-text">并排安装必备组件：设置了<block ref="9687b2072b5af8d9d6bfee01412a8ab8" prefix=" " category="inline-code"></block>的 Java 17，以及根据需要安装的 .NET 和 PowerShell。</block>
+  <block id="8475e6708bd69cae27bbd9c45ebe22a5" category="list-text">从 SnapCenter 升级插件。</block>
+  <block id="bab7897d2da9fb205a435f6702719c65" category="list-text">确认主机和服务运行正常。</block>
+  <block id="e571c527df2a8fbcf499d5ec2af3c052" category="list-text">将主机移出维护模式。</block>
+  <block id="4e889913b205f0aac532d7d3b47fce02" category="list-text">停止服务并清除过时的进程（如果需要，在 Linux 和 AIX 上使用<block ref="38454b595d69ee95240504d774a77950" prefix=" " category="inline-code"></block>）。</block>
+  <block id="fe663f220148211ac0863539ec8ee20e" category="list-text">安装新的 Java、.NET 和 PowerShell 版本并更新配置。</block>
+  <block id="877ec57b841b517364c08cfbb0d2f37b" category="list-text">启动服务。</block>
+  <block id="1e96c55d8f46e85492bf765d692d00d4" category="list-text">要使用的 .NET 和 PowerShell 版本在最新的 <block ref="c12c01bc09a3f61e41d7f2a98eb13862" category="inline-link-macro-rx"></block> 中指定。</block>
+  <block id="c9fd4d77bd3a24e6cb696e04175300d4" category="list-text">对于插件升级，请使用目标 SnapCenter 版本支持的 Java 版本。对于仅组件升级，请使用已安装版本支持的 Java 版本。SnapCenter 6.2.1 及更高版本需要 Java 17；SnapCenter 6.2 及更低版本需要 Java 11。</block>
+  <block id="6e4038762f1e57c2f59337c54c7ec629" category="list-text">如果您的站点安装路径与<block ref="ad6569b575c0a3830082f4336038186a" prefix=" " category="inline-code"></block>不同，请使用您的站点安装路径。</block>
+  <block id="cdb508c5003a271ccfca09ba1d27ea95" category="sidebar">将主机升级到最新 SnapCenter 版本</block>
 </blocks>
